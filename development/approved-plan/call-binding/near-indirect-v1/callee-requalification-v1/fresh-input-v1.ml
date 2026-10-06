@@ -1,0 +1,18 @@
+use_file_raise_failure := true;;
+let e3_callee_initial_axioms=axioms();;
+let assurance_initial_axioms=e3_callee_initial_axioms;;
+let backend_initial_axioms=e3_callee_initial_axioms;;
+let model_initial_axioms=e3_callee_initial_axioms;;
+let r1_execution_initial_axioms=e3_callee_initial_axioms;;
+let cleanse_aggregate_initial_axioms=e3_callee_initial_axioms;;
+let clw_initial_axioms=e3_callee_initial_axioms;;
+let crypto_trace_initial_axioms=e3_callee_initial_axioms;;
+let component_guard f=try f() with e->prerr_endline(Printexc.to_string e);exit 1;;
+component_guard(fun()->needs "/work/development/approved-plan/call-binding/near-indirect-v1/callee-requalification-v1/components-v1.ml");;
+component_guard(fun()->cleanse_aggregate_audit e3_callee_initial_axioms "/output/cleanse-");;
+component_guard(fun()->r1_near_qualification_audit "/output/model-qualification.json");;
+component_guard(fun()->r1_execution_qualification_audit "/output/execution-qualification.json");;
+component_guard(fun()->needs "/work/development/approved-plan/call-binding/near-indirect-v1/callee-requalification-v1/audit-v1.ml");;
+component_guard(fun()->e3_callee_audit e3_callee_initial_axioms "/output/e3-interface.json");;
+component_guard(fun()->if axioms()<>e3_callee_initial_axioms then failwith "E3 final axiom list mismatch");;
+component_guard(fun()->print_endline "E3_CALLEE_FRESH_COMPLETE_CRYPTO_CLEANSE_AND_CRYPTO_FIRST_RET_TRACE";exit 0);;

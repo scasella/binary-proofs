@@ -1,0 +1,153 @@
+{
+  "status": "INDEPENDENT_EXPECTED_TERMS_FROM_PRESEARCH_DECLARATIONS_LIVE_AUDITED",
+  "theorems": [
+    {
+      "name": "CLEANSE_FUNCTIONAL_PREFIX_READ",
+      "statement": "forall s p i.\n    read (memory :> bytes (p,i)) s = 0 /\\\n    read (memory :> bytes8 (word_add p (word i))) s = word 0\n    ==> read (memory :> bytes (p,i + 1)) s = 0"
+    },
+    {
+      "name": "OPENSSL_CLEANSE_BYTE_LOOP",
+      "statement": "forall pc p n.\n    0 < n /\\ n < 2 EXP 64 /\\ nonoverlapping (word pc,97) (p,n)\n    ==> ensures x86\n        (\\s.\n             bytes_loaded s (word pc) openssl_cleanse_mc /\\\n             read RIP s = word (pc + 19) /\\\n             read RDI s = p /\\\n             read RSI s = word n /\\\n             read RAX s = word 0)\n        (\\s.\n             read RIP s = word (pc + 31) /\\\n             read RDI s = word_add p (word n) /\\\n             read RSI s = word 0 /\\\n             read RAX s = word 0 /\\\n             read (memory :> bytes (p,n)) s = 0)\n        (MAYCHANGE [RIP; RDI; RSI] ,,\n         MAYCHANGE SOME_FLAGS ,,\n         MAYCHANGE [memory :> bytes (p,n)] ,,\n         MAYCHANGE [events])"
+    },
+    {
+      "name": "CLEANSE_FUNCTIONAL_BULK_MASK",
+      "statement": "forall k.\n    k < 2 EXP 64\n    ==> (val (word_and (word k) (word 18446744073709551608)) = 0 <=> k < 8)"
+    },
+    {
+      "name": "CLEANSE_FUNCTIONAL_PREFIX_READ64",
+      "statement": "forall s p i.\n    read (memory :> bytes (p,i)) s = 0 /\\\n    read (memory :> bytes64 (word_add p (word i))) s = word 0\n    ==> read (memory :> bytes (p,i + 8)) s = 0"
+    },
+    {
+      "name": "OPENSSL_CLEANSE_BULK_LOOP",
+      "statement": "forall pc p k r.\n    0 < k /\\\n    r < 8 /\\\n    8 * k + r < 2 EXP 64 /\\\n    nonoverlapping (word pc,97) (p,8 * k)\n    ==> ensures x86\n        (\\s.\n             bytes_loaded s (word pc) openssl_cleanse_mc /\\\n             read RIP s = word (pc + 69) /\\\n             read RDI s = p /\\\n             read RSI s = word (8 * k + r) /\\\n             read RAX s = word 0)\n        (\\s.\n             read RIP s = word (pc + 89) /\\\n             read RDI s = word_add p (word (8 * k)) /\\\n             read RSI s = word r /\\\n             read RAX s = word 0 /\\\n             read (memory :> bytes (p,8 * k)) s = 0)\n        (MAYCHANGE [RIP; RDI; RSI] ,,\n         MAYCHANGE SOME_FLAGS ,,\n         MAYCHANGE [memory :> bytes (p,8 * k)] ,,\n         MAYCHANGE [events])"
+    },
+    {
+      "name": "CLEANSE_FUNCTIONAL_LOW3",
+      "statement": "forall p i.\n    val p + i < 2 EXP 64\n    ==> val (word_and (word_add p (word i)) (word 7)) = (val p + i) MOD 8"
+    },
+    {
+      "name": "OPENSSL_CLEANSE_ALIGNMENT",
+      "statement": "forall pc p n a.\n    a < 8 /\\\n    a <= n /\\\n    n < 2 EXP 64 /\\\n    val p + a < 2 EXP 64 /\\\n    (val p + a) MOD 8 = 0 /\\\n    (forall i. i < a ==> ~((val p + i) MOD 8 = 0)) /\\\n    nonoverlapping (word pc,97) (p,a)\n    ==> ensures x86\n        (\\s.\n             bytes_loaded s (word pc) openssl_cleanse_mc /\\\n             read RIP s = word (pc + 48) /\\\n             read RDI s = p /\\\n             read RSI s = word n /\\\n             read RAX s = word 0)\n        (\\s.\n             read RIP s = word (pc + 69) /\\\n             read RDI s = word_add p (word a) /\\\n             read RSI s = word (n - a) /\\\n             read RAX s = word 0 /\\\n             read (memory :> bytes (p,a)) s = 0)\n        (MAYCHANGE [RIP; RDI; RSI] ,,\n         MAYCHANGE SOME_FLAGS ,,\n         MAYCHANGE [memory :> bytes (p,a)] ,,\n         MAYCHANGE [events])"
+    },
+    {
+      "name": "CLEANSE_FUNCTIONAL_ALIGNMENT_COUNT",
+      "statement": "forall v.\n    let a = (8 - v MOD 8) MOD 8 in\n    a < 8 /\\ (v + a) MOD 8 = 0 /\\ (forall i. i < a ==> ~((v + i) MOD 8 = 0))"
+    },
+    {
+      "name": "CLEANSE_FUNCTIONAL_CONCAT_ZERO",
+      "statement": "forall s p a b.\n    read (memory :> bytes (p,a)) s = 0 /\\\n    read (memory :> bytes (word_add p (word a),b)) s = 0\n    ==> read (memory :> bytes (p,a + b)) s = 0"
+    },
+    {
+      "name": "OPENSSL_CLEANSE_BULK_TAIL",
+      "statement": "forall pc p k r.\n    0 < k /\\\n    r < 8 /\\\n    8 * k + r < 2 EXP 64 /\\\n    val p + 8 * k + r <= 2 EXP 64 /\\\n    nonoverlapping (word pc,97) (p,8 * k + r)\n    ==> ensures x86\n        (\\s.\n             bytes_loaded s (word pc) openssl_cleanse_mc /\\\n             read RIP s = word (pc + 69) /\\\n             read RDI s = p /\\\n             read RSI s = word (8 * k + r) /\\\n             read RAX s = word 0)\n        (\\s.\n             (read RIP s = word (pc + 31) \\/ read RIP s = word (pc + 95)) /\\\n             read RDI s = word_add p (word (8 * k + r)) /\\\n             read RSI s = word 0 /\\\n             read RAX s = word 0 /\\\n             read (memory :> bytes (p,8 * k + r)) s = 0)\n        (MAYCHANGE [RIP; RDI; RSI] ,,\n         MAYCHANGE SOME_FLAGS ,,\n         MAYCHANGE [memory :> bytes (p,8 * k + r)] ,,\n         MAYCHANGE [events])"
+    },
+    {
+      "name": "OPENSSL_CLEANSE_FUNCTIONAL_CORE",
+      "statement": "forall pc p n.\n    n < 2 EXP 64 /\\\n    val p + n <= 2 EXP 64 /\\\n    nonoverlapping (word pc,97) (p,n)\n    ==> ensures x86\n        (\\s.\n             bytes_loaded s (word pc) openssl_cleanse_mc /\\\n             read RIP s = word pc /\\\n             C_ARGUMENTS [p; word n] s)\n        (\\s.\n             (read RIP s = word (pc + 31) \\/ read RIP s = word (pc + 95)) /\\\n             read RDI s = word_add p (word n) /\\\n             read RSI s = word 0 /\\\n             read RAX s = word 0 /\\\n             read (memory :> bytes (p,n)) s = 0)\n        (MAYCHANGE [RIP; RAX; RDI; RSI] ,,\n         MAYCHANGE SOME_FLAGS ,,\n         MAYCHANGE [memory :> bytes (p,n)] ,,\n         MAYCHANGE [events])"
+    },
+    {
+      "name": "OPENSSL_CLEANSE_FUNCTIONAL_CALLABLE",
+      "statement": "forall pc stackpointer ra p n.\n    n < 2 EXP 64 /\\\n    val p + n <= 2 EXP 64 /\\\n    nonoverlapping (word pc,97) (p,n) /\\\n    nonoverlapping (stackpointer,8) (p,n)\n    ==> ensures x86\n        (\\s.\n             bytes_loaded s (word pc) openssl_cleanse_mc /\\\n             read RIP s = word pc /\\\n             read RSP s = stackpointer /\\\n             read (memory :> bytes64 stackpointer) s = ra /\\\n             C_ARGUMENTS [p; word n] s)\n        (\\s.\n             read RIP s = ra /\\\n             read RSP s = word_add stackpointer (word 8) /\\\n             read (memory :> bytes (p,n)) s = 0)\n        (MAYCHANGE [RIP; RSP; RAX; RDI; RSI] ,,\n         MAYCHANGE SOME_FLAGS ,,\n         MAYCHANGE [memory :> bytes (p,n)] ,,\n         MAYCHANGE [events])"
+    },
+    {
+      "name": "OPENSSL_CLEANSE_BOUNDED_BYTE_LOOP",
+      "statement": "forall pc p n.\n    0 < n /\\ n < 2 EXP 64 /\\ nonoverlapping (word pc,97) (p,n)\n    ==> ensures_n x86\n        (\\s.\n             bytes_loaded s (word pc) openssl_cleanse_mc /\\\n             read RIP s = word (pc + 19) /\\\n             read RDI s = p /\\\n             read RSI s = word n /\\\n             read RAX s = word 0)\n        (\\s.\n             read RIP s = word (pc + 31) /\\\n             read RDI s = word_add p (word n) /\\\n             read RSI s = word 0 /\\\n             read RAX s = word 0 /\\\n             read (memory :> bytes (p,n)) s = 0)\n        (MAYCHANGE [RIP; RDI; RSI] ,,\n         MAYCHANGE SOME_FLAGS ,,\n         MAYCHANGE [memory :> bytes (p,n)] ,,\n         MAYCHANGE [events])\n        (\\s. 4 * n)"
+    },
+    {
+      "name": "OPENSSL_CLEANSE_BOUNDED_BULK_LOOP",
+      "statement": "forall pc p k r.\n    0 < k /\\\n    r < 8 /\\\n    8 * k + r < 2 EXP 64 /\\\n    nonoverlapping (word pc,97) (p,8 * k)\n    ==> ensures_n x86\n        (\\s.\n             bytes_loaded s (word pc) openssl_cleanse_mc /\\\n             read RIP s = word (pc + 69) /\\\n             read RDI s = p /\\\n             read RSI s = word (8 * k + r) /\\\n             read RAX s = word 0)\n        (\\s.\n             read RIP s = word (pc + 89) /\\\n             read RDI s = word_add p (word (8 * k)) /\\\n             read RSI s = word r /\\\n             read RAX s = word 0 /\\\n             read (memory :> bytes (p,8 * k)) s = 0)\n        (MAYCHANGE [RIP; RDI; RSI] ,,\n         MAYCHANGE SOME_FLAGS ,,\n         MAYCHANGE [memory :> bytes (p,8 * k)] ,,\n         MAYCHANGE [events])\n        (\\s. 5 * k)"
+    },
+    {
+      "name": "OPENSSL_CLEANSE_BOUNDED_ALIGNMENT",
+      "statement": "forall pc p n a.\n    a < 8 /\\\n    a <= n /\\\n    n < 2 EXP 64 /\\\n    val p + a < 2 EXP 64 /\\\n    (val p + a) MOD 8 = 0 /\\\n    (forall i. i < a ==> ~((val p + i) MOD 8 = 0)) /\\\n    nonoverlapping (word pc,97) (p,a)\n    ==> ensures_n x86\n        (\\s.\n             bytes_loaded s (word pc) openssl_cleanse_mc /\\\n             read RIP s = word (pc + 48) /\\\n             read RDI s = p /\\\n             read RSI s = word n /\\\n             read RAX s = word 0)\n        (\\s.\n             read RIP s = word (pc + 69) /\\\n             read RDI s = word_add p (word a) /\\\n             read RSI s = word (n - a) /\\\n             read RAX s = word 0 /\\\n             read (memory :> bytes (p,a)) s = 0)\n        (MAYCHANGE [RIP; RDI; RSI] ,,\n         MAYCHANGE SOME_FLAGS ,,\n         MAYCHANGE [memory :> bytes (p,a)] ,,\n         MAYCHANGE [events])\n        (\\s. 6 * a + 2)"
+    },
+    {
+      "name": "OPENSSL_CLEANSE_BOUNDED_BULK_TAIL",
+      "statement": "forall pc p k r.\n    0 < k /\\\n    r < 8 /\\\n    8 * k + r < 2 EXP 64 /\\\n    val p + 8 * k + r <= 2 EXP 64 /\\\n    nonoverlapping (word pc,97) (p,8 * k + r)\n    ==> ensures_n x86\n        (\\s.\n             bytes_loaded s (word pc) openssl_cleanse_mc /\\\n             read RIP s = word (pc + 69) /\\\n             read RDI s = p /\\\n             read RSI s = word (8 * k + r) /\\\n             read RAX s = word 0)\n        (\\s.\n             (read RIP s = word (pc + 31) \\/ read RIP s = word (pc + 95)) /\\\n             read RDI s = word_add p (word (8 * k + r)) /\\\n             read RSI s = word 0 /\\\n             read RAX s = word 0 /\\\n             read (memory :> bytes (p,8 * k + r)) s = 0)\n        (MAYCHANGE [RIP; RDI; RSI] ,,\n         MAYCHANGE SOME_FLAGS ,,\n         MAYCHANGE [memory :> bytes (p,8 * k + r)] ,,\n         MAYCHANGE [events])\n        (\\s. 5 * k + 4 * r + 2)"
+    },
+    {
+      "name": "OPENSSL_CLEANSE_BOUNDED_FUNCTIONAL_CORE",
+      "statement": "forall pc p n.\n    n < 2 EXP 64 /\\\n    val p + n <= 2 EXP 64 /\\\n    nonoverlapping (word pc,97) (p,n)\n    ==> ensures_n x86\n        (\\s.\n             bytes_loaded s (word pc) openssl_cleanse_mc /\\\n             read RIP s = word pc /\\\n             C_ARGUMENTS [p; word n] s)\n        (\\s.\n             (read RIP s = word (pc + 31) \\/ read RIP s = word (pc + 95)) /\\\n             read RDI s = word_add p (word n) /\\\n             read RSI s = word 0 /\\\n             read RAX s = word 0 /\\\n             read (memory :> bytes (p,n)) s = 0)\n        (MAYCHANGE [RIP; RAX; RDI; RSI] ,,\n         MAYCHANGE SOME_FLAGS ,,\n         MAYCHANGE [memory :> bytes (p,n)] ,,\n         MAYCHANGE [events])\n        (\\s. cleanse_functional_steps p n - 1)"
+    },
+    {
+      "name": "OPENSSL_CLEANSE_BOUNDED_FUNCTIONAL_CALLABLE",
+      "statement": "forall pc stackpointer ra p n.\n    n < 2 EXP 64 /\\\n    val p + n <= 2 EXP 64 /\\\n    nonoverlapping (word pc,97) (p,n) /\\\n    nonoverlapping (stackpointer,8) (p,n)\n    ==> ensures_n x86\n        (\\s.\n             bytes_loaded s (word pc) openssl_cleanse_mc /\\\n             read RIP s = word pc /\\\n             read RSP s = stackpointer /\\\n             read (memory :> bytes64 stackpointer) s = ra /\\\n             C_ARGUMENTS [p; word n] s)\n        (\\s.\n             read RIP s = ra /\\\n             read RSP s = word_add stackpointer (word 8) /\\\n             read (memory :> bytes (p,n)) s = 0)\n        (MAYCHANGE [RIP; RSP; RAX; RDI; RSI] ,,\n         MAYCHANGE SOME_FLAGS ,,\n         MAYCHANGE [memory :> bytes (p,n)] ,,\n         MAYCHANGE [events])\n        (\\s. cleanse_functional_steps p n)"
+    },
+    {
+      "name": "CLEANSE_REGIONS_DISJOINT_NONOVERLAPPING",
+      "statement": "forall p q n k.\n    val p + n <= 2 EXP 64 /\\\n    val q + k <= 2 EXP 64 /\\\n    (forall a. ~(assurance_region p n a /\\ assurance_region q k a))\n    ==> nonoverlapping (p,n) (q,k)"
+    },
+    {
+      "name": "CLEANSE_REGION_WORD_SUB",
+      "statement": "forall p a n.\n    n < 2 EXP 64 /\\ val p + n <= 2 EXP 64\n    ==> (assurance_region p n (val a) <=> val (word_sub a p) < n)"
+    },
+    {
+      "name": "CLEANSE_MEMORY_WRITE_BYTES_OUTSIDE",
+      "statement": "forall p a n x m.\n    n < 2 EXP 64 /\\ val p + n <= 2 EXP 64 /\\ ~assurance_region p n (val a)\n    ==> write (bytes (p,n)) x m a = m a"
+    },
+    {
+      "name": "CLEANSE_STATE_WRITE_BYTES_OUTSIDE",
+      "statement": "forall p a n x s.\n    n < 2 EXP 64 /\\ val p + n <= 2 EXP 64 /\\ ~assurance_region p n (val a)\n    ==> read memory (write (memory :> bytes (p,n)) x s) a = read memory s a"
+    },
+    {
+      "name": "CLEANSE_FUNCTIONAL_FRAME_OUTSIDE",
+      "statement": "forall p n s t a.\n    n < 2 EXP 64 /\\\n    val p + n <= 2 EXP 64 /\\\n    (MAYCHANGE [RIP; RSP; RAX; RDI; RSI] ,,\n     MAYCHANGE SOME_FLAGS ,,\n     MAYCHANGE [memory :> bytes (p,n)] ,,\n     MAYCHANGE [events])\n    s\n    t /\\\n    ~assurance_region p n (val a)\n    ==> read memory t a = read memory s a"
+    },
+    {
+      "name": "BP_E2_CLEANSE_BOUNDED_FUNCTIONAL_RETURN",
+      "statement": "forall pc stackpointer ra p n m rp wp xp ordinary.\n    ensures_n x86\n    (bp_e2_cleanse_pre pc stackpointer ra p n m rp wp xp ordinary)\n    (\\s.\n         read RIP s = ra /\\\n         val (read RSP s) = val stackpointer + 8 /\\\n         (forall i. i < n ==> read memory s (word_add p (word i)) = word 0) /\\\n         (forall a. ~assurance_region p n (val a) ==> read memory s a = m a))\n    (MAYCHANGE [RIP; RSP; RAX; RDI; RSI] ,,\n     MAYCHANGE SOME_FLAGS ,,\n     MAYCHANGE [memory :> bytes (p,n)] ,,\n     MAYCHANGE [events])\n    (\\s. cleanse_functional_steps p n)"
+    },
+    {
+      "name": "BP_E2_CLEANSE_FUNCTIONAL_RETURN",
+      "statement": "forall pc stackpointer ra p n m rp wp xp ordinary.\n    ensures x86\n    (bp_e2_cleanse_pre pc stackpointer ra p n m rp wp xp ordinary)\n    (\\s.\n         read RIP s = ra /\\\n         val (read RSP s) = val stackpointer + 8 /\\\n         (forall i. i < n ==> read memory s (word_add p (word i)) = word 0) /\\\n         (forall a. ~assurance_region p n (val a) ==> read memory s a = m a))\n    (MAYCHANGE [RIP; RSP; RAX; RDI; RSI] ,,\n     MAYCHANGE SOME_FLAGS ,,\n     MAYCHANGE [memory :> bytes (p,n)] ,,\n     MAYCHANGE [events])"
+    }
+  ],
+  "expanded_definitions": [
+    {
+      "name": "bp_e2_cleanse_pre",
+      "hypothesis_count": 0,
+      "statement": "forall m ra s xp rp wp ordinary pc p n stackpointer.\n    bp_e2_cleanse_pre pc stackpointer ra p n m rp wp xp ordinary s <=>\n    n < 2 EXP 64 /\\\n    pc + 97 <= 2 EXP 64 /\\\n    bytes_loaded s (word pc) openssl_cleanse_mc /\\\n    read RIP s = word pc /\\\n    read RSP s = stackpointer /\\\n    read (memory :> bytes64 stackpointer) s = ra /\\\n    C_ARGUMENTS [p; word n] s /\\\n    read memory s = m /\\\n    val stackpointer MOD 16 = 8 /\\\n    val stackpointer + 8 < 2 EXP 64 /\\\n    assurance_canonical48 (val ra) /\\\n    ~(ra = word pc) /\\\n    (read DF s <=> false) /\\\n    ~bit 18 (read rflags s) /\\\n    assurance_span_ok (\\a. xp a /\\ ordinary a) pc 97 /\\\n    assurance_span_ok (\\a. rp a /\\ ordinary a) (val stackpointer) 8 /\\\n    assurance_span_ok (\\a. wp a /\\ ordinary a) (val p) n /\\\n    (forall a. ~(assurance_region p n a /\\ assurance_region (word pc) 97 a)) /\\\n    (forall a.\n         ~(assurance_region p n a /\\ assurance_region stackpointer 8 a))"
+    },
+    {
+      "name": "bp_e2_cleanse_allowed_read",
+      "hypothesis_count": 0,
+      "statement": "forall rp ordinary stackpointer a.\n    bp_e2_cleanse_allowed_read rp ordinary stackpointer a <=>\n    rp a /\\ ordinary a /\\ assurance_region stackpointer 8 a"
+    },
+    {
+      "name": "bp_e2_cleanse_allowed_write",
+      "hypothesis_count": 0,
+      "statement": "forall wp ordinary p n a.\n    bp_e2_cleanse_allowed_write wp ordinary p n a <=>\n    wp a /\\ ordinary a /\\ assurance_region p n a"
+    },
+    {
+      "name": "bp_e2_cleanse_allowed_fetch",
+      "hypothesis_count": 0,
+      "statement": "forall xp ordinary pc a.\n    bp_e2_cleanse_allowed_fetch xp ordinary pc a <=>\n    xp a /\\ ordinary a /\\ assurance_region (word pc) 97 a"
+    },
+    {
+      "name": "cleanse_alignment_count",
+      "hypothesis_count": 0,
+      "statement": "forall p. cleanse_alignment_count p = (8 - val p MOD 8) MOD 8"
+    },
+    {
+      "name": "cleanse_functional_steps",
+      "hypothesis_count": 0,
+      "statement": "forall n p.\n    cleanse_functional_steps p n =\n    (if n < 15\n     then 4 * n + 7\n     else let a = (8 - val p MOD 8) MOD 8 in\n          9 + 6 * a + 5 * (n - a) DIV 8 + 4 * (n - a) MOD 8)"
+    },
+    {
+      "name": "assurance_region",
+      "hypothesis_count": 0,
+      "statement": "forall a p n. assurance_region p n a <=> val p <= a /\\ a < val p + n"
+    },
+    {
+      "name": "assurance_span_ok",
+      "hypothesis_count": 0,
+      "statement": "forall width perm a.\n    assurance_span_ok perm a width <=>\n    a + width <= 2 EXP 64 /\\\n    (forall j. j < width ==> assurance_canonical48 (a + j) /\\ perm (a + j))"
+    },
+    {
+      "name": "assurance_canonical48",
+      "hypothesis_count": 0,
+      "statement": "forall a.\n    assurance_canonical48 a <=>\n    a < 2 EXP 64 /\\ (a < 2 EXP 47 \\/ 2 EXP 64 - 2 EXP 47 <= a)"
+    }
+  ],
+  "human_review": "PENDING"
+}

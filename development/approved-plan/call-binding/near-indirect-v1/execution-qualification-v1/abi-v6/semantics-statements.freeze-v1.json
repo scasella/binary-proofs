@@ -1,0 +1,17 @@
+{
+  "id": "ABI_SCALAR_EXTENSION_V6",
+  "frozen_at_utc": "2026-09-30T18:49:40.419201+00:00",
+  "files": {
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/extension-v6.ml": "9ed1bc86171f0064c2f77c452d7cd3e99c185ffab100d8e4e6f2cda19d5fc411",
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/statements-v6.ml": "de37c941063cbb2a28d8bec5f83ebafe2a99bde89371a5eb75ee3ab5cf16c497",
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/expected-statements-v6.json": "df6fbf01f097849c4dc2571c12e01b571715b195c7e1bb9c75be6c6bd3ccf070",
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/expected-definitions-v6.json": "642d8c476bfa6f41713ab06b79ea25589e8c7bc58483c83d5104e2b73dae38f3",
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/consulted-primary-inputs-v1.json": "641a348733de67da5107656e8910f7e61943eb1d3f5f430f6e2cddab38a4c631"
+  },
+  "proof_search_started": false,
+  "target_count": 9,
+  "definition_count": 3,
+  "human_review": "PENDING",
+  "physical_effect_correspondence_trusted_not_derived_from_projection": true,
+  "no_original_model_changes": true
+}

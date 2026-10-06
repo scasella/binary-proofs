@@ -1,0 +1,24 @@
+{
+  "execution_class":"emulated_amd64_on_Apple_Silicon_Docker",
+  "uname":{"sysname":"Linux","release":"7.0.14-linuxkit","machine":"x86_64"},
+  "permission_granule":4096,
+  "osxsave":true,
+  "xcr0":"0x7",
+  "cpuid":[
+    {"leaf":0,"subleaf":0,"eax":13,"ebx":1970169159,"ecx":1818588270,"edx":1231384169},
+    {"leaf":1,"subleaf":0,"eax":132800,"ebx":67584,"ecx":2128097807,"edx":260803349},
+    {"leaf":7,"subleaf":0,"eax":0,"ebx":296,"ecx":0,"edx":0},
+    {"leaf":7,"subleaf":1,"eax":0,"ebx":296,"ecx":0,"edx":0},
+    {"leaf":13,"subleaf":0,"eax":7,"ebx":832,"ecx":832,"edx":0},
+    {"leaf":13,"subleaf":1,"eax":0,"ebx":0,"ecx":0,"edx":0},
+    {"leaf":2147483648,"subleaf":0,"eax":2147483656,"ebx":0,"ecx":0,"edx":0},
+    {"leaf":2147483649,"subleaf":0,"eax":0,"ebx":0,"ecx":33,"edx":672139264}
+  ],
+  "symbols":[
+    {"symbol":"memcmp","loaded_path":"/work/artifacts/baseline/libc.so.6","load_bias":"0x7fffff5e1000","address":"0x7fffff733320","elf_vaddr":"0x152320","first_32_bytes":"4883fa200f82d6020000c5fe6f0ec5f5740fc5fdd7c1ffc00f85b20000004883"},
+    {"symbol":"CRYPTO_memcmp","loaded_path":"/work/artifacts/baseline/libcrypto.so.3","load_bias":"0x7fffff155000","address":"0x7fffff396840","elf_vaddr":"0x241840","first_32_bytes":"f30f1efa4831c04d31d24883fa00744d4883fa10752a4c8b174c8b5f0848c7c2"},
+    {"symbol":"OPENSSL_cleanse","loaded_path":"/work/artifacts/baseline/libcrypto.so.3","load_bias":"0x7fffff155000","address":"0x7fffff3967d0","elf_vaddr":"0x2417d0","first_32_bytes":"f30f1efa4831c04883fe0f73234883fe00740c88074883ee01488d7f0175f4f3"}
+  ],
+  "assumptions":["sequential stable ordinary memory","permission granule 4096","code RX and immutable","input pages readable","destination pages writable","no interposition","loader and capability initialization are environmental assumptions"],
+  "runtime_selection_modified":false
+}

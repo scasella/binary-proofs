@@ -1,0 +1,34 @@
+{
+  "created_at": "2026-09-30T14:52:07.630887+00:00",
+  "input_hashes": {
+    "extension-v5.ml": "f93bf58cb530783c516691c150d4df89bc31797aff673936cfc2b13992ea440d",
+    "sites-v5.ml": "d6436001180663c46d5e6dbe553081e1aaa19bb207ea4bc4fcfca1e04764a1fd",
+    "statements-v5.ml": "4cc07989fc8dbdb49f91ba5e6d75e24c48fe96b640f0d6cbf18ea11dfb8d9383",
+    "coverage-statement.ml": "7c74c8dcdde37896a4def00745f8830f25eb802c364c90e4a0f0e3b8b1fa445f",
+    "bridge-proof.ml": "e6deb54f6c27bc71989a549290afd074a2248411934e2072ca1ff0bd0015879b",
+    "path-lift-proof.ml": "f88ba7f89c9f71bb4d58dc09c8986b6d7cc1250814061d0b9250a1f314fa91af",
+    "coverage-proof.ml": "0fab51a2ddaea008bc9e62350bca1698d8a4c93da2e9c7372b2f4043123e9c7e",
+    "expected-statements-v5.json": "5884a06b525bb9156c05acb31edfbd08b480327c9376cc40efe9560bb9c130ea",
+    "expected-definitions-v5.json": "e600ef8b64063bada1e623d045cf009b17e5b17ec95e2ae76e3307024fd0ec6c",
+    "expected-imported-definitions-v5.json": "b7d572b12fc5ef28212d97cf4af000b7a8e9777ee02b02906e692b81d76611cc",
+    "statements-definitions.freeze.json": "4193f963592d8f907b06f0497de68f2b6602b3d7f9cfde271a4a5f9c4a18819d",
+    "coverage.freeze.json": "287222ce6d912dcdc2c54e613023085e85bace48244bef26e9309277bb178ef4",
+    "imports-definitions.freeze.json": "4bf0e2ae80c2597d1f92033a383b3efb7a076672ffc9e08a45fea89c8713642d",
+    "exact-sites-v5.json": "91712c6ac5c07752608945cce30c51e7368516ce7a431d8c23a3eabbb6b03d49",
+    "PROPOSAL-v5.md": "bfb130abf628717b8d55c52504f21280b6996a3cb7be8369ea4dc33f61373ac7",
+    "replay.py": "d5e5f6af9c46d52094fee4881c65346d6ec4217e33d317f4c0784f2d1ae6fae1"
+  },
+  "fresh_receipt": "results/development/assurance-cleanse-abi-v5-20260930T144352Z-c75f06ed/output/run.json",
+  "successful_aliases": {
+    "bridge-proof.ml": "bridge-proof-attempt1.ml",
+    "path-lift-proof.ml": "path-lift-proof-attempt1.ml",
+    "coverage-proof.ml": "coverage-proof-attempt1.ml"
+  },
+  "theorem_count": 11,
+  "expanded_definition_count": 15,
+  "source_readonly_no_writable_alias": true,
+  "scope": "generic SUB/TEST omitted-state clause, original-successor conservativity, checked-run lift, and actual production decoded-site qualification; whole-routine reachability/safety remain separate",
+  "physical_ISA_fidelity": "EXPLICIT_TRUST_BOUNDARY",
+  "human_review": "PENDING",
+  "full_O1_pass": false
+}

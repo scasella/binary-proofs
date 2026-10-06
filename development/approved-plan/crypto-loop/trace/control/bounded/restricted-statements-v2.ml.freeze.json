@@ -1,0 +1,6 @@
+{
+  "statement_file": "development/approved-plan/crypto-loop/trace/control/bounded/restricted-statements-v2.ml",
+  "sha256": "6fb401ee6bbd2f02719ca3491604e76826d9440e9232f920192dc23b0d13c19b",
+  "stage": "corrected syntax; frozen before further search",
+  "precursor": "restricted-statements.ml"
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "c3-postmortem-protected-check-v1",
+  "utc": "2026-10-05T14:05:34.805425+00:00",
+  "seal_sha256": "64f110eacc3f1737ce47aa6be896506037df7ce011c38aa861182ce7b1b63b52",
+  "records": 43230,
+  "status": "PASS",
+  "failures": [],
+  "formal_verification": false,
+  "scope": "Identity preservation; no theorem reconstruction or semantic validation"
+}

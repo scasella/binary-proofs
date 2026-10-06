@@ -1,0 +1,7 @@
+{
+  "created_at_utc": "2026-09-30T15:38:07.640613+00:00",
+  "before_search": true,
+  "file": "development/approved-plan/cleanse/functional/bulk-statements.ml",
+  "sha256": "729856be64a7962556864b7b3351d71cd9b8772c193ad72eaec7ec2ace3fc77d",
+  "scope": "All-count modeled bulk component; no routine return/access/ABI acceptance"
+}

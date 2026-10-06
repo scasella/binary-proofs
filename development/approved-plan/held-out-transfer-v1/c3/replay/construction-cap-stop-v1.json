@@ -1,0 +1,769 @@
+{
+  "schema": "heldout-construction-cap-stop-v1",
+  "record_utc": "2026-10-05T04:40:52.484848+00:00",
+  "construction_deadline_utc": "2026-10-05T04:38:37.273874Z",
+  "construction_cap_seconds": 10800,
+  "outcome": "NOT_ACCEPTED_WITHIN_FIXED_EVALUATION_BUDGET",
+  "proof_construction_stopped": true,
+  "new_proof_search_after_deadline": false,
+  "post_deadline_work": "Metadata only: source hash snapshot, current goal display, container accounting and stop. No new proof source or repair.",
+  "metadata_capture_lag_disclosed": true,
+  "run": "development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa",
+  "container_id": "22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6",
+  "before": {
+    "argv": [
+      "docker",
+      "inspect",
+      "22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6"
+    ],
+    "exit_code": 0,
+    "output": "[\n    {\n        \"Id\": \"22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6\",\n        \"Created\": \"2026-10-05T04:16:54.539674461Z\",\n        \"Path\": \"/work/third_party/hol-light/ocaml-hol\",\n        \"Args\": [\n            \"-init\",\n            \"/work/third_party/hol-light/hol.ml\",\n            \"-safe-string\",\n            \"-I\",\n            \"/work/third_party/hol-light\"\n        ],\n        \"State\": {\n            \"Status\": \"running\",\n            \"Running\": true,\n            \"Paused\": false,\n            \"Restarting\": false,\n            \"OOMKilled\": false,\n            \"Dead\": false,\n            \"Pid\": 3199,\n            \"ExitCode\": 0,\n            \"Error\": \"\",\n            \"StartedAt\": \"2026-10-05T04:16:54.606050336Z\",\n            \"FinishedAt\": \"0001-01-01T00:00:00Z\"\n        },\n        \"Image\": \"sha256:a19fdc18f1f283ed8e2514229b77f33619df1ba0ea1ae578c97779f4b4eb3c3f\",\n        \"ResolvConfPath\": \"/var/lib/docker/containers/22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6/resolv.conf\",\n        \"HostnamePath\": \"/var/lib/docker/containers/22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6/hostname\",\n        \"HostsPath\": \"/var/lib/docker/containers/22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6/hosts\",\n        \"LogPath\": \"/var/lib/docker/containers/22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6/22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6-json.log\",\n        \"Name\": \"/zen_dirac\",\n        \"RestartCount\": 0,\n        \"Driver\": \"overlay2\",\n        \"Platform\": \"linux\",\n        \"MountLabel\": \"\",\n        \"ProcessLabel\": \"\",\n        \"AppArmorProfile\": \"\",\n        \"ExecIDs\": null,\n        \"HostConfig\": {\n            \"Binds\": [\n                \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source/development/approved-plan/reusable-assurance-v1:/reuse:ro\",\n                \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source/development/approved-plan/clients-e3/public-inputs-v1:/client-public:ro\",\n                \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3:/work/development/approved-plan/held-out-transfer-v1/c3:ro\",\n                \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source:/work:ro\",\n                \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/runtime:/output:rw\",\n                \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source/development/approved-plan/call-binding/near-indirect-v1/decode-attempt5.ml:/work/third_party/s2n-bignum/x86/proofs/decode.ml:ro\",\n                \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source/development/approved-plan/call-binding/near-indirect-v1/x86-attempt5.ml:/work/third_party/s2n-bignum/x86/proofs/x86.ml:ro\"\n            ],\n            \"ContainerIDFile\": \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/runtime/container.cid\",\n            \"LogConfig\": {\n                \"Type\": \"json-file\",\n                \"Config\": {}\n            },\n            \"NetworkMode\": \"none\",\n            \"PortBindings\": {},\n            \"RestartPolicy\": {\n                \"Name\": \"no\",\n                \"MaximumRetryCount\": 0\n            },\n            \"AutoRemove\": false,\n            \"VolumeDriver\": \"\",\n            \"VolumesFrom\": null,\n            \"ConsoleSize\": [\n                0,\n                0\n            ],\n            \"CapAdd\": null,\n            \"CapDrop\": null,\n            \"CgroupnsMode\": \"private\",\n            \"Dns\": null,\n            \"DnsOptions\": [],\n            \"DnsSearch\": [],\n            \"ExtraHosts\": null,\n            \"GroupAdd\": null,\n            \"IpcMode\": \"private\",\n            \"Cgroup\": \"\",\n            \"Links\": null,\n            \"OomScoreAdj\": 0,\n            \"PidMode\": \"\",\n            \"Privileged\": false,\n            \"PublishAllPorts\": false,\n            \"ReadonlyRootfs\": false,\n            \"SecurityOpt\": null,\n            \"UTSMode\": \"\",\n            \"UsernsMode\": \"\",\n            \"ShmSize\": 67108864,\n            \"Runtime\": \"runc\",\n            \"Isolation\": \"\",\n            \"CpuShares\": 0,\n            \"Memory\": 3221225472,\n            \"NanoCpus\": 1000000000,\n            \"CgroupParent\": \"\",\n            \"BlkioWeight\": 0,\n            \"BlkioWeightDevice\": [],\n            \"BlkioDeviceReadBps\": [],\n            \"BlkioDeviceWriteBps\": [],\n            \"BlkioDeviceReadIOps\": [],\n            \"BlkioDeviceWriteIOps\": [],\n            \"CpuPeriod\": 0,\n            \"CpuQuota\": 0,\n            \"CpuRealtimePeriod\": 0,\n            \"CpuRealtimeRuntime\": 0,\n            \"CpusetCpus\": \"\",\n            \"CpusetMems\": \"\",\n            \"Devices\": [],\n            \"DeviceCgroupRules\": null,\n            \"DeviceRequests\": null,\n            \"MemoryReservation\": 0,\n            \"MemorySwap\": 3221225472,\n            \"MemorySwappiness\": null,\n            \"OomKillDisable\": null,\n            \"PidsLimit\": null,\n            \"Ulimits\": null,\n            \"CpuCount\": 0,\n            \"CpuPercent\": 0,\n            \"IOMaximumIOps\": 0,\n            \"IOMaximumBandwidth\": 0,\n            \"MaskedPaths\": [\n                \"/proc/acpi\",\n                \"/proc/asound\",\n                \"/proc/interrupts\",\n                \"/proc/kcore\",\n                \"/proc/keys\",\n                \"/proc/latency_stats\",\n                \"/proc/sched_debug\",\n                \"/proc/scsi\",\n                \"/proc/timer_list\",\n                \"/proc/timer_stats\",\n                \"/sys/devices/virtual/powercap\",\n                \"/sys/firmware\"\n            ],\n            \"ReadonlyPaths\": [\n                \"/proc/bus\",\n                \"/proc/fs\",\n                \"/proc/irq\",\n                \"/proc/sys\",\n                \"/proc/sysrq-trigger\"\n            ]\n        },\n        \"GraphDriver\": {\n            \"Data\": {\n                \"ID\": \"22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6\",\n                \"LowerDir\": \"/var/lib/docker/overlay2/104fa84f05ea0eccdaaf8bf17c18ad75ba4469609ecc266ed3f53e24770d8c73-init/diff:/var/lib/docker/overlay2/t37dj25t1duwlc3x23p3bf0zl/diff:/var/lib/docker/overlay2/2qc9q7x39wz22jmiqkae8wkbc/diff:/var/lib/docker/overlay2/53b95ac890835d1b836e352698704640b224ae2b634ec9cf4c1bc7986d212e66/diff\",\n                \"MergedDir\": \"/var/lib/docker/overlay2/104fa84f05ea0eccdaaf8bf17c18ad75ba4469609ecc266ed3f53e24770d8c73/merged\",\n                \"UpperDir\": \"/var/lib/docker/overlay2/104fa84f05ea0eccdaaf8bf17c18ad75ba4469609ecc266ed3f53e24770d8c73/diff\",\n                \"WorkDir\": \"/var/lib/docker/overlay2/104fa84f05ea0eccdaaf8bf17c18ad75ba4469609ecc266ed3f53e24770d8c73/work\"\n            },\n            \"Name\": \"overlay2\"\n        },\n        \"Mounts\": [\n            {\n                \"Type\": \"bind\",\n                \"Source\": \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source/development/approved-plan/clients-e3/public-inputs-v1\",\n                \"Destination\": \"/client-public\",\n                \"Mode\": \"ro\",\n                \"RW\": false,\n                \"Propagation\": \"rprivate\"\n            },\n            {\n                \"Type\": \"bind\",\n                \"Source\": \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/runtime\",\n                \"Destination\": \"/output\",\n                \"Mode\": \"rw\",\n                \"RW\": true,\n                \"Propagation\": \"rprivate\"\n            },\n            {\n                \"Type\": \"bind\",\n                \"Source\": \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source/development/approved-plan/reusable-assurance-v1\",\n                \"Destination\": \"/reuse\",\n                \"Mode\": \"ro\",\n                \"RW\": false,\n                \"Propagation\": \"rprivate\"\n            },\n            {\n                \"Type\": \"bind\",\n                \"Source\": \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source\",\n                \"Destination\": \"/work\",\n                \"Mode\": \"ro\",\n                \"RW\": false,\n                \"Propagation\": \"rprivate\"\n            },\n            {\n                \"Type\": \"bind\",\n                \"Source\": \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3\",\n                \"Destination\": \"/work/development/approved-plan/held-out-transfer-v1/c3\",\n                \"Mode\": \"ro\",\n                \"RW\": false,\n                \"Propagation\": \"rprivate\"\n            },\n            {\n                \"Type\": \"bind\",\n                \"Source\": \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source/development/approved-plan/call-binding/near-indirect-v1/decode-attempt5.ml\",\n                \"Destination\": \"/work/third_party/s2n-bignum/x86/proofs/decode.ml\",\n                \"Mode\": \"ro\",\n                \"RW\": false,\n                \"Propagation\": \"rprivate\"\n            },\n            {\n                \"Type\": \"bind\",\n                \"Source\": \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source/development/approved-plan/call-binding/near-indirect-v1/x86-attempt5.ml\",\n                \"Destination\": \"/work/third_party/s2n-bignum/x86/proofs/x86.ml\",\n                \"Mode\": \"ro\",\n                \"RW\": false,\n                \"Propagation\": \"rprivate\"\n            }\n        ],\n        \"Config\": {\n            \"Hostname\": \"22f14705f1c1\",\n            \"Domainname\": \"\",\n            \"User\": \"\",\n            \"AttachStdin\": true,\n            \"AttachStdout\": true,\n            \"AttachStderr\": true,\n            \"Tty\": false,\n            \"OpenStdin\": true,\n            \"StdinOnce\": true,\n            \"Env\": [\n                \"HOLLIGHT_DIR=/work/third_party/hol-light\",\n                \"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"\n            ],\n            \"Cmd\": [\n                \"/work/third_party/hol-light/ocaml-hol\",\n                \"-init\",\n                \"/work/third_party/hol-light/hol.ml\",\n                \"-safe-string\",\n                \"-I\",\n                \"/work/third_party/hol-light\"\n            ],\n            \"Image\": \"sha256:a19fdc18f1f283ed8e2514229b77f33619df1ba0ea1ae578c97779f4b4eb3c3f\",\n            \"Volumes\": null,\n            \"WorkingDir\": \"/work/third_party/s2n-bignum\",\n            \"Entrypoint\": null,\n            \"Labels\": {\n                \"org.opencontainers.image.version\": \"24.04\"\n            }\n        },\n        \"NetworkSettings\": {\n            \"SandboxID\": \"b3af976e66517bc27ed5bfb9ae9c253f54d5a51c44e44da360a0453d8c47ab2d\",\n            \"SandboxKey\": \"/var/run/docker/netns/b3af976e6651\",\n            \"Ports\": {},\n            \"Networks\": {\n                \"none\": {\n                    \"IPAMConfig\": null,\n                    \"Links\": null,\n                    \"Aliases\": null,\n                    \"DriverOpts\": null,\n                    \"GwPriority\": 0,\n                    \"NetworkID\": \"1dfd3296e12d7b28baa51e19dcab71d6c42a330a4d2dee03435b5c2e76c85cff\",\n                    \"EndpointID\": \"0e30e93ec3f3ff22c0a2979489d5e4286d3bbd771cc9891f43a2671210558693\",\n                    \"Gateway\": \"\",\n                    \"IPAddress\": \"\",\n                    \"MacAddress\": \"\",\n                    \"IPPrefixLen\": 0,\n                    \"IPv6Gateway\": \"\",\n                    \"GlobalIPv6Address\": \"\",\n                    \"GlobalIPv6PrefixLen\": 0,\n                    \"DNSNames\": null\n                }\n            }\n        }\n    }\n]\n"
+  },
+  "resources": {
+    "argv": [
+      "docker",
+      "exec",
+      "22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6",
+      "sh",
+      "-c",
+      "cat /sys/fs/cgroup/cpu.stat; cat /sys/fs/cgroup/memory.peak"
+    ],
+    "exit_code": 0,
+    "output": "usage_usec 649030934\nuser_usec 646512472\nsystem_usec 2518462\nnice_usec 0\nnr_periods 6558\nnr_throttled 1902\nthrottled_usec 5291427\nnr_bursts 0\nburst_usec 0\n1101668352\n"
+  },
+  "stats": {
+    "argv": [
+      "docker",
+      "stats",
+      "--no-stream",
+      "--format",
+      "{{json .}}",
+      "22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6"
+    ],
+    "exit_code": 0,
+    "output": "{\"BlockIO\":\"233kB / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6\",\"ID\":\"22f14705f1c1\",\"MemPerc\":\"33.75%\",\"MemUsage\":\"1.012GiB / 3GiB\",\"Name\":\"zen_dirac\",\"NetIO\":\"0B / 0B\",\"PIDs\":\"1\"}\n"
+  },
+  "source_snapshot": [
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/application-v1.ml",
+      "sha256": "c280993faba1abc8019c901d31af6d473de0429c2c07836f4f6da9b3409ea3e6",
+      "bytes": 3771
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/application-v2.ml",
+      "sha256": "01e52d8047d93736da69779e7c76d2ee9dedbd22fc46664758eaff2aa6afad6a",
+      "bytes": 3833
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/application-v3.ml",
+      "sha256": "844d5325f2b157963ab459da9c78dd8449b4f556e29ef153c5789f1d26935748",
+      "bytes": 4051
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-application-v1.ml",
+      "sha256": "4648c7bde5d7b439535cfc4d09a3daa301bb959b757e2093e73c025bde21685e",
+      "bytes": 5494
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-application-v2.ml",
+      "sha256": "4bde961c40423b2c6b6933402574096da25267486411a15c51bbf08792aebda4",
+      "bytes": 5524
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-current-inputs-v1.ml",
+      "sha256": "5d48d2c59089780f3c478a52687ab42a460bfdfa15f0be26d8bfb7ae83f5eb17",
+      "bytes": 2490
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-current-inputs-v2.ml",
+      "sha256": "8530f846763fac00ca1cde77254e9ee1a04fb83d6ed32688e62e69f973940d41",
+      "bytes": 2504
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-current-inputs-v3.ml",
+      "sha256": "0ec223e00d93bc2fe6f81c3fc8aae51a8466e7f5424e63db997394b5e4ce6e37",
+      "bytes": 2541
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-current-inputs-v4.ml",
+      "sha256": "46f37f350228e5322b1d869461cc266d0a27922934548de16cfdc4e9c24f352b",
+      "bytes": 2719
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-current-inputs-v5.ml",
+      "sha256": "125a1d4a74fb3933dde36af8d4c18de0a560d9cf55afd0b14c788ddf9d763f10",
+      "bytes": 3593
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-current-inputs-v6.ml",
+      "sha256": "0bf72a806709e1cc024c8070a43596ab713fcbd247d7e6cf4ee81e2d87fb2ffc",
+      "bytes": 3616
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-library-image-v1.ml",
+      "sha256": "7c5cb5771a25c26570b9ede3d9e921873f4245284f57813a31078af3ade51aae",
+      "bytes": 2064
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-policy-support-v1.ml",
+      "sha256": "c04f130dace15f7c9c987c4797ae02c48fac1b1c52c3343037552d5bc84cc0f0",
+      "bytes": 3661
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-return-working-state-v1.ml",
+      "sha256": "d25dda2405950965a62a57ce0effd3d45f27ca4bb625c4a15e273792498dfd5c",
+      "bytes": 6830
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-saved-bindings-v1.ml",
+      "sha256": "f75234117bdc19bb7a6322997019facc19d831212046af95f36c8668748ee8ac",
+      "bytes": 15068
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-saved-bindings-v2.ml",
+      "sha256": "80fa03807744e9a7d1dc94261b386974573f48af8874bd3579f7de8bc48c1a5d",
+      "bytes": 15069
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-saved-bindings-v3.ml",
+      "sha256": "ec01d9b98e5ce52235bdc48a8a245bae62803c9902ab255baa000ff45a02c174",
+      "bytes": 15094
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-endpoint-core-v1.ml",
+      "sha256": "44883b2dbb02fb8a713a461dd055869488da393f625a6059107b7d15dd9c2ec6",
+      "bytes": 5016
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-endpoint-core-v2.ml",
+      "sha256": "1693f3deb13df3a535a1e488358960515476650d94239f7f91bebde072db15de",
+      "bytes": 5021
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-endpoint-core-v3.ml",
+      "sha256": "f08b3b17749ab4a938b024a87f13156074173e7873f64d2b4de98d3f11774877",
+      "bytes": 5130
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-endpoint-core-v4.ml",
+      "sha256": "4091eeebe7b3a4c25d8c5aed7f5d53446076700caed5c2d24c445d845071695e",
+      "bytes": 5132
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-endpoint-core-v5.ml",
+      "sha256": "8313df93c8553615a8c680eef07932babfe7d86b89fac769783f0f8822139012",
+      "bytes": 5173
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-endpoint-core-v6.ml",
+      "sha256": "11ddb8317c2ed7c50569559e2ec66781960b06da03c8ba4f10b789190741cf55",
+      "bytes": 5234
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-endpoint-public-v1.ml",
+      "sha256": "857e73daadc2ea9894cae51a41c0a3e61784a1fc1ad45f793a8227d270c454b7",
+      "bytes": 5144
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-endpoint-public-v2.ml",
+      "sha256": "b8b1fe215fc222dfc16ad8e80df172af994126eb19a2236794b247b5c3ca7391",
+      "bytes": 5165
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-endpoint-public-v3.ml",
+      "sha256": "1d9423b230192d64b889be18b5143ae914d5a401afcdddbb4916b2a14242502a",
+      "bytes": 5168
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-endpoint-public-v4.ml",
+      "sha256": "bc7c1b4356a4beaaa6795645a62dafe77f1377882b19e05ad5ad9b6972a6d81e",
+      "bytes": 5284
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-endpoint-total-frame-v1.ml",
+      "sha256": "a462ca7c010bbf245eed689278f35be2edf0b6f92f95182fc25fc07e40bef00c",
+      "bytes": 1403
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-frame-v1.ml",
+      "sha256": "a090e8543a796affad833f994cb319b6d1a7a61b3f29783e6f09d19a4519c90f",
+      "bytes": 4179
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-frame-v2.ml",
+      "sha256": "817ffda272486ad3c06ff8a6383242ebb3f89fb9f199831056be25b3b18324e7",
+      "bytes": 4183
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-handoff-attempt1.ml",
+      "sha256": "ced4ef768190575aa7735428f8546dfa5e9c80a69d939df4e68709ab4aa093a2",
+      "bytes": 5089
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-handoff-attempt2.ml",
+      "sha256": "dfaf84631ba439d27b294b89648c082b1ee099bab1a3a57f582479fd85181d8a",
+      "bytes": 5308
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-handoff-attempt3.ml",
+      "sha256": "224fc35ec419a6c5e613f562b69328a7ab23015e5e4dcb4c2b95100aa0ed15ac",
+      "bytes": 5470
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-handoff-attempt4.ml",
+      "sha256": "bb0bd017fee1216f7c71b9c60229841016b9e76797f2a0341127521d01dc2363",
+      "bytes": 5883
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-handoff-attempt5.ml",
+      "sha256": "5cb64e0d522e5c8c8cd37c26cfbb2c0d219e08a81648f1462717ca35c13ac084",
+      "bytes": 6678
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-handoff-attempt6.ml",
+      "sha256": "89c16752244d0aa0c4a889bb5fef05d9f05908b1c3c029159d73eb5a9698b4e2",
+      "bytes": 6731
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-handoff-definitions-v1.ml",
+      "sha256": "060d626322349a90f97a6c33e1fffa5206327b8b0a6a18263939acb133f102d5",
+      "bytes": 5491
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-handoff-definitions-v2.ml",
+      "sha256": "770fc15decb92cc8835915839275fee44982dd464a37a110d33ce555ec70f9a6",
+      "bytes": 6339
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-handoff-proof-attempt1.ml",
+      "sha256": "ff06e1bcbc02c4f5938fa134d8d9ebe6ee25972fd47f7234bd2158953dc2ac43",
+      "bytes": 18941
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-total-frame-inclusion-v1.ml",
+      "sha256": "404481c10cf93fabf4c4e6ed30ff99639997cefa1f02c4da8a4064a01ff14521",
+      "bytes": 842
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/count-v1.ml",
+      "sha256": "f1da4d1236d0770976a29136c53ad0d1191a28244f28307b64e1d0c997485618",
+      "bytes": 177
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/count-v2.ml",
+      "sha256": "62349be1619918bb3969f015c4ba056f9f49041075f4be9f30a82514f4a81dcc",
+      "bytes": 170
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/entry-support-v1.ml",
+      "sha256": "40cfcf052242a159ae4ecebb470be082a969749e7e5bf438828fc9f9a6935753",
+      "bytes": 22218
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/entry-support-v2.ml",
+      "sha256": "de7eafa0748b8320dcc618472791010228e74dac40a21ffcbb1abcbe319f02d1",
+      "bytes": 22908
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/entry-support-v3.ml",
+      "sha256": "8cc36f26bd7e08c1c1ea22cbf72fc26ed4ce5483589572c130d5b2f566b445a4",
+      "bytes": 22910
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-policy-bridge-v1.ml",
+      "sha256": "fde8bdc024eaf42e42f38753fce8c9874a1d9356639d756d3e3657ad796c77b6",
+      "bytes": 632
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-actual-paths-diagnostic-v1.ml",
+      "sha256": "8be99778086c6e58f29b5d616f5f389cc7180845f0700dd8d0355ad3fed06db0",
+      "bytes": 527
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-actual-paths-diagnostic-v2.ml",
+      "sha256": "7e6a45231b054a0a70642bb86acbeb2a84f9d246fa5579f485392ee3a8064eb1",
+      "bytes": 464
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-endpoint-private-v1.ml",
+      "sha256": "131931d84000d3795d6e52cbcdfe72e4cf43ff1071a7f420208e725d6a345573",
+      "bytes": 527
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-frame-private-v1.ml",
+      "sha256": "0bfb22344e4b00017c8dddbbb5ecd2e377bed2bf528577ef3caa6e7d51040140",
+      "bytes": 1245
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-frame-v1.ml",
+      "sha256": "a51218973d2067479bc1194bce1c4fce6a30dbfcc73f09f0956ee1fb067d4318",
+      "bytes": 6631
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-frame-v2.ml",
+      "sha256": "db3685fc6d074e8917309aa6869bb1fa4a4b066af7647378a0b76e8b0c6bc80e",
+      "bytes": 8313
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-frame-v3.ml",
+      "sha256": "d460be84b859302cf56c00e3fba45b509daf8c716699e347b62df92bf40f8387",
+      "bytes": 8525
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-frame-v4.ml",
+      "sha256": "62523272879718d225f7c3ee1c5522adede7929d9d19cad3df3dafe0f29b1b93",
+      "bytes": 8531
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-instructions-v1.ml",
+      "sha256": "846c1be842a890763073181e8a9abb0cbea165f2b70ab3e73993ac3121a5d2e2",
+      "bytes": 4949
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-offsets-v1.ml",
+      "sha256": "fe30b33eb54c7c342adc6eddb8b11bdf9bab3f1bf1c9d980d4eec01baae09bb5",
+      "bytes": 1156
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-offsets-v2.ml",
+      "sha256": "914ea0d5f1fcc988932aed89623e4d40fe776251167105602d41e99f44c2d13d",
+      "bytes": 1224
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-prefix-diagnostic-v1.ml",
+      "sha256": "c9dc9684c61973194fcf614d86b4f5c99ca927e3a7df94888911b42cabfa072a",
+      "bytes": 617
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-rsp-diagnostic-v1.ml",
+      "sha256": "f4bf6ad230aff93ddd85daf2478b300984553fa64baa8f43ef4d9a15fad484ff",
+      "bytes": 566
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-steps-v1.ml",
+      "sha256": "2055d2482ac46092a18ff95d2174cf95f70307468cb99586fc724bbdd1a9a0ab",
+      "bytes": 5828
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-steps-v2.ml",
+      "sha256": "0d60d3ee10f30f0b6c395fe8a58a950a9a4c1db57bcab5681bd19140dd21ba10",
+      "bytes": 5906
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-v1.ml",
+      "sha256": "893fdf9af7df6191513f7eca8d69e89c3a2ff762239ba69f360d0e01c94f50f1",
+      "bytes": 3074
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-v2.ml",
+      "sha256": "7cd09fb6491e5877782fdde3bf85c56831a6c552130d08bcbcab0f50e94f9588",
+      "bytes": 3096
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-v3.ml",
+      "sha256": "172037881865e5fd971a40f6d760bccadf5aba3208eb7d6ca494bbf3286b3a7f",
+      "bytes": 3695
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-v4.ml",
+      "sha256": "3411677231771b1eabc9ee30b38adf7a505d796c80f4cbfaa3ef055da0af9741",
+      "bytes": 3699
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-comparison-result-v1.ml",
+      "sha256": "7e8a124b0447f4db15bacc9fb3b04fb048b624ef5cd1d687cd9c71434a2f5f76",
+      "bytes": 1447
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-handoff-attempt1.ml",
+      "sha256": "f675594d0ede75b616fa2792ffb075f7f47b7a8a06371f02c294942ada16ab5f",
+      "bytes": 4897
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-handoff-definitions-v2.ml",
+      "sha256": "75dc40e9da23fdbc6f22edf8788301fca50aad62b2510d8c83531a9fee8b58c1",
+      "bytes": 4766
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-handoff-proof-attempt1.ml",
+      "sha256": "00a760429c13f519ef83f1e11dc25e429955fad0f19d8da6508b51a5c2169c6d",
+      "bytes": 7876
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-handoff-proof-attempt2.ml",
+      "sha256": "0ba5c5f33fe11b7aff7542c2da7b06497752802fe3acb39bd893bcbc77b9f30a",
+      "bytes": 7990
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-return-facts-v1.ml",
+      "sha256": "d031145a5ef1c02db4100b8973d581ec38b420f4e4f326d946b57036af09a816",
+      "bytes": 5801
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-return-facts-v2.ml",
+      "sha256": "d25f5d1d526a634941ba081269f9b649dfadf3950b004dbe9ce9a88ce3fada0d",
+      "bytes": 6094
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-return-saved-prefix-v1.ml",
+      "sha256": "f9782f8606739164845d79cfe8e9241821d9b4e6bb40ec4ee0c572120c08a11a",
+      "bytes": 1768
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-return-sp-v1.ml",
+      "sha256": "c32621b84d753a831269d7a2c364d108ed797d3f90cc37c8f6df5ae804206baf",
+      "bytes": 708
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/normalizer-data-v1.ml",
+      "sha256": "2fbc951a1dde04d6e980303c61779445ea5fb086c28d1900a1664df12ada334b",
+      "bytes": 831
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-endpoint-attempt1.ml",
+      "sha256": "c8a2bddc81f2065d9cccf41f3bd3f4cf9f6708e1fd3a2a0c244d4d934c152027",
+      "bytes": 4936
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-endpoint-attempt2.ml",
+      "sha256": "aad78afed39a08cdd90f9ac7ab88ba6bd7960c6b847eb478fd13153e6930c8d5",
+      "bytes": 6541
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-endpoint-attempt3.ml",
+      "sha256": "fa2d961a31eb1b395401fdb5cd0e5c264401d46188ffd7de01b9f2763100aee0",
+      "bytes": 6657
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-endpoint-attempt4.ml",
+      "sha256": "b6bf6dd364d8a1fe809d12bbb48a996f401d46f7a15b8618504dcdcae05590dd",
+      "bytes": 6751
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-endpoint-attempt5.ml",
+      "sha256": "590a2d9962c299dbf610659c7234843abb2bd47dc0c19d64b2f2cad5dcf1c5cb",
+      "bytes": 6836
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-endpoint-attempt6.ml",
+      "sha256": "bf9345684380d3252cf68901ca0b7982307f3ba5652cb09ab49c253421c86b43",
+      "bytes": 6480
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-frame-inclusion-v1.ml",
+      "sha256": "b3003d25c0e488e3ba34476933273aca7ae00d6110f967e0175fd9bb379475d8",
+      "bytes": 3056
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-image-memory-v1.ml",
+      "sha256": "796c22831f9a5a5f5904d04757c5a346f0b60500154c224a43a31a3f376cacdf",
+      "bytes": 1416
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-image-memory-v2.ml",
+      "sha256": "cad14f72f505635f6e54bc2cccd357cec1a902d822a5f4e46f9fac62c6ad943b",
+      "bytes": 1480
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-library-scratch-v1.ml",
+      "sha256": "657039bd6874c1e252203050b99eb259cc7c8bf24d0d98ab65b8f2f8520bf6bf",
+      "bytes": 1028
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-region-v1.ml",
+      "sha256": "dfc048098881104897b479ee2238f14a558c2df40243f3e3608c77e151dc3c79",
+      "bytes": 966
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-region-v2.ml",
+      "sha256": "c9a9432e872246e75be6a0cbccc06aac2907577415e670a33d05940afa116d20",
+      "bytes": 1005
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-terminal-attempt1.ml",
+      "sha256": "03f4741f9fd61a3a6f9fa1024e6baef26b06ff0d767b47c442643d870f8cc18d",
+      "bytes": 3596
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-terminal-attempt2.ml",
+      "sha256": "84862b0fb938bf9a66725530d225d65315018632a8062c1206ad936818182d1f",
+      "bytes": 4702
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-terminal-attempt3.ml",
+      "sha256": "805059abd7b5d7a757f31e0f37bebd1f4108d86dc6debab5a038c19898dbef64",
+      "bytes": 4817
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-terminal-geometry-v1.ml",
+      "sha256": "c1c3c1de0e301c653289dd631e64180ccb25fdf0664f3688eac10355f105693c",
+      "bytes": 1449
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-terminal-geometry-v2.ml",
+      "sha256": "00eba85b15ebe82a58d56e6f98c216f93256948569b92e496f26d9318ac87070",
+      "bytes": 1476
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/second-crypto-application-v1.ml",
+      "sha256": "24a963d97a755f8d68e404035210c98dc437c9b1867b9742d5653151cb113ef5",
+      "bytes": 3264
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/second-crypto-application-v2.ml",
+      "sha256": "65ba27d08fcc402d4ddf849f549b6a4b79a004d639464144a7889db242d3d97e",
+      "bytes": 3254
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/second-crypto-application-v3.ml",
+      "sha256": "c0861a5cfcdfaa0f8dee57cbfeaa6cee6939731d0471ce3778e2f83570d3aba4",
+      "bytes": 3284
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/second-handoff-attempt1.ml",
+      "sha256": "a333f48096ba42d3d1ef9fb8459ac0a330436cdc7652c63867c746c8ea4b968c",
+      "bytes": 4939
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/snapshot-facts-v1.ml",
+      "sha256": "0c0499382729bbb6d73cb8011d9779d8286466c1370c3780a00379a4542c976c",
+      "bytes": 2701
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-buffer-values-v2.ml",
+      "sha256": "6a71a784a13561ca9e6566bff39123b9ca2c88b0dea0f71dd4a62d985ca74714",
+      "bytes": 715
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-code-points-v1.ml",
+      "sha256": "f451713ed9f1cfc0719fcda761605b5c91510fca56da2de217b472a4ad0133fd",
+      "bytes": 4128
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-code-points-v2.ml",
+      "sha256": "836c5ddcb0236d1523d3a5b94be4ae872d1685777fe60ec5dde1df64976af043",
+      "bytes": 4129
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-eight-layouts-v1.ml",
+      "sha256": "2575a8a0b91d80cf5f0883731bcc93562b17b75257d0d38fd8f63c7dbec189ad",
+      "bytes": 723
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-layout-prefix-v1.ml",
+      "sha256": "d9288f383e7ad4745681af9450f19dec480f5b72de8b62c8dc0cb2567de35c81",
+      "bytes": 3417
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-layout-v1.ml",
+      "sha256": "470803862e932e37aa73c90bac499d8edfacb353db3eea4c26cd46ee747b9438",
+      "bytes": 3884
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-layout-v2.ml",
+      "sha256": "ae1cf5f2973b1211cc2370b94f2af23b51e232c4db7f31b0c542c5fb2db97537",
+      "bytes": 3989
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-loaded-code-v1.ml",
+      "sha256": "35340b00e1c6160829b1316ff859993c418fd7cf9446b17e104c7f097043a426",
+      "bytes": 40629
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-loaded-code-v2.ml",
+      "sha256": "1a7ff1c4434f0035354060b4f590dc196d061148b44e58c8f4eee3c5f335db48",
+      "bytes": 40684
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-memory-v1.ml",
+      "sha256": "3375654c8f4bc2a39d9984917d2a0c2aa3f8a99d34236f8d5e522e6d90195b29",
+      "bytes": 2341
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-memory-v2.ml",
+      "sha256": "84fdcf664d0eeebd2ca43a8307d08687e4d6ec8d954165eaed5d7bf444a140b1",
+      "bytes": 2356
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-memory-v3.ml",
+      "sha256": "e5102afa4d18691077583c165c1d999ee1659f6c572f02180f989a454a33f4ae",
+      "bytes": 2326
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-memory-v4.ml",
+      "sha256": "b323043ddcc6fa838faee6c7fb5f1f043d234847f13656b0fd67fcfe02bf468f",
+      "bytes": 3377
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-memory-v5.ml",
+      "sha256": "cac24dfd15d70d282b0755edc38de4cf1ae7d2334684691094fb3a301a2c0a03",
+      "bytes": 3170
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-memory-words-v3.ml",
+      "sha256": "2e2de80d1cbe06d1cd4cf44a3b3cd1264751eec01d9231f41fb6926a9a23bba3",
+      "bytes": 689
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-memory-words-v4.ml",
+      "sha256": "8afb25619e01d0d6049f97ee759b7065cacbf9fa5234b471ba019eaf81e30e38",
+      "bytes": 1571
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-memory-words-v5.ml",
+      "sha256": "2615fe5c579c707e54dc9f3eb76da423b0213a6ea0bba50860451af7e6159d8e",
+      "bytes": 619
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-permissions-v1.ml",
+      "sha256": "43b6deb09363a1eb4a61402126728b5e7802c9218700062a83fe585b454025f6",
+      "bytes": 4943
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-permissions-v2.ml",
+      "sha256": "9dbd9c5da9d50c33da08f03487c9bf54147b2de5c402dbd7e2ac57770b1a0218",
+      "bytes": 4945
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-protection-v2.ml",
+      "sha256": "0c9b8e1e71bf81cf618ae862e564fcfb97cc885a437a1a9cc2cd94302be3986f",
+      "bytes": 1294
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-state-v3.ml",
+      "sha256": "b8e93249ae01eddc8138139484337f5c8d0ab1e0387f73cdacab2d7f6ab5527c",
+      "bytes": 1074
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-support-v1.ml",
+      "sha256": "0e7e0328106bf41474548d72b4cea5b814e820d3b0c9429e60094d79a585366c",
+      "bytes": 3357
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-support-v2.ml",
+      "sha256": "e5c8b8109d3e2647196cd0069d01caa545937404d97232f5a6861a1efad90ab0",
+      "bytes": 3390
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-targets-v1.ml",
+      "sha256": "52284385e5bf29d7467383d6e1190dd35a5f72368de8d0e40ce4a1f1ee046f00",
+      "bytes": 1490
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-targets-v2.ml",
+      "sha256": "262812e582ae6e09aca491f168214b52db20618e585f653ee6854696b7100d94",
+      "bytes": 1828
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-targets-v3.ml",
+      "sha256": "c0ca8f4416949817228b50de2b715a614694a72fc378b6661ff06c91b0679c1c",
+      "bytes": 1932
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/contract/CONTRACT-v1.md",
+      "sha256": "234b1900689b808d14a90436f3c8dcb89cced5b349c66fc31031a20d01a092e3",
+      "bytes": 3293
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/contract/HUMAN-REVIEW-SOURCE-MAP-v1.md",
+      "sha256": "c0816abd9ff3f019e343ae33aab3db5cff0295777c70bfd52962554ef6c7b498",
+      "bytes": 3741
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/contract/artifact-binding-v1.json",
+      "sha256": "489395e3a1d66aa7d73cc08d8336869eac37e292b058be2dec626032b6ed9217",
+      "bytes": 1217
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/contract/definitions-v1.ml",
+      "sha256": "97c03847d4543ecd9712504ac6d282f81198eec220720f1a5777bb56a092bcee",
+      "bytes": 11443
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/contract/definitions-v2.ml",
+      "sha256": "779ca953ac63182a5ff38ec22928a12df8b8c3ef6098b96d421eb2cc6aefd2bf",
+      "bytes": 11503
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/contract/draft-corrections-v1.json",
+      "sha256": "adff0a559f9182b155f108d636d0a78b87a424390e2a64aee4ed8c45b9281701",
+      "bytes": 437
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/contract/expected-terms-v1.json",
+      "sha256": "bb8805bf78523ec06d7d81681204ed662d2cd4fc516f30bd8f5584938c399afe",
+      "bytes": 5924
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/contract/freeze-v1.json",
+      "sha256": "cadd70ed4c3ed403db153ab8a3d21db9e4d0a11dec58cfb1f7022c99915d682a",
+      "bytes": 29778
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/contract/freeze-v1.py",
+      "sha256": "7aeb98951ff78adcea60cdcf49b15eb218b3cd58b7bc21927dd854d10e9c3cb4",
+      "bytes": 6769
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/contract/statements-v1.ml",
+      "sha256": "0117a8a5076e8ef80999cfd4c7712eaec768e3d7b0e89124efbc45ba73e3a7d7",
+      "bytes": 3061
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/contract/witness-definitions-v1.ml",
+      "sha256": "bb4c9745c62fe0ff6b5fcbdfe4ff5e01d5286594fe2e04fdaed11c3254e710bf",
+      "bytes": 2352
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/contract/witness-statements-v1.ml",
+      "sha256": "bd83937bcd17da06df21ee8de4d431c241203586737ca96e5e5d17775b3b039a",
+      "bytes": 1868
+    }
+  ],
+  "literal_cleanup_endpoint": {
+    "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-endpoint-v1.txt",
+    "sha256": "1ce4db12016ccc4c92124966208322623e7cc8c78452baa2688ef92c3849a303"
+  },
+  "literal_frame_failure": {
+    "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-final-frame-failure-v1.txt",
+    "sha256": "0e60625d5187536ebbb837796c98509b1644efd342d3faff5476345a1adbd042"
+  },
+  "main_targets_development_checked": [
+    "C3_HANDOFF",
+    "C3_COUNT"
+  ],
+  "witness_targets_development_checked": [
+    "C3W_PRE",
+    "C3W_GENERIC_WITNESS",
+    "C3_ADMISSIBLE_ENTRY_WITNESSES"
+  ],
+  "uncompleted_main_targets": [
+    "C3_CHECKED",
+    "C3_INTERFACE",
+    "C3_NORMAL_CHECKED",
+    "C3_RF_NORMAL_CHECKED",
+    "C3_NORMAL_INTERFACE"
+  ],
+  "complete_fresh_acceptance": "NOT_ATTEMPTED_REQUIRED_DEVELOPMENT_PROOFS_INCOMPLETE",
+  "targeted_controls": "NOT_ATTEMPTED_NO_GENUINE_C3_POSITIVE_PACKAGE",
+  "prestop_client_output_sha256": "c891818386ff4f0e8a09dd92cba1af5ae6a339fd986ecc5ed0066981d259cc0a",
+  "stop_utc": "2026-10-05T04:40:53.616319+00:00",
+  "kill": {
+    "argv": [
+      "docker",
+      "kill",
+      "22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6"
+    ],
+    "exit_code": 0,
+    "output": "22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6\n"
+  },
+  "after": {
+    "argv": [
+      "docker",
+      "inspect",
+      "22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6"
+    ],
+    "exit_code": 0,
+    "output": "[\n    {\n        \"Id\": \"22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6\",\n        \"Created\": \"2026-10-05T04:16:54.539674461Z\",\n        \"Path\": \"/work/third_party/hol-light/ocaml-hol\",\n        \"Args\": [\n            \"-init\",\n            \"/work/third_party/hol-light/hol.ml\",\n            \"-safe-string\",\n            \"-I\",\n            \"/work/third_party/hol-light\"\n        ],\n        \"State\": {\n            \"Status\": \"exited\",\n            \"Running\": false,\n            \"Paused\": false,\n            \"Restarting\": false,\n            \"OOMKilled\": false,\n            \"Dead\": false,\n            \"Pid\": 0,\n            \"ExitCode\": 137,\n            \"Error\": \"\",\n            \"StartedAt\": \"2026-10-05T04:16:54.606050336Z\",\n            \"FinishedAt\": \"2026-10-05T04:40:53.645194502Z\"\n        },\n        \"Image\": \"sha256:a19fdc18f1f283ed8e2514229b77f33619df1ba0ea1ae578c97779f4b4eb3c3f\",\n        \"ResolvConfPath\": \"/var/lib/docker/containers/22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6/resolv.conf\",\n        \"HostnamePath\": \"/var/lib/docker/containers/22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6/hostname\",\n        \"HostsPath\": \"/var/lib/docker/containers/22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6/hosts\",\n        \"LogPath\": \"/var/lib/docker/containers/22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6/22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6-json.log\",\n        \"Name\": \"/zen_dirac\",\n        \"RestartCount\": 0,\n        \"Driver\": \"overlay2\",\n        \"Platform\": \"linux\",\n        \"MountLabel\": \"\",\n        \"ProcessLabel\": \"\",\n        \"AppArmorProfile\": \"\",\n        \"ExecIDs\": null,\n        \"HostConfig\": {\n            \"Binds\": [\n                \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source/development/approved-plan/reusable-assurance-v1:/reuse:ro\",\n                \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source/development/approved-plan/clients-e3/public-inputs-v1:/client-public:ro\",\n                \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3:/work/development/approved-plan/held-out-transfer-v1/c3:ro\",\n                \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source:/work:ro\",\n                \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/runtime:/output:rw\",\n                \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source/development/approved-plan/call-binding/near-indirect-v1/decode-attempt5.ml:/work/third_party/s2n-bignum/x86/proofs/decode.ml:ro\",\n                \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source/development/approved-plan/call-binding/near-indirect-v1/x86-attempt5.ml:/work/third_party/s2n-bignum/x86/proofs/x86.ml:ro\"\n            ],\n            \"ContainerIDFile\": \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/runtime/container.cid\",\n            \"LogConfig\": {\n                \"Type\": \"json-file\",\n                \"Config\": {}\n            },\n            \"NetworkMode\": \"none\",\n            \"PortBindings\": {},\n            \"RestartPolicy\": {\n                \"Name\": \"no\",\n                \"MaximumRetryCount\": 0\n            },\n            \"AutoRemove\": false,\n            \"VolumeDriver\": \"\",\n            \"VolumesFrom\": null,\n            \"ConsoleSize\": [\n                0,\n                0\n            ],\n            \"CapAdd\": null,\n            \"CapDrop\": null,\n            \"CgroupnsMode\": \"private\",\n            \"Dns\": null,\n            \"DnsOptions\": [],\n            \"DnsSearch\": [],\n            \"ExtraHosts\": null,\n            \"GroupAdd\": null,\n            \"IpcMode\": \"private\",\n            \"Cgroup\": \"\",\n            \"Links\": null,\n            \"OomScoreAdj\": 0,\n            \"PidMode\": \"\",\n            \"Privileged\": false,\n            \"PublishAllPorts\": false,\n            \"ReadonlyRootfs\": false,\n            \"SecurityOpt\": null,\n            \"UTSMode\": \"\",\n            \"UsernsMode\": \"\",\n            \"ShmSize\": 67108864,\n            \"Runtime\": \"runc\",\n            \"Isolation\": \"\",\n            \"CpuShares\": 0,\n            \"Memory\": 3221225472,\n            \"NanoCpus\": 1000000000,\n            \"CgroupParent\": \"\",\n            \"BlkioWeight\": 0,\n            \"BlkioWeightDevice\": [],\n            \"BlkioDeviceReadBps\": [],\n            \"BlkioDeviceWriteBps\": [],\n            \"BlkioDeviceReadIOps\": [],\n            \"BlkioDeviceWriteIOps\": [],\n            \"CpuPeriod\": 0,\n            \"CpuQuota\": 0,\n            \"CpuRealtimePeriod\": 0,\n            \"CpuRealtimeRuntime\": 0,\n            \"CpusetCpus\": \"\",\n            \"CpusetMems\": \"\",\n            \"Devices\": [],\n            \"DeviceCgroupRules\": null,\n            \"DeviceRequests\": null,\n            \"MemoryReservation\": 0,\n            \"MemorySwap\": 3221225472,\n            \"MemorySwappiness\": null,\n            \"OomKillDisable\": null,\n            \"PidsLimit\": null,\n            \"Ulimits\": null,\n            \"CpuCount\": 0,\n            \"CpuPercent\": 0,\n            \"IOMaximumIOps\": 0,\n            \"IOMaximumBandwidth\": 0,\n            \"MaskedPaths\": [\n                \"/proc/acpi\",\n                \"/proc/asound\",\n                \"/proc/interrupts\",\n                \"/proc/kcore\",\n                \"/proc/keys\",\n                \"/proc/latency_stats\",\n                \"/proc/sched_debug\",\n                \"/proc/scsi\",\n                \"/proc/timer_list\",\n                \"/proc/timer_stats\",\n                \"/sys/devices/virtual/powercap\",\n                \"/sys/firmware\"\n            ],\n            \"ReadonlyPaths\": [\n                \"/proc/bus\",\n                \"/proc/fs\",\n                \"/proc/irq\",\n                \"/proc/sys\",\n                \"/proc/sysrq-trigger\"\n            ]\n        },\n        \"GraphDriver\": {\n            \"Data\": {\n                \"ID\": \"22f14705f1c178a5701678ad5704351a74de44264c9a11940293604efa9600e6\",\n                \"LowerDir\": \"/var/lib/docker/overlay2/104fa84f05ea0eccdaaf8bf17c18ad75ba4469609ecc266ed3f53e24770d8c73-init/diff:/var/lib/docker/overlay2/t37dj25t1duwlc3x23p3bf0zl/diff:/var/lib/docker/overlay2/2qc9q7x39wz22jmiqkae8wkbc/diff:/var/lib/docker/overlay2/53b95ac890835d1b836e352698704640b224ae2b634ec9cf4c1bc7986d212e66/diff\",\n                \"MergedDir\": \"/var/lib/docker/overlay2/104fa84f05ea0eccdaaf8bf17c18ad75ba4469609ecc266ed3f53e24770d8c73/merged\",\n                \"UpperDir\": \"/var/lib/docker/overlay2/104fa84f05ea0eccdaaf8bf17c18ad75ba4469609ecc266ed3f53e24770d8c73/diff\",\n                \"WorkDir\": \"/var/lib/docker/overlay2/104fa84f05ea0eccdaaf8bf17c18ad75ba4469609ecc266ed3f53e24770d8c73/work\"\n            },\n            \"Name\": \"overlay2\"\n        },\n        \"Mounts\": [\n            {\n                \"Type\": \"bind\",\n                \"Source\": \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source/development/approved-plan/clients-e3/public-inputs-v1\",\n                \"Destination\": \"/client-public\",\n                \"Mode\": \"ro\",\n                \"RW\": false,\n                \"Propagation\": \"rprivate\"\n            },\n            {\n                \"Type\": \"bind\",\n                \"Source\": \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/runtime\",\n                \"Destination\": \"/output\",\n                \"Mode\": \"rw\",\n                \"RW\": true,\n                \"Propagation\": \"rprivate\"\n            },\n            {\n                \"Type\": \"bind\",\n                \"Source\": \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source/development/approved-plan/reusable-assurance-v1\",\n                \"Destination\": \"/reuse\",\n                \"Mode\": \"ro\",\n                \"RW\": false,\n                \"Propagation\": \"rprivate\"\n            },\n            {\n                \"Type\": \"bind\",\n                \"Source\": \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source\",\n                \"Destination\": \"/work\",\n                \"Mode\": \"ro\",\n                \"RW\": false,\n                \"Propagation\": \"rprivate\"\n            },\n            {\n                \"Type\": \"bind\",\n                \"Source\": \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3\",\n                \"Destination\": \"/work/development/approved-plan/held-out-transfer-v1/c3\",\n                \"Mode\": \"ro\",\n                \"RW\": false,\n                \"Propagation\": \"rprivate\"\n            },\n            {\n                \"Type\": \"bind\",\n                \"Source\": \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source/development/approved-plan/call-binding/near-indirect-v1/decode-attempt5.ml\",\n                \"Destination\": \"/work/third_party/s2n-bignum/x86/proofs/decode.ml\",\n                \"Mode\": \"ro\",\n                \"RW\": false,\n                \"Propagation\": \"rprivate\"\n            },\n            {\n                \"Type\": \"bind\",\n                \"Source\": \"/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/held-out-transfer-v1/c3/runs/development-warm-20261005T041652Z-51c65dfa/source/development/approved-plan/call-binding/near-indirect-v1/x86-attempt5.ml\",\n                \"Destination\": \"/work/third_party/s2n-bignum/x86/proofs/x86.ml\",\n                \"Mode\": \"ro\",\n                \"RW\": false,\n                \"Propagation\": \"rprivate\"\n            }\n        ],\n        \"Config\": {\n            \"Hostname\": \"22f14705f1c1\",\n            \"Domainname\": \"\",\n            \"User\": \"\",\n            \"AttachStdin\": true,\n            \"AttachStdout\": true,\n            \"AttachStderr\": true,\n            \"Tty\": false,\n            \"OpenStdin\": true,\n            \"StdinOnce\": true,\n            \"Env\": [\n                \"HOLLIGHT_DIR=/work/third_party/hol-light\",\n                \"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"\n            ],\n            \"Cmd\": [\n                \"/work/third_party/hol-light/ocaml-hol\",\n                \"-init\",\n                \"/work/third_party/hol-light/hol.ml\",\n                \"-safe-string\",\n                \"-I\",\n                \"/work/third_party/hol-light\"\n            ],\n            \"Image\": \"sha256:a19fdc18f1f283ed8e2514229b77f33619df1ba0ea1ae578c97779f4b4eb3c3f\",\n            \"Volumes\": null,\n            \"WorkingDir\": \"/work/third_party/s2n-bignum\",\n            \"Entrypoint\": null,\n            \"Labels\": {\n                \"org.opencontainers.image.version\": \"24.04\"\n            }\n        },\n        \"NetworkSettings\": {\n            \"SandboxID\": \"\",\n            \"SandboxKey\": \"\",\n            \"Ports\": {},\n            \"Networks\": {\n                \"none\": {\n                    \"IPAMConfig\": null,\n                    \"Links\": null,\n                    \"Aliases\": null,\n                    \"DriverOpts\": null,\n                    \"GwPriority\": 0,\n                    \"NetworkID\": \"1dfd3296e12d7b28baa51e19dcab71d6c42a330a4d2dee03435b5c2e76c85cff\",\n                    \"EndpointID\": \"\",\n                    \"Gateway\": \"\",\n                    \"IPAddress\": \"\",\n                    \"MacAddress\": \"\",\n                    \"IPPrefixLen\": 0,\n                    \"IPv6Gateway\": \"\",\n                    \"GlobalIPv6Address\": \"\",\n                    \"GlobalIPv6PrefixLen\": 0,\n                    \"DNSNames\": null\n                }\n            }\n        }\n    }\n]\n"
+  }
+}

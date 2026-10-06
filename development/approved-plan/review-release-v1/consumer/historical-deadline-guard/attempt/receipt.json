@@ -1,0 +1,8 @@
+{
+  "caller_acceptance": false,
+  "error": "C3 successor stage deadline exhausted",
+  "full_C3_acceptance": false,
+  "proof_started": false,
+  "status": "FRESH_C3_REPLAY_REJECTED",
+  "target_routine_executed": false
+}

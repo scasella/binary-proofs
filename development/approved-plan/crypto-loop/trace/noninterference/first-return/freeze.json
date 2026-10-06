@@ -1,0 +1,10 @@
+{
+  "created_at_utc": "2026-09-30T14:52:13.242665+00:00",
+  "stage": "independent first-RET model/terms before proof search",
+  "files": {
+    "development/approved-plan/crypto-loop/trace/noninterference/first-return/model.ml": "d3bc935f7fc603dd4f3dab1b29d2d9204182af0b8c1f5d8a95b22cb063783891",
+    "development/approved-plan/crypto-loop/trace/noninterference/first-return/statements.ml": "e783d049cca0c508db2f976cace53e2c681a43102a80943daff392c0122d8e42"
+  },
+  "strengthening": "No trace LENGTH or result equality premise; nonempty actual observed path, last actual decoded RET, no prior decoded RET",
+  "full_O2_pass": false
+}

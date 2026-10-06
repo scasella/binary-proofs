@@ -1,0 +1,47 @@
+{
+  "schema": "e5-expanded-definition-literals-v1",
+  "rows": [
+    {
+      "name": "e5_normal_flags",
+      "equation": "e5_normal_flags (s:x86state) <=>\n    ~bit 16 (read rflags s) /\\ ~bit 8 (read rflags s)",
+      "equation_sha256": "7c9549b60e6a9c672402ec022ab0f9fee85dfebc1057d139d281bbdaf8b210de",
+      "check_mode": "SPEC_ALL_closed_type_variable_alpha_only"
+    },
+    {
+      "name": "e5_rf_clear",
+      "equation": "e5_rf_clear (s:x86state) = write (rflags :> bitelement 16) F s",
+      "equation_sha256": "fa86e7e7f34ee37f9415323b17fbb2b979693c8bf4161417d7352a642882cfec",
+      "check_mode": "SPEC_ALL_closed_type_variable_alpha_only"
+    },
+    {
+      "name": "e5_rf_retired_step",
+      "equation": "e5_rf_retired_step (s:x86state) t <=>\n    ?u. x86 s u /\\ t=e5_rf_clear u",
+      "equation_sha256": "a0be86aab579d9edd5fd1d090e1781bcf82811bb24575b6c76775dde06534640",
+      "check_mode": "SPEC_ALL_closed_type_variable_alpha_only"
+    },
+    {
+      "name": "e5_rf_retired_extended_step",
+      "equation": "e5_rf_retired_extended_step (s:x86state,a:abi_omitted_state) t <=>\n    ?u b. abi_caller_scalar_extended_step (s,a) (u,b) /\\\n          t=(e5_rf_clear u,b)",
+      "equation_sha256": "85b06f3ac1f6d95cf84e78a288532e170440fe6501a5e4d89acb9d6503e8fc33",
+      "check_mode": "SPEC_ALL_closed_type_variable_alpha_only"
+    },
+    {
+      "name": "e5_normal_step_policy",
+      "equation": "e5_normal_step_policy (C:num->x86state->x86state->bool) k s t <=>\n    C k s t /\\ e5_normal_flags s /\\ e5_normal_flags t",
+      "equation_sha256": "419a6a73e92f3be3078991ca6e3c633737fcfbf6625ba3ee541f309591052116",
+      "check_mode": "SPEC_ALL_closed_type_variable_alpha_only"
+    },
+    {
+      "name": "e5_normal_environment",
+      "equation": "e5_normal_environment long_mode cpl (dr7:int64) cet_enabled\n      external_event_delivered debug_agent_modified <=>\n    long_mode /\\ cpl=3 /\\\n    (!i. i<8 ==> ~bit i dr7) /\\ ~cet_enabled /\\\n    ~external_event_delivered /\\ ~debug_agent_modified",
+      "equation_sha256": "58f9a3c744345c969e9060652e727095b41b61139f918265ce4de51fa1b852ab",
+      "check_mode": "SPEC_ALL_closed_type_variable_alpha_only"
+    },
+    {
+      "name": "e5_rf_checked_run",
+      "equation": "(e5_rf_checked_run 0 (P:x86state->bool)\n      (C:num->x86state->x86state->bool) s <=> P s) /\\\n  (e5_rf_checked_run (SUC n) P C s <=>\n     (?t. e5_rf_retired_step s t) /\\\n     !t. e5_rf_retired_step s t ==> C (SUC n) s t /\\\n                                      e5_rf_checked_run n P C t)",
+      "equation_sha256": "406f90c895f09f16a7881a3eb0a4489dbe2efc8b5bfd009741ca51637d85f914",
+      "check_mode": "SPEC_ALL_closed_type_variable_alpha_only"
+    }
+  ]
+}

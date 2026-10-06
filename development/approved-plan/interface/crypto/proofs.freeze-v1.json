@@ -1,0 +1,20 @@
+{
+  "created_at_utc": "2026-09-30T15:06:57.073869+00:00",
+  "failed_attempts": [
+    "proofs-attempt1.ml MATCH_MP_TAC No match",
+    "proofs-attempt2.ml broad MESON too deep"
+  ],
+  "files": {
+    "development/approved-plan/interface/crypto/audit-v1.ml": "e5d954ceca3e35d2fe0b72195d3ddc1e7dbfbc1c7a337f9bd2d553ca36cc66bd",
+    "development/approved-plan/interface/crypto/expected-definitions-v1.json": "9e19b00589c0ef18cc04747f437ba623be500007a2154529fe0dd26578e119de",
+    "development/approved-plan/interface/crypto/expected-statements-v1.json": "8749ad3dc53dad7e22355fa39650212de7e1e5c3865b139fec40fbd972fff698",
+    "development/approved-plan/interface/crypto/proofs-attempt3.ml": "6b9b0dda66769c100520434d2fb0b231e8ef17a854541fcf7aeb3976ff35c5ec"
+  },
+  "fresh_aggregate_checked": false,
+  "human_review": "PENDING",
+  "id": "BP-E2-CRYPTO-PUBLIC-INTERFACE-PROOFS-V1",
+  "live_kernel_checked": true,
+  "raw_log": "results/development/public-interface-construction-20260930T144752Z/raw.log",
+  "selected_recipe": "proofs-attempt3.ml",
+  "specification_freeze_sha256": "9a84a293aee2086802b26160ae7d93026d52beaeb5a0ebd8c4a15ebaf2f87f58"
+}

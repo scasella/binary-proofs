@@ -1,0 +1,232 @@
+{
+  "schema": "c3-successor-final-effort-independent-validation-v1",
+  "utc": "2026-10-05T14:11:41.172939+00:00",
+  "status": "PASS",
+  "effort_snapshot": {
+    "path": "development/approved-plan/c3-successor-v1/measurements/effort-final-v1.json",
+    "sha256": "7ae82e4a16c04291f2f510353ea8bef7cce7c638cfb20dc0632c8ef2a0fb6c25",
+    "as_of_utc": "2026-10-05T14:10:49.598293+00:00",
+    "outcome_field_remains_null": true,
+    "snapshot_status_note": "V4 emits a measurement-only provisional status even in this post-completion snapshot. Outcome comes from the separately cited root gate."
+  },
+  "checks": [
+    {
+      "metric": "stage_local.completed_command_wall_union",
+      "recomputed_seconds": 4257.095921,
+      "reported_seconds": 4257.095921,
+      "matches": true
+    },
+    {
+      "metric": "predecessor_transfer.completed_command_wall_union",
+      "recomputed_seconds": 11684.843412999988,
+      "reported_seconds": 11684.843413,
+      "matches": true
+    },
+    {
+      "metric": "postmortem.completed_command_wall_union",
+      "recomputed_seconds": 54.811477999999994,
+      "reported_seconds": 54.811477999999994,
+      "matches": true
+    },
+    {
+      "metric": "cumulative.completed_command_wall_union",
+      "recomputed_seconds": 15996.750811999991,
+      "reported_seconds": 15996.750812,
+      "matches": true
+    },
+    {
+      "metric": "successor.checker_sum_from_exact_END_ledger_prefix",
+      "recomputed_seconds": 7338.883324791968,
+      "reported_seconds": 7338.883324791968,
+      "matches": true
+    },
+    {
+      "metric": "predecessor.checker_sum_from_exact_END_ledger_prefix",
+      "recomputed_seconds": 13603.614958915,
+      "reported_seconds": 13603.614958915,
+      "matches": true
+    },
+    {
+      "metric": "postmortem.checker_sum_from_exact_END_ledger_prefix",
+      "recomputed_seconds": 0,
+      "reported_seconds": 0,
+      "matches": true
+    }
+  ],
+  "source_prefix_identity_checks": {
+    "count": 84,
+    "failures": []
+  },
+  "metrics": {
+    "stage_local": {
+      "completed_command_wall_union_seconds": 4257.095921,
+      "completed_inclusive_checker_command_wall_sum_seconds_overlapping": 7338.883324791968,
+      "completed_checker_command_count": 9,
+      "completed_command_count": 28,
+      "open_command_count": 0,
+      "command_classification_counts": {
+        "COMMAND_COMPLETED_ZERO_EXIT_NOT_PROOF_ACCEPTANCE": 19,
+        "FAILED_COMMAND": 6,
+        "INTERRUPTION_COMMAND": 1,
+        "NONZERO_SIGNAL_OR_TERMINATION_DETAILS_IN_CHECKER_RECEIPT": 2
+      },
+      "source_construction_active_seconds": null,
+      "exclusive_reasoning_seconds": null,
+      "exclusive_coordination_seconds": null
+    },
+    "predecessor_transfer": {
+      "completed_command_wall_union_seconds": 11684.843412999988,
+      "completed_inclusive_checker_command_wall_sum_seconds_overlapping": 13603.614958915,
+      "completed_checker_command_count": 11,
+      "completed_command_count": 369,
+      "open_command_count": 0,
+      "command_classification_counts": {
+        "COMMAND_COMPLETED_ZERO_EXIT_NOT_PROOF_ACCEPTANCE": 346,
+        "FAILED_COMMAND": 16,
+        "NONZERO_SIGNAL_OR_TERMINATION_DETAILS_IN_CHECKER_RECEIPT": 7
+      },
+      "source_construction_active_seconds": null,
+      "exclusive_reasoning_seconds": null,
+      "exclusive_coordination_seconds": null
+    },
+    "postmortem": {
+      "completed_command_wall_union_seconds": 54.811477999999994,
+      "completed_inclusive_checker_command_wall_sum_seconds_overlapping": 0,
+      "completed_checker_command_count": 0,
+      "completed_command_count": 4,
+      "open_command_count": 0,
+      "command_classification_counts": {
+        "COMMAND_COMPLETED_ZERO_EXIT_NOT_PROOF_ACCEPTANCE": 4
+      },
+      "source_construction_active_seconds": null,
+      "exclusive_reasoning_seconds": null,
+      "exclusive_coordination_seconds": null
+    },
+    "cumulative": {
+      "completed_command_wall_union_seconds": 15996.750811999991,
+      "completed_inclusive_checker_command_wall_sum_seconds_overlapping": 20942.49828370697,
+      "completed_checker_command_count": 20,
+      "completed_command_count": 401,
+      "open_command_count": 0,
+      "command_classification_counts": {
+        "COMMAND_COMPLETED_ZERO_EXIT_NOT_PROOF_ACCEPTANCE": 369,
+        "FAILED_COMMAND": 22,
+        "NONZERO_SIGNAL_OR_TERMINATION_DETAILS_IN_CHECKER_RECEIPT": 9,
+        "INTERRUPTION_COMMAND": 1
+      },
+      "source_construction_active_seconds": null,
+      "exclusive_reasoning_seconds": null,
+      "exclusive_coordination_seconds": null
+    }
+  },
+  "authoritative_completion": {
+    "source": "development/approved-plan/c3-successor-v1/results/complete-gate-final-v1.json",
+    "sha256": "0e1aa8598bd85d1015f5e85a71744fa1cd9403cfcba4b7529c04a0acb901784e",
+    "utc": "2026-10-05T14:10:13.568450+00:00",
+    "status": "FRESH_ACCEPTED_WITH_FIVE_INTEGRITY_CONTROLS_AND_FRESH_BINDING_PROBE",
+    "full_C3_acceptance": true,
+    "stage_start_utc": "2026-10-05T12:45:12.242465+00:00",
+    "stage_elapsed_through_complete_root_gate_seconds": 5101.325985,
+    "stage_elapsed_scope": "Inclusive stage elapsed includes construction, checking, waiting and coordination; it is not active construction or CPU.",
+    "cumulative_inclusive_stage_window_wall_union_through_complete_root_gate_seconds": 20066.292738,
+    "cumulative_window_scope": "Retained H preparation/construction + postmortem diagnostic + S through complete root gate; interstage gap excluded; historical post-cap command records remain only in command unions."
+  },
+  "failed_check_summary": {
+    "successor_checker_receipt_classification_counts": {
+      "FRESH_CHECKER_RECEIPT_RECORDED_NOT_OUTCOME": 2,
+      "FAILED_BEFORE_BOOTSTRAP_MARKER": 3,
+      "CHECKER_ZERO_EXIT_NOT_ACCEPTANCE": 2,
+      "CHECKER_WALL_TIMEOUT": 2
+    },
+    "predecessor_checker_receipt_classification_counts": {
+      "CHECKER_WALL_TIMEOUT": 5,
+      "CHECKER_OOM": 1,
+      "EXPLICIT_PREDECESSOR_STAGE_CAP_STOP": 1,
+      "PREDECESSOR_REGRESSION_RECEIPT": 2
+    },
+    "successor_source_include_failure_log_record_count": 18,
+    "source_include_failure_scope": "Nested include-failure records may refer to one failed source load; not independent attempt count.",
+    "explicit_unexecuted_source_records": 9,
+    "expected_binding_rejection": {
+      "run": "binding-probe-final-v1/attempt",
+      "status": "OBSERVED_FRESH_PUBLIC_INTERFACE_BINDING_TYPE_AVAILABILITY_REJECTION",
+      "exit_code": 1,
+      "timeout": false,
+      "elapsed_seconds": 532.1612820839946
+    }
+  },
+  "fresh_phase_values": [
+    {
+      "scope": "successor",
+      "run": "binding-probe-final-v1/attempt",
+      "classification": "FRESH_CHECKER_RECEIPT_RECORDED_NOT_OUTCOME",
+      "reported_status": "OBSERVED_FRESH_PUBLIC_INTERFACE_BINDING_TYPE_AVAILABILITY_REJECTION",
+      "invocation_evidence": "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/invocation.json",
+      "result_evidence": "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/receipt.json",
+      "reported_driver_elapsed_seconds": 532.1612820839946,
+      "driver_elapsed_scope": "Fresh driver elapsed includes preparation, cold GNU/HOL, reconstruction and completed host postguards; separate checker phase wall is a contained subinterval.",
+      "reported_checker_wall_seconds": 524.5104928749934,
+      "reported_limit_seconds": 1800,
+      "invocation_started_utc": "2026-10-05T14:00:29.506964+00:00",
+      "completed_utc": "2026-10-05T14:09:26.580598+00:00",
+      "exit_code": 1,
+      "timeout": false,
+      "supplier_marker": true,
+      "bootstrap_marker_elapsed_seconds": null,
+      "reported_supplier_wall_seconds": null,
+      "reported_caller_wall_seconds": null,
+      "reported_supplier_cpu_seconds": null,
+      "reported_caller_cpu_seconds": null,
+      "cpu_scope": null,
+      "phase_scope": "Phase wall/CPU values cover labeled reconstruction phases only. Wall phase values are not added to elapsed. CPU excludes cold HOL initialization and is not complete aggregate checker or construction CPU.",
+      "reported_resources": {
+        "cpu_count": 1,
+        "deadline_seconds": 1800,
+        "memory_bytes": 3221225472,
+        "swap_limit_bytes": 3221225472
+      },
+      "network": "none"
+    },
+    {
+      "scope": "successor",
+      "run": "fresh-final-v1",
+      "classification": "FRESH_CHECKER_RECEIPT_RECORDED_NOT_OUTCOME",
+      "reported_status": "FRESH_C3_FULL_FROZEN_TARGETS_WITNESSES_ALL_DEFINITIONS_AND_SUPPLIER_AUDITS_COMPLETE_PENDING_ROOT_GATES",
+      "invocation_evidence": "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/invocation.json",
+      "result_evidence": "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/receipt.json",
+      "reported_driver_elapsed_seconds": 591.3033317079971,
+      "driver_elapsed_scope": "Fresh driver elapsed includes preparation, cold GNU/HOL, reconstruction and completed host postguards; separate checker phase wall is a contained subinterval.",
+      "reported_checker_wall_seconds": 584.2901049159991,
+      "reported_limit_seconds": 1800,
+      "invocation_started_utc": "2026-10-05T13:48:04.445220+00:00",
+      "completed_utc": "2026-10-05T13:57:55.749935+00:00",
+      "exit_code": 0,
+      "timeout": false,
+      "supplier_marker": true,
+      "bootstrap_marker_elapsed_seconds": null,
+      "reported_supplier_wall_seconds": 454.6718711249996,
+      "reported_caller_wall_seconds": 129.6182337909995,
+      "reported_supplier_cpu_seconds": 399.729668,
+      "reported_caller_cpu_seconds": 127.749732,
+      "cpu_scope": "Supplier CPU begins after fresh HOL initialization and includes supplier load/live audit; caller CPU includes all selected caller/generic/helper/witness loads and final exact/expanded audit; no exclusive main/helper CPU is claimed",
+      "phase_scope": "Phase wall/CPU values cover labeled reconstruction phases only. Wall phase values are not added to elapsed. CPU excludes cold HOL initialization and is not complete aggregate checker or construction CPU.",
+      "reported_resources": {
+        "cpu_count": 1,
+        "deadline_seconds": 1800,
+        "memory_bytes": 3221225472,
+        "swap_limit_bytes": 3221225472
+      },
+      "network": "none"
+    }
+  ],
+  "counting_rules": [
+    "Wall unions merge overlapping root/worker/command intervals exactly once.",
+    "Inclusive checker sums measure invocation wall across concurrent checkers; they are neither elapsed construction wall nor CPU.",
+    "Checker command sum and checker process receipt sum are parallel views and are never added together.",
+    "Bootstrap elapsed and supplier/caller slices are contained within checker durations and are not added to them.",
+    "Open commands are not assigned an invented END or completed duration.",
+    "Queued-source records do not establish execution; explicit unexecuted evidence remains separate.",
+    "No stage outcome or cap-compliance determination is inferred from process exit or diagnostic markers."
+  ],
+  "unavailable_fields_note": "Active source construction, exclusive reasoning, exclusive coordination, model/token/cost counters, complete aggregate checker CPU and peak memory remain null. No stage cost extrapolation."
+}

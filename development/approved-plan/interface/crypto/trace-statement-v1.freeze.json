@@ -1,0 +1,11 @@
+{
+  "created_at_utc": "2026-09-30T15:22:03.324366+00:00",
+  "expected_theorem": "BP_E2_CRYPTO_PUBLIC_TRACE",
+  "experiment_id": "BP-20260930-E2-CANDIDATE",
+  "frozen_before_recipe_search": true,
+  "human_review": "PENDING",
+  "id": "BP-E2-CRYPTO-PUBLIC-TRACE-SPEC-V1",
+  "interpretation": "Architectural instruction/control-flow and original full-width data events to first actual RET; no elapsed-time/microarchitectural claim.",
+  "sha256": "6b0677c1fd4708007cb6ea4facaaf082a0704bbdf526a2faaa0b7e9b988f4dd2",
+  "source": "development/approved-plan/interface/crypto/trace-statement-v1.ml"
+}

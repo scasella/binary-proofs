@@ -1,0 +1,190 @@
+{
+  "schema": "review-release-claim-evidence-v1",
+  "created_utc": "2026-10-05T15:12:13.226588+00:00",
+  "view_is_acceptance_input": false,
+  "human_review": "PENDING",
+  "claims": [
+    {
+      "claim_id": "logical_end_guarantees",
+      "status": "SUPPORTED_DECLARED_BOUNDARY",
+      "evidence": [
+        {
+          "path": "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/root-full-acceptance-v1.json",
+          "sha256": "3db7001d2c3b978e13aea5e9f15a0967b1e115c1db123cd9d76e95e2b5582be0"
+        },
+        {
+          "path": "development/approved-plan/reusable-assurance-c2-v1/runs/c2-root-full-acceptance-final-v1.json",
+          "sha256": "ec8689605966ab7ad4d467e4c14362b9c68cee078610de2c0da61b617f541638"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/results/complete-gate-final-v1.json",
+          "sha256": "0e1aa8598bd85d1015f5e85a71744fa1cd9403cfcba4b7529c04a0acb901784e"
+        }
+      ],
+      "qualification": "Actual fresh live conclusion/expanded/hypothesis/free-variable/axiom audits and all required complete gates. Trust assumptions remain explicit; these receipts do not replace later reconstruction."
+    },
+    {
+      "claim_id": "public_interface_consumption",
+      "status": "INSPECTION_QUALIFIED",
+      "evidence": [
+        {
+          "path": "development/approved-plan/reusable-assurance-c1-successor-v1/status/observation-final-v2-source-audit.json",
+          "sha256": "320e0686fc19b8cd03b15436cd454c4489c99628f27ee247d614ffab1601b021"
+        },
+        {
+          "path": "development/approved-plan/reusable-assurance-c2-v1/reuse/adaptation-account-v3.json",
+          "sha256": "9d453855ea3c7257e91c43eb11adf7667fcd695cdefc7cc900d6a434c16fbbbd"
+        },
+        {
+          "path": "development/approved-plan/reusable-assurance-c2-v1/reuse/dependency-map-v4.md",
+          "sha256": "3a541a09afae0866597b3dc7788f0da2ecbb1e0623b4db3501d3a86a7b67bb52"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/diagnostics/transport-final-selected-graph-review-v2.json",
+          "sha256": "55b1a3cb83c3d63096db34b514fd06acc1f63f0ec0102803ee293932b892cb3c"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/results/dependency-map-v2.json",
+          "sha256": "6544ed0828c22bf7b89f2f3971696c95c959a702b3e47fe7972cf1717d9cbc24"
+        }
+      ],
+      "qualification": "Source and explicit tactic applications; shared ambient namespace and prior supplier-recipe exposure. No formal transitive derivation/capability certificate."
+    },
+    {
+      "claim_id": "final_byte_and_linkage_integrity",
+      "status": "SUPPORTED_TRUSTED_EXTRACTION_BOUNDARY",
+      "evidence": [
+        {
+          "path": "development/approved-plan/reusable-assurance-v1/c1/artifact/inventory-v1.json",
+          "sha256": "70f6fcd526fa336f4c2b4278c25bd2578a30f5def43aa73e69953fddbef0430f"
+        },
+        {
+          "path": "development/approved-plan/reusable-assurance-c2-v1/inventory/inventory-v1.json",
+          "sha256": "d615db91b4a2cbe4ac40aee5bdd7adfc9752f6892ebbaf45d78d14621cac0c38"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/artifact/inventory-v1.json",
+          "sha256": "9fac3d26e58aa86bd6e8aee59357b176fa691f6c9b81bda7cd5b1dd12b09bb1a"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/c3-image-crosscheck.json",
+          "sha256": "6f840527d7a9d7b00b43c5071871df602ce7eefe4ac73fc491d2293883cdaa66"
+        }
+      ],
+      "qualification": "Concrete final ELF identity, exact bytes/image offsets and actual resolved transfers. Extraction/loading mechanisms remain trusted; no verified parser/loader/arbitrary ASLR theorem."
+    },
+    {
+      "claim_id": "frozen_candidate_repairable_transfer",
+      "status": "SUPPORTED_FOR_ONE_CONCRETE_SUCCESSOR",
+      "evidence": [
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/layer/freeze-v1.json",
+          "sha256": "266f58bbb1883389a74b8ba0986db11d0b0d6f4c03c1d3961d2db04f51d94193"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/layer/CLASS-AND-EXTENSION-POINTS-v1.md",
+          "sha256": "8135a4d01dd9786ca222b59a728e7122c2bd98939ba52bf81bf0b0795c2877ff"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/status/selected-reuse-account-v1.json",
+          "sha256": "6c397e06abdf85222f2cfccac0f0a93ebcd2bd04eca74eb7ceee31da37a3f360"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-mov2-site-v2.ml",
+          "sha256": "0f71a53f0afcd049a1b894ec907a42315e97a57b06ceb054514becdc5838954d"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "sha256": "74c891c05a358af4bdcbcbf14673b73d2e96816eebe69e16c8e46684927e5072"
+        }
+      ],
+      "qualification": "Algorithms and public contracts unchanged; actual site/predicate/snapshot/frame reasoning is caller work. Extension-policy classification is inspection-qualified, human review pending."
+    },
+    {
+      "claim_id": "failed_original_trial_preserved",
+      "status": "SUPPORTED_HISTORY_IDENTITY",
+      "evidence": [
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/status/final-publication-v1.json",
+          "sha256": "f8dfd0d57ceb77ac514cc7a48782adeebc7c2e2af56813db08a86abf25acd6d6"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/STAGE-v1.json",
+          "sha256": "b3b638be97ce79fc8fb0798614ee11b97d3b1379f05528e6c46af5fd71ee6303"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/status/runtime-protected-final-v1.json",
+          "sha256": "1d7bddb6d0f7ae015b71ca6de4ddd9c58798fad0f1d5682933ce77d835a9639b"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/status/runtime-postmortem-final-v1.json",
+          "sha256": "74656112d72e5ab34b8a31a8c63682b3e98bbf5080fdc2b64f457ff301cf7ee3"
+        }
+      ],
+      "qualification": "Original held-out outcome C is not revised by separately budgeted successor completion."
+    },
+    {
+      "claim_id": "construction_vs_checking",
+      "status": "OBSERVATIONS_AVAILABLE_SAVINGS_UNESTABLISHED",
+      "evidence": [
+        {
+          "path": "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/receipt.json",
+          "sha256": "0bbd3976d971f42ede45002a91435694f074b13a8fc22df09227253322e817c9"
+        },
+        {
+          "path": "development/approved-plan/reusable-assurance-c2-v1/measurements/available-costs-final-v2.json",
+          "sha256": "d30baac9c33f646861d7a9f33702a40a352177473a71eda6658fa68d178ea3b1"
+        },
+        {
+          "path": "development/approved-plan/reusable-assurance-c2-v1/measurements/checking-phases-final-v1.json",
+          "sha256": "861b20e03c6644602a3b5c486c293b2325154ae8c09f2545b2ed069f5bc65229"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/measurements/effort-final-v1.json",
+          "sha256": "7ae82e4a16c04291f2f510353ea8bef7cce7c638cfb20dc0632c8ef2a0fb6c25"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/measurements/effort-final-v1-validation.json",
+          "sha256": "ab525ee5ba31292ce29599a3d0d6fe553292af12ab89a3755d3170af7eb54be0"
+        }
+      ],
+      "qualification": "Inclusive wall/CPU scopes and interval unions, failures, unknown reasoning/coordination/tokens/cost and historical supplier effort retained. Fast replay is not construction benefit."
+    },
+    {
+      "claim_id": "checking_only_package_consumption",
+      "status": "REFER_TO_RELEASE_CONSUMER_RESULT",
+      "evidence_authority": [
+        "development/approved-plan/review-release-v1/release-index-v1.json",
+        "development/approved-plan/review-release-v1/consumer/results-v1.json"
+      ],
+      "qualification": "Consumer receipts are produced separately; this draft does not infer success. Independence must be described by observed host/filesystem/Docker/operator properties."
+    },
+    {
+      "claim_id": "comparative_priority",
+      "status": "UNVERIFIED",
+      "evidence": [],
+      "qualification": "No actual related-work comparison in this consolidation stage; no novelty-by-absence or deficiencies assigned to s2n-bignum, SAW/Macaw or related binary-contract work."
+    },
+    {
+      "claim_id": "human_review",
+      "status": "PENDING",
+      "evidence": [],
+      "qualification": "Preparing or agent-inspecting this packet is not completed human review."
+    },
+    {
+      "claim_id": "H1",
+      "status": "SUPPORTED_INSPECTION_QUALIFIED",
+      "qualification": "Three accepted callers consume unchanged public supplier contracts under retained source inspection and ambient namespace limitations."
+    },
+    {
+      "claim_id": "H2",
+      "status": "BOUNDED_REPAIRABLE_TRANSFER",
+      "qualification": "Original held-out outcome C remains failed. The successor completes this concrete case with frozen algorithms and permitted caller-local work; no automatic arbitrary-caller claim."
+    },
+    {
+      "claim_id": "H3",
+      "status": "NOT_MEASURED",
+      "qualification": "No matched interface-free construction experiment or amortized-cost estimate."
+    }
+  ]
+}

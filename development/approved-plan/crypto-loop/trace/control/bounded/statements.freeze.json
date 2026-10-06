@@ -1,0 +1,4 @@
+{
+  "sha256": "8ad8561f4f0784a9c3bd20ab0c365446c50b9cf074149ae4180b544f960d9d61",
+  "purpose": "Endpoint synchronization with same-count checked_run, preserving nondeterministic successors"
+}

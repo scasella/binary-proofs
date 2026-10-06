@@ -1,0 +1,33 @@
+{
+  "GNU_or_HOL_started": false,
+  "actual_bindings_present": true,
+  "audit_bytes": 36997,
+  "cached_ELF_GNU_byte_image_fixture_passed": true,
+  "cached_GNU_relocation_negative_passed": true,
+  "caller_acceptance": false,
+  "controls_run": false,
+  "cost": null,
+  "definitions": 46,
+  "final_source_graph_count": 69,
+  "foreign_import_negative_cases": 4,
+  "generated_audit_sha256": "f1bd1ccd7be5f17605ec5c08c53505707e83166a965c8bfd48470e1d53d7fa20",
+  "missing_and_duplicate_definition_negatives_passed": true,
+  "model": null,
+  "nonvacuity_cases": 7,
+  "original_targets": 7,
+  "python_sources": 6,
+  "retained_source_command_failures": [
+    "Overbroad new_axiom substring assertion rejected legal JSON key new_axioms; corrected exact-identifier check",
+    "Paranoia validation asserted a Python backspace was present; assertion failed because no backspace was present; no edit occurred",
+    "Singular witnesses path glob had no matches; corrected to c1/witnesses",
+    "Read attempted nonexistent artifact/acquisition-v1.json; actual contract freeze was read successfully and artifact inventory pins used",
+    "Restricted import prefixes initially omitted existing top-level linkage formal lane; local development load-graph validation rejected it; linkage added",
+    "README patch command JavaScript string had unescaped Markdown backticks; command did not execute; retried with literal placeholder escaping"
+  ],
+  "schema": "c1-replay-local-validation-v2",
+  "seal_created": false,
+  "status": "PASS_SOURCE_AND_CACHED_FIXTURE_ONLY_NOT_FRESH_REPLAY",
+  "tokens": null,
+  "utc": "2026-10-04T17:10:53.143083+00:00",
+  "witness_targets": 21
+}

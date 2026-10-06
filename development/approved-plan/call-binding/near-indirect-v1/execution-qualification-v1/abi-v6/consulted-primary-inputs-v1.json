@@ -1,0 +1,10 @@
+{
+  "files": {
+    "development/approved-plan/abi-qualification/docs/intel-vol2a.pdf": "81a1c07beb20217956b23885193b68a104beaf72fcc85768d8da901991b71ec8",
+    "development/approved-plan/abi-qualification/docs/intel-vol2a.txt": "1697af334ca902335d7489506d603624dfcf0a182d8b5ad7e51d83eb2010094c",
+    "development/approved-plan/abi-qualification/docs/intel-vol2b-2016.pdf": "036ae35aec4da9dd54ba3b683547f09963f69609a3b98eae15586a692c4cd3d2",
+    "development/approved-plan/abi-qualification/docs/intel-vol2b-2016.txt": "4c05de4574116fc18f541cf11bec71c2ab8c9070a374575c32990fea8b9a0c48"
+  },
+  "primary_sources_only": true,
+  "semantic_human_review": "PENDING"
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "c2-contract-author-exposure-v1",
+  "agent": "/root/c2_artifact_contract",
+  "utc": "2026-10-04T21:38:38.747666+00:00",
+  "source_context": "Full inherited task context and prior successor summary; previous supplier-recipe exposure remains disclosed. No isolated baseline arm.",
+  "inspected_material": [
+    "C1 build/acquisition scripts, inventory and public definitions/statements",
+    "C0 caller definitions",
+    "Exact C2 disassembly/final ELF GNU metadata and pinned independent ELF parser",
+    "Existing scalar class/decoder source locations for planning qualification"
+  ],
+  "callee_proof_reopened_for_C2_construction": false,
+  "inspection_only": "This author has not run C2 proof construction. Source exposure does not establish or refute dependency on supplier internals. Formal capability isolation and kernel dependency tracing are not provided.",
+  "claim_limits": [
+    "no never-read supplier claim",
+    "no independent human review",
+    "no isolated matched economics",
+    "no semantic validation from hash checks"
+  ]
+}

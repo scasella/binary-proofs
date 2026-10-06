@@ -1,0 +1,54 @@
+{
+  "protected_unchanged": [
+    "supplier materializer/auditor",
+    "E5 foundation policy",
+    "machine/model/axioms",
+    "resource/readonly/offline policy"
+  ],
+  "required_before_execution": [
+    "source-check-v1.py and externally sealed anchors",
+    "freeze-v1.py",
+    "generate-audit-v1.py",
+    "C2 ELF/image crosscheck",
+    "frozen target/witness map and loader"
+  ],
+  "rows": [
+    {
+      "classification": "OPERATIONAL_C2_INSTANTIATION; mathematical generic rules unchanged",
+      "source": "development/approved-plan/reusable-assurance-c1-successor-v1/replay/fresh-replay-v5.py",
+      "source_sha256": "af615cdcde944ee6cc8782e2b91aba6863f0c9920a0f0b85ec77385c3dacf143",
+      "target": "development/approved-plan/reusable-assurance-c2-v1/replay/fresh-replay-v1.py",
+      "target_sha256": "54d9dd08cd587ce863bc98bacd24b2d73f3db4cfbd135d75ad6a9ce928e6f859"
+    },
+    {
+      "classification": "OPERATIONAL_C2_INSTANTIATION; mathematical generic rules unchanged",
+      "source": "development/approved-plan/reusable-assurance-c1-successor-v1/replay/check-root-v3.py",
+      "source_sha256": "231ce9d44c12530ca99e091a82aa961ab813effc3a776e701717a3be2d05a1b6",
+      "target": "development/approved-plan/reusable-assurance-c2-v1/replay/check-root-v1.py",
+      "target_sha256": "d681649c2a7a704a54ae690b12be37735e9ec9a51013a71066dd51d452cf2d26"
+    },
+    {
+      "classification": "OPERATIONAL_C2_INSTANTIATION; mathematical generic rules unchanged",
+      "source": "development/approved-plan/reusable-assurance-c1-successor-v1/replay/targeted-preflight-controls-v3.py",
+      "source_sha256": "477e7b512853eec2aecfc945ae366504281d00d750e1837b20c965348363704f",
+      "target": "development/approved-plan/reusable-assurance-c2-v1/replay/targeted-preflight-controls-v1.py",
+      "target_sha256": "73654c125334c0a7c322854642ac3c95767fa4faa5243e57694e1a00a0093a69"
+    },
+    {
+      "classification": "OPERATIONAL_C2_INSTANTIATION; mathematical generic rules unchanged",
+      "source": "development/approved-plan/reusable-assurance-c1-successor-v1/replay/missing-interface-probe-v3.py",
+      "source_sha256": "9b579add3ad7751bf892c5ae4e4094f17684ba0bb09eb1f1fe81d8e18260ef07",
+      "target": "development/approved-plan/reusable-assurance-c2-v1/replay/missing-interface-probe-v1.py",
+      "target_sha256": "879378842e89adc66dc1608dd4eef3aff6857cd5a8d13722972c1db53c875959"
+    },
+    {
+      "classification": "OPERATIONAL_C2_INSTANTIATION; mathematical generic rules unchanged",
+      "source": "development/approved-plan/reusable-assurance-c1-successor-v1/replay/ambient-snapshot-v1.ml",
+      "source_sha256": "4cb5bf4a479699ba7ef6f35397d5d9ae394ce383c07e19af930be4163ad65df7",
+      "target": "development/approved-plan/reusable-assurance-c2-v1/replay/ambient-snapshot-v1.ml",
+      "target_sha256": "047cb87ce8430ec7571efd2732fae482fc5b7cfe5ffe255052d164c152d9ddbe"
+    }
+  ],
+  "schema": "c2-operational-template-pins-v1",
+  "status": "PENDING_C2_SPEC_ARTIFACT_WITNESS_GRAPH_FREEZE_NOT_PROOF"
+}

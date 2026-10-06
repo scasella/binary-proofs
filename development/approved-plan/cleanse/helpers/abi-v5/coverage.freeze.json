@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-09-30T14:31:16.302256+00:00",
+  "source_sha256": "7c74c8dcdde37896a4def00745f8830f25eb802c364c90e4a0f0e3b8b1fa445f",
+  "theorems": [
+    {
+      "name": "ABI_CLEANSE_REGISTERED_DECODE_QUALIFIED",
+      "statement": "!pc off s.\n    bytes_loaded s (word pc) openssl_cleanse_mc /\\\n    read RIP (s:x86state) = word(pc+off) /\\\n    MEM off [0;4;7;11;13;17;19;21;25;29;31;48;55;57;59;63;67;69;72;76;83;87;89;93;95]\n    ==> abi_all_decodes_cleanse_scalar s"
+    }
+  ],
+  "scope": "actual pinned decoding at every registry source; no reachability premise inferred from registry"
+}

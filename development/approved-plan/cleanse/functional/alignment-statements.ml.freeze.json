@@ -1,0 +1,7 @@
+{
+  "before_search": true,
+  "created_at_utc": "2026-09-30T15:55:21.187465+00:00",
+  "file": "development/approved-plan/cleanse/functional/alignment-statements.ml",
+  "sha256": "40e50ec55719c9261d0f8aa55c048ec0aec518acc5856f355b935792b62220f0",
+  "scope": "Public arithmetic first-hit prefix; target behavior is not a precondition; internal modeled component only"
+}

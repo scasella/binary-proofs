@@ -1,0 +1,492 @@
+{
+  "scope": "Exact expanded equations from frozen independent definition sources",
+  "unique_definition_count": 72,
+  "all_equation_check_count": 97,
+  "equations": [
+    {
+      "name": "bp_e2_cleanse_call_post",
+      "comparison": "full",
+      "expected": "forall m pc stackpointer ra p n s t.\n    bp_e2_cleanse_call_post pc stackpointer ra p n m s t <=>\n    read RIP t = ra /\\\n    val (read RSP t) = val stackpointer + 8 /\\\n    (forall i. i < n ==> read memory t (word_add p (word i)) = word 0) /\\\n    (forall a. ~assurance_region p n (val a) ==> read memory t a = m a) /\\\n    bytes_loaded t (word pc) openssl_cleanse_mc /\\\n    read (memory :> bytes64 stackpointer) t = ra /\\\n    (MAYCHANGE [RIP; RSP; RAX; RDI; RSI] ,,\n     MAYCHANGE SOME_FLAGS ,,\n     MAYCHANGE [memory :> bytes (p,n)] ,,\n     MAYCHANGE [events])\n    s\n    t"
+    },
+    {
+      "name": "bp_e2_cleanse_public_pre",
+      "comparison": "full",
+      "expected": "forall file_bytes initial_rw padding stackpointer ra p n m s rp ordinary xp wp a.\n    bp_e2_cleanse_public_pre file_bytes initial_rw padding stackpointer ra p\n    n\n    m\n    rp\n    wp\n    xp\n    ordinary\n    (s,a) <=>\n    clw_file_code file_bytes /\\\n    fb_full_image file_bytes initial_rw padding m /\\\n    bp_e2_cleanse_pre 270800848 stackpointer ra p n m rp wp xp ordinary s /\\\n    (forall addr.\n         lw_image_domain addr\n         ==> rp addr /\\\n             ordinary addr /\\\n             (xp addr <=> lw_execute addr) /\\\n             (wp addr <=> lw_image_write addr)) /\\\n    assurance_canonical48 (val (read ABI_FS_BASE a))"
+    },
+    {
+      "name": "bp_e2_cleanse_public_post",
+      "comparison": "full",
+      "expected": "forall stackpointer ra p n m s a t.\n    bp_e2_cleanse_public_post stackpointer ra p n m s a t <=>\n    bp_e2_cleanse_call_post 270800848 stackpointer ra p n m s (FST t) /\\\n    SND t = a /\\\n    abi_required_controls_preserved a (SND t)"
+    },
+    {
+      "name": "bp_e2_cleanse_pre",
+      "comparison": "full",
+      "expected": "forall m ra s xp rp wp ordinary pc p n stackpointer.\n    bp_e2_cleanse_pre pc stackpointer ra p n m rp wp xp ordinary s <=>\n    n < 2 EXP 64 /\\\n    pc + 97 <= 2 EXP 64 /\\\n    bytes_loaded s (word pc) openssl_cleanse_mc /\\\n    read RIP s = word pc /\\\n    read RSP s = stackpointer /\\\n    read (memory :> bytes64 stackpointer) s = ra /\\\n    C_ARGUMENTS [p; word n] s /\\\n    read memory s = m /\\\n    val stackpointer MOD 16 = 8 /\\\n    val stackpointer + 8 < 2 EXP 64 /\\\n    assurance_canonical48 (val ra) /\\\n    ~(ra = word pc) /\\\n    (read DF s <=> false) /\\\n    ~bit 18 (read rflags s) /\\\n    assurance_span_ok (\\a. xp a /\\ ordinary a) pc 97 /\\\n    assurance_span_ok (\\a. rp a /\\ ordinary a) (val stackpointer) 8 /\\\n    assurance_span_ok (\\a. wp a /\\ ordinary a) (val p) n /\\\n    (forall a. ~(assurance_region p n a /\\ assurance_region (word pc) 97 a)) /\\\n    (forall a.\n         ~(assurance_region p n a /\\ assurance_region stackpointer 8 a))"
+    },
+    {
+      "name": "bp_e2_cleanse_allowed_read",
+      "comparison": "full",
+      "expected": "forall rp ordinary stackpointer a.\n    bp_e2_cleanse_allowed_read rp ordinary stackpointer a <=>\n    rp a /\\ ordinary a /\\ assurance_region stackpointer 8 a"
+    },
+    {
+      "name": "bp_e2_cleanse_allowed_write",
+      "comparison": "full",
+      "expected": "forall wp ordinary p n a.\n    bp_e2_cleanse_allowed_write wp ordinary p n a <=>\n    wp a /\\ ordinary a /\\ assurance_region p n a"
+    },
+    {
+      "name": "bp_e2_cleanse_allowed_fetch",
+      "comparison": "full",
+      "expected": "forall xp ordinary pc a.\n    bp_e2_cleanse_allowed_fetch xp ordinary pc a <=>\n    xp a /\\ ordinary a /\\ assurance_region (word pc) 97 a"
+    },
+    {
+      "name": "cleanse_functional_steps",
+      "comparison": "full",
+      "expected": "forall n p.\n    cleanse_functional_steps p n =\n    (if n < 15\n     then 4 * n + 7\n     else let a = (8 - val p MOD 8) MOD 8 in\n          9 + 6 * a + 5 * (n - a) DIV 8 + 4 * (n - a) MOD 8)"
+    },
+    {
+      "name": "cleanse_access_count",
+      "comparison": "full",
+      "expected": "forall n p.\n    cleanse_access_count p n =\n    (if n < 15\n     then 4 * n + 7\n     else let a = (8 - val p MOD 8) MOD 8 in\n          let k = (n - a) DIV 8 in\n          let r = (n - a) MOD 8 in 9 + 6 * a + 5 * k + 4 * r)"
+    },
+    {
+      "name": "cleanse_access_covered_step",
+      "comparison": "full",
+      "expected": "forall rp wp xp remaining s' pc s.\n    cleanse_access_covered_step pc rp wp xp remaining s s' <=>\n    assurance_zero_step rp wp xp remaining s s' /\\\n    (exists off len inst.\n         read RIP s = word (pc + off) /\\\n         abi_cleanse_site off len inst /\\\n         x86_decode s (read RIP s) (len,inst))"
+    },
+    {
+      "name": "cleanse_access_return_post",
+      "comparison": "full",
+      "expected": "forall ra stackpointer s pc.\n    cleanse_access_return_post pc stackpointer ra s <=>\n    read RIP s = ra /\\\n    read RSP s = word_add stackpointer (word 8) /\\\n    bytes_loaded s (word pc) openssl_cleanse_mc"
+    },
+    {
+      "name": "assurance_checked_run",
+      "comparison": "full",
+      "expected": "(assurance_checked_run 0 P C s <=> P s) /\\\n(assurance_checked_run (SUC n) P C s <=>\n (exists s'. x86 s s') /\\\n (forall s'. x86 s s' ==> C (SUC n) s s' /\\ assurance_checked_run n P C s'))"
+    },
+    {
+      "name": "assurance_step_policy",
+      "comparison": "full",
+      "expected": "forall xp s' s rp wp.\n    assurance_step_policy rp wp xp s s' <=>\n    (exists len inst d.\n         x86_decode s (read RIP s) (len,inst) /\\\n         assurance_span_ok xp (val (read RIP s)) len /\\\n         read events s' = APPEND d (read events s) /\\\n         ALL (assurance_event_policy rp wp) d)"
+    },
+    {
+      "name": "assurance_zero_step",
+      "comparison": "full",
+      "expected": "forall rp wp xp remaining s s'.\n    assurance_zero_step rp wp xp remaining s s' <=>\n    assurance_step_policy rp wp xp s s' /\\\n    (remaining = 1 ==> assurance_actual_ret 2 s s')"
+    },
+    {
+      "name": "assurance_event_policy",
+      "comparison": "full",
+      "expected": "forall e rp wp.\n    assurance_event_policy rp wp e <=>\n    (match e with\n       EventLoad (adr,width) -> assurance_span_ok rp (val adr) width\n     | EventStore (adr,width) -> assurance_span_ok wp (val adr) width\n     | _ -> true)"
+    },
+    {
+      "name": "assurance_fetch_policy",
+      "comparison": "full",
+      "expected": "forall xp obs.\n    assurance_fetch_policy xp obs <=>\n    assurance_span_ok xp (val (FST obs)) (FST (SND obs))"
+    },
+    {
+      "name": "assurance_region",
+      "comparison": "full",
+      "expected": "forall a p n. assurance_region p n a <=> val p <= a /\\ a < val p + n"
+    },
+    {
+      "name": "assurance_span_ok",
+      "comparison": "full",
+      "expected": "forall width perm a.\n    assurance_span_ok perm a width <=>\n    a + width <= 2 EXP 64 /\\\n    (forall j. j < width ==> assurance_canonical48 (a + j) /\\ perm (a + j))"
+    },
+    {
+      "name": "assurance_canonical48",
+      "comparison": "full",
+      "expected": "forall a.\n    assurance_canonical48 a <=>\n    a < 2 EXP 64 /\\ (a < 2 EXP 47 \\/ 2 EXP 64 - 2 EXP 47 <= a)"
+    },
+    {
+      "name": "abi_cleanse_scalar_instruction",
+      "comparison": "full",
+      "expected": "forall inst.\n    abi_cleanse_scalar_instruction inst <=>\n    abi_scalar_instruction inst \\/\n    (exists r imm. inst = SUB (% (Gpr r Full_64)) (Imm8 imm)) \\/\n    (exists r imm. inst = TEST (% (Gpr r Full_64)) (Imm32 imm))"
+    },
+    {
+      "name": "abi_cleanse_scalar_extended_step",
+      "comparison": "full",
+      "expected": "forall s s' a' a.\n    abi_cleanse_scalar_extended_step (s,a) (s',a') <=>\n    (exists len inst.\n         x86_decode s (read RIP s) (len,inst) /\\\n         (RIP := word_add (read RIP s) (word len) ,, x86_execute inst) s s' /\\\n         (abi_cleanse_scalar_instruction inst ==> a' = a))"
+    },
+    {
+      "name": "abi_all_decodes_cleanse_scalar",
+      "comparison": "full",
+      "expected": "forall s.\n    abi_all_decodes_cleanse_scalar s <=>\n    (forall len inst.\n         x86_decode s (read RIP s) (len,inst)\n         ==> abi_cleanse_scalar_instruction inst)"
+    },
+    {
+      "name": "abi_required_controls_preserved",
+      "comparison": "full",
+      "expected": "forall a' a.\n    abi_required_controls_preserved a a' <=>\n    read ABI_X87_CW a' = read ABI_X87_CW a /\\\n    word_and (read ABI_MXCSR a') (word 65472) =\n    word_and (read ABI_MXCSR a) (word 65472) /\\\n    read ABI_FS_SELECTOR a' = read ABI_FS_SELECTOR a /\\\n    read ABI_FS_BASE a' = read ABI_FS_BASE a"
+    },
+    {
+      "name": "clw_file_code",
+      "comparison": "full",
+      "expected": "forall file_bytes.\n    clw_file_code file_bytes <=>\n    (forall i. i < 97 ==> file_bytes (2365392 + i) = EL i openssl_cleanse_mc)"
+    },
+    {
+      "name": "clw_full_pre",
+      "comparison": "full",
+      "expected": "forall file_bytes initial_rw padding image high_first p n.\n    clw_full_pre file_bytes initial_rw padding image p n high_first <=>\n    fb_full_image file_bytes initial_rw padding\n    (read memory (FST (clw_machine image p n high_first))) /\\\n    bp_e2_cleanse_pre 270800848 (word 3145736) (word 4194304) p n\n    (clw_memory image p n high_first)\n    (clw_read p n)\n    (clw_write p n)\n    lw_execute\n    (clw_ordinary p n)\n    (FST (clw_machine image p n high_first)) /\\\n    fb_abi_initial_fields (SND (clw_machine image p n high_first)) /\\\n    (forall a. fb_tls_page a ==> clw_read p n a /\\ clw_ordinary p n a) /\\\n    assurance_canonical48\n    (val (read ABI_FS_BASE (SND (clw_machine image p n high_first)))) /\\\n    (forall a.\n         lw_image_domain a\n         ==> clw_read p n a /\\\n             clw_ordinary p n a /\\\n             (lw_execute a <=> lw_image_execute a) /\\\n             (clw_write p n a <=> lw_image_write a))"
+    },
+    {
+      "name": "clw_machine",
+      "comparison": "full",
+      "expected": "forall image p n high_first.\n    clw_machine image p n high_first =\n    clw_state image p n high_first,fb_initial_abi"
+    },
+    {
+      "name": "clw_memory",
+      "comparison": "full",
+      "expected": "forall image p n high_first.\n    clw_memory image p n high_first = lw_memory image p p n high_first"
+    },
+    {
+      "name": "clw_state",
+      "comparison": "full",
+      "expected": "forall image p n high_first.\n    clw_state image p n high_first =\n    x86state_RECORD (word 270800848)\n    (\\r.\n         if r = word 7\n         then p\n         else if r = word 6\n              then word n\n              else if r = word 4 then word 3145736 else word 0)\n    (\\z. word 0)\n    (\\k. word 0)\n    (word 2)\n    (clw_memory image p n high_first)\n    []"
+    },
+    {
+      "name": "clw_read",
+      "comparison": "full",
+      "expected": "forall p n a. clw_read p n a <=> fb_read p p n a"
+    },
+    {
+      "name": "clw_write",
+      "comparison": "full",
+      "expected": "forall p n a. clw_write p n a <=> lw_image_write a \\/ lw_pagecover p n a"
+    },
+    {
+      "name": "clw_ordinary",
+      "comparison": "full",
+      "expected": "forall p n a. clw_ordinary p n a <=> fb_ordinary p p n a"
+    },
+    {
+      "name": "fb_full_image",
+      "comparison": "full",
+      "expected": "forall image file_bytes initial_rw padding.\n    fb_full_image file_bytes initial_rw padding image <=>\n    (forall a.\n         lw_image_domain (val a)\n         ==> image a = fb_reference_image file_bytes initial_rw padding a)"
+    },
+    {
+      "name": "fb_reference_image",
+      "comparison": "full",
+      "expected": "forall file_bytes initial_rw padding a.\n    fb_reference_image file_bytes initial_rw padding a =\n    (if fb_immutable (val a)\n     then file_bytes (val a - 268435456)\n     else if fb_initialized_rw (val a) then initial_rw a else padding a)"
+    },
+    {
+      "name": "fb_immutable",
+      "comparison": "full",
+      "expected": "forall a.\n    fb_immutable a <=>\n    268435456 <= a /\\ a < 269241296 \\/\n    269242368 <= a /\\ a < 271856841 \\/\n    271859712 <= a /\\ a < 272767552"
+    },
+    {
+      "name": "fb_initialized_rw",
+      "comparison": "full",
+      "expected": "forall a. fb_initialized_rw a <=> 272772688 <= a /\\ a < 273192368"
+    },
+    {
+      "name": "lw_image_domain",
+      "comparison": "full",
+      "expected": "forall a. lw_image_domain a <=> 268435456 <= a /\\ a < 273195008"
+    },
+    {
+      "name": "lw_image_execute",
+      "comparison": "full",
+      "expected": "forall a. lw_image_execute a <=> 269242368 <= a /\\ a < 271859712"
+    },
+    {
+      "name": "lw_image_write",
+      "comparison": "full",
+      "expected": "forall a. lw_image_write a <=> 273170432 <= a /\\ a < 273195008"
+    },
+    {
+      "name": "lw_execute",
+      "comparison": "full",
+      "expected": "forall a. lw_execute a <=> lw_image_execute a"
+    },
+    {
+      "name": "clw_file_code",
+      "comparison": "body",
+      "expected": "clw_file_code (file_bytes:num->byte) <=>\n    !i. i<97 ==> file_bytes(0x2417d0+i)=EL i openssl_cleanse_mc"
+    },
+    {
+      "name": "clw_reference_code",
+      "comparison": "body",
+      "expected": "clw_reference_code (image:int64->byte) <=>\n    !i. i<97 ==> image(word(0x102417d0+i))=EL i openssl_cleanse_mc"
+    },
+    {
+      "name": "clw_layout",
+      "comparison": "body",
+      "expected": "clw_layout p n <=> lw_layout p p n"
+    },
+    {
+      "name": "clw_memory",
+      "comparison": "body",
+      "expected": "clw_memory image p n high_first = lw_memory image p p n high_first"
+    },
+    {
+      "name": "clw_state",
+      "comparison": "body",
+      "expected": "clw_state (image:int64->byte) (p:int64) n high_first =\n    x86state_RECORD (word 0x102417d0)\n      (\\r:(4)word. if r=word 7 then p\n                  else if r=word 6 then word n\n                  else if r=word 4 then word 0x300008\n                  else word 0)\n      (\\z:(5)word. word 0) (\\k:(3)word. word 0) (word 2)\n      (clw_memory image p n high_first) []"
+    },
+    {
+      "name": "clw_read",
+      "comparison": "body",
+      "expected": "clw_read p n a <=> fb_read p p n a"
+    },
+    {
+      "name": "clw_write",
+      "comparison": "body",
+      "expected": "clw_write p n a <=> lw_image_write a \\/ lw_pagecover p n a"
+    },
+    {
+      "name": "clw_ordinary",
+      "comparison": "body",
+      "expected": "clw_ordinary p n a <=> fb_ordinary p p n a"
+    },
+    {
+      "name": "clw_scalar_pre",
+      "comparison": "body",
+      "expected": "clw_scalar_pre image p n high_first <=>\n    bp_e2_cleanse_pre 0x102417d0 (word 0x300008) (word 0x400000) p n\n      (clw_memory image p n high_first) (clw_read p n) (clw_write p n)\n      lw_execute (clw_ordinary p n) (clw_state image p n high_first)"
+    },
+    {
+      "name": "clw_machine",
+      "comparison": "body",
+      "expected": "clw_machine image p n high_first =\n    (clw_state image p n high_first,fb_initial_abi)"
+    },
+    {
+      "name": "clw_full_pre",
+      "comparison": "body",
+      "expected": "clw_full_pre file_bytes initial_rw padding image p n high_first <=>\n    fb_full_image file_bytes initial_rw padding\n      (read memory (FST(clw_machine image p n high_first))) /\\\n    bp_e2_cleanse_pre 0x102417d0 (word 0x300008) (word 0x400000) p n\n      (clw_memory image p n high_first) (clw_read p n) (clw_write p n)\n      lw_execute (clw_ordinary p n) (FST(clw_machine image p n high_first)) /\\\n    fb_abi_initial_fields (SND(clw_machine image p n high_first)) /\\\n    (!a. fb_tls_page a ==> clw_read p n a /\\ clw_ordinary p n a) /\\\n    assurance_canonical48 (val(read ABI_FS_BASE\n      (SND(clw_machine image p n high_first)))) /\\\n    (!a. lw_image_domain a ==> clw_read p n a /\\ clw_ordinary p n a /\\\n          (lw_execute a <=> lw_image_execute a) /\\\n          (clw_write p n a <=> lw_image_write a))"
+    },
+    {
+      "name": "lw_image_domain",
+      "comparison": "body",
+      "expected": "lw_image_domain a <=> 0x10000000 <= a /\\ a < 0x1048a000"
+    },
+    {
+      "name": "lw_image_read",
+      "comparison": "body",
+      "expected": "lw_image_read a <=> lw_image_domain a"
+    },
+    {
+      "name": "lw_image_execute",
+      "comparison": "body",
+      "expected": "lw_image_execute a <=> 0x100c5000 <= a /\\ a < 0x10344000"
+    },
+    {
+      "name": "lw_image_write",
+      "comparison": "body",
+      "expected": "lw_image_write a <=> 0x10484000 <= a /\\ a < 0x1048a000"
+    },
+    {
+      "name": "lw_pagecover",
+      "comparison": "body",
+      "expected": "lw_pagecover (p:int64) n a <=>\n    ~(n = 0) /\\ 4096 * (val p DIV 4096) <= a /\\\n    a < 4096 * ((val p + n - 1) DIV 4096 + 1)"
+    },
+    {
+      "name": "lw_overlay_domain",
+      "comparison": "body",
+      "expected": "lw_overlay_domain p q n a <=>\n    (0x300000 <= a /\\ a < 0x301000) \\/\n    lw_pagecover p n a \\/ lw_pagecover q n a"
+    },
+    {
+      "name": "lw_layout",
+      "comparison": "body",
+      "expected": "lw_layout p q n <=>\n    !a. ~(lw_image_domain a /\\ lw_overlay_domain p q n a)"
+    },
+    {
+      "name": "lw_reference_code",
+      "comparison": "body",
+      "expected": "lw_reference_code (image:int64->byte) <=>\n    !i. i < 95 ==> image(word(0x10241840+i)) = EL i crypto_memcmp_mc"
+    },
+    {
+      "name": "lw_memory",
+      "comparison": "body",
+      "expected": "lw_memory (image:int64->byte) p q n different (a:int64) =\n    if 0x300008 <= val a /\\ val a < 0x300010\n    then word (0x400000 DIV (256 EXP (val a-0x300008)))\n    else if lw_overlay_domain p q n (val a)\n         then if different /\\ a = q then word 255 else word 128\n         else image a"
+    },
+    {
+      "name": "lw_state",
+      "comparison": "body",
+      "expected": "lw_state (image:int64->byte) (p:int64) (q:int64) n different =\n    x86state_RECORD (word 0x10241840)\n      (\\r:(4)word. if r=word 7 then p\n                  else if r=word 6 then q\n                  else if r=word 2 then word n\n                  else if r=word 4 then word 0x300008\n                  else word 0)\n      (\\z:(5)word. word 0) (\\k:(3)word. word 0) (word 2)\n      (lw_memory image p q n different) []"
+    },
+    {
+      "name": "lw_read",
+      "comparison": "body",
+      "expected": "lw_read p q n a <=> lw_image_read a \\/ lw_overlay_domain p q n a"
+    },
+    {
+      "name": "lw_execute",
+      "comparison": "body",
+      "expected": "lw_execute a <=> lw_image_execute a"
+    },
+    {
+      "name": "lw_ordinary",
+      "comparison": "body",
+      "expected": "lw_ordinary p q n a <=> lw_image_domain a \\/ lw_overlay_domain p q n a"
+    },
+    {
+      "name": "lw_pre",
+      "comparison": "body",
+      "expected": "lw_pre image p q n different <=>\n    bp_e2_crypto_pre 0x10241840 (word 0x300008) (word 0x400000)\n      p q n (lw_memory image p q n different) (lw_read p q n) lw_execute\n      (lw_ordinary p q n) (lw_state image p q n different)"
+    },
+    {
+      "name": "fb_immutable",
+      "comparison": "body",
+      "expected": "fb_immutable a <=>\n    (0x10000000 <= a /\\ a < 0x100c4bd0) \\/\n    (0x100c5000 <= a /\\ a < 0x103434c9) \\/\n    (0x10344000 <= a /\\ a < 0x10421a40)"
+    },
+    {
+      "name": "fb_initialized_rw",
+      "comparison": "body",
+      "expected": "fb_initialized_rw a <=> 0x10422e50 <= a /\\ a < 0x104895b0"
+    },
+    {
+      "name": "fb_reference_image",
+      "comparison": "body",
+      "expected": "fb_reference_image (file_bytes:num->byte) (initial_rw:int64->byte)\n                     (padding:int64->byte) (a:int64) =\n    if fb_immutable (val a) then file_bytes (val a-0x10000000)\n    else if fb_initialized_rw (val a) then initial_rw a\n    else padding a"
+    },
+    {
+      "name": "fb_full_image",
+      "comparison": "body",
+      "expected": "fb_full_image file_bytes initial_rw padding (image:int64->byte) <=>\n    !a. lw_image_domain (val(a:int64))\n        ==> image a = fb_reference_image file_bytes initial_rw padding a"
+    },
+    {
+      "name": "fb_file_code",
+      "comparison": "body",
+      "expected": "fb_file_code (file_bytes:num->byte) <=>\n    !i. i<95 ==> file_bytes(0x241840+i) = EL i crypto_memcmp_mc"
+    },
+    {
+      "name": "fb_tls_page",
+      "comparison": "body",
+      "expected": "fb_tls_page a <=> 0x500000 <= a /\\ a < 0x501000"
+    },
+    {
+      "name": "fb_read",
+      "comparison": "body",
+      "expected": "fb_read p q n a <=> lw_read p q n a \\/ fb_tls_page a"
+    },
+    {
+      "name": "fb_ordinary",
+      "comparison": "body",
+      "expected": "fb_ordinary p q n a <=> lw_ordinary p q n a \\/ fb_tls_page a"
+    },
+    {
+      "name": "fb_initial_abi",
+      "comparison": "body",
+      "expected": "fb_initial_abi = abi_omitted_state_RECORD\n    (word 0x37f) (word 0) (word 0xffff) (word 0)\n    (word 0) (word 0) (word 0) (word 0)\n    (\\r:(3)word. word 0) (word 0x1f80)\n    (word 0) (word 0x500000) (word 0) (word 0)"
+    },
+    {
+      "name": "fb_abi_initial_fields",
+      "comparison": "body",
+      "expected": "fb_abi_initial_fields (a:abi_omitted_state) <=>\n    read ABI_X87_CW a = word 0x37f /\\\n    read ABI_X87_SW a = word 0 /\\\n    read ABI_X87_TAG a = word 0xffff /\\\n    read ABI_X87_FOP a = word 0 /\\\n    read ABI_X87_IP a = word 0 /\\\n    read ABI_X87_CS a = word 0 /\\\n    read ABI_X87_DP a = word 0 /\\\n    read ABI_X87_DS a = word 0 /\\\n    (!r:(3)word. read ABI_X87_REGS a r = word 0) /\\\n    read ABI_MXCSR a = word 0x1f80 /\\\n    read ABI_FS_SELECTOR a = word 0 /\\\n    read ABI_FS_BASE a = word 0x500000 /\\\n    read ABI_GS_SELECTOR a = word 0 /\\\n    read ABI_GS_BASE a = word 0"
+    },
+    {
+      "name": "fb_machine",
+      "comparison": "body",
+      "expected": "fb_machine image p q n different =\n    (lw_state image p q n different,fb_initial_abi)"
+    },
+    {
+      "name": "fb_pre",
+      "comparison": "body",
+      "expected": "fb_pre file_bytes initial_rw padding image p q n different <=>\n    fb_full_image file_bytes initial_rw padding\n      (read memory (FST(fb_machine image p q n different))) /\\\n    bp_e2_crypto_pre 0x10241840 (word 0x300008) (word 0x400000)\n      p q n (lw_memory image p q n different) (fb_read p q n) lw_execute\n      (fb_ordinary p q n) (FST(fb_machine image p q n different)) /\\\n    fb_abi_initial_fields (SND(fb_machine image p q n different)) /\\\n    (!a. fb_tls_page a ==> fb_read p q n a /\\ fb_ordinary p q n a) /\\\n    assurance_canonical48 (val(read ABI_FS_BASE\n      (SND(fb_machine image p q n different))))"
+    },
+    {
+      "name": "assurance_canonical48",
+      "comparison": "body",
+      "expected": "assurance_canonical48 a <=>\n    a < 2 EXP 64 /\\ (a < 2 EXP 47 \\/ 2 EXP 64 - 2 EXP 47 <= a)"
+    },
+    {
+      "name": "assurance_region",
+      "comparison": "body",
+      "expected": "assurance_region (p:int64) n a <=> val p <= a /\\ a < val p+n"
+    },
+    {
+      "name": "assurance_span_ok",
+      "comparison": "body",
+      "expected": "assurance_span_ok perm a width <=>\n    a+width <= 2 EXP 64 /\\\n    !j. j < width ==> assurance_canonical48 (a+j) /\\ perm(a+j)"
+    },
+    {
+      "name": "bp_e2_cleanse_pre",
+      "comparison": "body",
+      "expected": "bp_e2_cleanse_pre pc stackpointer ra p n m rp wp xp ordinary (s:x86state) <=>\n    n<2 EXP 64 /\\ pc+97<=2 EXP 64 /\\\n    bytes_loaded s (word pc) openssl_cleanse_mc /\\\n    read RIP s=word pc /\\ read RSP s=stackpointer /\\\n    read (memory :> bytes64 stackpointer) s=ra /\\\n    C_ARGUMENTS [p;word n] s /\\ read memory s=m /\\\n    val(stackpointer:int64) MOD 16=8 /\\ val stackpointer+8<2 EXP 64 /\\\n    assurance_canonical48(val(ra:int64)) /\\ ~(ra=word pc) /\\\n    read DF s=F /\\ ~bit 18(read rflags s) /\\\n    assurance_span_ok (\\a. xp a /\\ ordinary a) pc 97 /\\\n    assurance_span_ok (\\a. rp a /\\ ordinary a) (val stackpointer) 8 /\\\n    assurance_span_ok (\\a. wp a /\\ ordinary a) (val(p:int64)) n /\\\n    (!a. ~(assurance_region p n a /\\ assurance_region (word pc) 97 a)) /\\\n    (!a. ~(assurance_region p n a /\\ assurance_region stackpointer 8 a))"
+    },
+    {
+      "name": "abi_required_controls_preserved",
+      "comparison": "body",
+      "expected": "abi_required_controls_preserved (a:abi_omitted_state) a' <=>\n    read ABI_X87_CW a' = read ABI_X87_CW a /\\\n    word_and (read ABI_MXCSR a') (word 0xffc0) =\n    word_and (read ABI_MXCSR a) (word 0xffc0) /\\\n    read ABI_FS_SELECTOR a' = read ABI_FS_SELECTOR a /\\\n    read ABI_FS_BASE a' = read ABI_FS_BASE a"
+    },
+    {
+      "name": "abi_integer_memory_width",
+      "comparison": "body",
+      "expected": "abi_integer_memory_width w <=>\n    w = Byte \\/ w = Word \\/ w = Doubleword \\/ w = Quadword"
+    },
+    {
+      "name": "abi_integer_writable",
+      "comparison": "body",
+      "expected": "abi_integer_writable op <=>\n    (?r. op = Register r) \\/\n    (?w addr. op = Memop w addr /\\ abi_integer_memory_width w)"
+    },
+    {
+      "name": "abi_integer_immediate",
+      "comparison": "body",
+      "expected": "abi_integer_immediate op <=>\n    (?v. op = Imm8 v) \\/ (?v. op = Imm16 v) \\/\n    (?v. op = Imm32 v) \\/ (?v. op = Imm64 v)"
+    },
+    {
+      "name": "abi_integer_operand",
+      "comparison": "body",
+      "expected": "abi_integer_operand op <=>\n    abi_integer_writable op \\/ abi_integer_immediate op"
+    },
+    {
+      "name": "abi_cmov_operand",
+      "comparison": "body",
+      "expected": "abi_cmov_operand op <=>\n    (?r size. op = Register(Gpr r size) /\\\n              (size = Full_64 \\/ size = Lower_32 \\/ size = Lower_16)) \\/\n    (?w addr. op = Memop w addr /\\\n              (w = Word \\/ w = Doubleword \\/ w = Quadword))"
+    },
+    {
+      "name": "abi_scalar_instruction",
+      "comparison": "body",
+      "expected": "abi_scalar_instruction inst <=>\n    inst = ENDBR64 \\/ inst = RET \\/\n    (?dst src. inst = MOV dst src /\\ abi_integer_writable dst /\\ abi_integer_operand src) \\/\n    (?dst src. inst = XOR dst src /\\ abi_integer_writable dst /\\ abi_integer_operand src) \\/\n    (?dst src. inst = OR dst src /\\ abi_integer_writable dst /\\ abi_integer_operand src) \\/\n    (?dst src. inst = CMP dst src /\\ abi_integer_writable dst /\\ abi_integer_operand src) \\/\n    (?dst. inst = DEC dst /\\ abi_integer_writable dst) \\/\n    (?dst. inst = NEG dst /\\ abi_integer_writable dst) \\/\n    (?r addr. inst = LEA (Register r) addr) \\/\n    (?cond r size src. inst = CMOV cond (Register(Gpr r size)) src /\\\n       (size = Full_64 \\/ size = Lower_32 \\/ size = Lower_16) /\\ abi_cmov_operand src) \\/\n    (?cond disp. inst = JUMP cond (Imm8 disp)) \\/\n    (?cond disp. inst = JUMP cond (Imm32 disp)) \\/\n    (?dst count. inst = SHR dst count /\\ abi_integer_writable dst /\\\n       ((?v. count = Imm8 v) \\/ count = Register(Gpr (word 1) Lower_8)))"
+    },
+    {
+      "name": "abi_scalar_extended_step",
+      "comparison": "body",
+      "expected": "abi_scalar_extended_step (s:x86state,a:abi_omitted_state) (s',a') <=>\n    ?len inst.\n      x86_decode s (read RIP s) (len,inst) /\\\n      (RIP := word_add (read RIP s) (word len) ,, x86_execute inst) s s' /\\\n      (abi_scalar_instruction inst ==> a' = a)"
+    },
+    {
+      "name": "abi_all_decodes_scalar",
+      "comparison": "body",
+      "expected": "abi_all_decodes_scalar (s:x86state) <=>\n    !len inst. x86_decode s (read RIP s) (len,inst)\n               ==> abi_scalar_instruction inst"
+    },
+    {
+      "name": "abi_crypto_site",
+      "comparison": "body",
+      "expected": "abi_crypto_site off len inst <=>\n    (off = 0 /\\ len = 4 /\\ inst = ENDBR64) \\/\n    (off = 4 /\\ len = 3 /\\ inst = XOR (% rax) (% rax)) \\/\n    (off = 7 /\\ len = 3 /\\ inst = XOR (% r10) (% r10)) \\/\n    (off = 10 /\\ len = 4 /\\ inst = CMP (% rdx) (Imm8 (word 0))) \\/\n    (off = 14 /\\ len = 2 /\\ inst = JUMP Condition_Z (Imm8 (word 77))) \\/\n    (off = 16 /\\ len = 4 /\\ inst = CMP (% rdx) (Imm8 (word 16))) \\/\n    (off = 20 /\\ len = 2 /\\ inst = JUMP Condition_NZ (Imm8 (word 42))) \\/\n    (off = 22 /\\ len = 3 /\\ inst = MOV (% r10) (Memop Quadword (%% (rdi,0)))) \\/\n    (off = 25 /\\ len = 4 /\\ inst = MOV (% r11) (Memop Quadword (%% (rdi,8)))) \\/\n    (off = 29 /\\ len = 7 /\\ inst = MOV (% rdx) (Imm32 (word 1))) \\/\n    (off = 36 /\\ len = 3 /\\ inst = XOR (% r10) (Memop Quadword (%% (rsi,0)))) \\/\n    (off = 39 /\\ len = 4 /\\ inst = XOR (% r11) (Memop Quadword (%% (rsi,8)))) \\/\n    (off = 43 /\\ len = 3 /\\ inst = OR (% r10) (% r11)) \\/\n    (off = 46 /\\ len = 4 /\\ inst = CMOV Condition_NZ (% rax) (% rdx)) \\/\n    (off = 50 /\\ len = 2 /\\ inst = RET) \\/\n    (off = 64 /\\ len = 3 /\\ inst = MOV (% r10b) (Memop Byte (%% (rdi,0)))) \\/\n    (off = 67 /\\ len = 4 /\\ inst = LEA (% rdi) (%% (rdi,1))) \\/\n    (off = 71 /\\ len = 3 /\\ inst = XOR (% r10b) (Memop Byte (%% (rsi,0)))) \\/\n    (off = 74 /\\ len = 4 /\\ inst = LEA (% rsi) (%% (rsi,1))) \\/\n    (off = 78 /\\ len = 3 /\\ inst = OR (% al) (% r10b)) \\/\n    (off = 81 /\\ len = 3 /\\ inst = DEC (% rdx)) \\/\n    (off = 84 /\\ len = 2 /\\ inst = JUMP Condition_NZ (Imm8 (word 234))) \\/\n    (off = 86 /\\ len = 3 /\\ inst = NEG (% rax)) \\/\n    (off = 89 /\\ len = 4 /\\ inst = SHR (% rax) (Imm8 (word 63))) \\/\n    (off = 93 /\\ len = 2 /\\ inst = RET)"
+    },
+    {
+      "name": "abi_cleanse_scalar_instruction",
+      "comparison": "body",
+      "expected": "abi_cleanse_scalar_instruction inst <=>\n    abi_scalar_instruction inst \\/\n    (?r imm. inst = SUB (Register(Gpr r Full_64)) (Imm8 imm)) \\/\n    (?r imm. inst = TEST (Register(Gpr r Full_64)) (Imm32 imm))"
+    },
+    {
+      "name": "abi_cleanse_scalar_extended_step",
+      "comparison": "body",
+      "expected": "abi_cleanse_scalar_extended_step (s:x86state,a:abi_omitted_state) (s',a') <=>\n    ?len inst.\n      x86_decode s (read RIP s) (len,inst) /\\\n      (RIP := word_add (read RIP s) (word len) ,, x86_execute inst) s s' /\\\n      (abi_cleanse_scalar_instruction inst ==> a' = a)"
+    },
+    {
+      "name": "abi_all_decodes_cleanse_scalar",
+      "comparison": "body",
+      "expected": "abi_all_decodes_cleanse_scalar (s:x86state) <=>\n    !len inst. x86_decode s (read RIP s) (len,inst)\n               ==> abi_cleanse_scalar_instruction inst"
+    },
+    {
+      "name": "abi_cleanse_site",
+      "comparison": "body",
+      "expected": "abi_cleanse_site off len inst <=>\n    (off = 0 /\\ len = 4 /\\ inst = ENDBR64) \\/\n    (off = 4 /\\ len = 3 /\\ inst = XOR (% rax) (% rax)) \\/\n    (off = 7 /\\ len = 4 /\\ inst = CMP (% rsi) (Imm8 (word 15))) \\/\n    (off = 11 /\\ len = 2 /\\ inst = JUMP Condition_NB (Imm8 (word 35))) \\/\n    (off = 13 /\\ len = 4 /\\ inst = CMP (% rsi) (Imm8 (word 0))) \\/\n    (off = 17 /\\ len = 2 /\\ inst = JUMP Condition_Z (Imm8 (word 12))) \\/\n    (off = 19 /\\ len = 2 /\\ inst = MOV (Memop Byte (%% (rdi,0))) (% al)) \\/\n    (off = 21 /\\ len = 4 /\\ inst = SUB (% rsi) (Imm8 (word 1))) \\/\n    (off = 25 /\\ len = 4 /\\ inst = LEA (% rdi) (%% (rdi,1))) \\/\n    (off = 29 /\\ len = 2 /\\ inst = JUMP Condition_NZ (Imm8 (word 244))) \\/\n    (off = 31 /\\ len = 2 /\\ inst = RET) \\/\n    (off = 48 /\\ len = 7 /\\ inst = TEST (% rdi) (Imm32 (word 7))) \\/\n    (off = 55 /\\ len = 2 /\\ inst = JUMP Condition_Z (Imm8 (word 12))) \\/\n    (off = 57 /\\ len = 2 /\\ inst = MOV (Memop Byte (%% (rdi,0))) (% al)) \\/\n    (off = 59 /\\ len = 4 /\\ inst = LEA (% rsi) (%% (rsi,18446744073709551615))) \\/\n    (off = 63 /\\ len = 4 /\\ inst = LEA (% rdi) (%% (rdi,1))) \\/\n    (off = 67 /\\ len = 2 /\\ inst = JUMP Unconditional (Imm8 (word 235))) \\/\n    (off = 69 /\\ len = 3 /\\ inst = MOV (Memop Quadword (%% (rdi,0))) (% rax)) \\/\n    (off = 72 /\\ len = 4 /\\ inst = LEA (% rsi) (%% (rsi,18446744073709551608))) \\/\n    (off = 76 /\\ len = 7 /\\ inst = TEST (% rsi) (Imm32 (word 4294967288))) \\/\n    (off = 83 /\\ len = 4 /\\ inst = LEA (% rdi) (%% (rdi,8))) \\/\n    (off = 87 /\\ len = 2 /\\ inst = JUMP Condition_NZ (Imm8 (word 236))) \\/\n    (off = 89 /\\ len = 4 /\\ inst = CMP (% rsi) (Imm8 (word 0))) \\/\n    (off = 93 /\\ len = 2 /\\ inst = JUMP Condition_NZ (Imm8 (word 180))) \\/\n    (off = 95 /\\ len = 2 /\\ inst = RET)"
+    },
+    {
+      "name": "assurance_checked_run",
+      "comparison": "body",
+      "expected": "(assurance_checked_run 0 (P:x86state->bool)\n      (C:num->x86state->x86state->bool) s <=> P s) /\\\n  (assurance_checked_run (SUC n) P C s <=>\n     (?s'. x86 s s') /\\\n     !s'. x86 s s' ==> C (SUC n) s s' /\\\n                        assurance_checked_run n P C s')"
+    },
+    {
+      "name": "cleanse_access_loop_pre",
+      "comparison": "body",
+      "expected": "cleanse_access_loop_pre pc off stackpointer ra p n rp wp xp (s:x86state) <=>\n    n<2 EXP 64 /\\ pc+97<=2 EXP 64 /\\\n    assurance_span_ok xp pc 97 /\\\n    assurance_span_ok rp (val(stackpointer:int64)) 8 /\\\n    assurance_span_ok wp (val(p:int64)) n /\\\n    nonoverlapping (word pc,97) (p,n) /\\\n    nonoverlapping (stackpointer,8) (p,n) /\\\n    bytes_loaded s (word pc) openssl_cleanse_mc /\\\n    read RIP s=word(pc+off) /\\ read RSP s=stackpointer /\\\n    read (memory :> bytes64 stackpointer) s=ra /\\\n    read RDI s=p /\\ read RSI s=word n /\\ read RAX s=word 0"
+    },
+    {
+      "name": "cleanse_alignment_count",
+      "comparison": "body",
+      "expected": "cleanse_alignment_count (p:int64)=(8-val p MOD 8) MOD 8"
+    }
+  ]
+}

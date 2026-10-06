@@ -1,0 +1,12 @@
+{
+  "files": {
+    "development/approved-plan/loaded-witness/full-binding/bridge-expected-statements-v1.json": "62691cc40745c4042c07541117a09dac8fdc844a5af4472dc93f99051f6d7485",
+    "development/approved-plan/loaded-witness/full-binding/bridge-statements-v1.ml": "a15e9ce69a209d12849a740c25a9202619534bd20d2d4a86c278150ffa5088a2",
+    "development/approved-plan/loaded-witness/full-binding/freeze-v2.json": "a6e26ca4c9c6c35ad0bfe88de282da77820998acf960a234c47029ea394bd984"
+  },
+  "frozen_before_main_proof_search": true,
+  "human_review": "PENDING",
+  "requires": "freeze-v2.json",
+  "revision": "Additive generic derived fb_pre-to-file-code bridge; no changes to V2targets",
+  "status": "TARGET_FROZEN_PROOF_PENDING"
+}

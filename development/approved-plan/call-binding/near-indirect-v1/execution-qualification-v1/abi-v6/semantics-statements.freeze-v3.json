@@ -1,0 +1,15 @@
+{
+  "frozen_at_utc": "2026-09-30T19:00:08.705331+00:00",
+  "files": {
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/extension-v6-attempt2.ml": "592489bcb2689fd9f955adbf2e86827294d78c98b95fed63c95e694b488da557",
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/expected-definitions-v6-attempt2.json": "7f6c399ee23dd968a2baa2c3d8cace94e2ba7bb8f7801b54858d94267088416e",
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/statements-v6-attempt2.ml": "1cf30689ca62ad8c677b42fa105a9b1e5933c6b83d2bc1ac26a49061a416a8e7",
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/expected-statements-v6-attempt2.json": "cc1c610a4846601fa54b4e9888c7487714999d3e36f55458565211bcb0b570ec",
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/PROPOSAL-v1.md": "b397e1862e78771a20b175c38f8aeb0983875a886e250c645d036735ae66d20a",
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/physical-effect-review.freeze-v1.json": "0cc375539ef68507f2300e59421809a8fb1d5667b16bece46397cba35d1860c8"
+  },
+  "predecessor_failed": "semantics-statements.freeze-v2.json",
+  "repair": "V6 source qualification predicate in preservation/unique/lift targets; originalV5predicate was accidental copied target",
+  "proof_search_started": false,
+  "physical_effect_human_review": "PENDING"
+}

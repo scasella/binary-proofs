@@ -1,0 +1,38 @@
+{
+  "status": "FROZEN_BEFORE_INTERFACE_MAIN_PROOF_SEARCH",
+  "created_at_utc": "2026-09-30T17:56:44.604728+00:00",
+  "source_files": [
+    {
+      "file": "development/approved-plan/cleanse/interface/imports-v1.ml",
+      "sha256": "2cfe5cb9d2e05a2f90d9b45da169cab8dcce54da34d797dc46c5d1b38b0dd85c"
+    },
+    {
+      "file": "development/approved-plan/cleanse/interface/definitions-v1.ml",
+      "sha256": "e7c5d894b7f71c8d4feb03b3906feae24d947399864b01f7018c4e354d023f4a"
+    },
+    {
+      "file": "development/approved-plan/cleanse/interface/helper-statements-v1.ml",
+      "sha256": "e7fcc08ddcf450ee3ffccb3053c7601bf56996778d318356ec5536e619452b7b"
+    },
+    {
+      "file": "development/approved-plan/cleanse/interface/statements-v1.ml",
+      "sha256": "20e3c80c0d21b7f8eb81dee672c89769888b837931e20a7dd43eafdced45bedc"
+    },
+    {
+      "file": "development/approved-plan/cleanse/interface/statement-loader-v1.ml",
+      "sha256": "85d114dd3a7880c3cbacedfe5254c42c52704fc28be298c7a692525dbb52e7d3"
+    },
+    {
+      "file": "development/approved-plan/cleanse/interface/expected-statements-v1.json",
+      "sha256": "7b3e01d7a65db5cba3ff237a27d5608c6b1589bb0aa9c693daecf73703d90fbe"
+    }
+  ],
+  "root_pre_source": "development/approved-plan/cleanse/spec-v2.ml",
+  "root_pre_sha256": "770be48e0786e1ce1b50141a45e65e8bebd8ded14dfbea9d9ee9ec82a4a5326b",
+  "initial_image_binding_only": true,
+  "destination_may_overlap_writable_library_data": true,
+  "physical_isa_fidelity": "Explicit trust boundary of V5 scalar effects; not proved by projection/backlift",
+  "human_review": "PENDING",
+  "full_O1_pass": false,
+  "full_O2_pass": false
+}

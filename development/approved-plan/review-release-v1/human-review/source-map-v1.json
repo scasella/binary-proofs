@@ -1,0 +1,186 @@
+{
+  "schema": "review-source-map-v1",
+  "human_review": "PENDING",
+  "rows": [
+    {
+      "path": "TRUST.md",
+      "sha256": "af637e7e8ddd96383bfab4659a18a808be26f7f94a84f53628a834a7a9ac3b03",
+      "bytes": 12652
+    },
+    {
+      "path": "development/approved-plan/TRUST-E2-v2.md",
+      "sha256": "2f4b8786b1b3997ae3db77b97ff149f5d815a4ffdcd9e0b56087e2ccf84fdac1",
+      "bytes": 10239
+    },
+    {
+      "path": "development/approved-plan/assurance/correspondence.ml",
+      "sha256": "826424f48c16dd32f6781f6746c46f2d1dd4b1f6423b162a972ebe64905b8211",
+      "bytes": 6374
+    },
+    {
+      "path": "development/approved-plan/assurance/path.ml",
+      "sha256": "65cdc3dfde0d03dd182381a3f890fd8ec0f8f7eb7dafb1277013734bd1cc1675",
+      "bytes": 9477
+    },
+    {
+      "path": "development/approved-plan/assurance/policy.ml",
+      "sha256": "22cfc4886fb1e06006326ce0a3382ecf89fd9147e064d7b5b435bc79907d3d24",
+      "bytes": 6527
+    },
+    {
+      "path": "development/approved-plan/c3-successor-v1/diagnostics/transport-final-selected-graph-review-v2.json",
+      "sha256": "55b1a3cb83c3d63096db34b514fd06acc1f63f0ec0102803ee293932b892cb3c",
+      "bytes": 89699
+    },
+    {
+      "path": "development/approved-plan/c3-successor-v1/proofs/final-mov2-site-v2.ml",
+      "sha256": "0f71a53f0afcd049a1b894ec907a42315e97a57b06ceb054514becdc5838954d",
+      "bytes": 2511
+    },
+    {
+      "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+      "sha256": "74c891c05a358af4bdcbcbf14673b73d2e96816eebe69e16c8e46684927e5072",
+      "bytes": 10179
+    },
+    {
+      "path": "development/approved-plan/c3-successor-v1/results/complete-gate-final-v1.json",
+      "sha256": "0e1aa8598bd85d1015f5e85a71744fa1cd9403cfcba4b7529c04a0acb901784e",
+      "bytes": 2921
+    },
+    {
+      "path": "development/approved-plan/c3-successor-v1/results/dependency-map-v2.json",
+      "sha256": "6544ed0828c22bf7b89f2f3971696c95c959a702b3e47fe7972cf1717d9cbc24",
+      "bytes": 5180
+    },
+    {
+      "path": "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/c3-live-audit-v1.json",
+      "sha256": "7b67bb6f8a4660a16b8523a5adbfa9b731e46e85837cfa834d68d4166423e35f",
+      "bytes": 231395
+    },
+    {
+      "path": "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/cleanse-interface.json",
+      "sha256": "7e1bd3d3ebb4311b9c2e0360666811cb6ceecd60fbc1d4d94be799a197867e11",
+      "bytes": 17849
+    },
+    {
+      "path": "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/e3-interface.json",
+      "sha256": "eeac46ea3128f2c14c9812c1003be789c6d61c6415d2ea4df3fd536f276b678c",
+      "bytes": 364035
+    },
+    {
+      "path": "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/full-binding-audit.json",
+      "sha256": "058ca82bbe13afce45cdec08dc26194e1f87d2136f0631e69f99a6cbfc41f692",
+      "bytes": 7515
+    },
+    {
+      "path": "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/public-interface-audit.json",
+      "sha256": "ddd1ebf4a0e9e2bd1dfb7d930df565fd1449ab7c3c13de6ea81eed10d605eb65",
+      "bytes": 1943
+    },
+    {
+      "path": "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/public-trace-audit.json",
+      "sha256": "599bc33fac6ea1a99c8e9a01df57e3aaba9837318e19c44e6bdc46e413d1f0a2",
+      "bytes": 1040
+    },
+    {
+      "path": "development/approved-plan/c3-successor-v1/status/selected-reuse-account-v1.json",
+      "sha256": "6c397e06abdf85222f2cfccac0f0a93ebcd2bd04eca74eb7ceee31da37a3f360",
+      "bytes": 1953
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/contract/definitions-v2.ml",
+      "sha256": "779ca953ac63182a5ff38ec22928a12df8b8c3ef6098b96d421eb2cc6aefd2bf",
+      "bytes": 11503
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/contract/statements-v1.ml",
+      "sha256": "0117a8a5076e8ef80999cfd4c7712eaec768e3d7b0e89124efbc45ba73e3a7d7",
+      "bytes": 3061
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/human-review/live-generic-rules-v1.json",
+      "sha256": "b906b64c379e1eeb5863b7289493bb29cc7ac188db37e25800f1437d559bad5e",
+      "bytes": 66662
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/layer/CLASS-AND-EXTENSION-POINTS-v1.md",
+      "sha256": "8135a4d01dd9786ca222b59a728e7122c2bd98939ba52bf81bf0b0795c2877ff",
+      "bytes": 11164
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/layer/PUBLIC-SURFACE-v1.md",
+      "sha256": "8d2553c952e3e27d2aa90e7cda549dd520d5d69d7d82c4cf89fa95ff54716cbe",
+      "bytes": 5614
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/layer/dependencies-v1.json",
+      "sha256": "7ab2932dc22b996ba2874b3f7a16815e2a3347b47a84ae5b760a0e5b6bb7beaf",
+      "bytes": 7808
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/layer/exports-v1.json",
+      "sha256": "5e41e0d7f6179f87abf3c503e106bc1888246f9d73b35fa7306526166c49dabb",
+      "bytes": 32434
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/layer/freeze-v1.json",
+      "sha256": "266f58bbb1883389a74b8ba0986db11d0b0d6f4c03c1d3961d2db04f51d94193",
+      "bytes": 11332
+    },
+    {
+      "path": "development/approved-plan/normal-entry-e5-v1/PHYSICAL-DOMAIN-v1.md",
+      "sha256": "e634ff798661494ea8a42d9fc3588ea7aa964da6f3fd2139be68431d1e983347",
+      "bytes": 4552
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/root-full-acceptance-v1.json",
+      "sha256": "3db7001d2c3b978e13aea5e9f15a0967b1e115c1db123cd9d76e95e2b5582be0",
+      "bytes": 2920
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/c1-live-audit-v1.json",
+      "sha256": "f5878a0132803849c85ea33c8182105dcb212b7794f49cc8bca9268e9f355a8b",
+      "bytes": 179076
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/c2-live-audit-v1.json",
+      "sha256": "ff8f3c4d916642f66924d85a7f416e20ee69d36a62d9fba151d87db92e83e0bf",
+      "bytes": 265621
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-c2-v1/runs/c2-root-full-acceptance-final-v1.json",
+      "sha256": "ec8689605966ab7ad4d467e4c14362b9c68cee078610de2c0da61b617f541638",
+      "bytes": 2922
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-c2-v1/spec/definitions-v1.ml",
+      "sha256": "2a23e49323d06afb0e975628e32ee6791722202bae836acc51e4dc9b3429de57",
+      "bytes": 10475
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-c2-v1/spec/statements-v1.ml",
+      "sha256": "1f9e4d903853dae63cbfa5c19e5c6d1e817067431ec18a467e87ba098686ea6f",
+      "bytes": 3119
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-v1/c1/contract/definitions-v1.ml",
+      "sha256": "ce661d9fc1e2a865ef85c7afa8cc49dd1fc4d2e5813cd90e12b6fe645687ea5b",
+      "bytes": 7955
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-v1/c1/contract/statements-v1.ml",
+      "sha256": "f78c781adb2d667119db49601c56dfc0b44dd622947181606218658479e624b9",
+      "bytes": 2923
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-v1/generic/e5-definitions-v1.ml",
+      "sha256": "055800d68b9d8db8a10cc19934a47d0d555156414ebb2125275ba2959fc8273c",
+      "bytes": 1458
+    },
+    {
+      "path": "spec/e5/CLAIM-CHANGES-v1.md",
+      "sha256": "a9ae98a9c9ce8bbb3515c63c34046f8f52a0ee7e4abbbb5c3acb44f65416a629",
+      "bytes": 4734
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "attempt_receipt_sha256": "4e8777175996305d279605009641acf495d279a98314c26495e43f3c9b71a88d",
+  "formal_dependency_isolation": false,
+  "full_C3_acceptance": false,
+  "genuine_positive_prerequisite": true,
+  "no_old_caller_proof_objects_loaded": true,
+  "original_theorem_remains_in_ambient_kernel_theory": true,
+  "positive_receipt_sha256": "c433832925cc1c98c9108c38bcfa97915295e18142835388383cb64d933b3ccd",
+  "rejection_stage": "C3_FIRST_CRYPTO_PUBLIC_POLICY_APPLICATION_ML_TYPE_CHECK",
+  "replacement_type": "unit",
+  "schema": "c3-development-missing-usable-public-binding-probe-v1",
+  "scope": "Usable ML public theorem-binding/type availability during fresh C3 construction",
+  "seal_sha256": "9e2a4a07a4c3b8590806ea7d4662e8e1a11afd605c2f320b2463c9a465cf3260",
+  "semantic_theorem_sensitivity": false,
+  "status": "OBSERVED_FRESH_PUBLIC_INTERFACE_BINDING_TYPE_AVAILABILITY_REJECTION",
+  "unavailable_binding": "BP_E3_CRYPTO_PUBLIC_CALLER_POLICY"
+}

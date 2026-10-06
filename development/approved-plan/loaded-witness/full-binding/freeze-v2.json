@@ -1,0 +1,22 @@
+{
+  "experiment": "BP-20260930-E2-FULL-IMAGE-WITNESS-V2",
+  "files": {
+    "development/approved-plan/abi-qualification/state-v4.ml": "ce503ea3e15dc845e3fbb2cfab2b4279006e3189855d3a91bad281b77dab7f61",
+    "development/approved-plan/loaded-witness/definitions-v3.ml": "2f5c272dcac57b5b1e388034dccb0107c00760d7b1c4cb59d05953813764f935",
+    "development/approved-plan/loaded-witness/full-binding/REQUIREMENTS-v2.md": "6343a599b8bfab702c504b5c79a53c5d237bbf650a340a86ed7ea0f88aed5486",
+    "development/approved-plan/loaded-witness/full-binding/definitions-v2.ml": "80f07c0028e384ce7cb096baf83f647372285b5a0a99c0df4f6cbfe0e924f158",
+    "development/approved-plan/loaded-witness/full-binding/expected-definitions-v2.json": "652b14f98427e9cdfdce4fc42b455923d8be658fee6404157921bde75086e3ef",
+    "development/approved-plan/loaded-witness/full-binding/expected-statements-v2.json": "6e84e56ead7bcdccab8f4aa609e7440dd0cdfb071f88eee684100f975682bbd4",
+    "development/approved-plan/loaded-witness/full-binding/freeze-v1.json": "f0aa2fefcef8d032c9a795bb13a8b63e3291e4db4db3ab92d5e8f5b5882d8cfa",
+    "development/approved-plan/loaded-witness/full-binding/statements-v2.ml": "5763c963e162248ed78ca779c0a537e0402c620ec778fab54532d2c738e175f6",
+    "development/approved-plan/loaded-witness/statements-v3.ml": "bb193a14410e83d9a34d48f4dbd66c3a3094c15f0f7b053744dbee2e3d585587",
+    "development/approved-plan/loading/declared-postimage-v1.json": "1fd46503fbbb9230158d7f2bd62e730d8874a560caf621b1ed1f448346050c6b"
+  },
+  "frozen_before_main_proof_search": true,
+  "human_review": "PENDING",
+  "predecessor_freeze_sha256": "f0aa2fefcef8d032c9a795bb13a8b63e3291e4db4db3ab92d5e8f5b5882d8cfa",
+  "revision_reason": "Correct unparseable extra closing parenthesis in fb_pre; retain other intended clauses",
+  "schema_version": 1,
+  "status": "STATEMENTS_FROZEN_PROOFS_PENDING",
+  "target_artifact_sha256": "76dd3d93e5ee48950a92a58d59b94de8143847f91a80d9682c938767b991577d"
+}

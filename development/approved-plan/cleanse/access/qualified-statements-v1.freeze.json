@@ -1,0 +1,7 @@
+{
+  "schema": "CLEANSE_ACCESS_QUALIFIED_PREFROOF_FREEZE_V1",
+  "timestamp_utc": "2026-09-30T16:59:36.139198+00:00",
+  "stage": "FROZEN_BEFORE_QUALIFIED_BRIDGE_PROOF_SEARCH",
+  "source_sha256": "dd4e1d1f1753f25f15316382c57a1b1f9d632cd5fe0f28fd37b0dd68032de64d",
+  "human_review": "PENDING"
+}

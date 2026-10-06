@@ -1,0 +1,50 @@
+{
+  "GNU_started": false,
+  "HOL_started": false,
+  "actual_construction_probe_attempted": false,
+  "actual_controls_attempted": false,
+  "all_predecessor_inputs_unchanged": true,
+  "caller_acceptance": false,
+  "cost": null,
+  "full_C1_acceptance": false,
+  "graph_nodes": 69,
+  "inherited_registry_exact": true,
+  "model": null,
+  "prerequisite_rejections": [
+    {
+      "error": "{\"status\": \"ROOT_GATE_REJECTED\", \"error\": \"No genuine completed fresh positive\", \"positive_accepted\": false, \"full_C1_acceptance\": false}",
+      "exit_code": 1,
+      "output_created": false,
+      "script": "check-root-v1.py"
+    },
+    {
+      "error": "Traceback (most recent call last):\n  File \"/private/tmp/c1-successor-static-fixture-zrty80ni/development/approved-plan/reusable-assurance-c1-successor-v1/replay/targeted-preflight-controls-v1.py\", line 129, in <module>\n    main()\n    ~~~~^^\n  File \"/private/tmp/c1-successor-static-fixture-zrty80ni/development/approved-plan/reusable-assurance-c1-successor-v1/replay/targeted-preflight-controls-v1.py\", line 37, in main\n    raise ValueError(\"Controls require the genuine full positive replay first\")\nValueError: Controls require the genuine full positive replay first",
+      "exit_code": 1,
+      "output_created": false,
+      "script": "targeted-preflight-controls-v1.py"
+    },
+    {
+      "error": "Traceback (most recent call last):\n  File \"/private/tmp/c1-successor-static-fixture-zrty80ni/development/approved-plan/reusable-assurance-c1-successor-v1/replay/missing-interface-probe-v1.py\", line 67, in <module>\n    main()\n    ~~~~^^\n  File \"/private/tmp/c1-successor-static-fixture-zrty80ni/development/approved-plan/reusable-assurance-c1-successor-v1/replay/missing-interface-probe-v1.py\", line 32, in main\n    positive = gate.gate(argparse.Namespace(source_root=root, seal=args.seal,\n        seal_sha256=args.seal_sha256, positive_run=args.positive_run, controls=None))\n  File \"/private/tmp/c1-successor-static-fixture-zrty80ni/development/approved-plan/reusable-assurance-c1-successor-v1/replay/check-root-v1.py\", line 66, in gate\n    require(receipt['status']==POSITIVE and receipt['proof_started'] is True and receipt['exit_code']==0\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n            and receipt['timeout'] is False and receipt['supplier_marker'] is True\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n            and receipt['saved_passing_proof_used'] is False, 'No genuine completed fresh positive')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/private/tmp/c1-successor-static-fixture-zrty80ni/development/approved-plan/reusable-assurance-c1-successor-v1/replay/check-root-v1.py\", line 22, in require\n    if not condition: raise ValueError(message)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: No genuine completed fresh positive",
+      "exit_code": 1,
+      "output_created": false,
+      "script": "missing-interface-probe-v1.py"
+    }
+  ],
+  "registry_rows": 74,
+  "schema": "c1-successor-local-static-validation-v1",
+  "selected_main_fixture_source_is_unaccepted_predecessor_copy": true,
+  "static_preflight_receipt": {
+    "GNU_or_HOL_started": false,
+    "caller_acceptance": false,
+    "definitions": 46,
+    "full_C1_targets": 7,
+    "nonvacuity_cases": 7,
+    "proof_started": false,
+    "seal_sha256": "e0241ff6c3cbe8a56e5c440298be5c25b65447f6cbaadfc9445bb3f7e4c0b368",
+    "status": "STRICT_C1_SOURCE_PREFLIGHT_NOT_PROOF",
+    "target_routine_executed": false,
+    "witness_targets": 21
+  },
+  "status": "PASS_STATIC_POLICY_AND_GENUINE_POSITIVE_PREREQUISITES_NOT_PROOF",
+  "tokens": null
+}

@@ -1,0 +1,8 @@
+{
+  "schema": "c3-prefreeze-literal-type-annotation-correction-v1",
+  "utc": "2026-10-05T01:25:34.068058+00:00",
+  "earlier": "definitions-v1.ml",
+  "later": "definitions-v2.ml",
+  "reason": "Unconditionally clearing p made old q/m placeholders unused in write/frame predicates. Add explicit intended int64 and memory-function types; no mathematical premise/post/behavior change. Original retained.",
+  "proof_search_performed": false
+}

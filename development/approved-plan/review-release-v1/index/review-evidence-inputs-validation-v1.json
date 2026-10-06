@@ -1,0 +1,21 @@
+{
+  "acceptance_input": false,
+  "all_historical_digests_match": true,
+  "all_historical_evidence_included": true,
+  "companion_files": 1484,
+  "companion_uncompressed_bytes": 206909768,
+  "created_utc": "2026-10-05T15:24:35.495655+00:00",
+  "different": [],
+  "formal_validation": false,
+  "historical_file_count": 479,
+  "historical_group_count_sum": 479,
+  "human_review": "PENDING",
+  "manifest": "development/approved-plan/review-release-v1/index/review-evidence-inputs-v2.json",
+  "manifest_sha256": "67fec9e2cf854bf8978492f74d2d87b69a5ed97e4d2c5c744098c59af96e9768",
+  "missing": [],
+  "provided_by_checking_archive": 375,
+  "reporting_correction": "Earlier inter-agent summary reported539historicalfiles. Actual unchanged groupdata sums to479. This corrects the reporting arithmetic; accepted/historical evidence unchanged.",
+  "schema": "review-companion-navigation-validation-v1",
+  "status": "PASS_NAVIGATION_AND_IDENTITY_ONLY",
+  "unexpected_reference_identity_errors": []
+}

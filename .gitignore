@@ -1,0 +1,20 @@
+# Regenerable Python files.
+__pycache__/
+*.py[cod]
+
+# Downloadable replay assets are distributed separately when authorized.
+*.tar
+*.tar.gz
+*.tgz
+
+# Generated replay material; selected historical receipts remain inspectable.
+/replay/generated/
+/replay/runs/
+/generated-runs/
+**/runs/**/source/
+/source/
+
+# Publication staging belongs outside the source/review edition.
+/publication/
+/.publication-staging/
+.DS_Store

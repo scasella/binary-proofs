@@ -1,0 +1,83 @@
+{
+  "caller_acceptance": false,
+  "formal_single_theorem_sensitivity": false,
+  "full_C3_acceptance": false,
+  "positive_receipt_sha256": "c433832925cc1c98c9108c38bcfa97915295e18142835388383cb64d933b3ccd",
+  "rows": [
+    {
+      "GNU_started": false,
+      "actual_error": "Missing or changed frozen input: development/approved-plan/held-out-transfer-v1/c3/artifact/compiled-v1/c3.so",
+      "affected_input": "development/approved-plan/held-out-transfer-v1/c3/artifact/compiled-v1/c3.so",
+      "case": "executed-ELF-byte",
+      "exit_code": 1,
+      "kind": "INPUT_INTEGRITY_PREFLIGHT_ONLY",
+      "mutated_sha256": "a8ed2506f89590c43f9efd73018482948e55c55f40deee40ce3511b808413695",
+      "original_sha256": "f3736185c45667d23d80e235245da36d99bb79e6ee1b0c7f13725fa590c53b3f",
+      "proof_started": false,
+      "receipt_sha256": "7d19125766270a51a52d3db7fe12bdac490f01d7817753149c0c324e18b62210",
+      "status": "OBSERVED_PREFLIGHT_INPUT_REJECTION",
+      "theorem_sensitivity_claim": false
+    },
+    {
+      "GNU_started": false,
+      "actual_error": "Missing or changed frozen input: development/approved-plan/held-out-transfer-v1/c3/contract/definitions-v2.ml",
+      "affected_input": "development/approved-plan/held-out-transfer-v1/c3/contract/definitions-v2.ml",
+      "case": "modeled-GOT-target",
+      "exit_code": 1,
+      "kind": "INPUT_INTEGRITY_PREFLIGHT_ONLY",
+      "mutated_sha256": "f5ac3e0515a4012959fae5711cb4885d070240506475efa21e7043e2679816de",
+      "original_sha256": "779ca953ac63182a5ff38ec22928a12df8b8c3ef6098b96d421eb2cc6aefd2bf",
+      "proof_started": false,
+      "receipt_sha256": "ee6aa5b1d97dea9872e19c13b8fea5cce21e88c19d17285168105c1b48f873c8",
+      "status": "OBSERVED_PREFLIGHT_INPUT_REJECTION",
+      "theorem_sensitivity_claim": false
+    },
+    {
+      "GNU_started": false,
+      "actual_error": "Missing or changed frozen input: development/approved-plan/reusable-assurance-v1/generic/e5-definitions-v1.ml",
+      "affected_input": "development/approved-plan/reusable-assurance-v1/generic/e5-definitions-v1.ml",
+      "case": "contract-model-pin",
+      "exit_code": 1,
+      "kind": "INPUT_INTEGRITY_PREFLIGHT_ONLY",
+      "mutated_sha256": "7b843112ea9d3491e7e88dd106d04bdf471d7bc938401c21b6f5e12ce1f606db",
+      "original_sha256": "055800d68b9d8db8a10cc19934a47d0d555156414ebb2125275ba2959fc8273c",
+      "proof_started": false,
+      "receipt_sha256": "3594f6ab0126c8f5d729b65a75ff078b8934b10d6dd7d123fe2fe3922bf6a0cc",
+      "status": "OBSERVED_PREFLIGHT_INPUT_REJECTION",
+      "theorem_sensitivity_claim": false
+    },
+    {
+      "GNU_started": false,
+      "actual_error": "Missing/changed supplier input: spec/e2/02-definitions-v1.ml",
+      "affected_input": "spec/e2/02-definitions-v1.ml",
+      "case": "missing-supplier-public-interface-dependency",
+      "exit_code": 1,
+      "kind": "INPUT_INTEGRITY_PREFLIGHT_ONLY",
+      "mutated_sha256": null,
+      "original_sha256": "f0d427d419df29026aa1b2cba30908c19ddea10e3e2bd9bccbfb1d73d7481a15",
+      "proof_started": false,
+      "receipt_sha256": "61a5f69f79d5b6f8cc98fc820d86d15ddc726f176cbb02720eb01a1fb3a44149",
+      "status": "OBSERVED_PREFLIGHT_INPUT_REJECTION",
+      "theorem_sensitivity_claim": false
+    },
+    {
+      "GNU_started": false,
+      "actual_error": "Missing or changed frozen input: development/approved-plan/c3-successor-v1/proofs/whole-final-v2.ml",
+      "affected_input": "development/approved-plan/c3-successor-v1/proofs/whole-final-v2.ml",
+      "case": "missing-caller-proof-with-stale-success",
+      "exit_code": 1,
+      "kind": "INPUT_INTEGRITY_PREFLIGHT_ONLY",
+      "mutated_sha256": null,
+      "original_sha256": "47849ee3ce32d641190227b8e172252f9835eb18c71b9a68826a4a95a9b12f4e",
+      "proof_started": false,
+      "receipt_sha256": "da540ff82d1122562be1c93dd7d93f5b114fea7160d3bfd18dc7a65714841afe",
+      "status": "OBSERVED_PREFLIGHT_INPUT_REJECTION",
+      "theorem_sensitivity_claim": false
+    }
+  ],
+  "schema": "c3-five-targeted-preflight-controls-v1",
+  "scope": "Hash/closed-source dependency boundaries only; no semantic proof sensitivity demonstrated",
+  "seal_sha256": "9e2a4a07a4c3b8590806ea7d4662e8e1a11afd605c2f320b2463c9a465cf3260",
+  "status": "FIVE_INPUT_INTEGRITY_CONTROLS_OBSERVED_PENDING_ROOT_GATE",
+  "utc": "2026-10-05T16:00:53.429950+00:00"
+}

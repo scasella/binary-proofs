@@ -1,0 +1,823 @@
+
+
+  0 [`c3_crypto_ready lib_file stackpointer p q n m rp wp xp ordinary initial
+      a
+      entry`]
+  1 [`read RBX returned = p`]
+  2 [`read RBP returned = word n`]
+  3 [`read R12 returned = q`]
+  4 [`read R13 returned = read R13 initial`]
+  5 [`read R14 returned = read R14 initial`]
+  6 [`read R15 returned = read R15 initial`]
+  7 [`~read DF returned`]
+  8 [`~bit 18 (read rflags returned)`]
+  9 [`read RAX returned = (if c3_equal m p q n then word 0 else word 1)`]
+ 10 [`bp_assurance_call_post 270800960 (word_sub stackpointer (word 48))
+      (word 587206968)
+      p
+      q
+      n
+      (read events entry)
+      (read memory entry)
+      entry
+      returned`]
+ 11 [`read RIP returned = word 587206968`]
+ 12 [`val (read RSP returned) = val (word_sub stackpointer (word 48)) + 8`]
+ 13 [`read RAX returned =
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)`]
+ 14 [`read memory returned = read memory entry`]
+ 15 [`read events returned =
+      APPEND
+      (crypto_trace_call 270800960 p q n (word_sub stackpointer (word 48))
+      (word 587206968))
+      (read events entry)`]
+ 16 [`(MAYCHANGE [RIP; RSP; RAX; RDI; RSI; RDX; R10; R11] ,,
+       MAYCHANGE SOME_FLAGS ,,
+       MAYCHANGE [events])
+      entry
+      returned`]
+ 17 [`read RSP returned = word_sub stackpointer (word 40)`]
+ 18 [`read (memory :> bytes64 (word_sub stackpointer (word 8))) returned =
+      read R13 initial`]
+ 19 [`read (memory :> bytes64 (word_sub stackpointer (word 16))) returned =
+      read R12 initial`]
+ 20 [`read (memory :> bytes64 (word_sub stackpointer (word 24))) returned =
+      read RBP initial`]
+ 21 [`read (memory :> bytes64 (word_sub stackpointer (word 32))) returned =
+      read RBX initial`]
+ 22 [`forall addr.
+          ~c3_scratch stackpointer (val addr)
+          ==> read memory returned addr = m addr`]
+ 23 [`forall i.
+          i < n
+          ==> read memory returned (word_add p (word i)) =
+              m (word_add p (word i))`]
+ 24 [`forall i.
+          i < n
+          ==> read memory returned (word_add q (word i)) =
+              m (word_add q (word i))`]
+ 25 [`read (memory :> bytes64 (word 587218896)) returned = word 270800960`]
+ 26 [`read (memory :> bytes64 (word 587218904)) returned = word 270800848`]
+ 27 [`n < 2 EXP 64`]
+ 28 [`48 <= val stackpointer`]
+ 29 [`val stackpointer MOD 16 = 8`]
+ 30 [`val stackpointer + 8 < 2 EXP 64`]
+ 31 [`assurance_canonical48 (val ra)`]
+ 32 [`~(ra = word pc)`]
+ 33 [`read RIP initial = word pc`]
+ 34 [`read RSP initial = stackpointer`]
+ 35 [`read (memory :> bytes64 stackpointer) initial = ra`]
+ 36 [`read RDI initial = p`]
+ 37 [`read RSI initial = q`]
+ 38 [`read RDX initial = word n`]
+ 39 [`read memory initial = m`]
+ 40 [`~read DF initial`]
+ 41 [`~bit 18 (read rflags initial)`]
+ 42 [`e5_normal_flags initial`]
+ 43 [`assurance_canonical48 (val (read ABI_FS_BASE a))`]
+ 44 [`fb_file_code lib_file`]
+ 45 [`clw_file_code lib_file`]
+ 46 [`fb_full_image lib_file lib_rw lib_padding m`]
+ 47 [`c3_file_code client_file`]
+ 48 [`c3_full_image client_file client_rw client_padding m`]
+ 49 [`read (memory :> bytes64 (word 587218896)) initial = word 270800960`]
+ 50 [`read (memory :> bytes64 (word 587218904)) initial = word 270800848`]
+ 51 [`forall addr.
+          lw_image_domain addr
+          ==> rp addr /\
+              ordinary addr /\
+              (xp addr <=> lw_execute addr) /\
+              (wp addr <=> lw_image_write addr)`]
+ 52 [`forall addr.
+          c3_image_domain addr
+          ==> rp addr /\
+              ordinary addr /\
+              (xp addr <=> c3_image_execute addr) /\
+              (wp addr <=> c3_image_write addr)`]
+ 53 [`assurance_span_ok (\a. rp a /\ ordinary a) (val p) n`]
+ 54 [`assurance_span_ok (\a. rp a /\ ordinary a) (val q) n`]
+ 55 [`assurance_span_ok (\a. wp a /\ ordinary a) (val p) n`]
+ 56 [`assurance_span_ok (\a. rp a /\ ordinary a) (val stackpointer - 48) 48`]
+ 57 [`assurance_span_ok (\a. wp a /\ ordinary a) (val stackpointer - 48) 48`]
+ 58 [`assurance_span_ok (\a. rp a /\ ordinary a) (val stackpointer) 8`]
+ 59 [`assurance_span_ok (\a. rp a /\ ordinary a) 587218896 8`]
+ 60 [`assurance_span_ok (\a. rp a /\ ordinary a) 587218904 8`]
+ 61 [`assurance_span_ok (\a. xp a /\ ordinary a) pc 89`]
+ 62 [`assurance_span_ok (\a. xp a /\ ordinary a) 587206704 6`]
+ 63 [`assurance_span_ok (\a. xp a /\ ordinary a) cleansepltpc 6`]
+ 64 [`assurance_span_ok (\a. xp a /\ ordinary a) 270800960 95`]
+ 65 [`assurance_span_ok (\a. xp a /\ ordinary a) 270800848 97`]
+ 66 [`forall addr.
+          ~(assurance_region p n addr /\ c3_scratch stackpointer addr)`]
+ 67 [`forall addr.
+          ~(assurance_region q n addr /\ c3_scratch stackpointer addr)`]
+ 68 [`forall addr.
+          ~(assurance_region p n addr /\
+            assurance_region stackpointer 8 addr)`]
+ 69 [`forall addr.
+          assurance_region p n addr
+          ==> ~(assurance_region (word pc) 89 addr \/
+                assurance_region (word 587206704) 6 addr \/
+                assurance_region (word cleansepltpc) 6 addr \/
+                assurance_region (word 587218896) 8 addr \/
+                assurance_region (word 587218904) 8 addr \/
+                assurance_region (word 270800960) 95 addr \/
+                assurance_region (word 270800848) 97 addr)`]
+ 70 [`assurance_span_ok (c3_allowed_read rp ordinary stackpointer p q n)
+      (val stackpointer - 48)
+      48`]
+ 71 [`assurance_span_ok (c3_allowed_write wp ordinary stackpointer p q n m)
+      (val stackpointer - 48)
+      48`]
+ 72 [`assurance_span_ok (c3_allowed_fetch xp ordinary) pc 89`]
+ 73 [`assurance_span_ok (c3_allowed_fetch xp ordinary) 587206704 6`]
+ 74 [`assurance_span_ok (c3_allowed_read rp ordinary stackpointer p q n)
+      587218896
+      8`]
+ 75 [`nonoverlapping (word_sub stackpointer (word 48),48) (word pc,89)`]
+ 76 [`nonoverlapping (word_sub stackpointer (word 48),48) (word 587206704,6)`]
+ 77 [`nonoverlapping (word_sub stackpointer (word 48),48)
+      (word cleansepltpc,6)`]
+ 78 [`nonoverlapping (word_sub stackpointer (word 48),48) (word 587218896,8)`]
+ 79 [`nonoverlapping (word_sub stackpointer (word 48),48) (word 587218904,8)`]
+ 80 [`nonoverlapping (word_sub stackpointer (word 48),48) (word 270800960,95)`]
+ 81 [`nonoverlapping (word_sub stackpointer (word 48),48) (word 270800848,97)`]
+ 82 [`assurance_span_ok (c3_allowed_fetch xp ordinary) cleansepltpc 6`]
+ 83 [`assurance_span_ok (c3_allowed_read rp ordinary stackpointer p q n)
+      587218904
+      8`]
+ 84 [`587206944 = pc`]
+ 85 [`read RIP returned = word (pc + 24)`]
+ 86 [`read (memory :> bytes64 (word 587218904)) u1 = word 270800848`]
+ 87 [`read (memory :> bytes64 (word 587218896)) u1 = word 270800960`]
+ 88 [`forall i.
+          i < n
+          ==> read memory u1 (word_add q (word i)) = m (word_add q (word i))`]
+ 89 [`forall i.
+          i < n
+          ==> read memory u1 (word_add p (word i)) = m (word_add p (word i))`]
+ 90 [`forall addr.
+          ~c3_scratch stackpointer (val addr)
+          ==> read memory u1 addr = m addr`]
+ 91 [`read (memory :> bytes64 (word_sub stackpointer (word 32))) u1 =
+      read RBX initial`]
+ 92 [`read (memory :> bytes64 (word_sub stackpointer (word 24))) u1 =
+      read RBP initial`]
+ 93 [`read (memory :> bytes64 (word_sub stackpointer (word 16))) u1 =
+      read R12 initial`]
+ 94 [`read (memory :> bytes64 (word_sub stackpointer (word 8))) u1 =
+      read R13 initial`]
+ 95 [`read RSP u1 = word_sub stackpointer (word 40)`]
+ 96 [`read events u1 =
+      APPEND
+      (crypto_trace_call 270800960 p q n (word_sub stackpointer (word 48))
+      (word 587206968))
+      (read events entry)`]
+ 97 [`read memory u1 = read memory entry`]
+ 98 [`read RAX u1 =
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)`]
+ 99 [`val (read RSP u1) = val (word_sub stackpointer (word 48)) + 8`]
+100 [`read RAX u1 = (if c3_equal m p q n then word 0 else word 1)`]
+101 [`~read DF u1`]
+102 [`read R15 u1 = read R15 initial`]
+103 [`read R14 u1 = read R14 initial`]
+104 [`read R12 u1 = q`]
+105 [`read RBP u1 = word n`]
+106 [`read RBX u1 = p`]
+107 [`read AF u1 <=> undefined_94`]
+108 [`~read OF u1`]
+109 [`~read CF u1`]
+110 [`read PF u1`]
+111 [`~read SF u1`]
+112 [`read ZF u1`]
+113 [`read R13 u1 = word 0`]
+114 [`read RIP u1 = word (pc + 27)`]
+115 [`read R13 u2 = word 0`]
+116 [`read RBX u2 = p`]
+117 [`read RBP u2 = word n`]
+118 [`read R12 u2 = q`]
+119 [`read R14 u2 = read R14 initial`]
+120 [`read R15 u2 = read R15 initial`]
+121 [`~read DF u2`]
+122 [`read RAX u2 = (if c3_equal m p q n then word 0 else word 1)`]
+123 [`val (read RSP u2) = val (word_sub stackpointer (word 48)) + 8`]
+124 [`read RAX u2 =
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)`]
+125 [`read memory u2 = read memory entry`]
+126 [`read events u2 =
+      APPEND
+      (crypto_trace_call 270800960 p q n (word_sub stackpointer (word 48))
+      (word 587206968))
+      (read events entry)`]
+127 [`read RSP u2 = word_sub stackpointer (word 40)`]
+128 [`read (memory :> bytes64 (word_sub stackpointer (word 8))) u2 =
+      read R13 initial`]
+129 [`read (memory :> bytes64 (word_sub stackpointer (word 16))) u2 =
+      read R12 initial`]
+130 [`read (memory :> bytes64 (word_sub stackpointer (word 24))) u2 =
+      read RBP initial`]
+131 [`read (memory :> bytes64 (word_sub stackpointer (word 32))) u2 =
+      read RBX initial`]
+132 [`forall addr.
+          ~c3_scratch stackpointer (val addr)
+          ==> read memory u2 addr = m addr`]
+133 [`forall i.
+          i < n
+          ==> read memory u2 (word_add p (word i)) = m (word_add p (word i))`]
+134 [`forall i.
+          i < n
+          ==> read memory u2 (word_add q (word i)) = m (word_add q (word i))`]
+135 [`read (memory :> bytes64 (word 587218896)) u2 = word 270800960`]
+136 [`read (memory :> bytes64 (word 587218904)) u2 = word 270800848`]
+137 [`read AF u2 <=> undefined_95`]
+138 [`~read OF u2`]
+139 [`~read CF u2`]
+140 [`read PF u2 <=>
+      word_evenparity
+      (word_zx
+      (word_zx
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)))`]
+141 [`read SF u2 <=>
+      ival
+      (word_zx
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)) <
+      &0`]
+142 [`read ZF u2 <=>
+      val
+      (word_zx
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)) =
+      0`]
+143 [`read RIP u2 = word (pc + 29)`]
+144 [`read ZF u3 <=>
+      val
+      (word_zx
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)) =
+      0`]
+145 [`read SF u3 <=>
+      ival
+      (word_zx
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)) <
+      &0`]
+146 [`read PF u3 <=>
+      word_evenparity
+      (word_zx
+      (word_zx
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)))`]
+147 [`~read CF u3`]
+148 [`~read OF u3`]
+149 [`read AF u3 <=> undefined_95`]
+150 [`read (memory :> bytes64 (word 587218904)) u3 = word 270800848`]
+151 [`read (memory :> bytes64 (word 587218896)) u3 = word 270800960`]
+152 [`forall i.
+          i < n
+          ==> read memory u3 (word_add q (word i)) = m (word_add q (word i))`]
+153 [`forall i.
+          i < n
+          ==> read memory u3 (word_add p (word i)) = m (word_add p (word i))`]
+154 [`forall addr.
+          ~c3_scratch stackpointer (val addr)
+          ==> read memory u3 addr = m addr`]
+155 [`read (memory :> bytes64 (word_sub stackpointer (word 32))) u3 =
+      read RBX initial`]
+156 [`read (memory :> bytes64 (word_sub stackpointer (word 24))) u3 =
+      read RBP initial`]
+157 [`read (memory :> bytes64 (word_sub stackpointer (word 16))) u3 =
+      read R12 initial`]
+158 [`read (memory :> bytes64 (word_sub stackpointer (word 8))) u3 =
+      read R13 initial`]
+159 [`read RSP u3 = word_sub stackpointer (word 40)`]
+160 [`read events u3 =
+      APPEND
+      (crypto_trace_call 270800960 p q n (word_sub stackpointer (word 48))
+      (word 587206968))
+      (read events entry)`]
+161 [`read memory u3 = read memory entry`]
+162 [`read RAX u3 =
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)`]
+163 [`val (read RSP u3) = val (word_sub stackpointer (word 48)) + 8`]
+164 [`read RAX u3 = (if c3_equal m p q n then word 0 else word 1)`]
+165 [`~read DF u3`]
+166 [`read R15 u3 = read R15 initial`]
+167 [`read R14 u3 = read R14 initial`]
+168 [`read R12 u3 = q`]
+169 [`read RBP u3 = word n`]
+170 [`read RBX u3 = p`]
+171 [`read R13 u3 =
+      word_join (word 0)
+      (if val
+          (word_zx
+          (if forall i.
+                  i < n
+                  ==> read memory entry (word_add p (word i)) =
+                      read memory entry (word_add q (word i))
+           then word 0
+           else word 1)) =
+          0
+       then word 1
+       else word 0)`]
+172 [`read RIP u3 = word (pc + 33)`]
+173 [`read R13 u4 =
+      word_join (word 0)
+      (if val
+          (word_zx
+          (if forall i.
+                  i < n
+                  ==> read memory entry (word_add p (word i)) =
+                      read memory entry (word_add q (word i))
+           then word 0
+           else word 1)) =
+          0
+       then word 1
+       else word 0)`]
+174 [`read RBX u4 = p`]
+175 [`read RBP u4 = word n`]
+176 [`read R12 u4 = q`]
+177 [`read R14 u4 = read R14 initial`]
+178 [`read R15 u4 = read R15 initial`]
+179 [`~read DF u4`]
+180 [`read RAX u4 = (if c3_equal m p q n then word 0 else word 1)`]
+181 [`val (read RSP u4) = val (word_sub stackpointer (word 48)) + 8`]
+182 [`read RAX u4 =
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)`]
+183 [`read memory u4 = read memory entry`]
+184 [`read events u4 =
+      APPEND
+      (crypto_trace_call 270800960 p q n (word_sub stackpointer (word 48))
+      (word 587206968))
+      (read events entry)`]
+185 [`read RSP u4 = word_sub stackpointer (word 40)`]
+186 [`read (memory :> bytes64 (word_sub stackpointer (word 8))) u4 =
+      read R13 initial`]
+187 [`read (memory :> bytes64 (word_sub stackpointer (word 16))) u4 =
+      read R12 initial`]
+188 [`read (memory :> bytes64 (word_sub stackpointer (word 24))) u4 =
+      read RBP initial`]
+189 [`read (memory :> bytes64 (word_sub stackpointer (word 32))) u4 =
+      read RBX initial`]
+190 [`forall addr.
+          ~c3_scratch stackpointer (val addr)
+          ==> read memory u4 addr = m addr`]
+191 [`forall i.
+          i < n
+          ==> read memory u4 (word_add p (word i)) = m (word_add p (word i))`]
+192 [`forall i.
+          i < n
+          ==> read memory u4 (word_add q (word i)) = m (word_add q (word i))`]
+193 [`read (memory :> bytes64 (word 587218896)) u4 = word 270800960`]
+194 [`read (memory :> bytes64 (word 587218904)) u4 = word 270800848`]
+195 [`read AF u4 <=> undefined_95`]
+196 [`~read OF u4`]
+197 [`~read CF u4`]
+198 [`read PF u4 <=>
+      word_evenparity
+      (word_zx
+      (word_zx
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)))`]
+199 [`read SF u4 <=>
+      ival
+      (word_zx
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)) <
+      &0`]
+200 [`read ZF u4 <=>
+      val
+      (word_zx
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)) =
+      0`]
+201 [`read RSI u4 = word n`]
+202 [`read RIP u4 = word (pc + 36)`]
+203 [`read RSI u5 = word n`]
+204 [`read ZF u5 <=>
+      val
+      (word_zx
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)) =
+      0`]
+205 [`read SF u5 <=>
+      ival
+      (word_zx
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)) <
+      &0`]
+206 [`read PF u5 <=>
+      word_evenparity
+      (word_zx
+      (word_zx
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)))`]
+207 [`~read CF u5`]
+208 [`~read OF u5`]
+209 [`read AF u5 <=> undefined_95`]
+210 [`read (memory :> bytes64 (word 587218904)) u5 = word 270800848`]
+211 [`read (memory :> bytes64 (word 587218896)) u5 = word 270800960`]
+212 [`forall i.
+          i < n
+          ==> read memory u5 (word_add q (word i)) = m (word_add q (word i))`]
+213 [`forall i.
+          i < n
+          ==> read memory u5 (word_add p (word i)) = m (word_add p (word i))`]
+214 [`forall addr.
+          ~c3_scratch stackpointer (val addr)
+          ==> read memory u5 addr = m addr`]
+215 [`read (memory :> bytes64 (word_sub stackpointer (word 32))) u5 =
+      read RBX initial`]
+216 [`read (memory :> bytes64 (word_sub stackpointer (word 24))) u5 =
+      read RBP initial`]
+217 [`read (memory :> bytes64 (word_sub stackpointer (word 16))) u5 =
+      read R12 initial`]
+218 [`read (memory :> bytes64 (word_sub stackpointer (word 8))) u5 =
+      read R13 initial`]
+219 [`read RSP u5 = word_sub stackpointer (word 40)`]
+220 [`read events u5 =
+      APPEND
+      (crypto_trace_call 270800960 p q n (word_sub stackpointer (word 48))
+      (word 587206968))
+      (read events entry)`]
+221 [`read memory u5 = read memory entry`]
+222 [`read RAX u5 =
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)`]
+223 [`val (read RSP u5) = val (word_sub stackpointer (word 48)) + 8`]
+224 [`read RAX u5 = (if c3_equal m p q n then word 0 else word 1)`]
+225 [`~read DF u5`]
+226 [`read R15 u5 = read R15 initial`]
+227 [`read R14 u5 = read R14 initial`]
+228 [`read R12 u5 = q`]
+229 [`read RBP u5 = word n`]
+230 [`read RBX u5 = p`]
+231 [`read R13 u5 =
+      word_join (word 0)
+      (if val
+          (word_zx
+          (if forall i.
+                  i < n
+                  ==> read memory entry (word_add p (word i)) =
+                      read memory entry (word_add q (word i))
+           then word 0
+           else word 1)) =
+          0
+       then word 1
+       else word 0)`]
+232 [`read RDI u5 = p`]
+233 [`read RIP u5 = word (pc + 39)`]
+234 [`read RDI u6 = p`]
+235 [`read R13 u6 =
+      word_join (word 0)
+      (if val
+          (word_zx
+          (if forall i.
+                  i < n
+                  ==> read memory entry (word_add p (word i)) =
+                      read memory entry (word_add q (word i))
+           then word 0
+           else word 1)) =
+          0
+       then word 1
+       else word 0)`]
+236 [`read RBX u6 = p`]
+237 [`read RBP u6 = word n`]
+238 [`read R12 u6 = q`]
+239 [`read R14 u6 = read R14 initial`]
+240 [`read R15 u6 = read R15 initial`]
+241 [`~read DF u6`]
+242 [`read RAX u6 = (if c3_equal m p q n then word 0 else word 1)`]
+243 [`read RAX u6 =
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)`]
+244 [`read (memory :> bytes64 (word_sub stackpointer (word 8))) u6 =
+      read R13 initial`]
+245 [`read (memory :> bytes64 (word_sub stackpointer (word 16))) u6 =
+      read R12 initial`]
+246 [`read (memory :> bytes64 (word_sub stackpointer (word 24))) u6 =
+      read RBP initial`]
+247 [`read (memory :> bytes64 (word_sub stackpointer (word 32))) u6 =
+      read RBX initial`]
+248 [`read (memory :> bytes64 (word 587218896)) u6 = word 270800960`]
+249 [`read (memory :> bytes64 (word 587218904)) u6 = word 270800848`]
+250 [`read AF u6 <=> undefined_95`]
+251 [`~read OF u6`]
+252 [`~read CF u6`]
+253 [`read PF u6 <=>
+      word_evenparity
+      (word_zx
+      (word_zx
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)))`]
+254 [`read SF u6 <=>
+      ival
+      (word_zx
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)) <
+      &0`]
+255 [`read ZF u6 <=>
+      val
+      (word_zx
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)) =
+      0`]
+256 [`read RSI u6 = word n`]
+257 [`read RIP u6 = word (pc + 18446744073709551392)`]
+258 [`read
+      (memory :>
+       bytes64 (word_sub (word_sub stackpointer (word 40)) (word 8)))
+      u6 =
+      word (pc + 44)`]
+259 [`read RSP u6 = word_sub (word_sub stackpointer (word 40)) (word 8)`]
+260 [`read events u6 =
+      CONS
+      (EventStore (word_sub (word_sub stackpointer (word 40)) (word 8),8))
+      (CONS (EventJump (word (pc + 44),word (pc + 18446744073709551392)))
+      (APPEND
+       (crypto_trace_call 270800960 p q n (word_sub stackpointer (word 48))
+       (word 587206968))
+      (read events entry)))`]
+261 [`read RIP u6 = word cleansepltpc`]
+262 [`587206720 = cleansepltpc`]
+263 [`bytes_loaded u7 (word cleansepltpc) c3_cleanse_plt_prefix`]
+264 [`bytes_loaded u7 (word pc) c3_caller_mc`]
+265 [`bytes_loaded u7 (word 587206704) c3_crypto_plt_prefix`]
+266 [`bytes_loaded u7 (word 270800960) crypto_memcmp_mc`]
+267 [`bytes_loaded u7 (word 270800848) openssl_cleanse_mc`]
+268 [`read RSP u7 = word_sub (word_sub stackpointer (word 40)) (word 8)`]
+269 [`read
+      (memory :>
+       bytes64 (word_sub (word_sub stackpointer (word 40)) (word 8)))
+      u7 =
+      word (pc + 44)`]
+270 [`read RSI u7 = word n`]
+271 [`read ZF u7 <=>
+      val
+      (word_zx
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)) =
+      0`]
+272 [`read SF u7 <=>
+      ival
+      (word_zx
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)) <
+      &0`]
+273 [`read PF u7 <=>
+      word_evenparity
+      (word_zx
+      (word_zx
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)))`]
+274 [`~read CF u7`]
+275 [`~read OF u7`]
+276 [`read AF u7 <=> undefined_95`]
+277 [`read (memory :> bytes64 (word 587218904)) u7 = word 270800848`]
+278 [`read (memory :> bytes64 (word 587218896)) u7 = word 270800960`]
+279 [`read (memory :> bytes64 (word_sub stackpointer (word 32))) u7 =
+      read RBX initial`]
+280 [`read (memory :> bytes64 (word_sub stackpointer (word 24))) u7 =
+      read RBP initial`]
+281 [`read (memory :> bytes64 (word_sub stackpointer (word 16))) u7 =
+      read R12 initial`]
+282 [`read (memory :> bytes64 (word_sub stackpointer (word 8))) u7 =
+      read R13 initial`]
+283 [`read RAX u7 =
+      (if forall i.
+              i < n
+              ==> read memory entry (word_add p (word i)) =
+                  read memory entry (word_add q (word i))
+       then word 0
+       else word 1)`]
+284 [`read RAX u7 = (if c3_equal m p q n then word 0 else word 1)`]
+285 [`~read DF u7`]
+286 [`read R15 u7 = read R15 initial`]
+287 [`read R14 u7 = read R14 initial`]
+288 [`read R12 u7 = q`]
+289 [`read RBP u7 = word n`]
+290 [`read RBX u7 = p`]
+291 [`read R13 u7 =
+      word_join (word 0)
+      (if val
+          (word_zx
+          (if forall i.
+                  i < n
+                  ==> read memory entry (word_add p (word i)) =
+                      read memory entry (word_add q (word i))
+           then word 0
+           else word 1)) =
+          0
+       then word 1
+       else word 0)`]
+292 [`read RDI u7 = p`]
+293 [`(MAYCHANGE [RIP] ,,
+       MAYCHANGE [R13] ,,
+       MAYCHANGE [ZF] ,,
+       MAYCHANGE [SF] ,,
+       MAYCHANGE [PF] ,,
+       MAYCHANGE [CF] ,,
+       MAYCHANGE [OF] ,,
+       MAYCHANGE [AF] ,,
+       MAYCHANGE [RSI] ,,
+       MAYCHANGE [RDI] ,,
+       MAYCHANGE [events] ,,
+       MAYCHANGE [RSP] ,,
+       MAYCHANGE
+       [memory :>
+        bytes64 (word_sub (word_sub stackpointer (word 40)) (word 8))])
+      returned
+      u7`]
+294 [`read RIP u7 = read (memory :> bytes64 (word (cleansepltpc + 12184))) u6`]
+295 [`read events u7 =
+      CONS
+      (EventJump
+      (word (cleansepltpc + 6),
+       read (memory :> bytes64 (word (cleansepltpc + 12184))) u6))
+      (CONS (EventLoad (word (cleansepltpc + 12184),8))
+      (CONS
+       (EventStore (word_sub (word_sub stackpointer (word 40)) (word 8),8))
+      (CONS (EventJump (word (pc + 44),word (pc + 18446744073709551392)))
+      (APPEND
+       (crypto_trace_call 270800960 p q n (word_sub stackpointer (word 48))
+       (word 587206968))
+      (read events entry)))))`]
+296 [`(MAYCHANGE [RIP; RSP; R13; RSI; RDI] ,,
+       MAYCHANGE SOME_FLAGS ,,
+       MAYCHANGE [memory :> bytes (word_sub stackpointer (word 48),48)] ,,
+       MAYCHANGE [events])
+      returned
+      u7`]
+297 [`c3_saved_prefix stackpointer p q n m initial returned`]
+298 [`forall addr.
+          ~c3_scratch stackpointer (val addr)
+          ==> read memory u7 addr = m addr`]
+299 [`forall addr. fb_immutable addr ==> ~c3_scratch stackpointer addr`]
+300 [`fb_full_image lib_file (read memory u7) (read memory u7)
+      (read memory u7)`]
+301 [`forall i.
+          i < n
+          ==> read memory u7 (word_add p (word i)) = m (word_add p (word i))`]
+302 [`forall i.
+          i < n
+          ==> read memory u7 (word_add q (word i)) = m (word_add q (word i))`]
+303 [`read R13 u7 = (if c3_equal m p q n then word 1 else word 0)`]
+304 [`~bit 18 (read rflags u7)`]
+305 [`val (word_sub stackpointer (word 48)) = val stackpointer - 48`]
+306 [`val (word_sub stackpointer (word 48)) MOD 16 = 8`]
+
+`assurance_checked_run 0
+ (\t.
+      bp_e2_cleanse_public_pre lib_file (read memory t) (read memory t)
+      (word_sub stackpointer (word 48))
+      (word 587206988)
+      p
+      n
+      (read memory t)
+      rp
+      wp
+      xp
+      ordinary
+      (t,a) /\
+      (read RBX t = p /\
+       read RBP t = word n /\
+       read R12 t = q /\
+       read (memory :> bytes64 (word_sub stackpointer (word 8))) t =
+       read R13 initial /\
+       read (memory :> bytes64 (word_sub stackpointer (word 16))) t =
+       read R12 initial /\
+       read (memory :> bytes64 (word_sub stackpointer (word 24))) t =
+       read RBP initial /\
+       read (memory :> bytes64 (word_sub stackpointer (word 32))) t =
+       read RBX initial /\
+       (forall addr.
+            ~c3_scratch stackpointer (val addr)
+            ==> read memory t addr = m addr) /\
+       (forall i.
+            i < n
+            ==> read memory t (word_add p (word i)) = m (word_add p (word i))) /\
+       (forall i.
+            i < n
+            ==> read memory t (word_add q (word i)) = m (word_add q (word i))) /\
+       (bytes_loaded t (word pc) c3_caller_mc /\
+        bytes_loaded t (word 587206704) c3_crypto_plt_prefix /\
+        bytes_loaded t (word cleansepltpc) c3_cleanse_plt_prefix /\
+        bytes_loaded t (word 270800960) crypto_memcmp_mc /\
+        bytes_loaded t (word 270800848) openssl_cleanse_mc) /\
+       read (memory :> bytes64 (word 587218896)) t = word 270800960 /\
+       read (memory :> bytes64 (word 587218904)) t = word 270800848) /\
+      read R13 t = (if c3_equal m p q n then word 1 else word 0) /\
+      read R14 t = read R14 initial /\
+      read R15 t = read R15 initial /\
+      (c3_frame stackpointer p q n m ,, MAYCHANGE [RBX; RBP; R12; R13])
+      initial
+      t)
+ (c3_segment_policy stackpointer p q n m rp wp xp ordinary)
+ u7`
+

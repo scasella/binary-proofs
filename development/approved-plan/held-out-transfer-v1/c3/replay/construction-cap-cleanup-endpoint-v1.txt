@@ -1,0 +1,51 @@
+C3_CLEANUP_ENDPOINT_CORE_V6_RETURN
+- : unit = ()
+assurance_checked_run 0
+(\t.
+     bp_e2_cleanse_public_pre lib_file (read memory t) (read memory t)
+     (word_sub stackpointer (word 48))
+     (word 587206988)
+     p
+     n
+     (read memory t)
+     rp
+     wp
+     xp
+     ordinary
+     (t,a) /\
+     (read RBX t = p /\
+      read RBP t = word n /\
+      read R12 t = q /\
+      read (memory :> bytes64 (word_sub stackpointer (word 8))) t =
+      read R13 initial /\
+      read (memory :> bytes64 (word_sub stackpointer (word 16))) t =
+      read R12 initial /\
+      read (memory :> bytes64 (word_sub stackpointer (word 24))) t =
+      read RBP initial /\
+      read (memory :> bytes64 (word_sub stackpointer (word 32))) t =
+      read RBX initial /\
+      (forall addr.
+           ~c3_scratch stackpointer (val addr)
+           ==> read memory t addr = m addr) /\
+      (forall i.
+           i < n
+           ==> read memory t (word_add p (word i)) = m (word_add p (word i))) /\
+      (forall i.
+           i < n
+           ==> read memory t (word_add q (word i)) = m (word_add q (word i))) /\
+      (bytes_loaded t (word pc) c3_caller_mc /\
+       bytes_loaded t (word 587206704) c3_crypto_plt_prefix /\
+       bytes_loaded t (word cleansepltpc) c3_cleanse_plt_prefix /\
+       bytes_loaded t (word 270800960) crypto_memcmp_mc /\
+       bytes_loaded t (word 270800848) openssl_cleanse_mc) /\
+      read (memory :> bytes64 (word 587218896)) t = word 270800960 /\
+      read (memory :> bytes64 (word 587218904)) t = word 270800848) /\
+     read R13 t = (if c3_equal m p q n then word 1 else word 0) /\
+     read R14 t = read R14 initial /\
+     read R15 t = read R15 initial /\
+     (c3_frame stackpointer p q n m ,, MAYCHANGE [RBX; RBP; R12; R13])
+     initial
+     t)
+(c3_segment_policy stackpointer p q n m rp wp xp ordinary)
+u7
+- : unit = ()

@@ -1,0 +1,52 @@
+{
+  "checker_cap_seconds": 1800,
+  "checker_cpus": 1,
+  "checker_memory_bytes": 3221225472,
+  "construction_cap_seconds": 10800,
+  "construction_deadline_utc": "2026-10-04T21:39:00.561405+00:00",
+  "cumulative_rule": "Record each interval with category and parent; union overlapping wall intervals rather than summing inclusive measurements",
+  "deferred": [
+    "C2",
+    "C3",
+    "relink",
+    "glibc",
+    "economics",
+    "new_framework"
+  ],
+  "final_check_separate_cap": true,
+  "models_cost_tokens": null,
+  "permitted_changes": "Additive proof repairs and necessary concrete replay repairs only; final bytes, image, statements, domain, supplier contracts, ISA/E5, axioms and acceptance fixed",
+  "predecessor": "development/approved-plan/reusable-assurance-v1",
+  "predecessor_C1": "NOT_ACCEPTED",
+  "predecessor_outcome": "BLOCKED_FROZEN_CONSTRUCTION_LIMIT",
+  "protected_inputs": [
+    {
+      "path": "development/approved-plan/reusable-assurance-v1/replay/c1-final-v3-seal.json",
+      "sha256": "2ee5de28e859c9355321ba660b4b93f015baf56ef61f7b648acfbce3f0db7080"
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-v1/c1/composition/proof-attempt3.ml",
+      "sha256": "5ec070db83c482f01ac3d087d6584167339e1fb1c00365de45e85b22097d34ce"
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-v1/c1/composition/helpers-proof-attempt9.ml",
+      "sha256": "420195930003299afced43058f38254d78426f4ae54056c799424ba4d77037fc"
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-v1/c1/contract/freeze-v1.json",
+      "sha256": "70b0c20b37e210d78d415c71953292afc889c78ea9757025d9d74d5a049f2a98"
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-v1/status/registry-final-v4.json",
+      "sha256": "69601af6c3103de483334148d977064cb8194bac23f2783fb78e43a67f820a84"
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-v1/EXPERIMENT-v1.md",
+      "sha256": "ed88824746848e91823a29a9b66aeea8f98bfe75b134126d397e81ae03f2a09d"
+    }
+  ],
+  "schema": "c1-successor-stage-v1",
+  "stage_local_effort": true,
+  "start_utc": "2026-10-04T18:39:00.561405+00:00",
+  "unavailable_reason": "No exposed runtime model identifiers, token counters or billing"
+}

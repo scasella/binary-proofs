@@ -1,0 +1,14 @@
+{
+  "event": "START",
+  "id": "c1-contract-source-v1",
+  "kind": "source-construction",
+  "agent": "/root/c1_contract_and_handoff",
+  "utc": "2026-10-04T14:19:45.770873+00:00",
+  "experiment": "BP-20261004-REUSE-V1",
+  "measurement_scope": "inclusive source-writing interval; overlaps not additive labor",
+  "model": null,
+  "tokens": null,
+  "cost": null,
+  "unavailable_reason": "runtime does not expose model, token or billing counters",
+  "proof_construction": false
+}

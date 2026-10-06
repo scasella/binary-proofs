@@ -1,0 +1,64 @@
+{
+  "agent": "/root/heldout_selector",
+  "case_authoring_exposure": [
+    "C3 source and build",
+    "C3 inventory and final ELF/GNU output",
+    "C3 literal predicates and seven endterms,three witness targets",
+    "Root/transfer workers exposed only after release"
+  ],
+  "choice_freeze": "c3-selection/choice-freeze-v1.json",
+  "cost": null,
+  "definition_draft_correction": "v1 retained; v2 adds intended unused q/m parameter types only, no semantic restriction",
+  "exact_source_behavior_domain_before_compilation": true,
+  "experiment": "BP-20261005-HELD-OUT-TRANSFER-V1",
+  "failed_builds_or_acquisitions": [],
+  "filename_locator_exposure_only": [
+    "C2 artifact/inventory/spec/CONTRACT filenames including copied-run trees; none read",
+    "C2 witnesses filename listing included witness-proof-attempt1.ml filename only; content never read"
+  ],
+  "files": {
+    "c3/artifact/acquire-v1.py": "9898ce31381ad0c5645935c1c74f9439d7ea31a84e295c0e867aff6e4093b813",
+    "c3/artifact/build-v1.sh": "5976bb10ee07a5953ac47eb6605d0e73b580384edcc966162e24b20399a9f3f2",
+    "c3/artifact/c3.S": "0edd718ddc8585ab5d201bcc691e93df7a740a189667799eb34bb29059c03778",
+    "c3/artifact/freeze-v1.json": "4565bcc8c717430e24317dcd4d09d74da5edd5c04b5dfa956014d371b19335ca",
+    "c3/artifact/inventory-v1.json": "9fac3d26e58aa86bd6e8aee59357b176fa691f6c9b81bda7cd5b1dd12b09bb1a",
+    "c3/contract/HUMAN-REVIEW-SOURCE-MAP-v1.md": "c0816abd9ff3f019e343ae33aab3db5cff0295777c70bfd52962554ef6c7b498",
+    "c3/contract/definitions-v1.ml": "97c03847d4543ecd9712504ac6d282f81198eec220720f1a5777bb56a092bcee",
+    "c3/contract/definitions-v2.ml": "779ca953ac63182a5ff38ec22928a12df8b8c3ef6098b96d421eb2cc6aefd2bf",
+    "c3/contract/expected-terms-v1.json": "bb8805bf78523ec06d7d81681204ed662d2cd4fc516f30bd8f5584938c399afe",
+    "c3/contract/statements-v1.ml": "0117a8a5076e8ef80999cfd4c7712eaec768e3d7b0e89124efbc45ba73e3a7d7",
+    "c3/contract/witness-definitions-v1.ml": "bb4c9745c62fe0ff6b5fcbdfe4ff5e01d5286594fe2e04fdaed11c3254e710bf",
+    "c3/contract/witness-statements-v1.ml": "bd83937bcd17da06df21ee8de4d431c241203586737ca96e5e5d17775b3b039a"
+  },
+  "human_review": "PENDING",
+  "independent_artifact_crosscheck": "c3/replay/acquisition-discovery-v1.json PASS by different worker",
+  "known_preparation_failures": [
+    "Initial wrong measurements locator (recorded retrospectively)",
+    "Initial sandbox Docker inspect/version socket denial (recorded command log, benign escalation succeeded)"
+  ],
+  "measurement_scope": "Append-only command attempts plus explicit retrospective initial locator/read records. Inclusive preparation time, command wall, Docker checking/resource accounting and overlapping coordination intervals are distinct; do not sum nested/overlapping intervals.",
+  "model": null,
+  "no_generic_proof_automation_or_reusable_lemma_authored": true,
+  "no_main_proof_search": true,
+  "old_solution_or_supplier_recipe_read": false,
+  "old_specification_convention_exposure": [
+    "C2 artifact/build-v1.sh",
+    "C2 artifact/acquire-v1.py",
+    "C2 spec/definitions-v1.ml",
+    "C2 spec/statements-v1.ml",
+    "C2 witnesses/definitions-v1.ml",
+    "C2 witnesses/statements-v1.ml"
+  ],
+  "preparation_deadline_utc": "2026-10-05T01:40:42Z",
+  "schema": "c3-independent-selection-preparation-account-v1",
+  "selected_case_count": 1,
+  "selected_only_after_release": true,
+  "source_convention_reuse": "Image/pre/frame/literal/witness-state syntax; exact C3 byte sites and snapshot/result/write/step/scratch meanings are freshly selected and extracted. No old proof solution reuse by selector.",
+  "source_kind": "assembler-authored, GCC-assembled/linked; no C-language refinement or compiler-generated-C transfer claim",
+  "static_contract_review": "Root and transfer_layer inspection; not human approval",
+  "static_instruction_class_review": "Source-clause review by transfer_layer PASS; not formal actual-decode qualification proof",
+  "tokens": null,
+  "typecheck_status": "PENDING separate preparation-typechecking diagnostic",
+  "unavailable_reason": "runtime does not expose exact model, token or billing counters",
+  "utc": "2026-10-05T01:29:57.595376+00:00"
+}

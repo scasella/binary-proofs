@@ -1,0 +1,25 @@
+{
+  "corrections": [
+    {
+      "field": "checking_only_after_deadline",
+      "old": "Original construction guard remains immutable. Later checking is a separately recorded release operation over exact sealed sources; packaging-only adapter and consumption result are owned by root, not asserted by this draft",
+      "prior_pre_seal_generation": [
+        {
+          "path": "development/approved-plan/review-release-v1/index/pre-seal-generation1-release-index-v1.json",
+          "sha256": "a89c86e70944d30da65987f90358f570c613c703f7e37dc41ca721fa4cde7078"
+        },
+        {
+          "path": "development/approved-plan/review-release-v1/index/pre-seal-generation1-REPORT.md",
+          "sha256": "6efd754c0df3c46924ba6c23d05171d490f981d8349ca805ad06a1897b3b9acf"
+        }
+      ],
+      "reason": "Draft-only coordination wording survived generation despite actual accepted consumer gates",
+      "resolution": "Generator assigns current observed historical-guard and later-checking status; regenerate current index/report from recorded receipts"
+    }
+  ],
+  "historical_packages_changed": false,
+  "main_consumed_checking_archive_changed": false,
+  "mathematical_inputs_changed": false,
+  "schema": "review-release-documentary-corrections-v1",
+  "utc": "2026-10-05T16:20:06.858422+00:00"
+}

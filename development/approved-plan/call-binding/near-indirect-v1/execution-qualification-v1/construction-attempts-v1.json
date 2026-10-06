@@ -1,0 +1,178 @@
+{
+  "R1_pass": false,
+  "attempts": [
+    {
+      "billing_cost": null,
+      "elapsed_null_reason": "Per-attempt clock not recorded",
+      "elapsed_seconds": null,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/transfer-attempt1.ml",
+      "reason": "original execution conversion leaves partially applied absolute operation",
+      "sha256": "04380d249ae03b1d3e4fc56d41edc8d3588f5aecf1cb2808af39a6e4db6635eb",
+      "status": "FAILED",
+      "token_usage": null
+    },
+    {
+      "billing_cost": null,
+      "elapsed_null_reason": "Per-attempt clock not recorded",
+      "elapsed_seconds": null,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/transfer-attempt2.ml",
+      "reason": "state implication stripping callback did not match original stepping protocol",
+      "sha256": "1a6f805597051ac539899100a9ad3137ef80ce9d40b7b8d301eb5faea0e27492",
+      "status": "FAILED",
+      "token_usage": null
+    },
+    {
+      "billing_cost": null,
+      "elapsed_null_reason": "Per-attempt clock not recorded",
+      "elapsed_seconds": null,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/automation-adapter-attempt1.ml",
+      "reason": "corrected step protocol in attempt2",
+      "sha256": "0169953e58dc3e952b2b9fab9eaa003f69b25d1c188293c7a61b7a1a92512599",
+      "status": "SUPERSEDED",
+      "token_usage": null
+    },
+    {
+      "billing_cost": null,
+      "elapsed_null_reason": "Per-attempt clock not recorded",
+      "elapsed_seconds": null,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/transfer-attempt3.ml",
+      "reason": "export/stepping adaptation intermediate recipe",
+      "sha256": "70acb7b31e26bf89ca9238e9eba75f1c71cdcb57e26a6b8ba765691633b7de9e",
+      "status": "FAILED",
+      "token_usage": null
+    },
+    {
+      "billing_cost": null,
+      "elapsed_null_reason": "Per-attempt clock not recorded",
+      "elapsed_seconds": null,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/transfer-attempt4.ml",
+      "reason": "event address arithmetic not normalized",
+      "sha256": "70acb7b31e26bf89ca9238e9eba75f1c71cdcb57e26a6b8ba765691633b7de9e",
+      "status": "FAILED",
+      "token_usage": null
+    },
+    {
+      "billing_cost": null,
+      "elapsed_null_reason": "Per-attempt clock not recorded",
+      "elapsed_seconds": null,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/transfer-attempt5.ml",
+      "reason": "six transfer targets",
+      "sha256": "f29ea93afdfa8c36dc605edce6fe8a22d1e1c6a79e9d0a20fb6199e407cf543e",
+      "status": "LIVE_CHECKED",
+      "token_usage": null
+    },
+    {
+      "billing_cost": null,
+      "elapsed_null_reason": "Per-attempt clock not recorded",
+      "elapsed_seconds": null,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/checked-hop-attempt1.ml",
+      "reason": "conjunction progress witness was not explicitly split",
+      "sha256": "21016480b9078542c364e8c6ada2ce2a730a2eb31db7f74db2e32659349cf013",
+      "status": "FAILED",
+      "token_usage": null
+    },
+    {
+      "billing_cost": null,
+      "elapsed_null_reason": "Per-attempt clock not recorded",
+      "elapsed_seconds": null,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/checked-hop-attempt2.ml",
+      "reason": "three universal policy hops",
+      "sha256": "ef370de133e1239eff2a902ca68796ffc52965b67c87c8b4ae54bc1a73afd01b",
+      "status": "LIVE_CHECKED",
+      "token_usage": null
+    },
+    {
+      "billing_cost": null,
+      "elapsed_null_reason": "Per-attempt clock not recorded",
+      "elapsed_seconds": null,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/extension-v6.ml",
+      "reason": "escaped conjunction corruption; affected step definition not constructed",
+      "sha256": "9ed1bc86171f0064c2f77c452d7cd3e99c185ffab100d8e4e6f2cda19d5fc411",
+      "status": "FAILED",
+      "token_usage": null
+    },
+    {
+      "billing_cost": null,
+      "elapsed_null_reason": "Per-attempt clock not recorded",
+      "elapsed_seconds": null,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/statements-v6.ml",
+      "reason": "three inherited predicate names corrected in new statement version",
+      "sha256": "de37c941063cbb2a28d8bec5f83ebafe2a99bde89371a5eb75ee3ab5cf16c497",
+      "status": "SUPERSEDED",
+      "token_usage": null
+    },
+    {
+      "billing_cost": null,
+      "elapsed_null_reason": "Per-attempt clock not recorded",
+      "elapsed_seconds": null,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/bridge-proof-attempt1.ml",
+      "reason": "old predicate proof search overflow",
+      "sha256": "7e97ab50ff0c1f727b43a4ae99e40c4a17d3d3d48d397b83619eb9358afb500f",
+      "status": "FAILED",
+      "token_usage": null
+    },
+    {
+      "billing_cost": null,
+      "elapsed_null_reason": "Per-attempt clock not recorded",
+      "elapsed_seconds": null,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/coverage-proof-attempt1.ml",
+      "reason": "broad MESON proof search Too deep; a later SIGINT interrupted the idle checker",
+      "sha256": "5146f89a16ce5711995c3e2e58814352b0adac125b10a9caf3149932755b5e1f",
+      "status": "FAILED",
+      "token_usage": null
+    },
+    {
+      "billing_cost": null,
+      "elapsed_null_reason": "Per-attempt clock not recorded",
+      "elapsed_seconds": null,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/coverage-proof-attempt2.ml",
+      "reason": "numeric family inequalities not normalized",
+      "sha256": "d9a238e467dbf6e9118b5a49eb83f29e653495a4f69e1d1dd983bc8f9275ad26",
+      "status": "FAILED",
+      "token_usage": null
+    },
+    {
+      "billing_cost": null,
+      "elapsed_null_reason": "Per-attempt clock not recorded",
+      "elapsed_seconds": null,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/coverage-proof-attempt3.ml",
+      "reason": "registered local decode qualification",
+      "sha256": "a63409529ff97d732ada32ae707de0044b45a27e9b4485d2ff813462d143725c",
+      "status": "LIVE_CHECKED",
+      "token_usage": null
+    },
+    {
+      "billing_cost": null,
+      "elapsed_null_reason": "Per-attempt clock not recorded",
+      "elapsed_seconds": null,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/audit-v1.ml",
+      "reason": "audit included unrelated unloaded abi_crypto_site definition",
+      "sha256": "9ce4f9b609f864b245869d660c0abcbd02127e873912366c415f982dccb0d559",
+      "status": "FAILED",
+      "token_usage": null
+    },
+    {
+      "billing_cost": null,
+      "elapsed_null_reason": "Per-attempt clock not recorded",
+      "elapsed_seconds": null,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/audit-v2.ml",
+      "reason": "53 exact objects and41 expanded definitions",
+      "sha256": "65f4ebb5304951b443018402b78f63d09df6995f5f91618bd7e818e6a75f8af6",
+      "status": "LIVE_CHECKED",
+      "token_usage": null
+    }
+  ],
+  "human_review": "PENDING",
+  "live_audit": "results/development/near-indirect-execution-warm-20260930T182641Z-f65d11dc/output/live-audit-v2.json",
+  "live_audit_sha256": "06d1e98d0ab7cadc95eee3260a89d5c4f6e61ccfd7c8e3fdf219af4bd1c67d64",
+  "raw_log": "results/development/near-indirect-execution-warm-20260930T182641Z-f65d11dc/replay.log",
+  "raw_log_sha256": "bb048d40694ffb7ede8a78134f7eaf539075a88f5dba63e765298618bc061cd5",
+  "scope": "Construction attempts, not fresh acceptance",
+  "warm_process": {
+    "elapsed_seconds": 3596.446896584006,
+    "exit_code": 0,
+    "fresh_replay": false,
+    "full_O1_pass": false,
+    "human_review": "PENDING"
+  }
+}

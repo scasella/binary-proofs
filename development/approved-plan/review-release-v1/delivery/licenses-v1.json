@@ -1,0 +1,19 @@
+{
+  "schema": "delivered-license-metadata-v1",
+  "files": [
+    {
+      "original": "artifacts/licenses/openssl-copyright",
+      "delivered": "development/approved-plan/review-release-v1/delivery/licenses/openssl-copyright",
+      "sha256": "6a7da622fe0637a334d2a8fc470852d2ffb77d9a2b2f930f854e32a41ad6ef35",
+      "source": "Existing baseline license metadata; canonical file unchanged"
+    },
+    {
+      "original": "artifacts/licenses/glibc-copyright",
+      "delivered": "development/approved-plan/review-release-v1/delivery/licenses/glibc-copyright",
+      "sha256": "40c7e1f2118531f038ca22999bd976901254e1bc5cd1b0f0211bdd064c599987",
+      "source": "Existing baseline license metadata; canonical file unchanged"
+    }
+  ],
+  "foundation_licenses": "third_party/hol-light/LICENSE and third_party/s2n-bignum/LICENSE preserved inside the supplied BP-E1 source archive; Docker images preserve their distribution license files",
+  "scope": "Licenses delivered with release; no reconstruction or changes to library recipe"
+}

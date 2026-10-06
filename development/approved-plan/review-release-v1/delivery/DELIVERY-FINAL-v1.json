@@ -1,0 +1,37 @@
+{
+  "bootstrap_extractors": {
+    "extract-review-v1.py": "b15409ad9834c5a917e096d5addbb02031ec7d92af6bfde8f08fe43f39ab79f9",
+    "extract-v1.py": "2359a3fbbbe585c937100df11e1ddc2f8536ca2102bbd1090436807872ae773a"
+  },
+  "checking_source_delivery": {
+    "checking_source_archive": "development/approved-plan/review-release-v1/delivery/checking-sources-v1.tar.gz",
+    "checking_source_archive_sha256": "7434fae0f89c9b3a0c58f455a3bd33826502213befea5be5f58bcb5355073e2a",
+    "checking_source_bytes": 38640827,
+    "delivered_file_count": 856,
+    "docker_image_archive": "development/approved-plan/review-release-v1/delivery/docker-images-v1.tar",
+    "docker_image_archive_bytes": 1994384384,
+    "docker_image_archive_sha256": "6c01c3490963fe4d7b530195aaadcc2161636047e1d4899837e4aa18258e0eb4",
+    "human_review": "PENDING",
+    "input_manifest": "development/approved-plan/review-release-v1/inputs/release-inputs-v1.json",
+    "input_manifest_sha256": "bb91c404411554fc48a1c34fe1107278067ffbf76cdc759b20c833bffd85a1fd",
+    "schema": "review-release-delivery-v1",
+    "scope": "Immutable checking inputs; final review documents/evidence delivered separately. This archive does not contain saved caller theorem objects. Historical JSON metadata is not proof acceptance."
+  },
+  "human_review": "PENDING",
+  "release_index": {
+    "path": "development/approved-plan/review-release-v1/release-index-v1.json",
+    "sha256": "4a1e7b59915b52ea77b10bc0e976d62ee216181ec484897806203620aa13a83d"
+  },
+  "review_archive": {
+    "bytes": 49900500,
+    "files": 1585,
+    "path": "development/approved-plan/review-release-v1/delivery/review-evidence-v1.tar.gz",
+    "sha256": "28bfe4a12dcb53102073bf644dad25a9a8e3d23b6999e3da814a230491fe5c94"
+  },
+  "review_manifest": {
+    "path": "development/approved-plan/review-release-v1/inputs/review-companion-v1.json",
+    "sha256": "7cc4595cd4f23df20bc6f0b825d412ad279b1f3c35bca70e59005482c835a08e"
+  },
+  "schema": "review-release-final-delivery-v1",
+  "status": "REVIEW_READY_WITH_CHECKING_ONLY_CONSUMER_ACCEPTANCE"
+}

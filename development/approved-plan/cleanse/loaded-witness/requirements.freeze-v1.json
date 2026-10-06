@@ -1,0 +1,81 @@
+{
+  "actual_code_bytes": 97,
+  "canonical_top_witnesses": "abstract model domain, not Linux user mapping claim",
+  "category_cases": [
+    [
+      "BYTE_ONE",
+      "word 0x200001",
+      1,
+      false
+    ],
+    [
+      "BYTE_SEVEN",
+      "word 0x200003",
+      7,
+      true
+    ],
+    [
+      "BULK_ALIGNED",
+      "word 0x200000",
+      24,
+      false
+    ],
+    [
+      "MISALIGNED_BULK",
+      "word 0x200001",
+      17,
+      false
+    ],
+    [
+      "MISALIGNED_TAIL",
+      "word 0x200003",
+      33,
+      true
+    ],
+    [
+      "USER_PAGE_BOUNDARY",
+      "word 0x200fff",
+      17,
+      false
+    ],
+    [
+      "LOW_CANONICAL_EDGE",
+      "word (2 EXP 47-1)",
+      1,
+      false
+    ],
+    [
+      "TOP_ENDPOINT_WRAP",
+      "word (2 EXP 64-1)",
+      1,
+      true
+    ],
+    [
+      "TOP_QWORD_ENDPOINT_WRAP",
+      "word (2 EXP 64-8)",
+      8,
+      false
+    ]
+  ],
+  "elf_offset": "0x2417d0",
+  "files": {
+    "development/approved-plan/cleanse/loaded-witness/definitions-v1.ml": "f18070f11fbde9ec37cc19cb2115cbce6fceb3be2f6af6ce0ed357a290efd05d",
+    "development/approved-plan/cleanse/loaded-witness/expected-definitions-v1.json": "fff6c96fc3e66790adddc3a221f4a986b8a157e335986bef9d1393332c606f68",
+    "development/approved-plan/cleanse/loaded-witness/expected-statements-v1.json": "943e3da59be0c2a2f4080dc70ea45b3be767f9ae866f44909124b5cb08187b5a",
+    "development/approved-plan/cleanse/loaded-witness/statements-v1.ml": "2883124eaad1a217a07fc2a22ee5e4546fd4a74ed3a473f461a38423d31b770b"
+  },
+  "frozen_at_utc": "2026-09-30T17:41:07.324520+00:00",
+  "full_O1_pass": false,
+  "human_review": "PENDING",
+  "id": "CLEANSE_FULL_IMAGE_INITIAL_WITNESSES_V1",
+  "initial_image_only": true,
+  "output_read_premise": false,
+  "permission_interpretation": "actual RW page family; generic Pre only requires destination WP; no output read span added",
+  "pre": "unchanged development/approved-plan/cleanse/spec-v2.ml bp_e2_cleanse_pre",
+  "production_entry": "0x102417d0",
+  "proof_search_started": false,
+  "single_destination_pair_categories": {
+    "identical_inputs": "NOT_APPLICABLE_SINGLE_DESTINATION_NOOP_METADATA",
+    "overlapping_inputs": "NOT_APPLICABLE_SINGLE_DESTINATION_NOOP_METADATA"
+  }
+}

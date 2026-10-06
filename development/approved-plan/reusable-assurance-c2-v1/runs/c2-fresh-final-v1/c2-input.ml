@@ -1,0 +1,11 @@
+if axioms()<>fresh_initial_axioms then exit 1;;
+let reuse_c2_foundation_axioms=fresh_initial_axioms;;
+print_endline("C2_FRESH_SUPPLIER_CPU "^string_of_float(Sys.time()-.fresh_supplier_cpu_start));;
+let c2_fresh_cpu_start=Sys.time();;
+c2_development_ambient_snapshot "after-supplier-before-caller" "/output/ambient-after-supplier-v1.json";;
+try needs "/work/development/approved-plan/reusable-assurance-c2-v1/replay/c2-loader-final-v1.ml" with e -> prerr_endline(Printexc.to_string e); if axioms()<>fresh_initial_axioms then exit 2; print_endline "C2_FRESH_REJECTION_STANDARD3_UNCHANGED"; exit 1;;
+try needs "/work/development/approved-plan/reusable-assurance-c2-v1/replay/c2-final-v1-audit.ml" with e -> prerr_endline(Printexc.to_string e); exit 1;;
+print_endline("C2_FRESH_CALLER_CPU "^string_of_float(Sys.time()-.c2_fresh_cpu_start));;
+if axioms()<>fresh_initial_axioms then exit 1;;
+print_endline "C2_FRESH_FINAL_STANDARD3_AXIOMS_UNCHANGED";;
+exit 0;;

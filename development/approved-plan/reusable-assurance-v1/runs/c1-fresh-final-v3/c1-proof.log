@@ -1,0 +1,4357 @@
+- : unit = ()
+val it : unit = ()
+# val it : unit = ()
+# val reuse_c1_foundation_axioms : thm list =
+  [|- exists f. ONE_ONE f /\ ~ONTO f; |- forall P x. P x ==> P ((@) P);
+   |- forall t. (\x. t x) = t]
+# C1_FRESH_SUPPLIER_CPU 331.568713
+val it : unit = ()
+# val c1_fresh_cpu_start : float = 372.722609
+# val bp_public_crypto_memcmp_code_length_statement : term =
+  `LENGTH crypto_memcmp_mc = 95`
+val bp_public_openssl_cleanse_code_length_statement : term =
+  `LENGTH openssl_cleanse_mc = 97`
+val BP_PUBLIC_CRYPTO_MEMCMP_CODE_LENGTH : thm =
+  |- LENGTH crypto_memcmp_mc = 95
+val BP_PUBLIC_OPENSSL_CLEANSE_CODE_LENGTH : thm =
+  |- LENGTH openssl_cleanse_mc = 97
+- : unit = ()
+val CLIENT_CHECKED_RUN_STEP : thm =
+  |- forall n P C s.
+         assurance_checked_run (1 + n) P C s <=>
+         (exists s'. x86 s s') /\
+         (forall s'.
+              x86 s s' ==> C (1 + n) s s' /\ assurance_checked_run n P C s')
+val CLIENT_CHECKED_BASIC_STEP_TAC :
+  ('a -> thm list -> term -> thm) ->
+  'a ->
+  string -> (thm -> thm -> tactic) -> (string * thm) list * term -> goalstate =
+  <fun>
+- : unit = ()
+- : unit = ()
+val ra_generic_initial_axioms : thm list =
+  [|- exists f. ONE_ONE f /\ ~ONTO f; |- forall P x. P x ==> P ((@) P);
+   |- forall t. (\x. t x) = t]
+- : unit = ()
+val ra_checked_run_append_statement : term =
+  `forall m n P C s.
+       assurance_checked_run m (\t. assurance_checked_run n P C t)
+       (\k source target. C (n + k) source target)
+       s
+       ==> assurance_checked_run (m + n) P C s`
+val ra_checked_run_post_mono_statement : term =
+  `forall n P Q C s.
+       (forall t. P t ==> Q t) /\ assurance_checked_run n P C s
+       ==> assurance_checked_run n Q C s`
+val ra_checked_run_policy_mono_statement : term =
+  `forall n P C D s.
+       (forall k source target. C k source target ==> D k source target) /\
+       assurance_checked_run n P C s
+       ==> assurance_checked_run n P D s`
+- : unit = ()
+val RA_CHECKED_RUN_APPEND : thm =
+  |- forall m n P C s.
+         assurance_checked_run m (\t. assurance_checked_run n P C t)
+         (\k source target. C (n + k) source target)
+         s
+         ==> assurance_checked_run (m + n) P C s
+0..0..1..solved at 4
+val RA_CHECKED_RUN_POST_MONO : thm =
+  |- forall n P Q C s.
+         (forall t. P t ==> Q t) /\ assurance_checked_run n P C s
+         ==> assurance_checked_run n Q C s
+0..0..solved at 2
+0..0..1..solved at 4
+val RA_CHECKED_RUN_POLICY_MONO : thm =
+  |- forall n P C D s.
+         (forall k source target. C k source target ==> D k source target) /\
+         assurance_checked_run n P C s
+         ==> assurance_checked_run n P D s
+- : unit = ()
+val e5_normal_flags : thm =
+  |- forall s.
+         e5_normal_flags s <=>
+         ~bit 16 (read rflags s) /\ ~bit 8 (read rflags s)
+val e5_rf_clear : thm =
+  |- forall s. e5_rf_clear s = write (rflags :> bitelement 16) false s
+val e5_rf_retired_step : thm =
+  |- forall s t.
+         e5_rf_retired_step s t <=> (exists u. x86 s u /\ t = e5_rf_clear u)
+val e5_rf_retired_extended_step : thm =
+  |- forall s a t.
+         e5_rf_retired_extended_step (s,a) t <=>
+         (exists u b.
+              abi_caller_scalar_extended_step (s,a) (u,b) /\
+              t = e5_rf_clear u,b)
+val e5_normal_step_policy : thm =
+  |- forall C k s t.
+         e5_normal_step_policy C k s t <=>
+         C k s t /\ e5_normal_flags s /\ e5_normal_flags t
+val e5_normal_environment : thm =
+  |- forall long_mode cpl dr7 cet_enabled external_event_delivered debug_agent_modified.
+         e5_normal_environment long_mode cpl dr7 cet_enabled
+         external_event_delivered
+         debug_agent_modified <=>
+         long_mode /\
+         cpl = 3 /\
+         (forall i. i < 8 ==> ~bit i dr7) /\
+         ~cet_enabled /\
+         ~external_event_delivered /\
+         ~debug_agent_modified
+val e5_rf_checked_run : thm =
+  |- (e5_rf_checked_run 0 P C s <=> P s) /\
+     (e5_rf_checked_run (SUC n) P C s <=>
+      (exists t. e5_rf_retired_step s t) /\
+      (forall t.
+           e5_rf_retired_step s t
+           ==> C (SUC n) s t /\ e5_rf_checked_run n P C t))
+- : unit = ()
+val e5_rf_clear_identity_statement : term =
+  `forall s. ~bit 16 (read rflags s) ==> e5_rf_clear s = s`
+val e5_scalar_operation_outside_flags_statement : term =
+  `forall inst s t k.
+       k < 64 /\
+       ~MEM k [0; 2; 4; 6; 7; 11] /\
+       abi_caller_scalar_instruction inst /\
+       x86_execute inst s t
+       ==> (bit k (read rflags t) <=> bit k (read rflags s))`
+val e5_qualified_step_outside_flags_statement : term =
+  `forall s t k.
+       k < 64 /\
+       ~MEM k [0; 2; 4; 6; 7; 11] /\
+       abi_all_decodes_caller_scalar s /\
+       x86 s t
+       ==> (bit k (read rflags t) <=> bit k (read rflags s))`
+val e5_qualified_step_normal_statement : term =
+  `forall s t.
+       e5_normal_flags s /\ abi_all_decodes_caller_scalar s /\ x86 s t
+       ==> e5_normal_flags t`
+val e5_rf_retired_step_normal_eq_statement : term =
+  `forall s t.
+       e5_normal_flags s /\ abi_all_decodes_caller_scalar s
+       ==> (e5_rf_retired_step s t <=> x86 s t)`
+val e5_rf_retired_extended_normal_eq_statement : term =
+  `forall s t a b.
+       e5_normal_flags s /\ abi_all_decodes_caller_scalar s
+       ==> (e5_rf_retired_extended_step (s,a) (t,b) <=>
+            abi_caller_scalar_extended_step (s,a) (t,b))`
+val e5_checked_run_normal_statement : term =
+  `forall n P C s.
+       (forall k source target.
+            C k source target ==> abi_all_decodes_caller_scalar source) /\
+       assurance_checked_run n P C s /\
+       e5_normal_flags s
+       ==> assurance_checked_run n (\t. P t /\ e5_normal_flags t)
+           (e5_normal_step_policy C)
+           s`
+val e5_rf_checked_run_normal_statement : term =
+  `forall n P C s.
+       (forall k source target.
+            C k source target ==> abi_all_decodes_caller_scalar source) /\
+       assurance_checked_run n P C s /\
+       e5_normal_flags s
+       ==> e5_rf_checked_run n (\t. P t /\ e5_normal_flags t)
+           (e5_normal_step_policy C)
+           s`
+val e5_normal_checked_run_extended_lift_statement : term =
+  `forall n P C s a.
+       (forall k source target.
+            C k source target ==> abi_all_decodes_caller_scalar source) /\
+       assurance_checked_run n P C s /\
+       e5_normal_flags s
+       ==> eventually_n e5_rf_retired_extended_step n
+           (\t.
+                P (FST t) /\
+                e5_normal_flags (FST t) /\
+                SND t = a /\
+                abi_required_controls_preserved a (SND t))
+           (s,a)`
+- : unit = ()
+val E5_RF_COMPONENT_EXTENSIONALLY_VALID : thm =
+  |- extensionally_valid_component (rflags :> bitelement 16)
+val E5_RF_WRITE_READ : thm =
+  |- forall s. write (rflags :> bitelement 16) (bit 16 (read rflags s)) s = s
+val E5_RF_CLEAR_IDENTITY : thm =
+  |- forall s. ~bit 16 (read rflags s) ==> e5_rf_clear s = s
+val E5_RF_CLEAR_READ_FALSE : thm =
+  |- forall s. ~bit 16 (read rflags (e5_rf_clear s))
+- : unit = ()
+val e5_gpr_cases : thm = |- forall x. exists a0 a1. x = Gpr a0 a1
+val e5_regsize_cases : thm =
+  |- forall x.
+         x = Full_64 \/
+         x = Lower_32 \/
+         x = Lower_16 \/
+         x = Upper_8 \/
+         x = Lower_8
+val E5_ENUM_GPRS_TAC : tactic = <fun>
+val E5_SUBST_VAR_THM : thm -> tactic = <fun>
+val E5_FLAG_BITS_ORTHOGONAL : thm =
+  |- forall k i.
+         ~(k = i)
+         ==> orthogonal_components (rflags :> bitelement k)
+             (rflags :> bitelement i)
+Warning: inventing type variables
+0..0..1..2..6..13..29..solved at 45
+val E5_READ_FLAG_FRAME_TAC : tactic = <fun>
+File "/reuse/generic/e5-scalar-flags-v1.ml", line 40, characters 14-20:
+40 |  with Failure "find" -> ALL_TAC gl;;
+                   ^^^^^^
+Warning 52 [fragile-literal-pattern]: Code should not depend on the actual values of
+this constructor's arguments. They are only for information
+and may change in future versions. (See manual section 11.5)
+val E5_SPLIT_HYP_CONDITIONAL_TAC : tactic = <fun>
+val E5_SCALAR_OPERATION_OUTSIDE_FLAGS : thm =
+  |- forall inst s t k.
+         k < 64 /\
+         ~MEM k [0; 2; 4; 6; 7; 11] /\
+         abi_caller_scalar_instruction inst /\
+         x86_execute inst s t
+         ==> (bit k (read rflags t) <=> bit k (read rflags s))
+E5_GENERIC_SCALAR_OUTSIDE_FLAGS_ALL_SUCCESSORS_KERNEL_PASS
+- : unit = ()
+- : unit = ()
+0..0..2..solved at 5
+val E5_QUALIFIED_STEP_OUTSIDE_FLAGS : thm =
+  |- forall s t k.
+         k < 64 /\
+         ~MEM k [0; 2; 4; 6; 7; 11] /\
+         abi_all_decodes_caller_scalar s /\
+         x86 s t
+         ==> (bit k (read rflags t) <=> bit k (read rflags s))
+val E5_QUALIFIED_STEP_NORMAL : thm =
+  |- forall s t.
+         e5_normal_flags s /\ abi_all_decodes_caller_scalar s /\ x86 s t
+         ==> e5_normal_flags t
+E5_SCALAR_ALL_SUCCESSOR_RF_TF_INVARIANT_KERNEL_PASS
+- : unit = ()
+- : unit = ()
+0..0..1..6..12..24..54..103..200..401..755..1338..solved at 1363
+0..0..0..6..13..25..55..104..198..400..solved at 741
+val E5_RF_RETIRED_STEP_NORMAL_EQ : thm =
+  |- forall s t.
+         e5_normal_flags s /\ abi_all_decodes_caller_scalar s
+         ==> (e5_rf_retired_step s t <=> x86 s t)
+0..0..1..6..12..24..56..110..214..442..842..1511..2779..5032..8806..solved at 8858
+0..0..0..4..11..22..53..105..208..433..834..1493..solved at 2729
+val E5_RF_RETIRED_EXTENDED_NORMAL_EQ : thm =
+  |- forall s t a b.
+         e5_normal_flags s /\ abi_all_decodes_caller_scalar s
+         ==> (e5_rf_retired_extended_step (s,a) (t,b) <=>
+              abi_caller_scalar_extended_step (s,a) (t,b))
+0..0..solved at 2
+0..0..solved at 2
+0..0..solved at 2
+0..0..1..solved at 4
+0..0..solved at 2
+0..0..1..4..9..18..32..solved at 51
+0..0..1..solved at 4
+0..0..1..solved at 4
+0..0..1..2..3..6..11..solved at 18
+val E5_CHECKED_RUN_NORMAL : thm =
+  |- forall n P C s.
+         (forall k source target.
+              C k source target ==> abi_all_decodes_caller_scalar source) /\
+         assurance_checked_run n P C s /\
+         e5_normal_flags s
+         ==> assurance_checked_run n (\t. P t /\ e5_normal_flags t)
+             (e5_normal_step_policy C)
+             s
+0..0..solved at 2
+0..0..solved at 2
+0..0..1..4..solved at 10
+0..0..solved at 2
+0..0..1..solved at 4
+0..0..solved at 2
+0..0..1..4..9..solved at 20
+0..0..1..solved at 4
+0..0..1..solved at 4
+0..0..1..2..3..solved at 8
+val E5_RF_CHECKED_RUN_NORMAL : thm =
+  |- forall n P C s.
+         (forall k source target.
+              C k source target ==> abi_all_decodes_caller_scalar source) /\
+         assurance_checked_run n P C s /\
+         e5_normal_flags s
+         ==> e5_rf_checked_run n (\t. P t /\ e5_normal_flags t)
+             (e5_normal_step_policy C)
+             s
+0..0..solved at 2
+0..0..solved at 2
+0..0..1..solved at 4
+0..0..1..3..solved at 7
+0..0..1..2..3..10..solved at 16
+0..0..1..solved at 4
+0..0..1..2..solved at 6
+0..0..0..0..1..2..3..5..7..9..11..13..15..20..25..30..solved at 47
+val E5_NORMAL_CHECKED_RUN_EXTENDED_LIFT : thm =
+  |- forall n P C s a.
+         (forall k source target.
+              C k source target ==> abi_all_decodes_caller_scalar source) /\
+         assurance_checked_run n P C s /\
+         e5_normal_flags s
+         ==> eventually_n e5_rf_retired_extended_step n
+             (\t.
+                  P (FST t) /\
+                  e5_normal_flags (FST t) /\
+                  SND t = a /\
+                  abi_required_controls_preserved a (SND t))
+             (s,a)
+E5_NORMAL_RF_OVERLAY_ALL_SUCCESSOR_MODEL_CORRESPONDENCE_KERNEL_PASS
+- : unit = ()
+- : unit = ()
+val ra_checked_run_three_segment_statement : term =
+  `forall a b c H A B P C1 C2 C3 C s.
+       assurance_checked_run a H C1 s /\
+       (forall t. H t ==> A t) /\
+       (forall t. A t ==> assurance_checked_run b B C2 t) /\
+       (forall t. B t ==> assurance_checked_run c P C3 t) /\
+       (forall k source target.
+            C1 k source target ==> C ((b + c) + k) source target) /\
+       (forall k source target.
+            C2 k source target ==> C (c + k) source target) /\
+       (forall k source target. C3 k source target ==> C k source target)
+       ==> assurance_checked_run (a + b + c) P C s`
+- : unit = ()
+0..0..1..solved at 4
+0..0..1..solved at 4
+0..0..1..solved at 4
+0..0..1..solved at 5
+0..0..1..solved at 4
+0..0..1..3..solved at 7
+0..0..1..solved at 5
+0..0..solved at 2
+val RA_CHECKED_RUN_THREE_SEGMENT : thm =
+  |- forall a b c H A B P C1 C2 C3 C s.
+         assurance_checked_run a H C1 s /\
+         (forall t. H t ==> A t) /\
+         (forall t. A t ==> assurance_checked_run b B C2 t) /\
+         (forall t. B t ==> assurance_checked_run c P C3 t) /\
+         (forall k source target.
+              C1 k source target ==> C ((b + c) + k) source target) /\
+         (forall k source target.
+              C2 k source target ==> C (c + k) source target) /\
+         (forall k source target. C3 k source target ==> C k source target)
+         ==> assurance_checked_run (a + b + c) P C s
+- : unit = ()
+val ra_generic_exports : (string * thm * term) list =
+  [("RA_CHECKED_RUN_APPEND",
+    |- forall m n P C s.
+           assurance_checked_run m (\t. assurance_checked_run n P C t)
+           (\k source target. C (n + k) source target)
+           s
+           ==> assurance_checked_run (m + n) P C s,
+    `forall m n P C s.
+         assurance_checked_run m (\t. assurance_checked_run n P C t)
+         (\k source target. C (n + k) source target)
+         s
+         ==> assurance_checked_run (m + n) P C s`);
+   ("RA_CHECKED_RUN_POST_MONO",
+    |- forall n P Q C s.
+           (forall t. P t ==> Q t) /\ assurance_checked_run n P C s
+           ==> assurance_checked_run n Q C s,
+    `forall n P Q C s.
+         (forall t. P t ==> Q t) /\ assurance_checked_run n P C s
+         ==> assurance_checked_run n Q C s`);
+   ("RA_CHECKED_RUN_POLICY_MONO",
+    |- forall n P C D s.
+           (forall k source target. C k source target ==> D k source target) /\
+           assurance_checked_run n P C s
+           ==> assurance_checked_run n P D s,
+    `forall n P C D s.
+         (forall k source target. C k source target ==> D k source target) /\
+         assurance_checked_run n P C s
+         ==> assurance_checked_run n P D s`);
+   ("E5_RF_CLEAR_IDENTITY",
+    |- forall s. ~bit 16 (read rflags s) ==> e5_rf_clear s = s,
+    `forall s. ~bit 16 (read rflags s) ==> e5_rf_clear s = s`);
+   ("E5_SCALAR_OPERATION_OUTSIDE_FLAGS",
+    |- forall inst s t k.
+           k < 64 /\
+           ~MEM k [0; 2; 4; 6; 7; 11] /\
+           abi_caller_scalar_instruction inst /\
+           x86_execute inst s t
+           ==> (bit k (read rflags t) <=> bit k (read rflags s)),
+    `forall inst s t k.
+         k < 64 /\
+         ~MEM k [0; 2; 4; 6; 7; 11] /\
+         abi_caller_scalar_instruction inst /\
+         x86_execute inst s t
+         ==> (bit k (read rflags t) <=> bit k (read rflags s))`);
+   ("E5_QUALIFIED_STEP_OUTSIDE_FLAGS",
+    |- forall s t k.
+           k < 64 /\
+           ~MEM k [0; 2; 4; 6; 7; 11] /\
+           abi_all_decodes_caller_scalar s /\
+           x86 s t
+           ==> (bit k (read rflags t) <=> bit k (read rflags s)),
+    `forall s t k.
+         k < 64 /\
+         ~MEM k [0; 2; 4; 6; 7; 11] /\
+         abi_all_decodes_caller_scalar s /\
+         x86 s t
+         ==> (bit k (read rflags t) <=> bit k (read rflags s))`);
+   ("E5_QUALIFIED_STEP_NORMAL",
+    |- forall s t.
+           e5_normal_flags s /\ abi_all_decodes_caller_scalar s /\ x86 s t
+           ==> e5_normal_flags t,
+    `forall s t.
+         e5_normal_flags s /\ abi_all_decodes_caller_scalar s /\ x86 s t
+         ==> e5_normal_flags t`);
+   ("E5_RF_RETIRED_STEP_NORMAL_EQ",
+    |- forall s t.
+           e5_normal_flags s /\ abi_all_decodes_caller_scalar s
+           ==> (e5_rf_retired_step s t <=> x86 s t),
+    `forall s t.
+         e5_normal_flags s /\ abi_all_decodes_caller_scalar s
+         ==> (e5_rf_retired_step s t <=> x86 s t)`);
+   ("E5_RF_RETIRED_EXTENDED_NORMAL_EQ",
+    |- forall s t a b.
+           e5_normal_flags s /\ abi_all_decodes_caller_scalar s
+           ==> (e5_rf_retired_extended_step (s,a) (t,b) <=>
+                abi_caller_scalar_extended_step (s,a) (t,b)),
+    `forall s t a b.
+         e5_normal_flags s /\ abi_all_decodes_caller_scalar s
+         ==> (e5_rf_retired_extended_step (s,a) (t,b) <=>
+              abi_caller_scalar_extended_step (s,a) (t,b))`);
+   ("E5_CHECKED_RUN_NORMAL",
+    |- forall n P C s.
+           (forall k source target.
+                C k source target ==> abi_all_decodes_caller_scalar source) /\
+           assurance_checked_run n P C s /\
+           e5_normal_flags s
+           ==> assurance_checked_run n (\t. P t /\ e5_normal_flags t)
+               (e5_normal_step_policy C)
+               s,
+    `forall n P C s.
+         (forall k source target.
+              C k source target ==> abi_all_decodes_caller_scalar source) /\
+         assurance_checked_run n P C s /\
+         e5_normal_flags s
+         ==> assurance_checked_run n (\t. P t /\ e5_normal_flags t)
+             (e5_normal_step_policy C)
+             s`);
+   ("E5_RF_CHECKED_RUN_NORMAL",
+    |- forall n P C s.
+           (forall k source target.
+                C k source target ==> abi_all_decodes_caller_scalar source) /\
+           assurance_checked_run n P C s /\
+           e5_normal_flags s
+           ==> e5_rf_checked_run n (\t. P t /\ e5_normal_flags t)
+               (e5_normal_step_policy C)
+               s,
+    `forall n P C s.
+         (forall k source target.
+              C k source target ==> abi_all_decodes_caller_scalar source) /\
+         assurance_checked_run n P C s /\
+         e5_normal_flags s
+         ==> e5_rf_checked_run n (\t. P t /\ e5_normal_flags t)
+             (e5_normal_step_policy C)
+             s`);
+   ("E5_NORMAL_CHECKED_RUN_EXTENDED_LIFT",
+    |- forall n P C s a.
+           (forall k source target.
+                C k source target ==> abi_all_decodes_caller_scalar source) /\
+           assurance_checked_run n P C s /\
+           e5_normal_flags s
+           ==> eventually_n e5_rf_retired_extended_step n
+               (\t.
+                    P (FST t) /\
+                    e5_normal_flags (FST t) /\
+                    SND t = a /\
+                    abi_required_controls_preserved a (SND t))
+               (s,a),
+    `forall n P C s a.
+         (forall k source target.
+              C k source target ==> abi_all_decodes_caller_scalar source) /\
+         assurance_checked_run n P C s /\
+         e5_normal_flags s
+         ==> eventually_n e5_rf_retired_extended_step n
+             (\t.
+                  P (FST t) /\
+                  e5_normal_flags (FST t) /\
+                  SND t = a /\
+                  abi_required_controls_preserved a (SND t))
+             (s,a)`);
+   ("RA_CHECKED_RUN_THREE_SEGMENT",
+    |- forall a b c H A B P C1 C2 C3 C s.
+           assurance_checked_run a H C1 s /\
+           (forall t. H t ==> A t) /\
+           (forall t. A t ==> assurance_checked_run b B C2 t) /\
+           (forall t. B t ==> assurance_checked_run c P C3 t) /\
+           (forall k source target.
+                C1 k source target ==> C ((b + c) + k) source target) /\
+           (forall k source target.
+                C2 k source target ==> C (c + k) source target) /\
+           (forall k source target. C3 k source target ==> C k source target)
+           ==> assurance_checked_run (a + b + c) P C s,
+    `forall a b c H A B P C1 C2 C3 C s.
+         assurance_checked_run a H C1 s /\
+         (forall t. H t ==> A t) /\
+         (forall t. A t ==> assurance_checked_run b B C2 t) /\
+         (forall t. B t ==> assurance_checked_run c P C3 t) /\
+         (forall k source target.
+              C1 k source target ==> C ((b + c) + k) source target) /\
+         (forall k source target.
+              C2 k source target ==> C (c + k) source target) /\
+         (forall k source target. C3 k source target ==> C k source target)
+         ==> assurance_checked_run (a + b + c) P C s`)]
+- : unit = ()
+RA_GENERIC_RAW_CLOSED_LITERAL:RA_CHECKED_RUN_APPEND
+RA_GENERIC_RAW_CLOSED_LITERAL:RA_CHECKED_RUN_POST_MONO
+RA_GENERIC_RAW_CLOSED_LITERAL:RA_CHECKED_RUN_POLICY_MONO
+RA_GENERIC_RAW_CLOSED_LITERAL:E5_RF_CLEAR_IDENTITY
+RA_GENERIC_RAW_CLOSED_LITERAL:E5_SCALAR_OPERATION_OUTSIDE_FLAGS
+RA_GENERIC_RAW_CLOSED_LITERAL:E5_QUALIFIED_STEP_OUTSIDE_FLAGS
+RA_GENERIC_RAW_CLOSED_LITERAL:E5_QUALIFIED_STEP_NORMAL
+RA_GENERIC_RAW_CLOSED_LITERAL:E5_RF_RETIRED_STEP_NORMAL_EQ
+RA_GENERIC_RAW_CLOSED_LITERAL:E5_RF_RETIRED_EXTENDED_NORMAL_EQ
+RA_GENERIC_RAW_CLOSED_LITERAL:E5_CHECKED_RUN_NORMAL
+RA_GENERIC_RAW_CLOSED_LITERAL:E5_RF_CHECKED_RUN_NORMAL
+RA_GENERIC_RAW_CLOSED_LITERAL:E5_NORMAL_CHECKED_RUN_EXTENDED_LIFT
+RA_GENERIC_RAW_CLOSED_LITERAL:RA_CHECKED_RUN_THREE_SEGMENT
+- : unit = ()
+- : unit = ()
+RA_GENERIC_13_LITERAL_EXPORTS_STANDARD3_AUDIT_COMPLETE
+- : unit = ()
+- : unit = ()
+- : unit = ()
+val r1_secret_span_mono_statement : term =
+  `forall P Q a n.
+       (forall addr. P addr ==> Q addr) /\ assurance_span_ok P a n
+       ==> assurance_span_ok Q a n`
+val r1_secret_span_subspan_statement : term =
+  `forall P a n off len.
+       assurance_span_ok P a n /\ off + len <= n
+       ==> assurance_span_ok P (a + off) len`
+val r1_secret_span_region_statement : term =
+  `forall P p n.
+       assurance_span_ok P (val p) n
+       ==> assurance_span_ok (\addr. P addr /\ assurance_region p n addr)
+           (val p)
+           n`
+- : unit = ()
+0..0..solved at 2
+0..0..1..solved at 4
+0..0..1..3..solved at 7
+val R1_SECRET_SPAN_MONO : thm =
+  |- forall P Q a n.
+         (forall addr. P addr ==> Q addr) /\ assurance_span_ok P a n
+         ==> assurance_span_ok Q a n
+val R1_SECRET_SPAN_SUBSPAN : thm =
+  |- forall P a n off len.
+         assurance_span_ok P a n /\ off + len <= n
+         ==> assurance_span_ok P (a + off) len
+val R1_SECRET_SPAN_REGION : thm =
+  |- forall P p n.
+         assurance_span_ok P (val p) n
+         ==> assurance_span_ok (\addr. P addr /\ assurance_region p n addr)
+             (val p)
+             n
+- : unit = ()
+val bp_public_four_frame_preservation_statement : term =
+  `forall c cs1 cs2 cs3 cs4 s t.
+       ALL (orthogonal_components c) cs1 /\
+       ALL (orthogonal_components c) cs2 /\
+       ALL (orthogonal_components c) cs3 /\
+       ALL (orthogonal_components c) cs4 /\
+       (MAYCHANGE cs1 ,, MAYCHANGE cs2 ,, MAYCHANGE cs3 ,, MAYCHANGE cs4) s t
+       ==> read c t = read c s`
+- : unit = ()
+0..0..1..6..14..28..47..101..175..292..490..717..1054..1620..solved at 2151
+val R1_SECRET_FOUR_FRAME_PRESERVATION : thm =
+  |- forall c cs1 cs2 cs3 cs4 s t.
+         ALL (orthogonal_components c) cs1 /\
+         ALL (orthogonal_components c) cs2 /\
+         ALL (orthogonal_components c) cs3 /\
+         ALL (orthogonal_components c) cs4 /\
+         (MAYCHANGE cs1 ,, MAYCHANGE cs2 ,, MAYCHANGE cs3 ,, MAYCHANGE cs4) s
+         t
+         ==> read c t = read c s
+- : unit = ()
+- : unit = ()
+- : unit = ()
+RA_GENERIC_SPAN_FRAME_SOURCE_LITERAL_AUDIT_COMPLETE
+- : unit = ()
+- : unit = ()
+val c1_crypto_caller_mc : thm =
+  |- c1_crypto_caller_mc =
+     [word 72; word 131; word 236; word 8; word 232; word 23; word 255;
+      word 255; word 255; word 133; word 192; word 15; word 148; word 192;
+      word 72; word 131; word 196; word 8; word 15; word 182; word 192;
+      word 195]
+val c1_crypto_plt_prefix : thm =
+  |- c1_crypto_plt_prefix =
+     [word 255; word 37; word 162; word 47; word 0; word 0]
+val c1_image_domain : thm =
+  |- forall a. c1_image_domain a <=> 553648128 <= a /\ a < 553668608
+val c1_image_execute : thm =
+  |- forall a. c1_image_execute a <=> 553652224 <= a /\ a < 553656320
+val c1_image_write : thm =
+  |- forall a. c1_image_write a <=> 553664512 <= a /\ a < 553668608
+val c1_immutable : thm =
+  |- forall a.
+         c1_immutable a <=>
+         553648128 <= a /\ a < 553649416 \/
+         553652224 <= a /\ a < 553652529 \/
+         553656320 <= a /\ a < 553656476
+val c1_initialized_rw : thm =
+  |- forall a. c1_initialized_rw a <=> 553663920 <= a /\ a < 553664528
+val c1_reference_image : thm =
+  |- forall file_bytes initial_rw padding a.
+         c1_reference_image file_bytes initial_rw padding a =
+         (if c1_immutable (val a)
+          then file_bytes (val a - 553648128)
+          else if c1_initialized_rw (val a) then initial_rw a else padding a)
+val c1_full_image : thm =
+  |- forall m file_bytes initial_rw padding.
+         c1_full_image file_bytes initial_rw padding m <=>
+         (forall a.
+              c1_image_domain (val a)
+              ==> m a = c1_reference_image file_bytes initial_rw padding a)
+val c1_file_code : thm =
+  |- forall file_bytes.
+         c1_file_code file_bytes <=>
+         (forall i.
+              i < 22 ==> file_bytes (4368 + i) = EL i c1_crypto_caller_mc) /\
+         (forall i.
+              i < 6 ==> file_bytes (4144 + i) = EL i c1_crypto_plt_prefix)
+val c1_loaded_code : thm =
+  |- forall s.
+         c1_loaded_code s <=>
+         bytes_loaded s (word 553652496) c1_crypto_caller_mc /\
+         bytes_loaded s (word 553652272) c1_crypto_plt_prefix /\
+         bytes_loaded s (word 270800960) crypto_memcmp_mc
+val c1_got : thm =
+  |- forall s.
+         c1_got s <=>
+         read (memory :> bytes64 (word 553664472)) s = word 270800960
+val c1_call_slot : thm =
+  |- forall stackpointer a.
+         c1_call_slot stackpointer a <=>
+         assurance_region (word_sub stackpointer (word 16)) 8 a
+val c1_allowed_read : thm =
+  |- forall rp ordinary p q n stackpointer a.
+         c1_allowed_read rp ordinary stackpointer p q n a <=>
+         rp a /\
+         ordinary a /\
+         (assurance_region p n a \/
+          assurance_region q n a \/
+          c1_call_slot stackpointer a \/
+          assurance_region stackpointer 8 a \/
+          assurance_region (word 553664472) 8 a)
+val c1_allowed_write : thm =
+  |- forall wp ordinary stackpointer a.
+         c1_allowed_write wp ordinary stackpointer a <=>
+         wp a /\ ordinary a /\ c1_call_slot stackpointer a
+val c1_allowed_fetch : thm =
+  |- forall xp ordinary a.
+         c1_allowed_fetch xp ordinary a <=>
+         xp a /\
+         ordinary a /\
+         (assurance_region (word 553652496) 22 a \/
+          assurance_region (word 553652272) 6 a \/
+          assurance_region (word 270800960) 95 a)
+val c1_steps : thm = |- forall n. c1_steps n = 8 + bp_assurance_call_steps n
+val c1_frame : thm =
+  |- forall stackpointer.
+         c1_frame stackpointer =
+         MAYCHANGE [RIP; RSP; RAX; RDI; RSI; RDX; R10; R11] ,,
+         MAYCHANGE SOME_FLAGS ,,
+         MAYCHANGE [memory :> bytes (word_sub stackpointer (word 16),8)] ,,
+         MAYCHANGE [events]
+val c1_pre : thm =
+  |- forall ra a lib_file lib_rw lib_padding client_file client_rw client_padding m s wp rp xp ordinary p q n stackpointer.
+         c1_pre lib_file lib_rw lib_padding client_file client_rw
+         client_padding
+         stackpointer
+         ra
+         p
+         q
+         n
+         m
+         rp
+         wp
+         xp
+         ordinary
+         (s,a) <=>
+         n < 2 EXP 64 /\
+         16 <= val stackpointer /\
+         val stackpointer MOD 16 = 8 /\
+         val stackpointer + 8 < 2 EXP 64 /\
+         assurance_canonical48 (val ra) /\
+         ~(ra = word 553652496) /\
+         read RIP s = word 553652496 /\
+         read RSP s = stackpointer /\
+         read (memory :> bytes64 stackpointer) s = ra /\
+         C_ARGUMENTS [p; q; word n] s /\
+         read memory s = m /\
+         (read DF s <=> false) /\
+         ~bit 18 (read rflags s) /\
+         e5_normal_flags s /\
+         assurance_canonical48 (val (read ABI_FS_BASE a)) /\
+         fb_file_code lib_file /\
+         fb_full_image lib_file lib_rw lib_padding m /\
+         c1_file_code client_file /\
+         c1_full_image client_file client_rw client_padding m /\
+         c1_loaded_code s /\
+         c1_got s /\
+         (forall addr.
+              lw_image_domain addr
+              ==> rp addr /\
+                  ordinary addr /\
+                  (xp addr <=> lw_execute addr) /\
+                  (wp addr <=> lw_image_write addr)) /\
+         (forall addr.
+              c1_image_domain addr
+              ==> rp addr /\
+                  ordinary addr /\
+                  (xp addr <=> c1_image_execute addr) /\
+                  (wp addr <=> c1_image_write addr)) /\
+         assurance_span_ok (\a. rp a /\ ordinary a) (val p) n /\
+         assurance_span_ok (\a. rp a /\ ordinary a) (val q) n /\
+         assurance_span_ok (\a. rp a /\ ordinary a) (val stackpointer - 16) 8 /\
+         assurance_span_ok (\a. wp a /\ ordinary a) (val stackpointer - 16) 8 /\
+         assurance_span_ok (\a. rp a /\ ordinary a) (val stackpointer) 8 /\
+         assurance_span_ok (\a. rp a /\ ordinary a) 553664472 8 /\
+         assurance_span_ok (\a. xp a /\ ordinary a) 553652496 22 /\
+         assurance_span_ok (\a. xp a /\ ordinary a) 553652272 6 /\
+         assurance_span_ok (\a. xp a /\ ordinary a) 270800960 95 /\
+         (forall addr.
+              ~(assurance_region p n addr /\ c1_call_slot stackpointer addr)) /\
+         (forall addr.
+              ~(assurance_region q n addr /\ c1_call_slot stackpointer addr)) /\
+         (forall addr.
+              ~(assurance_region stackpointer 8 addr /\
+                c1_call_slot stackpointer addr))
+val c1_scalar_post : thm =
+  |- forall n p q m ra stackpointer s t.
+         c1_scalar_post stackpointer ra p q n m s t <=>
+         read RIP t = ra /\
+         val (read RSP t) = val stackpointer + 8 /\
+         read RAX t =
+         (if forall i.
+                 i < n ==> m (word_add p (word i)) = m (word_add q (word i))
+          then word 1
+          else word 0) /\
+         (forall addr.
+              ~c1_call_slot stackpointer (val addr)
+              ==> read memory t addr = m addr) /\
+         read (memory :> bytes64 stackpointer) t = ra /\
+         read RBX t = read RBX s /\
+         read RBP t = read RBP s /\
+         read R12 t = read R12 s /\
+         read R13 t = read R13 s /\
+         read R14 t = read R14 s /\
+         read R15 t = read R15 s /\
+         (read DF t <=> false) /\
+         c1_loaded_code t /\
+         c1_got t /\
+         c1_frame stackpointer s t
+val c1_public_post : thm =
+  |- forall stackpointer ra p q n m s a t.
+         c1_public_post stackpointer ra p q n m s a t <=>
+         c1_scalar_post stackpointer ra p q n m s (FST t) /\
+         SND t = a /\
+         abi_required_controls_preserved a (SND t)
+Warning: inventing type variables
+val c1_segment_policy : thm =
+  |- forall (remaining:?643236) rp p q n wp stackpointer xp ordinary target source.
+         (c1_segment_policy:(64)word->(64)word->(64)word->num->(num->bool)->(num->bool)->(num->bool)->(num->bool)->?643236->x86state->x86state->bool)
+         stackpointer
+         p
+         q
+         n
+         rp
+         wp
+         xp
+         ordinary
+         (remaining:?643236)
+         source
+         target <=>
+         assurance_step_policy
+         (c1_allowed_read rp ordinary stackpointer p q n)
+         (c1_allowed_write wp ordinary stackpointer)
+         (c1_allowed_fetch xp ordinary)
+         source
+         target /\
+         abi_all_decodes_caller_scalar source
+val c1_step_policy : thm =
+  |- forall stackpointer p q n rp wp xp ordinary remaining source target.
+         c1_step_policy stackpointer p q n rp wp xp ordinary remaining source
+         target <=>
+         c1_segment_policy stackpointer p q n rp wp xp ordinary remaining
+         source
+         target /\
+         (remaining = 1 ==> assurance_actual_ret 1 source target)
+val c1_prefix_frame : thm =
+  |- forall stackpointer.
+         c1_prefix_frame stackpointer =
+         MAYCHANGE [RIP; RSP] ,,
+         MAYCHANGE SOME_FLAGS ,,
+         MAYCHANGE [memory :> bytes (word_sub stackpointer (word 16),8)] ,,
+         MAYCHANGE [events]
+val c1_crypto_ready : thm =
+  |- forall lib_file rp xp ordinary a p n m q stackpointer s t.
+         c1_crypto_ready lib_file stackpointer p q n m rp xp ordinary s a t <=>
+         bp_e2_crypto_public_pre lib_file (read memory t) (read memory t)
+         (word_sub stackpointer (word 16))
+         (word 553652505)
+         p
+         q
+         n
+         (read memory t)
+         rp
+         xp
+         ordinary
+         (t,a) /\
+         (forall addr.
+              ~c1_call_slot stackpointer (val addr)
+              ==> read memory t addr = m addr) /\
+         (forall i.
+              i < n
+              ==> read memory t (word_add p (word i)) =
+                  m (word_add p (word i))) /\
+         (forall i.
+              i < n
+              ==> read memory t (word_add q (word i)) =
+                  m (word_add q (word i))) /\
+         read (memory :> bytes64 stackpointer) t =
+         read (memory :> bytes64 stackpointer) s /\
+         c1_loaded_code t /\
+         c1_got t /\
+         c1_prefix_frame stackpointer s t
+- : unit = ()
+val c1_checked_statement : term =
+  `forall lib_file lib_rw lib_padding client_file client_rw client_padding stackpointer ra p q n m rp wp xp ordinary s a.
+       c1_pre lib_file lib_rw lib_padding client_file client_rw
+       client_padding
+       stackpointer
+       ra
+       p
+       q
+       n
+       m
+       rp
+       wp
+       xp
+       ordinary
+       (s,a)
+       ==> assurance_checked_run (c1_steps n)
+           (c1_scalar_post stackpointer ra p q n m s)
+           (c1_step_policy stackpointer p q n rp wp xp ordinary)
+           s`
+val c1_interface_statement : term =
+  `forall lib_file lib_rw lib_padding client_file client_rw client_padding stackpointer ra p q n m rp wp xp ordinary s a.
+       c1_pre lib_file lib_rw lib_padding client_file client_rw
+       client_padding
+       stackpointer
+       ra
+       p
+       q
+       n
+       m
+       rp
+       wp
+       xp
+       ordinary
+       (s,a)
+       ==> eventually_n abi_caller_scalar_extended_step (c1_steps n)
+           (c1_public_post stackpointer ra p q n m s a)
+           (s,a)`
+val c1_normal_checked_statement : term =
+  `forall lib_file lib_rw lib_padding client_file client_rw client_padding stackpointer ra p q n m rp wp xp ordinary s a.
+       c1_pre lib_file lib_rw lib_padding client_file client_rw
+       client_padding
+       stackpointer
+       ra
+       p
+       q
+       n
+       m
+       rp
+       wp
+       xp
+       ordinary
+       (s,a)
+       ==> assurance_checked_run (c1_steps n)
+           (\t.
+                c1_scalar_post stackpointer ra p q n m s t /\
+                e5_normal_flags t)
+           (e5_normal_step_policy
+           (c1_step_policy stackpointer p q n rp wp xp ordinary))
+           s`
+val c1_rf_normal_checked_statement : term =
+  `forall lib_file lib_rw lib_padding client_file client_rw client_padding stackpointer ra p q n m rp wp xp ordinary s a.
+       c1_pre lib_file lib_rw lib_padding client_file client_rw
+       client_padding
+       stackpointer
+       ra
+       p
+       q
+       n
+       m
+       rp
+       wp
+       xp
+       ordinary
+       (s,a)
+       ==> e5_rf_checked_run (c1_steps n)
+           (\t.
+                c1_scalar_post stackpointer ra p q n m s t /\
+                e5_normal_flags t)
+           (e5_normal_step_policy
+           (c1_step_policy stackpointer p q n rp wp xp ordinary))
+           s`
+val c1_normal_interface_statement : term =
+  `forall lib_file lib_rw lib_padding client_file client_rw client_padding stackpointer ra p q n m rp wp xp ordinary s a.
+       c1_pre lib_file lib_rw lib_padding client_file client_rw
+       client_padding
+       stackpointer
+       ra
+       p
+       q
+       n
+       m
+       rp
+       wp
+       xp
+       ordinary
+       (s,a)
+       ==> eventually_n e5_rf_retired_extended_step (c1_steps n)
+           (\t.
+                c1_public_post stackpointer ra p q n m s a t /\
+                e5_normal_flags (FST t))
+           (s,a)`
+val c1_handoff_statement : term =
+  `forall lib_file lib_rw lib_padding client_file client_rw client_padding stackpointer ra p q n m rp wp xp ordinary s a.
+       c1_pre lib_file lib_rw lib_padding client_file client_rw
+       client_padding
+       stackpointer
+       ra
+       p
+       q
+       n
+       m
+       rp
+       wp
+       xp
+       ordinary
+       (s,a)
+       ==> assurance_checked_run 3
+           (c1_crypto_ready lib_file stackpointer p q n m rp xp ordinary s a)
+           (c1_segment_policy stackpointer p q n rp wp xp ordinary)
+           s`
+val c1_count_statement : term =
+  `forall n.
+       c1_steps n =
+       8 + (if n = 0 then 6 else if n = 16 then 15 else 7 * n + 10)`
+- : unit = ()
+val c1_stack_sub16_value_statement : term =
+  `forall stackpointer.
+       16 <= val stackpointer
+       ==> val (word_sub stackpointer (word 16)) = val stackpointer - 16`
+val c1_stack_alignment_statement : term =
+  `forall stackpointer.
+       16 <= val stackpointer /\ val stackpointer MOD 16 = 8
+       ==> val (word_sub stackpointer (word 16)) MOD 16 = 8`
+val c1_span_point_statement : term =
+  `forall P p n addr.
+       assurance_span_ok P (val p) n /\ assurance_region p n addr ==> P addr`
+val c1_span_word_add_region_statement : term =
+  `forall P p n i.
+       assurance_span_ok P (val p) n /\ i < n
+       ==> assurance_region p n (val (word_add p (word i)))`
+val c1_region_nonoverlapping_statement : term =
+  `forall p q n k.
+       val p + n <= 2 EXP 64 /\
+       val q + k <= 2 EXP 64 /\
+       (forall addr.
+            ~(assurance_region p n addr /\ assurance_region q k addr))
+       ==> nonoverlapping (p,n) (q,k)`
+val c1_nonoverlapping_region_disjoint_statement : term =
+  `forall p q n k.
+       val p + n <= 2 EXP 64 /\
+       val q + k <= 2 EXP 64 /\
+       nonoverlapping (p,n) (q,k)
+       ==> (forall addr.
+                ~(assurance_region p n addr /\ assurance_region q k addr))`
+val c1_writable_readonly_nonoverlapping_statement : term =
+  `forall wp ordinary p n q k.
+       assurance_span_ok (\addr. wp addr /\ ordinary addr) (val p) n /\
+       val q + k <= 2 EXP 64 /\
+       (forall addr. assurance_region q k addr ==> ~wp addr)
+       ==> nonoverlapping (p,n) (q,k)`
+val c1_library_rebind_statement : term =
+  `forall file_bytes initial_rw padding m current.
+       fb_full_image file_bytes initial_rw padding m /\
+       (forall a. fb_immutable (val a) ==> current a = m a)
+       ==> fb_full_image file_bytes current current current`
+val c1_library_immutable_readonly_statement : term =
+  `forall addr.
+       fb_immutable addr ==> lw_image_domain addr /\ ~lw_image_write addr`
+val c1_caller_readonly_region_statement : term =
+  `forall addr.
+       assurance_region (word 553652496) 22 addr
+       ==> c1_image_domain addr /\ ~c1_image_write addr`
+val c1_plt_readonly_region_statement : term =
+  `forall addr.
+       assurance_region (word 553652272) 6 addr
+       ==> c1_image_domain addr /\ ~c1_image_write addr`
+val c1_got_readonly_region_statement : term =
+  `forall addr.
+       assurance_region (word 553664472) 8 addr
+       ==> c1_image_domain addr /\ ~c1_image_write addr`
+val c1_crypto_readonly_region_statement : term =
+  `forall addr.
+       assurance_region (word 270800960) 95 addr
+       ==> lw_image_domain addr /\ ~lw_image_write addr`
+val c1_slot_read_span_statement : term =
+  `forall stackpointer p q n rp ordinary.
+       16 <= val stackpointer /\
+       assurance_span_ok (\addr. rp addr /\ ordinary addr)
+       (val stackpointer - 16)
+       8
+       ==> assurance_span_ok (c1_allowed_read rp ordinary stackpointer p q n)
+           (val stackpointer - 16)
+           8`
+val c1_slot_write_span_statement : term =
+  `forall stackpointer wp ordinary.
+       16 <= val stackpointer /\
+       assurance_span_ok (\addr. wp addr /\ ordinary addr)
+       (val stackpointer - 16)
+       8
+       ==> assurance_span_ok (c1_allowed_write wp ordinary stackpointer)
+           (val stackpointer - 16)
+           8`
+val c1_caller_fetch_span_statement : term =
+  `forall xp ordinary.
+       assurance_span_ok (\addr. xp addr /\ ordinary addr) 553652496 22
+       ==> assurance_span_ok (c1_allowed_fetch xp ordinary) 553652496 22`
+val c1_plt_fetch_span_statement : term =
+  `forall xp ordinary.
+       assurance_span_ok (\addr. xp addr /\ ordinary addr) 553652272 6
+       ==> assurance_span_ok (c1_allowed_fetch xp ordinary) 553652272 6`
+val c1_got_read_span_statement : term =
+  `forall rp ordinary stackpointer p q n.
+       assurance_span_ok (\addr. rp addr /\ ordinary addr) 553664472 8
+       ==> assurance_span_ok (c1_allowed_read rp ordinary stackpointer p q n)
+           553664472
+           8`
+val c1_library_slot_disjoint_statement : term =
+  `forall stackpointer wp ordinary.
+       16 <= val stackpointer /\
+       assurance_span_ok (\addr. wp addr /\ ordinary addr)
+       (val stackpointer - 16)
+       8 /\
+       (forall addr.
+            lw_image_domain addr ==> (wp addr <=> lw_image_write addr))
+       ==> (forall addr.
+                fb_immutable addr ==> ~c1_call_slot stackpointer addr)`
+val c1_slot_byte_nonoverlapping_statement : term =
+  `forall stackpointer addr.
+       16 <= val stackpointer /\ ~c1_call_slot stackpointer (val addr)
+       ==> nonoverlapping (addr,1) (word_sub stackpointer (word 16),8)`
+val c1_prefix_frame_byte_statement : term =
+  `forall stackpointer addr s t.
+       16 <= val stackpointer /\
+       ~c1_call_slot stackpointer (val addr) /\
+       c1_prefix_frame stackpointer s t
+       ==> read memory t addr = read memory s addr`
+val c1_prefix_frame_incoming_slot_statement : term =
+  `forall stackpointer s t.
+       16 <= val stackpointer /\
+       val stackpointer + 8 < 2 EXP 64 /\
+       c1_prefix_frame stackpointer s t
+       ==> read (memory :> bytes64 stackpointer) t =
+           read (memory :> bytes64 stackpointer) s`
+val c1_unchanged_buffer_statement : term =
+  `forall P p n stackpointer m t.
+       assurance_span_ok P (val p) n /\
+       (forall addr.
+            ~(assurance_region p n addr /\ c1_call_slot stackpointer addr)) /\
+       (forall addr.
+            ~c1_call_slot stackpointer (val addr)
+            ==> read memory t addr = m addr)
+       ==> (forall i.
+                i < n
+                ==> read memory t (word_add p (word i)) =
+                    m (word_add p (word i)))`
+- : unit = ()
+val C1_STACK_SUB16_VALUE : thm =
+  |- forall stackpointer.
+         16 <= val stackpointer
+         ==> val (word_sub stackpointer (word 16)) = val stackpointer - 16
+val C1_STACK_ALIGNMENT : thm =
+  |- forall stackpointer.
+         16 <= val stackpointer /\ val stackpointer MOD 16 = 8
+         ==> val (word_sub stackpointer (word 16)) MOD 16 = 8
+0..0..solved at 2
+val C1_SPAN_POINT : thm =
+  |- forall P p n addr.
+         assurance_span_ok P (val p) n /\ assurance_region p n addr
+         ==> P addr
+val C1_SPAN_WORD_ADD_REGION : thm =
+  |- forall P p n i.
+         assurance_span_ok P (val p) n /\ i < n
+         ==> assurance_region p n (val (word_add p (word i)))
+val C1_REGION_NONOVERLAPPING : thm =
+  |- forall p q n k.
+         val p + n <= 2 EXP 64 /\
+         val q + k <= 2 EXP 64 /\
+         (forall addr.
+              ~(assurance_region p n addr /\ assurance_region q k addr))
+         ==> nonoverlapping (p,n) (q,k)
+val C1_NONOVERLAPPING_REGION_DISJOINT : thm =
+  |- forall p q n k.
+         val p + n <= 2 EXP 64 /\
+         val q + k <= 2 EXP 64 /\
+         nonoverlapping (p,n) (q,k)
+         ==> (forall addr.
+                  ~(assurance_region p n addr /\ assurance_region q k addr))
+0..0..solved at 2
+0..0..0..2..6..15..solved at 35
+val C1_WRITABLE_READONLY_NONOVERLAPPING : thm =
+  |- forall wp ordinary p n q k.
+         assurance_span_ok (\addr. wp addr /\ ordinary addr) (val p) n /\
+         val q + k <= 2 EXP 64 /\
+         (forall addr. assurance_region q k addr ==> ~wp addr)
+         ==> nonoverlapping (p,n) (q,k)
+0..0..1..2..5..9..15..26..37..52..71..90..113..solved at 148
+val C1_LIBRARY_REBIND : thm =
+  |- forall file_bytes initial_rw padding m current.
+         fb_full_image file_bytes initial_rw padding m /\
+         (forall a. fb_immutable (val a) ==> current a = m a)
+         ==> fb_full_image file_bytes current current current
+val C1_LIBRARY_IMMUTABLE_READONLY : thm =
+  |- forall addr.
+         fb_immutable addr ==> lw_image_domain addr /\ ~lw_image_write addr
+val C1_CALLER_READONLY_REGION : thm =
+  |- forall addr.
+         assurance_region (word 553652496) 22 addr
+         ==> c1_image_domain addr /\ ~c1_image_write addr
+val C1_PLT_READONLY_REGION : thm =
+  |- forall addr.
+         assurance_region (word 553652272) 6 addr
+         ==> c1_image_domain addr /\ ~c1_image_write addr
+val C1_GOT_READONLY_REGION : thm =
+  |- forall addr.
+         assurance_region (word 553664472) 8 addr
+         ==> c1_image_domain addr /\ ~c1_image_write addr
+val C1_CRYPTO_READONLY_REGION : thm =
+  |- forall addr.
+         assurance_region (word 270800960) 95 addr
+         ==> lw_image_domain addr /\ ~lw_image_write addr
+0..0..solved at 2
+0..0..solved at 2
+0..0..solved at 4
+val C1_SLOT_READ_SPAN : thm =
+  |- forall stackpointer p q n rp ordinary.
+         16 <= val stackpointer /\
+         assurance_span_ok (\addr. rp addr /\ ordinary addr)
+         (val stackpointer - 16)
+         8
+         ==> assurance_span_ok
+             (c1_allowed_read rp ordinary stackpointer p q n)
+             (val stackpointer - 16)
+             8
+0..0..solved at 2
+0..0..solved at 2
+0..0..solved at 2
+val C1_SLOT_WRITE_SPAN : thm =
+  |- forall stackpointer wp ordinary.
+         16 <= val stackpointer /\
+         assurance_span_ok (\addr. wp addr /\ ordinary addr)
+         (val stackpointer - 16)
+         8
+         ==> assurance_span_ok (c1_allowed_write wp ordinary stackpointer)
+             (val stackpointer - 16)
+             8
+0..0..solved at 2
+0..0..solved at 2
+0..0..solved at 4
+val C1_CALLER_FETCH_SPAN : thm =
+  |- forall xp ordinary.
+         assurance_span_ok (\addr. xp addr /\ ordinary addr) 553652496 22
+         ==> assurance_span_ok (c1_allowed_fetch xp ordinary) 553652496 22
+0..0..solved at 2
+0..0..solved at 2
+0..0..solved at 3
+val C1_PLT_FETCH_SPAN : thm =
+  |- forall xp ordinary.
+         assurance_span_ok (\addr. xp addr /\ ordinary addr) 553652272 6
+         ==> assurance_span_ok (c1_allowed_fetch xp ordinary) 553652272 6
+0..0..solved at 2
+0..0..solved at 2
+0..0..solved at 2
+val C1_GOT_READ_SPAN : thm =
+  |- forall rp ordinary stackpointer p q n.
+         assurance_span_ok (\addr. rp addr /\ ordinary addr) 553664472 8
+         ==> assurance_span_ok
+             (c1_allowed_read rp ordinary stackpointer p q n)
+             553664472
+             8
+0..0..1..4..13..33..solved at 75
+0..0..0..2..6..15..solved at 35
+val C1_LIBRARY_SLOT_DISJOINT : thm =
+  |- forall stackpointer wp ordinary.
+         16 <= val stackpointer /\
+         assurance_span_ok (\addr. wp addr /\ ordinary addr)
+         (val stackpointer - 16)
+         8 /\
+         (forall addr.
+              lw_image_domain addr ==> (wp addr <=> lw_image_write addr))
+         ==> (forall addr.
+                  fb_immutable addr ==> ~c1_call_slot stackpointer addr)
+val C1_SLOT_BYTE_NONOVERLAPPING : thm =
+  |- forall stackpointer addr.
+         16 <= val stackpointer /\ ~c1_call_slot stackpointer (val addr)
+         ==> nonoverlapping (addr,1) (word_sub stackpointer (word 16),8)
+val C1_PREFIX_FRAME_BYTE : thm =
+  |- forall stackpointer addr s t.
+         16 <= val stackpointer /\
+         ~c1_call_slot stackpointer (val addr) /\
+         c1_prefix_frame stackpointer s t
+         ==> read memory t addr = read memory s addr
+val C1_PREFIX_FRAME_INCOMING_SLOT : thm =
+  |- forall stackpointer s t.
+         16 <= val stackpointer /\
+         val stackpointer + 8 < 2 EXP 64 /\
+         c1_prefix_frame stackpointer s t
+         ==> read (memory :> bytes64 stackpointer) t =
+             read (memory :> bytes64 stackpointer) s
+0..0..1..4..10..17..solved at 23
+val C1_UNCHANGED_BUFFER : thm =
+  |- forall P p n stackpointer m t.
+         assurance_span_ok P (val p) n /\
+         (forall addr.
+              ~(assurance_region p n addr /\ c1_call_slot stackpointer addr)) /\
+         (forall addr.
+              ~c1_call_slot stackpointer (val addr)
+              ==> read memory t addr = m addr)
+         ==> (forall i.
+                  i < n
+                  ==> read memory t (word_add p (word i)) =
+                      m (word_add p (word i)))
+- : unit = ()
+val c1_handoff_audit_goal : string -> term -> thm -> unit = <fun>
+C1_LIVE_CHECKED C1_STACK_SUB16_VALUE
+- : unit = ()
+C1_LIVE_CHECKED C1_STACK_ALIGNMENT
+- : unit = ()
+C1_LIVE_CHECKED C1_SPAN_POINT
+- : unit = ()
+C1_LIVE_CHECKED C1_SPAN_WORD_ADD_REGION
+- : unit = ()
+C1_LIVE_CHECKED C1_REGION_NONOVERLAPPING
+- : unit = ()
+C1_LIVE_CHECKED C1_NONOVERLAPPING_REGION_DISJOINT
+- : unit = ()
+C1_LIVE_CHECKED C1_WRITABLE_READONLY_NONOVERLAPPING
+- : unit = ()
+C1_LIVE_CHECKED C1_LIBRARY_REBIND
+- : unit = ()
+C1_LIVE_CHECKED C1_LIBRARY_IMMUTABLE_READONLY
+- : unit = ()
+C1_LIVE_CHECKED C1_CALLER_READONLY_REGION
+- : unit = ()
+C1_LIVE_CHECKED C1_PLT_READONLY_REGION
+- : unit = ()
+C1_LIVE_CHECKED C1_GOT_READONLY_REGION
+- : unit = ()
+C1_LIVE_CHECKED C1_CRYPTO_READONLY_REGION
+- : unit = ()
+C1_LIVE_CHECKED C1_SLOT_READ_SPAN
+- : unit = ()
+C1_LIVE_CHECKED C1_SLOT_WRITE_SPAN
+- : unit = ()
+C1_LIVE_CHECKED C1_CALLER_FETCH_SPAN
+- : unit = ()
+C1_LIVE_CHECKED C1_PLT_FETCH_SPAN
+- : unit = ()
+C1_LIVE_CHECKED C1_GOT_READ_SPAN
+- : unit = ()
+C1_LIVE_CHECKED C1_LIBRARY_SLOT_DISJOINT
+- : unit = ()
+C1_LIVE_CHECKED C1_SLOT_BYTE_NONOVERLAPPING
+- : unit = ()
+C1_LIVE_CHECKED C1_PREFIX_FRAME_BYTE
+- : unit = ()
+C1_LIVE_CHECKED C1_PREFIX_FRAME_INCOMING_SLOT
+- : unit = ()
+C1_LIVE_CHECKED C1_UNCHANGED_BUFFER
+- : unit = ()
+- : unit = ()
+val bp_reuse_decoded_step_statement : term =
+  `forall len inst s.
+       x86_decode s (read RIP s) (len,inst)
+       ==> x86 s =
+           (RIP := word_add (read RIP s) (word len) ,, x86_execute inst) s`
+val bp_reuse_riprel_jump_successor_statement : term =
+  `forall pc disp target e m s.
+       x86_decode s pc (6,JUMP Unconditional (Memop Quadword (Riprel disp))) /\
+       read RIP s = pc /\
+       read memory s = m /\
+       read events s = e /\
+       read (memory :> bytes64 (word_add (word_add pc (word 6)) disp)) s =
+       target
+       ==> (exists next. x86 s next) /\
+           (forall next.
+                x86 s next
+                ==> read RIP next = target /\
+                    read memory next = m /\
+                    read events next =
+                    APPEND
+                    [EventJump (word_add pc (word 6),target);
+                     EventLoad (word_add (word_add pc (word 6)) disp,8)]
+                    e /\
+                    (MAYCHANGE [RIP] ,, MAYCHANGE [events]) s next)`
+val bp_reuse_riprel_jump_checked_hop_statement : term =
+  `forall pc disp target e m rp xp s.
+       x86_decode s pc (6,JUMP Unconditional (Memop Quadword (Riprel disp))) /\
+       read RIP s = pc /\
+       read memory s = m /\
+       read events s = e /\
+       read (memory :> bytes64 (word_add (word_add pc (word 6)) disp)) s =
+       target /\
+       assurance_span_ok xp (val pc) 6 /\
+       assurance_span_ok rp (val (word_add (word_add pc (word 6)) disp)) 8
+       ==> assurance_checked_run 1
+           (\next.
+                read RIP next = target /\
+                read memory next = m /\
+                read events next =
+                APPEND
+                [EventJump (word_add pc (word 6),target);
+                 EventLoad (word_add (word_add pc (word 6)) disp,8)]
+                e /\
+                (MAYCHANGE [RIP] ,, MAYCHANGE [events]) s next)
+           (\remaining source successor.
+                assurance_step_policy rp (\a. false) xp source successor /\
+                x86_decode source (read RIP source)
+                (6,JUMP Unconditional (Memop Quadword (Riprel disp))) /\
+                read RIP successor = target /\
+                read memory successor = read memory source /\
+                (MAYCHANGE [RIP] ,, MAYCHANGE [events]) source successor)
+           s`
+val bp_reuse_riprel_jump_omitted_statement : term =
+  `forall pc disp s a next a'.
+       x86_decode s pc (6,JUMP Unconditional (Memop Quadword (Riprel disp))) /\
+       read RIP s = pc /\
+       abi_caller_scalar_extended_step (s,a) (next,a')
+       ==> a' = a`
+val bp_c1_plt_decode_statement : term =
+  `forall s pc.
+       bytes_loaded s (word pc) c1_crypto_plt_prefix
+       ==> x86_decode s (word pc)
+           (6,JUMP Unconditional (Memop Quadword (Riprel (word 12194))))`
+val bp_c1_plt_checked_hop_statement : term =
+  `forall e m rp xp s.
+       bytes_loaded s (word 553652272) c1_crypto_plt_prefix /\
+       read RIP s = word 553652272 /\
+       read memory s = m /\
+       read events s = e /\
+       read (memory :> bytes64 (word 553664472)) s = word 270800960 /\
+       assurance_span_ok xp 553652272 6 /\
+       assurance_span_ok rp 553664472 8
+       ==> assurance_canonical48 (val (word 270800960)) /\
+           assurance_checked_run 1
+           (\next.
+                read RIP next = word 270800960 /\
+                read memory next = m /\
+                read events next =
+                APPEND
+                [EventJump (word 553652278,word 270800960);
+                 EventLoad (word 553664472,8)]
+                e /\
+                (MAYCHANGE [RIP] ,, MAYCHANGE [events]) s next)
+           (\remaining source successor.
+                assurance_step_policy rp (\a. false) xp source successor /\
+                x86_decode source (read RIP source)
+                (6,JUMP Unconditional (Memop Quadword (Riprel (word 12194)))) /\
+                read RIP successor = word 270800960 /\
+                read memory successor = read memory source /\
+                (MAYCHANGE [RIP] ,, MAYCHANGE [events]) source successor)
+           s`
+- : unit = ()
+0..0..1..2..3..4..5..11..21..31..51..71..91..131..171..211..280..349..418..solved at 601
+0..0..0..solved at 3
+val BP_REUSE_DECODED_STEP : thm =
+  |- forall len inst s.
+         x86_decode s (read RIP s) (len,inst)
+         ==> x86 s =
+             (RIP := word_add (read RIP s) (word len) ,, x86_execute inst) s
+- : unit = ()
+val BP_LINKAGE_PRINT4 : string -> (string * thm) list * term -> goalstate =
+  <fun>
+0..0..solved at 2
+0..0..0..0..0..solved at 5
+val BP_REUSE_RIPREL_JUMP_SUCCESSOR : thm =
+  |- forall pc disp target e m s.
+         x86_decode s pc
+         (6,JUMP Unconditional (Memop Quadword (Riprel disp))) /\
+         read RIP s = pc /\
+         read memory s = m /\
+         read events s = e /\
+         read (memory :> bytes64 (word_add (word_add pc (word 6)) disp)) s =
+         target
+         ==> (exists next. x86 s next) /\
+             (forall next.
+                  x86 s next
+                  ==> read RIP next = target /\
+                      read memory next = m /\
+                      read events next =
+                      APPEND
+                      [EventJump (word_add pc (word 6),target);
+                       EventLoad (word_add (word_add pc (word 6)) disp,8)]
+                      e /\
+                      (MAYCHANGE [RIP] ,, MAYCHANGE [events]) s next)
+0..0..solved at 2
+0..0..1..solved at 4
+0..0..1..solved at 4
+0..0..1..solved at 4
+0..0..1..solved at 4
+val BP_REUSE_RIPREL_JUMP_CHECKED_HOP : thm =
+  |- forall pc disp target e m rp xp s.
+         x86_decode s pc
+         (6,JUMP Unconditional (Memop Quadword (Riprel disp))) /\
+         read RIP s = pc /\
+         read memory s = m /\
+         read events s = e /\
+         read (memory :> bytes64 (word_add (word_add pc (word 6)) disp)) s =
+         target /\
+         assurance_span_ok xp (val pc) 6 /\
+         assurance_span_ok rp (val (word_add (word_add pc (word 6)) disp)) 8
+         ==> assurance_checked_run 1
+             (\next.
+                  read RIP next = target /\
+                  read memory next = m /\
+                  read events next =
+                  APPEND
+                  [EventJump (word_add pc (word 6),target);
+                   EventLoad (word_add (word_add pc (word 6)) disp,8)]
+                  e /\
+                  (MAYCHANGE [RIP] ,, MAYCHANGE [events]) s next)
+             (\remaining source successor.
+                  assurance_step_policy rp (\a. false) xp source successor /\
+                  x86_decode source (read RIP source)
+                  (6,JUMP Unconditional (Memop Quadword (Riprel disp))) /\
+                  read RIP successor = target /\
+                  read memory successor = read memory source /\
+                  (MAYCHANGE [RIP] ,, MAYCHANGE [events]) source successor)
+             s
+0..0..solved at 2
+0..0..1..2..solved at 6
+val BP_REUSE_RIPREL_JUMP_OMITTED : thm =
+  |- forall pc disp s a next a'.
+         x86_decode s pc
+         (6,JUMP Unconditional (Memop Quadword (Riprel disp))) /\
+         read RIP s = pc /\
+         abi_caller_scalar_extended_step (s,a) (next,a')
+         ==> a' = a
+- : unit = ()
+val BP_C1_PLT_RAW_EXEC : thm * thm option array =
+  (|- LENGTH c1_crypto_plt_prefix = 6,
+   [|Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_plt_prefix
+             ==> x86_decode s (word pc)
+                 (6,
+                  JUMP Unconditional
+                  (r1_near_operand64
+                  (Memop Doubleword (Riprel (word 12194)))));
+     None; None; None; None; None|])
+val BP_C1_PLT_EXEC : thm * thm option array =
+  (|- LENGTH c1_crypto_plt_prefix = 6,
+   [|Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_plt_prefix
+             ==> x86_decode s (word pc)
+                 (6,
+                  JUMP Unconditional (Memop Quadword (Riprel (word 12194))));
+     None; None; None; None; None|])
+val BP_C1_PLT_DECODE : thm =
+  |- forall s pc.
+         bytes_loaded s (word pc) c1_crypto_plt_prefix
+         ==> x86_decode s (word pc)
+             (6,JUMP Unconditional (Memop Quadword (Riprel (word 12194))))
+0..0..1..solved at 4
+val BP_C1_PLT_CHECKED_HOP : thm =
+  |- forall e m rp xp s.
+         bytes_loaded s (word 553652272) c1_crypto_plt_prefix /\
+         read RIP s = word 553652272 /\
+         read memory s = m /\
+         read events s = e /\
+         read (memory :> bytes64 (word 553664472)) s = word 270800960 /\
+         assurance_span_ok xp 553652272 6 /\
+         assurance_span_ok rp 553664472 8
+         ==> assurance_canonical48 (val (word 270800960)) /\
+             assurance_checked_run 1
+             (\next.
+                  read RIP next = word 270800960 /\
+                  read memory next = m /\
+                  read events next =
+                  APPEND
+                  [EventJump (word 553652278,word 270800960);
+                   EventLoad (word 553664472,8)]
+                  e /\
+                  (MAYCHANGE [RIP] ,, MAYCHANGE [events]) s next)
+             (\remaining source successor.
+                  assurance_step_policy rp (\a. false) xp source successor /\
+                  x86_decode source (read RIP source)
+                  (6,
+                   JUMP Unconditional (Memop Quadword (Riprel (word 12194)))) /\
+                  read RIP successor = word 270800960 /\
+                  read memory successor = read memory source /\
+                  (MAYCHANGE [RIP] ,, MAYCHANGE [events]) source successor)
+             s
+- : unit = ()
+val bp_reuse_linkage_targets : (string * term * thm) list =
+  [("BP_REUSE_DECODED_STEP",
+    `forall len inst s.
+         x86_decode s (read RIP s) (len,inst)
+         ==> x86 s =
+             (RIP := word_add (read RIP s) (word len) ,, x86_execute inst) s`,
+    |- forall len inst s.
+           x86_decode s (read RIP s) (len,inst)
+           ==> x86 s =
+               (RIP := word_add (read RIP s) (word len) ,, x86_execute inst)
+               s);
+   ("BP_REUSE_RIPREL_JUMP_SUCCESSOR",
+    `forall pc disp target e m s.
+         x86_decode s pc
+         (6,JUMP Unconditional (Memop Quadword (Riprel disp))) /\
+         read RIP s = pc /\
+         read memory s = m /\
+         read events s = e /\
+         read (memory :> bytes64 (word_add (word_add pc (word 6)) disp)) s =
+         target
+         ==> (exists next. x86 s next) /\
+             (forall next.
+                  x86 s next
+                  ==> read RIP next = target /\
+                      read memory next = m /\
+                      read events next =
+                      APPEND
+                      [EventJump (word_add pc (word 6),target);
+                       EventLoad (word_add (word_add pc (word 6)) disp,8)]
+                      e /\
+                      (MAYCHANGE [RIP] ,, MAYCHANGE [events]) s next)`,
+    |- forall pc disp target e m s.
+           x86_decode s pc
+           (6,JUMP Unconditional (Memop Quadword (Riprel disp))) /\
+           read RIP s = pc /\
+           read memory s = m /\
+           read events s = e /\
+           read (memory :> bytes64 (word_add (word_add pc (word 6)) disp)) s =
+           target
+           ==> (exists next. x86 s next) /\
+               (forall next.
+                    x86 s next
+                    ==> read RIP next = target /\
+                        read memory next = m /\
+                        read events next =
+                        APPEND
+                        [EventJump (word_add pc (word 6),target);
+                         EventLoad (word_add (word_add pc (word 6)) disp,8)]
+                        e /\
+                        (MAYCHANGE [RIP] ,, MAYCHANGE [events]) s next));
+   ("BP_REUSE_RIPREL_JUMP_CHECKED_HOP",
+    `forall pc disp target e m rp xp s.
+         x86_decode s pc
+         (6,JUMP Unconditional (Memop Quadword (Riprel disp))) /\
+         read RIP s = pc /\
+         read memory s = m /\
+         read events s = e /\
+         read (memory :> bytes64 (word_add (word_add pc (word 6)) disp)) s =
+         target /\
+         assurance_span_ok xp (val pc) 6 /\
+         assurance_span_ok rp (val (word_add (word_add pc (word 6)) disp)) 8
+         ==> assurance_checked_run 1
+             (\next.
+                  read RIP next = target /\
+                  read memory next = m /\
+                  read events next =
+                  APPEND
+                  [EventJump (word_add pc (word 6),target);
+                   EventLoad (word_add (word_add pc (word 6)) disp,8)]
+                  e /\
+                  (MAYCHANGE [RIP] ,, MAYCHANGE [events]) s next)
+             (\remaining source successor.
+                  assurance_step_policy rp (\a. false) xp source successor /\
+                  x86_decode source (read RIP source)
+                  (6,JUMP Unconditional (Memop Quadword (Riprel disp))) /\
+                  read RIP successor = target /\
+                  read memory successor = read memory source /\
+                  (MAYCHANGE [RIP] ,, MAYCHANGE [events]) source successor)
+             s`,
+    |- forall pc disp target e m rp xp s.
+           x86_decode s pc
+           (6,JUMP Unconditional (Memop Quadword (Riprel disp))) /\
+           read RIP s = pc /\
+           read memory s = m /\
+           read events s = e /\
+           read (memory :> bytes64 (word_add (word_add pc (word 6)) disp)) s =
+           target /\
+           assurance_span_ok xp (val pc) 6 /\
+           assurance_span_ok rp (val (word_add (word_add pc (word 6)) disp))
+           8
+           ==> assurance_checked_run 1
+               (\next.
+                    read RIP next = target /\
+                    read memory next = m /\
+                    read events next =
+                    APPEND
+                    [EventJump (word_add pc (word 6),target);
+                     EventLoad (word_add (word_add pc (word 6)) disp,8)]
+                    e /\
+                    (MAYCHANGE [RIP] ,, MAYCHANGE [events]) s next)
+               (\remaining source successor.
+                    assurance_step_policy rp (\a. false) xp source successor /\
+                    x86_decode source (read RIP source)
+                    (6,JUMP Unconditional (Memop Quadword (Riprel disp))) /\
+                    read RIP successor = target /\
+                    read memory successor = read memory source /\
+                    (MAYCHANGE [RIP] ,, MAYCHANGE [events]) source successor)
+               s);
+   ("BP_REUSE_RIPREL_JUMP_OMITTED",
+    `forall pc disp s a next a'.
+         x86_decode s pc
+         (6,JUMP Unconditional (Memop Quadword (Riprel disp))) /\
+         read RIP s = pc /\
+         abi_caller_scalar_extended_step (s,a) (next,a')
+         ==> a' = a`,
+    |- forall pc disp s a next a'.
+           x86_decode s pc
+           (6,JUMP Unconditional (Memop Quadword (Riprel disp))) /\
+           read RIP s = pc /\
+           abi_caller_scalar_extended_step (s,a) (next,a')
+           ==> a' = a);
+   ("BP_C1_PLT_DECODE",
+    `forall s pc.
+         bytes_loaded s (word pc) c1_crypto_plt_prefix
+         ==> x86_decode s (word pc)
+             (6,JUMP Unconditional (Memop Quadword (Riprel (word 12194))))`,
+    |- forall s pc.
+           bytes_loaded s (word pc) c1_crypto_plt_prefix
+           ==> x86_decode s (word pc)
+               (6,JUMP Unconditional (Memop Quadword (Riprel (word 12194)))));
+   ("BP_C1_PLT_CHECKED_HOP",
+    `forall e m rp xp s.
+         bytes_loaded s (word 553652272) c1_crypto_plt_prefix /\
+         read RIP s = word 553652272 /\
+         read memory s = m /\
+         read events s = e /\
+         read (memory :> bytes64 (word 553664472)) s = word 270800960 /\
+         assurance_span_ok xp 553652272 6 /\
+         assurance_span_ok rp 553664472 8
+         ==> assurance_canonical48 (val (word 270800960)) /\
+             assurance_checked_run 1
+             (\next.
+                  read RIP next = word 270800960 /\
+                  read memory next = m /\
+                  read events next =
+                  APPEND
+                  [EventJump (word 553652278,word 270800960);
+                   EventLoad (word 553664472,8)]
+                  e /\
+                  (MAYCHANGE [RIP] ,, MAYCHANGE [events]) s next)
+             (\remaining source successor.
+                  assurance_step_policy rp (\a. false) xp source successor /\
+                  x86_decode source (read RIP source)
+                  (6,
+                   JUMP Unconditional (Memop Quadword (Riprel (word 12194)))) /\
+                  read RIP successor = word 270800960 /\
+                  read memory successor = read memory source /\
+                  (MAYCHANGE [RIP] ,, MAYCHANGE [events]) source successor)
+             s`,
+    |- forall e m rp xp s.
+           bytes_loaded s (word 553652272) c1_crypto_plt_prefix /\
+           read RIP s = word 553652272 /\
+           read memory s = m /\
+           read events s = e /\
+           read (memory :> bytes64 (word 553664472)) s = word 270800960 /\
+           assurance_span_ok xp 553652272 6 /\
+           assurance_span_ok rp 553664472 8
+           ==> assurance_canonical48 (val (word 270800960)) /\
+               assurance_checked_run 1
+               (\next.
+                    read RIP next = word 270800960 /\
+                    read memory next = m /\
+                    read events next =
+                    APPEND
+                    [EventJump (word 553652278,word 270800960);
+                     EventLoad (word 553664472,8)]
+                    e /\
+                    (MAYCHANGE [RIP] ,, MAYCHANGE [events]) s next)
+               (\remaining source successor.
+                    assurance_step_policy rp (\a. false) xp source successor /\
+                    x86_decode source (read RIP source)
+                    (6,
+                     JUMP Unconditional
+                     (Memop Quadword (Riprel (word 12194)))) /\
+                    read RIP successor = word 270800960 /\
+                    read memory successor = read memory source /\
+                    (MAYCHANGE [RIP] ,, MAYCHANGE [events]) source successor)
+               s)]
+LINKAGE_TARGET_CHECKED BP_REUSE_DECODED_STEP
+LINKAGE_TARGET_CHECKED BP_REUSE_RIPREL_JUMP_SUCCESSOR
+LINKAGE_TARGET_CHECKED BP_REUSE_RIPREL_JUMP_CHECKED_HOP
+LINKAGE_TARGET_CHECKED BP_REUSE_RIPREL_JUMP_OMITTED
+LINKAGE_TARGET_CHECKED BP_C1_PLT_DECODE
+LINKAGE_TARGET_CHECKED BP_C1_PLT_CHECKED_HOP
+- : unit = ()
+- : unit = ()
+val c1_app_event_policy_mono_statement : term =
+  `forall rp0 wp0 rp wp e.
+       (forall addr. rp0 addr ==> rp addr) /\
+       (forall addr. wp0 addr ==> wp addr) /\
+       assurance_event_policy rp0 wp0 e
+       ==> assurance_event_policy rp wp e`
+val c1_app_all_policy_mono_statement : term =
+  `forall P Q d. (forall e. P e ==> Q e) /\ ALL P d ==> ALL Q d`
+val c1_app_step_policy_mono_statement : term =
+  `forall rp0 wp0 xp0 rp wp xp source target.
+       (forall addr. rp0 addr ==> rp addr) /\
+       (forall addr. wp0 addr ==> wp addr) /\
+       (forall addr. xp0 addr ==> xp addr) /\
+       assurance_step_policy rp0 wp0 xp0 source target
+       ==> assurance_step_policy rp wp xp source target`
+val c1_crypto_read_inclusion_statement : term =
+  `forall stackpointer p q n rp ordinary addr.
+       bp_e2_crypto_allowed_read rp ordinary p q n
+       (word_sub stackpointer (word 16))
+       addr
+       ==> c1_allowed_read rp ordinary stackpointer p q n addr`
+val c1_crypto_write_inclusion_statement : term =
+  `forall stackpointer wp ordinary addr.
+       bp_e2_crypto_allowed_write addr
+       ==> c1_allowed_write wp ordinary stackpointer addr`
+val c1_crypto_fetch_inclusion_statement : term =
+  `forall xp ordinary addr.
+       bp_e2_crypto_allowed_fetch xp ordinary 270800960 addr
+       ==> c1_allowed_fetch xp ordinary addr`
+val c1_crypto_interface_application_statement : term =
+  `forall lib_file stackpointer p q n m rp xp ordinary initial a entry.
+       c1_crypto_ready lib_file stackpointer p q n m rp xp ordinary initial a
+       entry
+       ==> assurance_checked_run (bp_assurance_call_steps n)
+           (bp_assurance_call_post 270800960
+            (word_sub stackpointer (word 16))
+            (word 553652505)
+            p
+            q
+            n
+            (read events entry)
+            (read memory entry)
+           entry)
+           (\k source target.
+                assurance_zero_step
+                (bp_e2_crypto_allowed_read rp ordinary p q n
+                (word_sub stackpointer (word 16)))
+                bp_e2_crypto_allowed_write
+                (bp_e2_crypto_allowed_fetch xp ordinary 270800960)
+                k
+                source
+                target /\
+                abi_all_decodes_caller_scalar source)
+           entry`
+val c1_crypto_policy_widen_statement : term =
+  `forall stackpointer p q n rp wp xp ordinary remaining source target.
+       assurance_zero_step
+       (bp_e2_crypto_allowed_read rp ordinary p q n
+       (word_sub stackpointer (word 16)))
+       bp_e2_crypto_allowed_write
+       (bp_e2_crypto_allowed_fetch xp ordinary 270800960)
+       remaining
+       source
+       target /\
+       abi_all_decodes_caller_scalar source
+       ==> c1_segment_policy stackpointer p q n rp wp xp ordinary remaining
+           source
+           target`
+val c1_crypto_segment_application_statement : term =
+  `forall lib_file stackpointer p q n m rp wp xp ordinary initial a entry.
+       c1_crypto_ready lib_file stackpointer p q n m rp xp ordinary initial a
+       entry
+       ==> assurance_checked_run (bp_assurance_call_steps n)
+           (bp_assurance_call_post 270800960
+            (word_sub stackpointer (word 16))
+            (word 553652505)
+            p
+            q
+            n
+            (read events entry)
+            (read memory entry)
+           entry)
+           (c1_segment_policy stackpointer p q n rp wp xp ordinary)
+           entry`
+- : unit = ()
+0..0..1..2..5..12..19..solved at 27
+0..0..1..2..5..12..19..solved at 27
+val C1_APP_EVENT_POLICY_MONO : thm =
+  |- forall rp0 wp0 rp wp e.
+         (forall addr. rp0 addr ==> rp addr) /\
+         (forall addr. wp0 addr ==> wp addr) /\
+         assurance_event_policy rp0 wp0 e
+         ==> assurance_event_policy rp wp e
+0..0..2..solved at 5
+0..0..2..solved at 6
+0..0..solved at 3
+0..0..solved at 3
+0..0..1..solved at 4
+0..0..solved at 2
+val C1_APP_ALL_POLICY_MONO : thm =
+  |- forall P Q d. (forall e. P e ==> Q e) /\ ALL P d ==> ALL Q d
+0..0..1..2..5..15..27..solved at 35
+0..0..1..2..3..11..21..34..65..99..134..179..224..285..419..569..729..991..1263..1567..1958..2381..2825..3456..4108..4800..5763..6766..7799..solved at 7907
+0..0..1..2..5..15..27..solved at 35
+val C1_APP_STEP_POLICY_MONO : thm =
+  |- forall rp0 wp0 xp0 rp wp xp source target.
+         (forall addr. rp0 addr ==> rp addr) /\
+         (forall addr. wp0 addr ==> wp addr) /\
+         (forall addr. xp0 addr ==> xp addr) /\
+         assurance_step_policy rp0 wp0 xp0 source target
+         ==> assurance_step_policy rp wp xp source target
+0..0..solved at 2
+0..0..solved at 2
+0..0..solved at 6
+0..0..solved at 2
+0..0..solved at 2
+0..0..solved at 5
+0..0..solved at 2
+0..0..solved at 2
+0..0..solved at 4
+val C1_CRYPTO_READ_INCLUSION : thm =
+  |- forall stackpointer p q n rp ordinary addr.
+         bp_e2_crypto_allowed_read rp ordinary p q n
+         (word_sub stackpointer (word 16))
+         addr
+         ==> c1_allowed_read rp ordinary stackpointer p q n addr
+val C1_CRYPTO_WRITE_INCLUSION : thm =
+  |- forall stackpointer wp ordinary addr.
+         bp_e2_crypto_allowed_write addr
+         ==> c1_allowed_write wp ordinary stackpointer addr
+0..0..solved at 2
+0..0..solved at 2
+0..0..solved at 2
+val C1_CRYPTO_FETCH_INCLUSION : thm =
+  |- forall xp ordinary addr.
+         bp_e2_crypto_allowed_fetch xp ordinary 270800960 addr
+         ==> c1_allowed_fetch xp ordinary addr
+val C1_CRYPTO_INTERFACE_APPLICATION : thm =
+  |- forall lib_file stackpointer p q n m rp xp ordinary initial a entry.
+         c1_crypto_ready lib_file stackpointer p q n m rp xp ordinary initial
+         a
+         entry
+         ==> assurance_checked_run (bp_assurance_call_steps n)
+             (bp_assurance_call_post 270800960
+              (word_sub stackpointer (word 16))
+              (word 553652505)
+              p
+              q
+              n
+              (read events entry)
+              (read memory entry)
+             entry)
+             (\k source target.
+                  assurance_zero_step
+                  (bp_e2_crypto_allowed_read rp ordinary p q n
+                  (word_sub stackpointer (word 16)))
+                  bp_e2_crypto_allowed_write
+                  (bp_e2_crypto_allowed_fetch xp ordinary 270800960)
+                  k
+                  source
+                  target /\
+                  abi_all_decodes_caller_scalar source)
+             entry
+0..0..1..solved at 4
+0..0..1..solved at 4
+0..0..1..solved at 4
+val C1_CRYPTO_POLICY_WIDEN : thm =
+  |- forall stackpointer p q n rp wp xp ordinary remaining source target.
+         assurance_zero_step
+         (bp_e2_crypto_allowed_read rp ordinary p q n
+         (word_sub stackpointer (word 16)))
+         bp_e2_crypto_allowed_write
+         (bp_e2_crypto_allowed_fetch xp ordinary 270800960)
+         remaining
+         source
+         target /\
+         abi_all_decodes_caller_scalar source
+         ==> c1_segment_policy stackpointer p q n rp wp xp ordinary remaining
+             source
+             target
+val C1_CRYPTO_SEGMENT_APPLICATION : thm =
+  |- forall lib_file stackpointer p q n m rp wp xp ordinary initial a entry.
+         c1_crypto_ready lib_file stackpointer p q n m rp xp ordinary initial
+         a
+         entry
+         ==> assurance_checked_run (bp_assurance_call_steps n)
+             (bp_assurance_call_post 270800960
+              (word_sub stackpointer (word 16))
+              (word 553652505)
+              p
+              q
+              n
+              (read events entry)
+              (read memory entry)
+             entry)
+             (c1_segment_policy stackpointer p q n rp wp xp ordinary)
+             entry
+- : unit = ()
+val c1_application_audit_goal : string -> term -> thm -> unit = <fun>
+C1_APP_LIVE_CHECKED C1_APP_EVENT_POLICY_MONO
+- : unit = ()
+C1_APP_LIVE_CHECKED C1_APP_ALL_POLICY_MONO
+- : unit = ()
+C1_APP_LIVE_CHECKED C1_APP_STEP_POLICY_MONO
+- : unit = ()
+C1_APP_LIVE_CHECKED C1_CRYPTO_READ_INCLUSION
+- : unit = ()
+C1_APP_LIVE_CHECKED C1_CRYPTO_WRITE_INCLUSION
+- : unit = ()
+C1_APP_LIVE_CHECKED C1_CRYPTO_FETCH_INCLUSION
+- : unit = ()
+C1_APP_LIVE_CHECKED C1_CRYPTO_INTERFACE_APPLICATION
+- : unit = ()
+C1_APP_LIVE_CHECKED C1_CRYPTO_POLICY_WIDEN
+- : unit = ()
+C1_APP_LIVE_CHECKED C1_CRYPTO_SEGMENT_APPLICATION
+- : unit = ()
+- : unit = ()
+- : unit = ()
+val c1_crypto_public_frame : thm =
+  |- c1_crypto_public_frame =
+     MAYCHANGE [RIP; RSP; RAX; RDI; RSI; RDX; R10; R11] ,,
+     MAYCHANGE SOME_FLAGS ,,
+     MAYCHANGE [events]
+val c1_crypto_completed : thm =
+  |- forall lib_file m rp xp ordinary initial a stackpointer p q n returned.
+         c1_crypto_completed lib_file stackpointer p q n m rp xp ordinary
+         initial
+         a
+         returned <=>
+         (exists entry.
+              c1_crypto_ready lib_file stackpointer p q n m rp xp ordinary
+              initial
+              a
+              entry /\
+              bp_assurance_call_post 270800960
+              (word_sub stackpointer (word 16))
+              (word 553652505)
+              p
+              q
+              n
+              (read events entry)
+              (read memory entry)
+              entry
+              returned)
+- : unit = ()
+val c1_completion_memory_slot_transport_statement : term =
+  `forall s t stackpointer.
+       read memory t = read memory s
+       ==> read (memory :> bytes64 stackpointer) t =
+           read (memory :> bytes64 stackpointer) s`
+val c1_completion_memory_code_got_transport_statement : term =
+  `forall s t.
+       read memory t = read memory s
+       ==> (c1_loaded_code t <=> c1_loaded_code s) /\ (c1_got t <=> c1_got s)`
+val c1_prefix_frame_included_statement : term =
+  `forall stackpointer.
+       c1_prefix_frame stackpointer subsumed c1_frame stackpointer`
+val c1_crypto_public_frame_included_statement : term =
+  `forall stackpointer. c1_crypto_public_frame subsumed c1_frame stackpointer`
+val c1_frame_idempotent_statement : term =
+  `forall stackpointer.
+       c1_frame stackpointer ,, c1_frame stackpointer = c1_frame stackpointer`
+val c1_crypto_frame_compose_statement : term =
+  `forall stackpointer initial entry returned.
+       c1_prefix_frame stackpointer initial entry /\
+       c1_crypto_public_frame entry returned
+       ==> c1_frame stackpointer initial returned`
+val c1_frame_saved_preserved_statement : term =
+  `forall stackpointer s t.
+       c1_frame stackpointer s t
+       ==> read RBX t = read RBX s /\
+           read RBP t = read RBP s /\
+           read R12 t = read R12 s /\
+           read R13 t = read R13 s /\
+           read R14 t = read R14 s /\
+           read R15 t = read R15 s /\
+           (read DF t <=> read DF s) /\
+           (bit 18 (read rflags t) <=> bit 18 (read rflags s))`
+val c1_crypto_result_transport_statement : term =
+  `forall stackpointer p q n m initial entry returned lib_file rp xp ordinary a.
+       c1_crypto_ready lib_file stackpointer p q n m rp xp ordinary initial a
+       entry /\
+       bp_assurance_call_post 270800960 (word_sub stackpointer (word 16))
+       (word 553652505)
+       p
+       q
+       n
+       (read events entry)
+       (read memory entry)
+       entry
+       returned
+       ==> read RAX returned =
+           (if forall i.
+                   i < n
+                   ==> m (word_add p (word i)) = m (word_add q (word i))
+            then word 0
+            else word 1)`
+val c1_crypto_result_01_statement : term =
+  `forall b result.
+       result = (if b then word 0 else word 1)
+       ==> (result = word 0 \/ result = word 1) /\ (result = word 0 <=> b)`
+val c1_crypto_return_stack_statement : term =
+  `forall stackpointer returned.
+       16 <= val stackpointer /\
+       val (read RSP returned) = val (word_sub stackpointer (word 16)) + 8
+       ==> read RSP returned = word_sub stackpointer (word 8)`
+val c1_incoming_read_span_statement : term =
+  `forall rp ordinary stackpointer p q n.
+       assurance_span_ok (\addr. rp addr /\ ordinary addr) (val stackpointer)
+       8
+       ==> assurance_span_ok (c1_allowed_read rp ordinary stackpointer p q n)
+           (val stackpointer)
+           8`
+val c1_crypto_completed_facts_statement : term =
+  `forall lib_file stackpointer p q n m rp xp ordinary initial a returned.
+       c1_crypto_completed lib_file stackpointer p q n m rp xp ordinary
+       initial
+       a
+       returned
+       ==> read RIP returned = word 553652505 /\
+           val (read RSP returned) =
+           val (word_sub stackpointer (word 16)) + 8 /\
+           read RAX returned =
+           (if forall i.
+                   i < n
+                   ==> m (word_add p (word i)) = m (word_add q (word i))
+            then word 0
+            else word 1) /\
+           (forall addr.
+                ~c1_call_slot stackpointer (val addr)
+                ==> read memory returned addr = m addr) /\
+           (forall i.
+                i < n
+                ==> read memory returned (word_add p (word i)) =
+                    m (word_add p (word i))) /\
+           (forall i.
+                i < n
+                ==> read memory returned (word_add q (word i)) =
+                    m (word_add q (word i))) /\
+           read (memory :> bytes64 stackpointer) returned =
+           read (memory :> bytes64 stackpointer) initial /\
+           c1_loaded_code returned /\
+           c1_got returned /\
+           c1_frame stackpointer initial returned /\
+           read RBX returned = read RBX initial /\
+           read RBP returned = read RBP initial /\
+           read R12 returned = read R12 initial /\
+           read R13 returned = read R13 initial /\
+           read R14 returned = read R14 initial /\
+           read R15 returned = read R15 initial /\
+           (read DF returned <=> read DF initial) /\
+           (bit 18 (read rflags returned) <=> bit 18 (read rflags initial))`
+val c1_crypto_completed_run_statement : term =
+  `forall lib_file stackpointer p q n m rp wp xp ordinary initial a entry.
+       c1_crypto_ready lib_file stackpointer p q n m rp xp ordinary initial a
+       entry
+       ==> assurance_checked_run (bp_assurance_call_steps n)
+           (c1_crypto_completed lib_file stackpointer p q n m rp xp ordinary
+            initial
+           a)
+           (c1_segment_policy stackpointer p q n rp wp xp ordinary)
+           entry`
+val c1_crypto_completed_access_statement : term =
+  `forall lib_file lib_rw lib_padding client_file client_rw client_padding stackpointer ra p q n m rp wp xp ordinary initial a returned.
+       c1_pre lib_file lib_rw lib_padding client_file client_rw
+       client_padding
+       stackpointer
+       ra
+       p
+       q
+       n
+       m
+       rp
+       wp
+       xp
+       ordinary
+       (initial,a) /\
+       c1_crypto_completed lib_file stackpointer p q n m rp xp ordinary
+       initial
+       a
+       returned
+       ==> read RIP returned = word 553652505 /\
+           read RSP returned = word_sub stackpointer (word 8) /\
+           (read RAX returned = word 0 \/ read RAX returned = word 1) /\
+           (read RAX returned = word 0 <=>
+            (forall i.
+                 i < n ==> m (word_add p (word i)) = m (word_add q (word i)))) /\
+           bytes_loaded returned (word 553652496) c1_crypto_caller_mc /\
+           read (memory :> bytes64 stackpointer) returned = ra /\
+           16 <= val stackpointer /\
+           val stackpointer + 8 < 2 EXP 64 /\
+           assurance_span_ok (c1_allowed_read rp ordinary stackpointer p q n)
+           (val stackpointer)
+           8 /\
+           assurance_span_ok (c1_allowed_fetch xp ordinary) 553652496 22 /\
+           (forall addr.
+                ~c1_call_slot stackpointer (val addr)
+                ==> read memory returned addr = m addr) /\
+           (forall i.
+                i < n
+                ==> read memory returned (word_add p (word i)) =
+                    m (word_add p (word i))) /\
+           (forall i.
+                i < n
+                ==> read memory returned (word_add q (word i)) =
+                    m (word_add q (word i))) /\
+           c1_loaded_code returned /\
+           c1_got returned /\
+           c1_frame stackpointer initial returned /\
+           read RBX returned = read RBX initial /\
+           read RBP returned = read RBP initial /\
+           read R12 returned = read R12 initial /\
+           read R13 returned = read R13 initial /\
+           read R14 returned = read R14 initial /\
+           read R15 returned = read R15 initial /\
+           (read DF returned <=> false) /\
+           ~bit 18 (read rflags returned)`
+- : unit = ()
+0..0..1..2..solved at 8
+val C1_COMPLETION_MEMORY_SLOT_TRANSPORT : thm =
+  |- forall s t stackpointer.
+         read memory t = read memory s
+         ==> read (memory :> bytes64 stackpointer) t =
+             read (memory :> bytes64 stackpointer) s
+0..0..1..2..5..10..solved at 19
+0..0..1..2..5..10..solved at 19
+0..0..1..2..5..10..solved at 19
+0..0..1..2..5..10..22..36..solved at 48
+0..0..1..2..5..10..22..36..solved at 48
+0..0..1..2..5..10..22..36..solved at 48
+0..0..1..2..5..10..solved at 19
+0..0..1..2..5..10..22..38..solved at 50
+val C1_COMPLETION_MEMORY_CODE_GOT_TRANSPORT : thm =
+  |- forall s t.
+         read memory t = read memory s
+         ==> (c1_loaded_code t <=> c1_loaded_code s) /\
+             (c1_got t <=> c1_got s)
+val C1_PREFIX_FRAME_INCLUDED : thm =
+  |- forall stackpointer.
+         c1_prefix_frame stackpointer subsumed c1_frame stackpointer
+val C1_CRYPTO_PUBLIC_FRAME_INCLUDED : thm =
+  |- forall stackpointer.
+         c1_crypto_public_frame subsumed c1_frame stackpointer
+val C1_FRAME_IDEMPOTENT : thm =
+  |- forall stackpointer.
+         c1_frame stackpointer ,, c1_frame stackpointer =
+         c1_frame stackpointer
+val C1_CRYPTO_FRAME_COMPOSE : thm =
+  |- forall stackpointer initial entry returned.
+         c1_prefix_frame stackpointer initial entry /\
+         c1_crypto_public_frame entry returned
+         ==> c1_frame stackpointer initial returned
+val C1_FRAME_SAVED_PRESERVED : thm =
+  |- forall stackpointer s t.
+         c1_frame stackpointer s t
+         ==> read RBX t = read RBX s /\
+             read RBP t = read RBP s /\
+             read R12 t = read R12 s /\
+             read R13 t = read R13 s /\
+             read R14 t = read R14 s /\
+             read R15 t = read R15 s /\
+             (read DF t <=> read DF s) /\
+             (bit 18 (read rflags t) <=> bit 18 (read rflags s))
+0..0..1..3..7..16..29..65..108..178..solved at 265
+0..0..1..2..7..13..26..42..66..95..172..260..421..solved at 557
+val C1_CRYPTO_RESULT_TRANSPORT : thm =
+  |- forall stackpointer p q n m initial entry returned lib_file rp xp ordinary a.
+         c1_crypto_ready lib_file stackpointer p q n m rp xp ordinary initial
+         a
+         entry /\
+         bp_assurance_call_post 270800960 (word_sub stackpointer (word 16))
+         (word 553652505)
+         p
+         q
+         n
+         (read events entry)
+         (read memory entry)
+         entry
+         returned
+         ==> read RAX returned =
+             (if forall i.
+                     i < n
+                     ==> m (word_add p (word i)) = m (word_add q (word i))
+              then word 0
+              else word 1)
+val C1_CRYPTO_RESULT_01 : thm =
+  |- forall b result.
+         result = (if b then word 0 else word 1)
+         ==> (result = word 0 \/ result = word 1) /\ (result = word 0 <=> b)
+val C1_CRYPTO_RETURN_STACK : thm =
+  |- forall stackpointer returned.
+         16 <= val stackpointer /\
+         val (read RSP returned) = val (word_sub stackpointer (word 16)) + 8
+         ==> read RSP returned = word_sub stackpointer (word 8)
+0..0..solved at 2
+0..0..solved at 2
+0..0..solved at 3
+val C1_INCOMING_READ_SPAN : thm =
+  |- forall rp ordinary stackpointer p q n.
+         assurance_span_ok (\addr. rp addr /\ ordinary addr)
+         (val stackpointer)
+         8
+         ==> assurance_span_ok
+             (c1_allowed_read rp ordinary stackpointer p q n)
+             (val stackpointer)
+             8
+0..0..1..2..solved at 8
+0..0..1..2..solved at 8
+0..0..2..5..solved at 11
+0..0..2..5..solved at 11
+0..0..2..4..solved at 10
+0..0..2..4..solved at 10
+0..0..3..7..solved at 13
+0..0..3..7..solved at 13
+val C1_CRYPTO_COMPLETED_FACTS : thm =
+  |- forall lib_file stackpointer p q n m rp xp ordinary initial a returned.
+         c1_crypto_completed lib_file stackpointer p q n m rp xp ordinary
+         initial
+         a
+         returned
+         ==> read RIP returned = word 553652505 /\
+             val (read RSP returned) =
+             val (word_sub stackpointer (word 16)) + 8 /\
+             read RAX returned =
+             (if forall i.
+                     i < n
+                     ==> m (word_add p (word i)) = m (word_add q (word i))
+              then word 0
+              else word 1) /\
+             (forall addr.
+                  ~c1_call_slot stackpointer (val addr)
+                  ==> read memory returned addr = m addr) /\
+             (forall i.
+                  i < n
+                  ==> read memory returned (word_add p (word i)) =
+                      m (word_add p (word i))) /\
+             (forall i.
+                  i < n
+                  ==> read memory returned (word_add q (word i)) =
+                      m (word_add q (word i))) /\
+             read (memory :> bytes64 stackpointer) returned =
+             read (memory :> bytes64 stackpointer) initial /\
+             c1_loaded_code returned /\
+             c1_got returned /\
+             c1_frame stackpointer initial returned /\
+             read RBX returned = read RBX initial /\
+             read RBP returned = read RBP initial /\
+             read R12 returned = read R12 initial /\
+             read R13 returned = read R13 initial /\
+             read R14 returned = read R14 initial /\
+             read R15 returned = read R15 initial /\
+             (read DF returned <=> read DF initial) /\
+             (bit 18 (read rflags returned) <=> bit 18 (read rflags initial))
+val C1_CRYPTO_COMPLETED_RUN : thm =
+  |- forall lib_file stackpointer p q n m rp wp xp ordinary initial a entry.
+         c1_crypto_ready lib_file stackpointer p q n m rp xp ordinary initial
+         a
+         entry
+         ==> assurance_checked_run (bp_assurance_call_steps n)
+             (c1_crypto_completed lib_file stackpointer p q n m rp xp
+              ordinary
+              initial
+             a)
+             (c1_segment_policy stackpointer p q n rp wp xp ordinary)
+             entry
+0..0..solved at 2
+val C1_CRYPTO_COMPLETED_ACCESS : thm =
+  |- forall lib_file lib_rw lib_padding client_file client_rw client_padding stackpointer ra p q n m rp wp xp ordinary initial a returned.
+         c1_pre lib_file lib_rw lib_padding client_file client_rw
+         client_padding
+         stackpointer
+         ra
+         p
+         q
+         n
+         m
+         rp
+         wp
+         xp
+         ordinary
+         (initial,a) /\
+         c1_crypto_completed lib_file stackpointer p q n m rp xp ordinary
+         initial
+         a
+         returned
+         ==> read RIP returned = word 553652505 /\
+             read RSP returned = word_sub stackpointer (word 8) /\
+             (read RAX returned = word 0 \/ read RAX returned = word 1) /\
+             (read RAX returned = word 0 <=>
+              (forall i.
+                   i < n
+                   ==> m (word_add p (word i)) = m (word_add q (word i)))) /\
+             bytes_loaded returned (word 553652496) c1_crypto_caller_mc /\
+             read (memory :> bytes64 stackpointer) returned = ra /\
+             16 <= val stackpointer /\
+             val stackpointer + 8 < 2 EXP 64 /\
+             assurance_span_ok
+             (c1_allowed_read rp ordinary stackpointer p q n)
+             (val stackpointer)
+             8 /\
+             assurance_span_ok (c1_allowed_fetch xp ordinary) 553652496 22 /\
+             (forall addr.
+                  ~c1_call_slot stackpointer (val addr)
+                  ==> read memory returned addr = m addr) /\
+             (forall i.
+                  i < n
+                  ==> read memory returned (word_add p (word i)) =
+                      m (word_add p (word i))) /\
+             (forall i.
+                  i < n
+                  ==> read memory returned (word_add q (word i)) =
+                      m (word_add q (word i))) /\
+             c1_loaded_code returned /\
+             c1_got returned /\
+             c1_frame stackpointer initial returned /\
+             read RBX returned = read RBX initial /\
+             read RBP returned = read RBP initial /\
+             read R12 returned = read R12 initial /\
+             read R13 returned = read R13 initial /\
+             read R14 returned = read R14 initial /\
+             read R15 returned = read R15 initial /\
+             (read DF returned <=> false) /\
+             ~bit 18 (read rflags returned)
+- : unit = ()
+val c1_completion_audit_goal : string -> term -> thm -> unit = <fun>
+C1_COMPLETION_LIVE_CHECKED C1_COMPLETION_MEMORY_SLOT_TRANSPORT
+- : unit = ()
+C1_COMPLETION_LIVE_CHECKED C1_COMPLETION_MEMORY_CODE_GOT_TRANSPORT
+- : unit = ()
+C1_COMPLETION_LIVE_CHECKED C1_PREFIX_FRAME_INCLUDED
+- : unit = ()
+C1_COMPLETION_LIVE_CHECKED C1_CRYPTO_PUBLIC_FRAME_INCLUDED
+- : unit = ()
+C1_COMPLETION_LIVE_CHECKED C1_FRAME_IDEMPOTENT
+- : unit = ()
+C1_COMPLETION_LIVE_CHECKED C1_CRYPTO_FRAME_COMPOSE
+- : unit = ()
+C1_COMPLETION_LIVE_CHECKED C1_FRAME_SAVED_PRESERVED
+- : unit = ()
+C1_COMPLETION_LIVE_CHECKED C1_CRYPTO_RESULT_TRANSPORT
+- : unit = ()
+C1_COMPLETION_LIVE_CHECKED C1_CRYPTO_RESULT_01
+- : unit = ()
+C1_COMPLETION_LIVE_CHECKED C1_CRYPTO_RETURN_STACK
+- : unit = ()
+C1_COMPLETION_LIVE_CHECKED C1_INCOMING_READ_SPAN
+- : unit = ()
+C1_COMPLETION_LIVE_CHECKED C1_CRYPTO_COMPLETED_FACTS
+- : unit = ()
+C1_COMPLETION_LIVE_CHECKED C1_CRYPTO_COMPLETED_RUN
+- : unit = ()
+C1_COMPLETION_LIVE_CHECKED C1_CRYPTO_COMPLETED_ACCESS
+- : unit = ()
+- : unit = ()
+C1_COMPLETION_DEFINITION_CHECKED c1_crypto_completed
+- : unit = ()
+- : unit = ()
+C1_COMPLETION_DEFINITION_CHECKED c1_crypto_public_frame
+- : unit = ()
+- : unit = ()
+- : unit = ()
+REUSE_C1_SELECTED_DEVELOPMENT_DEPENDENCIES_CHECKED
+- : unit = ()
+- : unit = ()
+val C1_CONT_FRAME_WIDEN_TAC : tactic = <fun>
+- : unit = ()
+val C1_CALLER_RAW_EXEC : thm * thm option array =
+  (|- LENGTH c1_crypto_caller_mc = 22,
+   [|Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_caller_mc
+             ==> x86_decode s (word pc) (4,SUB (% rsp) (Imm8 (word 8)));
+     None; None; None;
+     Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_caller_mc
+             ==> x86_decode s (word (pc + 4))
+                 (5,CALL (Imm32 (word 4294967063)));
+     None; None; None; None;
+     Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_caller_mc
+             ==> x86_decode s (word (pc + 9)) (2,TEST (% eax) (% eax));
+     None;
+     Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_caller_mc
+             ==> x86_decode s (word (pc + 11)) (3,SET Condition_Z (% al));
+     None; None;
+     Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_caller_mc
+             ==> x86_decode s (word (pc + 14))
+                 (4,ADD (% rsp) (Imm8 (word 8)));
+     None; None; None;
+     Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_caller_mc
+             ==> x86_decode s (word (pc + 18)) (3,MOVZX (% eax) (% al));
+     None; None;
+     Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_caller_mc
+             ==> x86_decode s (word (pc + 21)) (1,RET)|])
+val C1_PLT_RAW_EXEC : thm * thm option array =
+  (|- LENGTH c1_crypto_plt_prefix = 6,
+   [|Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_plt_prefix
+             ==> x86_decode s (word pc)
+                 (6,
+                  JUMP Unconditional
+                  (r1_near_operand64
+                  (Memop Doubleword (Riprel (word 12194)))));
+     None; None; None; None; None|])
+val C1_PLT_EXEC : thm * thm option array =
+  (|- LENGTH c1_crypto_plt_prefix = 6,
+   [|Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_plt_prefix
+             ==> x86_decode s (word pc)
+                 (6,
+                  JUMP Unconditional (Memop Quadword (Riprel (word 12194))));
+     None; None; None; None; None|])
+val C1_PREFIX_SUBTHS : thm list =
+  [|- LENGTH c1_crypto_caller_mc = 22 /\ true;
+   |- LENGTH c1_crypto_plt_prefix = 6 /\ true;
+   |- LENGTH crypto_memcmp_mc = 95 /\ true]
+val C1_CHECKPOINT : string -> goal -> goalstate = <fun>
+val C1_ENDPOINT_RESIDUAL : (string * thm) list * term -> goalstate = <fun>
+val C1_TRACE_FRAME : (string * thm) list * term -> goalstate = <fun>
+val C1_TRACE_RIP : string -> (string * thm) list * term -> goalstate = <fun>
+1 basis elements and 0 critical pairs
+val C1_WORD_SUB_SUB : thm =
+  |- forall pointer a b.
+         word_sub (word_sub pointer (word a)) (word b) =
+         word_sub pointer (word (a + b))
+val C1_CRYPTO_PLT_ADDRESS : thm =
+  |- word (553652496 + 18446744073709551392) = word 553652272
+val C1_SYMBOLIC_DECODE : thm option array -> thm list -> term -> thm * int =
+  <fun>
+val C1_QUALIFIED_DECODE : thm -> thm = <fun>
+val C1_PREFIX_EVENT_SPAN_TAC : tactic = <fun>
+val C1_PUBLIC_CODE_POLICY_TAC :
+  int ->
+  string ->
+  thm option array -> thm -> thm -> (string * thm) list * term -> goalstate =
+  <fun>
+val C1_CHECKED_STEP_TAC :
+  (thm -> thm -> tactic) ->
+  thm * thm option array -> thm list -> string -> tactic = <fun>
+val C1_CALLER_CHECKED_STEP_TAC : string -> tactic = <fun>
+val C1_PLT_CHECKED_STEP_TAC : string -> tactic = <fun>
+val C1_PROTECT_REGION_TAC : int -> int -> thm -> tactic = <fun>
+val C1_PREFIX_PERMISSIONS_TAC : tactic = <fun>
+val C1_FINITE_FRAME_WIDEN_TAC : tactic = <fun>
+val C1_LIBRARY_WP_PROJECTION_TAC : (string * thm) list * term -> goalstate =
+  <fun>
+val C1_IMMUTABLE_MEMORY_POINT_TAC : (string * thm) list * term -> goalstate =
+  <fun>
+- : unit = ()
+Warning: inventing type variables
+val c1_tail_pre : thm =
+  |- forall (wp:?650291) result current s ra rp p q n stackpointer xp ordinary.
+         (c1_tail_pre:(64)word->(64)word->(64)word->((64)word->(8)word)->(64)word->(64)word->num->(num->bool)->?650291->(num->bool)->(num->bool)->x86state->bool)
+         stackpointer
+         ra
+         result
+         current
+         p
+         q
+         n
+         rp
+         (wp:?650291)
+         xp
+         ordinary
+         s <=>
+         (result = word 0 \/ result = word 1) /\
+         16 <= val stackpointer /\
+         val stackpointer + 8 < 2 EXP 64 /\
+         bytes_loaded s (word 553652496) c1_crypto_caller_mc /\
+         read RIP s = word 553652505 /\
+         read RSP s = word_sub stackpointer (word 8) /\
+         read RAX s = result /\
+         read memory s = current /\
+         read (memory :> bytes64 stackpointer) s = ra /\
+         assurance_span_ok (c1_allowed_read rp ordinary stackpointer p q n)
+         (val stackpointer)
+         8 /\
+         assurance_span_ok (c1_allowed_fetch xp ordinary) 553652496 22
+Warning: inventing type variables
+val c1_tail_post : thm =
+  |- forall ra stackpointer (result:(?650468)word) current s t.
+         (c1_tail_post:(64)word->(64)word->(?650468)word->((64)word->(8)word)->x86state->x86state->bool)
+         stackpointer
+         ra
+         (result:(?650468)word)
+         current
+         s
+         t <=>
+         read RIP t = ra /\
+         val (read RSP t) = val stackpointer + 8 /\
+         read RAX t =
+         (if (result:(?650468)word) = (word:num->(?650468)word) 0
+          then word 1
+          else word 0) /\
+         read memory t = current /\
+         (MAYCHANGE [RIP; RSP; RAX] ,,
+          MAYCHANGE SOME_FLAGS ,,
+          MAYCHANGE [events])
+         s
+         t
+- : unit = ()
+val c1_tail_checked_statement : term =
+  `forall stackpointer ra result current p q n rp wp xp ordinary s.
+       c1_tail_pre stackpointer ra result current p q n rp wp xp ordinary s
+       ==> assurance_checked_run 5
+           (c1_tail_post stackpointer ra result current s)
+           (c1_step_policy stackpointer p q n rp wp xp ordinary)
+           s`
+- : unit = ()
+val c1_tail_return_rsp_value_statement : term =
+  `forall stackpointer.
+       val stackpointer + 8 < 2 EXP 64
+       ==> val (word_add stackpointer (word 8)) = val stackpointer + 8`
+- : unit = ()
+val C1_TAIL_RETURN_RSP_VALUE : thm =
+  |- forall stackpointer.
+         val stackpointer + 8 < 2 EXP 64
+         ==> val (word_add stackpointer (word 8)) = val stackpointer + 8
+- : unit = ()
+1 basis elements and 0 critical pairs
+val C1_TAIL_WORD_ADD : thm =
+  |- forall pointer. word_add (word_sub pointer (word 8)) (word 8) = pointer
+val C1_TAIL_RET_POLICY : thm -> thm -> goal -> goalstate = <fun>
+val C1_TAIL_STEP_TAC : string -> tactic = <fun>
+Warning: inventing type variables
+0..0..1..solved at 4
+Warning: inventing type variables
+C1_TAIL_CASE_CONTEXT
+
+  0 [`result = word 0`]
+  1 [`16 <= val stackpointer`]
+  2 [`val stackpointer + 8 < 2 EXP 64`]
+  3 [`bytes_loaded s (word 553652496) c1_crypto_caller_mc`]
+  4 [`read RIP s = word 553652505`]
+  5 [`read RSP s = word_sub stackpointer (word 8)`]
+  6 [`read RAX s = result`]
+  7 [`read memory s = current`]
+  8 [`read (memory :> bytes64 stackpointer) s = ra`]
+  9 [`assurance_span_ok (c1_allowed_read rp ordinary stackpointer p q n)
+      (val stackpointer)
+      8`]
+ 10 [`assurance_span_ok (c1_allowed_fetch xp ordinary) 553652496 22`]
+
+`assurance_checked_run 5 (c1_tail_post stackpointer ra result current s)
+ (c1_step_policy stackpointer p q n rp wp xp ordinary)
+ s`
+C1_TAIL_CASE_CONTEXT
+
+  0 [`result = word 1`]
+  1 [`16 <= val stackpointer`]
+  2 [`val stackpointer + 8 < 2 EXP 64`]
+  3 [`bytes_loaded s (word 553652496) c1_crypto_caller_mc`]
+  4 [`read RIP s = word 553652505`]
+  5 [`read RSP s = word_sub stackpointer (word 8)`]
+  6 [`read RAX s = result`]
+  7 [`read memory s = current`]
+  8 [`read (memory :> bytes64 stackpointer) s = ra`]
+  9 [`assurance_span_ok (c1_allowed_read rp ordinary stackpointer p q n)
+      (val stackpointer)
+      8`]
+ 10 [`assurance_span_ok (c1_allowed_fetch xp ordinary) 553652496 22`]
+
+`assurance_checked_run 5 (c1_tail_post stackpointer ra result current s)
+ (c1_step_policy stackpointer p q n rp wp xp ordinary)
+ s`
+C1_TAIL_BEFORE_FIRST_STEP
+C1_TAIL_POLICY_BEGIN
+read RIP s = word (pc + 9)
+|- read RIP s = word (pc + 9)
+read RIP s = word 553652505
+|- read RIP s = word 553652505
+bytes_loaded s (word pc) c1_crypto_caller_mc
+|- bytes_loaded s (word pc) c1_crypto_caller_mc
+553652496 = pc, bytes_loaded s (word 553652496) c1_crypto_caller_mc
+|- bytes_loaded s (word pc) c1_crypto_caller_mc
+C1_TAIL_POLICY_SYMBOLIC_DECODE_COMPLETE
+C1_CALLBACK_ENTRY
+C1_CALLBACK_DECODE_BEGIN
+C1_CALLBACK_DECODE_END
+C1_CALLBACK_QUALIFIED_BEGIN
+0..0..solved at 18
+C1_CALLBACK_QUALIFIED_END
+C1_CALLBACK_EVENTFACT_BEGIN
+C1_CALLBACK_EVENTFACT_END
+C1_CALLBACK_FETCH_SETUP_BEGIN
+C1_CALLBACK_FETCH_SETUP_END
+C1_POLICY_BEGIN
+C1_FETCH_REWRITE_BEGIN
+C1_FETCH_PC_DONE
+C1_FETCH_VALUES_DONE
+C1_EVENT_APPEND_BEGIN
+C1_EVENT_POLICY_BEGIN
+C1_CALLBACK_EXIT
+C1_TAIL_FIRST_STEP_DONE
+C1_TAIL_POLICY_BEGIN
+read RIP t1 = word (pc + 11)
+|- read RIP t1 = word (pc + 11)
+read RIP s = word (pc + 9)
+|- read RIP s = word (pc + 9)
+read RIP s = word 553652505
+|- read RIP s = word 553652505
+bytes_loaded t1 (word pc) c1_crypto_caller_mc
+|- bytes_loaded t1 (word pc) c1_crypto_caller_mc
+553652496 = pc, bytes_loaded s (word 553652496) c1_crypto_caller_mc
+|- bytes_loaded s (word pc) c1_crypto_caller_mc
+C1_TAIL_POLICY_SYMBOLIC_DECODE_COMPLETE
+C1_CALLBACK_ENTRY
+C1_CALLBACK_DECODE_BEGIN
+C1_CALLBACK_DECODE_END
+C1_CALLBACK_QUALIFIED_BEGIN
+0..0..solved at 16
+C1_CALLBACK_QUALIFIED_END
+C1_CALLBACK_EVENTFACT_BEGIN
+C1_CALLBACK_EVENTFACT_END
+C1_CALLBACK_FETCH_SETUP_BEGIN
+C1_CALLBACK_FETCH_SETUP_END
+C1_POLICY_BEGIN
+C1_FETCH_REWRITE_BEGIN
+C1_FETCH_PC_DONE
+C1_FETCH_VALUES_DONE
+C1_EVENT_APPEND_BEGIN
+C1_EVENT_POLICY_BEGIN
+C1_CALLBACK_EXIT
+C1_TAIL_POLICY_BEGIN
+read RIP t2 = word (pc + 14)
+|- read RIP t2 = word (pc + 14)
+read RIP t1 = word (pc + 11)
+|- read RIP t1 = word (pc + 11)
+read RIP s = word (pc + 9)
+|- read RIP s = word (pc + 9)
+read RIP s = word 553652505
+|- read RIP s = word 553652505
+bytes_loaded t2 (word pc) c1_crypto_caller_mc
+|- bytes_loaded t2 (word pc) c1_crypto_caller_mc
+553652496 = pc, bytes_loaded s (word 553652496) c1_crypto_caller_mc
+|- bytes_loaded s (word pc) c1_crypto_caller_mc
+C1_TAIL_POLICY_SYMBOLIC_DECODE_COMPLETE
+C1_CALLBACK_ENTRY
+C1_CALLBACK_DECODE_BEGIN
+C1_CALLBACK_DECODE_END
+C1_CALLBACK_QUALIFIED_BEGIN
+0..0..solved at 19
+C1_CALLBACK_QUALIFIED_END
+C1_CALLBACK_EVENTFACT_BEGIN
+C1_CALLBACK_EVENTFACT_END
+C1_CALLBACK_FETCH_SETUP_BEGIN
+C1_CALLBACK_FETCH_SETUP_END
+C1_POLICY_BEGIN
+C1_FETCH_REWRITE_BEGIN
+C1_FETCH_PC_DONE
+C1_FETCH_VALUES_DONE
+C1_EVENT_APPEND_BEGIN
+C1_EVENT_POLICY_BEGIN
+C1_CALLBACK_EXIT
+C1_TAIL_POLICY_BEGIN
+read RIP t3 = word (pc + 18)
+|- read RIP t3 = word (pc + 18)
+read RIP t2 = word (pc + 14)
+|- read RIP t2 = word (pc + 14)
+read RIP t1 = word (pc + 11)
+|- read RIP t1 = word (pc + 11)
+read RIP s = word (pc + 9)
+|- read RIP s = word (pc + 9)
+read RIP s = word 553652505
+|- read RIP s = word 553652505
+bytes_loaded t3 (word pc) c1_crypto_caller_mc
+|- bytes_loaded t3 (word pc) c1_crypto_caller_mc
+553652496 = pc, bytes_loaded s (word 553652496) c1_crypto_caller_mc
+|- bytes_loaded s (word pc) c1_crypto_caller_mc
+C1_TAIL_POLICY_SYMBOLIC_DECODE_COMPLETE
+C1_CALLBACK_ENTRY
+C1_CALLBACK_DECODE_BEGIN
+C1_CALLBACK_DECODE_END
+C1_CALLBACK_QUALIFIED_BEGIN
+0..0..solved at 17
+C1_CALLBACK_QUALIFIED_END
+C1_CALLBACK_EVENTFACT_BEGIN
+C1_CALLBACK_EVENTFACT_END
+C1_CALLBACK_FETCH_SETUP_BEGIN
+C1_CALLBACK_FETCH_SETUP_END
+C1_POLICY_BEGIN
+C1_FETCH_REWRITE_BEGIN
+C1_FETCH_PC_DONE
+C1_FETCH_VALUES_DONE
+C1_EVENT_APPEND_BEGIN
+C1_EVENT_POLICY_BEGIN
+C1_CALLBACK_EXIT
+C1_TAIL_POLICY_BEGIN
+read RIP t4 = word (pc + 21)
+|- read RIP t4 = word (pc + 21)
+read RIP t3 = word (pc + 18)
+|- read RIP t3 = word (pc + 18)
+read RIP t2 = word (pc + 14)
+|- read RIP t2 = word (pc + 14)
+read RIP t1 = word (pc + 11)
+|- read RIP t1 = word (pc + 11)
+read RIP s = word (pc + 9)
+|- read RIP s = word (pc + 9)
+read RIP s = word 553652505
+|- read RIP s = word 553652505
+bytes_loaded t4 (word pc) c1_crypto_caller_mc
+|- bytes_loaded t4 (word pc) c1_crypto_caller_mc
+553652496 = pc, bytes_loaded s (word 553652496) c1_crypto_caller_mc
+|- bytes_loaded s (word pc) c1_crypto_caller_mc
+C1_TAIL_POLICY_SYMBOLIC_DECODE_COMPLETE
+C1_CALLBACK_ENTRY
+C1_CALLBACK_DECODE_BEGIN
+C1_CALLBACK_DECODE_END
+C1_CALLBACK_QUALIFIED_BEGIN
+C1_CALLBACK_QUALIFIED_END
+C1_CALLBACK_EVENTFACT_BEGIN
+C1_CALLBACK_EVENTFACT_END
+C1_CALLBACK_FETCH_SETUP_BEGIN
+C1_CALLBACK_FETCH_SETUP_END
+C1_POLICY_BEGIN
+C1_FETCH_REWRITE_BEGIN
+C1_FETCH_PC_DONE
+C1_FETCH_VALUES_DONE
+C1_EVENT_APPEND_BEGIN
+C1_EVENT_POLICY_BEGIN
+C1_EVENT_POLICY_UNFOLD_DONE
+C1_CALLBACK_EXIT
+C1_TAIL_ALL_FIVE_DONE
+C1_TAIL_ENDPOINT_BEGIN
+
+  0 [`result = word 0`]
+  1 [`16 <= val stackpointer`]
+  2 [`val stackpointer + 8 < 2 EXP 64`]
+  3 [`bytes_loaded s (word pc) c1_crypto_caller_mc`]
+  4 [`read RIP s = word 553652505`]
+  5 [`read RSP s = word_sub stackpointer (word 8)`]
+  6 [`read RAX s = result`]
+  7 [`read memory s = current`]
+  8 [`read (memory :> bytes64 stackpointer) s = ra`]
+  9 [`assurance_span_ok (c1_allowed_read rp ordinary stackpointer p q n)
+      (val stackpointer)
+      8`]
+ 10 [`assurance_span_ok (c1_allowed_fetch xp ordinary) pc 22`]
+ 11 [`553652496 = pc`]
+ 12 [`read RIP s = word (pc + 9)`]
+ 13 [`read (memory :> bytes64 stackpointer) t1 = ra`]
+ 14 [`read memory t1 = current`]
+ 15 [`read RAX t1 = result`]
+ 16 [`read RSP t1 = word_sub stackpointer (word 8)`]
+ 17 [`read AF t1 <=> undefined_94`]
+ 18 [`~read OF t1`]
+ 19 [`~read CF t1`]
+ 20 [`read PF t1`]
+ 21 [`~read SF t1`]
+ 22 [`read ZF t1`]
+ 23 [`read RIP t1 = word (pc + 11)`]
+ 24 [`read ZF t2`]
+ 25 [`~read SF t2`]
+ 26 [`read PF t2`]
+ 27 [`~read CF t2`]
+ 28 [`~read OF t2`]
+ 29 [`read AF t2 <=> undefined_94`]
+ 30 [`read RSP t2 = word_sub stackpointer (word 8)`]
+ 31 [`read memory t2 = current`]
+ 32 [`read (memory :> bytes64 stackpointer) t2 = ra`]
+ 33 [`read RAX t2 = word 1`]
+ 34 [`read RIP t2 = word (pc + 14)`]
+ 35 [`read RAX t3 = word 1`]
+ 36 [`read (memory :> bytes64 stackpointer) t3 = ra`]
+ 37 [`read memory t3 = current`]
+ 38 [`read AF t3 <=>
+      ~(val (word_zx (word_sub stackpointer (word 8))) + 8 =
+        val (word_zx stackpointer))`]
+ 39 [`read OF t3 <=>
+      ~(ival (word_sub stackpointer (word 8)) + &8 = ival stackpointer)`]
+ 40 [`read CF t3 <=> 2 EXP 64 <= val (word_sub stackpointer (word 8)) + 8`]
+ 41 [`read PF t3 <=> word_evenparity (word_zx stackpointer)`]
+ 42 [`read SF t3 <=> ival stackpointer < &0`]
+ 43 [`read ZF t3 <=> val stackpointer = 0`]
+ 44 [`read RSP t3 = stackpointer`]
+ 45 [`read RIP t3 = word (pc + 18)`]
+ 46 [`read RSP t4 = stackpointer`]
+ 47 [`read ZF t4 <=> val stackpointer = 0`]
+ 48 [`read SF t4 <=> ival stackpointer < &0`]
+ 49 [`read PF t4 <=> word_evenparity (word_zx stackpointer)`]
+ 50 [`read CF t4 <=> 2 EXP 64 <= val (word_sub stackpointer (word 8)) + 8`]
+ 51 [`read OF t4 <=>
+      ~(ival (word_sub stackpointer (word 8)) + &8 = ival stackpointer)`]
+ 52 [`read AF t4 <=>
+      ~(val (word_zx (word_sub stackpointer (word 8))) + 8 =
+        val (word_zx stackpointer))`]
+ 53 [`read memory t4 = current`]
+ 54 [`read (memory :> bytes64 stackpointer) t4 = ra`]
+ 55 [`read RAX t4 = word 1`]
+ 56 [`read RIP t4 = word (pc + 21)`]
+ 57 [`bytes_loaded t5 (word pc) c1_crypto_caller_mc`]
+ 58 [`read RAX t5 = word 1`]
+ 59 [`read (memory :> bytes64 stackpointer) t5 = ra`]
+ 60 [`read memory t5 = current`]
+ 61 [`read AF t5 <=>
+      ~(val (word_zx (word_sub stackpointer (word 8))) + 8 =
+        val (word_zx stackpointer))`]
+ 62 [`read OF t5 <=>
+      ~(ival (word_sub stackpointer (word 8)) + &8 = ival stackpointer)`]
+ 63 [`read CF t5 <=> 2 EXP 64 <= val (word_sub stackpointer (word 8)) + 8`]
+ 64 [`read PF t5 <=> word_evenparity (word_zx stackpointer)`]
+ 65 [`read SF t5 <=> ival stackpointer < &0`]
+ 66 [`read ZF t5 <=> val stackpointer = 0`]
+ 67 [`(MAYCHANGE [RIP] ,,
+       MAYCHANGE [ZF] ,,
+       MAYCHANGE [SF] ,,
+       MAYCHANGE [PF] ,,
+       MAYCHANGE [CF] ,,
+       MAYCHANGE [OF] ,,
+       MAYCHANGE [AF] ,,
+       MAYCHANGE [RAX] ,,
+       MAYCHANGE [RSP] ,,
+       MAYCHANGE [events])
+      s
+      t5`]
+ 68 [`read RIP t5 = ra`]
+ 69 [`read RSP t5 = word_add stackpointer (word 8)`]
+ 70 [`read events t5 =
+      CONS (EventJump (word (pc + 22),ra))
+      (CONS (EventLoad (stackpointer,8)) (read events t4))`]
+
+`val (word_add stackpointer (word 8)) = val stackpointer + 8 /\
+ (MAYCHANGE [RIP; RSP; RAX] ,, MAYCHANGE SOME_FLAGS ,, MAYCHANGE [events]) s
+ t5`
+C1_TAIL_BEFORE_FIRST_STEP
+C1_TAIL_POLICY_BEGIN
+read RIP s = word (pc + 9)
+|- read RIP s = word (pc + 9)
+read RIP s = word 553652505
+|- read RIP s = word 553652505
+bytes_loaded s (word pc) c1_crypto_caller_mc
+|- bytes_loaded s (word pc) c1_crypto_caller_mc
+553652496 = pc, bytes_loaded s (word 553652496) c1_crypto_caller_mc
+|- bytes_loaded s (word pc) c1_crypto_caller_mc
+C1_TAIL_POLICY_SYMBOLIC_DECODE_COMPLETE
+C1_CALLBACK_ENTRY
+C1_CALLBACK_DECODE_BEGIN
+C1_CALLBACK_DECODE_END
+C1_CALLBACK_QUALIFIED_BEGIN
+0..0..solved at 18
+C1_CALLBACK_QUALIFIED_END
+C1_CALLBACK_EVENTFACT_BEGIN
+C1_CALLBACK_EVENTFACT_END
+C1_CALLBACK_FETCH_SETUP_BEGIN
+C1_CALLBACK_FETCH_SETUP_END
+C1_POLICY_BEGIN
+C1_FETCH_REWRITE_BEGIN
+C1_FETCH_PC_DONE
+C1_FETCH_VALUES_DONE
+C1_EVENT_APPEND_BEGIN
+C1_EVENT_POLICY_BEGIN
+C1_CALLBACK_EXIT
+C1_TAIL_FIRST_STEP_DONE
+C1_TAIL_POLICY_BEGIN
+read RIP t1 = word (pc + 11)
+|- read RIP t1 = word (pc + 11)
+read RIP s = word (pc + 9)
+|- read RIP s = word (pc + 9)
+read RIP s = word 553652505
+|- read RIP s = word 553652505
+bytes_loaded t1 (word pc) c1_crypto_caller_mc
+|- bytes_loaded t1 (word pc) c1_crypto_caller_mc
+553652496 = pc, bytes_loaded s (word 553652496) c1_crypto_caller_mc
+|- bytes_loaded s (word pc) c1_crypto_caller_mc
+C1_TAIL_POLICY_SYMBOLIC_DECODE_COMPLETE
+C1_CALLBACK_ENTRY
+C1_CALLBACK_DECODE_BEGIN
+C1_CALLBACK_DECODE_END
+C1_CALLBACK_QUALIFIED_BEGIN
+0..0..solved at 16
+C1_CALLBACK_QUALIFIED_END
+C1_CALLBACK_EVENTFACT_BEGIN
+C1_CALLBACK_EVENTFACT_END
+C1_CALLBACK_FETCH_SETUP_BEGIN
+C1_CALLBACK_FETCH_SETUP_END
+C1_POLICY_BEGIN
+C1_FETCH_REWRITE_BEGIN
+C1_FETCH_PC_DONE
+C1_FETCH_VALUES_DONE
+C1_EVENT_APPEND_BEGIN
+C1_EVENT_POLICY_BEGIN
+C1_CALLBACK_EXIT
+C1_TAIL_POLICY_BEGIN
+read RIP t2 = word (pc + 14)
+|- read RIP t2 = word (pc + 14)
+read RIP t1 = word (pc + 11)
+|- read RIP t1 = word (pc + 11)
+read RIP s = word (pc + 9)
+|- read RIP s = word (pc + 9)
+read RIP s = word 553652505
+|- read RIP s = word 553652505
+bytes_loaded t2 (word pc) c1_crypto_caller_mc
+|- bytes_loaded t2 (word pc) c1_crypto_caller_mc
+553652496 = pc, bytes_loaded s (word 553652496) c1_crypto_caller_mc
+|- bytes_loaded s (word pc) c1_crypto_caller_mc
+C1_TAIL_POLICY_SYMBOLIC_DECODE_COMPLETE
+C1_CALLBACK_ENTRY
+C1_CALLBACK_DECODE_BEGIN
+C1_CALLBACK_DECODE_END
+C1_CALLBACK_QUALIFIED_BEGIN
+0..0..solved at 19
+C1_CALLBACK_QUALIFIED_END
+C1_CALLBACK_EVENTFACT_BEGIN
+C1_CALLBACK_EVENTFACT_END
+C1_CALLBACK_FETCH_SETUP_BEGIN
+C1_CALLBACK_FETCH_SETUP_END
+C1_POLICY_BEGIN
+C1_FETCH_REWRITE_BEGIN
+C1_FETCH_PC_DONE
+C1_FETCH_VALUES_DONE
+C1_EVENT_APPEND_BEGIN
+C1_EVENT_POLICY_BEGIN
+C1_CALLBACK_EXIT
+C1_TAIL_POLICY_BEGIN
+read RIP t3 = word (pc + 18)
+|- read RIP t3 = word (pc + 18)
+read RIP t2 = word (pc + 14)
+|- read RIP t2 = word (pc + 14)
+read RIP t1 = word (pc + 11)
+|- read RIP t1 = word (pc + 11)
+read RIP s = word (pc + 9)
+|- read RIP s = word (pc + 9)
+read RIP s = word 553652505
+|- read RIP s = word 553652505
+bytes_loaded t3 (word pc) c1_crypto_caller_mc
+|- bytes_loaded t3 (word pc) c1_crypto_caller_mc
+553652496 = pc, bytes_loaded s (word 553652496) c1_crypto_caller_mc
+|- bytes_loaded s (word pc) c1_crypto_caller_mc
+C1_TAIL_POLICY_SYMBOLIC_DECODE_COMPLETE
+C1_CALLBACK_ENTRY
+C1_CALLBACK_DECODE_BEGIN
+C1_CALLBACK_DECODE_END
+C1_CALLBACK_QUALIFIED_BEGIN
+0..0..solved at 17
+C1_CALLBACK_QUALIFIED_END
+C1_CALLBACK_EVENTFACT_BEGIN
+C1_CALLBACK_EVENTFACT_END
+C1_CALLBACK_FETCH_SETUP_BEGIN
+C1_CALLBACK_FETCH_SETUP_END
+C1_POLICY_BEGIN
+C1_FETCH_REWRITE_BEGIN
+C1_FETCH_PC_DONE
+C1_FETCH_VALUES_DONE
+C1_EVENT_APPEND_BEGIN
+C1_EVENT_POLICY_BEGIN
+C1_CALLBACK_EXIT
+C1_TAIL_POLICY_BEGIN
+read RIP t4 = word (pc + 21)
+|- read RIP t4 = word (pc + 21)
+read RIP t3 = word (pc + 18)
+|- read RIP t3 = word (pc + 18)
+read RIP t2 = word (pc + 14)
+|- read RIP t2 = word (pc + 14)
+read RIP t1 = word (pc + 11)
+|- read RIP t1 = word (pc + 11)
+read RIP s = word (pc + 9)
+|- read RIP s = word (pc + 9)
+read RIP s = word 553652505
+|- read RIP s = word 553652505
+bytes_loaded t4 (word pc) c1_crypto_caller_mc
+|- bytes_loaded t4 (word pc) c1_crypto_caller_mc
+553652496 = pc, bytes_loaded s (word 553652496) c1_crypto_caller_mc
+|- bytes_loaded s (word pc) c1_crypto_caller_mc
+C1_TAIL_POLICY_SYMBOLIC_DECODE_COMPLETE
+C1_CALLBACK_ENTRY
+C1_CALLBACK_DECODE_BEGIN
+C1_CALLBACK_DECODE_END
+C1_CALLBACK_QUALIFIED_BEGIN
+C1_CALLBACK_QUALIFIED_END
+C1_CALLBACK_EVENTFACT_BEGIN
+C1_CALLBACK_EVENTFACT_END
+C1_CALLBACK_FETCH_SETUP_BEGIN
+C1_CALLBACK_FETCH_SETUP_END
+C1_POLICY_BEGIN
+C1_FETCH_REWRITE_BEGIN
+C1_FETCH_PC_DONE
+C1_FETCH_VALUES_DONE
+C1_EVENT_APPEND_BEGIN
+C1_EVENT_POLICY_BEGIN
+C1_EVENT_POLICY_UNFOLD_DONE
+C1_CALLBACK_EXIT
+C1_TAIL_ALL_FIVE_DONE
+C1_TAIL_ENDPOINT_BEGIN
+
+  0 [`result = word 1`]
+  1 [`16 <= val stackpointer`]
+  2 [`val stackpointer + 8 < 2 EXP 64`]
+  3 [`bytes_loaded s (word pc) c1_crypto_caller_mc`]
+  4 [`read RIP s = word 553652505`]
+  5 [`read RSP s = word_sub stackpointer (word 8)`]
+  6 [`read RAX s = result`]
+  7 [`read memory s = current`]
+  8 [`read (memory :> bytes64 stackpointer) s = ra`]
+  9 [`assurance_span_ok (c1_allowed_read rp ordinary stackpointer p q n)
+      (val stackpointer)
+      8`]
+ 10 [`assurance_span_ok (c1_allowed_fetch xp ordinary) pc 22`]
+ 11 [`553652496 = pc`]
+ 12 [`read RIP s = word (pc + 9)`]
+ 13 [`read (memory :> bytes64 stackpointer) t1 = ra`]
+ 14 [`read memory t1 = current`]
+ 15 [`read RAX t1 = result`]
+ 16 [`read RSP t1 = word_sub stackpointer (word 8)`]
+ 17 [`read AF t1 <=> undefined_95`]
+ 18 [`~read OF t1`]
+ 19 [`~read CF t1`]
+ 20 [`~read PF t1`]
+ 21 [`~read SF t1`]
+ 22 [`~read ZF t1`]
+ 23 [`read RIP t1 = word (pc + 11)`]
+ 24 [`~read ZF t2`]
+ 25 [`~read SF t2`]
+ 26 [`~read PF t2`]
+ 27 [`~read CF t2`]
+ 28 [`~read OF t2`]
+ 29 [`read AF t2 <=> undefined_95`]
+ 30 [`read RSP t2 = word_sub stackpointer (word 8)`]
+ 31 [`read memory t2 = current`]
+ 32 [`read (memory :> bytes64 stackpointer) t2 = ra`]
+ 33 [`read RAX t2 = word 0`]
+ 34 [`read RIP t2 = word (pc + 14)`]
+ 35 [`read RAX t3 = word 0`]
+ 36 [`read (memory :> bytes64 stackpointer) t3 = ra`]
+ 37 [`read memory t3 = current`]
+ 38 [`read AF t3 <=>
+      ~(val (word_zx (word_sub stackpointer (word 8))) + 8 =
+        val (word_zx stackpointer))`]
+ 39 [`read OF t3 <=>
+      ~(ival (word_sub stackpointer (word 8)) + &8 = ival stackpointer)`]
+ 40 [`read CF t3 <=> 2 EXP 64 <= val (word_sub stackpointer (word 8)) + 8`]
+ 41 [`read PF t3 <=> word_evenparity (word_zx stackpointer)`]
+ 42 [`read SF t3 <=> ival stackpointer < &0`]
+ 43 [`read ZF t3 <=> val stackpointer = 0`]
+ 44 [`read RSP t3 = stackpointer`]
+ 45 [`read RIP t3 = word (pc + 18)`]
+ 46 [`read RSP t4 = stackpointer`]
+ 47 [`read ZF t4 <=> val stackpointer = 0`]
+ 48 [`read SF t4 <=> ival stackpointer < &0`]
+ 49 [`read PF t4 <=> word_evenparity (word_zx stackpointer)`]
+ 50 [`read CF t4 <=> 2 EXP 64 <= val (word_sub stackpointer (word 8)) + 8`]
+ 51 [`read OF t4 <=>
+      ~(ival (word_sub stackpointer (word 8)) + &8 = ival stackpointer)`]
+ 52 [`read AF t4 <=>
+      ~(val (word_zx (word_sub stackpointer (word 8))) + 8 =
+        val (word_zx stackpointer))`]
+ 53 [`read memory t4 = current`]
+ 54 [`read (memory :> bytes64 stackpointer) t4 = ra`]
+ 55 [`read RAX t4 = word 0`]
+ 56 [`read RIP t4 = word (pc + 21)`]
+ 57 [`bytes_loaded t5 (word pc) c1_crypto_caller_mc`]
+ 58 [`read RAX t5 = word 0`]
+ 59 [`read (memory :> bytes64 stackpointer) t5 = ra`]
+ 60 [`read memory t5 = current`]
+ 61 [`read AF t5 <=>
+      ~(val (word_zx (word_sub stackpointer (word 8))) + 8 =
+        val (word_zx stackpointer))`]
+ 62 [`read OF t5 <=>
+      ~(ival (word_sub stackpointer (word 8)) + &8 = ival stackpointer)`]
+ 63 [`read CF t5 <=> 2 EXP 64 <= val (word_sub stackpointer (word 8)) + 8`]
+ 64 [`read PF t5 <=> word_evenparity (word_zx stackpointer)`]
+ 65 [`read SF t5 <=> ival stackpointer < &0`]
+ 66 [`read ZF t5 <=> val stackpointer = 0`]
+ 67 [`(MAYCHANGE [RIP] ,,
+       MAYCHANGE [ZF] ,,
+       MAYCHANGE [SF] ,,
+       MAYCHANGE [PF] ,,
+       MAYCHANGE [CF] ,,
+       MAYCHANGE [OF] ,,
+       MAYCHANGE [AF] ,,
+       MAYCHANGE [RAX] ,,
+       MAYCHANGE [RSP] ,,
+       MAYCHANGE [events])
+      s
+      t5`]
+ 68 [`read RIP t5 = ra`]
+ 69 [`read RSP t5 = word_add stackpointer (word 8)`]
+ 70 [`read events t5 =
+      CONS (EventJump (word (pc + 22),ra))
+      (CONS (EventLoad (stackpointer,8)) (read events t4))`]
+
+`val (word_add stackpointer (word 8)) = val stackpointer + 8 /\
+ (MAYCHANGE [RIP; RSP; RAX] ,, MAYCHANGE SOME_FLAGS ,, MAYCHANGE [events]) s
+ t5`
+val C1_TAIL_CHECKED : thm =
+  |- forall stackpointer ra result current p q n rp wp xp ordinary s.
+         c1_tail_pre stackpointer ra result current p q n rp wp xp ordinary s
+         ==> assurance_checked_run 5
+             (c1_tail_post stackpointer ra result current s)
+             (c1_step_policy stackpointer p q n rp wp xp ordinary)
+             s
+- : unit = ()
+val c1_tail_audit : string -> term -> thm -> unit = <fun>
+C1_TAIL_LIVE_AUDITED C1_TAIL_CHECKED
+- : unit = ()
+C1_TAIL_LIVE_AUDITED C1_TAIL_RETURN_RSP_VALUE
+- : unit = ()
+- : unit = ()
+val c1_crypto_slot_region_disjoint_statement : term =
+  `forall stackpointer.
+       16 <= val stackpointer /\
+       val stackpointer + 8 < 2 EXP 64 /\
+       nonoverlapping (word_sub stackpointer (word 16),8) (word 270800960,95)
+       ==> (forall addr.
+                ~(assurance_region (word 270800960) 95 addr /\
+                  assurance_region (word_sub stackpointer (word 16)) 8 addr))`
+- : unit = ()
+val C1_CRYPTO_SLOT_REGION_DISJOINT : thm =
+  |- forall stackpointer.
+         16 <= val stackpointer /\
+         val stackpointer + 8 < 2 EXP 64 /\
+         nonoverlapping (word_sub stackpointer (word 16),8)
+         (word 270800960,95)
+         ==> (forall addr.
+                  ~(assurance_region (word 270800960) 95 addr /\
+                    assurance_region (word_sub stackpointer (word 16)) 8 addr))
+- : unit = ()
+C1_LIVE_CHECKED C1_CRYPTO_SLOT_REGION_DISJOINT
+- : unit = ()
+- : unit = ()
+val C1_CALLER_RAW_EXEC : thm * thm option array =
+  (|- LENGTH c1_crypto_caller_mc = 22,
+   [|Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_caller_mc
+             ==> x86_decode s (word pc) (4,SUB (% rsp) (Imm8 (word 8)));
+     None; None; None;
+     Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_caller_mc
+             ==> x86_decode s (word (pc + 4))
+                 (5,CALL (Imm32 (word 4294967063)));
+     None; None; None; None;
+     Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_caller_mc
+             ==> x86_decode s (word (pc + 9)) (2,TEST (% eax) (% eax));
+     None;
+     Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_caller_mc
+             ==> x86_decode s (word (pc + 11)) (3,SET Condition_Z (% al));
+     None; None;
+     Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_caller_mc
+             ==> x86_decode s (word (pc + 14))
+                 (4,ADD (% rsp) (Imm8 (word 8)));
+     None; None; None;
+     Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_caller_mc
+             ==> x86_decode s (word (pc + 18)) (3,MOVZX (% eax) (% al));
+     None; None;
+     Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_caller_mc
+             ==> x86_decode s (word (pc + 21)) (1,RET)|])
+val C1_PLT_RAW_EXEC : thm * thm option array =
+  (|- LENGTH c1_crypto_plt_prefix = 6,
+   [|Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_plt_prefix
+             ==> x86_decode s (word pc)
+                 (6,
+                  JUMP Unconditional
+                  (r1_near_operand64
+                  (Memop Doubleword (Riprel (word 12194)))));
+     None; None; None; None; None|])
+val C1_PLT_EXEC : thm * thm option array =
+  (|- LENGTH c1_crypto_plt_prefix = 6,
+   [|Some
+      |- forall s pc.
+             bytes_loaded s (word pc) c1_crypto_plt_prefix
+             ==> x86_decode s (word pc)
+                 (6,
+                  JUMP Unconditional (Memop Quadword (Riprel (word 12194))));
+     None; None; None; None; None|])
+val C1_PREFIX_SUBTHS : thm list =
+  [|- LENGTH c1_crypto_caller_mc = 22 /\ true;
+   |- LENGTH c1_crypto_plt_prefix = 6 /\ true;
+   |- LENGTH crypto_memcmp_mc = 95 /\ true]
+val C1_CHECKPOINT : string -> goal -> goalstate = <fun>
+val C1_ENDPOINT_RESIDUAL : (string * thm) list * term -> goalstate = <fun>
+val C1_TRACE_FRAME : (string * thm) list * term -> goalstate = <fun>
+val C1_TRACE_RIP : string -> (string * thm) list * term -> goalstate = <fun>
+1 basis elements and 0 critical pairs
+val C1_WORD_SUB_SUB : thm =
+  |- forall pointer a b.
+         word_sub (word_sub pointer (word a)) (word b) =
+         word_sub pointer (word (a + b))
+val C1_CRYPTO_PLT_ADDRESS : thm =
+  |- word (553652496 + 18446744073709551392) = word 553652272
+val C1_SYMBOLIC_DECODE : thm option array -> thm list -> term -> thm * int =
+  <fun>
+val C1_QUALIFIED_DECODE : thm -> thm = <fun>
+val C1_PREFIX_EVENT_SPAN_TAC : tactic = <fun>
+val C1_PUBLIC_CODE_POLICY_TAC :
+  int ->
+  string ->
+  thm option array -> thm -> thm -> (string * thm) list * term -> goalstate =
+  <fun>
+val C1_CHECKED_STEP_TAC :
+  (thm -> thm -> tactic) ->
+  thm * thm option array -> thm list -> string -> tactic = <fun>
+val C1_CALLER_CHECKED_STEP_TAC : string -> tactic = <fun>
+val C1_PLT_CHECKED_STEP_TAC : string -> tactic = <fun>
+val C1_PROTECT_REGION_TAC : int -> int -> thm -> tactic = <fun>
+val C1_PREFIX_PERMISSIONS_TAC : tactic = <fun>
+val C1_FINITE_FRAME_WIDEN_TAC : tactic = <fun>
+val C1_LIBRARY_WP_PROJECTION_TAC : (string * thm) list * term -> goalstate =
+  <fun>
+val C1_IMMUTABLE_MEMORY_POINT_TAC : (string * thm) list * term -> goalstate =
+  <fun>
+val C1_CRYPTO_SLOT_REGION_TAC : (string * thm) list * term -> goalstate =
+  <fun>
+val C1_FINAL_ENDPOINT_TAC : (string * thm) list * term -> goalstate = <fun>
+Warning: inventing type variables
+0..0..1..solved at 4
+Warning: inventing type variables
+0..0..3..11..23..48..solved at 90
+0..0..3..11..23..48..solved at 90
+0..0..3..11..23..48..solved at 90
+0..0..3..11..23..48..solved at 90
+C1_BEFORE_SUB
+C1_CALLBACK_ENTRY
+C1_CALLBACK_DECODE_BEGIN
+C1_CALLBACK_DECODE_END
+C1_CALLBACK_QUALIFIED_BEGIN
+0..0..solved at 8
+C1_CALLBACK_QUALIFIED_END
+C1_CALLBACK_EVENTFACT_BEGIN
+C1_CALLBACK_EVENTFACT_END
+C1_CALLBACK_FETCH_SETUP_BEGIN
+C1_CALLBACK_FETCH_SETUP_END
+C1_POLICY_BEGIN
+C1_FETCH_REWRITE_BEGIN
+C1_FETCH_PC_DONE
+C1_FETCH_VALUES_DONE
+C1_EVENT_APPEND_BEGIN
+C1_EVENT_POLICY_BEGIN
+C1_CALLBACK_EXIT
+C1_AFTER_SUB_BEFORE_CALL
+C1_CALLBACK_ENTRY
+C1_CALLBACK_DECODE_BEGIN
+C1_CALLBACK_DECODE_END
+C1_CALLBACK_QUALIFIED_BEGIN
+0..0..solved at 13
+C1_CALLBACK_QUALIFIED_END
+C1_CALLBACK_EVENTFACT_BEGIN
+C1_CALLBACK_EVENTFACT_END
+C1_CALLBACK_FETCH_SETUP_BEGIN
+C1_CALLBACK_FETCH_SETUP_END
+C1_POLICY_BEGIN
+C1_FETCH_REWRITE_BEGIN
+C1_FETCH_PC_DONE
+C1_FETCH_VALUES_DONE
+C1_EVENT_APPEND_BEGIN
+C1_EVENT_POLICY_BEGIN
+C1_EVENT_POLICY_UNFOLD_DONE
+C1_EVENT_SPAN_BEGIN
+C1_EVENT_SPAN_WORDSUB_DONE
+C1_EVENT_SPAN_NUMERIC_DONE
+C1_CALLBACK_EXIT
+C1_AFTER_CALL
+C1_BEFORE_PLT
+C1_PRE_PLT_RIP_FACT
+553652272 = pltpc, read RIP s2 = word 553652272
+|- read RIP s2 = word pltpc
+C1_PRE_PLT_RIP_FACT
+read RIP s2 = word (pc + 18446744073709551392)
+|- read RIP s2 = word (pc + 18446744073709551392)
+C1_CALLBACK_ENTRY
+C1_CALLBACK_DECODE_BEGIN
+C1_CALLBACK_DECODE_END
+C1_CALLBACK_QUALIFIED_BEGIN
+0..0..solved at 9
+C1_CALLBACK_QUALIFIED_END
+C1_CALLBACK_EVENTFACT_BEGIN
+C1_CALLBACK_EVENTFACT_END
+C1_CALLBACK_FETCH_SETUP_BEGIN
+C1_CALLBACK_FETCH_SETUP_END
+C1_POLICY_BEGIN
+C1_FETCH_REWRITE_BEGIN
+C1_FETCH_PC_DONE
+C1_EVENT_APPEND_BEGIN
+C1_EVENT_POLICY_BEGIN
+C1_EVENT_POLICY_UNFOLD_DONE
+C1_EVENT_SPAN_BEGIN
+C1_EVENT_SPAN_WORDSUB_DONE
+C1_EVENT_SPAN_NUMERIC_DONE
+C1_EVENT_SPAN_VALUES_DONE
+C1_CALLBACK_EXIT
+C1_AFTER_PLT
+C1_EP_PREFIX_FRAME_BEGIN
+C1_FRAME_GOAL
+(MAYCHANGE [RIP; RSP] ,,
+ MAYCHANGE SOME_FLAGS ,,
+ MAYCHANGE [memory :> bytes (word_sub stackpointer (word 16),8)] ,,
+ MAYCHANGE [events])
+s
+s3
+C1_FRAME_SOURCE_FACT
+write AF
+(~(&(val (word_zx (read RSP s))) - &8 =
+   &(val (word_zx (word_sub (read RSP s) (word 8))))))
+(write OF (~(ival (read RSP s) - &8 = ival (word_sub (read RSP s) (word 8))))
+(write CF (val (read RSP s) < 8)
+(write PF (word_evenparity (word_zx (word_sub (read RSP s) (word 8))))
+(write SF (ival (word_sub (read RSP s) (word 8)) < &0)
+(write ZF (val (word_sub (read RSP s) (word 8)) = 0)
+(write RSP (word_sub (read RSP s) (word 8)) (write RIP (word (pc + 4)) s))))))) =
+s1,
+write RIP (word (pc + 18446744073709551392))
+(write
+ (memory :> bytes64 (word_sub (word_sub stackpointer (word 8)) (word 8)))
+ (word (pc + 9))
+(write RSP (word_sub (read RSP s1) (word 8))
+(write events
+ (CONS (EventStore (word_sub (read RSP s1) (word 8),8))
+ (CONS (EventJump (word (pc + 9),word (pc + 18446744073709551392)))
+ (read events s1)))
+(write RIP (word (pc + 9)) s1)))) =
+s2,
+write RIP (read (memory :> bytes64 (word (pltpc + 6 + 12194))) s2)
+(write events
+ (CONS
+  (EventJump
+  (word (pltpc + 6),read (memory :> bytes64 (word (pltpc + 6 + 12194))) s2))
+ (CONS (EventLoad (word (pltpc + 6 + 12194),8)) (read events s2)))
+(write RIP (word (pltpc + 6)) s2)) =
+s3,
+(MAYCHANGE:((x86state,?651632)component)list->x86state->x86state->bool) [] s
+s
+|- (MAYCHANGE [RIP] ,,
+    MAYCHANGE [RSP] ,,
+    MAYCHANGE [ZF] ,,
+    MAYCHANGE [SF] ,,
+    MAYCHANGE [PF] ,,
+    MAYCHANGE [CF] ,,
+    MAYCHANGE [OF] ,,
+    MAYCHANGE [AF] ,,
+    MAYCHANGE [events] ,,
+    MAYCHANGE [memory :> bytes64 (word_sub stackpointer (word 16))])
+   s
+   s3
+C1_FRAME_SUBSUMED_GOAL
+C1_FRAME_GOAL
+MAYCHANGE [RIP] ,,
+MAYCHANGE [RSP] ,,
+MAYCHANGE [ZF] ,,
+MAYCHANGE [SF] ,,
+MAYCHANGE [PF] ,,
+MAYCHANGE [CF] ,,
+MAYCHANGE [OF] ,,
+MAYCHANGE [AF] ,,
+MAYCHANGE [events] ,,
+MAYCHANGE [memory :> bytes64 (word_sub stackpointer (word 16))] subsumed
+(\s s3.
+     (MAYCHANGE [RIP; RSP] ,,
+      MAYCHANGE SOME_FLAGS ,,
+      MAYCHANGE [memory :> bytes (word_sub stackpointer (word 16),8)] ,,
+      MAYCHANGE [events])
+     s
+     s3)
+C1_FRAME_SOURCE_FACT
+write AF
+(~(&(val (word_zx (read RSP s))) - &8 =
+   &(val (word_zx (word_sub (read RSP s) (word 8))))))
+(write OF (~(ival (read RSP s) - &8 = ival (word_sub (read RSP s) (word 8))))
+(write CF (val (read RSP s) < 8)
+(write PF (word_evenparity (word_zx (word_sub (read RSP s) (word 8))))
+(write SF (ival (word_sub (read RSP s) (word 8)) < &0)
+(write ZF (val (word_sub (read RSP s) (word 8)) = 0)
+(write RSP (word_sub (read RSP s) (word 8)) (write RIP (word (pc + 4)) s))))))) =
+s1,
+write RIP (word (pc + 18446744073709551392))
+(write
+ (memory :> bytes64 (word_sub (word_sub stackpointer (word 8)) (word 8)))
+ (word (pc + 9))
+(write RSP (word_sub (read RSP s1) (word 8))
+(write events
+ (CONS (EventStore (word_sub (read RSP s1) (word 8),8))
+ (CONS (EventJump (word (pc + 9),word (pc + 18446744073709551392)))
+ (read events s1)))
+(write RIP (word (pc + 9)) s1)))) =
+s2,
+write RIP (read (memory :> bytes64 (word (pltpc + 6 + 12194))) s2)
+(write events
+ (CONS
+  (EventJump
+  (word (pltpc + 6),read (memory :> bytes64 (word (pltpc + 6 + 12194))) s2))
+ (CONS (EventLoad (word (pltpc + 6 + 12194),8)) (read events s2)))
+(write RIP (word (pltpc + 6)) s2)) =
+s3,
+(MAYCHANGE:((x86state,?651632)component)list->x86state->x86state->bool) [] s
+s
+|- (MAYCHANGE [RIP] ,,
+    MAYCHANGE [RSP] ,,
+    MAYCHANGE [ZF] ,,
+    MAYCHANGE [SF] ,,
+    MAYCHANGE [PF] ,,
+    MAYCHANGE [CF] ,,
+    MAYCHANGE [OF] ,,
+    MAYCHANGE [AF] ,,
+    MAYCHANGE [events] ,,
+    MAYCHANGE [memory :> bytes64 (word_sub stackpointer (word 16))])
+   s
+   s3
+C1_FRAME_FLAGS_EXPANDED
+C1_FRAME_GOAL
+MAYCHANGE [RIP] ,,
+MAYCHANGE [RSP] ,,
+MAYCHANGE [ZF] ,,
+MAYCHANGE [SF] ,,
+MAYCHANGE [PF] ,,
+MAYCHANGE [CF] ,,
+MAYCHANGE [OF] ,,
+MAYCHANGE [AF] ,,
+MAYCHANGE [events] ,,
+MAYCHANGE [memory :> bytes64 (word_sub stackpointer (word 16))] subsumed
+MAYCHANGE [RIP; RSP] ,,
+MAYCHANGE [CF; PF; AF; ZF; SF; OF] ,,
+MAYCHANGE [memory :> bytes (word_sub stackpointer (word 16),8)] ,,
+MAYCHANGE [events]
+C1_FRAME_SOURCE_FACT
+write AF
+(~(&(val (word_zx (read RSP s))) - &8 =
+   &(val (word_zx (word_sub (read RSP s) (word 8))))))
+(write OF (~(ival (read RSP s) - &8 = ival (word_sub (read RSP s) (word 8))))
+(write CF (val (read RSP s) < 8)
+(write PF (word_evenparity (word_zx (word_sub (read RSP s) (word 8))))
+(write SF (ival (word_sub (read RSP s) (word 8)) < &0)
+(write ZF (val (word_sub (read RSP s) (word 8)) = 0)
+(write RSP (word_sub (read RSP s) (word 8)) (write RIP (word (pc + 4)) s))))))) =
+s1,
+write RIP (word (pc + 18446744073709551392))
+(write
+ (memory :> bytes64 (word_sub (word_sub stackpointer (word 8)) (word 8)))
+ (word (pc + 9))
+(write RSP (word_sub (read RSP s1) (word 8))
+(write events
+ (CONS (EventStore (word_sub (read RSP s1) (word 8),8))
+ (CONS (EventJump (word (pc + 9),word (pc + 18446744073709551392)))
+ (read events s1)))
+(write RIP (word (pc + 9)) s1)))) =
+s2,
+write RIP (read (memory :> bytes64 (word (pltpc + 6 + 12194))) s2)
+(write events
+ (CONS
+  (EventJump
+  (word (pltpc + 6),read (memory :> bytes64 (word (pltpc + 6 + 12194))) s2))
+ (CONS (EventLoad (word (pltpc + 6 + 12194),8)) (read events s2)))
+(write RIP (word (pltpc + 6)) s2)) =
+s3,
+(MAYCHANGE:((x86state,?651632)component)list->x86state->x86state->bool) [] s
+s
+|- (MAYCHANGE [RIP] ,,
+    MAYCHANGE [RSP] ,,
+    MAYCHANGE [ZF] ,,
+    MAYCHANGE [SF] ,,
+    MAYCHANGE [PF] ,,
+    MAYCHANGE [CF] ,,
+    MAYCHANGE [OF] ,,
+    MAYCHANGE [AF] ,,
+    MAYCHANGE [events] ,,
+    MAYCHANGE [memory :> bytes64 (word_sub stackpointer (word 16))])
+   s
+   s3
+C1_EP_PREFIX_FRAME_END_MEMORY_BEGIN
+C1_EP_MEMORY_END_LIBRARY_SLOT_BEGIN
+0..0..1..2..solved at 6
+0..0..1..2..solved at 6
+C1_EP_LIBRARY_SLOT_END_IMAGE_BEGIN
+C1_EP_IMAGE_END_P_BUFFER_BEGIN
+C1_EP_P_BUFFER_END_Q_BUFFER_BEGIN
+C1_EP_Q_BUFFER_END_INCOMING_BEGIN
+C1_EP_INCOMING_END_STACK_VALUE_BEGIN
+C1_EP_STACK_VALUE_END_ALIGNMENT_BEGIN
+C1_EP_ALIGNMENT_END_CALLEE_RA_REGION_BEGIN
+C1_CRYPTO_SLOT_PROJECT_BEGIN
+C1_CRYPTO_SLOT_PROJECT_END
+C1_EP_CALLEE_RA_REGION_END_FINAL_REWRITE_BEGIN
+C1_EP_PUBLIC_DEFINITIONS_REWRITTEN
+C1_EP_CONCRETE_PCS_REWRITTEN
+C1_EP_FINAL_REWRITES_COMPLETE
+C1_FINAL_STACK_BOUND
+C1_FINAL_FIXED_RETURN_NEQ
+C1_FINAL_AC_FRAME
+C1_FINAL_LIBRARY_PERMISSION
+0..0..1..solved at 4
+0..0..1..solved at 4
+0..0..1..2..solved at 6
+0..0..1..2..solved at 6
+val C1_CRYPTO_HANDOFF : thm =
+  |- forall lib_file lib_rw lib_padding client_file client_rw client_padding stackpointer ra p q n m rp wp xp ordinary s a.
+         c1_pre lib_file lib_rw lib_padding client_file client_rw
+         client_padding
+         stackpointer
+         ra
+         p
+         q
+         n
+         m
+         rp
+         wp
+         xp
+         ordinary
+         (s,a)
+         ==> assurance_checked_run 3
+             (c1_crypto_ready lib_file stackpointer p q n m rp xp ordinary s
+             a)
+             (c1_segment_policy stackpointer p q n rp wp xp ordinary)
+             s
+- : unit = ()
+C1_LIVE_CHECKED C1_CRYPTO_HANDOFF
+- : unit = ()
+- : unit = ()
+C1_DEVELOPMENT_PREFIX_AND_SUFFIX_RECONSTRUCTED
+- : unit = ()
+- : unit = ()
+val cw_external : thm =
+  |- forall a. cw_external a <=> 1342177280 <= a /\ assurance_canonical48 a
+val cw_layout : thm =
+  |- forall different n q p k.
+         cw_layout p q n k different <=>
+         n < 2 EXP 64 /\
+         assurance_span_ok cw_external (val p) n /\
+         assurance_span_ok cw_external (val q) n /\
+         (different
+          ==> k < n /\
+              (forall i.
+                   i < n ==> ~(word_add q (word i) = word_add p (word k))))
+val cw_seed : thm =
+  |- forall lib_file client_file different addr p k.
+         cw_seed lib_file client_file p k different addr =
+         (if fb_immutable (val addr)
+          then lib_file (val addr - 268435456)
+          else if c1_immutable (val addr)
+               then client_file (val addr - 553648128)
+               else if different /\ addr = word_add p (word k)
+                    then word 255
+                    else word 128)
+val cw_memory : thm =
+  |- forall lib_file client_file p k different.
+         cw_memory lib_file client_file p k different =
+         write (bytes64 (word 3145736)) (word 4194304)
+         (write (bytes64 (word 553664472)) (word 270800960)
+         (cw_seed lib_file client_file p k different))
+val cw_state : thm =
+  |- forall q n lib_file client_file p k different.
+         cw_state lib_file client_file p q n k different =
+         x86state_RECORD (word 553652496)
+         (\j.
+              if j = word 7
+              then p
+              else if j = word 6
+                   then q
+                   else if j = word 2
+                        then word n
+                        else if j = word 4 then word 3145736 else word 0)
+         (\j. word 0)
+         (\j. word 0)
+         (word 2)
+         (cw_memory lib_file client_file p k different)
+         []
+val cw_read : thm =
+  |- forall a. cw_read a <=> assurance_canonical48 a /\ ~(a = 0)
+val cw_write : thm =
+  |- forall a.
+         cw_write a <=>
+         (if lw_image_domain a
+          then lw_image_write a
+          else if c1_image_domain a
+               then c1_image_write a
+               else assurance_canonical48 a)
+val cw_execute : thm =
+  |- forall a. cw_execute a <=> lw_execute a \/ c1_image_execute a
+val cw_ordinary : thm =
+  |- forall a. cw_ordinary a <=> assurance_canonical48 a
+val c1_entry_witness : thm =
+  |- forall lib_file client_file different k p q n.
+         c1_entry_witness lib_file client_file p q n k different <=>
+         (exists lib_rw lib_padding client_rw client_padding m rp wp xp ordinary s a.
+              c1_pre lib_file lib_rw lib_padding client_file client_rw
+              client_padding
+              (word 3145736)
+              (word 4194304)
+              p
+              q
+              n
+              m
+              rp
+              wp
+              xp
+              ordinary
+              (s,a) /\
+              (forall i.
+                   i < n
+                   ==> m (word_add p (word i)) =
+                       (if different /\ i = k then word 255 else word 128)) /\
+              (forall i. i < n ==> m (word_add q (word i)) = word 128) /\
+              (p = word 0 /\ q = word 0 /\ n = 0 ==> ~rp 0))
+- : unit = ()
+val cw_write64_outside_statement : term =
+  `forall loc value addr m.
+       val loc + 8 <= 2 EXP 64 /\ ~assurance_region loc 8 (val addr)
+       ==> write (bytes64 loc) value m addr = m addr`
+val cw_memory_outside_statement : term =
+  `forall lib_file client_file p k different addr.
+       ~assurance_region (word 3145736) 8 (val addr) /\
+       ~assurance_region (word 553664472) 8 (val addr)
+       ==> cw_memory lib_file client_file p k different addr =
+           cw_seed lib_file client_file p k different addr`
+val cw_memory_words_statement : term =
+  `forall lib_file client_file p k different.
+       read (bytes64 (word 3145736))
+       (cw_memory lib_file client_file p k different) =
+       word 4194304 /\
+       read (bytes64 (word 553664472))
+       (cw_memory lib_file client_file p k different) =
+       word 270800960`
+val cw_state_projections_statement : term =
+  `forall lib_file client_file p q n k different.
+       read RIP (cw_state lib_file client_file p q n k different) =
+       word 553652496 /\
+       read RSP (cw_state lib_file client_file p q n k different) =
+       word 3145736 /\
+       C_ARGUMENTS [p; q; word n]
+       (cw_state lib_file client_file p q n k different) /\
+       read memory (cw_state lib_file client_file p q n k different) =
+       cw_memory lib_file client_file p k different /\
+       (read DF (cw_state lib_file client_file p q n k different) <=> false) /\
+       ~bit 18
+        (read rflags (cw_state lib_file client_file p q n k different)) /\
+       e5_normal_flags (cw_state lib_file client_file p q n k different)`
+val cw_initial_abi_statement : term =
+  `assurance_canonical48 (val (read ABI_FS_BASE fb_initial_abi))`
+val cw_index_value_statement : term =
+  `forall p n i.
+       n < 2 EXP 64 /\ val p + n <= 2 EXP 64 /\ i < n
+       ==> val (word_add p (word i)) = val p + i`
+val cw_external_point_statement : term =
+  `forall addr.
+       cw_external (val addr)
+       ==> ~fb_immutable (val addr) /\
+           ~c1_immutable (val addr) /\
+           ~assurance_region (word 3145736) 8 (val addr) /\
+           ~assurance_region (word 553664472) 8 (val addr)`
+val cw_external_permissions_statement : term =
+  `forall addr.
+       cw_external addr ==> cw_read addr /\ cw_write addr /\ cw_ordinary addr`
+val cw_layout_point_statement : term =
+  `forall p q n k different i.
+       cw_layout p q n k different /\ i < n
+       ==> cw_external (val (word_add p (word i))) /\
+           cw_external (val (word_add q (word i)))`
+val cw_memory_immutable_statement : term =
+  `forall lib_file client_file p k different addr.
+       (fb_immutable (val addr)
+        ==> cw_memory lib_file client_file p k different addr =
+            lib_file (val addr - 268435456)) /\
+       (c1_immutable (val addr)
+        ==> cw_memory lib_file client_file p k different addr =
+            client_file (val addr - 553648128))`
+val cw_memory_images_statement : term =
+  `forall lib_file client_file p k different.
+       fb_full_image lib_file (cw_memory lib_file client_file p k different)
+       (cw_memory lib_file client_file p k different)
+       (cw_memory lib_file client_file p k different) /\
+       c1_full_image client_file
+       (cw_memory lib_file client_file p k different)
+       (cw_memory lib_file client_file p k different)
+       (cw_memory lib_file client_file p k different)`
+val cw_bytes_loaded_reads_statement : term =
+  `forall s pc l.
+       (forall i.
+            i < LENGTH l ==> read memory s (word_add pc (word i)) = EL i l)
+       ==> bytes_loaded s pc l`
+val cw_loaded_code_statement : term =
+  `forall lib_file client_file p q n k different.
+       fb_file_code lib_file /\ c1_file_code client_file
+       ==> c1_loaded_code (cw_state lib_file client_file p q n k different)`
+val cw_image_permissions_statement : term =
+  `(forall addr.
+        lw_image_domain addr
+        ==> cw_read addr /\
+            cw_ordinary addr /\
+            (cw_execute addr <=> lw_execute addr) /\
+            (cw_write addr <=> lw_image_write addr)) /\
+   (forall addr.
+        c1_image_domain addr
+        ==> cw_read addr /\
+            cw_ordinary addr /\
+            (cw_execute addr <=> c1_image_execute addr) /\
+            (cw_write addr <=> c1_image_write addr))`
+val cw_fixed_spans_statement : term =
+  `assurance_span_ok (\a. cw_read a /\ cw_ordinary a) (3145736 - 16) 8 /\
+   assurance_span_ok (\a. cw_write a /\ cw_ordinary a) (3145736 - 16) 8 /\
+   assurance_span_ok (\a. cw_read a /\ cw_ordinary a) 3145736 8 /\
+   assurance_span_ok (\a. cw_read a /\ cw_ordinary a) 553664472 8 /\
+   assurance_span_ok (\a. cw_execute a /\ cw_ordinary a) 553652496 22 /\
+   assurance_span_ok (\a. cw_execute a /\ cw_ordinary a) 553652272 6 /\
+   assurance_span_ok (\a. cw_execute a /\ cw_ordinary a) 270800960 95`
+val cw_layout_permissions_statement : term =
+  `forall p q n k different.
+       cw_layout p q n k different
+       ==> assurance_span_ok (\a. cw_read a /\ cw_ordinary a) (val p) n /\
+           assurance_span_ok (\a. cw_read a /\ cw_ordinary a) (val q) n /\
+           (forall addr.
+                ~(assurance_region p n addr /\
+                  c1_call_slot (word 3145736) addr)) /\
+           (forall addr.
+                ~(assurance_region q n addr /\
+                  c1_call_slot (word 3145736) addr))`
+val cw_seven_layouts_statement : term =
+  `cw_layout (word 0) (word 0) 0 0 false /\
+   cw_layout (word 1342177280) (word 1610612736) 1 0 false /\
+   cw_layout (word 1342177283) (word 1610612741) 17 0 true /\
+   cw_layout (word 1342177283) (word 1342177283) 16 0 false /\
+   cw_layout (word 1342177283) (word 1342177284) 17 0 false /\
+   cw_layout (word 1342181375) (word 1610616831) 15 14 true /\
+   cw_layout (word 140737488355327) (word 18446603336221196288) 1 0 true`
+val cw_buffer_values_statement : term =
+  `forall lib_file client_file p q n k different.
+       cw_layout p q n k different
+       ==> (forall i.
+                i < n
+                ==> cw_memory lib_file client_file p k different
+                    (word_add p (word i)) =
+                    (if different /\ i = k then word 255 else word 128)) /\
+           (forall i.
+                i < n
+                ==> cw_memory lib_file client_file p k different
+                    (word_add q (word i)) =
+                    word 128)`
+val cw_pre_statement : term =
+  `forall lib_file client_file p q n k different.
+       fb_file_code lib_file /\
+       c1_file_code client_file /\
+       cw_layout p q n k different
+       ==> c1_pre lib_file (cw_memory lib_file client_file p k different)
+           (cw_memory lib_file client_file p k different)
+           client_file
+           (cw_memory lib_file client_file p k different)
+           (cw_memory lib_file client_file p k different)
+           (word 3145736)
+           (word 4194304)
+           p
+           q
+           n
+           (cw_memory lib_file client_file p k different)
+           cw_read
+           cw_write
+           cw_execute
+           cw_ordinary
+           (cw_state lib_file client_file p q n k different,fb_initial_abi)`
+val cw_generic_witness_statement : term =
+  `forall lib_file client_file p q n k different.
+       fb_file_code lib_file /\
+       c1_file_code client_file /\
+       cw_layout p q n k different
+       ==> c1_entry_witness lib_file client_file p q n k different`
+val c1_admissible_entry_witnesses_statement : term =
+  `forall lib_file client_file.
+       fb_file_code lib_file /\ c1_file_code client_file
+       ==> c1_entry_witness lib_file client_file (word 0) (word 0) 0 0 false /\
+           c1_entry_witness lib_file client_file (word 1342177280)
+           (word 1610612736)
+           1
+           0
+           false /\
+           c1_entry_witness lib_file client_file (word 1342177283)
+           (word 1610612741)
+           17
+           0
+           true /\
+           c1_entry_witness lib_file client_file (word 1342177283)
+           (word 1342177283)
+           16
+           0
+           false /\
+           c1_entry_witness lib_file client_file (word 1342177283)
+           (word 1342177284)
+           17
+           0
+           false /\
+           c1_entry_witness lib_file client_file (word 1342181375)
+           (word 1610616831)
+           15
+           14
+           true /\
+           c1_entry_witness lib_file client_file (word 140737488355327)
+           (word 18446603336221196288)
+           1
+           0
+           true`
+- : unit = ()
+val CW_WRITE64_OUTSIDE : thm =
+  |- forall loc value addr m.
+         val loc + 8 <= 2 EXP 64 /\ ~assurance_region loc 8 (val addr)
+         ==> write (bytes64 loc) value m addr = m addr
+val cw_fixed_write_outside : thm list =
+  [|- forall value addr m.
+          ~assurance_region (word 3145736) 8 (val addr)
+          ==> write (bytes64 (word 3145736)) value m addr = m addr;
+   |- forall value addr m.
+          ~assurance_region (word 553664472) 8 (val addr)
+          ==> write (bytes64 (word 553664472)) value m addr = m addr]
+val CW_MEMORY_OUTSIDE : thm =
+  |- forall lib_file client_file p k different addr.
+         ~assurance_region (word 3145736) 8 (val addr) /\
+         ~assurance_region (word 553664472) 8 (val addr)
+         ==> cw_memory lib_file client_file p k different addr =
+             cw_seed lib_file client_file p k different addr
+val CW_MEMORY_WORDS : thm =
+  |- forall lib_file client_file p k different.
+         read (bytes64 (word 3145736))
+         (cw_memory lib_file client_file p k different) =
+         word 4194304 /\
+         read (bytes64 (word 553664472))
+         (cw_memory lib_file client_file p k different) =
+         word 270800960
+val CW_STATE_PROJECTIONS : thm =
+  |- forall lib_file client_file p q n k different.
+         read RIP (cw_state lib_file client_file p q n k different) =
+         word 553652496 /\
+         read RSP (cw_state lib_file client_file p q n k different) =
+         word 3145736 /\
+         C_ARGUMENTS [p; q; word n]
+         (cw_state lib_file client_file p q n k different) /\
+         read memory (cw_state lib_file client_file p q n k different) =
+         cw_memory lib_file client_file p k different /\
+         (read DF (cw_state lib_file client_file p q n k different) <=>
+          false) /\
+         ~bit 18
+          (read rflags (cw_state lib_file client_file p q n k different)) /\
+         e5_normal_flags (cw_state lib_file client_file p q n k different)
+val CW_INITIAL_ABI : thm =
+  |- assurance_canonical48 (val (read ABI_FS_BASE fb_initial_abi))
+val CW_BYTES_LOADED_READS : thm =
+  |- forall s pc l.
+         (forall i.
+              i < LENGTH l ==> read memory s (word_add pc (word i)) = EL i l)
+         ==> bytes_loaded s pc l
+- : unit = ()
+val CW_INDEX_VALUE : thm =
+  |- forall p n i.
+         n < 2 EXP 64 /\ val p + n <= 2 EXP 64 /\ i < n
+         ==> val (word_add p (word i)) = val p + i
+val CW_EXTERNAL_POINT : thm =
+  |- forall addr.
+         cw_external (val addr)
+         ==> ~fb_immutable (val addr) /\
+             ~c1_immutable (val addr) /\
+             ~assurance_region (word 3145736) 8 (val addr) /\
+             ~assurance_region (word 553664472) 8 (val addr)
+val CW_EXTERNAL_PERMISSIONS : thm =
+  |- forall addr.
+         cw_external addr
+         ==> cw_read addr /\ cw_write addr /\ cw_ordinary addr
+0..0..1..solved at 4
+0..0..1..solved at 4
+0..0..1..solved at 4
+0..0..1..solved at 4
+val CW_LAYOUT_POINT : thm =
+  |- forall p q n k different i.
+         cw_layout p q n k different /\ i < n
+         ==> cw_external (val (word_add p (word i))) /\
+             cw_external (val (word_add q (word i)))
+- : unit = ()
+val CW_MEMORY_IMMUTABLE : thm =
+  |- forall lib_file client_file p k different addr.
+         (fb_immutable (val addr)
+          ==> cw_memory lib_file client_file p k different addr =
+              lib_file (val addr - 268435456)) /\
+         (c1_immutable (val addr)
+          ==> cw_memory lib_file client_file p k different addr =
+              client_file (val addr - 553648128))
+val CW_MEMORY_IMAGES : thm =
+  |- forall lib_file client_file p k different.
+         fb_full_image lib_file
+         (cw_memory lib_file client_file p k different)
+         (cw_memory lib_file client_file p k different)
+         (cw_memory lib_file client_file p k different) /\
+         c1_full_image client_file
+         (cw_memory lib_file client_file p k different)
+         (cw_memory lib_file client_file p k different)
+         (cw_memory lib_file client_file p k different)
+val cw_client_length_rewrites : thm list =
+  [|- LENGTH c1_crypto_caller_mc = 22; |- LENGTH c1_crypto_plt_prefix = 6]
+val cw_load_immutable_block : term -> term -> thm -> thm -> tactic = <fun>
+val cw_file_offset_shift : term -> term -> thm = <fun>
+0..0..1..solved at 4
+0..0..1..solved at 4
+0..0..1..solved at 4
+val CW_LOADED_CODE : thm =
+  |- forall lib_file client_file p q n k different.
+         fb_file_code lib_file /\ c1_file_code client_file
+         ==> c1_loaded_code (cw_state lib_file client_file p q n k different)
+- : unit = ()
+val CW_IMAGE_PERMISSIONS : thm =
+  |- (forall addr.
+          lw_image_domain addr
+          ==> cw_read addr /\
+              cw_ordinary addr /\
+              (cw_execute addr <=> lw_execute addr) /\
+              (cw_write addr <=> lw_image_write addr)) /\
+     (forall addr.
+          c1_image_domain addr
+          ==> cw_read addr /\
+              cw_ordinary addr /\
+              (cw_execute addr <=> c1_image_execute addr) /\
+              (cw_write addr <=> c1_image_write addr))
+val CW_FIXED_SPANS : thm =
+  |- assurance_span_ok (\a. cw_read a /\ cw_ordinary a) (3145736 - 16) 8 /\
+     assurance_span_ok (\a. cw_write a /\ cw_ordinary a) (3145736 - 16) 8 /\
+     assurance_span_ok (\a. cw_read a /\ cw_ordinary a) 3145736 8 /\
+     assurance_span_ok (\a. cw_read a /\ cw_ordinary a) 553664472 8 /\
+     assurance_span_ok (\a. cw_execute a /\ cw_ordinary a) 553652496 22 /\
+     assurance_span_ok (\a. cw_execute a /\ cw_ordinary a) 553652272 6 /\
+     assurance_span_ok (\a. cw_execute a /\ cw_ordinary a) 270800960 95
+0..0..1..solved at 4
+0..0..1..6..solved at 10
+0..0..1..6..solved at 10
+0..0..1..solved at 4
+0..0..1..3..solved at 7
+0..0..1..3..solved at 7
+0..0..1..solved at 4
+0..0..1..6..solved at 10
+0..0..1..6..solved at 10
+0..0..1..solved at 4
+0..0..1..3..solved at 7
+0..0..1..3..solved at 7
+0..0..0..3..8..16..32..57..90..186..302..472..solved at 590
+0..0..0..1..4..7..16..29..47..90..143..216..solved at 236
+0..0..0..3..8..16..32..57..90..186..302..472..solved at 590
+0..0..0..1..4..7..16..29..47..90..143..216..solved at 236
+val CW_LAYOUT_PERMISSIONS : thm =
+  |- forall p q n k different.
+         cw_layout p q n k different
+         ==> assurance_span_ok (\a. cw_read a /\ cw_ordinary a) (val p) n /\
+             assurance_span_ok (\a. cw_read a /\ cw_ordinary a) (val q) n /\
+             (forall addr.
+                  ~(assurance_region p n addr /\
+                    c1_call_slot (word 3145736) addr)) /\
+             (forall addr.
+                  ~(assurance_region q n addr /\
+                    c1_call_slot (word 3145736) addr))
+val CW_SEVEN_LAYOUTS : thm =
+  |- cw_layout (word 0) (word 0) 0 0 false /\
+     cw_layout (word 1342177280) (word 1610612736) 1 0 false /\
+     cw_layout (word 1342177283) (word 1610612741) 17 0 true /\
+     cw_layout (word 1342177283) (word 1342177283) 16 0 false /\
+     cw_layout (word 1342177283) (word 1342177284) 17 0 false /\
+     cw_layout (word 1342181375) (word 1610616831) 15 14 true /\
+     cw_layout (word 140737488355327) (word 18446603336221196288) 1 0 true
+- : unit = ()
+0..0..solved at 2
+0..0..solved at 2
+0..0..solved at 2
+0..0..solved at 2
+0..0..solved at 2
+0..0..solved at 2
+0..0..solved at 2
+0..0..0..solved at 4
+0..0..solved at 7
+val CW_BUFFER_VALUES : thm =
+  |- forall lib_file client_file p q n k different.
+         cw_layout p q n k different
+         ==> (forall i.
+                  i < n
+                  ==> cw_memory lib_file client_file p k different
+                      (word_add p (word i)) =
+                      (if different /\ i = k then word 255 else word 128)) /\
+             (forall i.
+                  i < n
+                  ==> cw_memory lib_file client_file p k different
+                      (word_add q (word i)) =
+                      word 128)
+- : unit = ()
+val CW_PRE : thm =
+  |- forall lib_file client_file p q n k different.
+         fb_file_code lib_file /\
+         c1_file_code client_file /\
+         cw_layout p q n k different
+         ==> c1_pre lib_file (cw_memory lib_file client_file p k different)
+             (cw_memory lib_file client_file p k different)
+             client_file
+             (cw_memory lib_file client_file p k different)
+             (cw_memory lib_file client_file p k different)
+             (word 3145736)
+             (word 4194304)
+             p
+             q
+             n
+             (cw_memory lib_file client_file p k different)
+             cw_read
+             cw_write
+             cw_execute
+             cw_ordinary
+             (cw_state lib_file client_file p q n k different,fb_initial_abi)
+val CW_GENERIC_WITNESS : thm =
+  |- forall lib_file client_file p q n k different.
+         fb_file_code lib_file /\
+         c1_file_code client_file /\
+         cw_layout p q n k different
+         ==> c1_entry_witness lib_file client_file p q n k different
+val C1_ADMISSIBLE_ENTRY_WITNESSES : thm =
+  |- forall lib_file client_file.
+         fb_file_code lib_file /\ c1_file_code client_file
+         ==> c1_entry_witness lib_file client_file (word 0) (word 0) 0 0
+             false /\
+             c1_entry_witness lib_file client_file (word 1342177280)
+             (word 1610612736)
+             1
+             0
+             false /\
+             c1_entry_witness lib_file client_file (word 1342177283)
+             (word 1610612741)
+             17
+             0
+             true /\
+             c1_entry_witness lib_file client_file (word 1342177283)
+             (word 1342177283)
+             16
+             0
+             false /\
+             c1_entry_witness lib_file client_file (word 1342177283)
+             (word 1342177284)
+             17
+             0
+             false /\
+             c1_entry_witness lib_file client_file (word 1342181375)
+             (word 1610616831)
+             15
+             14
+             true /\
+             c1_entry_witness lib_file client_file (word 140737488355327)
+             (word 18446603336221196288)
+             1
+             0
+             true
+- : unit = ()
+val cw_audit_definition : string -> term -> thm -> unit = <fun>
+C1_ENTRY_DEFINITION_CHECKED c1_entry_witness
+- : unit = ()
+C1_ENTRY_DEFINITION_CHECKED cw_execute
+- : unit = ()
+C1_ENTRY_DEFINITION_CHECKED cw_external
+- : unit = ()
+C1_ENTRY_DEFINITION_CHECKED cw_layout
+- : unit = ()
+C1_ENTRY_DEFINITION_CHECKED cw_memory
+- : unit = ()
+C1_ENTRY_DEFINITION_CHECKED cw_ordinary
+- : unit = ()
+C1_ENTRY_DEFINITION_CHECKED cw_read
+- : unit = ()
+C1_ENTRY_DEFINITION_CHECKED cw_seed
+- : unit = ()
+C1_ENTRY_DEFINITION_CHECKED cw_state
+- : unit = ()
+C1_ENTRY_DEFINITION_CHECKED cw_write
+- : unit = ()
+val cw_audit_target : string -> term -> thm -> unit = <fun>
+C1_ENTRY_TARGET_CHECKED C1_ADMISSIBLE_ENTRY_WITNESSES
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_BUFFER_VALUES
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_BYTES_LOADED_READS
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_EXTERNAL_PERMISSIONS
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_EXTERNAL_POINT
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_FIXED_SPANS
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_GENERIC_WITNESS
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_IMAGE_PERMISSIONS
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_INDEX_VALUE
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_INITIAL_ABI
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_LAYOUT_PERMISSIONS
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_LAYOUT_POINT
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_LOADED_CODE
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_MEMORY_IMAGES
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_MEMORY_IMMUTABLE
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_MEMORY_OUTSIDE
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_MEMORY_WORDS
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_PRE
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_SEVEN_LAYOUTS
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_STATE_PROJECTIONS
+- : unit = ()
+C1_ENTRY_TARGET_CHECKED CW_WRITE64_OUTSIDE
+- : unit = ()
+- : unit = ()
+- : unit = ()
+val c1_tail_frame_included_statement : term =
+  `forall stackpointer.
+       MAYCHANGE [RIP; RSP; RAX] ,,
+       MAYCHANGE SOME_FLAGS ,,
+       MAYCHANGE [events] subsumed
+       c1_frame stackpointer`
+val c1_tail_frame_compose_statement : term =
+  `forall stackpointer initial returned final.
+       c1_frame stackpointer initial returned /\
+       (MAYCHANGE [RIP; RSP; RAX] ,,
+        MAYCHANGE SOME_FLAGS ,,
+        MAYCHANGE [events])
+       returned
+       final
+       ==> c1_frame stackpointer initial final`
+val c1_completed_tail_pre_statement : term =
+  `forall lib_file lib_rw lib_padding client_file client_rw client_padding stackpointer ra p q n m rp wp xp ordinary initial a returned.
+       c1_pre lib_file lib_rw lib_padding client_file client_rw
+       client_padding
+       stackpointer
+       ra
+       p
+       q
+       n
+       m
+       rp
+       wp
+       xp
+       ordinary
+       (initial,a) /\
+       c1_crypto_completed lib_file stackpointer p q n m rp xp ordinary
+       initial
+       a
+       returned
+       ==> c1_tail_pre stackpointer ra (read RAX returned)
+           (read memory returned)
+           p
+           q
+           n
+           rp
+           wp
+           xp
+           ordinary
+           returned`
+val c1_completed_tail_post_statement : term =
+  `forall lib_file lib_rw lib_padding client_file client_rw client_padding stackpointer ra p q n m rp wp xp ordinary initial a returned final.
+       c1_pre lib_file lib_rw lib_padding client_file client_rw
+       client_padding
+       stackpointer
+       ra
+       p
+       q
+       n
+       m
+       rp
+       wp
+       xp
+       ordinary
+       (initial,a) /\
+       c1_crypto_completed lib_file stackpointer p q n m rp xp ordinary
+       initial
+       a
+       returned /\
+       c1_tail_post stackpointer ra (read RAX returned)
+       (read memory returned)
+       returned
+       final
+       ==> c1_scalar_post stackpointer ra p q n m initial final`
+val c1_shifted_segment_policy_statement : term =
+  `forall stackpointer p q n rp wp xp ordinary offset k source target.
+       5 <= offset /\
+       c1_segment_policy stackpointer p q n rp wp xp ordinary k source target
+       ==> c1_step_policy stackpointer p q n rp wp xp ordinary (offset + k)
+           source
+           target`
+val c1_step_policy_qualified_statement : term =
+  `forall stackpointer p q n rp wp xp ordinary k source target.
+       c1_step_policy stackpointer p q n rp wp xp ordinary k source target
+       ==> abi_all_decodes_caller_scalar source`
+val c1_completed_tail_run_statement : term =
+  `forall lib_file lib_rw lib_padding client_file client_rw client_padding stackpointer ra p q n m rp wp xp ordinary initial a returned.
+       c1_pre lib_file lib_rw lib_padding client_file client_rw
+       client_padding
+       stackpointer
+       ra
+       p
+       q
+       n
+       m
+       rp
+       wp
+       xp
+       ordinary
+       (initial,a) /\
+       c1_crypto_completed lib_file stackpointer p q n m rp xp ordinary
+       initial
+       a
+       returned
+       ==> assurance_checked_run 5
+           (c1_scalar_post stackpointer ra p q n m initial)
+           (c1_step_policy stackpointer p q n rp wp xp ordinary)
+           returned`
+- : unit = ()
+val C1_TAIL_FRAME_INCLUDED : thm =
+  |- forall stackpointer.
+         MAYCHANGE [RIP; RSP; RAX] ,,
+         MAYCHANGE SOME_FLAGS ,,
+         MAYCHANGE [events] subsumed
+         c1_frame stackpointer
+val C1_TAIL_FRAME_COMPOSE : thm =
+  |- forall stackpointer initial returned final.
+         c1_frame stackpointer initial returned /\
+         (MAYCHANGE [RIP; RSP; RAX] ,,
+          MAYCHANGE SOME_FLAGS ,,
+          MAYCHANGE [events])
+         returned
+         final
+         ==> c1_frame stackpointer initial final
+val C1_COMPOSITION_ACCESS_TAC : tactic = <fun>
+val C1_COMPLETED_TAIL_PRE : thm =
+  |- forall lib_file lib_rw lib_padding client_file client_rw client_padding stackpointer ra p q n m rp wp xp ordinary initial a returned.
+         c1_pre lib_file lib_rw lib_padding client_file client_rw
+         client_padding
+         stackpointer
+         ra
+         p
+         q
+         n
+         m
+         rp
+         wp
+         xp
+         ordinary
+         (initial,a) /\
+         c1_crypto_completed lib_file stackpointer p q n m rp xp ordinary
+         initial
+         a
+         returned
+         ==> c1_tail_pre stackpointer ra (read RAX returned)
+             (read memory returned)
+             p
+             q
+             n
+             rp
+             wp
+             xp
+             ordinary
+             returned
+val C1_COMPLETED_TAIL_POST : thm =
+  |- forall lib_file lib_rw lib_padding client_file client_rw client_padding stackpointer ra p q n m rp wp xp ordinary initial a returned final.
+         c1_pre lib_file lib_rw lib_padding client_file client_rw
+         client_padding
+         stackpointer
+         ra
+         p
+         q
+         n
+         m
+         rp
+         wp
+         xp
+         ordinary
+         (initial,a) /\
+         c1_crypto_completed lib_file stackpointer p q n m rp xp ordinary
+         initial
+         a
+         returned /\
+         c1_tail_post stackpointer ra (read RAX returned)
+         (read memory returned)
+         returned
+         final
+         ==> c1_scalar_post stackpointer ra p q n m initial final
+val C1_SHIFTED_SEGMENT_POLICY : thm =
+  |- forall stackpointer p q n rp wp xp ordinary offset k source target.
+         5 <= offset /\
+         c1_segment_policy stackpointer p q n rp wp xp ordinary k source
+         target
+         ==> c1_step_policy stackpointer p q n rp wp xp ordinary (offset + k)
+             source
+             target
+0..0..solved at 3
+0..0..solved at 2
+val C1_STEP_POLICY_QUALIFIED : thm =
+  |- forall stackpointer p q n rp wp xp ordinary k source target.
+         c1_step_policy stackpointer p q n rp wp xp ordinary k source target
+         ==> abi_all_decodes_caller_scalar source
+val C1_COMPLETED_TAIL_RUN : thm =
+  |- forall lib_file lib_rw lib_padding client_file client_rw client_padding stackpointer ra p q n m rp wp xp ordinary initial a returned.
+         c1_pre lib_file lib_rw lib_padding client_file client_rw
+         client_padding
+         stackpointer
+         ra
+         p
+         q
+         n
+         m
+         rp
+         wp
+         xp
+         ordinary
+         (initial,a) /\
+         c1_crypto_completed lib_file stackpointer p q n m rp xp ordinary
+         initial
+         a
+         returned
+         ==> assurance_checked_run 5
+             (c1_scalar_post stackpointer ra p q n m initial)
+             (c1_step_policy stackpointer p q n rp wp xp ordinary)
+             returned
+- : unit = ()
+C1_LIVE_CHECKED C1_TAIL_FRAME_INCLUDED
+- : unit = ()
+C1_LIVE_CHECKED C1_TAIL_FRAME_COMPOSE
+- : unit = ()
+C1_LIVE_CHECKED C1_COMPLETED_TAIL_PRE
+- : unit = ()
+C1_LIVE_CHECKED C1_COMPLETED_TAIL_POST
+- : unit = ()
+C1_LIVE_CHECKED C1_SHIFTED_SEGMENT_POLICY
+- : unit = ()
+C1_LIVE_CHECKED C1_STEP_POLICY_QUALIFIED
+- : unit = ()
+C1_LIVE_CHECKED C1_COMPLETED_TAIL_RUN
+- : unit = ()
+- : unit = ()
+Warning: inventing type variables
+Warning: inventing type variables
+Exception: Failure "ISPECL".
+Exception:
+Failure "Error in included file /reuse/c1/composition/proof-attempt3.ml".
+Failure("Error in included file /reuse/replay/c1-final-loader-v3.ml")

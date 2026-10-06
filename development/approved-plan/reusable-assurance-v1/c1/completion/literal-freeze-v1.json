@@ -1,0 +1,13 @@
+{
+  "before_completion_proof_source": true,
+  "files": {
+    "definitions-v1.ml": "90c3918b63ac6bd6b80818acc09d6e58e7c7ea6cf96266920e3bed148c6b117f",
+    "expected-v1.json": "c67c0fa3987fcee5cefb6687ef8ef956ea8f41203d263010ed71100ed62690be",
+    "source-provenance-v1.json": "47c1a074eba0c778f9bad18f98f18048cacb08495ddf655cef502b0f448558de",
+    "statements-v1.ml": "f07a8326637e5c48801492036db27858b97452997c799399d43d428d25dc5730"
+  },
+  "proof_files_present": [],
+  "schema": "c1-public-completion-literal-freeze-v1",
+  "status": "FROZEN_LITERAL_ONLY_NOT_CHECKED",
+  "utc": "2026-10-04T15:39:16.453524+00:00"
+}

@@ -1,0 +1,24 @@
+{
+  "created_at_utc": "2026-09-30T16:54:56.196164+00:00",
+  "failures_preserved": [
+    "proof-attempt1 contains corrected-before-replay unavailable library identifier recipe; no success claim",
+    "proof-attempt2 raised Not_found due relative import from checker cwd; session2 replay.log preserves exception and marker; attempt3 fixes import only"
+  ],
+  "files": {
+    "development/approved-plan/assurance/policy.ml": "22cfc4886fb1e06006326ce0a3382ecf89fd9147e064d7b5b435bc79907d3d24",
+    "development/approved-plan/cleanse/helpers/frame/audit-v1.ml": "531c44eb08982e2a2780e1a29ef6fd8a8564015861d65128bb4dfe6f3ef8e1ef",
+    "development/approved-plan/cleanse/helpers/frame/expected-statements-v2.json": "c00b2ff633ecb4750f6be9d15e6c229f77f548d7995e31f87311df87b7087893",
+    "development/approved-plan/cleanse/helpers/frame/proof-attempt3.ml": "5d50763099ef674cef1b24098d83b81e163c0e842fbda3e9bd33c3983feb6413",
+    "development/approved-plan/cleanse/helpers/frame/proof.ml": "5d50763099ef674cef1b24098d83b81e163c0e842fbda3e9bd33c3983feb6413",
+    "development/approved-plan/cleanse/helpers/frame/statements-v2.freeze.json": "e792a941027845f336fb8335defb5567f5cd7a9f44186fb9dffa879a4887985c",
+    "development/approved-plan/cleanse/helpers/frame/statements-v2.ml": "9afe25afe14806bd874354acc33f655f396efd64fca7110429c2d15a844d03da",
+    "proofs/model-extension/decode.ml": "ab053d1eca6f67b2257f19db5ca2be0a9c5d3aa7040fa2068efd4be4cc3de15d",
+    "third_party/s2n-bignum/x86/proofs/x86.ml": "daa84c1661610a9b95af0b4ad88bf15297fffd22735fd6004c331ed353cfd005"
+  },
+  "fresh_component_replay": "PENDING",
+  "full_O1_pass": false,
+  "human_review": "PENDING",
+  "id": "CLEANSE_FRAME_PURE_HELPERS_V1",
+  "live_kernel_construction": "four theorem objects reconstructed in original-model session2; independent exact-object/axiom audit queued",
+  "selected_proof": "development/approved-plan/cleanse/helpers/frame/proof-attempt3.ml"
+}

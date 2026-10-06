@@ -1,0 +1,20 @@
+{
+  "approved_assumptions_added": [],
+  "caller_entry_premises_changed": false,
+  "files": {
+    "proofs/branch/completion-definitions-v1.ml": "e0b3d27515e19e49e4c202bc1185f1affe16bd84fb7b4f4b927a20a5c18353ec"
+  },
+  "human_review": "PENDING",
+  "literal_equations": {
+    "c2_header_completed": {
+      "equation": "c2_header_completed lib_file stackpointer p q n m rp wp xp ordinary\n    (initial:x86state) a (t:x86state) <=>\n    ?returned:x86state.\n      c2_crypto_completed lib_file stackpointer p q n m rp wp xp ordinary\n        initial a returned /\\ c2_branch_header_post p q n m returned t",
+      "equation_utf8_sha256": "9cd43e5a52942602b9a2062639e50fa6589b6833a7d2c86ef84a19b3d0153dbb",
+      "source": "proofs/branch/completion-definitions-v1.ml"
+    }
+  },
+  "public_contract_freeze_sha256": "26b2d7d8cc214d8a45a427eacc81dab1055998fd01fef2687afb89fda821cceb",
+  "purpose": "Proven endpoints and frame/effect predicates for named end-to-end obligations; never assumed caller preconditions",
+  "schema": "c2-additive-proof-phase-definition-freeze-v1",
+  "status": "FROZEN_DEFINITIONS_NOT_PROOFS",
+  "utc": "2026-10-04T22:32:35.089844+00:00"
+}

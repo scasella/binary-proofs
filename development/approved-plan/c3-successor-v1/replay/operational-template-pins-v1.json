@@ -1,0 +1,79 @@
+{
+  "schema": "c3-successor-explicit-replay-template-inputs-v1",
+  "rows": [
+    {
+      "source": "development/approved-plan/held-out-transfer-v1/c3/replay/source-check-v1.py",
+      "source_sha256": "818e2a36fda8092845f3974c9fd210281dac435800b5f253281d2c9af73edabe",
+      "output": "development/approved-plan/c3-successor-v1/replay/source-check-v1.py",
+      "sha256": "a4fced9de7ff45edf2f82dd5fb899aa97757f4d6434efceca02a181c92f96b00",
+      "unchanged_bytes": false
+    },
+    {
+      "source": "development/approved-plan/held-out-transfer-v1/c3/replay/freeze-v1.py",
+      "source_sha256": "2f9bb001ccbf745eab54004875a2a515a3753f8251c8f728ac2d60386d8a7360",
+      "output": "development/approved-plan/c3-successor-v1/replay/freeze-v1.py",
+      "sha256": "33ac7f1d617bee148b69f826a1b12691581a42f2ad998a2973f6a4a2e6166f37",
+      "unchanged_bytes": false
+    },
+    {
+      "source": "development/approved-plan/held-out-transfer-v1/c3/replay/fresh-replay-v1.py",
+      "source_sha256": "788ff7274f02bc70619e34ac73ee2e8db548f8f9943d69e3c66eac503e0c013b",
+      "output": "development/approved-plan/c3-successor-v1/replay/fresh-replay-v1.py",
+      "sha256": "18a360eaf45256fb97ee060f3ba31caf0e04eead273d0845dbf0cf4cfc6355a2",
+      "unchanged_bytes": false
+    },
+    {
+      "source": "development/approved-plan/held-out-transfer-v1/c3/replay/check-root-v1.py",
+      "source_sha256": "92ad2d33efcf996374c707fcb54ef7ebec50a1d6a0355a7250d65cc6643e442f",
+      "output": "development/approved-plan/c3-successor-v1/replay/check-root-v1.py",
+      "sha256": "01e4e85cfc6fa30e00d770a76ea4eb7d0b129e4c85edbdc1c014237a2822c848",
+      "unchanged_bytes": false
+    },
+    {
+      "source": "development/approved-plan/held-out-transfer-v1/c3/replay/targeted-preflight-controls-v1.py",
+      "source_sha256": "eee24876f251f2ebd71d58c9c5a65ac1c189eed170884fd92882692117e12343",
+      "output": "development/approved-plan/c3-successor-v1/replay/targeted-preflight-controls-v1.py",
+      "sha256": "c117bf17d0a650f3321030a6ba72c66116294dabe7627ab588925f295221aa17",
+      "unchanged_bytes": false
+    },
+    {
+      "source": "development/approved-plan/held-out-transfer-v1/c3/replay/missing-interface-probe-v1.py",
+      "source_sha256": "49445299f92b3f5a876cc2a44b58bf90cd2e985dc146b9978d1a06f7ff254b00",
+      "output": "development/approved-plan/c3-successor-v1/replay/missing-interface-probe-v1.py",
+      "sha256": "49445299f92b3f5a876cc2a44b58bf90cd2e985dc146b9978d1a06f7ff254b00",
+      "unchanged_bytes": true
+    },
+    {
+      "source": "development/approved-plan/held-out-transfer-v1/c3/replay/generate-audit-v1.py",
+      "source_sha256": "12e8429dd2557489a47c4b0f44f44a7795418b279282ae00c33fd9eacd2f61c7",
+      "output": "development/approved-plan/c3-successor-v1/replay/generate-audit-v1.py",
+      "sha256": "12e8429dd2557489a47c4b0f44f44a7795418b279282ae00c33fd9eacd2f61c7",
+      "unchanged_bytes": true
+    },
+    {
+      "source": "development/approved-plan/held-out-transfer-v1/c3/replay/crosscheck-c3-image-v1.py",
+      "source_sha256": "ed62107eee48c9d6762b14041bd0fb164b5b7eba784a9b719197ead306dd08b0",
+      "output": "development/approved-plan/c3-successor-v1/replay/crosscheck-c3-image-v1.py",
+      "sha256": "ed62107eee48c9d6762b14041bd0fb164b5b7eba784a9b719197ead306dd08b0",
+      "unchanged_bytes": true
+    },
+    {
+      "source": "development/approved-plan/held-out-transfer-v1/c3/replay/ambient-snapshot-v1.ml",
+      "source_sha256": "7b85bf1c58a4f42fe2d4f1c4dabdd4fb67ae9950df45b8f0eb4b6ada57d30d79",
+      "output": "development/approved-plan/c3-successor-v1/replay/ambient-snapshot-v1.ml",
+      "sha256": "7b85bf1c58a4f42fe2d4f1c4dabdd4fb67ae9950df45b8f0eb4b6ada57d30d79",
+      "unchanged_bytes": true
+    }
+  ],
+  "integration_algorithm_changes": false,
+  "complete_acceptance_requirements_retained": true,
+  "literal_and_artifact_anchors": "Immutable original H/c3 anchors; no new contract/artifact copies",
+  "operational_changes": [
+    "successor replay paths and repository root depth",
+    "closed graph permits immutable original C3 sources plus successor caller-local proof/loader sources",
+    "outputs in successor; immutable original contract/artifact controls and all inherited audits remain",
+    "fresh checker deadline includes preparation and clamps to stage deadline; root gate additionally validates successor binding and invocation/container UTC timing"
+  ],
+  "qualified": false,
+  "qualification": "Python AST syntax checked only; source sealing and complete fresh replay pending concrete final loader"
+}

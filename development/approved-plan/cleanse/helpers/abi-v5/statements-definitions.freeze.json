@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-09-30T14:29:20.684686+00:00",
+  "schema": "SCALAR_ABI_EXTENSION_V5_CANDIDATE",
+  "input_hashes": {
+    "extension-v5.ml": "f93bf58cb530783c516691c150d4df89bc31797aff673936cfc2b13992ea440d",
+    "sites-v5.ml": "d6436001180663c46d5e6dbe553081e1aaa19bb207ea4bc4fcfca1e04764a1fd",
+    "statements-v5.ml": "4cc07989fc8dbdb49f91ba5e6d75e24c48fe96b640f0d6cbf18ea11dfb8d9383",
+    "expected-definitions-v5.json": "e600ef8b64063bada1e623d045cf009b17e5b17ec95e2ae76e3307024fd0ec6c",
+    "expected-statements-v5.json": "5884a06b525bb9156c05acb31edfbd08b480327c9376cc40efe9560bb9c130ea",
+    "exact-sites-v5.json": "91712c6ac5c07752608945cce30c51e7368516ce7a431d8c23a3eabbb6b03d49"
+  },
+  "class_scope": "inherits frozen V4 + arbitrary GPR64/Imm8 SUB + arbitrary GPR64/Imm32 TEST",
+  "new_architectural_state_fields": 0,
+  "human_review": "PENDING",
+  "full_O1_pass": false
+}

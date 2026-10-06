@@ -1,0 +1,17 @@
+{
+  "id": "NEAR_INDIRECT_MODEL_QUALIFICATION_CANDIDATE5",
+  "created_at_utc": "2026-09-30T17:02:11.749048+00:00",
+  "files": {
+    "development/approved-plan/call-binding/near-indirect-v1/requirements.freeze-v1.json": "60c491545fd09a90b90c798131bcaad9566ded094d78690d87025b93c2edc082",
+    "development/approved-plan/call-binding/near-indirect-v1/decode-attempt5.ml": "f8824368fedd207a3d1b48545767d453e5aeea7f83b68e9e7b08e82ce36a00ab",
+    "development/approved-plan/call-binding/near-indirect-v1/x86-attempt5.ml": "0e2a9f1076083ce76e3510471eff1bbfd3788af67d3b4b9ece43755fea42d31f",
+    "development/approved-plan/call-binding/near-indirect-v1/qualification-statements-v1.ml": "5436ff4dff30e8c6f70aa3324cadfce204df7ea7425b5558c7389152625cb434",
+    "development/approved-plan/call-binding/near-indirect-v1/build-overlay-attempt5.py": "b267bb27fc827b16ba6ab8d3eaa303ea31ce8cd5a7072eff806fb4526ddf6a6b",
+    "development/approved-plan/call-binding/near-indirect-v1/REVIEW-v1.md": "baaf260956596509c52f7def4273563142cae83e057778a5442a782cf2c3d15a"
+  },
+  "human_review": "PENDING",
+  "main_client_proofs": "NOT_ATTEMPTED",
+  "frozen_before_qualification_proof_search": true,
+  "reason": "Equivalent generic near-onlyprefix guards in existingCPS guardedshape; candidate4failurepreserved; original relativeexecutor unchanged.",
+  "event_convention": "Inherited CALL chronologicalmodeldelta memoryindirectionLOAD,JUMP,STORE is an observationconvention, not claimedphysicalchronologicalorder."
+}

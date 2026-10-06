@@ -1,0 +1,14 @@
+{
+  "schema": "independent-selector-release-v1",
+  "utc": "2026-10-05T01:10:06.610823+00:00",
+  "regressions": {
+    "development/approved-plan/held-out-transfer-v1/regression/c1-result-v1.json": "c0b5c296c2b4c8e048454186442cb938a669181cda4125a81c8fdfa056b0ce83",
+    "development/approved-plan/held-out-transfer-v1/regression/c2-result-v1.json": "1e2c3a4065956265a60fdf1fb4bc3f588320134ae9accc55e3f9adffb112ef7a"
+  },
+  "candidate_layer_freeze_sha256": "266f58bbb1883389a74b8ba0986db11d0b0d6f4c03c1d3961d2db04f51d94193",
+  "selector": "/root/heldout_selector",
+  "prior_exactcase_selected_or_exposed": false,
+  "authorized_case_count": 1,
+  "preparation_deadline_utc": "2026-10-05T01:40:42Z",
+  "human_review": "PENDING"
+}

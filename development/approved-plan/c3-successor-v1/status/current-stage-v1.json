@@ -1,0 +1,151 @@
+{
+  "schema": "c3-successor-authoritative-current-stage-v1",
+  "experiment": "BP-20261005-C3-SUCCESSOR-V1",
+  "created_utc": "2026-10-05T14:13:15.339138+00:00",
+  "status": "FRESH_ACCEPTED_SUCCESSOR_UNCHANGED_PROTECTED_BOUNDARY",
+  "outcome": "A_SUCCESSOR_COMPLETION_NOT_ORIGINAL_HELD_OUT_TRIAL",
+  "accepted_utc": "2026-10-05T14:10:13.568450+00:00",
+  "original_trial_outcome": "C_NOT_ACCEPTED_WITHIN_FIXED_EVALUATION_BUDGET",
+  "historical_results_unchanged": true,
+  "authoritative_scope": "This additive successor stage only. Original protected current-status pointer and reports preserved.",
+  "source_root": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance",
+  "stage_policy": "development/approved-plan/c3-successor-v1/STAGE-v1.json",
+  "construction_cap_seconds": 10800,
+  "per_check_cap_seconds": 1800,
+  "elapsed_stage_window_to_acceptance_seconds": 5101.325985,
+  "elapsed_window_qualification": "Includes construction, checking, waiting and coordination; not exclusive source-construction cost.",
+  "original_targets": [
+    "C3_HANDOFF",
+    "C3_COUNT",
+    "C3_CHECKED",
+    "C3_INTERFACE",
+    "C3_NORMAL_CHECKED",
+    "C3_RF_NORMAL_CHECKED",
+    "C3_NORMAL_INTERFACE"
+  ],
+  "property_status": {
+    "functionality": "FRESH_ACCEPTED",
+    "strict_buffer_access": "FRESH_ACCEPTED",
+    "termination_all_modeled_successors": "FRESH_ACCEPTED",
+    "actual_return": "FRESH_ACCEPTED",
+    "ABI_frame": "FRESH_ACCEPTED",
+    "normal_entry_E5": "FRESH_ACCEPTED",
+    "exact_artifact_linkage_binding": "FRESH_ACCEPTED",
+    "nonvacuity_entry_witnesses": "FRESH_ACCEPTED"
+  },
+  "remaining_frozen_package_obligations": [],
+  "reused_unchanged": [
+    "supplier contracts and proof chain",
+    "caller bytes/image/domain/literal targets",
+    "E3 ISA/decoder and E5 scope",
+    "frozen generic algorithms and rules",
+    "original acceptance requirements"
+  ],
+  "local_changes": "Explicit original-premise cleanup, transport/snapshot/second-entry bridges, fixed final site/frame applications, whole composition and E5 lifts. See pinned source map and review.",
+  "integration_algorithm_adaptation": false,
+  "reuse_classification": "INSPECTION_QUALIFIED_UNCHANGED_LAYER_WITH_PERMITTED_C3_LOCAL_WORK",
+  "opacity": "SOURCE_INSPECTION_QUALIFIED_SHARED_AMBIENT_HOL_NOT_FORMAL_CAPABILITY_ISOLATION",
+  "prior_exposure": "Known C3 source/diagnosis and supplier recipes; successor is not held-out or economics baseline",
+  "construction_active_seconds": null,
+  "coordination_exclusive_seconds": null,
+  "missing_measurement_reason": "No exclusive active timers or exposed model/token/cost counters; all available interval and checking data preserved separately.",
+  "model": null,
+  "tokens": null,
+  "cost": null,
+  "human_review": "PENDING",
+  "external_consumer_replay_this_stage": "NOT_ATTEMPTED",
+  "caller_trace_noninterference": "NOT_CLAIMED",
+  "H3_construction_savings": "NOT_ATTEMPTED_NOT_ESTABLISHED",
+  "claim": "Bounded repairable transfer for this actual fixed multiple-call client through unchanged public supplier contracts and frozen integration algorithms, with explicit caller-local work.",
+  "unsupported_claims": [
+    "Original held-out A outcome",
+    "automatic arbitrary caller transfer",
+    "construction savings",
+    "unrestricted hardware/loader/ASLR correspondence",
+    "C-language refinement",
+    "caller constant-time or physical erasure"
+  ],
+  "evidence": {
+    "complete_root_gate": {
+      "path": "development/approved-plan/c3-successor-v1/results/complete-gate-final-v1.json",
+      "sha256": "0e1aa8598bd85d1015f5e85a71744fa1cd9403cfcba4b7529c04a0acb901784e"
+    },
+    "positive_root_gate": {
+      "path": "development/approved-plan/c3-successor-v1/results/positive-gate-final-v1.json",
+      "sha256": "65dd828391a5b8cb7f5d68be3b7c25ce24ee33f047f6a7e3ecc8b3dae85ea7a2"
+    },
+    "sealed_inputs": {
+      "path": "development/approved-plan/c3-successor-v1/replay/c3-successor-final-v1-seal.json",
+      "sha256": "903c92086ade0594eda090832ee769e3415c741dfc20573a4c94fef1c6612f46"
+    },
+    "fresh_reconstruction": {
+      "path": "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/receipt.json",
+      "sha256": "ca9a4a58417a54dd8f4c9a839471943430fc3c1f11c95a7c0c55fb08643d76ee"
+    },
+    "live_literal_and_expanded_audit": {
+      "path": "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/c3-live-audit-v1.json",
+      "sha256": "7b67bb6f8a4660a16b8523a5adbfa9b731e46e85837cfa834d68d4166423e35f"
+    },
+    "artifact_linkage_crosscheck": {
+      "path": "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/c3-image-crosscheck.json",
+      "sha256": "6f840527d7a9d7b00b43c5071871df602ce7eefe4ac73fc491d2293883cdaa66"
+    },
+    "five_integrity_controls": {
+      "path": "development/approved-plan/c3-successor-v1/runs/controls-final-v1/receipt.json",
+      "sha256": "4a90752080a0d1642c56d897711536919da9beeda4eab2c97e9682b1323cf793"
+    },
+    "fresh_missing_public_binding_probe": {
+      "path": "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/receipt.json",
+      "sha256": "07230bd574e316befce595753fd2d0c0f962affef01982ede23ffe8660890d66"
+    },
+    "fresh_probe_actual_construction": {
+      "path": "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/receipt.json",
+      "sha256": "51f5efd2da60459639fe923784cb9f07225aeff1cb9b1eefe8b36c9dec08ae5e"
+    },
+    "protected_inputs_preservation": {
+      "path": "development/approved-plan/c3-successor-v1/status/runtime-protected-final-v1.json",
+      "sha256": "1d7bddb6d0f7ae015b71ca6de4ddd9c58798fad0f1d5682933ce77d835a9639b"
+    },
+    "historical_packages_preservation": {
+      "path": "development/approved-plan/c3-successor-v1/status/runtime-history-final-v1.json",
+      "sha256": "75a7739bb9fe1bb8b966e79672fd5dc5432202eb3e2ea78429514e1a8e8e2077"
+    },
+    "postmortem_preservation": {
+      "path": "development/approved-plan/c3-successor-v1/status/runtime-postmortem-final-v1.json",
+      "sha256": "74656112d72e5ab34b8a31a8c63682b3e98bbf5080fdc2b64f457ff301cf7ee3"
+    },
+    "sealed_graph_inspection": {
+      "path": "development/approved-plan/c3-successor-v1/diagnostics/transport-final-selected-graph-review-v2.json",
+      "sha256": "55b1a3cb83c3d63096db34b514fd06acc1f63f0ec0102803ee293932b892cb3c"
+    },
+    "reuse_account": {
+      "path": "development/approved-plan/c3-successor-v1/status/selected-reuse-account-v1.json",
+      "sha256": "6c397e06abdf85222f2cfccac0f0a93ebcd2bd04eca74eb7ceee31da37a3f360"
+    },
+    "dependency_map": {
+      "path": "development/approved-plan/c3-successor-v1/results/dependency-map-v2.json",
+      "sha256": "6544ed0828c22bf7b89f2f3971696c95c959a702b3e47fe7972cf1717d9cbc24"
+    },
+    "literal_contract_review": {
+      "path": "development/approved-plan/c3-successor-v1/review/final-literal-contract-view-v1.json",
+      "sha256": "436a74c715bff8875c179d3762d5e9fe495438a809fdb859d26a6796cdf927be"
+    },
+    "effort_ledger": {
+      "path": "development/approved-plan/c3-successor-v1/measurements/effort-final-v1.json",
+      "sha256": "7ae82e4a16c04291f2f510353ea8bef7cce7c638cfb20dc0632c8ef2a0fb6c25"
+    },
+    "effort_validation": {
+      "path": "development/approved-plan/c3-successor-v1/measurements/effort-final-v1-validation.json",
+      "sha256": "ab525ee5ba31292ce29599a3d0d6fe553292af12ab89a3755d3170af7eb54be0"
+    },
+    "executed_commands": {
+      "path": "development/approved-plan/c3-successor-v1/replay/commands-executed-final-v1.json",
+      "sha256": "c7695efb96d7e83760d40a8aa82c055f3e5b4ada1f1db536f7d85c21dc9f817a"
+    },
+    "reporting_failure": {
+      "path": "development/approved-plan/c3-successor-v1/results/reporting-failure-v1.json",
+      "sha256": "3ddd19b39e09b5a1cc4d3f155afd0cab5ac40095087b4a1b213ff6b7f33f77ac"
+    }
+  },
+  "next_stage": "NONE_AUTOMATIC"
+}

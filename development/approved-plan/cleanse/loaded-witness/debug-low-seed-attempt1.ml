@@ -1,0 +1,10 @@
+g `!image. clw_memory image (word(2 EXP 47-1)) 1 F (word(2 EXP 47-1))=word 128`;;
+e(REPEAT GEN_TAC THEN REWRITE_TAC[clw_memory;lw_memory;lw_overlay_domain;lw_pagecover]);;
+print_endline "CLW_LOW_SEED_REWRITE";;
+e(CONV_TAC WORD_REDUCE_CONV);;
+print_endline "CLW_LOW_SEED_WORD1";;
+e(CONV_TAC NUM_REDUCE_CONV);;
+print_endline "CLW_LOW_SEED_NUM1";;
+e(CONV_TAC WORD_REDUCE_CONV);;
+e(CONV_TAC NUM_REDUCE_CONV);;
+print_endline "CLW_LOW_SEED_END";;

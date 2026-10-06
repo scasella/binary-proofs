@@ -1,0 +1,25 @@
+{
+  "schema": "c3-successor-selected-reuse-account-v1",
+  "created_utc": "2026-10-05T13:48:38.343044+00:00",
+  "status": "INSPECTION_QUALIFIED_UNCHANGED_LAYER_WITH_PERMITTED_C3_LOCAL_WORK",
+  "seal": "development/approved-plan/c3-successor-v1/replay/c3-successor-final-v1-seal.json",
+  "seal_sha256": "903c92086ade0594eda090832ee769e3415c741dfc20573a4c94fef1c6612f46",
+  "review": "development/approved-plan/c3-successor-v1/diagnostics/transport-final-selected-graph-review-v1.json",
+  "review_sha256": "318a509c8d275565c88fb29435642d9b4597e9f84c55ba292d81cb7e44107d72",
+  "supplier_contracts": "UNCHANGED",
+  "frozen_integration_algorithms": "UNCHANGED",
+  "model_E3_E5_and_scope": "UNCHANGED",
+  "caller_bytes_image_domain_endtheorems": "UNCHANGED",
+  "caller_local_changes": [
+    "cleanup exclusion proof explicitly retaining original pointer/scratch premise; actual u6 GOT and u7 frame facts",
+    "all four saved slots plus incoming S return transport; current image and alias-aware snapshot premises",
+    "second handoff endpoint and subsequent suffix entry derived from actual state chain",
+    "fixed final-path relation/list association, scalar frame inclusion and explicit endpoint steps",
+    "one literal offset73 MOV EAX2 site qualification from existing scalar/unique-decode rules; direct existing CLIENT primitive at the fixed site",
+    "whole checked-run composition and unchanged ABI/E5 lifts"
+  ],
+  "extension_policy_classification": "Ordinary concrete site/specification/intermediate-state/frame applications of frozen rules; no new reusable lemma, automation behavior, callback dispatch, or normalization rule introduced. Policy interpretation is inspection-qualified; not a formal capability dependency certificate.",
+  "historical_trial": "Original outcome C remains failed; this stage is not held-out and has prior C3/supplier-recipe exposure.",
+  "human_review": "PENDING",
+  "fresh_acceptance": "RUNNING_NOT_YET_ACCEPTED"
+}

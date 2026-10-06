@@ -1,0 +1,347 @@
+{
+  "architectural_data_accesses": [
+    {
+      "kind": "WRITE",
+      "locations": "three saved-register slots",
+      "operation": "PUSH",
+      "width_bytes": 8
+    },
+    {
+      "kind": "WRITE",
+      "locations": "nested return slot, both calls",
+      "operation": "near CALL",
+      "width_bytes": 8
+    },
+    {
+      "kind": "READ",
+      "locations": "respective resolved GOT",
+      "operation": "RIP-relative indirect PLT JMP",
+      "width_bytes": 8
+    },
+    {
+      "kind": "READ",
+      "locations": "saved-register slots",
+      "operation": "POP",
+      "width_bytes": 8
+    },
+    {
+      "kind": "READ",
+      "locations": "nested return slot in callees; incoming return slot in caller",
+      "operation": "RET",
+      "width_bytes": 8
+    }
+  ],
+  "artifact_sha256": "7a510de11b221b6a53720b2799b223a6c0c25bfc465efc1181fbcf56816a3cc6",
+  "bias": 570425344,
+  "existing_class_definition_paths": [
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/extension-v6-attempt2.ml",
+    "development/approved-plan/cleanse/helpers/abi-v5/extension-v5.ml",
+    "development/approved-plan/abi-qualification/extension-v2.ml"
+  ],
+  "existing_class_definition_pins": {
+    "development/approved-plan/abi-qualification/extension-v2.ml": "43f9ced6c16a4e50ffc5918ab8485baf04f3b59a389dd775bf246b61c57b8da2",
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/extension-v6-attempt2.ml": "592489bcb2689fd9f955adbf2e86827294d78c98b95fed63c95e694b488da557",
+    "development/approved-plan/cleanse/helpers/abi-v5/extension-v5.ml": "f93bf58cb530783c516691c150d4df89bc31797aff673936cfc2b13992ea440d"
+  },
+  "formal_pending": [
+    "Exact decoder conclusions for each executed C2 encoding",
+    "ISA execution rules including flag-dependent JE and low-byte SETE",
+    "All successor/control-flow coverage and avoidance of six-byte NOP padding",
+    "Access-event policy and RF-normal/ABI qualification at every reached caller/linkage instruction"
+  ],
+  "instructions": [
+    {
+      "bytes_hex": "4154",
+      "elf_vaddr": 4384,
+      "loaded_address": 570429728,
+      "mnemonic": "push",
+      "offset": 0,
+      "operands": "r12",
+      "size": 2
+    },
+    {
+      "bytes_hex": "4531e4",
+      "elf_vaddr": 4386,
+      "loaded_address": 570429730,
+      "mnemonic": "xor",
+      "offset": 2,
+      "operands": "r12d,r12d",
+      "size": 3
+    },
+    {
+      "bytes_hex": "55",
+      "elf_vaddr": 4389,
+      "loaded_address": 570429733,
+      "mnemonic": "push",
+      "offset": 5,
+      "operands": "rbp",
+      "size": 1
+    },
+    {
+      "bytes_hex": "4889d5",
+      "elf_vaddr": 4390,
+      "loaded_address": 570429734,
+      "mnemonic": "mov",
+      "offset": 6,
+      "operands": "rbp,rdx",
+      "size": 3
+    },
+    {
+      "bytes_hex": "53",
+      "elf_vaddr": 4393,
+      "loaded_address": 570429737,
+      "mnemonic": "push",
+      "offset": 9,
+      "operands": "rbx",
+      "size": 1
+    },
+    {
+      "bytes_hex": "4889fb",
+      "elf_vaddr": 4394,
+      "loaded_address": 570429738,
+      "mnemonic": "mov",
+      "offset": 10,
+      "operands": "rbx,rdi",
+      "size": 3
+    },
+    {
+      "bytes_hex": "e8fefeffff",
+      "elf_vaddr": 4397,
+      "loaded_address": 570429741,
+      "mnemonic": "call",
+      "offset": 13,
+      "operands": "1030 <CRYPTO_memcmp@plt>",
+      "size": 5
+    },
+    {
+      "bytes_hex": "85c0",
+      "elf_vaddr": 4402,
+      "loaded_address": 570429746,
+      "mnemonic": "test",
+      "offset": 18,
+      "operands": "eax,eax",
+      "size": 2
+    },
+    {
+      "bytes_hex": "410f94c4",
+      "elf_vaddr": 4404,
+      "loaded_address": 570429748,
+      "mnemonic": "sete",
+      "offset": 20,
+      "operands": "r12b",
+      "size": 4
+    },
+    {
+      "bytes_hex": "740e",
+      "elf_vaddr": 4408,
+      "loaded_address": 570429752,
+      "mnemonic": "je",
+      "offset": 24,
+      "operands": "1148 <c2_equal_and_clear_if_equal+0x28>",
+      "size": 2
+    },
+    {
+      "bytes_hex": "4489e0",
+      "elf_vaddr": 4410,
+      "loaded_address": 570429754,
+      "mnemonic": "mov",
+      "offset": 26,
+      "operands": "eax,r12d",
+      "size": 3
+    },
+    {
+      "bytes_hex": "5b",
+      "elf_vaddr": 4413,
+      "loaded_address": 570429757,
+      "mnemonic": "pop",
+      "offset": 29,
+      "operands": "rbx",
+      "size": 1
+    },
+    {
+      "bytes_hex": "5d",
+      "elf_vaddr": 4414,
+      "loaded_address": 570429758,
+      "mnemonic": "pop",
+      "offset": 30,
+      "operands": "rbp",
+      "size": 1
+    },
+    {
+      "bytes_hex": "415c",
+      "elf_vaddr": 4415,
+      "loaded_address": 570429759,
+      "mnemonic": "pop",
+      "offset": 31,
+      "operands": "r12",
+      "size": 2
+    },
+    {
+      "bytes_hex": "c3",
+      "elf_vaddr": 4417,
+      "loaded_address": 570429761,
+      "mnemonic": "ret",
+      "offset": 33,
+      "operands": "",
+      "size": 1
+    },
+    {
+      "bytes_hex": "660f1f440000",
+      "elf_vaddr": 4418,
+      "loaded_address": 570429762,
+      "mnemonic": "nop",
+      "offset": 34,
+      "operands": "WORD PTR [rax+rax*1+0x0]",
+      "size": 6
+    },
+    {
+      "bytes_hex": "4889ee",
+      "elf_vaddr": 4424,
+      "loaded_address": 570429768,
+      "mnemonic": "mov",
+      "offset": 40,
+      "operands": "rsi,rbp",
+      "size": 3
+    },
+    {
+      "bytes_hex": "4889df",
+      "elf_vaddr": 4427,
+      "loaded_address": 570429771,
+      "mnemonic": "mov",
+      "offset": 43,
+      "operands": "rdi,rbx",
+      "size": 3
+    },
+    {
+      "bytes_hex": "e8edfeffff",
+      "elf_vaddr": 4430,
+      "loaded_address": 570429774,
+      "mnemonic": "call",
+      "offset": 46,
+      "operands": "1040 <OPENSSL_cleanse@plt>",
+      "size": 5
+    },
+    {
+      "bytes_hex": "4489e0",
+      "elf_vaddr": 4435,
+      "loaded_address": 570429779,
+      "mnemonic": "mov",
+      "offset": 51,
+      "operands": "eax,r12d",
+      "size": 3
+    },
+    {
+      "bytes_hex": "5b",
+      "elf_vaddr": 4438,
+      "loaded_address": 570429782,
+      "mnemonic": "pop",
+      "offset": 54,
+      "operands": "rbx",
+      "size": 1
+    },
+    {
+      "bytes_hex": "5d",
+      "elf_vaddr": 4439,
+      "loaded_address": 570429783,
+      "mnemonic": "pop",
+      "offset": 55,
+      "operands": "rbp",
+      "size": 1
+    },
+    {
+      "bytes_hex": "415c",
+      "elf_vaddr": 4440,
+      "loaded_address": 570429784,
+      "mnemonic": "pop",
+      "offset": 56,
+      "operands": "r12",
+      "size": 2
+    },
+    {
+      "bytes_hex": "c3",
+      "elf_vaddr": 4442,
+      "loaded_address": 570429786,
+      "mnemonic": "ret",
+      "offset": 58,
+      "operands": "",
+      "size": 1
+    }
+  ],
+  "model_changes": [],
+  "new_instruction_semantics_required_by_inspection": false,
+  "padding_bytes": 6,
+  "potentially_executed_instruction_bytes": 53,
+  "reached_linkage": [
+    {
+      "call_displacement_signed": -258,
+      "call_displacement_u32": 4294967038,
+      "call_elf_vaddr": 4397,
+      "call_loaded_address": 570429741,
+      "continuation_elf_vaddr": 4402,
+      "continuation_loaded_address": 570429746,
+      "got_elf_vaddr": 16336,
+      "got_file_offset": 12240,
+      "got_loaded_address": 570441680,
+      "got_pointer_bytes": 8,
+      "plt_bytes_hex": "ff259a2f00006800000000e9e0ffffff",
+      "plt_displacement_signed": 12186,
+      "plt_elf_vaddr": 4144,
+      "plt_file_offset": 4144,
+      "plt_loaded_address": 570429488,
+      "plt_prefix_hex": "ff259a2f0000",
+      "plt_prefix_sha256": "b39e24957fa22aba0db5bdb8897d34e2e54bf8924e698ff956aab132c44f928d",
+      "plt_prefix_size": 6,
+      "relocation": {
+        "addend": 0,
+        "offset": 16336,
+        "section": ".rela.plt",
+        "symbol": "CRYPTO_memcmp",
+        "symbol_index": 2,
+        "type": 7
+      },
+      "required_postinit_target": 270800960,
+      "symbol": "CRYPTO_memcmp",
+      "symbol_version": "OPENSSL_3.0.0",
+      "target_canonical48": true,
+      "target_resolution": "EXPLICIT_FIXED_POSTINITIALIZATION_LOADER_ASSUMPTION"
+    },
+    {
+      "call_displacement_signed": -275,
+      "call_displacement_u32": 4294967021,
+      "call_elf_vaddr": 4430,
+      "call_loaded_address": 570429774,
+      "continuation_elf_vaddr": 4435,
+      "continuation_loaded_address": 570429779,
+      "got_elf_vaddr": 16344,
+      "got_file_offset": 12248,
+      "got_loaded_address": 570441688,
+      "got_pointer_bytes": 8,
+      "plt_bytes_hex": "ff25922f00006801000000e9d0ffffff",
+      "plt_displacement_signed": 12178,
+      "plt_elf_vaddr": 4160,
+      "plt_file_offset": 4160,
+      "plt_loaded_address": 570429504,
+      "plt_prefix_hex": "ff25922f0000",
+      "plt_prefix_sha256": "335211f848bb5bad98990831407c66e1fc19c22171525dc49a9ea4ccb6a91a78",
+      "plt_prefix_size": 6,
+      "relocation": {
+        "addend": 0,
+        "offset": 16344,
+        "section": ".rela.plt",
+        "symbol": "OPENSSL_cleanse",
+        "symbol_index": 6,
+        "type": 7
+      },
+      "required_postinit_target": 270800848,
+      "symbol": "OPENSSL_cleanse",
+      "symbol_version": "OPENSSL_3.0.0",
+      "target_canonical48": true,
+      "target_resolution": "EXPLICIT_FIXED_POSTINITIALIZATION_LOADER_ASSUMPTION"
+    }
+  ],
+  "schema": "c2-instruction-profile-inspection-v1",
+  "scope": "Class/source inspection is discovery, not checked semantics or a theorem",
+  "status": "INSPECTED_EXISTING_CLASSES_FORMAL_C2_QUALIFICATION_PENDING",
+  "symbol_bytes": 59,
+  "utc": "2026-10-04T21:37:16.419586+00:00"
+}

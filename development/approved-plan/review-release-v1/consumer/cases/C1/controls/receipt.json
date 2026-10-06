@@ -1,0 +1,83 @@
+{
+  "caller_acceptance": false,
+  "formal_single_theorem_sensitivity": false,
+  "full_C1_acceptance": false,
+  "positive_receipt_sha256": "81111de08c5f36a748934f03ee2ad1bbe66541e7934836fa458eabec64718d6f",
+  "rows": [
+    {
+      "GNU_started": false,
+      "actual_error": "Missing or changed frozen input: development/approved-plan/reusable-assurance-v1/c1/artifact/compiled-v1/c1.so",
+      "affected_input": "development/approved-plan/reusable-assurance-v1/c1/artifact/compiled-v1/c1.so",
+      "case": "executed-ELF-byte",
+      "exit_code": 1,
+      "kind": "INPUT_INTEGRITY_PREFLIGHT_ONLY",
+      "mutated_sha256": "7b54d4902e97dbf595c7b45943b999b344c0f932e5328c29256de213a8b719de",
+      "original_sha256": "0ede476eef3a8f059aef0b93b36d4669647ae8ee3455fb076559b3e7bdf3d787",
+      "proof_started": false,
+      "receipt_sha256": "6c51e3af8cd704c854af698437e44aa933cdd66b7fb0b64d93883ac30cd8a0b7",
+      "status": "OBSERVED_PREFLIGHT_INPUT_REJECTION",
+      "theorem_sensitivity_claim": false
+    },
+    {
+      "GNU_started": false,
+      "actual_error": "Missing or changed frozen input: development/approved-plan/reusable-assurance-v1/c1/contract/definitions-v1.ml",
+      "affected_input": "development/approved-plan/reusable-assurance-v1/c1/contract/definitions-v1.ml",
+      "case": "modeled-GOT-target",
+      "exit_code": 1,
+      "kind": "INPUT_INTEGRITY_PREFLIGHT_ONLY",
+      "mutated_sha256": "930ed01689e072443277cc8f11b03411bbecc0b687b99003b05325a86d99d208",
+      "original_sha256": "ce661d9fc1e2a865ef85c7afa8cc49dd1fc4d2e5813cd90e12b6fe645687ea5b",
+      "proof_started": false,
+      "receipt_sha256": "c352b19e721dd1489cfda5b1aa7e1632eb972ed22f577bf39b29a32e87577d74",
+      "status": "OBSERVED_PREFLIGHT_INPUT_REJECTION",
+      "theorem_sensitivity_claim": false
+    },
+    {
+      "GNU_started": false,
+      "actual_error": "Missing or changed frozen input: development/approved-plan/reusable-assurance-v1/generic/e5-definitions-v1.ml",
+      "affected_input": "development/approved-plan/reusable-assurance-v1/generic/e5-definitions-v1.ml",
+      "case": "contract-model-pin",
+      "exit_code": 1,
+      "kind": "INPUT_INTEGRITY_PREFLIGHT_ONLY",
+      "mutated_sha256": "7b843112ea9d3491e7e88dd106d04bdf471d7bc938401c21b6f5e12ce1f606db",
+      "original_sha256": "055800d68b9d8db8a10cc19934a47d0d555156414ebb2125275ba2959fc8273c",
+      "proof_started": false,
+      "receipt_sha256": "ca7853146eecf9bfc0c7458abba53b2f8e1ed9d5313295b2c2b5c99538d85a15",
+      "status": "OBSERVED_PREFLIGHT_INPUT_REJECTION",
+      "theorem_sensitivity_claim": false
+    },
+    {
+      "GNU_started": false,
+      "actual_error": "Missing/changed supplier input: spec/e2/02-definitions-v1.ml",
+      "affected_input": "spec/e2/02-definitions-v1.ml",
+      "case": "missing-supplier-public-interface-dependency",
+      "exit_code": 1,
+      "kind": "INPUT_INTEGRITY_PREFLIGHT_ONLY",
+      "mutated_sha256": null,
+      "original_sha256": "f0d427d419df29026aa1b2cba30908c19ddea10e3e2bd9bccbfb1d73d7481a15",
+      "proof_started": false,
+      "receipt_sha256": "6143670986a39b7a8c836b80512be3aca469dd133b9a8c4b163560f5d67a68e7",
+      "status": "OBSERVED_PREFLIGHT_INPUT_REJECTION",
+      "theorem_sensitivity_claim": false
+    },
+    {
+      "GNU_started": false,
+      "actual_error": "Missing or changed frozen input: development/approved-plan/reusable-assurance-c1-successor-v1/proofs/proof-attempt2.ml",
+      "affected_input": "development/approved-plan/reusable-assurance-c1-successor-v1/proofs/proof-attempt2.ml",
+      "case": "missing-caller-proof-with-stale-success",
+      "exit_code": 1,
+      "kind": "INPUT_INTEGRITY_PREFLIGHT_ONLY",
+      "mutated_sha256": null,
+      "original_sha256": "367f2ab6ddb49e2753c1335246c467e3cf9564a44d586d9777795310900adad5",
+      "proof_started": false,
+      "receipt_sha256": "0caa4596a2b6d2beb43a9f6cdeb76498efc06d4c6c04adc30a75b808eb269bb5",
+      "status": "OBSERVED_PREFLIGHT_INPUT_REJECTION",
+      "theorem_sensitivity_claim": false
+    }
+  ],
+  "schema": "c1-five-targeted-preflight-controls-v1",
+  "scope": "Hash/closed-source dependency boundaries only; no semantic proof sensitivity demonstrated",
+  "seal_sha256": "556fe357859921992293b7eedd7fc1338bf737502069502b50cdfffe5e114a0c",
+  "status": "FIVE_INPUT_INTEGRITY_CONTROLS_OBSERVED_PENDING_ROOT_GATE",
+  "utc": "2026-10-05T15:23:50.741398+00:00"
+}

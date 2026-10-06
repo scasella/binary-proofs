@@ -1,0 +1,13 @@
+{
+  "schema": "review-documentation-validation-v1",
+  "created_utc": "2026-10-05T15:13:36.360528+00:00",
+  "status": "PASS_DOCUMENTATION_SOURCE_CORRESPONDENCE_NOT_PROOF_ACCEPTANCE",
+  "pinned_input_count": 36,
+  "literal_frozen_end_statement_count": 21,
+  "claim_map_evidence_count": 26,
+  "human_review": "PENDING",
+  "source_map_consistent": true,
+  "literal_copy_consistent": true,
+  "caller_math_proofs_reexecuted_by_this_validation": false,
+  "new_claim_of_formal_isolation": false
+}

@@ -1,0 +1,66 @@
+{
+  "assumption_ids": [
+    {
+      "detail": "Pinned HOL Light/OCaml/Camlp5 checker; unchanged foundational axioms and live exact theorem checks.",
+      "id": "HOL_KERNEL_RUNTIME_V1",
+      "kind": "logical_foundation"
+    },
+    {
+      "detail": "Pinned original x86 decoder/model, including documented separately versioned F3 C3 REP_RET decoder overlay.",
+      "id": "S2N_X86_PINNED_V1",
+      "kind": "ISA_correspondence"
+    },
+    {
+      "detail": "Documented generic scalar instruction classes preserve14added architecturalfields; physical clause explicitly trusted, structurallifts/sites kernelchecked.",
+      "id": "ABI_SCALAR_ADDED_STATE_V4",
+      "kind": "semantic_extension_correspondence"
+    },
+    {
+      "detail": "Wholefilebyte map/extraction/ELF parsers/relocation interpreter trusted and independently crosschecked; fixedpostinit placement/publicentry andimmutablesegments asdeclared; loaderexecutionunproved.",
+      "id": "FINAL_ELF_ACQUISITION_LOADING_V2",
+      "kind": "artifact_loading"
+    },
+    {
+      "detail": "Frozen48bitcanonical/XCR0=7/CETdisabled/ACclear profile, ordinaryaccessiblepermissions, stablecode/input/returnslot andmappings, noconcurrent relevantwrites;hardware/OS/emulatornotverified.",
+      "id": "SEQUENTIAL_ORDINARY_MEMORY_PROFILE_V1",
+      "kind": "real_machine_environment"
+    }
+  ],
+  "completion_in_this_index": false,
+  "created_at_utc": "2026-09-30T15:24:57.328215+00:00",
+  "experiment_id": "BP-20260930-E2",
+  "formal_sources": {
+    "development/approved-plan/contract/crypto-pre-v2.ml": {
+      "sha256": "6a90c3796d7b0a100c53fa365ab4309ebf25baf0861b79b8824093fe816b30d1",
+      "verbatim_archive": "spec/e2/01-crypto-pre-v2.ml"
+    },
+    "development/approved-plan/crypto-loop/trace/noninterference/first-return/model.ml": {
+      "sha256": "d3bc935f7fc603dd4f3dab1b29d2d9204182af0b8c1f5d8a95b22cb063783891",
+      "verbatim_archive": "spec/e2/06-model.ml"
+    },
+    "development/approved-plan/crypto-loop/trace/noninterference/first-return/statements.ml": {
+      "sha256": "e783d049cca0c508db2f976cace53e2c681a43102a80943daff392c0122d8e42",
+      "verbatim_archive": "spec/e2/07-statements.ml"
+    },
+    "development/approved-plan/interface/crypto/definitions-v1.ml": {
+      "sha256": "f0d427d419df29026aa1b2cba30908c19ddea10e3e2bd9bccbfb1d73d7481a15",
+      "verbatim_archive": "spec/e2/02-definitions-v1.ml"
+    },
+    "development/approved-plan/interface/crypto/statements-v1.ml": {
+      "sha256": "a084f65ee9a754c7e79cec421d8f060a5aa07514b1a42c66e643b567b6d50e5c",
+      "verbatim_archive": "spec/e2/03-statements-v1.ml"
+    },
+    "development/approved-plan/interface/crypto/trace-statement-v1.ml": {
+      "sha256": "6b0677c1fd4708007cb6ea4facaaf082a0704bbdf526a2faaa0b7e9b988f4dd2",
+      "verbatim_archive": "spec/e2/04-trace-statement-v1.ml"
+    },
+    "development/approved-plan/loaded-witness/full-binding/definitions-v2.ml": {
+      "sha256": "80f07c0028e384ce7cb096baf83f647372285b5a0a99c0df4f6cbfe0e924f158",
+      "verbatim_archive": "spec/e2/05-definitions-v2.ml"
+    }
+  },
+  "human_review": "PENDING",
+  "index_scope": "Verbatim specification archive of pre-search frozen development sources. Archive indexing is later than construction; original freeze records preserve actual pre-search dates and digests. No source statement regenerated or weakened.",
+  "parent_experiment_preserved": "BP-20260930-E1/BP-E1-CHECKING-V2",
+  "requirements_prompt_sha256": "4cb2075f379515e8973294df6a5282928f91adb0bdb3d472ad1a7493ba3888c4"
+}

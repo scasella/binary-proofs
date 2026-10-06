@@ -1,0 +1,5 @@
+{
+  "statement_file": "development/approved-plan/crypto-loop/trace/control/run-mono-statement.ml",
+  "sha256": "c997d8bbd8b005ffdc18e4db288c314d1acbcb35888dbab5f7e102f3349a27b1",
+  "stage": "independently frozen before proof search"
+}

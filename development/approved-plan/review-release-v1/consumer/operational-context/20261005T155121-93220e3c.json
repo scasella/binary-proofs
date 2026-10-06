@@ -1,0 +1,10 @@
+{
+  "case": "C3",
+  "checking_only": true,
+  "deadline_utc": "2026-10-05T17:21:21.334277+00:00",
+  "parent_accepted_seal_sha256": "903c92086ade0594eda090832ee769e3415c741dfc20573a4c94fef1c6612f46",
+  "per_invocation_seconds": 1800,
+  "schema": "c3-later-checking-context-v1",
+  "session_limit_seconds": 5400,
+  "start_utc": "2026-10-05T15:51:21.334277+00:00"
+}

@@ -1,0 +1,20 @@
+{
+  "approved_assumptions_added": [],
+  "caller_entry_premises_changed": false,
+  "files": {
+    "proofs/branch/header-definitions-v1.ml": "dfdbed39a96f34d5505479824d17598773fdaaf63df7c9e32aa78fd52a95794a"
+  },
+  "human_review": "PENDING",
+  "literal_equations": {
+    "c2_branch_header_post": {
+      "equation": "c2_branch_header_post p q n m (returned:x86state) (t:x86state) <=>\n    read RIP t=(if c2_equal m p q n then word 0x22001148 else word 0x2200113a) /\\\n    read R12 t=(if c2_equal m p q n then word 1 else word 0) /\\\n    read RSP t=read RSP returned /\\ read RAX t=read RAX returned /\\\n    read RBX t=read RBX returned /\\ read RBP t=read RBP returned /\\\n    read R13 t=read R13 returned /\\ read R14 t=read R14 returned /\\ read R15 t=read R15 returned /\\\n    read DF t=read DF returned /\\ read memory t=read memory returned /\\\n    (MAYCHANGE [RIP;R12] ,, MAYCHANGE SOME_FLAGS ,, MAYCHANGE [events]) returned t",
+      "equation_utf8_sha256": "eb1176cf94184e976cf76c6ef649d98b4e0933705d85072ce132861acb7e326a",
+      "source": "proofs/branch/header-definitions-v1.ml"
+    }
+  },
+  "public_contract_freeze_sha256": "26b2d7d8cc214d8a45a427eacc81dab1055998fd01fef2687afb89fda821cceb",
+  "purpose": "Proven endpoints and frame/effect predicates for named end-to-end obligations; never assumed caller preconditions",
+  "schema": "c2-additive-proof-phase-definition-freeze-v1",
+  "status": "FROZEN_DEFINITIONS_NOT_PROOFS",
+  "utc": "2026-10-04T22:05:42.859150+00:00"
+}

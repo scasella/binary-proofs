@@ -1,0 +1,26 @@
+{
+  "formal_proof_of_adapter_equivalence": false,
+  "human_review": "PENDING",
+  "interpretation": "Observed differences concern source-checker lookup, operational identity, immutable-parent projection and later-checking scheduling/metadata. Supplier/ISA/proof/audit/source checks remain in the identical preserved driver/gate body.",
+  "projection_checks": "checking-context-v1.py compares every protected parent seal field and original input pin; additional operational inputs are exactly six specified paths.",
+  "proof_sources_changed": false,
+  "rows": [
+    {
+      "adapter": "development/approved-plan/review-release-v1/replay/c3-fresh-check-v1.py",
+      "adapter_sha256": "a7952f6522d3240edb09122f36c9657c74c8cd9e628399189d31f512bdf6c6fe",
+      "diff_file": "c3-fresh-check-v1.py.consumer-review.diff",
+      "original": "development/approved-plan/c3-successor-v1/replay/fresh-replay-v1.py",
+      "original_sha256": "18a360eaf45256fb97ee060f3ba31caf0e04eead273d0845dbf0cf4cfc6355a2"
+    },
+    {
+      "adapter": "development/approved-plan/review-release-v1/replay/c3-root-check-v1.py",
+      "adapter_sha256": "0de8cd373004da31d7b3344339d72ddb8152ae3335cb397a2690665bc51027cd",
+      "diff_file": "c3-root-check-v1.py.consumer-review.diff",
+      "original": "development/approved-plan/c3-successor-v1/replay/check-root-v1.py",
+      "original_sha256": "01e4e85cfc6fa30e00d770a76ea4eb7d0b129e4c85edbdc1c014237a2822c848"
+    }
+  ],
+  "schema": "review-release-consumer-operational-adapter-inspection-v1",
+  "source_only_delivered_inputs": true,
+  "utc": "2026-10-05T15:40:16.006586+00:00"
+}

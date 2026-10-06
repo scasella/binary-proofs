@@ -1,0 +1,1688 @@
+{
+  "artifact": "c3/artifact/compiled-v1/c3.so",
+  "artifact_sha256": "f3736185c45667d23d80e235245da36d99bb79e6ee1b0c7f13725fa590c53b3f",
+  "artifact_size": 15160,
+  "build": "c3/artifact/build-v1.sh",
+  "build_image": "sha256:444f775e6378c2e5523f29ceb8bbb184442277ed1114e6d37d873a7f127dfc26",
+  "build_script_sha256": "5976bb10ee07a5953ac47eb6605d0e73b580384edcc966162e24b20399a9f3f2",
+  "caller": {
+    "alignment_interval_offsets": [
+      -40,
+      -32
+    ],
+    "bytes_hex": "4155415455534883ec084889fb4989f44889d5e8f8feffff4531ed85c0410f94c54889ee4889dfe8f4feffff4889ea4c89e64889dfe8d6feffff4585ed740a85c00f94c00fb6c0eb05b8020000004883c4085b5d415c415dc3",
+    "bytes_sha256": "6ae0f7d55d26fe28db565f41851ed6be840edfa6d5a00c2652c7276fc72c353e",
+    "caller_instruction_count": 32,
+    "downward_stack_envelope_bytes": 48,
+    "elf_vaddr": 4384,
+    "file_offset": 4384,
+    "initial_equal_caller_steps": 31,
+    "initial_unequal_caller_steps": 28,
+    "instructions": [
+      {
+        "bytes_hex": "4155",
+        "elf_vaddr": 4384,
+        "loaded_address": 587206944,
+        "mnemonic": "push",
+        "offset": 0,
+        "operands": "r13",
+        "size": 2
+      },
+      {
+        "bytes_hex": "4154",
+        "elf_vaddr": 4386,
+        "loaded_address": 587206946,
+        "mnemonic": "push",
+        "offset": 2,
+        "operands": "r12",
+        "size": 2
+      },
+      {
+        "bytes_hex": "55",
+        "elf_vaddr": 4388,
+        "loaded_address": 587206948,
+        "mnemonic": "push",
+        "offset": 4,
+        "operands": "rbp",
+        "size": 1
+      },
+      {
+        "bytes_hex": "53",
+        "elf_vaddr": 4389,
+        "loaded_address": 587206949,
+        "mnemonic": "push",
+        "offset": 5,
+        "operands": "rbx",
+        "size": 1
+      },
+      {
+        "bytes_hex": "4883ec08",
+        "elf_vaddr": 4390,
+        "loaded_address": 587206950,
+        "mnemonic": "sub",
+        "offset": 6,
+        "operands": "rsp,0x8",
+        "size": 4
+      },
+      {
+        "bytes_hex": "4889fb",
+        "elf_vaddr": 4394,
+        "loaded_address": 587206954,
+        "mnemonic": "mov",
+        "offset": 10,
+        "operands": "rbx,rdi",
+        "size": 3
+      },
+      {
+        "bytes_hex": "4989f4",
+        "elf_vaddr": 4397,
+        "loaded_address": 587206957,
+        "mnemonic": "mov",
+        "offset": 13,
+        "operands": "r12,rsi",
+        "size": 3
+      },
+      {
+        "bytes_hex": "4889d5",
+        "elf_vaddr": 4400,
+        "loaded_address": 587206960,
+        "mnemonic": "mov",
+        "offset": 16,
+        "operands": "rbp,rdx",
+        "size": 3
+      },
+      {
+        "bytes_hex": "e8f8feffff",
+        "elf_vaddr": 4403,
+        "loaded_address": 587206963,
+        "mnemonic": "call",
+        "offset": 19,
+        "operands": "1030 <CRYPTO_memcmp@plt>",
+        "size": 5
+      },
+      {
+        "bytes_hex": "4531ed",
+        "elf_vaddr": 4408,
+        "loaded_address": 587206968,
+        "mnemonic": "xor",
+        "offset": 24,
+        "operands": "r13d,r13d",
+        "size": 3
+      },
+      {
+        "bytes_hex": "85c0",
+        "elf_vaddr": 4411,
+        "loaded_address": 587206971,
+        "mnemonic": "test",
+        "offset": 27,
+        "operands": "eax,eax",
+        "size": 2
+      },
+      {
+        "bytes_hex": "410f94c5",
+        "elf_vaddr": 4413,
+        "loaded_address": 587206973,
+        "mnemonic": "sete",
+        "offset": 29,
+        "operands": "r13b",
+        "size": 4
+      },
+      {
+        "bytes_hex": "4889ee",
+        "elf_vaddr": 4417,
+        "loaded_address": 587206977,
+        "mnemonic": "mov",
+        "offset": 33,
+        "operands": "rsi,rbp",
+        "size": 3
+      },
+      {
+        "bytes_hex": "4889df",
+        "elf_vaddr": 4420,
+        "loaded_address": 587206980,
+        "mnemonic": "mov",
+        "offset": 36,
+        "operands": "rdi,rbx",
+        "size": 3
+      },
+      {
+        "bytes_hex": "e8f4feffff",
+        "elf_vaddr": 4423,
+        "loaded_address": 587206983,
+        "mnemonic": "call",
+        "offset": 39,
+        "operands": "1040 <OPENSSL_cleanse@plt>",
+        "size": 5
+      },
+      {
+        "bytes_hex": "4889ea",
+        "elf_vaddr": 4428,
+        "loaded_address": 587206988,
+        "mnemonic": "mov",
+        "offset": 44,
+        "operands": "rdx,rbp",
+        "size": 3
+      },
+      {
+        "bytes_hex": "4c89e6",
+        "elf_vaddr": 4431,
+        "loaded_address": 587206991,
+        "mnemonic": "mov",
+        "offset": 47,
+        "operands": "rsi,r12",
+        "size": 3
+      },
+      {
+        "bytes_hex": "4889df",
+        "elf_vaddr": 4434,
+        "loaded_address": 587206994,
+        "mnemonic": "mov",
+        "offset": 50,
+        "operands": "rdi,rbx",
+        "size": 3
+      },
+      {
+        "bytes_hex": "e8d6feffff",
+        "elf_vaddr": 4437,
+        "loaded_address": 587206997,
+        "mnemonic": "call",
+        "offset": 53,
+        "operands": "1030 <CRYPTO_memcmp@plt>",
+        "size": 5
+      },
+      {
+        "bytes_hex": "4585ed",
+        "elf_vaddr": 4442,
+        "loaded_address": 587207002,
+        "mnemonic": "test",
+        "offset": 58,
+        "operands": "r13d,r13d",
+        "size": 3
+      },
+      {
+        "bytes_hex": "740a",
+        "elf_vaddr": 4445,
+        "loaded_address": 587207005,
+        "mnemonic": "je",
+        "offset": 61,
+        "operands": "1169 <c3_compare_clear_compare+0x49>",
+        "size": 2
+      },
+      {
+        "bytes_hex": "85c0",
+        "elf_vaddr": 4447,
+        "loaded_address": 587207007,
+        "mnemonic": "test",
+        "offset": 63,
+        "operands": "eax,eax",
+        "size": 2
+      },
+      {
+        "bytes_hex": "0f94c0",
+        "elf_vaddr": 4449,
+        "loaded_address": 587207009,
+        "mnemonic": "sete",
+        "offset": 65,
+        "operands": "al",
+        "size": 3
+      },
+      {
+        "bytes_hex": "0fb6c0",
+        "elf_vaddr": 4452,
+        "loaded_address": 587207012,
+        "mnemonic": "movzx",
+        "offset": 68,
+        "operands": "eax,al",
+        "size": 3
+      },
+      {
+        "bytes_hex": "eb05",
+        "elf_vaddr": 4455,
+        "loaded_address": 587207015,
+        "mnemonic": "jmp",
+        "offset": 71,
+        "operands": "116e <c3_compare_clear_compare+0x4e>",
+        "size": 2
+      },
+      {
+        "bytes_hex": "b802000000",
+        "elf_vaddr": 4457,
+        "loaded_address": 587207017,
+        "mnemonic": "mov",
+        "offset": 73,
+        "operands": "eax,0x2",
+        "size": 5
+      },
+      {
+        "bytes_hex": "4883c408",
+        "elf_vaddr": 4462,
+        "loaded_address": 587207022,
+        "mnemonic": "add",
+        "offset": 78,
+        "operands": "rsp,0x8",
+        "size": 4
+      },
+      {
+        "bytes_hex": "5b",
+        "elf_vaddr": 4466,
+        "loaded_address": 587207026,
+        "mnemonic": "pop",
+        "offset": 82,
+        "operands": "rbx",
+        "size": 1
+      },
+      {
+        "bytes_hex": "5d",
+        "elf_vaddr": 4467,
+        "loaded_address": 587207027,
+        "mnemonic": "pop",
+        "offset": 83,
+        "operands": "rbp",
+        "size": 1
+      },
+      {
+        "bytes_hex": "415c",
+        "elf_vaddr": 4468,
+        "loaded_address": 587207028,
+        "mnemonic": "pop",
+        "offset": 84,
+        "operands": "r12",
+        "size": 2
+      },
+      {
+        "bytes_hex": "415d",
+        "elf_vaddr": 4470,
+        "loaded_address": 587207030,
+        "mnemonic": "pop",
+        "offset": 86,
+        "operands": "r13",
+        "size": 2
+      },
+      {
+        "bytes_hex": "c3",
+        "elf_vaddr": 4472,
+        "loaded_address": 587207032,
+        "mnemonic": "ret",
+        "offset": 88,
+        "operands": "",
+        "size": 1
+      }
+    ],
+    "loaded_address": 587206944,
+    "nested_call_slot": {
+      "offset": -48,
+      "size": 8
+    },
+    "padding": [],
+    "plt_transfer_steps": 3,
+    "prefix_step_count": 10,
+    "profile_status": "EXACT_BYTE_AND_DISASSEMBLY_INSPECTION_NOT_SEMANTICS_PROOF",
+    "saved_register_slots": [
+      {
+        "offset": -8,
+        "register": "R13",
+        "size": 8
+      },
+      {
+        "offset": -16,
+        "register": "R12",
+        "size": 8
+      },
+      {
+        "offset": -24,
+        "register": "RBP",
+        "size": 8
+      },
+      {
+        "offset": -32,
+        "register": "RBX",
+        "size": 8
+      }
+    ],
+    "scratch_interval_offsets": [
+      -48,
+      0
+    ],
+    "size": 89,
+    "symbol": "c3_compare_clear_compare",
+    "total_step_expression": "(if initial_equal then34 else31)+2*bp_assurance_call_steps n+cleanse_functional_steps p n"
+  },
+  "code_relocation_overlap": false,
+  "dynamic": [
+    {
+      "string": "libcrypto.so.3",
+      "tag": 1,
+      "value": 140
+    },
+    {
+      "string": "libc.so.6",
+      "tag": 1,
+      "value": 155
+    },
+    {
+      "string": "/work/artifacts/baseline",
+      "tag": 29,
+      "value": 191
+    },
+    {
+      "tag": 12,
+      "value": 4096
+    },
+    {
+      "tag": 13,
+      "value": 4476
+    },
+    {
+      "tag": 25,
+      "value": 15784
+    },
+    {
+      "tag": 27,
+      "value": 8
+    },
+    {
+      "tag": 26,
+      "value": 15792
+    },
+    {
+      "tag": 28,
+      "value": 8
+    },
+    {
+      "tag": 1879047925,
+      "value": 552
+    },
+    {
+      "tag": 5,
+      "value": 784
+    },
+    {
+      "tag": 6,
+      "value": 592
+    },
+    {
+      "tag": 10,
+      "value": 216
+    },
+    {
+      "tag": 11,
+      "value": 24
+    },
+    {
+      "tag": 3,
+      "value": 16312
+    },
+    {
+      "tag": 2,
+      "value": 48
+    },
+    {
+      "tag": 20,
+      "value": 7
+    },
+    {
+      "tag": 23,
+      "value": 1248
+    },
+    {
+      "tag": 7,
+      "value": 1080
+    },
+    {
+      "tag": 8,
+      "value": 168
+    },
+    {
+      "tag": 9,
+      "value": 24
+    },
+    {
+      "tag": 30,
+      "value": 8
+    },
+    {
+      "tag": 1879048187,
+      "value": 1
+    },
+    {
+      "tag": 1879048190,
+      "value": 1016
+    },
+    {
+      "tag": 1879048191,
+      "value": 2
+    },
+    {
+      "tag": 1879048176,
+      "value": 1000
+    },
+    {
+      "tag": 1879048185,
+      "value": 3
+    },
+    {
+      "tag": 0,
+      "value": 0
+    },
+    {
+      "tag": 0,
+      "value": 0
+    },
+    {
+      "tag": 0,
+      "value": 0
+    },
+    {
+      "tag": 0,
+      "value": 0
+    },
+    {
+      "tag": 0,
+      "value": 0
+    }
+  ],
+  "elf_build_id": "116faa2ab7a9e31e7290591ca7b1786184f45d62",
+  "experiment": "BP-20261005-HELD-OUT-TRANSFER-V1",
+  "formal_parser_loader_isa_caller_proof": false,
+  "gnu_python_section_crosscheck": {
+    ".plt": {
+      "gnu_sha256": "928433cef64ae27988046f464101f2ca903b67ebe6bb70d1300c439928a19ad9",
+      "length": 48,
+      "python_sha256": "928433cef64ae27988046f464101f2ca903b67ebe6bb70d1300c439928a19ad9",
+      "status": "PASS"
+    },
+    ".text": {
+      "gnu_sha256": "9dde19cfb740d9711f104db1be0d9796818ceff5796fa523e05a93f4194436e8",
+      "length": 281,
+      "python_sha256": "9dde19cfb740d9711f104db1be0d9796818ceff5796fa523e05a93f4194436e8",
+      "status": "PASS"
+    }
+  },
+  "human_review": "PENDING",
+  "image": {
+    "immutable_file_backed_intervals": [
+      [
+        587202560,
+        587203856
+      ],
+      [
+        587206656,
+        587207045
+      ],
+      [
+        587210752,
+        587210756
+      ]
+    ],
+    "initialized_rw_intervals": [
+      [
+        587218344,
+        587218960
+      ]
+    ],
+    "mapped_page_interval": [
+      587202560,
+      587223040
+    ],
+    "page_permissions": [
+      {
+        "execute": false,
+        "interval": [
+          587202560,
+          587206656
+        ],
+        "read": true,
+        "write": false
+      },
+      {
+        "execute": true,
+        "interval": [
+          587206656,
+          587210752
+        ],
+        "read": true,
+        "write": false
+      },
+      {
+        "execute": false,
+        "interval": [
+          587210752,
+          587214848
+        ],
+        "read": true,
+        "write": false
+      },
+      {
+        "execute": false,
+        "interval": [
+          587214848,
+          587218944
+        ],
+        "read": true,
+        "write": false
+      },
+      {
+        "execute": false,
+        "interval": [
+          587218944,
+          587223040
+        ],
+        "read": true,
+        "write": true
+      }
+    ],
+    "reference_image": "Immutable PT_LOAD file bytes; explicit postinitialization RW memory including GOT and zero-fill; explicit mapped-page padding.",
+    "relro_loaded_interval": [
+      587218344,
+      587218944
+    ],
+    "relro_readonly_page_interval": [
+      587214848,
+      587218944
+    ],
+    "segments": [
+      {
+        "align": 4096,
+        "file_offset": 0,
+        "file_size": 1296,
+        "flags": 4,
+        "initial_zero_fill_interval": [
+          587203856,
+          587203856
+        ],
+        "loaded_file_interval": [
+          587202560,
+          587203856
+        ],
+        "loaded_memory_interval": [
+          587202560,
+          587203856
+        ],
+        "mapped_page_interval": [
+          587202560,
+          587206656
+        ],
+        "memory_size": 1296,
+        "paddr": 0,
+        "permissions": "R",
+        "source_segment_sha256": "1a2f0da8945b60b69d430f8bfc3d44c2e10a2599f43bbcd88d59a98c068539aa",
+        "type": 1,
+        "vaddr": 0
+      },
+      {
+        "align": 4096,
+        "file_offset": 4096,
+        "file_size": 389,
+        "flags": 5,
+        "initial_zero_fill_interval": [
+          587207045,
+          587207045
+        ],
+        "loaded_file_interval": [
+          587206656,
+          587207045
+        ],
+        "loaded_memory_interval": [
+          587206656,
+          587207045
+        ],
+        "mapped_page_interval": [
+          587206656,
+          587210752
+        ],
+        "memory_size": 389,
+        "paddr": 4096,
+        "permissions": "RX",
+        "source_segment_sha256": "438c47f6e688dc60c6c9d2ab79732d8ba6a1d152bb55833754ed25b0637673f8",
+        "type": 1,
+        "vaddr": 4096
+      },
+      {
+        "align": 4096,
+        "file_offset": 8192,
+        "file_size": 4,
+        "flags": 4,
+        "initial_zero_fill_interval": [
+          587210756,
+          587210756
+        ],
+        "loaded_file_interval": [
+          587210752,
+          587210756
+        ],
+        "loaded_memory_interval": [
+          587210752,
+          587210756
+        ],
+        "mapped_page_interval": [
+          587210752,
+          587214848
+        ],
+        "memory_size": 4,
+        "paddr": 8192,
+        "permissions": "R",
+        "source_segment_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "type": 1,
+        "vaddr": 8192
+      },
+      {
+        "align": 4096,
+        "file_offset": 11688,
+        "file_size": 608,
+        "flags": 6,
+        "initial_zero_fill_interval": [
+          587218952,
+          587218960
+        ],
+        "loaded_file_interval": [
+          587218344,
+          587218952
+        ],
+        "loaded_memory_interval": [
+          587218344,
+          587218960
+        ],
+        "mapped_page_interval": [
+          587214848,
+          587223040
+        ],
+        "memory_size": 616,
+        "paddr": 15784,
+        "permissions": "RW",
+        "source_segment_sha256": "7b22124bb4af63e47adbeb15870e7b27b85e125f9faa1ca61288d93c14d9eea8",
+        "type": 1,
+        "vaddr": 15784
+      }
+    ]
+  },
+  "linkage": [
+    {
+      "call_displacement_signed": -264,
+      "call_displacement_u32": 4294967032,
+      "call_elf_vaddr": 4403,
+      "call_loaded_address": 587206963,
+      "continuation_elf_vaddr": 4408,
+      "continuation_loaded_address": 587206968,
+      "got_elf_vaddr": 16336,
+      "got_file_offset": 12240,
+      "got_loaded_address": 587218896,
+      "got_pointer_bytes": 8,
+      "plt_bytes_hex": "ff259a2f00006800000000e9e0ffffff",
+      "plt_displacement_signed": 12186,
+      "plt_elf_vaddr": 4144,
+      "plt_file_offset": 4144,
+      "plt_loaded_address": 587206704,
+      "plt_prefix_hex": "ff259a2f0000",
+      "plt_prefix_sha256": "b39e24957fa22aba0db5bdb8897d34e2e54bf8924e698ff956aab132c44f928d",
+      "plt_prefix_size": 6,
+      "relocation": {
+        "addend": 0,
+        "offset": 16336,
+        "section": ".rela.plt",
+        "symbol": "CRYPTO_memcmp",
+        "symbol_index": 2,
+        "type": 7
+      },
+      "required_postinit_target": 270800960,
+      "symbol": "CRYPTO_memcmp",
+      "symbol_version": "OPENSSL_3.0.0",
+      "target_resolution": "EXPLICIT_FIXED_POSTINITIALIZATION_LOADER_ASSUMPTION"
+    },
+    {
+      "call_displacement_signed": -268,
+      "call_displacement_u32": 4294967028,
+      "call_elf_vaddr": 4423,
+      "call_loaded_address": 587206983,
+      "continuation_elf_vaddr": 4428,
+      "continuation_loaded_address": 587206988,
+      "got_elf_vaddr": 16344,
+      "got_file_offset": 12248,
+      "got_loaded_address": 587218904,
+      "got_pointer_bytes": 8,
+      "plt_bytes_hex": "ff25922f00006801000000e9d0ffffff",
+      "plt_displacement_signed": 12178,
+      "plt_elf_vaddr": 4160,
+      "plt_file_offset": 4160,
+      "plt_loaded_address": 587206720,
+      "plt_prefix_hex": "ff25922f0000",
+      "plt_prefix_sha256": "335211f848bb5bad98990831407c66e1fc19c22171525dc49a9ea4ccb6a91a78",
+      "plt_prefix_size": 6,
+      "relocation": {
+        "addend": 0,
+        "offset": 16344,
+        "section": ".rela.plt",
+        "symbol": "OPENSSL_cleanse",
+        "symbol_index": 6,
+        "type": 7
+      },
+      "required_postinit_target": 270800848,
+      "symbol": "OPENSSL_cleanse",
+      "symbol_version": "OPENSSL_3.0.0",
+      "target_resolution": "EXPLICIT_FIXED_POSTINITIALIZATION_LOADER_ASSUMPTION"
+    },
+    {
+      "call_displacement_signed": -298,
+      "call_displacement_u32": 4294966998,
+      "call_elf_vaddr": 4437,
+      "call_loaded_address": 587206997,
+      "continuation_elf_vaddr": 4442,
+      "continuation_loaded_address": 587207002,
+      "got_elf_vaddr": 16336,
+      "got_file_offset": 12240,
+      "got_loaded_address": 587218896,
+      "got_pointer_bytes": 8,
+      "plt_bytes_hex": "ff259a2f00006800000000e9e0ffffff",
+      "plt_displacement_signed": 12186,
+      "plt_elf_vaddr": 4144,
+      "plt_file_offset": 4144,
+      "plt_loaded_address": 587206704,
+      "plt_prefix_hex": "ff259a2f0000",
+      "plt_prefix_sha256": "b39e24957fa22aba0db5bdb8897d34e2e54bf8924e698ff956aab132c44f928d",
+      "plt_prefix_size": 6,
+      "relocation": {
+        "addend": 0,
+        "offset": 16336,
+        "section": ".rela.plt",
+        "symbol": "CRYPTO_memcmp",
+        "symbol_index": 2,
+        "type": 7
+      },
+      "required_postinit_target": 270800960,
+      "symbol": "CRYPTO_memcmp",
+      "symbol_version": "OPENSSL_3.0.0",
+      "target_resolution": "EXPLICIT_FIXED_POSTINITIALIZATION_LOADER_ASSUMPTION"
+    }
+  ],
+  "load_bias": 587202560,
+  "needed": [
+    "libcrypto.so.3",
+    "libc.so.6"
+  ],
+  "parser_sha256": "6f35da09dea20999a64f5698618b369822c3eac60ebe7d6b161021206f163cff",
+  "permission_granule": 4096,
+  "program_headers": [
+    {
+      "align": 4096,
+      "file_offset": 0,
+      "file_size": 1296,
+      "flags": 4,
+      "memory_size": 1296,
+      "paddr": 0,
+      "permissions": "R",
+      "type": 1,
+      "vaddr": 0
+    },
+    {
+      "align": 4096,
+      "file_offset": 4096,
+      "file_size": 389,
+      "flags": 5,
+      "memory_size": 389,
+      "paddr": 4096,
+      "permissions": "RX",
+      "type": 1,
+      "vaddr": 4096
+    },
+    {
+      "align": 4096,
+      "file_offset": 8192,
+      "file_size": 4,
+      "flags": 4,
+      "memory_size": 4,
+      "paddr": 8192,
+      "permissions": "R",
+      "type": 1,
+      "vaddr": 8192
+    },
+    {
+      "align": 4096,
+      "file_offset": 11688,
+      "file_size": 608,
+      "flags": 6,
+      "memory_size": 616,
+      "paddr": 15784,
+      "permissions": "RW",
+      "type": 1,
+      "vaddr": 15784
+    },
+    {
+      "align": 8,
+      "file_offset": 11704,
+      "file_size": 512,
+      "flags": 6,
+      "memory_size": 512,
+      "paddr": 15800,
+      "permissions": "RW",
+      "type": 2,
+      "vaddr": 15800
+    },
+    {
+      "align": 4,
+      "file_offset": 512,
+      "file_size": 36,
+      "flags": 4,
+      "memory_size": 36,
+      "paddr": 512,
+      "permissions": "R",
+      "type": 4,
+      "vaddr": 512
+    },
+    {
+      "align": 16,
+      "file_offset": 0,
+      "file_size": 0,
+      "flags": 6,
+      "memory_size": 0,
+      "paddr": 0,
+      "permissions": "RW",
+      "type": 1685382481,
+      "vaddr": 0
+    },
+    {
+      "align": 1,
+      "file_offset": 11688,
+      "file_size": 600,
+      "flags": 4,
+      "memory_size": 600,
+      "paddr": 15784,
+      "permissions": "R",
+      "type": 1685382482,
+      "vaddr": 15784
+    }
+  ],
+  "relocations": [
+    {
+      "addend": 4368,
+      "offset": 15784,
+      "section": ".rela.dyn",
+      "symbol": "",
+      "symbol_index": 0,
+      "type": 8
+    },
+    {
+      "addend": 4304,
+      "offset": 15792,
+      "section": ".rela.dyn",
+      "symbol": "",
+      "symbol_index": 0,
+      "type": 8
+    },
+    {
+      "addend": 16384,
+      "offset": 16384,
+      "section": ".rela.dyn",
+      "symbol": "",
+      "symbol_index": 0,
+      "type": 8
+    },
+    {
+      "addend": 0,
+      "offset": 16352,
+      "section": ".rela.dyn",
+      "symbol": "__gmon_start__",
+      "symbol_index": 1,
+      "type": 6
+    },
+    {
+      "addend": 0,
+      "offset": 16360,
+      "section": ".rela.dyn",
+      "symbol": "_ITM_deregisterTMCloneTable",
+      "symbol_index": 3,
+      "type": 6
+    },
+    {
+      "addend": 0,
+      "offset": 16368,
+      "section": ".rela.dyn",
+      "symbol": "_ITM_registerTMCloneTable",
+      "symbol_index": 4,
+      "type": 6
+    },
+    {
+      "addend": 0,
+      "offset": 16376,
+      "section": ".rela.dyn",
+      "symbol": "__cxa_finalize",
+      "symbol_index": 5,
+      "type": 6
+    },
+    {
+      "addend": 0,
+      "offset": 16336,
+      "section": ".rela.plt",
+      "symbol": "CRYPTO_memcmp",
+      "symbol_index": 2,
+      "type": 7
+    },
+    {
+      "addend": 0,
+      "offset": 16344,
+      "section": ".rela.plt",
+      "symbol": "OPENSSL_cleanse",
+      "symbol_index": 6,
+      "type": 7
+    }
+  ],
+  "schema": "c3-final-linked-acquisition-v1",
+  "sections": [
+    {
+      "align": 0,
+      "entry_size": 0,
+      "file_offset": 0,
+      "flags": 0,
+      "info": 0,
+      "link": 0,
+      "name": "",
+      "name_offset": 0,
+      "size": 0,
+      "type": 0,
+      "vaddr": 0
+    },
+    {
+      "align": 4,
+      "entry_size": 0,
+      "file_offset": 512,
+      "flags": 2,
+      "info": 0,
+      "link": 0,
+      "name": ".note.gnu.build-id",
+      "name_offset": 27,
+      "size": 36,
+      "type": 7,
+      "vaddr": 512
+    },
+    {
+      "align": 8,
+      "entry_size": 0,
+      "file_offset": 552,
+      "flags": 2,
+      "info": 0,
+      "link": 3,
+      "name": ".gnu.hash",
+      "name_offset": 46,
+      "size": 36,
+      "type": 1879048182,
+      "vaddr": 552
+    },
+    {
+      "align": 8,
+      "entry_size": 24,
+      "file_offset": 592,
+      "flags": 2,
+      "info": 1,
+      "link": 4,
+      "name": ".dynsym",
+      "name_offset": 56,
+      "size": 192,
+      "type": 11,
+      "vaddr": 592
+    },
+    {
+      "align": 1,
+      "entry_size": 0,
+      "file_offset": 784,
+      "flags": 2,
+      "info": 0,
+      "link": 0,
+      "name": ".dynstr",
+      "name_offset": 64,
+      "size": 216,
+      "type": 3,
+      "vaddr": 784
+    },
+    {
+      "align": 2,
+      "entry_size": 2,
+      "file_offset": 1000,
+      "flags": 2,
+      "info": 0,
+      "link": 3,
+      "name": ".gnu.version",
+      "name_offset": 72,
+      "size": 16,
+      "type": 1879048191,
+      "vaddr": 1000
+    },
+    {
+      "align": 8,
+      "entry_size": 0,
+      "file_offset": 1016,
+      "flags": 2,
+      "info": 2,
+      "link": 4,
+      "name": ".gnu.version_r",
+      "name_offset": 85,
+      "size": 64,
+      "type": 1879048190,
+      "vaddr": 1016
+    },
+    {
+      "align": 8,
+      "entry_size": 24,
+      "file_offset": 1080,
+      "flags": 2,
+      "info": 0,
+      "link": 3,
+      "name": ".rela.dyn",
+      "name_offset": 100,
+      "size": 168,
+      "type": 4,
+      "vaddr": 1080
+    },
+    {
+      "align": 8,
+      "entry_size": 24,
+      "file_offset": 1248,
+      "flags": 66,
+      "info": 18,
+      "link": 3,
+      "name": ".rela.plt",
+      "name_offset": 110,
+      "size": 48,
+      "type": 4,
+      "vaddr": 1248
+    },
+    {
+      "align": 4,
+      "entry_size": 0,
+      "file_offset": 4096,
+      "flags": 6,
+      "info": 0,
+      "link": 0,
+      "name": ".init",
+      "name_offset": 120,
+      "size": 23,
+      "type": 1,
+      "vaddr": 4096
+    },
+    {
+      "align": 16,
+      "entry_size": 16,
+      "file_offset": 4128,
+      "flags": 6,
+      "info": 0,
+      "link": 0,
+      "name": ".plt",
+      "name_offset": 115,
+      "size": 48,
+      "type": 1,
+      "vaddr": 4128
+    },
+    {
+      "align": 8,
+      "entry_size": 8,
+      "file_offset": 4176,
+      "flags": 6,
+      "info": 0,
+      "link": 0,
+      "name": ".plt.got",
+      "name_offset": 126,
+      "size": 8,
+      "type": 1,
+      "vaddr": 4176
+    },
+    {
+      "align": 16,
+      "entry_size": 0,
+      "file_offset": 4192,
+      "flags": 6,
+      "info": 0,
+      "link": 0,
+      "name": ".text",
+      "name_offset": 135,
+      "size": 281,
+      "type": 1,
+      "vaddr": 4192
+    },
+    {
+      "align": 4,
+      "entry_size": 0,
+      "file_offset": 4476,
+      "flags": 6,
+      "info": 0,
+      "link": 0,
+      "name": ".fini",
+      "name_offset": 141,
+      "size": 9,
+      "type": 1,
+      "vaddr": 4476
+    },
+    {
+      "align": 8,
+      "entry_size": 0,
+      "file_offset": 8192,
+      "flags": 2,
+      "info": 0,
+      "link": 0,
+      "name": ".eh_frame",
+      "name_offset": 147,
+      "size": 4,
+      "type": 1,
+      "vaddr": 8192
+    },
+    {
+      "align": 8,
+      "entry_size": 8,
+      "file_offset": 11688,
+      "flags": 3,
+      "info": 0,
+      "link": 0,
+      "name": ".init_array",
+      "name_offset": 157,
+      "size": 8,
+      "type": 14,
+      "vaddr": 15784
+    },
+    {
+      "align": 8,
+      "entry_size": 8,
+      "file_offset": 11696,
+      "flags": 3,
+      "info": 0,
+      "link": 0,
+      "name": ".fini_array",
+      "name_offset": 169,
+      "size": 8,
+      "type": 15,
+      "vaddr": 15792
+    },
+    {
+      "align": 8,
+      "entry_size": 16,
+      "file_offset": 11704,
+      "flags": 3,
+      "info": 0,
+      "link": 4,
+      "name": ".dynamic",
+      "name_offset": 181,
+      "size": 512,
+      "type": 6,
+      "vaddr": 15800
+    },
+    {
+      "align": 8,
+      "entry_size": 8,
+      "file_offset": 12216,
+      "flags": 3,
+      "info": 0,
+      "link": 0,
+      "name": ".got",
+      "name_offset": 130,
+      "size": 72,
+      "type": 1,
+      "vaddr": 16312
+    },
+    {
+      "align": 8,
+      "entry_size": 0,
+      "file_offset": 12288,
+      "flags": 3,
+      "info": 0,
+      "link": 0,
+      "name": ".data",
+      "name_offset": 190,
+      "size": 8,
+      "type": 1,
+      "vaddr": 16384
+    },
+    {
+      "align": 1,
+      "entry_size": 0,
+      "file_offset": 12296,
+      "flags": 3,
+      "info": 0,
+      "link": 0,
+      "name": ".bss",
+      "name_offset": 196,
+      "size": 8,
+      "type": 8,
+      "vaddr": 16392
+    },
+    {
+      "align": 1,
+      "entry_size": 1,
+      "file_offset": 12296,
+      "flags": 48,
+      "info": 0,
+      "link": 0,
+      "name": ".comment",
+      "name_offset": 201,
+      "size": 39,
+      "type": 1,
+      "vaddr": 0
+    },
+    {
+      "align": 8,
+      "entry_size": 24,
+      "file_offset": 12336,
+      "flags": 0,
+      "info": 18,
+      "link": 23,
+      "name": ".symtab",
+      "name_offset": 1,
+      "size": 600,
+      "type": 2,
+      "vaddr": 0
+    },
+    {
+      "align": 1,
+      "entry_size": 0,
+      "file_offset": 12936,
+      "flags": 0,
+      "info": 0,
+      "link": 0,
+      "name": ".strtab",
+      "name_offset": 9,
+      "size": 410,
+      "type": 3,
+      "vaddr": 0
+    },
+    {
+      "align": 1,
+      "entry_size": 0,
+      "file_offset": 13346,
+      "flags": 0,
+      "info": 0,
+      "link": 0,
+      "name": ".shstrtab",
+      "name_offset": 17,
+      "size": 210,
+      "type": 3,
+      "vaddr": 0
+    }
+  ],
+  "source": "c3/artifact/c3.S",
+  "source_kind": "assembler-authored; GCC assembled and linked",
+  "source_sha256": "0edd718ddc8585ab5d201bcc691e93df7a740a189667799eb34bb29059c03778",
+  "status": "PASS_TRUSTED_EXACT_ARTIFACT_ACQUISITION_NOT_PROOF",
+  "symbols": [
+    {
+      "binding": 0,
+      "index": 0,
+      "name": "",
+      "section_index": 0,
+      "size": 0,
+      "table": ".dynsym",
+      "type": 0,
+      "vaddr": 0,
+      "version": "LOCAL",
+      "version_hidden": false,
+      "version_index": 0,
+      "visibility": 0
+    },
+    {
+      "binding": 2,
+      "index": 1,
+      "name": "__gmon_start__",
+      "section_index": 0,
+      "size": 0,
+      "table": ".dynsym",
+      "type": 0,
+      "vaddr": 0,
+      "version": "GLOBAL",
+      "version_hidden": false,
+      "version_index": 1,
+      "visibility": 0
+    },
+    {
+      "binding": 1,
+      "index": 2,
+      "name": "CRYPTO_memcmp",
+      "section_index": 0,
+      "size": 0,
+      "table": ".dynsym",
+      "type": 2,
+      "vaddr": 0,
+      "version": "OPENSSL_3.0.0",
+      "version_hidden": false,
+      "version_index": 2,
+      "visibility": 0
+    },
+    {
+      "binding": 2,
+      "index": 3,
+      "name": "_ITM_deregisterTMCloneTable",
+      "section_index": 0,
+      "size": 0,
+      "table": ".dynsym",
+      "type": 0,
+      "vaddr": 0,
+      "version": "GLOBAL",
+      "version_hidden": false,
+      "version_index": 1,
+      "visibility": 0
+    },
+    {
+      "binding": 2,
+      "index": 4,
+      "name": "_ITM_registerTMCloneTable",
+      "section_index": 0,
+      "size": 0,
+      "table": ".dynsym",
+      "type": 0,
+      "vaddr": 0,
+      "version": "GLOBAL",
+      "version_hidden": false,
+      "version_index": 1,
+      "visibility": 0
+    },
+    {
+      "binding": 2,
+      "index": 5,
+      "name": "__cxa_finalize",
+      "section_index": 0,
+      "size": 0,
+      "table": ".dynsym",
+      "type": 2,
+      "vaddr": 0,
+      "version": "GLIBC_2.2.5",
+      "version_hidden": false,
+      "version_index": 3,
+      "visibility": 0
+    },
+    {
+      "binding": 1,
+      "index": 6,
+      "name": "OPENSSL_cleanse",
+      "section_index": 0,
+      "size": 0,
+      "table": ".dynsym",
+      "type": 2,
+      "vaddr": 0,
+      "version": "OPENSSL_3.0.0",
+      "version_hidden": false,
+      "version_index": 2,
+      "visibility": 0
+    },
+    {
+      "binding": 1,
+      "index": 7,
+      "name": "c3_compare_clear_compare",
+      "section_index": 12,
+      "size": 89,
+      "table": ".dynsym",
+      "type": 2,
+      "vaddr": 4384,
+      "version": "GLOBAL",
+      "version_hidden": false,
+      "version_index": 1,
+      "visibility": 0
+    },
+    {
+      "binding": 0,
+      "index": 0,
+      "name": "",
+      "section_index": 0,
+      "size": 0,
+      "table": ".symtab",
+      "type": 0,
+      "vaddr": 0,
+      "visibility": 0
+    },
+    {
+      "binding": 0,
+      "index": 1,
+      "name": "crtstuff.c",
+      "section_index": 65521,
+      "size": 0,
+      "table": ".symtab",
+      "type": 4,
+      "vaddr": 0,
+      "visibility": 0
+    },
+    {
+      "binding": 0,
+      "index": 2,
+      "name": "deregister_tm_clones",
+      "section_index": 12,
+      "size": 0,
+      "table": ".symtab",
+      "type": 2,
+      "vaddr": 4192,
+      "visibility": 0
+    },
+    {
+      "binding": 0,
+      "index": 3,
+      "name": "register_tm_clones",
+      "section_index": 12,
+      "size": 0,
+      "table": ".symtab",
+      "type": 2,
+      "vaddr": 4240,
+      "visibility": 0
+    },
+    {
+      "binding": 0,
+      "index": 4,
+      "name": "__do_global_dtors_aux",
+      "section_index": 12,
+      "size": 0,
+      "table": ".symtab",
+      "type": 2,
+      "vaddr": 4304,
+      "visibility": 0
+    },
+    {
+      "binding": 0,
+      "index": 5,
+      "name": "completed.0",
+      "section_index": 20,
+      "size": 1,
+      "table": ".symtab",
+      "type": 1,
+      "vaddr": 16392,
+      "visibility": 0
+    },
+    {
+      "binding": 0,
+      "index": 6,
+      "name": "__do_global_dtors_aux_fini_array_entry",
+      "section_index": 16,
+      "size": 0,
+      "table": ".symtab",
+      "type": 1,
+      "vaddr": 15792,
+      "visibility": 0
+    },
+    {
+      "binding": 0,
+      "index": 7,
+      "name": "frame_dummy",
+      "section_index": 12,
+      "size": 0,
+      "table": ".symtab",
+      "type": 2,
+      "vaddr": 4368,
+      "visibility": 0
+    },
+    {
+      "binding": 0,
+      "index": 8,
+      "name": "__frame_dummy_init_array_entry",
+      "section_index": 15,
+      "size": 0,
+      "table": ".symtab",
+      "type": 1,
+      "vaddr": 15784,
+      "visibility": 0
+    },
+    {
+      "binding": 0,
+      "index": 9,
+      "name": "crtstuff.c",
+      "section_index": 65521,
+      "size": 0,
+      "table": ".symtab",
+      "type": 4,
+      "vaddr": 0,
+      "visibility": 0
+    },
+    {
+      "binding": 0,
+      "index": 10,
+      "name": "__FRAME_END__",
+      "section_index": 14,
+      "size": 0,
+      "table": ".symtab",
+      "type": 1,
+      "vaddr": 8192,
+      "visibility": 0
+    },
+    {
+      "binding": 0,
+      "index": 11,
+      "name": "",
+      "section_index": 65521,
+      "size": 0,
+      "table": ".symtab",
+      "type": 4,
+      "vaddr": 0,
+      "visibility": 0
+    },
+    {
+      "binding": 0,
+      "index": 12,
+      "name": "_fini",
+      "section_index": 13,
+      "size": 0,
+      "table": ".symtab",
+      "type": 2,
+      "vaddr": 4476,
+      "visibility": 0
+    },
+    {
+      "binding": 0,
+      "index": 13,
+      "name": "_GLOBAL_OFFSET_TABLE_",
+      "section_index": 18,
+      "size": 0,
+      "table": ".symtab",
+      "type": 1,
+      "vaddr": 16312,
+      "visibility": 0
+    },
+    {
+      "binding": 0,
+      "index": 14,
+      "name": "__TMC_END__",
+      "section_index": 19,
+      "size": 0,
+      "table": ".symtab",
+      "type": 1,
+      "vaddr": 16392,
+      "visibility": 0
+    },
+    {
+      "binding": 0,
+      "index": 15,
+      "name": "__dso_handle",
+      "section_index": 19,
+      "size": 0,
+      "table": ".symtab",
+      "type": 1,
+      "vaddr": 16384,
+      "visibility": 0
+    },
+    {
+      "binding": 0,
+      "index": 16,
+      "name": "_DYNAMIC",
+      "section_index": 17,
+      "size": 0,
+      "table": ".symtab",
+      "type": 1,
+      "vaddr": 15800,
+      "visibility": 0
+    },
+    {
+      "binding": 0,
+      "index": 17,
+      "name": "_init",
+      "section_index": 9,
+      "size": 0,
+      "table": ".symtab",
+      "type": 2,
+      "vaddr": 4096,
+      "visibility": 0
+    },
+    {
+      "binding": 2,
+      "index": 18,
+      "name": "__gmon_start__",
+      "section_index": 0,
+      "size": 0,
+      "table": ".symtab",
+      "type": 0,
+      "vaddr": 0,
+      "visibility": 0
+    },
+    {
+      "binding": 1,
+      "index": 19,
+      "name": "CRYPTO_memcmp@OPENSSL_3.0.0",
+      "section_index": 0,
+      "size": 0,
+      "table": ".symtab",
+      "type": 2,
+      "vaddr": 0,
+      "visibility": 0
+    },
+    {
+      "binding": 1,
+      "index": 20,
+      "name": "c3_compare_clear_compare",
+      "section_index": 12,
+      "size": 89,
+      "table": ".symtab",
+      "type": 2,
+      "vaddr": 4384,
+      "visibility": 0
+    },
+    {
+      "binding": 2,
+      "index": 21,
+      "name": "_ITM_deregisterTMCloneTable",
+      "section_index": 0,
+      "size": 0,
+      "table": ".symtab",
+      "type": 0,
+      "vaddr": 0,
+      "visibility": 0
+    },
+    {
+      "binding": 2,
+      "index": 22,
+      "name": "_ITM_registerTMCloneTable",
+      "section_index": 0,
+      "size": 0,
+      "table": ".symtab",
+      "type": 0,
+      "vaddr": 0,
+      "visibility": 0
+    },
+    {
+      "binding": 2,
+      "index": 23,
+      "name": "__cxa_finalize@GLIBC_2.2.5",
+      "section_index": 0,
+      "size": 0,
+      "table": ".symtab",
+      "type": 2,
+      "vaddr": 0,
+      "visibility": 0
+    },
+    {
+      "binding": 1,
+      "index": 24,
+      "name": "OPENSSL_cleanse@OPENSSL_3.0.0",
+      "section_index": 0,
+      "size": 0,
+      "table": ".symtab",
+      "type": 2,
+      "vaddr": 0,
+      "visibility": 0
+    }
+  ]
+}

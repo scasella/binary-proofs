@@ -1,0 +1,17 @@
+{
+  "actions": [
+    "Narrow fixed ordinary local callback work",
+    "Freeze concrete pointer word-expression equality schema tied to actual site offsets",
+    "Document PC base-variable/base-plus-small-numeral and direct bytes_loaded syntax"
+  ],
+  "classification": "PRESELECTION_RULE_CLARIFICATION",
+  "formal_sources_changed": false,
+  "human_review": "PENDING",
+  "issues": [
+    "Arbitrary tactic parameter must not silently allow new behavior",
+    "Closed normalizer facts overly broad",
+    "Symbolic-decode syntactic assumptions need explicit supported-class restriction"
+  ],
+  "reviewer": "/root/layer_review_default",
+  "utc": "2026-10-05T00:52:43.275994+00:00"
+}

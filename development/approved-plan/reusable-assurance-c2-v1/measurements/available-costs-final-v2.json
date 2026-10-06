@@ -1,0 +1,2920 @@
+{
+  "acceptance_input": false,
+  "active_construction_cpu_seconds": null,
+  "active_construction_reason": "Not exposed or not separately instrumented; no reconstruction from elapsed service windows.",
+  "agents": [
+    "/root",
+    "/root/c2_artifact_contract",
+    "/root/c2_replay",
+    "/root/c2_reuse_and_proofs"
+  ],
+  "all_observed_command_interval_union_seconds": 9275.667551,
+  "as_of_utc": "2026-10-05T00:32:22.390248+00:00",
+  "attempts": {
+    "command_failure_boundary": "Includes intended rejection/diagnosis and environment/source failures; independent of proof outcome.",
+    "command_nonzero_exit_count": 15,
+    "complete": 246,
+    "open": 1,
+    "total": 247
+  },
+  "by_exact_kind": {
+    "ADAPTATION_ACCOUNTING": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.031826,
+      "observed_interval_union_seconds": 0.031826,
+      "open": 0
+    },
+    "ADAPTATION_CLASSIFICATION": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.032869,
+      "observed_interval_union_seconds": 0.032869,
+      "open": 0
+    },
+    "DIAGNOSTIC_SOURCE": {
+      "attempts": 10,
+      "command_nonzero_exits": 1,
+      "completed": 10,
+      "interval_sum_seconds_not_total_effort": 0.286476,
+      "observed_interval_union_seconds": 0.286476,
+      "open": 0
+    },
+    "EVIDENCE_ACCOUNTING": {
+      "attempts": 3,
+      "command_nonzero_exits": 0,
+      "completed": 3,
+      "interval_sum_seconds_not_total_effort": 0.081975,
+      "observed_interval_union_seconds": 0.081975,
+      "open": 0
+    },
+    "INSPECTION_REPORT": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.029852,
+      "observed_interval_union_seconds": 0.029852,
+      "open": 0
+    },
+    "MEASUREMENT_SCRIPT_CHECK": {
+      "attempts": 2,
+      "command_nonzero_exits": 0,
+      "completed": 2,
+      "interval_sum_seconds_not_total_effort": 0.08249300000000001,
+      "observed_interval_union_seconds": 0.08249300000000001,
+      "open": 0
+    },
+    "MEASUREMENT_SCRIPT_CONSTRUCTION": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.030708,
+      "observed_interval_union_seconds": 0.030708,
+      "open": 0
+    },
+    "OPACITY_INSPECTION": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.019449,
+      "observed_interval_union_seconds": 0.019449,
+      "open": 0
+    },
+    "OPACITY_INSPECTION_ACCOUNT": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.025444,
+      "observed_interval_union_seconds": 0.025444,
+      "open": 0
+    },
+    "PROOF_SOURCE_REPAIR": {
+      "attempts": 3,
+      "command_nonzero_exits": 0,
+      "completed": 3,
+      "interval_sum_seconds_not_total_effort": 0.125881,
+      "observed_interval_union_seconds": 0.125881,
+      "open": 0
+    },
+    "PROOF_SOURCE_REPAIR_DIAGNOSTIC": {
+      "attempts": 5,
+      "command_nonzero_exits": 0,
+      "completed": 5,
+      "interval_sum_seconds_not_total_effort": 0.19179200000000002,
+      "observed_interval_union_seconds": 0.19179200000000002,
+      "open": 0
+    },
+    "SOURCE_CONSTRUCTION": {
+      "attempts": 14,
+      "command_nonzero_exits": 0,
+      "completed": 14,
+      "interval_sum_seconds_not_total_effort": 0.476838,
+      "observed_interval_union_seconds": 0.476838,
+      "open": 0
+    },
+    "SOURCE_OBSERVATION": {
+      "attempts": 6,
+      "command_nonzero_exits": 0,
+      "completed": 6,
+      "interval_sum_seconds_not_total_effort": 0.185525,
+      "observed_interval_union_seconds": 0.185525,
+      "open": 0
+    },
+    "STATUS_FROM_EVIDENCE": {
+      "attempts": 2,
+      "command_nonzero_exits": 0,
+      "completed": 2,
+      "interval_sum_seconds_not_total_effort": 0.059326000000000004,
+      "observed_interval_union_seconds": 0.059326000000000004,
+      "open": 0
+    },
+    "accepted-dependency-and-reuse-observation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.030961,
+      "observed_interval_union_seconds": 0.030961,
+      "open": 0
+    },
+    "actual_scalar_continuation_loading_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.059405,
+      "observed_interval_union_seconds": 0.059405,
+      "open": 0
+    },
+    "artifact_acquisition": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.041651,
+      "observed_interval_union_seconds": 0.041651,
+      "open": 0
+    },
+    "artifact_acquisition_source": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.026832,
+      "observed_interval_union_seconds": 0.026832,
+      "open": 0
+    },
+    "artifact_compile": {
+      "attempts": 2,
+      "command_nonzero_exits": 1,
+      "completed": 2,
+      "interval_sum_seconds_not_total_effort": 1.1016,
+      "observed_interval_union_seconds": 1.1016,
+      "open": 0
+    },
+    "artifact_disassembly": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.196085,
+      "observed_interval_union_seconds": 0.196085,
+      "open": 0
+    },
+    "artifact_extraction": {
+      "attempts": 2,
+      "command_nonzero_exits": 0,
+      "completed": 2,
+      "interval_sum_seconds_not_total_effort": 0.26826099999999997,
+      "observed_interval_union_seconds": 0.26826099999999997,
+      "open": 0
+    },
+    "artifact_metadata": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.127728,
+      "observed_interval_union_seconds": 0.127728,
+      "open": 0
+    },
+    "artifact_source": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.028074,
+      "observed_interval_union_seconds": 0.028074,
+      "open": 0
+    },
+    "available-final-cost-report": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.04614,
+      "observed_interval_union_seconds": 0.04614,
+      "open": 0
+    },
+    "bounded_proof_search_interruption": {
+      "attempts": 2,
+      "command_nonzero_exits": 0,
+      "completed": 2,
+      "interval_sum_seconds_not_total_effort": 0.110987,
+      "observed_interval_union_seconds": 0.110987,
+      "open": 0
+    },
+    "caller_source_construction": {
+      "attempts": 4,
+      "command_nonzero_exits": 0,
+      "completed": 4,
+      "interval_sum_seconds_not_total_effort": 0.12177,
+      "observed_interval_union_seconds": 0.12177,
+      "open": 0
+    },
+    "caller_source_observation": {
+      "attempts": 3,
+      "command_nonzero_exits": 0,
+      "completed": 3,
+      "interval_sum_seconds_not_total_effort": 0.094116,
+      "observed_interval_union_seconds": 0.094116,
+      "open": 0
+    },
+    "checking-phase-report-source": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.02916,
+      "observed_interval_union_seconds": 0.02916,
+      "open": 0
+    },
+    "closed_c2_source_selection_construction": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.043901,
+      "observed_interval_union_seconds": 0.043901,
+      "open": 0
+    },
+    "closed_replay_input_sealing": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 1.012849,
+      "observed_interval_union_seconds": 1.012849,
+      "open": 0
+    },
+    "cold_development_source_loading_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.066761,
+      "observed_interval_union_seconds": 0.066761,
+      "open": 0
+    },
+    "cold_supplier_live_object_audit": {
+      "attempts": 3,
+      "command_nonzero_exits": 1,
+      "completed": 3,
+      "interval_sum_seconds_not_total_effort": 0.214177,
+      "observed_interval_union_seconds": 0.214177,
+      "open": 0
+    },
+    "cold_supplier_live_object_host_audit": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.071843,
+      "observed_interval_union_seconds": 0.071843,
+      "open": 0
+    },
+    "cold_supplier_live_policy_audit": {
+      "attempts": 2,
+      "command_nonzero_exits": 0,
+      "completed": 2,
+      "interval_sum_seconds_not_total_effort": 0.12642899999999999,
+      "observed_interval_union_seconds": 0.12642899999999999,
+      "open": 0
+    },
+    "cold_supplier_reconstruction_and_live_development": {
+      "attempts": 5,
+      "command_nonzero_exits": 5,
+      "completed": 5,
+      "interval_sum_seconds_not_total_effort": 7201.511672,
+      "observed_interval_union_seconds": 7201.511672,
+      "open": 0
+    },
+    "concrete_registry_operational_adaptation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.0356,
+      "observed_interval_union_seconds": 0.0356,
+      "open": 0
+    },
+    "concurrent_development_resource_observation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.089888,
+      "observed_interval_union_seconds": 0.089888,
+      "open": 0
+    },
+    "construction": {
+      "attempts": 3,
+      "command_nonzero_exits": 0,
+      "completed": 3,
+      "interval_sum_seconds_not_total_effort": 0.089276,
+      "observed_interval_union_seconds": 0.089276,
+      "open": 0
+    },
+    "construction-checking-budget-account": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.029689,
+      "observed_interval_union_seconds": 0.029689,
+      "open": 0
+    },
+    "construction_repair": {
+      "attempts": 2,
+      "command_nonzero_exits": 0,
+      "completed": 2,
+      "interval_sum_seconds_not_total_effort": 0.07022300000000001,
+      "observed_interval_union_seconds": 0.07022300000000001,
+      "open": 0
+    },
+    "contract_definition_source": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.029837,
+      "observed_interval_union_seconds": 0.029837,
+      "open": 0
+    },
+    "contract_draft_correction": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.03607,
+      "observed_interval_union_seconds": 0.03607,
+      "open": 0
+    },
+    "contract_exposure_record": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.02852,
+      "observed_interval_union_seconds": 0.02852,
+      "open": 0
+    },
+    "contract_interpretation_inventory": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.030896,
+      "observed_interval_union_seconds": 0.030896,
+      "open": 0
+    },
+    "delivery-evidence-construction": {
+      "attempts": 4,
+      "command_nonzero_exits": 0,
+      "completed": 4,
+      "interval_sum_seconds_not_total_effort": 0.172029,
+      "observed_interval_union_seconds": 0.172029,
+      "open": 0
+    },
+    "delivery-evidence-correction": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.030782,
+      "observed_interval_union_seconds": 0.030782,
+      "open": 0
+    },
+    "development_environment_repair": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.065418,
+      "observed_interval_union_seconds": 0.065418,
+      "open": 0
+    },
+    "development_independent_artifact_crosscheck": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.288374,
+      "observed_interval_union_seconds": 0.288374,
+      "open": 0
+    },
+    "development_input_freeze": {
+      "attempts": 3,
+      "command_nonzero_exits": 0,
+      "completed": 3,
+      "interval_sum_seconds_not_total_effort": 0.108898,
+      "observed_interval_union_seconds": 0.108898,
+      "open": 0
+    },
+    "development_namespace_reconstruction_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.073304,
+      "observed_interval_union_seconds": 0.073304,
+      "open": 0
+    },
+    "development_namespace_repair_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.070547,
+      "observed_interval_union_seconds": 0.070547,
+      "open": 0
+    },
+    "development_object_audit_input_freeze": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.037238,
+      "observed_interval_union_seconds": 0.037238,
+      "open": 0
+    },
+    "development_source_loading_preparation": {
+      "attempts": 18,
+      "command_nonzero_exits": 0,
+      "completed": 18,
+      "interval_sum_seconds_not_total_effort": 0.594419,
+      "observed_interval_union_seconds": 0.594419,
+      "open": 0
+    },
+    "development_witness_input_freeze": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.036852,
+      "observed_interval_union_seconds": 0.036852,
+      "open": 0
+    },
+    "diagnosis-source": {
+      "attempts": 6,
+      "command_nonzero_exits": 0,
+      "completed": 6,
+      "interval_sum_seconds_not_total_effort": 0.182727,
+      "observed_interval_union_seconds": 0.182727,
+      "open": 0
+    },
+    "diagnostic_search_interrupt": {
+      "attempts": 2,
+      "command_nonzero_exits": 0,
+      "completed": 2,
+      "interval_sum_seconds_not_total_effort": 0.122172,
+      "observed_interval_union_seconds": 0.122172,
+      "open": 0
+    },
+    "diagnostic_source_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.090854,
+      "observed_interval_union_seconds": 0.090854,
+      "open": 0
+    },
+    "evidence-preservation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.02966,
+      "observed_interval_union_seconds": 0.02966,
+      "open": 0
+    },
+    "evidence-recording": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.027145,
+      "observed_interval_union_seconds": 0.027145,
+      "open": 0
+    },
+    "exact_dependency_and_diagnostic_loading_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.060401,
+      "observed_interval_union_seconds": 0.060401,
+      "open": 0
+    },
+    "exact_remaining_obligation_diagnostic_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.061326,
+      "observed_interval_union_seconds": 0.061326,
+      "open": 0
+    },
+    "executable-delivery-documentation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.024281,
+      "observed_interval_union_seconds": 0.024281,
+      "open": 0
+    },
+    "expanded_development_target_audit_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.064911,
+      "observed_interval_union_seconds": 0.064911,
+      "open": 0
+    },
+    "final-available-cost-snapshot": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 0,
+      "interval_sum_seconds_not_total_effort": 0.02887,
+      "observed_interval_union_seconds": 0.02887,
+      "open": 1
+    },
+    "final-history-integrity": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 11.012264,
+      "observed_interval_union_seconds": 11.012264,
+      "open": 0
+    },
+    "final-phase-cost-report": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.033332,
+      "observed_interval_union_seconds": 0.033332,
+      "open": 0
+    },
+    "five_targeted_integrity_controls": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 6.106785,
+      "observed_interval_union_seconds": 6.106785,
+      "open": 0
+    },
+    "fresh_closed_complete_package_reconstruction": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 514.728336,
+      "observed_interval_union_seconds": 514.728336,
+      "open": 0
+    },
+    "fresh_public_interface_availability_probe": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 448.273613,
+      "observed_interval_union_seconds": 448.273613,
+      "open": 0
+    },
+    "frozen_target_mapping_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.029127,
+      "observed_interval_union_seconds": 0.029127,
+      "open": 0
+    },
+    "history-integrity": {
+      "attempts": 3,
+      "command_nonzero_exits": 2,
+      "completed": 3,
+      "interval_sum_seconds_not_total_effort": 28.884338,
+      "observed_interval_union_seconds": 28.884338,
+      "open": 0
+    },
+    "history-metadata-restoration": {
+      "attempts": 2,
+      "command_nonzero_exits": 0,
+      "completed": 2,
+      "interval_sum_seconds_not_total_effort": 9.853809,
+      "observed_interval_union_seconds": 9.853809,
+      "open": 0
+    },
+    "independent_complete_c2_root_acceptance": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 5.350281,
+      "observed_interval_union_seconds": 5.350281,
+      "open": 0
+    },
+    "independent_positive_root_gate": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 3.682527,
+      "observed_interval_union_seconds": 3.682527,
+      "open": 0
+    },
+    "input_classification": {
+      "attempts": 4,
+      "command_nonzero_exits": 1,
+      "completed": 4,
+      "interval_sum_seconds_not_total_effort": 0.139032,
+      "observed_interval_union_seconds": 0.139032,
+      "open": 0
+    },
+    "literal_failure_diagnostic_loading_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.05862,
+      "observed_interval_union_seconds": 0.05862,
+      "open": 0
+    },
+    "live_development_target_audit_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.074584,
+      "observed_interval_union_seconds": 0.074584,
+      "open": 0
+    },
+    "measurement_observer_source_materialization": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.029805,
+      "observed_interval_union_seconds": 0.029805,
+      "open": 0
+    },
+    "measurement_observer_validation": {
+      "attempts": 2,
+      "command_nonzero_exits": 1,
+      "completed": 2,
+      "interval_sum_seconds_not_total_effort": 0.10609199999999999,
+      "observed_interval_union_seconds": 0.10609199999999999,
+      "open": 0
+    },
+    "named_independent_dependency_loading_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.072061,
+      "observed_interval_union_seconds": 0.072061,
+      "open": 0
+    },
+    "named_obligation_repairs_loading_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.068126,
+      "observed_interval_union_seconds": 0.068126,
+      "open": 0
+    },
+    "obligation_observation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.028838,
+      "observed_interval_union_seconds": 0.028838,
+      "open": 0
+    },
+    "observational_status_publication": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.037477,
+      "observed_interval_union_seconds": 0.037477,
+      "open": 0
+    },
+    "operational_chronology_correction": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.028967,
+      "observed_interval_union_seconds": 0.028967,
+      "open": 0
+    },
+    "operational_crosscheck_preparation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.02733,
+      "observed_interval_union_seconds": 0.02733,
+      "open": 0
+    },
+    "operational_environment_repair": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.033478,
+      "observed_interval_union_seconds": 0.033478,
+      "open": 0
+    },
+    "operational_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.035996,
+      "observed_interval_union_seconds": 0.035996,
+      "open": 0
+    },
+    "operational_integration": {
+      "attempts": 2,
+      "command_nonzero_exits": 0,
+      "completed": 2,
+      "interval_sum_seconds_not_total_effort": 0.077829,
+      "observed_interval_union_seconds": 0.077829,
+      "open": 0
+    },
+    "operational_pin_account_recording": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.031998,
+      "observed_interval_union_seconds": 0.031998,
+      "open": 0
+    },
+    "operational_preexecution_repair": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.034858,
+      "observed_interval_union_seconds": 0.034858,
+      "open": 0
+    },
+    "operational_syntax": {
+      "attempts": 2,
+      "command_nonzero_exits": 0,
+      "completed": 2,
+      "interval_sum_seconds_not_total_effort": 0.099691,
+      "observed_interval_union_seconds": 0.099691,
+      "open": 0
+    },
+    "operational_syntax_check": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.044076,
+      "observed_interval_union_seconds": 0.044076,
+      "open": 0
+    },
+    "overlapping_cold_supplier_reconstruction_and_live_development": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 1452.153998,
+      "observed_interval_union_seconds": 1452.153998,
+      "open": 0
+    },
+    "partial_checker_memory_observation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.094278,
+      "observed_interval_union_seconds": 0.094278,
+      "open": 0
+    },
+    "phase_definition_freeze": {
+      "attempts": 3,
+      "command_nonzero_exits": 0,
+      "completed": 3,
+      "interval_sum_seconds_not_total_effort": 0.11116599999999999,
+      "observed_interval_union_seconds": 0.11116599999999999,
+      "open": 0
+    },
+    "phase_freezer_source": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.025148,
+      "observed_interval_union_seconds": 0.025148,
+      "open": 0
+    },
+    "preservation_and_stage_setup": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 11.846065,
+      "observed_interval_union_seconds": 11.846065,
+      "open": 0
+    },
+    "proof-diagnosis-source": {
+      "attempts": 3,
+      "command_nonzero_exits": 0,
+      "completed": 3,
+      "interval_sum_seconds_not_total_effort": 0.07932,
+      "observed_interval_union_seconds": 0.07932,
+      "open": 0
+    },
+    "proof-source-construction": {
+      "attempts": 5,
+      "command_nonzero_exits": 0,
+      "completed": 5,
+      "interval_sum_seconds_not_total_effort": 0.155024,
+      "observed_interval_union_seconds": 0.155024,
+      "open": 0
+    },
+    "proof-source-repair": {
+      "attempts": 9,
+      "command_nonzero_exits": 0,
+      "completed": 9,
+      "interval_sum_seconds_not_total_effort": 0.313814,
+      "observed_interval_union_seconds": 0.313814,
+      "open": 0
+    },
+    "proof_application_type_repair": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.039058,
+      "observed_interval_union_seconds": 0.039058,
+      "open": 0
+    },
+    "proof_cleanse_public_frame": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.030939,
+      "observed_interval_union_seconds": 0.030939,
+      "open": 0
+    },
+    "proof_diagnosis_source": {
+      "attempts": 2,
+      "command_nonzero_exits": 1,
+      "completed": 2,
+      "interval_sum_seconds_not_total_effort": 0.057503,
+      "observed_interval_union_seconds": 0.057503,
+      "open": 0
+    },
+    "proof_failure_diagnostic_instantiation": {
+      "attempts": 2,
+      "command_nonzero_exits": 0,
+      "completed": 2,
+      "interval_sum_seconds_not_total_effort": 0.134486,
+      "observed_interval_union_seconds": 0.134486,
+      "open": 0
+    },
+    "proof_failure_signature_input_freeze": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.034774,
+      "observed_interval_union_seconds": 0.034774,
+      "open": 0
+    },
+    "proof_frame_construction": {
+      "attempts": 2,
+      "command_nonzero_exits": 0,
+      "completed": 2,
+      "interval_sum_seconds_not_total_effort": 0.059908,
+      "observed_interval_union_seconds": 0.059908,
+      "open": 0
+    },
+    "proof_helper_construction": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.058136,
+      "observed_interval_union_seconds": 0.058136,
+      "open": 0
+    },
+    "proof_quote_correction": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.033704,
+      "observed_interval_union_seconds": 0.033704,
+      "open": 0
+    },
+    "proof_search_interrupt": {
+      "attempts": 2,
+      "command_nonzero_exits": 0,
+      "completed": 2,
+      "interval_sum_seconds_not_total_effort": 0.128831,
+      "observed_interval_union_seconds": 0.128831,
+      "open": 0
+    },
+    "proof_source_construction": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.0392,
+      "observed_interval_union_seconds": 0.0392,
+      "open": 0
+    },
+    "proof_source_integration_adaptation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.03215,
+      "observed_interval_union_seconds": 0.03215,
+      "open": 0
+    },
+    "proof_source_loading_instantiation": {
+      "attempts": 3,
+      "command_nonzero_exits": 0,
+      "completed": 3,
+      "interval_sum_seconds_not_total_effort": 0.206099,
+      "observed_interval_union_seconds": 0.206099,
+      "open": 0
+    },
+    "proof_source_repair": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.038995,
+      "observed_interval_union_seconds": 0.038995,
+      "open": 0
+    },
+    "qualification_source_pin": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.029857,
+      "observed_interval_union_seconds": 0.029857,
+      "open": 0
+    },
+    "repaired_dependency_source_loading_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.068705,
+      "observed_interval_union_seconds": 0.068705,
+      "open": 0
+    },
+    "repaired_proof_source_loading_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.067647,
+      "observed_interval_union_seconds": 0.067647,
+      "open": 0
+    },
+    "replay-source-selection": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.031537,
+      "observed_interval_union_seconds": 0.031537,
+      "open": 0
+    },
+    "replay_identity_anchor_construction": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.08205,
+      "observed_interval_union_seconds": 0.08205,
+      "open": 0
+    },
+    "reporting-current-priority-correction": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.026622,
+      "observed_interval_union_seconds": 0.026622,
+      "open": 0
+    },
+    "reporting-observed-memory-scope": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.026011,
+      "observed_interval_union_seconds": 0.026011,
+      "open": 0
+    },
+    "reporting-source-construction": {
+      "attempts": 1,
+      "command_nonzero_exits": 1,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.025917,
+      "observed_interval_union_seconds": 0.025917,
+      "open": 0
+    },
+    "reporting-source-repair": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.025306,
+      "observed_interval_union_seconds": 0.025306,
+      "open": 0
+    },
+    "root_owned_endpoint_dependency_loading_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.059691,
+      "observed_interval_union_seconds": 0.059691,
+      "open": 0
+    },
+    "specification-freeze": {
+      "attempts": 3,
+      "command_nonzero_exits": 0,
+      "completed": 3,
+      "interval_sum_seconds_not_total_effort": 0.108927,
+      "observed_interval_union_seconds": 0.108927,
+      "open": 0
+    },
+    "specification_freeze": {
+      "attempts": 2,
+      "command_nonzero_exits": 1,
+      "completed": 2,
+      "interval_sum_seconds_not_total_effort": 0.071767,
+      "observed_interval_union_seconds": 0.071767,
+      "open": 0
+    },
+    "status-and-report-from-accepted-evidence": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.043611,
+      "observed_interval_union_seconds": 0.043611,
+      "open": 0
+    },
+    "witness_loader_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.03212,
+      "observed_interval_union_seconds": 0.03212,
+      "open": 0
+    },
+    "witness_proof_construction": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.031416,
+      "observed_interval_union_seconds": 0.031416,
+      "open": 0
+    },
+    "witness_source_loading_instantiation": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.065751,
+      "observed_interval_union_seconds": 0.065751,
+      "open": 0
+    },
+    "witness_specification": {
+      "attempts": 1,
+      "command_nonzero_exits": 0,
+      "completed": 1,
+      "interval_sum_seconds_not_total_effort": 0.030577,
+      "observed_interval_union_seconds": 0.030577,
+      "open": 0
+    }
+  },
+  "checking_windows": {
+    "boundary": "Live development service windows include cold supplier reconstruction, active checks and idle coordination. They do not measure active construction or pure checker CPU. Fresh noninteractive windows are reported separately by exact ID.",
+    "explicit_ids": [
+      "c2-development-checker-v1",
+      "c2-development-checker-v2",
+      "c2-development-checker-v3",
+      "c2-development-checker-v4",
+      "c2-development-checker-v5",
+      "c2-development-checker-v6",
+      "c2-fresh-final-v1",
+      "c2-public-binding-probe-final-v1"
+    ],
+    "full_observed_interval_union_seconds": 9240.510349,
+    "observed": [
+      {
+        "agent": "/root/c2_replay",
+        "end_or_as_of": "2026-10-04T21:46:17.995941+00:00",
+        "exit_code": 125,
+        "id": "c2-development-checker-v1",
+        "kind": "cold_supplier_reconstruction_and_live_development",
+        "observed_inclusive_window_seconds": 0.986349,
+        "open_as_of_observation": false,
+        "start": "2026-10-04T21:46:17.009592+00:00"
+      },
+      {
+        "agent": "/root/c2_replay",
+        "end_or_as_of": "2026-10-04T22:17:42.001387+00:00",
+        "exit_code": 137,
+        "id": "c2-development-checker-v2",
+        "kind": "cold_supplier_reconstruction_and_live_development",
+        "observed_inclusive_window_seconds": 1800.125823,
+        "open_as_of_observation": false,
+        "start": "2026-10-04T21:47:41.875564+00:00"
+      },
+      {
+        "agent": "/root/c2_replay",
+        "end_or_as_of": "2026-10-04T22:48:13.102757+00:00",
+        "exit_code": 137,
+        "id": "c2-development-checker-v3",
+        "kind": "cold_supplier_reconstruction_and_live_development",
+        "observed_inclusive_window_seconds": 1800.132705,
+        "open_as_of_observation": false,
+        "start": "2026-10-04T22:18:12.970052+00:00"
+      },
+      {
+        "agent": "/root/c2_replay",
+        "end_or_as_of": "2026-10-04T23:19:35.602984+00:00",
+        "exit_code": 137,
+        "id": "c2-development-checker-v4",
+        "kind": "cold_supplier_reconstruction_and_live_development",
+        "observed_inclusive_window_seconds": 1800.146297,
+        "open_as_of_observation": false,
+        "start": "2026-10-04T22:49:35.456687+00:00"
+      },
+      {
+        "agent": "/root/c2_replay",
+        "end_or_as_of": "2026-10-04T23:49:57.269407+00:00",
+        "exit_code": 137,
+        "id": "c2-development-checker-v5",
+        "kind": "cold_supplier_reconstruction_and_live_development",
+        "observed_inclusive_window_seconds": 1800.120498,
+        "open_as_of_observation": false,
+        "start": "2026-10-04T23:19:57.148909+00:00"
+      },
+      {
+        "agent": "/root/c2_replay",
+        "end_or_as_of": "2026-10-05T00:08:39.760058+00:00",
+        "exit_code": 0,
+        "id": "c2-development-checker-v6",
+        "kind": "overlapping_cold_supplier_reconstruction_and_live_development",
+        "observed_inclusive_window_seconds": 1452.153998,
+        "open_as_of_observation": false,
+        "start": "2026-10-04T23:44:27.606060+00:00"
+      },
+      {
+        "agent": "/root/c2_replay",
+        "end_or_as_of": "2026-10-05T00:16:27.994471+00:00",
+        "exit_code": 0,
+        "id": "c2-fresh-final-v1",
+        "kind": "fresh_closed_complete_package_reconstruction",
+        "observed_inclusive_window_seconds": 514.728336,
+        "open_as_of_observation": false,
+        "start": "2026-10-05T00:07:53.266135+00:00"
+      },
+      {
+        "agent": "/root/c2_replay",
+        "end_or_as_of": "2026-10-05T00:25:01.065910+00:00",
+        "exit_code": 0,
+        "id": "c2-public-binding-probe-final-v1",
+        "kind": "fresh_public_interface_availability_probe",
+        "observed_inclusive_window_seconds": 448.273613,
+        "open_as_of_observation": false,
+        "start": "2026-10-05T00:17:32.792297+00:00"
+      }
+    ],
+    "v5_v6_intersection_seconds": 329.663347,
+    "window_sum_seconds_not_total_wall": 9616.667619
+  },
+  "coordination_reason": "Not exposed or not separately instrumented; no reconstruction from elapsed service windows.",
+  "coordination_seconds": null,
+  "cost": null,
+  "cumulative_active_construction_seconds": null,
+  "cumulative_reason": "Stage and predecessor histories do not expose a complete nonoverlapping active-work measure.",
+  "docker_checker_peak_memory_bytes": null,
+  "experiment": "BP-20261004-C2-V1",
+  "host_command_child_system_seconds_sum": 61.241248999999996,
+  "host_command_child_user_seconds_sum": 45.179259,
+  "host_usage_boundary": "Host process observations exclude Docker engine/checker. Do not report these as prover CPU.",
+  "human_boundary": "Logged during stage commands; does not convert human review PENDING into approval.",
+  "ledger_records": 493,
+  "ledger_sha256": "cee3bf52f138ab3a8b8c9c5102a1509db3738885a4d6160c9424f203946aba34",
+  "logged_human_interventions_end_records": 0,
+  "memory_reason": "Per-invocation memory cap is exposed; no measured peak supplied by this ledger.",
+  "model": null,
+  "model_tokens_cost_reason": "Execution runtime does not expose exact model, token, or billing counters.",
+  "module_observations": {
+    "actual_logs": [
+      {
+        "path": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v1.log",
+        "sha256": "390a002eb593edf1d4aa3251eb38cce2efc812aeab5f68c20fab627003924a32"
+      },
+      {
+        "path": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v2.log",
+        "sha256": "351a1290bdaa9c273485ccd2f86122244dc731791fcd8a72f3fd772c02862709"
+      },
+      {
+        "path": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v3.log",
+        "sha256": "07685577aae994af67f47556fb86fde2201e980c9c34f94878c6c89c08e9e92f"
+      },
+      {
+        "path": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "sha256": "82cc60f611bba2552858c5e7eb78bae528f7f74c7c72ad286077f8a6f05c2d0e"
+      },
+      {
+        "path": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "sha256": "d46e154665d7e314cc2d93dde45a5cc8a83ffb9e6ea7a7d5b2c83bb2d139b656"
+      },
+      {
+        "path": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "sha256": "4db8871b0abcfda1d6283a39ec15dcfbceeb16e53600d7e0286d259a2873dad8"
+      },
+      {
+        "path": "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/c2-proof.log",
+        "sha256": "e8f33e56c9aad643df752e7a17a0b1d34a7a505f2c7aaeda62a0591c6bd1c2c6"
+      }
+    ],
+    "boundary": "Actual development module attempts, including failed and intentional diagnostic modules; no fixture copies. CPU is checker-reported module CPU, not construction, total cold reconstruction, or acceptance.",
+    "complete_count": 137,
+    "failed_count": 50,
+    "named_diagnostic_failure_count": 21,
+    "records": [
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1222,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v2.log",
+        "module": "application-statements",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.297876
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1550,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v2.log",
+        "module": "application-proof-attempt1",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.864962
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1720,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v2.log",
+        "module": "helper-statements",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.497991
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/helpers/proof-attempt1.ml\")",
+        "line": 1742,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v2.log",
+        "module": "helper-proof-attempt1",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.154508
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/steps/adapter-attempt1.ml\")",
+        "line": 1923,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v2.log",
+        "module": "actual-c2-step-adapter-attempt1",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.134971
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/prefix/proof-attempt1.ml\")",
+        "line": 1931,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v2.log",
+        "module": "actual-c2-prefix-attempt1",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.073066
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/helpers/proof-attempt2.ml\")",
+        "line": 1960,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v2.log",
+        "module": "helper-proof-attempt2",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.220655
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/steps/adapter-attempt1.ml\")",
+        "line": 2141,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v2.log",
+        "module": "actual-c2-step-adapter-attempt1-retry",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.17329
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/prefix/proof-attempt1.ml\")",
+        "line": 2149,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v2.log",
+        "module": "actual-c2-prefix-attempt1-retry",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.090902
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/helpers/proof-attempt3.ml\")",
+        "line": 2745,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v2.log",
+        "module": "helper-proof-attempt3",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.946493
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2938,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v2.log",
+        "module": "actual-c2-step-adapter-attempt1-after-helper3",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.142672
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/prefix/proof-attempt1.ml\")",
+        "line": 2949,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v2.log",
+        "module": "actual-c2-prefix-attempt1-after-helper3",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.409727
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/witnesses/load-v2.ml\")",
+        "line": 3421,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v2.log",
+        "module": "entry-witness-proof-attempt1-loader2",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 45.304325
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/helpers/prefix-frame-diagnostic-attempt1.ml\")",
+        "line": 3455,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v2.log",
+        "module": "prefix-frame-diagnostic1",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.054227
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/witnesses/permission-diagnostic-attempt1.ml\")",
+        "line": 3595,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v2.log",
+        "module": "witness-permissions-diagnostic1",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 40.554397
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1222,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v3.log",
+        "module": "application-statements",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.314688
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1550,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v3.log",
+        "module": "application-proof-attempt1",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.927773
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1720,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v3.log",
+        "module": "helper-statements",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.53541
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1940,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v3.log",
+        "module": "helper-proof-attempt4",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.856369
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2133,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v3.log",
+        "module": "actual-c2-step-adapter-attempt1",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.124104
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/prefix/proof-attempt1.ml\")",
+        "line": 2168,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v3.log",
+        "module": "actual-c2-prefix-attempt1",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 3.449472
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/prefix/frame-goal-diagnostic-attempt1.ml\")",
+        "line": 2232,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v3.log",
+        "module": "actual-prefix-frame-goal-diagnostic1",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 3.509217
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/prefix/proof-attempt2.ml\")",
+        "line": 2621,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v3.log",
+        "module": "actual-prefix-proof-attempt2-launch2",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 148.56177
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/witnesses/load-v3.ml\")",
+        "line": 4125,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v3.log",
+        "module": "entry-witness-proof-attempt2-loader3",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 3.159735
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1222,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/application/statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.289784
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1550,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/application/proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.775234
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1720,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/helpers/statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.483768
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1940,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/helpers/proof-attempt4.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.818765
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2133,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/steps/adapter-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.123333
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2162,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/helpers/public-frame-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.072576
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2192,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/helpers/public-frame-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.171638
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2215,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/compare/frame-definitions-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.190184
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2272,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/helpers/composition-frame-statements-v2.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.088792
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2338,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/helpers/composition-frame-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 1.184339
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2425,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/prefix/proof-attempt4.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 21.546785
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2448,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/compare/definitions-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.072886
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2545,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/compare/statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.18766
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/compare/proof-attempt3.ml\")",
+        "line": 2628,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/compare/proof-attempt3.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.406777
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2674,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/cleanup/definitions-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.14453
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2721,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/cleanup/returned-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.078071
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2763,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/cleanup/frame-algebra-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.399156
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2802,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/helpers/cleanse-frame-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.080132
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2843,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/helpers/cleanse-frame-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.146258
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2857,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "prefix-live-literal-audit1",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.023959
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3055,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "compare-proof-attempt4",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 2.699198
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3640,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "entry-witness-load4-permission3",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 3.609883
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3663,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/branch/header-definitions-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.128373
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3675,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/branch/header-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.058254
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/branch/header-proof-attempt2.ml\")",
+        "line": 3681,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/branch/header-proof-attempt2.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.052436
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3694,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/steps/ret-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.026061
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/steps/ret-proof-attempt1.ml\")",
+        "line": 3699,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/steps/ret-proof-attempt1.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.042375
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3755,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/suffix/definitions-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.24061
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3765,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/suffix/statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.013905
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/suffix/adapter-attempt1.ml\")",
+        "line": 3771,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/suffix/adapter-attempt1.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.043987
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/suffix/proof-attempt2.ml\")",
+        "line": 3777,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/suffix/proof-attempt2.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.024799
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 4947,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "handoff-witness-expanded-development-audit1",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 3.907106
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 4977,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/compare/strong-facts-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.072468
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 5071,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/compare/strong-facts-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 9.093781
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/cleanup/returned-proof-attempt4.ml\")",
+        "line": 5076,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/cleanup/returned-proof-attempt4.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 2.489449
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/branch/header-diagnostic-attempt1.ml\")",
+        "line": 5088,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/branch/header-diagnostic-attempt1.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.055907
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/steps/ret-diagnostic-attempt1.ml\")",
+        "line": 5109,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/steps/ret-diagnostic-attempt1.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.041722
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/diagnosis/returned4-localization-v1.ml\")",
+        "line": 5390,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "diagnosis/returned4-localization-v1.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 1.651233
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/branch/header-proof-attempt3.ml\")",
+        "line": 5406,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/branch/header-proof-attempt3.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.437325
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 5427,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/steps/ret-proof-attempt2.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.0487419999999
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/cleanup/returned-proof-attempt5.ml\")",
+        "line": 5438,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "proofs/cleanup/returned-proof-attempt5.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 242.099584
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/diagnosis/returned5-localization-v1.ml\")",
+        "line": 5624,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v4.log",
+        "module": "diagnosis/returned5-localization-v1.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 41.90277
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1222,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/application/statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.295894
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1550,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/application/proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.768088
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1720,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/helpers/statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.479779
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1940,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/helpers/proof-attempt4.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.816268
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2133,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/steps/adapter-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.117161
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2162,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/helpers/public-frame-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.06689
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2192,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/helpers/public-frame-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.165475
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2215,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/compare/frame-definitions-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.182374
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2272,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/helpers/composition-frame-statements-v2.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.084639
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2338,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/helpers/composition-frame-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 1.155253
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2425,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/prefix/proof-attempt4.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 21.660876
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2448,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/compare/definitions-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.072509
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2545,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/compare/statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.188502
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2743,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/compare/proof-attempt4.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 2.48522
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2789,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/cleanup/definitions-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.144812
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2836,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/cleanup/returned-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.077193
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2878,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/cleanup/frame-algebra-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.398364
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2917,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/helpers/cleanse-frame-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.078096
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2958,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/helpers/cleanse-frame-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.144856
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2988,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/compare/strong-facts-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.03437
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3082,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/compare/strong-facts-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 8.810517
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3102,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/branch/header-definitions-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.103679
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3114,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/branch/header-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.051329
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3127,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/steps/ret-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.0242900000001
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3148,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/steps/ret-proof-attempt2.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.054535
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3204,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/suffix/definitions-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.237239
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3214,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/suffix/statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.013624
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/branch/header-diagnostic-attempt2.ml\")",
+        "line": 3252,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/branch/header-diagnostic-attempt2.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.381382
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/diagnosis/returned-slot8-premise-v2.ml\")",
+        "line": 3394,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "diagnosis/returned-slot8-premise-v2.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 6.727897
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3403,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/suffix/adapter-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.0395970000001
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/suffix/proof-attempt2.ml\")",
+        "line": 3413,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/suffix/proof-attempt2.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.058954
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3449,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/helpers/branch-suffix-frame-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.07169
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3486,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/helpers/branch-suffix-frame-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.328857
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3507,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/branch/middle-definitions-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.139936
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3547,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/helpers/middle-frame-statements-v2.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.081012
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3588,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/helpers/middle-frame-proof-attempt2.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.323375
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 4173,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "witnesses/load-v4.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 3.740697
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/cleanup/returned-proof-attempt6.ml\")",
+        "line": 4184,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/cleanup/returned-proof-attempt6.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 73.490551
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 4208,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/branch/middle-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.022264
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/branch/middle-proof-attempt2.ml\")",
+        "line": 4259,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/branch/middle-proof-attempt2.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 4.630103
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 4290,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/cleanup/run-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.0457369999999
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 4321,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/cleanup/run-proof-attempt2.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.050292
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/cleanup/returned-proof-attempt7.ml\")",
+        "line": 4335,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/cleanup/returned-proof-attempt7.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 20.568301
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/suffix/offset-diagnostic-attempt1.ml\")",
+        "line": 4410,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/suffix/offset-diagnostic-attempt1.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.069666
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/branch/middle-endpoint-diagnostic-attempt1.ml\")",
+        "line": 4414,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/branch/middle-endpoint-diagnostic-attempt1.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.011349
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 4432,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/helpers/header-frame-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.0481610000001
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 4448,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/helpers/header-frame-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.0623750000001
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 4473,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/branch/header-proof-attempt4.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 1.041536
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/diagnosis/returned7-arithmetic-v1.ml\")",
+        "line": 4860,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "diagnosis/returned7-arithmetic-v1.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 17.121028
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/suffix/proof-attempt3.ml\")",
+        "line": 4874,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/suffix/proof-attempt3.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.594031
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/branch/middle-endpoint-diagnostic-attempt2.ml\")",
+        "line": 5183,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/branch/middle-endpoint-diagnostic-attempt2.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 4.500044
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": "",
+        "line": 5214,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "diagnosis/returned-k0-type-probe-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.0536950000001
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/cleanup/returned-proof-attempt8.ml\")",
+        "line": 5281,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/cleanup/returned-proof-attempt8.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 24.634785
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/branch/middle-endpoint-diagnostic-attempt3.ml\")",
+        "line": 5601,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/branch/middle-endpoint-diagnostic-attempt3.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 5.034157
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/suffix/ret-clause-diagnostic-attempt2.ml\")",
+        "line": 5618,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/suffix/ret-clause-diagnostic-attempt2.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.607465
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/diagnosis/returned8-tail-v1.ml\")",
+        "line": 6254,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "diagnosis/returned8-tail-v1.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 112.191688
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/branch/middle-proof-attempt4.ml\")",
+        "line": 6305,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/branch/middle-proof-attempt4.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 4.995964
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/suffix/policy-entry-diagnostic-attempt3.ml\")",
+        "line": 6631,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/suffix/policy-entry-diagnostic-attempt3.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.666487
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/diagnosis/returned8-tail-v2.ml\")",
+        "line": 7983,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "diagnosis/returned8-tail-v2.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 27.686521
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 8104,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/cleanup/returned-proof-attempt9.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 24.929162
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 8113,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/suffix/adapter-attempt2.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.043237
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/suffix/proof-attempt3.ml\")",
+        "line": 8127,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/suffix/proof-attempt3.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.647195
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/branch/middle-after-four-diagnostic-attempt4.ml\")",
+        "line": 8442,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v5.log",
+        "module": "proofs/branch/middle-after-four-diagnostic-attempt4.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 4.955746
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1222,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/application/statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.310375
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1550,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/application/proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.874991
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1720,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/helpers/statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.49401
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 1940,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/helpers/proof-attempt4.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.929499
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2133,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/steps/adapter-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.128257
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2162,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/helpers/public-frame-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.070477
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2192,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/helpers/public-frame-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.177702
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2215,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/compare/frame-definitions-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.191995
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2272,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/helpers/composition-frame-statements-v2.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.086985
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2338,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/helpers/composition-frame-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 1.200619
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2425,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/prefix/proof-attempt4.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 22.134395
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2448,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/compare/definitions-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.080186
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2545,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/compare/statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.190422
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2743,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/compare/proof-attempt4.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 2.737934
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2789,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/cleanup/definitions-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.156138
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2836,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/cleanup/returned-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.081027
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2878,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/cleanup/frame-algebra-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.415811
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2917,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/helpers/cleanse-frame-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.078916
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2958,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/helpers/cleanse-frame-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.15597
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 2988,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/compare/strong-facts-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.036892
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3082,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/compare/strong-facts-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 9.266221
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3102,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/branch/header-definitions-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.105836
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3114,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/branch/header-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.0521879999999
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3129,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/helpers/header-frame-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.028996
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3145,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/helpers/header-frame-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.061718
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3170,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/branch/header-proof-attempt4.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 1.173059
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3183,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/steps/ret-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.027838
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3204,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/steps/ret-proof-attempt2.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.05509
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3260,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/suffix/definitions-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.239091
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3270,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/suffix/statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.014431
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3279,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/suffix/adapter-attempt2.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.044943
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3315,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/helpers/branch-suffix-frame-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.081404
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3352,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/helpers/branch-suffix-frame-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.409921
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3364,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/helpers/suffix-frame-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.023565
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3376,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/helpers/suffix-frame-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.095703
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3397,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/branch/middle-definitions-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.161456
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3421,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/branch/middle-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.021225
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3461,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/helpers/middle-frame-statements-v2.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.083366
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3502,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/helpers/middle-frame-proof-attempt2.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.353181
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3623,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/cleanup/returned-proof-attempt9.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 26.19956
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3654,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/cleanup/run-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.049645
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3685,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/cleanup/run-proof-attempt2.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.054428
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3700,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/branch/completion-definitions-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.056126
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 3821,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/branch/completion-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.139284
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/branch/completion-proof-attempt1.ml\")",
+        "line": 3953,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/branch/completion-proof-attempt1.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.97214
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 4538,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "witnesses/load-v4.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 3.796027
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 4614,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/branch/middle-proof-attempt5.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 4.742493
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 4623,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/suffix/adapter-attempt3.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.0427570000001
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/suffix/final-frame-diagnostic-attempt4.ml\")",
+        "line": 4654,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/suffix/final-frame-diagnostic-attempt4.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 0.659152
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 4682,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/suffix/proof-attempt4.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 1.521132
+      },
+      {
+        "diagnostic_named_source": true,
+        "exception_tail": " Failure(\"Error in included file /work/development/approved-plan/reusable-assurance-c2-v1/proofs/branch/completion-last-diagnostic-attempt1.ml\")",
+        "line": 4865,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/branch/completion-last-diagnostic-attempt1.ml",
+        "outcome": "FAILED",
+        "reported_module_cpu_seconds": 1.02867
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 5017,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/branch/completion-proof-attempt2.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 1.053118
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 5070,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/suffix/post-statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.076432
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 5129,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/suffix/post-proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.393193
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 5237,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/composition/statements-v1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.102214
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 5366,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/composition/proof-attempt3.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.541223
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 5483,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "proofs/lifts/proof-attempt1.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 0.172346
+      },
+      {
+        "diagnostic_named_source": false,
+        "exception_tail": "",
+        "line": 6955,
+        "log": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/diagnosis/development-checker-v6.log",
+        "module": "replay/c2-final-v1-audit.ml",
+        "outcome": "COMPLETE",
+        "reported_module_cpu_seconds": 5.480231
+      }
+    ],
+    "reported_module_cpu_seconds_sum": 1056.6019680000004
+  },
+  "schema": "c2-available-cost-report-v2",
+  "stage": {
+    "checker_cap_seconds_per_invocation": 1800,
+    "checker_cpus_per_invocation": 1,
+    "checker_memory_cap_bytes_per_invocation": 3221225472,
+    "construction_cap_seconds": 10800,
+    "deadline": "2026-10-05T00:24:09.951522+00:00",
+    "elapsed_boundary": "Inclusive stage window overlaps checking and coordination; it is not active proof-construction CPU.",
+    "inclusive_stage_start_to_source_seal_seconds": 9703.073156,
+    "observed_capped_construction_window_seconds": 10800.0,
+    "observed_stage_elapsed_seconds": 11292.438726,
+    "post_construction_checking_policy": "Final source was sealed before the construction deadline; each separately measured checking invocation retains its own 1800-second cap. Elapsed observation beyond the deadline does not extend construction authorization.",
+    "source_seal_path": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/reusable-assurance-c2-v1/replay/c2-final-v1-seal.json",
+    "source_seal_sha256": "8f9e56c35e5a60f376356dc7abd242decbd788e1cb54d0e9f4ef23d8f1af9022",
+    "source_sealed_at": "2026-10-05T00:05:53.024678+00:00",
+    "source_sealed_within_construction_cap": true,
+    "start": "2026-10-04T21:24:09.951522+00:00"
+  },
+  "supplier_construction_reason": "Historical supplier construction was not fully measured; no retrospective invention.",
+  "supplier_construction_seconds": null,
+  "tokens": null
+}

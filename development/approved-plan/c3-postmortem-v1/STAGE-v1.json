@@ -1,0 +1,39 @@
+{
+  "schema": "c3-diagnostic-postmortem-stage-v1",
+  "experiment": "BP-20261005-C3-POSTMORTEM-V1",
+  "start_utc": "2026-10-05T12:21:54.672668+00:00",
+  "deadline_utc": "2026-10-05T13:06:54.672668+00:00",
+  "wall_budget_seconds": 2700,
+  "purpose": "Read-only bounded diagnosis of failed C3 held-out trial; no successor proof-completion stage",
+  "predecessor": "BP-20261005-HELD-OUT-TRANSFER-V1",
+  "preserved_outcome": "C / NOT_ACCEPTED",
+  "allowed": [
+    "Read recorded goals/context and existing source/dependency/audit evidence",
+    "Copy literal diagnostic slices with source identities into this separate workstream",
+    "Inspect existing public statement/definition types; no new target or bridge proof",
+    "Review extension-policy compliance and recommend separately authorized next stage"
+  ],
+  "forbidden": [
+    "Edit protected proof/model/contract/binary/candidate files or predecessor results",
+    "Execute previously unexecuted repair sources to complete obligations",
+    "New proof bridge, automation or target construction",
+    "Change caller assumptions/domain/target",
+    "C3 acceptance, new caller or automatic repair stage"
+  ],
+  "checker_limits": {
+    "maximum_invocations": 1,
+    "seconds": 1200,
+    "cpus": 1,
+    "memory_bytes": 3221225472,
+    "network": "none",
+    "scope": "Inspection/type/existing-theorem diagnostics only; optional; must fit wall budget"
+  },
+  "measurement": "Diagnostic command intervals and stage wall; exclusive agent reasoning/coordination, tokens and billing null unless exposed; no construction savings",
+  "human_review": "PENDING",
+  "current_status_pointer_before": {
+    "acceptance_input": false,
+    "schema": "current_status_pointer_v1",
+    "sha256": "193750904c4159baa64f4ed8954cd3a7665d828baf08b1ac51773c9b792a5496",
+    "snapshot": "results/status/snapshots/193750904c4159baa64f4ed8954cd3a7665d828baf08b1ac51773c9b792a5496.json"
+  }
+}

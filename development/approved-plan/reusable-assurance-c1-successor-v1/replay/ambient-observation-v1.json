@@ -1,0 +1,65 @@
+{
+  "after": {
+    "path": "development/approved-plan/reusable-assurance-c1-successor-v1/runs/supplier-diagnostic-20261004T185446Z-92c086fc/ambient-after-supplier-v1.json",
+    "sha256": "a29d7568d04c94a812f25602d08d26a9cbc1ef243ff2f914581c17e2ab4907ed"
+  },
+  "after_axiom_count": 3,
+  "all_ambient_named_theorems_enumerated": false,
+  "axioms_exactly_unchanged": true,
+  "before": {
+    "path": "development/approved-plan/reusable-assurance-c1-successor-v1/runs/supplier-diagnostic-20261004T185446Z-92c086fc/ambient-before-supplier-v1.json",
+    "sha256": "0fac130c671fbf1c44529c45195958f0d7b3d2f9928fc68bc1ee225e2ad87cfd"
+  },
+  "before_axiom_count": 3,
+  "conversion_closure_dependencies_observable": false,
+  "formal_dependency_isolation": false,
+  "schema": "c1-successor-ambient-automation-observation-v1",
+  "scope": "Observed ordered basic rewrite/congruence/conversion tables only; no kernel proof dependency claim",
+  "semantic_theorem_sensitivity": false,
+  "tables": {
+    "basic_congruences": {
+      "added_count": 0,
+      "added_rows": [],
+      "after_count": 8,
+      "before_count": 8,
+      "removed_count": 0,
+      "removed_rows": [],
+      "sequence_changed": false,
+      "visible_canonical_crypto_address_rows": [],
+      "visible_crypto_cleanse_family_rows": []
+    },
+    "basic_conversions": {
+      "added_count": 0,
+      "added_rows": [],
+      "after_count": 5,
+      "before_count": 5,
+      "removed_count": 0,
+      "removed_rows": [],
+      "sequence_changed": false,
+      "visible_canonical_crypto_address_rows": [],
+      "visible_crypto_cleanse_family_rows": []
+    },
+    "basic_rewrites": {
+      "added_count": 0,
+      "added_rows": [],
+      "after_count": 34,
+      "before_count": 34,
+      "removed_count": 0,
+      "removed_rows": [],
+      "sequence_changed": false,
+      "visible_canonical_crypto_address_rows": [],
+      "visible_crypto_cleanse_family_rows": []
+    }
+  },
+  "tactic_closure_dependencies_observable": false,
+  "utc": "2026-10-04T19:04:19.200567+00:00",
+  "visible_address_policy": [
+    "0x10241840",
+    "270800960"
+  ],
+  "visible_keyword_policy": [
+    "crypto",
+    "memcmp",
+    "cleanse"
+  ]
+}

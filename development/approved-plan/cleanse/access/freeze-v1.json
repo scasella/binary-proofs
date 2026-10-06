@@ -1,0 +1,20 @@
+{
+  "schema": "CLEANSE_ACCESS_PREFROOF_FREEZE_V1",
+  "timestamp_utc": "2026-09-30T16:25:58.268170+00:00",
+  "human_review": "PENDING",
+  "stage": "FROZEN_BEFORE_MAIN_PROOF_SEARCH",
+  "files": {
+    "definitions-v1.ml": "5047dd04f1cfa0f91f9239d33411b407095ea176810e8bb2665f6ca181b38a82",
+    "statements-v1.ml": "db4fe79ec8396dac81b92551fd0e55c8f5876ad2d962dfd90d818ca801103b86",
+    "REQUIREMENTS-v1.md": "9db674604610e51908588f2a8f10d442eb30ea5ec24dae3f9973487b0a8c21a8"
+  },
+  "imported_contract": "development/approved-plan/cleanse/spec-v2.ml",
+  "imported_contract_sha256": "770be48e0786e1ce1b50141a45e65e8bebd8ded14dfbea9d9ee9ec82a4a5326b",
+  "targets": [
+    "CLEANSE_ACCESS_BYTE_RETURN",
+    "CLEANSE_ACCESS_TAIL_RETURN",
+    "CLEANSE_ACCESS_BULK_RETURN",
+    "CLEANSE_ACCESS_ALIGNMENT_RETURN",
+    "CLEANSE_ACCESS_ALL_LENGTH"
+  ]
+}

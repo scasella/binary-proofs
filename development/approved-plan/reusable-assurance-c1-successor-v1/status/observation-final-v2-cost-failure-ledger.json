@@ -1,0 +1,1011 @@
+{
+  "acceptance_input": false,
+  "active_labor_seconds": null,
+  "actual_final_checks": {
+    "binding_probe_v1": {
+      "checker_wall_seconds": 416.81475670800137,
+      "elapsed_seconds": 420.40690633300255,
+      "exit_code": 1,
+      "timeout": false
+    },
+    "binding_probe_v2": {
+      "checker_wall_seconds": 418.5783675000057,
+      "elapsed_seconds": 422.06963075000385,
+      "exit_code": 1,
+      "timeout": false
+    },
+    "binding_probe_v3": {
+      "checker_wall_seconds": 404.43957962499553,
+      "elapsed_seconds": 408.10112083299464,
+      "exit_code": 1,
+      "timeout": false
+    },
+    "positive_v1": {
+      "caller_cpu_seconds": 39.432859,
+      "caller_wall_seconds": 39.63815220800461,
+      "checker_wall_seconds": 441.6339863329995,
+      "elapsed_seconds": 445.34931170899654,
+      "exit_code": 0,
+      "supplier_cpu_seconds": 355.683644,
+      "supplier_wall_seconds": 401.9958341249949,
+      "timeout": false
+    },
+    "positive_v2": {
+      "caller_cpu_seconds": 39.231771,
+      "caller_wall_seconds": 39.34102179200272,
+      "checker_wall_seconds": 424.0995609169986,
+      "elapsed_seconds": 427.42712383400067,
+      "exit_code": 0,
+      "supplier_cpu_seconds": 342.606864,
+      "supplier_wall_seconds": 384.7585391249959,
+      "timeout": false
+    },
+    "positive_v3": {
+      "caller_cpu_seconds": 42.482755,
+      "caller_wall_seconds": 43.10162612500426,
+      "checker_wall_seconds": 444.09270066599856,
+      "elapsed_seconds": 447.6796861659968,
+      "exit_code": 0,
+      "supplier_cpu_seconds": 352.761313,
+      "supplier_wall_seconds": 400.9910745409943,
+      "timeout": false
+    }
+  },
+  "command_event_prefix": {
+    "path": "development/approved-plan/reusable-assurance-c1-successor-v1/status/observation-final-v2-command-events.jsonl",
+    "sha256": "af70e8d1f28a8f84236fea7c13f12257de40156b8596af42c41ca333d32aea8d"
+  },
+  "completed_command_observations": [
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "predecessor-preservation-start-v1",
+      "kind": "integrity_inventory",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T18:42:27.214819+00:00",
+      "wall_seconds": 2.8305444159996114
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-entry-freeze-v1",
+      "kind": "stage_freeze",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T18:45:46.207518+00:00",
+      "wall_seconds": 0.04273270799603779
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-replay-prepare1",
+      "kind": "source",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T18:47:27.948368+00:00",
+      "wall_seconds": 0.04167458300071303
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-proof-agent-runner-read-v1",
+      "kind": "readonly-command-context",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T18:53:17.178057+00:00",
+      "wall_seconds": 0.0035255830007372424
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 1,
+      "id": "c1-runtime-ispecl-v1",
+      "kind": "DIAGNOSTIC_CHECK",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T18:54:07.330106+00:00",
+      "wall_seconds": 0.03959516699978849
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-probe-prepare1",
+      "kind": "source",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T18:54:54.525008+00:00",
+      "wall_seconds": 0.04371487499884097
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-freezer-prepare2",
+      "kind": "source",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T18:57:43.884252+00:00",
+      "wall_seconds": 0.03821087499818532
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-freezer-prepare3",
+      "kind": "source",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T18:59:53.557342+00:00",
+      "wall_seconds": 0.03840629100159276
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 1,
+      "id": "c1-runtime-ispecl-v2",
+      "kind": "DIAGNOSTIC_CHECK",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:01:53.334812+00:00",
+      "wall_seconds": 427.33218104099797
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "diagnostic-supplier-root-audit-v1",
+      "kind": "development_dependency_audit",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:02:54.539218+00:00",
+      "wall_seconds": 0.07152987500012387
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-ambient-audit1",
+      "kind": "inspection",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:04:19.203961+00:00",
+      "wall_seconds": 0.045936708003864624
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-replay-local-validation1",
+      "kind": "check",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:06:10.517696+00:00",
+      "wall_seconds": 1.0087853750010254
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-freezer-prepare4",
+      "kind": "source",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:08:49.432780+00:00",
+      "wall_seconds": 0.03985333400487434
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": null,
+      "id": "c1-successor-proof-attempt1-source-interval",
+      "kind": "source-writing",
+      "outcome": null,
+      "result": "SOURCE_ONLY_NOT_EXECUTED",
+      "utc": "2026-10-04T19:09:06.349761+00:00",
+      "wall_seconds": 0.0031563750017085113
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-proof-attempt1-write",
+      "kind": "source-construction",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:09:06.353741+00:00",
+      "wall_seconds": 0.041025208003702573
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 1,
+      "id": "c1-successor-attempt1-diff",
+      "kind": "source-diff-review",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:10:15.119697+00:00",
+      "wall_seconds": 0.013594541000202298
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": null,
+      "id": "annotated-specialization-diagnostic-v1",
+      "kind": "DIAGNOSTIC_SOURCE_CONSTRUCTION",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:13:06.981369+00:00",
+      "wall_seconds": null
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-binding-gate-prepare1",
+      "kind": "source",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:13:48.117076+00:00",
+      "wall_seconds": 0.04879754199646413
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-local-validation-prepare2",
+      "kind": "source",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:15:06.871818+00:00",
+      "wall_seconds": 0.039036500005749986
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-replay-local-validation2",
+      "kind": "check",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:15:07.994626+00:00",
+      "wall_seconds": 1.0333224589994643
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-type-whitespace-repair1",
+      "kind": "source",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:18:04.484768+00:00",
+      "wall_seconds": 0.03598187500028871
+    },
+    {
+      "checker_cpu_seconds": 0.115653,
+      "exit_code": null,
+      "id": "c1-annotated-specialization-v1",
+      "kind": "DIAGNOSTIC_CHECK",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:21:27.038915+00:00",
+      "wall_seconds": null
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-replay-source-seal1",
+      "kind": "check",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:21:43.448671+00:00",
+      "wall_seconds": 0.09298791699984577
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-replay-pins-seal3",
+      "kind": "check",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:22:44.861954+00:00",
+      "wall_seconds": 0.04571625000244239
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "diagnostic-v3-supplier-root-audit-v1",
+      "kind": "development_dependency_audit",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:23:21.980568+00:00",
+      "wall_seconds": 0.06923233400448225
+    },
+    {
+      "checker_cpu_seconds": 0.175715,
+      "exit_code": null,
+      "id": "c1-main1-development-check-v1",
+      "kind": "DEVELOPMENT_CHECK",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:23:23.995136+00:00",
+      "wall_seconds": null
+    },
+    {
+      "checker_cpu_seconds": 0.136116,
+      "exit_code": null,
+      "id": "c1-interface-prefix-diagnostic-v1",
+      "kind": "DIAGNOSTIC_CHECK",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:27:01.722225+00:00",
+      "wall_seconds": null
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": null,
+      "id": "c1-successor-proof-attempt2-source-interval",
+      "kind": "source-writing",
+      "outcome": null,
+      "result": "SOURCE_ONLY_NOT_EXECUTED",
+      "utc": "2026-10-04T19:27:36.673378+00:00",
+      "wall_seconds": 0.0021030419957241975
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-proof-attempt2-write",
+      "kind": "source-construction",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:27:36.676962+00:00",
+      "wall_seconds": 0.03372391700395383
+    },
+    {
+      "checker_cpu_seconds": 0.265609,
+      "exit_code": null,
+      "id": "c1-main2-development-check-v1",
+      "kind": "DEVELOPMENT_CHECK",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:29:35.223661+00:00",
+      "wall_seconds": null
+    },
+    {
+      "checker_cpu_seconds": 0.020615,
+      "exit_code": null,
+      "id": "c1-all-seven-development-audit-v1",
+      "kind": "DEVELOPMENT_AUDIT",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:31:03.201861+00:00",
+      "wall_seconds": null
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-runtime-ispecl-v3",
+      "kind": "DIAGNOSTIC_CHECK",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:31:06.957709+00:00",
+      "wall_seconds": 1166.9340632079984
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": null,
+      "id": "c1-successor-attempt2-dev-result-writing",
+      "kind": "result-record-writing",
+      "outcome": null,
+      "result": "DEVELOPMENT_CHECKED_METADATA_RECORDED",
+      "utc": "2026-10-04T19:31:13.655022+00:00",
+      "wall_seconds": 0.0030489589989883825
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-attempt2-dev-result",
+      "kind": "actual-proof-result-record",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:31:13.658300+00:00",
+      "wall_seconds": 0.03384087500307942
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-final-seal-v1",
+      "kind": "final_source_seal",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:31:21.141243+00:00",
+      "wall_seconds": 0.18821624999691267
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-proof-construction-freeze",
+      "kind": "construction-freeze-record",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:32:26.808421+00:00",
+      "wall_seconds": 0.031912166996335145
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-fresh-final-v1",
+      "kind": "fresh_final_check",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:39:17.480117+00:00",
+      "wall_seconds": 445.39865916599956
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-root-positive-gate-v1",
+      "kind": "acceptance_audit",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:42:37.639679+00:00",
+      "wall_seconds": 2.1102238340026815
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-targeted-controls-v1",
+      "kind": "integrity_controls",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:43:42.642943+00:00",
+      "wall_seconds": 2.8907927500040387
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-predecessor-preservation-v1",
+      "kind": "integrity_preservation",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:44:55.157316+00:00",
+      "wall_seconds": 4.542209415994876
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-interface-binding-probe-v1",
+      "kind": "interface_availability_control",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:50:47.396097+00:00",
+      "wall_seconds": 422.79827504100103
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 1,
+      "id": "c1-successor-root-full-acceptance-v1",
+      "kind": "acceptance_audit",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:51:15.121126+00:00",
+      "wall_seconds": 1.3224442920036381
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-negative-seal-repair1",
+      "kind": "source",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T19:58:34.544654+00:00",
+      "wall_seconds": 0.03984362500341376
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-final-seal-v2",
+      "kind": "final_source_seal",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:00:05.529668+00:00",
+      "wall_seconds": 0.16347566599870333
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-fresh-final-v2",
+      "kind": "fresh_final_check",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:07:32.313331+00:00",
+      "wall_seconds": 427.4713859580006
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-root-positive-gate-v2",
+      "kind": "acceptance_audit",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:08:24.884012+00:00",
+      "wall_seconds": 1.6995178750003106
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-observer-prepare1",
+      "kind": "source",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:08:55.468105+00:00",
+      "wall_seconds": 0.027793875000497792
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-targeted-controls-v2",
+      "kind": "integrity_controls",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:09:01.786568+00:00",
+      "wall_seconds": 2.4385611250036163
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-observer-prepare2",
+      "kind": "source",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:11:14.510639+00:00",
+      "wall_seconds": 0.03178354199917521
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-observer-source-seal1",
+      "kind": "check",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:12:01.849763+00:00",
+      "wall_seconds": 0.03965504199732095
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-interface-binding-probe-v2",
+      "kind": "interface_availability_control",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:16:06.421968+00:00",
+      "wall_seconds": 424.52810216699436
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 1,
+      "id": "c1-successor-root-full-acceptance-v2",
+      "kind": "acceptance_audit",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:17:16.281828+00:00",
+      "wall_seconds": 2.2112624590008636
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-isolated-negative-auditor-v1",
+      "kind": "evidence_context_diagnostic",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:22:57.367526+00:00",
+      "wall_seconds": 0.058236624994606245
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-negative-context-repair1",
+      "kind": "source",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:26:23.814900+00:00",
+      "wall_seconds": 0.041642874995886814
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-final-seal-v3",
+      "kind": "final_source_seal",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:27:57.223962+00:00",
+      "wall_seconds": 0.19391191699833144
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-observer-prepare3",
+      "kind": "source",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:29:49.522085+00:00",
+      "wall_seconds": 0.033841582997411024
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-observer-prepare4",
+      "kind": "source",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:32:34.182350+00:00",
+      "wall_seconds": 0.03437908299383707
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-fresh-final-v3",
+      "kind": "fresh_final_check",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:35:45.888258+00:00",
+      "wall_seconds": 447.7272644170007
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-root-positive-gate-v3",
+      "kind": "acceptance_audit",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:36:05.006414+00:00",
+      "wall_seconds": 1.8510872919941903
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-targeted-controls-v3",
+      "kind": "integrity_controls",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:36:38.006396+00:00",
+      "wall_seconds": 2.7185904159996426
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-interface-binding-probe-v3",
+      "kind": "interface_availability_control",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:43:28.739573+00:00",
+      "wall_seconds": 410.47044074999576
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-root-full-acceptance-v3",
+      "kind": "acceptance_audit",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:44:04.682387+00:00",
+      "wall_seconds": 3.086991042000591
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "c1-successor-predecessor-preservation-v2",
+      "kind": "integrity_preservation",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:44:59.369013+00:00",
+      "wall_seconds": 3.7317554589972133
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-observation-final1",
+      "kind": "observation_generation",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:46:04.214220+00:00",
+      "wall_seconds": 0.05150366599991685
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-status-dry-run1",
+      "kind": "observation_dry_run",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:46:31.635559+00:00",
+      "wall_seconds": 0.038494958003866486
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-observer-prepare5",
+      "kind": "observation_renderer_source",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:48:40.589952+00:00",
+      "wall_seconds": 0.02629066699591931
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-status-dry-run2",
+      "kind": "observation_dry_run",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:48:40.696474+00:00",
+      "wall_seconds": 0.035235082999861334
+    },
+    {
+      "checker_cpu_seconds": null,
+      "exit_code": 0,
+      "id": "successor-observer-command-repair1",
+      "kind": "observer_reporting_repair",
+      "outcome": null,
+      "result": null,
+      "utc": "2026-10-04T20:56:56.903350+00:00",
+      "wall_seconds": 0.029626875002577435
+    }
+  ],
+  "construction_windows": {
+    "disjoint_elapsed_seconds": 14006.242366999999,
+    "predecessor_seconds": 10800,
+    "successor_seconds": 3206.242367
+  },
+  "cost": null,
+  "exclusive_coordination_seconds": null,
+  "informational_nonproof_exit1": [
+    "c1-successor-attempt1-diff"
+  ],
+  "infrastructure_repair_intervals": {
+    "successor-negative-context-repair1": {
+      "end_utc": "2026-10-04T20:26:23.814900+00:00",
+      "inclusive_command_wall_seconds": 0.041642874995886814,
+      "scope": "Metadata source-generation command interval only; prior authoring/coordination is included in full stage elapsed, not exclusive labor",
+      "start_utc": "2026-10-04T20:26:23.772949+00:00"
+    },
+    "successor-negative-seal-repair1": {
+      "end_utc": "2026-10-04T19:58:34.544654+00:00",
+      "inclusive_command_wall_seconds": 0.03984362500341376,
+      "scope": "Metadata source-generation command interval only; prior authoring/coordination is included in full stage elapsed, not exclusive labor",
+      "start_utc": "2026-10-04T19:58:34.504642+00:00"
+    }
+  },
+  "model": null,
+  "observed_at_utc": "2026-10-04T20:56:56.999901+00:00",
+  "open_command_ids": [
+    "successor-observation-final2"
+  ],
+  "predecessor_command_ledger": {
+    "path": "development/approved-plan/reusable-assurance-v1/measurements/attempts-v1.jsonl",
+    "sha256": "34e43634db764c2f49bc5c71cacd24a5f328d02351bf6f747e01051a3a84ae56"
+  },
+  "predecessor_fresh_attempts": [
+    {
+      "OOMKilled": null,
+      "acceptance": false,
+      "checker_wall_seconds": null,
+      "classification": "GNU_TOOL_FORMAT_FAILURE_BEFORE_HOL",
+      "driver_elapsed_seconds": null,
+      "exit_code": 1,
+      "not_a_model_or_implementation_counterexample": true,
+      "proof_started": false,
+      "receipt": {
+        "path": "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v1/receipt.json",
+        "sha256": "dc3843f7d0cf6aaad1955a3ae2ed5ccae1257af663d834e61a673427db133916"
+      },
+      "run": "c1-fresh-final-v1",
+      "timeout": null,
+      "wrapper_wall_seconds": 2.2947552090045065
+    },
+    {
+      "OOMKilled": false,
+      "acceptance": false,
+      "checker_wall_seconds": 414.3679278330019,
+      "classification": "AUDIT_FOUNDATION_VARIABLE_MISSING_AFTER_TAIL_RECONSTRUCTION",
+      "driver_elapsed_seconds": 416.52820641600556,
+      "exit_code": 1,
+      "not_a_model_or_implementation_counterexample": true,
+      "proof_started": true,
+      "receipt": {
+        "path": "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/receipt.json",
+        "sha256": "263ce172606ea77a1b61474825356da58a5f8be74fe24270db2fcabd74b09532"
+      },
+      "run": "c1-fresh-final-v2",
+      "timeout": false,
+      "wrapper_wall_seconds": 416.6067686669994
+    },
+    {
+      "OOMKilled": false,
+      "acceptance": false,
+      "checker_wall_seconds": 412.31781566699647,
+      "classification": "MAIN3_ISPECL_TYPE_INSTANTIATION_FAILURE_AFTER_HELPER7",
+      "driver_elapsed_seconds": 414.7532986669976,
+      "exit_code": 1,
+      "not_a_model_or_implementation_counterexample": true,
+      "proof_started": true,
+      "receipt": {
+        "path": "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/receipt.json",
+        "sha256": "906f25c78721e2b4f28b5faac4dddfcafd0cad201259c1d45d5029c371342d83"
+      },
+      "run": "c1-fresh-final-v3",
+      "timeout": false,
+      "wrapper_wall_seconds": 414.8124709590047
+    }
+  ],
+  "predecessor_resource_failures": [
+    {
+      "classification": "OOM_KILLED_AND_WALL_LIMIT_VIOLATION",
+      "elapsed_seconds": 5879.788803042,
+      "evidence": {
+        "path": "development/approved-plan/reusable-assurance-v1/runs/c1-warm-20261004T142019Z-a407fa15/process-result.json",
+        "sha256": "0126968bc96db6feec075e5534ea9ba933d850f0633b494ffee04e96bb056a20"
+      },
+      "fresh_or_matched_acceptance": false,
+      "process_exit_code": 137,
+      "run": "c1-warm-20261004T142019Z-a407fa15",
+      "wall_timeout": null
+    },
+    {
+      "classification": "OOM_KILLED",
+      "elapsed_seconds": 568.5976936670049,
+      "evidence": {
+        "path": "development/approved-plan/reusable-assurance-v1/runs/c1-warm-20261004T160352Z-db3245c0/process-result.json",
+        "sha256": "6be48d3dae8528a013112e71ce6608681d89961858cfb387e66a870523e8c468"
+      },
+      "fresh_or_matched_acceptance": false,
+      "process_exit_code": 137,
+      "run": "c1-warm-20261004T160352Z-db3245c0",
+      "wall_timeout": false
+    },
+    {
+      "classification": "EXTERNAL_WALL_TIMEOUT_COORDINATION_INPUT_TRANSPORT_REQUESTED_HELPERS_NOT_EXECUTED",
+      "elapsed_seconds": 1800.074564583003,
+      "evidence": {
+        "path": "development/approved-plan/reusable-assurance-v1/runs/c1-warm-20261004T162118Z-546cbbf0/process-result.json",
+        "sha256": "edbc4a3ffe17786f7ea2d1892634748505c9c91d987d206796b2493c35adcbd1"
+      },
+      "fresh_or_matched_acceptance": false,
+      "process_exit_code": 137,
+      "proof_search_frame_failure_inferred": false,
+      "requested_composition_helpers_attempt1": "NOT_EXECUTED",
+      "run": "c1-warm-20261004T162118Z-546cbbf0",
+      "wall_timeout": true
+    },
+    {
+      "classification": "ENVIRONMENT_FAILURE_DOCKER_PERMISSION",
+      "elapsed_seconds": 0.11462762500013923,
+      "evidence": {
+        "path": "development/approved-plan/reusable-assurance-v1/runs/c1-warm-20261004T165205Z-e1c93f13/process-result.json",
+        "sha256": "3e9c8b18e6adcebfe961b961c0a2d2338bc554f855232b1ce66bca4e8c68bfed"
+      },
+      "fresh_or_matched_acceptance": false,
+      "process_exit_code": 1,
+      "run": "c1-warm-20261004T165205Z-e1c93f13",
+      "wall_timeout": false
+    },
+    {
+      "actual_error": "Fresh GNU byte/image crosscheck command failed",
+      "classification": "FRESH_GNU_X86_ELF_FORMAT_UNSUPPORTED_IN_ARM_IMAGE_BEFORE_HOL_NOT_PROOF_FAILURE",
+      "elapsed_seconds": null,
+      "evidence": {
+        "path": "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v1/receipt.json",
+        "sha256": "dc3843f7d0cf6aaad1955a3ae2ed5ccae1257af663d834e61a673427db133916"
+      },
+      "fresh_or_matched_acceptance": false,
+      "process_exit_code": null,
+      "proof_started": false,
+      "run": "c1-fresh-final-v1",
+      "wall_timeout": false
+    }
+  ],
+  "prefix_line_count": 138,
+  "prefix_scope": "Exact events observed before this generator END/future publication; no self-referential full-ledger hash",
+  "prefix_size_bytes": 153891,
+  "proof_source_attempts": [
+    {
+      "attempt": 1,
+      "result": "CHECKED_LITERAL_AUDIT_PASS_INTERFACE_FAILED_CONJ_TAC",
+      "source_sha256": "0aaeff720ab517c2d43be45d327bef8d040e6d9470225c31afaf53a2932dff08",
+      "unexecuted_after_failure": [
+        "NORMAL_CHECKED",
+        "RF_NORMAL_CHECKED",
+        "NORMAL_INTERFACE",
+        "COUNT"
+      ]
+    },
+    {
+      "attempt": 2,
+      "result": "ALL_SEVEN_LITERAL_HYP0_FREES0_STANDARD3_PASS",
+      "source_sha256": "367f2ab6ddb49e2753c1335246c467e3cf9564a44d586d9777795310900adad5"
+    }
+  ],
+  "rule": "Do not sum overlapping wall/source/coordination/checker/driver intervals or nested CPU subsets. Cold supplier CPU is not historical supplier construction cost.",
+  "schema": "c1-successor-cost-failure-observation-v1",
+  "successor_actual_failures": [
+    {
+      "id": "c1-runtime-ispecl-v1",
+      "outcome": "SETUP_FAILURE_BASE_PATH",
+      "preserved_log": "development/approved-plan/reusable-assurance-c1-successor-v1/diagnosis/launcher-v1.log"
+    },
+    {
+      "checker_seconds": 426.53523279199726,
+      "id": "c1-runtime-ispecl-v2",
+      "oom": false,
+      "outcome": "PRIMARY_SIGNATURE_DIAGNOSIS_COMPLETE_AUXILIARY_PRINTER_FAILURE",
+      "receipt": {
+        "path": "development/approved-plan/reusable-assurance-c1-successor-v1/diagnosis/runtime-signature-diagnosis-v1.json",
+        "sha256": "579688f8a7697f2321904cc03d7b33a73b46651fba02ce35c13ff9da795b004b"
+      },
+      "timeout": false
+    },
+    {
+      "checker_cpu_seconds": 0.175715,
+      "diagnostic": {
+        "path": "development/approved-plan/reusable-assurance-c1-successor-v1/diagnosis/development-diagnosis-v2.json",
+        "sha256": "103860406fbe2f5ee3b45dda127789813221253f6b5649c3eef589fed4f49794"
+      },
+      "id": "c1-main1-development-check-v1",
+      "outcome": "PRIMARY_TARGET_PASSED_INTERFACE_INNER_BETA_REDEX_CONJ_TAC_FAILURE",
+      "source": {
+        "path": "development/approved-plan/reusable-assurance-c1-successor-v1/proofs/proof-attempt1.ml",
+        "sha256": "0aaeff720ab517c2d43be45d327bef8d040e6d9470225c31afaf53a2932dff08"
+      }
+    },
+    {
+      "classification": "NEGATIVE_RECEIPT_SCHEMA_MISSING_SEAL_SHA256",
+      "id": "c1-successor-root-full-acceptance-v1",
+      "log": {
+        "path": "development/approved-plan/reusable-assurance-c1-successor-v1/replay/root-full-acceptance-v1.log",
+        "sha256": "aa82e94908cb09a2f9d981750d2bb4a4cc46528c2ee6087a0668c5526778fff8"
+      },
+      "proof_counterexample": false,
+      "repair": {
+        "path": "development/approved-plan/reusable-assurance-c1-successor-v1/replay/negative-seal-repair-v1.json",
+        "sha256": "175deaa547f9a856ade95203ac39ca571f0360919a18ee7803ea26cc53ad7a21"
+      }
+    },
+    {
+      "classification": "HOST_AUDITOR_POSITIVE_NEGATIVE_STAGE_MODULE_CACHE_CONTEXT",
+      "id": "c1-successor-root-full-acceptance-v2",
+      "log": {
+        "path": "development/approved-plan/reusable-assurance-c1-successor-v1/replay/root-full-acceptance-v2.log",
+        "sha256": "6a561b5487245266a5af9f9c961fb761462cfa62d4027b33428bb64c7e139900"
+      },
+      "proof_counterexample": false,
+      "repair": {
+        "path": "development/approved-plan/reusable-assurance-c1-successor-v1/replay/negative-context-repair-v1.json",
+        "sha256": "4814c402a91b0668f69ce36188ff7c50af679e5975ce19d2658e819dfa387081"
+      }
+    },
+    {
+      "checker_failure": false,
+      "classification": "OBSERVER_REPORTING_OBSOLETE_COMMAND_PATHS_AND_MISSING_MAP_LINK",
+      "detection": "Root review before canonical publication",
+      "evidence": {
+        "path": "development/approved-plan/reusable-assurance-c1-successor-v1/status/observer-command-correction-v1.json",
+        "sha256": "20d6827598a703c70e6a0211966de2e65ba575b764506a5a6c43e03106d6d140"
+      },
+      "id": "observer-command-provenance-v1",
+      "proof_attempt": false
+    },
+    {
+      "classification": "ORCHESTRATION_MODEL_ROLE_UNSUPPORTED_BEFORE_AGENT_START",
+      "evidence": {
+        "path": "development/approved-plan/reusable-assurance-c1-successor-v1/status/review-orchestration-v1.json",
+        "sha256": "cf55e5d207a68f9dac3b0a8d0861cf27d771e1e84a0581b60492d8c95b00c285"
+      },
+      "id": "observer-review-role-start",
+      "proof_attempt": false
+    }
+  ],
+  "successor_development_timings": {
+    "annotated_specialization_diagnostic_cpu_seconds": 0.115653,
+    "container_finished_utc": "2026-10-04T19:31:06.888597501Z",
+    "container_started_utc": "2026-10-04T19:11:48.367002132Z",
+    "interface_diagnostic_total_cpu_seconds": 0.136116,
+    "main2_actual_source_writing_end_utc": "2026-10-04T19:27:36.673378+00:00",
+    "main2_source_load_cpu_seconds": 0.265609,
+    "main2_source_writing_interval_seconds": 0.0021030419957241975,
+    "measurement_rule": "Union overlapping wall intervals; do not sum inclusive subsets",
+    "process_elapsed_seconds": 1161.3977132910004,
+    "seven_target_audit_cpu_seconds": 0.020615,
+    "source_interval_scope": "Actual source/map/change-record writes only, nested under broader construction command/stage; does not represent total reasoning effort.",
+    "supplier_marker_elapsed_seconds": 425.5629157910007,
+    "total_hol_cpu_scope": "Entire HOL process including foundation/supplier/dependencies/diagnostics/failed main1/successful main2/audits. Individual phase CPU figures are subsets; do not sum with this.",
+    "total_hol_cpu_seconds": 455.976671,
+    "wrapper_elapsed_seconds": 1166.9340632079984
+  },
+  "tokens": null,
+  "tooling_version_scope": "Freezer/driver source drafts and local fixtures are not independent proof attempts; actual command events retained"
+}

@@ -1,0 +1,394 @@
+{
+  "GNU_outputs_sha256": {
+    "disassembly": "74f5d278c69faefdc73f33f91e3db1c8303bd7e4ff0e54bc5d0d3aeb677802c3",
+    "readelf": "d719bb0f9b6de9d3c39f63305a7d99b6fc7080f897698fbd997e774dac92feca"
+  },
+  "architecture": "x86-64 little endian System V",
+  "artifact": "development/approved-plan/held-out-transfer-v1/c3/artifact/compiled-v1/c3.so",
+  "artifact_sha256": "f3736185c45667d23d80e235245da36d99bb79e6ee1b0c7f13725fa590c53b3f",
+  "caller": {
+    "bytes_hex": "4155415455534883ec084889fb4989f44889d5e8f8feffff4531ed85c0410f94c54889ee4889dfe8f4feffff4889ea4c89e64889dfe8d6feffff4585ed740a85c00f94c00fb6c0eb05b8020000004883c4085b5d415c415dc3",
+    "bytes_sha256": "6ae0f7d55d26fe28db565f41851ed6be840edfa6d5a00c2652c7276fc72c353e",
+    "elf_vaddr": 4384,
+    "file_offset": 4384,
+    "instructions": [
+      {
+        "bytes_hex": "4155",
+        "elf_vaddr": 4384,
+        "loaded_vaddr": 587206944,
+        "mnemonic": "push"
+      },
+      {
+        "bytes_hex": "4154",
+        "elf_vaddr": 4386,
+        "loaded_vaddr": 587206946,
+        "mnemonic": "push"
+      },
+      {
+        "bytes_hex": "55",
+        "elf_vaddr": 4388,
+        "loaded_vaddr": 587206948,
+        "mnemonic": "push"
+      },
+      {
+        "bytes_hex": "53",
+        "elf_vaddr": 4389,
+        "loaded_vaddr": 587206949,
+        "mnemonic": "push"
+      },
+      {
+        "bytes_hex": "4883ec08",
+        "elf_vaddr": 4390,
+        "loaded_vaddr": 587206950,
+        "mnemonic": "sub"
+      },
+      {
+        "bytes_hex": "4889fb",
+        "elf_vaddr": 4394,
+        "loaded_vaddr": 587206954,
+        "mnemonic": "mov"
+      },
+      {
+        "bytes_hex": "4989f4",
+        "elf_vaddr": 4397,
+        "loaded_vaddr": 587206957,
+        "mnemonic": "mov"
+      },
+      {
+        "bytes_hex": "4889d5",
+        "elf_vaddr": 4400,
+        "loaded_vaddr": 587206960,
+        "mnemonic": "mov"
+      },
+      {
+        "bytes_hex": "e8f8feffff",
+        "elf_vaddr": 4403,
+        "loaded_vaddr": 587206963,
+        "mnemonic": "call"
+      },
+      {
+        "bytes_hex": "4531ed",
+        "elf_vaddr": 4408,
+        "loaded_vaddr": 587206968,
+        "mnemonic": "xor"
+      },
+      {
+        "bytes_hex": "85c0",
+        "elf_vaddr": 4411,
+        "loaded_vaddr": 587206971,
+        "mnemonic": "test"
+      },
+      {
+        "bytes_hex": "410f94c5",
+        "elf_vaddr": 4413,
+        "loaded_vaddr": 587206973,
+        "mnemonic": "sete"
+      },
+      {
+        "bytes_hex": "4889ee",
+        "elf_vaddr": 4417,
+        "loaded_vaddr": 587206977,
+        "mnemonic": "mov"
+      },
+      {
+        "bytes_hex": "4889df",
+        "elf_vaddr": 4420,
+        "loaded_vaddr": 587206980,
+        "mnemonic": "mov"
+      },
+      {
+        "bytes_hex": "e8f4feffff",
+        "elf_vaddr": 4423,
+        "loaded_vaddr": 587206983,
+        "mnemonic": "call"
+      },
+      {
+        "bytes_hex": "4889ea",
+        "elf_vaddr": 4428,
+        "loaded_vaddr": 587206988,
+        "mnemonic": "mov"
+      },
+      {
+        "bytes_hex": "4c89e6",
+        "elf_vaddr": 4431,
+        "loaded_vaddr": 587206991,
+        "mnemonic": "mov"
+      },
+      {
+        "bytes_hex": "4889df",
+        "elf_vaddr": 4434,
+        "loaded_vaddr": 587206994,
+        "mnemonic": "mov"
+      },
+      {
+        "bytes_hex": "e8d6feffff",
+        "elf_vaddr": 4437,
+        "loaded_vaddr": 587206997,
+        "mnemonic": "call"
+      },
+      {
+        "bytes_hex": "4585ed",
+        "elf_vaddr": 4442,
+        "loaded_vaddr": 587207002,
+        "mnemonic": "test"
+      },
+      {
+        "bytes_hex": "740a",
+        "elf_vaddr": 4445,
+        "loaded_vaddr": 587207005,
+        "mnemonic": "je"
+      },
+      {
+        "bytes_hex": "85c0",
+        "elf_vaddr": 4447,
+        "loaded_vaddr": 587207007,
+        "mnemonic": "test"
+      },
+      {
+        "bytes_hex": "0f94c0",
+        "elf_vaddr": 4449,
+        "loaded_vaddr": 587207009,
+        "mnemonic": "sete"
+      },
+      {
+        "bytes_hex": "0fb6c0",
+        "elf_vaddr": 4452,
+        "loaded_vaddr": 587207012,
+        "mnemonic": "movzx"
+      },
+      {
+        "bytes_hex": "eb05",
+        "elf_vaddr": 4455,
+        "loaded_vaddr": 587207015,
+        "mnemonic": "jmp"
+      },
+      {
+        "bytes_hex": "b802000000",
+        "elf_vaddr": 4457,
+        "loaded_vaddr": 587207017,
+        "mnemonic": "mov"
+      },
+      {
+        "bytes_hex": "4883c408",
+        "elf_vaddr": 4462,
+        "loaded_vaddr": 587207022,
+        "mnemonic": "add"
+      },
+      {
+        "bytes_hex": "5b",
+        "elf_vaddr": 4466,
+        "loaded_vaddr": 587207026,
+        "mnemonic": "pop"
+      },
+      {
+        "bytes_hex": "5d",
+        "elf_vaddr": 4467,
+        "loaded_vaddr": 587207027,
+        "mnemonic": "pop"
+      },
+      {
+        "bytes_hex": "415c",
+        "elf_vaddr": 4468,
+        "loaded_vaddr": 587207028,
+        "mnemonic": "pop"
+      },
+      {
+        "bytes_hex": "415d",
+        "elf_vaddr": 4470,
+        "loaded_vaddr": 587207030,
+        "mnemonic": "pop"
+      },
+      {
+        "bytes_hex": "c3",
+        "elf_vaddr": 4472,
+        "loaded_vaddr": 587207032,
+        "mnemonic": "ret"
+      }
+    ],
+    "loaded_address": 587206944,
+    "size": 89,
+    "symbol": "c3_compare_clear_compare"
+  },
+  "formal_spec_connection": "PENDING_FINAL_LITERAL_FREEZE",
+  "image": {
+    "execute_pages": [
+      [
+        587206656,
+        587210752
+      ]
+    ],
+    "immutable_file_backed_intervals": [
+      [
+        587202560,
+        587203856
+      ],
+      [
+        587206656,
+        587207045
+      ],
+      [
+        587210752,
+        587210756
+      ]
+    ],
+    "initialized_rw_intervals": [
+      [
+        587218344,
+        587218960
+      ]
+    ],
+    "mapped_pages": [
+      [
+        587202560,
+        587223040
+      ]
+    ],
+    "write_pages": [
+      [
+        587218944,
+        587223040
+      ]
+    ]
+  },
+  "independent_sections": [
+    {
+      "name": ".text",
+      "sha256": "9dde19cfb740d9711f104db1be0d9796818ceff5796fa523e05a93f4194436e8",
+      "size": 281
+    },
+    {
+      "name": ".plt",
+      "sha256": "928433cef64ae27988046f464101f2ca903b67ebe6bb70d1300c439928a19ad9",
+      "size": 48
+    }
+  ],
+  "linkage": [
+    {
+      "call_elf_vaddr": 4403,
+      "call_loaded_address": 587206963,
+      "continuation_elf_vaddr": 4408,
+      "continuation_loaded_address": 587206968,
+      "declared_supplier_target": 270800960,
+      "got_elf_vaddr": 16336,
+      "got_loaded_address": 587218896,
+      "plt_bytes_hex": "ff259a2f00006800000000e9e0ffffff",
+      "plt_elf_vaddr": 4144,
+      "plt_file_offset": 4144,
+      "plt_loaded_address": 587206704,
+      "plt_prefix_hex": "ff259a2f0000",
+      "relocation": {
+        "addend": 0,
+        "offset": 16336,
+        "section": ".rela.plt",
+        "symbol": "CRYPTO_memcmp",
+        "symbol_index": 2,
+        "type": 7
+      },
+      "symbol": "CRYPTO_memcmp",
+      "symbol_version": "OPENSSL_3.0.0"
+    },
+    {
+      "call_elf_vaddr": 4423,
+      "call_loaded_address": 587206983,
+      "continuation_elf_vaddr": 4428,
+      "continuation_loaded_address": 587206988,
+      "declared_supplier_target": 270800848,
+      "got_elf_vaddr": 16344,
+      "got_loaded_address": 587218904,
+      "plt_bytes_hex": "ff25922f00006801000000e9d0ffffff",
+      "plt_elf_vaddr": 4160,
+      "plt_file_offset": 4160,
+      "plt_loaded_address": 587206720,
+      "plt_prefix_hex": "ff25922f0000",
+      "relocation": {
+        "addend": 0,
+        "offset": 16344,
+        "section": ".rela.plt",
+        "symbol": "OPENSSL_cleanse",
+        "symbol_index": 6,
+        "type": 7
+      },
+      "symbol": "OPENSSL_cleanse",
+      "symbol_version": "OPENSSL_3.0.0"
+    },
+    {
+      "call_elf_vaddr": 4437,
+      "call_loaded_address": 587206997,
+      "continuation_elf_vaddr": 4442,
+      "continuation_loaded_address": 587207002,
+      "declared_supplier_target": 270800960,
+      "got_elf_vaddr": 16336,
+      "got_loaded_address": 587218896,
+      "plt_bytes_hex": "ff259a2f00006800000000e9e0ffffff",
+      "plt_elf_vaddr": 4144,
+      "plt_file_offset": 4144,
+      "plt_loaded_address": 587206704,
+      "plt_prefix_hex": "ff259a2f0000",
+      "relocation": {
+        "addend": 0,
+        "offset": 16336,
+        "section": ".rela.plt",
+        "symbol": "CRYPTO_memcmp",
+        "symbol_index": 2,
+        "type": 7
+      },
+      "symbol": "CRYPTO_memcmp",
+      "symbol_version": "OPENSSL_3.0.0"
+    }
+  ],
+  "load_bias": 587202560,
+  "loadable_segments": [
+    {
+      "align": 4096,
+      "file_offset": 0,
+      "file_size": 1296,
+      "flags": 4,
+      "memory_size": 1296,
+      "paddr": 0,
+      "vaddr": 0
+    },
+    {
+      "align": 4096,
+      "file_offset": 4096,
+      "file_size": 389,
+      "flags": 5,
+      "memory_size": 389,
+      "paddr": 4096,
+      "vaddr": 4096
+    },
+    {
+      "align": 4096,
+      "file_offset": 8192,
+      "file_size": 4,
+      "flags": 4,
+      "memory_size": 4,
+      "paddr": 8192,
+      "vaddr": 8192
+    },
+    {
+      "align": 4096,
+      "file_offset": 11688,
+      "file_size": 608,
+      "flags": 6,
+      "memory_size": 616,
+      "paddr": 15784,
+      "vaddr": 15784
+    }
+  ],
+  "parser_sha256": "6f35da09dea20999a64f5698618b369822c3eac60ebe7d6b161021206f163cff",
+  "relro": {
+    "align": 1,
+    "file_offset": 11688,
+    "file_size": 600,
+    "flags": 4,
+    "memory_size": 600,
+    "paddr": 15784,
+    "permissions": "R",
+    "type": 1685382482,
+    "vaddr": 15784
+  },
+  "schema": "c3-independent-elf-gnu-acquisition-discovery-v1",
+  "status": "PASS_EXTRACTION_CROSSCHECK_NOT_FORMAL_PROOF",
+  "trusted_boundary": "Python/GNU parser/extraction and modeled loading, not formal parser or architectural correspondence",
+  "utc": "2026-10-05T01:19:53.507528+00:00"
+}

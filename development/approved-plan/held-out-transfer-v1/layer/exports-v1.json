@@ -1,0 +1,554 @@
+{
+  "axioms": [
+    "INFINITY_AX",
+    "SELECT_AX",
+    "ETA_AX"
+  ],
+  "construction_exposure": "Candidate worker inspected C0/C1/C2 and supplier recipes; exact C3 remains unselected",
+  "created_utc": "2026-10-05T00:49:40.740303+00:00",
+  "formal_export_count": 34,
+  "formal_exports": [
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_SUPPLIER_PUBLIC",
+      "derivation_dependencies": [
+        "complete sealed E2/E3 supplier proof reconstruction",
+        "frozen public definitions"
+      ],
+      "expected_binding": "bp_e3_crypto_public_caller_policy_statement",
+      "export": "BP_E3_CRYPTO_PUBLIC_CALLER_POLICY",
+      "literal_statement": "!file_bytes initial_rw padding stackpointer ra p q n m rp xp ordinary s a.\n   bp_e2_crypto_public_pre file_bytes initial_rw padding stackpointer ra p q n\n     m rp xp ordinary (s,a)\n   ==> assurance_checked_run (bp_assurance_call_steps n)\n     (bp_assurance_call_post 0x10241840 stackpointer ra p q n\n       (read events s) m s)\n     (\\k source target.\n       assurance_zero_step\n         (bp_e2_crypto_allowed_read rp ordinary p q n stackpointer)\n         bp_e2_crypto_allowed_write\n         (bp_e2_crypto_allowed_fetch xp ordinary 0x10241840)\n         k source target /\\ abi_all_decodes_caller_scalar source) s",
+      "source_sha256": "aee7687bf64b6fc24a26ad79411dc2a6bc73cb16fffbc78f53589d6533c0641b",
+      "statement_source": "development/approved-plan/call-binding/near-indirect-v1/callee-requalification-v1/statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_SUPPLIER_PUBLIC",
+      "derivation_dependencies": [
+        "complete sealed E2/E3 supplier proof reconstruction",
+        "frozen public definitions"
+      ],
+      "expected_binding": "bp_e3_crypto_public_caller_interface_statement",
+      "export": "BP_E3_CRYPTO_PUBLIC_CALLER_INTERFACE",
+      "literal_statement": "!file_bytes initial_rw padding stackpointer ra p q n m rp xp ordinary s a.\n   bp_e2_crypto_public_pre file_bytes initial_rw padding stackpointer ra p q n\n     m rp xp ordinary (s,a)\n   ==> eventually_n abi_caller_scalar_extended_step (bp_assurance_call_steps n)\n     (bp_e2_crypto_public_post file_bytes initial_rw padding\n       stackpointer ra p q n (read events s) m s a) (s,a)",
+      "source_sha256": "aee7687bf64b6fc24a26ad79411dc2a6bc73cb16fffbc78f53589d6533c0641b",
+      "statement_source": "development/approved-plan/call-binding/near-indirect-v1/callee-requalification-v1/statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_SUPPLIER_PUBLIC",
+      "derivation_dependencies": [
+        "complete sealed E2/E3 supplier proof reconstruction",
+        "frozen public definitions"
+      ],
+      "expected_binding": "bp_e3_cleanse_public_caller_policy_statement",
+      "export": "BP_E3_CLEANSE_PUBLIC_CALLER_POLICY",
+      "literal_statement": "!file_bytes initial_rw padding stackpointer ra p n m rp wp xp ordinary s a.\n   bp_e2_cleanse_public_pre file_bytes initial_rw padding stackpointer ra p n\n     m rp wp xp ordinary (s,a)\n   ==> assurance_checked_run (cleanse_functional_steps p n)\n     (bp_e2_cleanse_call_post 0x102417d0 stackpointer ra p n m s)\n     (\\k source target.\n       cleanse_access_covered_step 0x102417d0\n         (bp_e2_cleanse_allowed_read rp ordinary stackpointer)\n         (bp_e2_cleanse_allowed_write wp ordinary p n)\n         (bp_e2_cleanse_allowed_fetch xp ordinary 0x102417d0)\n         k source target /\\ abi_all_decodes_caller_scalar source) s",
+      "source_sha256": "aee7687bf64b6fc24a26ad79411dc2a6bc73cb16fffbc78f53589d6533c0641b",
+      "statement_source": "development/approved-plan/call-binding/near-indirect-v1/callee-requalification-v1/statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_SUPPLIER_PUBLIC",
+      "derivation_dependencies": [
+        "complete sealed E2/E3 supplier proof reconstruction",
+        "frozen public definitions"
+      ],
+      "expected_binding": "bp_e3_cleanse_public_caller_interface_statement",
+      "export": "BP_E3_CLEANSE_PUBLIC_CALLER_INTERFACE",
+      "literal_statement": "!file_bytes initial_rw padding stackpointer ra p n m rp wp xp ordinary s a.\n   bp_e2_cleanse_public_pre file_bytes initial_rw padding stackpointer ra p n\n     m rp wp xp ordinary (s,a)\n   ==> eventually_n abi_caller_scalar_extended_step (cleanse_functional_steps p n)\n     (bp_e2_cleanse_public_post stackpointer ra p n m s a) (s,a)",
+      "source_sha256": "aee7687bf64b6fc24a26ad79411dc2a6bc73cb16fffbc78f53589d6533c0641b",
+      "statement_source": "development/approved-plan/call-binding/near-indirect-v1/callee-requalification-v1/statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_GENERIC",
+      "derivation_dependencies": [
+        "assurance_checked_run",
+        "natural-number induction",
+        "kernel logic"
+      ],
+      "expected_binding": "ra_checked_run_append_statement",
+      "export": "RA_CHECKED_RUN_APPEND",
+      "literal_statement": "!m n P C (s:x86state).\n    assurance_checked_run m (\\t. assurance_checked_run n P C t)\n      (\\k source target. C (n+k) source target) s\n    ==> assurance_checked_run (m+n) P C s",
+      "source_sha256": "5c7f95bc3271f463cfba297ce9f138c53547c1317675e523804ed9a88cb240b6",
+      "statement_source": "development/approved-plan/reusable-assurance-v1/generic/checked-run-statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_GENERIC",
+      "derivation_dependencies": [
+        "assurance_checked_run",
+        "natural-number induction",
+        "kernel logic"
+      ],
+      "expected_binding": "ra_checked_run_post_mono_statement",
+      "export": "RA_CHECKED_RUN_POST_MONO",
+      "literal_statement": "!n P Q C (s:x86state).\n    (!t. P t ==> Q t) /\\ assurance_checked_run n P C s\n    ==> assurance_checked_run n Q C s",
+      "source_sha256": "5c7f95bc3271f463cfba297ce9f138c53547c1317675e523804ed9a88cb240b6",
+      "statement_source": "development/approved-plan/reusable-assurance-v1/generic/checked-run-statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_GENERIC",
+      "derivation_dependencies": [
+        "assurance_checked_run",
+        "natural-number induction",
+        "kernel logic"
+      ],
+      "expected_binding": "ra_checked_run_policy_mono_statement",
+      "export": "RA_CHECKED_RUN_POLICY_MONO",
+      "literal_statement": "!n P C D (s:x86state).\n    (!k source target. C k source target ==> D k source target) /\\\n    assurance_checked_run n P C s\n    ==> assurance_checked_run n P D s",
+      "source_sha256": "5c7f95bc3271f463cfba297ce9f138c53547c1317675e523804ed9a88cb240b6",
+      "statement_source": "development/approved-plan/reusable-assurance-v1/generic/checked-run-statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_GENERIC",
+      "derivation_dependencies": [
+        "RA_CHECKED_RUN_APPEND",
+        "RA_CHECKED_RUN_POST_MONO",
+        "RA_CHECKED_RUN_POLICY_MONO"
+      ],
+      "expected_binding": "ra_checked_run_three_segment_statement",
+      "export": "RA_CHECKED_RUN_THREE_SEGMENT",
+      "literal_statement": "!a b c H A B P C1 C2 C3 C (s:x86state).\n    assurance_checked_run a H C1 s /\\\n    (!t. H t ==> A t) /\\\n    (!t. A t ==> assurance_checked_run b B C2 t) /\\\n    (!t. B t ==> assurance_checked_run c P C3 t) /\\\n    (!k source target. C1 k source target ==> C ((b+c)+k) source target) /\\\n    (!k source target. C2 k source target ==> C (c+k) source target) /\\\n    (!k source target. C3 k source target ==> C k source target)\n    ==> assurance_checked_run (a+(b+c)) P C s",
+      "source_sha256": "dec1df06c234c205f57cbd8c9e3443b4feb8b67aba7c177609bf3ccb7f2bb9b8",
+      "statement_source": "development/approved-plan/reusable-assurance-v1/generic/composition-statements-v2.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_GENERIC",
+      "derivation_dependencies": [
+        "assurance_span_ok",
+        "assurance_region",
+        "arithmetic"
+      ],
+      "expected_binding": "r1_secret_span_mono_statement",
+      "export": "R1_SECRET_SPAN_MONO",
+      "literal_statement": "!P Q a n.\n    (!addr. P addr ==> Q addr) /\\ assurance_span_ok P a n\n    ==> assurance_span_ok Q a n",
+      "source_sha256": "357610d80a55384da575f47b328bb49190db4630a2c001198ee471747967bb6f",
+      "statement_source": "development/approved-plan/clients-e3/secret-v1/generic-span-statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_GENERIC",
+      "derivation_dependencies": [
+        "assurance_span_ok",
+        "assurance_region",
+        "arithmetic"
+      ],
+      "expected_binding": "r1_secret_span_subspan_statement",
+      "export": "R1_SECRET_SPAN_SUBSPAN",
+      "literal_statement": "!P a n off len.\n    assurance_span_ok P a n /\\ off+len<=n\n    ==> assurance_span_ok P (a+off) len",
+      "source_sha256": "357610d80a55384da575f47b328bb49190db4630a2c001198ee471747967bb6f",
+      "statement_source": "development/approved-plan/clients-e3/secret-v1/generic-span-statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_GENERIC",
+      "derivation_dependencies": [
+        "assurance_span_ok",
+        "assurance_region",
+        "arithmetic"
+      ],
+      "expected_binding": "r1_secret_span_region_statement",
+      "export": "R1_SECRET_SPAN_REGION",
+      "literal_statement": "!P (p:int64) n.\n    assurance_span_ok P (val p) n\n    ==> assurance_span_ok (\\addr. P addr /\\ assurance_region p n addr)\n          (val p) n",
+      "source_sha256": "357610d80a55384da575f47b328bb49190db4630a2c001198ee471747967bb6f",
+      "statement_source": "development/approved-plan/clients-e3/secret-v1/generic-span-statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_GENERIC",
+      "derivation_dependencies": [
+        "orthogonal_components",
+        "MAYCHANGE",
+        "component relation algebra"
+      ],
+      "expected_binding": "bp_public_four_frame_preservation_statement",
+      "export": "R1_SECRET_FOUR_FRAME_PRESERVATION",
+      "literal_statement": "!c:(S,V)component cs1:((S,A)component)list\n    cs2:((S,B)component)list cs3:((S,C)component)list\n    cs4:((S,D)component)list s t.\n    ALL (orthogonal_components c) cs1 /\\\n    ALL (orthogonal_components c) cs2 /\\\n    ALL (orthogonal_components c) cs3 /\\\n    ALL (orthogonal_components c) cs4 /\\\n    (MAYCHANGE cs1 ,, MAYCHANGE cs2 ,,\n     MAYCHANGE cs3 ,, MAYCHANGE cs4) s t\n    ==> read c t = read c s",
+      "source_sha256": "db1427c8264dbc34f051ce1b14deb73a8b131859122f29dcc134f03d10926cf4",
+      "statement_source": "development/approved-plan/clients-e3/secret-v1/generic-four-frame-statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_GENERIC",
+      "derivation_dependencies": [
+        "frozen E5 normal/RF definitions",
+        "abi_all_decodes_caller_scalar",
+        "generic scalar flag preservation"
+      ],
+      "expected_binding": "e5_checked_run_normal_statement",
+      "export": "E5_CHECKED_RUN_NORMAL",
+      "literal_statement": "!n P C s:x86state.\n (!k source target. C k source target ==> abi_all_decodes_caller_scalar source) /\\\n assurance_checked_run n P C s /\\ e5_normal_flags s\n ==> assurance_checked_run n (\\t. P t /\\ e5_normal_flags t)\n       (e5_normal_step_policy C) s",
+      "source_sha256": "a0f6b924a4a97a2c8d6cc239ca56bfeed0113b5bade39acc48279c7f4be638b4",
+      "statement_source": "development/approved-plan/reusable-assurance-v1/generic/e5-statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_GENERIC",
+      "derivation_dependencies": [
+        "frozen E5 normal/RF definitions",
+        "abi_all_decodes_caller_scalar",
+        "generic scalar flag preservation"
+      ],
+      "expected_binding": "e5_rf_checked_run_normal_statement",
+      "export": "E5_RF_CHECKED_RUN_NORMAL",
+      "literal_statement": "!n P C s:x86state.\n (!k source target. C k source target ==> abi_all_decodes_caller_scalar source) /\\\n assurance_checked_run n P C s /\\ e5_normal_flags s\n ==> e5_rf_checked_run n (\\t. P t /\\ e5_normal_flags t)\n       (e5_normal_step_policy C) s",
+      "source_sha256": "a0f6b924a4a97a2c8d6cc239ca56bfeed0113b5bade39acc48279c7f4be638b4",
+      "statement_source": "development/approved-plan/reusable-assurance-v1/generic/e5-statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_GENERIC",
+      "derivation_dependencies": [
+        "frozen E5 normal/RF definitions",
+        "abi_all_decodes_caller_scalar",
+        "generic scalar flag preservation"
+      ],
+      "expected_binding": "e5_normal_checked_run_extended_lift_statement",
+      "export": "E5_NORMAL_CHECKED_RUN_EXTENDED_LIFT",
+      "literal_statement": "!n P C s:x86state a:abi_omitted_state.\n (!k source target. C k source target ==> abi_all_decodes_caller_scalar source) /\\\n assurance_checked_run n P C s /\\ e5_normal_flags s\n ==> eventually_n e5_rf_retired_extended_step n\n       (\\t. P(FST t) /\\ e5_normal_flags(FST t) /\\ SND t=a /\\\n            abi_required_controls_preserved a (SND t)) (s,a)",
+      "source_sha256": "a0f6b924a4a97a2c8d6cc239ca56bfeed0113b5bade39acc48279c7f4be638b4",
+      "statement_source": "development/approved-plan/reusable-assurance-v1/generic/e5-statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_GENERIC",
+      "derivation_dependencies": [
+        "frozen E5 normal/RF definitions",
+        "abi_all_decodes_caller_scalar",
+        "generic scalar flag preservation"
+      ],
+      "expected_binding": "e5_rf_retired_step_normal_eq_statement",
+      "export": "E5_RF_RETIRED_STEP_NORMAL_EQ",
+      "literal_statement": "!s t:x86state. e5_normal_flags s /\\ abi_all_decodes_caller_scalar s\n ==> (e5_rf_retired_step s t <=> x86 s t)",
+      "source_sha256": "a0f6b924a4a97a2c8d6cc239ca56bfeed0113b5bade39acc48279c7f4be638b4",
+      "statement_source": "development/approved-plan/reusable-assurance-v1/generic/e5-statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_GENERIC",
+      "derivation_dependencies": [
+        "frozen E5 normal/RF definitions",
+        "abi_all_decodes_caller_scalar",
+        "generic scalar flag preservation"
+      ],
+      "expected_binding": "e5_rf_retired_extended_normal_eq_statement",
+      "export": "E5_RF_RETIRED_EXTENDED_NORMAL_EQ",
+      "literal_statement": "!s t:x86state a b:abi_omitted_state.\n e5_normal_flags s /\\ abi_all_decodes_caller_scalar s\n ==> (e5_rf_retired_extended_step (s,a) (t,b) <=>\n      abi_caller_scalar_extended_step (s,a) (t,b))",
+      "source_sha256": "a0f6b924a4a97a2c8d6cc239ca56bfeed0113b5bade39acc48279c7f4be638b4",
+      "statement_source": "development/approved-plan/reusable-assurance-v1/generic/e5-statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_GENERIC",
+      "derivation_dependencies": [
+        "frozen E5 normal/RF definitions",
+        "abi_all_decodes_caller_scalar",
+        "generic scalar flag preservation"
+      ],
+      "expected_binding": "e5_qualified_step_normal_statement",
+      "export": "E5_QUALIFIED_STEP_NORMAL",
+      "literal_statement": "!s t:x86state. e5_normal_flags s /\\\n abi_all_decodes_caller_scalar s /\\ x86 s t ==> e5_normal_flags t",
+      "source_sha256": "a0f6b924a4a97a2c8d6cc239ca56bfeed0113b5bade39acc48279c7f4be638b4",
+      "statement_source": "development/approved-plan/reusable-assurance-v1/generic/e5-statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "EXTRACTED_ACCEPTED_C2_ADDRESS_FREE_PREPARATION",
+      "derivation_dependencies": [
+        "uarch_event_INDUCT",
+        "assurance_event_policy",
+        "R1_SECRET_SPAN_MONO"
+      ],
+      "expected_binding": "ht_policy_event_mono_statement",
+      "export": "HT_POLICY_EVENT_MONO",
+      "literal_statement": "!rp0 wp0 rp wp e:uarch_event.\n    (!addr. rp0 addr ==> rp addr) /\\\n    (!addr. wp0 addr ==> wp addr) /\\\n    assurance_event_policy rp0 wp0 e\n    ==> assurance_event_policy rp wp e",
+      "source_sha256": "381095176f1140ce243a34665268a3cec1a78b3b43aba3587b01a4fa0848835b",
+      "statement_source": "development/approved-plan/held-out-transfer-v1/layer/statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "EXTRACTED_ACCEPTED_C2_ADDRESS_FREE_PREPARATION",
+      "derivation_dependencies": [
+        "list induction",
+        "ALL"
+      ],
+      "expected_binding": "ht_policy_all_mono_statement",
+      "export": "HT_POLICY_ALL_MONO",
+      "literal_statement": "!P Q d:uarch_event list.\n    (!e. P e ==> Q e) /\\ ALL P d ==> ALL Q d",
+      "source_sha256": "381095176f1140ce243a34665268a3cec1a78b3b43aba3587b01a4fa0848835b",
+      "statement_source": "development/approved-plan/held-out-transfer-v1/layer/statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "EXTRACTED_ACCEPTED_C2_ADDRESS_FREE_PREPARATION",
+      "derivation_dependencies": [
+        "assurance_step_policy",
+        "HT_POLICY_EVENT_MONO",
+        "HT_POLICY_ALL_MONO",
+        "R1_SECRET_SPAN_MONO"
+      ],
+      "expected_binding": "ht_policy_step_mono_statement",
+      "export": "HT_POLICY_STEP_MONO",
+      "literal_statement": "!rp0 wp0 xp0 rp wp xp source target:x86state.\n    (!addr. rp0 addr ==> rp addr) /\\\n    (!addr. wp0 addr ==> wp addr) /\\\n    (!addr. xp0 addr ==> xp addr) /\\\n    assurance_step_policy rp0 wp0 xp0 source target\n    ==> assurance_step_policy rp wp xp source target",
+      "source_sha256": "381095176f1140ce243a34665268a3cec1a78b3b43aba3587b01a4fa0848835b",
+      "statement_source": "development/approved-plan/held-out-transfer-v1/layer/statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "EXTRACTED_ACCEPTED_C2_ADDRESS_FREE_PREPARATION",
+      "derivation_dependencies": [
+        "R1_SECRET_SPAN_MONO",
+        "R1_SECRET_SPAN_REGION"
+      ],
+      "expected_binding": "ht_policy_span_statement",
+      "export": "HT_POLICY_SPAN",
+      "literal_statement": "!P Q (p:int64) n. (!addr. P addr /\\ assurance_region p n addr ==> Q addr) /\\ assurance_span_ok P (val p) n ==> assurance_span_ok Q (val p) n",
+      "source_sha256": "381095176f1140ce243a34665268a3cec1a78b3b43aba3587b01a4fa0848835b",
+      "statement_source": "development/approved-plan/held-out-transfer-v1/layer/statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "EXTRACTED_ACCEPTED_C2_ADDRESS_FREE_PREPARATION",
+      "derivation_dependencies": [
+        "assurance_span_ok",
+        "assurance_region",
+        "arithmetic"
+      ],
+      "expected_binding": "ht_span_point_statement",
+      "export": "HT_SPAN_POINT",
+      "literal_statement": "!P (p:int64) n addr. assurance_span_ok P (val p) n /\\ assurance_region p n addr ==> P addr",
+      "source_sha256": "381095176f1140ce243a34665268a3cec1a78b3b43aba3587b01a4fa0848835b",
+      "statement_source": "development/approved-plan/held-out-transfer-v1/layer/statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "EXTRACTED_ACCEPTED_C2_ADDRESS_FREE_PREPARATION",
+      "derivation_dependencies": [
+        "assurance_region",
+        "NONOVERLAPPING_QFREE",
+        "VAL_WORD_SUB_CASES"
+      ],
+      "expected_binding": "ht_region_nonoverlapping_statement",
+      "export": "HT_REGION_NONOVERLAPPING",
+      "literal_statement": "!p q n k. val(p:int64)+n <= 2 EXP 64 /\\ val(q:int64)+k <= 2 EXP 64 /\\ (!addr. ~(assurance_region p n addr /\\ assurance_region q k addr)) ==> nonoverlapping(p,n)(q,k)",
+      "source_sha256": "381095176f1140ce243a34665268a3cec1a78b3b43aba3587b01a4fa0848835b",
+      "statement_source": "development/approved-plan/held-out-transfer-v1/layer/statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "EXTRACTED_ACCEPTED_C2_ADDRESS_FREE_PREPARATION",
+      "derivation_dependencies": [
+        "assurance_span_ok",
+        "assurance_region",
+        "VAL_WORD_ADD",
+        "arithmetic"
+      ],
+      "expected_binding": "ht_span_word_add_region_statement",
+      "export": "HT_SPAN_WORD_ADD_REGION",
+      "literal_statement": "!P p:int64 n i. assurance_span_ok P (val p) n /\\ i<n ==> assurance_region p n (val(word_add p (word i)))",
+      "source_sha256": "381095176f1140ce243a34665268a3cec1a78b3b43aba3587b01a4fa0848835b",
+      "statement_source": "development/approved-plan/held-out-transfer-v1/layer/statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "EXTRACTED_ACCEPTED_C2_ADDRESS_FREE_PREPARATION",
+      "derivation_dependencies": [
+        "NONOVERLAPPING_QFREE",
+        "VAL_WORD_SUB_CASES",
+        "arithmetic"
+      ],
+      "expected_binding": "ht_region_disjoint_statement",
+      "export": "HT_REGION_DISJOINT",
+      "literal_statement": "!p q:int64 n k.\n val p+n<=2 EXP 64 /\\ val q+k<=2 EXP 64 /\\ nonoverlapping(p,n)(q,k)\n ==> !addr. ~(assurance_region p n addr /\\ assurance_region q k addr)",
+      "source_sha256": "381095176f1140ce243a34665268a3cec1a78b3b43aba3587b01a4fa0848835b",
+      "statement_source": "development/approved-plan/held-out-transfer-v1/layer/statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "EXTRACTED_ACCEPTED_C2_ADDRESS_FREE_PREPARATION",
+      "derivation_dependencies": [
+        "EXTENSIONALLY_VALID_COMPONENT",
+        "MAYCHANGE_SING",
+        "seq",
+        "ASSIGNS_THM"
+      ],
+      "expected_binding": "ht_frame_cancel_component_statement",
+      "export": "HT_FRAME_CANCEL_COMPONENT",
+      "literal_statement": "!c:(A,B)component R:A->A->bool s t.\n extensionally_valid_component c /\\\n (!u v. R u v ==> read c v=read c u) /\\\n (R ,, MAYCHANGE [c]) s t /\\ read c t=read c s\n ==> R s t",
+      "source_sha256": "381095176f1140ce243a34665268a3cec1a78b3b43aba3587b01a4fa0848835b",
+      "statement_source": "development/approved-plan/held-out-transfer-v1/layer/statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "EXTRACTED_ACCEPTED_C2_ADDRESS_FREE_PREPARATION",
+      "derivation_dependencies": [
+        "x86",
+        "x86_decode_unique",
+        "actual RET semantics",
+        "assurance_actual_ret",
+        "ETA_AX"
+      ],
+      "expected_binding": "ht_original_ret_statement",
+      "export": "HT_ORIGINAL_RET",
+      "literal_statement": "!pc s t:x86state.\n   read RIP s=word pc /\\ x86_decode s (word pc) (1,RET) /\\ x86 s t\n   ==> assurance_actual_ret 1 s t",
+      "source_sha256": "381095176f1140ce243a34665268a3cec1a78b3b43aba3587b01a4fa0848835b",
+      "statement_source": "development/approved-plan/held-out-transfer-v1/layer/statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_PUBLIC_BINDING",
+      "derivation_dependencies": [
+        "frozen supplier byte-array definitions",
+        "LENGTH",
+        "NUM_REDUCE_CONV"
+      ],
+      "expected_binding": "bp_public_crypto_memcmp_code_length_statement",
+      "export": "BP_PUBLIC_CRYPTO_MEMCMP_CODE_LENGTH",
+      "literal_statement": "LENGTH crypto_memcmp_mc = 95",
+      "source_sha256": "10f3ee2d04845ea5e98f245cc4c84cee075363a9cf80112667ec970262da387b",
+      "statement_source": "development/approved-plan/clients-e3/public-inputs-v1/code-length-exports-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_PUBLIC_BINDING",
+      "derivation_dependencies": [
+        "frozen supplier byte-array definitions",
+        "LENGTH",
+        "NUM_REDUCE_CONV"
+      ],
+      "expected_binding": "bp_public_openssl_cleanse_code_length_statement",
+      "export": "BP_PUBLIC_OPENSSL_CLEANSE_CODE_LENGTH",
+      "literal_statement": "LENGTH openssl_cleanse_mc = 97",
+      "source_sha256": "10f3ee2d04845ea5e98f245cc4c84cee075363a9cf80112667ec970262da387b",
+      "statement_source": "development/approved-plan/clients-e3/public-inputs-v1/code-length-exports-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml, not guessed from text"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_ACCEPTED_SUPPORTING_WORD_THEOREM",
+      "derivation_dependencies": [
+        "WORD_RULE"
+      ],
+      "expected_binding": "ht_word_sub_sub_statement",
+      "export": "HT_WORD_SUB_SUB",
+      "literal_statement": "!pointer:int64. !a b. word_sub (word_sub pointer (word a)) (word b)=word_sub pointer (word(a+b))",
+      "source_sha256": "381095176f1140ce243a34665268a3cec1a78b3b43aba3587b01a4fa0848835b",
+      "statement_source": "development/approved-plan/held-out-transfer-v1/layer/statements-v1.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_GENERIC_ABI_SUPPORT",
+      "derivation_dependencies": [
+        "assurance_checked_run",
+        "abi_caller_scalar_extended_step",
+        "abi_all_decodes_caller_scalar"
+      ],
+      "expected_binding": "abi_caller_checked_run_lift_statement",
+      "export": "ABI_CALLER_CHECKED_RUN_LIFT",
+      "literal_statement": "!n P C s a.\n    assurance_checked_run n P\n      (\\k source target. C k source target /\\ abi_all_decodes_caller_scalar source) s\n    ==> eventually_n abi_caller_scalar_extended_step n\n          (\\t. P(FST t) /\\ SND t = a) (s,a)",
+      "source_sha256": "1cf30689ca62ad8c677b42fa105a9b1e5933c6b83d2bc1ac26a49061a416a8e7",
+      "statement_source": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/statements-v6-attempt2.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_GENERIC_ABI_SUPPORT",
+      "derivation_dependencies": [
+        "abi_required_controls_preserved",
+        "omitted-state equality"
+      ],
+      "expected_binding": "abi_caller_equal_controls_statement",
+      "export": "ABI_CALLER_EQUAL_IMPLIES_REQUIRED_CONTROLS",
+      "literal_statement": "!a a'. a' = a ==> abi_required_controls_preserved a a'",
+      "source_sha256": "1cf30689ca62ad8c677b42fa105a9b1e5933c6b83d2bc1ac26a49061a416a8e7",
+      "statement_source": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/statements-v6-attempt2.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml"
+    },
+    {
+      "accepted_free_variables": [],
+      "accepted_hypotheses": [],
+      "classification": "UNCHANGED_GENERIC_ABI_SUPPORT",
+      "derivation_dependencies": [
+        "x86_decode_unique",
+        "abi_caller_scalar_instruction"
+      ],
+      "expected_binding": "abi_caller_decoded_scalar_unique_statement",
+      "export": "ABI_CALLER_DECODED_SCALAR_UNIQUE",
+      "literal_statement": "!len inst s. x86_decode s (read RIP s) (len,inst) /\\\n              abi_caller_scalar_instruction inst ==> abi_all_decodes_caller_scalar s",
+      "source_sha256": "1cf30689ca62ad8c677b42fa105a9b1e5933c6b83d2bc1ac26a49061a416a8e7",
+      "statement_source": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/statements-v6-attempt2.ml",
+      "type_record": "Generated from reconstructed HOL term by layer/export-audit-v1.ml"
+    }
+  ],
+  "human_review": "PENDING",
+  "inspection_scope": "Source/tactic-input and fresh literal object audit; not a formal transitive dependency certificate or capability isolation",
+  "schema": "heldout_layer_exports_v1"
+}

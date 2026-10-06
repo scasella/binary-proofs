@@ -1,0 +1,80 @@
+{
+  "GNU_program_headers_relocations_version_checked": true,
+  "artifact_sha256": "f3736185c45667d23d80e235245da36d99bb79e6ee1b0c7f13725fa590c53b3f",
+  "caller_sha256": "6ae0f7d55d26fe28db565f41851ed6be840edfa6d5a00c2652c7276fc72c353e",
+  "executable": [
+    [
+      587206656,
+      587210752
+    ]
+  ],
+  "fresh_GNU": true,
+  "immutable": [
+    [
+      587202560,
+      587203856
+    ],
+    [
+      587206656,
+      587207045
+    ],
+    [
+      587210752,
+      587210756
+    ]
+  ],
+  "initialized_rw": [
+    [
+      587218344,
+      587218960
+    ]
+  ],
+  "linkage": [
+    {
+      "actual_call_target": 587206704,
+      "actual_got_slot": 587218896,
+      "continuation": 587206968,
+      "declared_postinitialization_supplier_target": 270800960,
+      "symbol": "CRYPTO_memcmp"
+    },
+    {
+      "actual_call_target": 587206720,
+      "actual_got_slot": 587218904,
+      "continuation": 587206988,
+      "declared_postinitialization_supplier_target": 270800848,
+      "symbol": "OPENSSL_cleanse"
+    },
+    {
+      "actual_call_target": 587206704,
+      "actual_got_slot": 587218896,
+      "continuation": 587207002,
+      "declared_postinitialization_supplier_target": 270800960,
+      "symbol": "CRYPTO_memcmp"
+    }
+  ],
+  "mapped": [
+    [
+      587202560,
+      587223040
+    ]
+  ],
+  "parser_loader_physical_ISA_proof": false,
+  "section_crosschecks": {
+    ".plt": {
+      "length": 48,
+      "sha256": "928433cef64ae27988046f464101f2ca903b67ebe6bb70d1300c439928a19ad9"
+    },
+    ".text": {
+      "length": 281,
+      "sha256": "9dde19cfb740d9711f104db1be0d9796818ceff5796fa523e05a93f4194436e8"
+    }
+  },
+  "status": "PASS_FRESH_TRUSTED_C3_BYTES_LINKAGE_IMAGE_SOURCE_CROSSCHECK_NOT_PROOF",
+  "target_routine_executed": false,
+  "writable": [
+    [
+      587218944,
+      587223040
+    ]
+  ]
+}

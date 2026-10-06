@@ -1,0 +1,64 @@
+{
+  "theorems": [
+    {
+      "name": "R1_CRYPTO_PLT_TRANSFER_BOUNDED",
+      "statement_name": "r1_crypto_plt_bounded_statement",
+      "statement": "!pc target e m.\n   ensures_n x86\n    (\\s. bytes_loaded s (word pc) r1_crypto_plt_prefix /\\\n         read RIP s=word pc /\\ read memory s=m /\\ read events s=e /\\\n         read (memory :> bytes64 (word(pc+6+0x2f92))) s=target)\n    (\\s. read RIP s=target /\\ read memory s=m /\\\n         read events s=APPEND\n          [EventJump(word(pc+6),target);EventLoad(word(pc+6+0x2f92),8)] e)\n    (MAYCHANGE[RIP] ,, MAYCHANGE[events]) (\\s.1)"
+    },
+    {
+      "name": "R1_CRYPTO_PLT_EXECUTION_DECODE",
+      "statement_name": "r1_crypto_plt_decode_statement",
+      "statement": "!s pc. bytes_loaded s (word pc) r1_crypto_plt_prefix ==>\n  x86_decode s (word pc) (6,JUMP Unconditional (Memop Quadword (Riprel(word 0x2f92))))"
+    },
+    {
+      "name": "R1_CRYPTO_PLT_CHECKED_HOP",
+      "statement_name": "r1_crypto_plt_checked_statement",
+      "statement": "!pc target e m rp xp s.\n  bytes_loaded s (word pc) r1_crypto_plt_prefix /\\\n  read RIP s=word pc /\\ read memory s=m /\\ read events s=e /\\\n  read (memory :> bytes64 (word(pc+6+0x2f92))) s=target /\\\n  assurance_span_ok xp (val(word pc:int64)) 6 /\\\n  assurance_span_ok rp (val(word(pc+6+0x2f92):int64)) 8\n  ==> assurance_checked_run 1\n   (\\t. read RIP t=target /\\ read memory t=m /\\\n        read events t=APPEND\n          [EventJump(word(pc+6),target);EventLoad(word(pc+6+0x2f92),8)] e)\n   (\\remaining source successor.\n      assurance_step_policy rp (\\a.F) xp source successor /\\\n      x86_decode source (read RIP source)\n        (6,JUMP Unconditional (Memop Quadword (Riprel(word 0x2f92)))) /\\\n      read RIP successor=target) s"
+    },
+    {
+      "name": "R1_CLEANSE_PLT_TRANSFER_BOUNDED",
+      "statement_name": "r1_cleanse_plt_bounded_statement",
+      "statement": "!pc target e m.\n   ensures_n x86\n    (\\s. bytes_loaded s (word pc) r1_cleanse_plt_prefix /\\\n         read RIP s=word pc /\\ read memory s=m /\\ read events s=e /\\\n         read (memory :> bytes64 (word(pc+6+0x2f8a))) s=target)\n    (\\s. read RIP s=target /\\ read memory s=m /\\\n         read events s=APPEND\n          [EventJump(word(pc+6),target);EventLoad(word(pc+6+0x2f8a),8)] e)\n    (MAYCHANGE[RIP] ,, MAYCHANGE[events]) (\\s.1)"
+    },
+    {
+      "name": "R1_CLEANSE_PLT_EXECUTION_DECODE",
+      "statement_name": "r1_cleanse_plt_decode_statement",
+      "statement": "!s pc. bytes_loaded s (word pc) r1_cleanse_plt_prefix ==>\n  x86_decode s (word pc) (6,JUMP Unconditional (Memop Quadword (Riprel(word 0x2f8a))))"
+    },
+    {
+      "name": "R1_CLEANSE_PLT_CHECKED_HOP",
+      "statement_name": "r1_cleanse_plt_checked_statement",
+      "statement": "!pc target e m rp xp s.\n  bytes_loaded s (word pc) r1_cleanse_plt_prefix /\\\n  read RIP s=word pc /\\ read memory s=m /\\ read events s=e /\\\n  read (memory :> bytes64 (word(pc+6+0x2f8a))) s=target /\\\n  assurance_span_ok xp (val(word pc:int64)) 6 /\\\n  assurance_span_ok rp (val(word(pc+6+0x2f8a):int64)) 8\n  ==> assurance_checked_run 1\n   (\\t. read RIP t=target /\\ read memory t=m /\\\n        read events t=APPEND\n          [EventJump(word(pc+6),target);EventLoad(word(pc+6+0x2f8a),8)] e)\n   (\\remaining source successor.\n      assurance_step_policy rp (\\a.F) xp source successor /\\\n      x86_decode source (read RIP source)\n        (6,JUMP Unconditional (Memop Quadword (Riprel(word 0x2f8a)))) /\\\n      read RIP successor=target) s"
+    },
+    {
+      "name": "R1_MEMCMP_PLT_TRANSFER_BOUNDED",
+      "statement_name": "r1_memcmp_plt_bounded_statement",
+      "statement": "!pc target e m.\n   ensures_n x86\n    (\\s. bytes_loaded s (word pc) r1_memcmp_plt_prefix /\\\n         read RIP s=word pc /\\ read memory s=m /\\ read events s=e /\\\n         read (memory :> bytes64 (word(pc+6+0x2f82))) s=target)\n    (\\s. read RIP s=target /\\ read memory s=m /\\\n         read events s=APPEND\n          [EventJump(word(pc+6),target);EventLoad(word(pc+6+0x2f82),8)] e)\n    (MAYCHANGE[RIP] ,, MAYCHANGE[events]) (\\s.1)"
+    },
+    {
+      "name": "R1_MEMCMP_PLT_EXECUTION_DECODE",
+      "statement_name": "r1_memcmp_plt_decode_statement",
+      "statement": "!s pc. bytes_loaded s (word pc) r1_memcmp_plt_prefix ==>\n  x86_decode s (word pc) (6,JUMP Unconditional (Memop Quadword (Riprel(word 0x2f82))))"
+    },
+    {
+      "name": "R1_MEMCMP_PLT_CHECKED_HOP",
+      "statement_name": "r1_memcmp_plt_checked_statement",
+      "statement": "!pc target e m rp xp s.\n  bytes_loaded s (word pc) r1_memcmp_plt_prefix /\\\n  read RIP s=word pc /\\ read memory s=m /\\ read events s=e /\\\n  read (memory :> bytes64 (word(pc+6+0x2f82))) s=target /\\\n  assurance_span_ok xp (val(word pc:int64)) 6 /\\\n  assurance_span_ok rp (val(word(pc+6+0x2f82):int64)) 8\n  ==> assurance_checked_run 1\n   (\\t. read RIP t=target /\\ read memory t=m /\\\n        read events t=APPEND\n          [EventJump(word(pc+6),target);EventLoad(word(pc+6+0x2f82),8)] e)\n   (\\remaining source successor.\n      assurance_step_policy rp (\\a.F) xp source successor /\\\n      x86_decode source (read RIP source)\n        (6,JUMP Unconditional (Memop Quadword (Riprel(word 0x2f82)))) /\\\n      read RIP successor=target) s"
+    },
+    {
+      "name": "R1_CRYPTO_PLT_TRANSFER",
+      "statement_name": "R1_CRYPTO_PLT_TRANSFER_STATEMENT",
+      "statement": "!pc target e m.\n   ensures x86\n    (\\s. bytes_loaded s (word pc) r1_crypto_plt_prefix /\\\n         read RIP s=word pc /\\ read memory s=m /\\ read events s=e /\\\n         read (memory :> bytes64 (word(pc+6+0x2f92))) s=target)\n    (\\s. read RIP s=target /\\ read memory s=m /\\\n         read events s=APPEND\n          [EventJump(word(pc+6),target);EventLoad(word(pc+6+0x2f92),8)] e)\n    (MAYCHANGE[RIP] ,, MAYCHANGE[events])"
+    },
+    {
+      "name": "R1_CLEANSE_PLT_TRANSFER",
+      "statement_name": "R1_CLEANSE_PLT_TRANSFER_STATEMENT",
+      "statement": "!pc target e m.\n   ensures x86\n    (\\s. bytes_loaded s (word pc) r1_cleanse_plt_prefix /\\\n         read RIP s=word pc /\\ read memory s=m /\\ read events s=e /\\\n         read (memory :> bytes64 (word(pc+6+0x2f8a))) s=target)\n    (\\s. read RIP s=target /\\ read memory s=m /\\\n         read events s=APPEND\n          [EventJump(word(pc+6),target);EventLoad(word(pc+6+0x2f8a),8)] e)\n    (MAYCHANGE[RIP] ,, MAYCHANGE[events])"
+    },
+    {
+      "name": "R1_MEMCMP_PLT_TRANSFER",
+      "statement_name": "R1_MEMCMP_PLT_TRANSFER_STATEMENT",
+      "statement": "!pc target e m.\n   ensures x86\n    (\\s. bytes_loaded s (word pc) r1_memcmp_plt_prefix /\\\n         read RIP s=word pc /\\ read memory s=m /\\ read events s=e /\\\n         read (memory :> bytes64 (word(pc+6+0x2f82))) s=target)\n    (\\s. read RIP s=target /\\ read memory s=m /\\\n         read events s=APPEND\n          [EventJump(word(pc+6),target);EventLoad(word(pc+6+0x2f82),8)] e)\n    (MAYCHANGE[RIP] ,, MAYCHANGE[events])"
+    }
+  ]
+}

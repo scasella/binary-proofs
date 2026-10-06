@@ -1,0 +1,14 @@
+{
+  "status": "FROZEN_BEFORE_BOUNDED_SEARCH",
+  "file": "development/approved-plan/cleanse/functional/bounded/statements-v1.ml",
+  "sha256": "acc21f14571d98cf0537347ec89967ef3ec348b5f658766fa4997732fefe5fcc",
+  "counts": {
+    "byte": "4*n",
+    "bulk": "5*k",
+    "alignment": "6*a+2",
+    "bulk_tail": "5*k+4*r+2",
+    "core": "cleanse_functional_steps p n-1",
+    "callable": "cleanse_functional_steps p n"
+  },
+  "scope": "Exact-count modeled functional/frame; unchanged root E2 all-count specification"
+}

@@ -1,0 +1,166 @@
+{
+  "sites": [
+    {
+      "family": 0,
+      "offset": 0,
+      "length": 2,
+      "instruction": "PUSH (Register(Gpr (word 12) Full_64))"
+    },
+    {
+      "family": 0,
+      "offset": 2,
+      "length": 1,
+      "instruction": "PUSH (Register(Gpr (word 5) Full_64))"
+    },
+    {
+      "family": 0,
+      "offset": 3,
+      "length": 3,
+      "instruction": "MOV (Register(Gpr (word 5) Full_64)) (Register(Gpr (word 2) Full_64))"
+    },
+    {
+      "family": 0,
+      "offset": 6,
+      "length": 1,
+      "instruction": "PUSH (Register(Gpr (word 3) Full_64))"
+    },
+    {
+      "family": 0,
+      "offset": 7,
+      "length": 3,
+      "instruction": "MOV (Register(Gpr (word 3) Full_64)) (Register(Gpr (word 7) Full_64))"
+    },
+    {
+      "family": 0,
+      "offset": 10,
+      "length": 5,
+      "instruction": "CALL (Imm32(word 0xfffffed1))"
+    },
+    {
+      "family": 0,
+      "offset": 15,
+      "length": 3,
+      "instruction": "MOV (Register(Gpr (word 6) Full_64)) (Register(Gpr (word 5) Full_64))"
+    },
+    {
+      "family": 0,
+      "offset": 18,
+      "length": 3,
+      "instruction": "MOV (Register(Gpr (word 7) Full_64)) (Register(Gpr (word 3) Full_64))"
+    },
+    {
+      "family": 0,
+      "offset": 21,
+      "length": 3,
+      "instruction": "MOV (Register(Gpr (word 12) Lower_32)) (Register(Gpr (word 0) Lower_32))"
+    },
+    {
+      "family": 0,
+      "offset": 24,
+      "length": 5,
+      "instruction": "CALL (Imm32(word 0xfffffed3))"
+    },
+    {
+      "family": 0,
+      "offset": 29,
+      "length": 2,
+      "instruction": "XOR (Register(Gpr (word 0) Lower_32)) (Register(Gpr (word 0) Lower_32))"
+    },
+    {
+      "family": 0,
+      "offset": 31,
+      "length": 3,
+      "instruction": "TEST (Register(Gpr (word 12) Lower_32)) (Register(Gpr (word 12) Lower_32))"
+    },
+    {
+      "family": 0,
+      "offset": 34,
+      "length": 1,
+      "instruction": "POP (Register(Gpr (word 3) Full_64))"
+    },
+    {
+      "family": 0,
+      "offset": 35,
+      "length": 3,
+      "instruction": "SET Condition_Z (Register(Gpr (word 0) Lower_8))"
+    },
+    {
+      "family": 0,
+      "offset": 38,
+      "length": 1,
+      "instruction": "POP (Register(Gpr (word 5) Full_64))"
+    },
+    {
+      "family": 0,
+      "offset": 39,
+      "length": 2,
+      "instruction": "POP (Register(Gpr (word 12) Full_64))"
+    },
+    {
+      "family": 0,
+      "offset": 41,
+      "length": 1,
+      "instruction": "RET"
+    },
+    {
+      "family": 1,
+      "offset": 0,
+      "length": 4,
+      "instruction": "SUB (Register(Gpr (word 4) Full_64)) (Imm8(word 8))"
+    },
+    {
+      "family": 1,
+      "offset": 4,
+      "length": 5,
+      "instruction": "CALL(Imm32(word 0xffffff17))"
+    },
+    {
+      "family": 1,
+      "offset": 9,
+      "length": 2,
+      "instruction": "TEST (Register(Gpr (word 0) Lower_32)) (Register(Gpr (word 0) Lower_32))"
+    },
+    {
+      "family": 1,
+      "offset": 11,
+      "length": 3,
+      "instruction": "SET Condition_Z (Register(Gpr (word 0) Lower_8))"
+    },
+    {
+      "family": 1,
+      "offset": 14,
+      "length": 4,
+      "instruction": "ADD (Register(Gpr (word 4) Full_64)) (Imm8(word 8))"
+    },
+    {
+      "family": 1,
+      "offset": 18,
+      "length": 3,
+      "instruction": "MOVZX (Register(Gpr (word 0) Lower_32)) (Register(Gpr (word 0) Lower_8))"
+    },
+    {
+      "family": 1,
+      "offset": 21,
+      "length": 1,
+      "instruction": "RET"
+    },
+    {
+      "family": 2,
+      "offset": 0,
+      "length": 6,
+      "instruction": "JUMP Unconditional (Memop Quadword (Riprel(word 0x2f92)))"
+    },
+    {
+      "family": 3,
+      "offset": 0,
+      "length": 6,
+      "instruction": "JUMP Unconditional (Memop Quadword (Riprel(word 0x2f8a)))"
+    },
+    {
+      "family": 4,
+      "offset": 0,
+      "length": 6,
+      "instruction": "JUMP Unconditional (Memop Quadword (Riprel(word 0x2f82)))"
+    }
+  ]
+}

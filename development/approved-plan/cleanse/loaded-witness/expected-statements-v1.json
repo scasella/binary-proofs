@@ -1,0 +1,89 @@
+{
+  "theorems": [
+    {
+      "name": "CLW_REFERENCE_SATISFIES",
+      "statement": "!file_bytes initial_rw padding. fb_full_image file_bytes initial_rw padding (fb_reference_image file_bytes initial_rw padding)",
+      "statement_name": "clw_reference_satisfies_statement"
+    },
+    {
+      "name": "CLW_CODE_CORRESPONDENCE",
+      "statement": "!file_bytes initial_rw padding image. clw_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image ==> clw_reference_code image",
+      "statement_name": "clw_code_correspondence_statement"
+    },
+    {
+      "name": "CLW_INITIAL_IMAGE_BINDING",
+      "statement": "!file_bytes initial_rw padding image p n high_first. fb_full_image file_bytes initial_rw padding image /\\ clw_layout p n ==> fb_full_image file_bytes initial_rw padding (clw_memory image p n high_first)",
+      "statement_name": "clw_initial_image_binding_statement"
+    },
+    {
+      "name": "CLW_VALID_ABI",
+      "statement": "fb_abi_initial_fields fb_initial_abi /\\ assurance_canonical48(val(read ABI_FS_BASE fb_initial_abi)) /\\ fb_tls_page(val(read ABI_FS_BASE fb_initial_abi))",
+      "statement_name": "clw_valid_abi_statement"
+    },
+    {
+      "name": "CLW_FULL_PRE_LIFT",
+      "statement": "!file_bytes initial_rw padding image p n high_first. fb_full_image file_bytes initial_rw padding image /\\ clw_layout p n /\\ clw_scalar_pre image p n high_first ==> clw_full_pre file_bytes initial_rw padding image p n high_first",
+      "statement_name": "clw_full_pre_lift_statement"
+    },
+    {
+      "name": "CLW_EMPTY_FAMILY",
+      "statement": "!file_bytes initial_rw padding image p. clw_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image ==> clw_full_pre file_bytes initial_rw padding image p 0 F /\\ (!a. ~lw_pagecover p 0 a)",
+      "statement_name": "clw_empty_statement"
+    },
+    {
+      "name": "CLW_EMPTY_NO_DESTINATION_PERMISSIONS",
+      "statement": "!file_bytes initial_rw padding image. clw_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image ==> clw_full_pre file_bytes initial_rw padding image (word(2 EXP 64-1)) 0 F /\\ ~clw_read (word(2 EXP 64-1)) 0 (2 EXP 64-1) /\\ ~clw_write (word(2 EXP 64-1)) 0 (2 EXP 64-1) /\\ ~clw_ordinary (word(2 EXP 64-1)) 0 (2 EXP 64-1)",
+      "statement_name": "clw_empty_no_permissions_statement"
+    },
+    {
+      "name": "CLW_BYTE_ONE_FAMILY",
+      "statement": "!file_bytes initial_rw padding image. clw_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image ==> clw_full_pre file_bytes initial_rw padding image (word 0x200001) 1 F /\\ clw_memory image (word 0x200001) 1 F (word 0x200001)=word 128",
+      "statement_name": "clw_byte_one_statement"
+    },
+    {
+      "name": "CLW_BYTE_SEVEN_FAMILY",
+      "statement": "!file_bytes initial_rw padding image. clw_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image ==> clw_full_pre file_bytes initial_rw padding image (word 0x200003) 7 T /\\ clw_memory image (word 0x200003) 7 T (word 0x200003)=word 255",
+      "statement_name": "clw_byte_seven_statement"
+    },
+    {
+      "name": "CLW_BULK_ALIGNED_FAMILY",
+      "statement": "!file_bytes initial_rw padding image. clw_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image ==> clw_full_pre file_bytes initial_rw padding image (word 0x200000) 24 F /\\ clw_memory image (word 0x200000) 24 F (word 0x200000)=word 128",
+      "statement_name": "clw_bulk_aligned_statement"
+    },
+    {
+      "name": "CLW_MISALIGNED_BULK_FAMILY",
+      "statement": "!file_bytes initial_rw padding image. clw_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image ==> clw_full_pre file_bytes initial_rw padding image (word 0x200001) 17 F /\\ clw_memory image (word 0x200001) 17 F (word 0x200001)=word 128",
+      "statement_name": "clw_misaligned_bulk_statement"
+    },
+    {
+      "name": "CLW_MISALIGNED_TAIL_FAMILY",
+      "statement": "!file_bytes initial_rw padding image. clw_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image ==> clw_full_pre file_bytes initial_rw padding image (word 0x200003) 33 T /\\ clw_memory image (word 0x200003) 33 T (word 0x200003)=word 255",
+      "statement_name": "clw_misaligned_tail_statement"
+    },
+    {
+      "name": "CLW_USER_PAGE_BOUNDARY_FAMILY",
+      "statement": "!file_bytes initial_rw padding image. clw_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image ==> clw_full_pre file_bytes initial_rw padding image (word 0x200fff) 17 F /\\ clw_memory image (word 0x200fff) 17 F (word 0x200fff)=word 128",
+      "statement_name": "clw_user_page_boundary_statement"
+    },
+    {
+      "name": "CLW_LOW_CANONICAL_EDGE_FAMILY",
+      "statement": "!file_bytes initial_rw padding image. clw_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image ==> clw_full_pre file_bytes initial_rw padding image (word (2 EXP 47-1)) 1 F /\\ clw_memory image (word (2 EXP 47-1)) 1 F (word (2 EXP 47-1))=word 128",
+      "statement_name": "clw_low_canonical_edge_statement"
+    },
+    {
+      "name": "CLW_TOP_ENDPOINT_WRAP_FAMILY",
+      "statement": "!file_bytes initial_rw padding image. clw_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image ==> clw_full_pre file_bytes initial_rw padding image (word (2 EXP 64-1)) 1 T /\\ clw_memory image (word (2 EXP 64-1)) 1 T (word (2 EXP 64-1))=word 255",
+      "statement_name": "clw_top_endpoint_wrap_statement"
+    },
+    {
+      "name": "CLW_TOP_QWORD_ENDPOINT_WRAP_FAMILY",
+      "statement": "!file_bytes initial_rw padding image. clw_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image ==> clw_full_pre file_bytes initial_rw padding image (word (2 EXP 64-8)) 8 F /\\ clw_memory image (word (2 EXP 64-8)) 8 F (word (2 EXP 64-8))=word 128",
+      "statement_name": "clw_top_qword_endpoint_wrap_statement"
+    },
+    {
+      "name": "CLW_MACHINE_WITNESS_EXISTS",
+      "statement": "!file_bytes initial_rw padding. clw_file_code file_bytes ==> ?image. fb_full_image file_bytes initial_rw padding image /\\ (!p. clw_full_pre file_bytes initial_rw padding image p 0 F) /\\ clw_full_pre file_bytes initial_rw padding image (word 0x200001) 1 F /\\ clw_full_pre file_bytes initial_rw padding image (word 0x200003) 7 T /\\ clw_full_pre file_bytes initial_rw padding image (word 0x200000) 24 F /\\ clw_full_pre file_bytes initial_rw padding image (word 0x200001) 17 F /\\ clw_full_pre file_bytes initial_rw padding image (word 0x200003) 33 T /\\ clw_full_pre file_bytes initial_rw padding image (word 0x200fff) 17 F /\\ clw_full_pre file_bytes initial_rw padding image (word (2 EXP 47-1)) 1 F /\\ clw_full_pre file_bytes initial_rw padding image (word (2 EXP 64-1)) 1 T /\\ clw_full_pre file_bytes initial_rw padding image (word (2 EXP 64-8)) 8 F",
+      "statement_name": "clw_machine_witness_exists_statement"
+    }
+  ]
+}

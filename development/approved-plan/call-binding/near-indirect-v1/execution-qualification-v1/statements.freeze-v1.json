@@ -1,0 +1,17 @@
+{
+  "bindings_are_explicit_data_premises": true,
+  "files": {
+    "development/approved-plan/call-binding/near-indirect-v1/decode-attempt5.ml": "f8824368fedd207a3d1b48545767d453e5aeea7f83b68e9e7b08e82ce36a00ab",
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/expected-statements-v1.json": "e4bb422919d3478ab9989baec9b82558ed765c754a37e4aa04961dd3f25ac679",
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/statements-v1.ml": "e8b0fd17be7310e0fde003162a4d586a6a889207aece82a0ecb8adba1a1097e3",
+    "development/approved-plan/call-binding/near-indirect-v1/loaded-stub-v1/spec-v2.ml": "9bbc788cf94c524d2b5d5cbdf76aaf50b3dc8a7344a041565180ba05de18188b",
+    "development/approved-plan/call-binding/near-indirect-v1/x86-attempt5.ml": "0e2a9f1076083ce76e3510471eff1bbfd3788af67d3b4b9ece43755fea42d31f"
+  },
+  "frozen_at_utc": "2026-09-30T18:29:49.104959+00:00",
+  "human_review": "PENDING",
+  "id": "E3_PLT_EXECUTION_HOPS_V1",
+  "no_client_theorem": true,
+  "no_original_model_definition_changes": true,
+  "proof_search_started": false,
+  "target_count": 12
+}

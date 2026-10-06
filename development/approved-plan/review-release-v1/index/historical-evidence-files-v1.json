@@ -1,0 +1,2009 @@
+{
+  "acceptance_input": false,
+  "canonical_inputs": "Seals and selected-inputs-v1.json remain the versioned source authority",
+  "excluded_directory_components": [
+    "source",
+    "__pycache__"
+  ],
+  "excluded_file_names": [
+    ".DS_Store"
+  ],
+  "groups": {
+    "C1_final_controls": {
+      "file_count": 60,
+      "files": {
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/argv.json": {
+          "bytes": 1082,
+          "sha256": "44f805cd36cdc81315c2c99257cae6ff54fa0ac16153e4c818eefc9dbd66e17e"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/bootstrap-input.ml": {
+          "bytes": 551,
+          "sha256": "d053282805921657062f85868f535db72f97f089323e42d257e1f93daaacc05a"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/c1-image-crosscheck.json": {
+          "bytes": 1353,
+          "sha256": "7d481dc29de72d7b49ec6f4083c6a3970fe1c071fdb9654836559bebea698157"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/c1-input.ml": {
+          "bytes": 1109,
+          "sha256": "28cdcd4b0d10b5f2631fd145d00f55e046655fbf1b47824d357c3e069c689910"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/c1-proof.log": {
+          "bytes": 74190,
+          "sha256": "46700ea51fcf3da7a4a95ac7875d08598cc3341384f86d401f6b61eeeaf8bcba"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/checker-argv.json": {
+          "bytes": 2301,
+          "sha256": "8605157037394881b6f8c3d3ab05cb027699ec4432f68b59d6276ecfe00ac660"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/container-inspect.json": {
+          "bytes": 12102,
+          "sha256": "22c860fd68ea2b1c92ef2232b81ae2cd342c48ecdc3d0a3fdda7a163d4c3fb76"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/container.cid": {
+          "bytes": 64,
+          "sha256": "84216e38aa173a8e314667fae880ada4139d40f4cdd095a71095d9ff6fa12fb9"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/gnu-argv.json": {
+          "bytes": 1263,
+          "sha256": "8b034f907b1fc8262c0577bb6d0347d20438fa695558a1b3fce4de22066df32e"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/gnu-container.cid": {
+          "bytes": 64,
+          "sha256": "73b09a16af71270209ae69362e8b4fb5014abcfed43b96e393f176dc6355b6f2"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/gnu-image-inspect.json": {
+          "bytes": 273,
+          "sha256": "497a3ede22549cab6860c9bbafa024d5215d1fc5c43345295c66a006aa06a518"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/gnu-process.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/inputs.json": {
+          "bytes": 623726,
+          "sha256": "ad7075bfb9c0a624ac0237c826494c57ea8d0314acd9ca4693d163a7270e6107"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/invocation.json": {
+          "bytes": 571,
+          "sha256": "ffc0f44d03251fc89a2c75399ab46eb070a4d8bbf45e284ecce031478e123e47"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/receipt.json": {
+          "bytes": 1897,
+          "sha256": "2d16b1814d009c8b673f4aac4ec1bd76b698701df8631f6e5bedf314c9504632"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/root-only-supplier/bootstrap.log": {
+          "bytes": 4481720,
+          "sha256": "bb5df5cc2b17b3ea78e1fbba5f883097f6eb139ce3f16ae398110c5e7dfd784e"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/root-only-supplier/host-audit-stderr.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/root-only-supplier/host-audit-stdout.json": {
+          "bytes": 605531,
+          "sha256": "95e8c4d8616bec03ee0ab176643bde1bb315b573a1218d92a0a7f10d42c7b9ad"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/ambient-after-supplier-v1.json": {
+          "bytes": 7455,
+          "sha256": "a29d7568d04c94a812f25602d08d26a9cbc1ef243ff2f914581c17e2ab4907ed"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/ambient-before-supplier-v1.json": {
+          "bytes": 7442,
+          "sha256": "0fac130c671fbf1c44529c45195958f0d7b3d2f9928fc68bc1ee225e2ad87cfd"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/assurance-audit.json": {
+          "bytes": 37453,
+          "sha256": "d14514596be81ed948031f74424a6882c76e64fc1b48e741103adc8ee651edb8"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/cleanse-access.json": {
+          "bytes": 15614,
+          "sha256": "1e18d2601b4c305e1f2a82c645e9f86adf2f7bcc6a3b809d3a5b48e832d004cb"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/cleanse-functional.json": {
+          "bytes": 18799,
+          "sha256": "78419f1594b526a0077d44e09fa981e1c90009c939f01fa65aed858ede3d0ade"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/cleanse-interface.json": {
+          "bytes": 17849,
+          "sha256": "7e1bd3d3ebb4311b9c2e0360666811cb6ceecd60fbc1d4d94be799a197867e11"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/cleanse-supplement.json": {
+          "bytes": 39214,
+          "sha256": "116e352918accab103bd4c516c9b3833ec42403fc2d7e304e30e1c577f4e53ad"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/e3-interface.json": {
+          "bytes": 364035,
+          "sha256": "eeac46ea3128f2c14c9812c1003be789c6d61c6415d2ea4df3fd536f276b678c"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/execution-qualification.json": {
+          "bytes": 19199,
+          "sha256": "06d1e98d0ab7cadc95eee3260a89d5c4f6e61ccfd7c8e3fdf219af4bd1c67d64"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/full-binding-audit.json": {
+          "bytes": 7515,
+          "sha256": "058ca82bbe13afce45cdec08dc26194e1f87d2136f0631e69f99a6cbfc41f692"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/gnu/disassembly.txt": {
+          "bytes": 4907,
+          "sha256": "eb086329f736e3ae053ce2cd142e86731a8c9c1c12cae9b6d3b87e4f74b8bf81"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/gnu/gnu-plt.bin": {
+          "bytes": 32,
+          "sha256": "fd6caa945ecbf7fb2442bc28b1789f3f7db2d665a40ebc307b3eba899951b10a"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/gnu/gnu-text.bin": {
+          "bytes": 214,
+          "sha256": "9abde9452672ddc910c99d6b1d20aa5ee7fd3227cc4c37a3e8ab703a7a709c96"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/gnu/readelf.txt": {
+          "bytes": 11502,
+          "sha256": "bfb60afcdb05f3e8a58d654ed7a8cba2c3e0f6f453ca57b612479c653ab1aee4"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/loaded-witness-theorems.json": {
+          "bytes": 4836,
+          "sha256": "c7e19d354bac8a4a94fdfb9a294473feba57ac31ef17a880ecb11344f49ad5ad"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/model-qualification.json": {
+          "bytes": 12991,
+          "sha256": "0823472bc8aac9cb8e04b48473e12bb77116b8251a94709929211c1b95095765"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/observation-audit.json": {
+          "bytes": 17116,
+          "sha256": "d895e2b937fb5a5bf2f3de5a35ac373779f383fa157b04171cee6ec977276510"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/public-interface-audit.json": {
+          "bytes": 1943,
+          "sha256": "ddd1ebf4a0e9e2bd1dfb7d930df565fd1449ab7c3c13de6ea81eed10d605eb65"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/attempt/runtime/public-trace-audit.json": {
+          "bytes": 1040,
+          "sha256": "599bc33fac6ea1a99c8e9a01df57e3aaba9837318e19c44e6bdc46e413d1f0a2"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/process.log": {
+          "bytes": 74433,
+          "sha256": "5fd887916854163bb989e26a9ce0c265e05c4b600a56f7f6e22f723da4e289ba"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3/receipt.json": {
+          "bytes": 947,
+          "sha256": "07feac87d43b016ba6d27d118a400d82b7295bfd0a43c6be70ecc42a167aa668"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/contract-model-pin/argv.json": {
+          "bytes": 1191,
+          "sha256": "f1bbaef72e904dd1dba903b4fb1af93f5a3913843b2769536c111f836fd2819a"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/contract-model-pin/attempt/receipt.json": {
+          "bytes": 407,
+          "sha256": "739ce5698775e60ae93b970a5288ea3462fe6853d42560b1377adc2bb606933b"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/contract-model-pin/mutation.json": {
+          "bytes": 394,
+          "sha256": "6cda9ea8899d9fd9c07a1190610273355b5b974103b5afc71080367ec91ac9e9"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/contract-model-pin/process.log": {
+          "bytes": 136,
+          "sha256": "df4b95fe187adf3067c3df587fc35060779dd75c1506c9e041d99a273becaf4d"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/executed-ELF-byte/argv.json": {
+          "bytes": 1187,
+          "sha256": "39dbc0a46f07fbed8fb3cbe23fc8f12b6061a936b329d3a4ca699eb81cb1991c"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/executed-ELF-byte/attempt/receipt.json": {
+          "bytes": 408,
+          "sha256": "0def30d3a055ddf865eea085a39b929eaac0f9917506d521584f488c494f8b8f"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/executed-ELF-byte/mutation.json": {
+          "bytes": 394,
+          "sha256": "42efe168a51203ae71487e019e8247d2c7e14733ba43093086af7064615ae335"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/executed-ELF-byte/process.log": {
+          "bytes": 137,
+          "sha256": "d5e838b58edebc4b095d0c19aa879d42523391f2051906f939c874d28fb41d55"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/missing-caller-proof-with-stale-success/argv.json": {
+          "bytes": 1275,
+          "sha256": "30c0f37583e29bd6481dfff510f302b6e2566b25d4cdace34256e2ab93dcac1b"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/missing-caller-proof-with-stale-success/attempt/receipt.json": {
+          "bytes": 416,
+          "sha256": "417fd52e0bc7b26c8c0b82d9607a82dd8c915c7540a0a326ca9283339a5c7dad"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/missing-caller-proof-with-stale-success/mutation.json": {
+          "bytes": 362,
+          "sha256": "7b2956f07679c12eb8e1edfc337069c08fa983d2e08d483e85dbf3c018302e18"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/missing-caller-proof-with-stale-success/process.log": {
+          "bytes": 145,
+          "sha256": "87b2b0433aa6afc1e78101f890163f5d1d13d31cd15cdaa881d5dc0a90f22f0a"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/missing-supplier-public-interface-dependency/argv.json": {
+          "bytes": 1295,
+          "sha256": "356d96d8d18d780e2dfdf6aa44a5c9741ebec6eda526877e0db457c62cb66788"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/missing-supplier-public-interface-dependency/attempt/receipt.json": {
+          "bytes": 358,
+          "sha256": "273b3bc4f3bdfbf04c809d4e8961e420a5ab28f6bfaafc97a8b18cb15d01eff8"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/missing-supplier-public-interface-dependency/mutation.json": {
+          "bytes": 310,
+          "sha256": "c6ad06a902a25470a85890b58af28d99c2890647c0e9930eeeab8f8a179f0b62"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/missing-supplier-public-interface-dependency/process.log": {
+          "bytes": 87,
+          "sha256": "fd209a4500e5432e76a14e1d86fee426b0a9ba2033d85ecf422c7d43d276d090"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/modeled-GOT-target/argv.json": {
+          "bytes": 1191,
+          "sha256": "6e65f024df3e4f3fd0d049b006a561e001eef19ec614bdd2e0eb11611d096d01"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/modeled-GOT-target/attempt/receipt.json": {
+          "bytes": 408,
+          "sha256": "187d13385a68df2f1a8fd0e11b210ed47072a95835fc400e0959bfac4391317d"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/modeled-GOT-target/mutation.json": {
+          "bytes": 395,
+          "sha256": "73df8b3e5a146b9a6cf2f5eb105f063706ef9b608b2667024622ba2c254dd7dd"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/modeled-GOT-target/process.log": {
+          "bytes": 137,
+          "sha256": "f72287a70a8ae6e9abae9c9ba9c53af7d498974b39bbab6f0e9ff4ba59f89afb"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3/receipt.json": {
+          "bytes": 4370,
+          "sha256": "4ce8ea4b2dd313fa11e9b4a5c703aa3a2e0dcd11bfffc6fa6ff789705c9e9388"
+        }
+      },
+      "roots": [
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-targeted-controls-v3",
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-missing-interface-probe-v3"
+      ]
+    },
+    "C1_final_positive": {
+      "file_count": 39,
+      "files": {
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/bootstrap-input.ml": {
+          "bytes": 551,
+          "sha256": "d053282805921657062f85868f535db72f97f089323e42d257e1f93daaacc05a"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/c1-image-crosscheck.json": {
+          "bytes": 1353,
+          "sha256": "7d481dc29de72d7b49ec6f4083c6a3970fe1c071fdb9654836559bebea698157"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/c1-input.ml": {
+          "bytes": 996,
+          "sha256": "d4c55f068650fa4e4aecb1c887e7c50e7a469cbe42e24333facd759e13fbad21"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/c1-proof.log": {
+          "bytes": 244247,
+          "sha256": "0a8fbc9c541f6711990875f771c5ed5980460d87441dae7a446a3c6139433b5b"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/checker-argv.json": {
+          "bytes": 2161,
+          "sha256": "11b5ec6de191deedc42a17c0c084744889b9023658ec17f2fbf2e4511c2b0dad"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/container-inspect.json": {
+          "bytes": 11840,
+          "sha256": "b2cdf3a726f43688efcd21f09073f7ef76471849af71b8ed4ae2a904822c0be3"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/container.cid": {
+          "bytes": 64,
+          "sha256": "2a2fcedd55aa312444ac47b3db172c18f770a2dd9d811b19359dc9551ac14fe1"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/gnu-argv.json": {
+          "bytes": 1203,
+          "sha256": "de8869ec02cad2ec355dfc8313469152333677580736dc502c6f46fdc665378b"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/gnu-container.cid": {
+          "bytes": 64,
+          "sha256": "5f1f55c21cad5ede24600a15fb97bfeb0f17261f6fa8e87fa6a3a557ae37b782"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/gnu-image-inspect.json": {
+          "bytes": 273,
+          "sha256": "497a3ede22549cab6860c9bbafa024d5215d1fc5c43345295c66a006aa06a518"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/gnu-process.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/inputs.json": {
+          "bytes": 623726,
+          "sha256": "ad7075bfb9c0a624ac0237c826494c57ea8d0314acd9ca4693d163a7270e6107"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/invocation.json": {
+          "bytes": 555,
+          "sha256": "04cbb7d51fbf447ccd87432e6891b016032680e44152e34c28a2ec53e10ca801"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/receipt.json": {
+          "bytes": 2036,
+          "sha256": "0bbd3976d971f42ede45002a91435694f074b13a8fc22df09227253322e817c9"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/root-full-acceptance-v1.json": {
+          "bytes": 2920,
+          "sha256": "3db7001d2c3b978e13aea5e9f15a0967b1e115c1db123cd9d76e95e2b5582be0"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/root-only-supplier/bootstrap.log": {
+          "bytes": 4481717,
+          "sha256": "94819103e3a8508d4e5d2c823d3e5dcc6c332d6c9495656d7efab299a6cbf0ab"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/root-only-supplier/host-audit-stderr.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/root-only-supplier/host-audit-stdout.json": {
+          "bytes": 605531,
+          "sha256": "95e8c4d8616bec03ee0ab176643bde1bb315b573a1218d92a0a7f10d42c7b9ad"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/root-positive-gate-v1.json": {
+          "bytes": 2897,
+          "sha256": "d50e1cd71cca7ec73055d74b300a7bed28bb0dc56f4d604fc35c7d1bf0d8b7d4"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/ambient-after-supplier-v1.json": {
+          "bytes": 7455,
+          "sha256": "a29d7568d04c94a812f25602d08d26a9cbc1ef243ff2f914581c17e2ab4907ed"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/ambient-before-supplier-v1.json": {
+          "bytes": 7442,
+          "sha256": "0fac130c671fbf1c44529c45195958f0d7b3d2f9928fc68bc1ee225e2ad87cfd"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/assurance-audit.json": {
+          "bytes": 37453,
+          "sha256": "d14514596be81ed948031f74424a6882c76e64fc1b48e741103adc8ee651edb8"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/c1-live-audit-v1.json": {
+          "bytes": 179076,
+          "sha256": "f5878a0132803849c85ea33c8182105dcb212b7794f49cc8bca9268e9f355a8b"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/cleanse-access.json": {
+          "bytes": 15614,
+          "sha256": "1e18d2601b4c305e1f2a82c645e9f86adf2f7bcc6a3b809d3a5b48e832d004cb"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/cleanse-functional.json": {
+          "bytes": 18799,
+          "sha256": "78419f1594b526a0077d44e09fa981e1c90009c939f01fa65aed858ede3d0ade"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/cleanse-interface.json": {
+          "bytes": 17849,
+          "sha256": "7e1bd3d3ebb4311b9c2e0360666811cb6ceecd60fbc1d4d94be799a197867e11"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/cleanse-supplement.json": {
+          "bytes": 39214,
+          "sha256": "116e352918accab103bd4c516c9b3833ec42403fc2d7e304e30e1c577f4e53ad"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/e3-interface.json": {
+          "bytes": 364035,
+          "sha256": "eeac46ea3128f2c14c9812c1003be789c6d61c6415d2ea4df3fd536f276b678c"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/execution-qualification.json": {
+          "bytes": 19199,
+          "sha256": "06d1e98d0ab7cadc95eee3260a89d5c4f6e61ccfd7c8e3fdf219af4bd1c67d64"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/full-binding-audit.json": {
+          "bytes": 7515,
+          "sha256": "058ca82bbe13afce45cdec08dc26194e1f87d2136f0631e69f99a6cbfc41f692"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/gnu/disassembly.txt": {
+          "bytes": 4907,
+          "sha256": "eb086329f736e3ae053ce2cd142e86731a8c9c1c12cae9b6d3b87e4f74b8bf81"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/gnu/gnu-plt.bin": {
+          "bytes": 32,
+          "sha256": "fd6caa945ecbf7fb2442bc28b1789f3f7db2d665a40ebc307b3eba899951b10a"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/gnu/gnu-text.bin": {
+          "bytes": 214,
+          "sha256": "9abde9452672ddc910c99d6b1d20aa5ee7fd3227cc4c37a3e8ab703a7a709c96"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/gnu/readelf.txt": {
+          "bytes": 11502,
+          "sha256": "bfb60afcdb05f3e8a58d654ed7a8cba2c3e0f6f453ca57b612479c653ab1aee4"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/loaded-witness-theorems.json": {
+          "bytes": 4836,
+          "sha256": "c7e19d354bac8a4a94fdfb9a294473feba57ac31ef17a880ecb11344f49ad5ad"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/model-qualification.json": {
+          "bytes": 12991,
+          "sha256": "0823472bc8aac9cb8e04b48473e12bb77116b8251a94709929211c1b95095765"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/observation-audit.json": {
+          "bytes": 17116,
+          "sha256": "d895e2b937fb5a5bf2f3de5a35ac373779f383fa157b04171cee6ec977276510"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/public-interface-audit.json": {
+          "bytes": 1943,
+          "sha256": "ddd1ebf4a0e9e2bd1dfb7d930df565fd1449ab7c3c13de6ea81eed10d605eb65"
+        },
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3/runtime/public-trace-audit.json": {
+          "bytes": 1040,
+          "sha256": "599bc33fac6ea1a99c8e9a01df57e3aaba9837318e19c44e6bdc46e413d1f0a2"
+        }
+      },
+      "roots": [
+        "development/approved-plan/reusable-assurance-c1-successor-v1/runs/c1-fresh-final-v3"
+      ]
+    },
+    "C1_predecessor_failed_checks": {
+      "file_count": 70,
+      "files": {
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v1/gnu-argv.json": {
+          "bytes": 1164,
+          "sha256": "420d1f5d786b91c4ed1ea0dd5085db5d82068993afbed6f27f717f3579c07606"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v1/gnu-container.cid": {
+          "bytes": 64,
+          "sha256": "78757111f37fb2a0851633d089faf7ace3fc352f2e08d8057f29d82246f83dbf"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v1/gnu-process.log": {
+          "bytes": 73,
+          "sha256": "2374e743a766c4e08569deac006bc6c48e4b8742162117c3196569a4a7c9b6e0"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v1/inputs.json": {
+          "bytes": 620024,
+          "sha256": "5f273ada28dc786b01ab172f311c876b9f2426ce128b3692ea050258d66a3cf2"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v1/receipt.json": {
+          "bytes": 296,
+          "sha256": "dc3843f7d0cf6aaad1955a3ae2ed5ccae1257af663d834e61a673427db133916"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/bootstrap-input.ml": {
+          "bytes": 352,
+          "sha256": "50fb3a9f62954fbfdc8fe8f8d0a75df9da176821f7092f0f22b73ff47af64ce1"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/c1-image-crosscheck.json": {
+          "bytes": 1353,
+          "sha256": "7d481dc29de72d7b49ec6f4083c6a3970fe1c071fdb9654836559bebea698157"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/c1-input.ml": {
+          "bytes": 592,
+          "sha256": "a98c829c940b865ebe58a56cf4c7a33f3c10ff8c04a6011eb8435975d7fd462b"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/c1-proof.log": {
+          "bytes": 119399,
+          "sha256": "d765dafb63fc174c085e1302a5bc0a1d73deecb434b822906c5c669e84fad4ff"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/checker-argv.json": {
+          "bytes": 2070,
+          "sha256": "05871f60b84e34ecfcb65bb9273af183a99ba4880d49b08c3113f2dec54db5b5"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/container-inspect.json": {
+          "bytes": 11673,
+          "sha256": "b5cf9a91cad6474a14f27eeaf77bd4aa631b03f330d705eec81d68dbdd4f7fe4"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/container.cid": {
+          "bytes": 64,
+          "sha256": "21e994901f0b033f771564a1ef35cfd933668f8d0c03be06075eb370c1500824"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/gnu-argv.json": {
+          "bytes": 1164,
+          "sha256": "dd7af1154efdfe23454f16c4cd3466540c296a23246da8d45eb1a6403b7a12ca"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/gnu-container.cid": {
+          "bytes": 64,
+          "sha256": "15598d4de71e56f295fc7937a71d1456ee9f13b1fa9e9cbafc43728f0d3574f0"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/gnu-image-inspect.json": {
+          "bytes": 273,
+          "sha256": "497a3ede22549cab6860c9bbafa024d5215d1fc5c43345295c66a006aa06a518"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/gnu-process.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/inputs.json": {
+          "bytes": 620030,
+          "sha256": "0246a50697fe549e543dfbc7a89998a7770a85ca6ebc8ef648411333418b5ba1"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/invocation.json": {
+          "bytes": 555,
+          "sha256": "15e5cec0996bb39be2a4b85cc1b2cc6c48a072c65d21498aa38c5a72b6f69928"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/receipt.json": {
+          "bytes": 694,
+          "sha256": "263ce172606ea77a1b61474825356da58a5f8be74fe24270db2fcabd74b09532"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/root-only-supplier/bootstrap.log": {
+          "bytes": 4481410,
+          "sha256": "23fca05544a35adc6f7b05894b6c76fc6cf57c4f949209f3a1d0fe731f2b5143"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/runtime/assurance-audit.json": {
+          "bytes": 37453,
+          "sha256": "d14514596be81ed948031f74424a6882c76e64fc1b48e741103adc8ee651edb8"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/runtime/cleanse-access.json": {
+          "bytes": 15614,
+          "sha256": "1e18d2601b4c305e1f2a82c645e9f86adf2f7bcc6a3b809d3a5b48e832d004cb"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/runtime/cleanse-functional.json": {
+          "bytes": 18799,
+          "sha256": "78419f1594b526a0077d44e09fa981e1c90009c939f01fa65aed858ede3d0ade"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/runtime/cleanse-interface.json": {
+          "bytes": 17849,
+          "sha256": "7e1bd3d3ebb4311b9c2e0360666811cb6ceecd60fbc1d4d94be799a197867e11"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/runtime/cleanse-supplement.json": {
+          "bytes": 39214,
+          "sha256": "116e352918accab103bd4c516c9b3833ec42403fc2d7e304e30e1c577f4e53ad"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/runtime/e3-interface.json": {
+          "bytes": 364035,
+          "sha256": "eeac46ea3128f2c14c9812c1003be789c6d61c6415d2ea4df3fd536f276b678c"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/runtime/execution-qualification.json": {
+          "bytes": 19199,
+          "sha256": "06d1e98d0ab7cadc95eee3260a89d5c4f6e61ccfd7c8e3fdf219af4bd1c67d64"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/runtime/full-binding-audit.json": {
+          "bytes": 7515,
+          "sha256": "058ca82bbe13afce45cdec08dc26194e1f87d2136f0631e69f99a6cbfc41f692"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/runtime/gnu/disassembly.txt": {
+          "bytes": 4907,
+          "sha256": "eb086329f736e3ae053ce2cd142e86731a8c9c1c12cae9b6d3b87e4f74b8bf81"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/runtime/gnu/gnu-plt.bin": {
+          "bytes": 32,
+          "sha256": "fd6caa945ecbf7fb2442bc28b1789f3f7db2d665a40ebc307b3eba899951b10a"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/runtime/gnu/gnu-text.bin": {
+          "bytes": 214,
+          "sha256": "9abde9452672ddc910c99d6b1d20aa5ee7fd3227cc4c37a3e8ab703a7a709c96"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/runtime/gnu/readelf.txt": {
+          "bytes": 11502,
+          "sha256": "bfb60afcdb05f3e8a58d654ed7a8cba2c3e0f6f453ca57b612479c653ab1aee4"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/runtime/loaded-witness-theorems.json": {
+          "bytes": 4836,
+          "sha256": "c7e19d354bac8a4a94fdfb9a294473feba57ac31ef17a880ecb11344f49ad5ad"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/runtime/model-qualification.json": {
+          "bytes": 12991,
+          "sha256": "0823472bc8aac9cb8e04b48473e12bb77116b8251a94709929211c1b95095765"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/runtime/observation-audit.json": {
+          "bytes": 17116,
+          "sha256": "d895e2b937fb5a5bf2f3de5a35ac373779f383fa157b04171cee6ec977276510"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/runtime/public-interface-audit.json": {
+          "bytes": 1943,
+          "sha256": "ddd1ebf4a0e9e2bd1dfb7d930df565fd1449ab7c3c13de6ea81eed10d605eb65"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2/runtime/public-trace-audit.json": {
+          "bytes": 1040,
+          "sha256": "599bc33fac6ea1a99c8e9a01df57e3aaba9837318e19c44e6bdc46e413d1f0a2"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/bootstrap-input.ml": {
+          "bytes": 352,
+          "sha256": "50fb3a9f62954fbfdc8fe8f8d0a75df9da176821f7092f0f22b73ff47af64ce1"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/c1-image-crosscheck.json": {
+          "bytes": 1353,
+          "sha256": "7d481dc29de72d7b49ec6f4083c6a3970fe1c071fdb9654836559bebea698157"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/c1-input.ml": {
+          "bytes": 646,
+          "sha256": "767e9aa74ccfb1f9b667173c1acbe3b5f750702a96d61afbbb74e11f9a8a37c0"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/c1-proof.log": {
+          "bytes": 163928,
+          "sha256": "2fa2de1481c0cd26ed068886080b04089851976ed83f8a4e0afed0986b1a6924"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/checker-argv.json": {
+          "bytes": 2070,
+          "sha256": "cb66c7d61d312106dfa062d9884782b7517929b2d8e68e7047589d60b895990f"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/container-inspect.json": {
+          "bytes": 11670,
+          "sha256": "dd3f0a1e5e3aa4304fd8b9c35a36fd93c4f2470f5097919e0a6c2e28819b9684"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/container.cid": {
+          "bytes": 64,
+          "sha256": "0cc35ed0b38c466ebd75d0e955c9f060a51801d7e808c486f7bd8054a9536022"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/gnu-argv.json": {
+          "bytes": 1164,
+          "sha256": "e7a0c5e39c6b9f99166248414ac0918fbd970d5536feb13cada40ad5c0205ae7"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/gnu-container.cid": {
+          "bytes": 64,
+          "sha256": "10e84d39703b40ef3ad04b288c1115afdb31d41244cbd341bb912cda71d702a8"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/gnu-image-inspect.json": {
+          "bytes": 273,
+          "sha256": "497a3ede22549cab6860c9bbafa024d5215d1fc5c43345295c66a006aa06a518"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/gnu-process.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/inputs.json": {
+          "bytes": 620030,
+          "sha256": "8549c32ef92b89a91aeccc23e0ead856cc516d9cb8f005d0d647e2fbf776ca8f"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/invocation.json": {
+          "bytes": 555,
+          "sha256": "25917690c4a11b187a7ddcf04e38702fa4444d6a847e483491d0117d1606eb7a"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/receipt.json": {
+          "bytes": 694,
+          "sha256": "906f25c78721e2b4f28b5faac4dddfcafd0cad201259c1d45d5029c371342d83"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/root-gate-rejection-v2.log": {
+          "bytes": 138,
+          "sha256": "16f121d0314ef0ccc656ff4efd211ec8d5476488a4b58f656195538cfb3a012b"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/root-only-supplier/bootstrap.log": {
+          "bytes": 4481395,
+          "sha256": "f0aeff14a3448e4c955ab8b414048349442592a621063ea9dee197e95055d79a"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/runtime/assurance-audit.json": {
+          "bytes": 37453,
+          "sha256": "d14514596be81ed948031f74424a6882c76e64fc1b48e741103adc8ee651edb8"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/runtime/cleanse-access.json": {
+          "bytes": 15614,
+          "sha256": "1e18d2601b4c305e1f2a82c645e9f86adf2f7bcc6a3b809d3a5b48e832d004cb"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/runtime/cleanse-functional.json": {
+          "bytes": 18799,
+          "sha256": "78419f1594b526a0077d44e09fa981e1c90009c939f01fa65aed858ede3d0ade"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/runtime/cleanse-interface.json": {
+          "bytes": 17849,
+          "sha256": "7e1bd3d3ebb4311b9c2e0360666811cb6ceecd60fbc1d4d94be799a197867e11"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/runtime/cleanse-supplement.json": {
+          "bytes": 39214,
+          "sha256": "116e352918accab103bd4c516c9b3833ec42403fc2d7e304e30e1c577f4e53ad"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/runtime/e3-interface.json": {
+          "bytes": 364035,
+          "sha256": "eeac46ea3128f2c14c9812c1003be789c6d61c6415d2ea4df3fd536f276b678c"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/runtime/execution-qualification.json": {
+          "bytes": 19199,
+          "sha256": "06d1e98d0ab7cadc95eee3260a89d5c4f6e61ccfd7c8e3fdf219af4bd1c67d64"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/runtime/full-binding-audit.json": {
+          "bytes": 7515,
+          "sha256": "058ca82bbe13afce45cdec08dc26194e1f87d2136f0631e69f99a6cbfc41f692"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/runtime/gnu/disassembly.txt": {
+          "bytes": 4907,
+          "sha256": "eb086329f736e3ae053ce2cd142e86731a8c9c1c12cae9b6d3b87e4f74b8bf81"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/runtime/gnu/gnu-plt.bin": {
+          "bytes": 32,
+          "sha256": "fd6caa945ecbf7fb2442bc28b1789f3f7db2d665a40ebc307b3eba899951b10a"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/runtime/gnu/gnu-text.bin": {
+          "bytes": 214,
+          "sha256": "9abde9452672ddc910c99d6b1d20aa5ee7fd3227cc4c37a3e8ab703a7a709c96"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/runtime/gnu/readelf.txt": {
+          "bytes": 11502,
+          "sha256": "bfb60afcdb05f3e8a58d654ed7a8cba2c3e0f6f453ca57b612479c653ab1aee4"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/runtime/loaded-witness-theorems.json": {
+          "bytes": 4836,
+          "sha256": "c7e19d354bac8a4a94fdfb9a294473feba57ac31ef17a880ecb11344f49ad5ad"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/runtime/model-qualification.json": {
+          "bytes": 12991,
+          "sha256": "0823472bc8aac9cb8e04b48473e12bb77116b8251a94709929211c1b95095765"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/runtime/observation-audit.json": {
+          "bytes": 17116,
+          "sha256": "d895e2b937fb5a5bf2f3de5a35ac373779f383fa157b04171cee6ec977276510"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/runtime/public-interface-audit.json": {
+          "bytes": 1943,
+          "sha256": "ddd1ebf4a0e9e2bd1dfb7d930df565fd1449ab7c3c13de6ea81eed10d605eb65"
+        },
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3/runtime/public-trace-audit.json": {
+          "bytes": 1040,
+          "sha256": "599bc33fac6ea1a99c8e9a01df57e3aaba9837318e19c44e6bdc46e413d1f0a2"
+        }
+      },
+      "roots": [
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v1",
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v2",
+        "development/approved-plan/reusable-assurance-v1/runs/c1-fresh-final-v3"
+      ]
+    },
+    "C2_final_controls": {
+      "file_count": 60,
+      "files": {
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/contract-model-pin/argv.json": {
+          "bytes": 1161,
+          "sha256": "cfd49eb8983cc8fd70d8bf93186195018e2010819944dcaed727b610ec5a2f61"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/contract-model-pin/attempt/receipt.json": {
+          "bytes": 407,
+          "sha256": "3f11baf18de2582ad7559698d2e93fc6237205542539abbc6a904f846a2a5d7d"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/contract-model-pin/mutation.json": {
+          "bytes": 394,
+          "sha256": "6cda9ea8899d9fd9c07a1190610273355b5b974103b5afc71080367ec91ac9e9"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/contract-model-pin/process.log": {
+          "bytes": 136,
+          "sha256": "c4d2bac10ef52417a3dbd3d51433021283523de762958e7c21f01d1b645df8c9"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/executed-ELF-byte/argv.json": {
+          "bytes": 1157,
+          "sha256": "947772778bf8db879389ef655097e028d359292e6459f4541fca968d729c7423"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/executed-ELF-byte/attempt/receipt.json": {
+          "bytes": 408,
+          "sha256": "f0ad48517532572eeb420dd3d078cc625bbcafee57571f3276afe399d35b652d"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/executed-ELF-byte/mutation.json": {
+          "bytes": 394,
+          "sha256": "326601664250059dc3f6b8303bd01c37ffc32569c07e2161de8776f6ab002a03"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/executed-ELF-byte/process.log": {
+          "bytes": 137,
+          "sha256": "c0682e90133533a8ef999a38dbe3aca50ca62f81c9784aee81e499cd4a5c9311"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/missing-caller-proof-with-stale-success/argv.json": {
+          "bytes": 1245,
+          "sha256": "e248cac7f6753b8ef0155ae9f6208889c2fe8f29683030c2ea9196bd01ea1b5b"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/missing-caller-proof-with-stale-success/attempt/receipt.json": {
+          "bytes": 418,
+          "sha256": "1e947a0c56d0f169553fe9cdbc7facaa1665277b467ac180a006b651da6bf624"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/missing-caller-proof-with-stale-success/mutation.json": {
+          "bytes": 364,
+          "sha256": "aed070823205893aa7b4a0fbb6be4425f514aede84072643cf93fa97b417570a"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/missing-caller-proof-with-stale-success/process.log": {
+          "bytes": 147,
+          "sha256": "c575640800ad4f553146447e58a64714e3aa853ae81d03a7c35afbe651474d60"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/missing-supplier-public-interface-dependency/argv.json": {
+          "bytes": 1265,
+          "sha256": "413c3c2c8d2277bff8a9cfc91cb2f5bc616cd319b64a21ff2d415e5981ff6a6d"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/missing-supplier-public-interface-dependency/attempt/receipt.json": {
+          "bytes": 358,
+          "sha256": "2f3765ff4ef291724a49d719bd6b7c048ce1a86e5f4090acf79fc714920fe463"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/missing-supplier-public-interface-dependency/mutation.json": {
+          "bytes": 310,
+          "sha256": "c6ad06a902a25470a85890b58af28d99c2890647c0e9930eeeab8f8a179f0b62"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/missing-supplier-public-interface-dependency/process.log": {
+          "bytes": 87,
+          "sha256": "051cd9c2bc8b2f0714f236f9d5c3efd680ccd33545209e0ca0f9982c4f620841"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/modeled-GOT-target/argv.json": {
+          "bytes": 1161,
+          "sha256": "8ae7662dc69bba2bfda4df28b2ec3f256a5fb718d4850136326168e5bccd0611"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/modeled-GOT-target/attempt/receipt.json": {
+          "bytes": 404,
+          "sha256": "9895f2e128ab86be70bc859f6a02dbaf5d5769dc93300b33e6182bc00aefb9ee"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/modeled-GOT-target/mutation.json": {
+          "bytes": 391,
+          "sha256": "526d69c03101922b1f1977973f7a9405c528cb3e0b30ab49a7df53b84cf8ca07"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/modeled-GOT-target/process.log": {
+          "bytes": 133,
+          "sha256": "51fd9e7276ac15f24c0c8776d7636d19e9fda58deeb6a216c345ad4bd72ea504"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1/receipt.json": {
+          "bytes": 4366,
+          "sha256": "f77060712704c4613ddba8e234bc7a4d4f502a9b9a2547e236dbee09917cc6ae"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/argv.json": {
+          "bytes": 1028,
+          "sha256": "cb965152aa1c5fa225ad03748a8d4f879ceeba5a3c7fa9c56cb24a37145fa77e"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/bootstrap-input.ml": {
+          "bytes": 543,
+          "sha256": "b143975b0af15161c2f80e22915cfc4ad671a0e02ee7ea5733b68c54d6172dfc"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/c2-image-crosscheck.json": {
+          "bytes": 1590,
+          "sha256": "e71e24df00eab86fdb68e65d438006318462a42cc33e0014f6404cdfa3168534"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/c2-input.ml": {
+          "bytes": 1068,
+          "sha256": "457510d82be56ab7574588b5a72ae6b90862f98f8dfbf5e379f45204cdd61266"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/c2-proof.log": {
+          "bytes": 48524,
+          "sha256": "461100fe570a20a7e553a4395d129f842ead280bd21428cd4d04ced7698941de"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/checker-argv.json": {
+          "bytes": 2203,
+          "sha256": "556a87a8abd11e70eca871118e4fa085126521844adbd5c80b08b0386f39594f"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/container-inspect.json": {
+          "bytes": 11922,
+          "sha256": "90d391ecb94ea49ccc58de2fbea0ae0d8398f8fce95995a50bdbecc767024f04"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/container.cid": {
+          "bytes": 64,
+          "sha256": "a0c660ee0a4904b500c4815b9af6121b51f3782b7f324f2961b0324c62298907"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/gnu-argv.json": {
+          "bytes": 1221,
+          "sha256": "4a6c8f026a408e0e08ab3ccc767c96e71a4241dcb083dbad4041c94b1a99ee6f"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/gnu-container.cid": {
+          "bytes": 64,
+          "sha256": "d239b8618d15242962a1f64bdae5093713741fec895a067f8227aab360f2eb52"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/gnu-image-inspect.json": {
+          "bytes": 273,
+          "sha256": "497a3ede22549cab6860c9bbafa024d5215d1fc5c43345295c66a006aa06a518"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/gnu-process.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/inputs.json": {
+          "bytes": 633788,
+          "sha256": "5e1192455daa54f38aebeb6cdb9e1f045d562e583bd46b5474cb8e25fe517f9b"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/invocation.json": {
+          "bytes": 571,
+          "sha256": "8b2213f70f409401994544248ac5e934a7299b5595a46ff93abf2e6f1a4982b6"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/receipt.json": {
+          "bytes": 1896,
+          "sha256": "37afc6d48989606cc701b1debf5988546f792d0296770ed41aa160d36a6107b5"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/root-only-supplier/bootstrap.log": {
+          "bytes": 4481705,
+          "sha256": "ada2b9608a13ad161e78cc7635efa134787f5bb123c8ccff9220a6e456120423"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/root-only-supplier/host-audit-stderr.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/root-only-supplier/host-audit-stdout.json": {
+          "bytes": 605531,
+          "sha256": "95e8c4d8616bec03ee0ab176643bde1bb315b573a1218d92a0a7f10d42c7b9ad"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/ambient-after-supplier-v1.json": {
+          "bytes": 7455,
+          "sha256": "21fef2b35f7c8692dfae048f8c6a7a6947254c32f11bde11b6bb49189c54359b"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/ambient-before-supplier-v1.json": {
+          "bytes": 7442,
+          "sha256": "46bc62fb570719b92f442750cb68e25fd71098347afc470818c899d51145ccfa"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/assurance-audit.json": {
+          "bytes": 37453,
+          "sha256": "d14514596be81ed948031f74424a6882c76e64fc1b48e741103adc8ee651edb8"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/cleanse-access.json": {
+          "bytes": 15614,
+          "sha256": "1e18d2601b4c305e1f2a82c645e9f86adf2f7bcc6a3b809d3a5b48e832d004cb"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/cleanse-functional.json": {
+          "bytes": 18799,
+          "sha256": "78419f1594b526a0077d44e09fa981e1c90009c939f01fa65aed858ede3d0ade"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/cleanse-interface.json": {
+          "bytes": 17849,
+          "sha256": "7e1bd3d3ebb4311b9c2e0360666811cb6ceecd60fbc1d4d94be799a197867e11"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/cleanse-supplement.json": {
+          "bytes": 39214,
+          "sha256": "116e352918accab103bd4c516c9b3833ec42403fc2d7e304e30e1c577f4e53ad"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/e3-interface.json": {
+          "bytes": 364035,
+          "sha256": "eeac46ea3128f2c14c9812c1003be789c6d61c6415d2ea4df3fd536f276b678c"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/execution-qualification.json": {
+          "bytes": 19199,
+          "sha256": "06d1e98d0ab7cadc95eee3260a89d5c4f6e61ccfd7c8e3fdf219af4bd1c67d64"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/full-binding-audit.json": {
+          "bytes": 7515,
+          "sha256": "058ca82bbe13afce45cdec08dc26194e1f87d2136f0631e69f99a6cbfc41f692"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/gnu/disassembly.txt": {
+          "bytes": 5987,
+          "sha256": "5d1dd659c1be4b14ac69e61e9867fd92a1c810d44bd14243f230723e76af4411"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/gnu/gnu-plt.bin": {
+          "bytes": 48,
+          "sha256": "928433cef64ae27988046f464101f2ca903b67ebe6bb70d1300c439928a19ad9"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/gnu/gnu-text.bin": {
+          "bytes": 251,
+          "sha256": "bc69029b0a56f3c94ea0ee1aa7a57457a98ad1bf40568decc2ca84a5757268f8"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/gnu/readelf.txt": {
+          "bytes": 11823,
+          "sha256": "dfd988c169d09c7964a144b4c14a5e8c5fdceaab7c3747da96c4e35ec1205112"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/loaded-witness-theorems.json": {
+          "bytes": 4836,
+          "sha256": "c7e19d354bac8a4a94fdfb9a294473feba57ac31ef17a880ecb11344f49ad5ad"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/model-qualification.json": {
+          "bytes": 12991,
+          "sha256": "0823472bc8aac9cb8e04b48473e12bb77116b8251a94709929211c1b95095765"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/observation-audit.json": {
+          "bytes": 17116,
+          "sha256": "d895e2b937fb5a5bf2f3de5a35ac373779f383fa157b04171cee6ec977276510"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/public-interface-audit.json": {
+          "bytes": 1943,
+          "sha256": "ddd1ebf4a0e9e2bd1dfb7d930df565fd1449ab7c3c13de6ea81eed10d605eb65"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/runtime/public-trace-audit.json": {
+          "bytes": 1040,
+          "sha256": "599bc33fac6ea1a99c8e9a01df57e3aaba9837318e19c44e6bdc46e413d1f0a2"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/process.log": {
+          "bytes": 48753,
+          "sha256": "820db794a844b870c9848853f6f8aa912dbebc09c77952c46e12b1b1d906ac96"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/receipt.json": {
+          "bytes": 949,
+          "sha256": "b4020ee5019de383408fc9c249a52d139ea9ba96cb6da4518910930aad0bf6eb"
+        }
+      },
+      "roots": [
+        "development/approved-plan/reusable-assurance-c2-v1/negative-controls/c2-controls-final-v1",
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1"
+      ]
+    },
+    "C2_final_positive": {
+      "file_count": 37,
+      "files": {
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/bootstrap-input.ml": {
+          "bytes": 543,
+          "sha256": "b143975b0af15161c2f80e22915cfc4ad671a0e02ee7ea5733b68c54d6172dfc"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/c2-image-crosscheck.json": {
+          "bytes": 1590,
+          "sha256": "e71e24df00eab86fdb68e65d438006318462a42cc33e0014f6404cdfa3168534"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/c2-input.ml": {
+          "bytes": 955,
+          "sha256": "6a5228630f4b85378c054080e1b234aaa615d46bf4b0ca5b5698afdb1ba234d0"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/c2-proof.log": {
+          "bytes": 276064,
+          "sha256": "e8f33e56c9aad643df752e7a17a0b1d34a7a505f2c7aaeda62a0591c6bd1c2c6"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/checker-argv.json": {
+          "bytes": 2091,
+          "sha256": "43fff2963e32314cf78943d068e361863264cf8835b4bb8338144399da22a81d"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/container-inspect.json": {
+          "bytes": 11712,
+          "sha256": "02bb2952d51421752c6ef6ac85cf4ad3b08ab4ee7016373c4a20b81736cddd6b"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/container.cid": {
+          "bytes": 64,
+          "sha256": "2e2253c455a8435165d73d34fc042ee8be6b1f03993f9e7f4e31d0e66543171c"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/gnu-argv.json": {
+          "bytes": 1173,
+          "sha256": "13048dab9632f2daa08c7768f9178f8b6990dfa5b3773ca1d19b7f18d06a8cc5"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/gnu-container.cid": {
+          "bytes": 64,
+          "sha256": "627fbc293286fab51c6daf0a5b8556f7a706f6712420353f3c3159e862db0b49"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/gnu-image-inspect.json": {
+          "bytes": 273,
+          "sha256": "497a3ede22549cab6860c9bbafa024d5215d1fc5c43345295c66a006aa06a518"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/gnu-process.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/inputs.json": {
+          "bytes": 633788,
+          "sha256": "5e1192455daa54f38aebeb6cdb9e1f045d562e583bd46b5474cb8e25fe517f9b"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/invocation.json": {
+          "bytes": 555,
+          "sha256": "2cf2096313fa8f4f949401f675ac97ada097d1d8b98d8182e5170c74d4d07a55"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/receipt.json": {
+          "bytes": 2052,
+          "sha256": "b92a07f9aff1f575411d218b1eb0cf8cf4ee83c48e930cf9640fb921e575883f"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/root-only-supplier/bootstrap.log": {
+          "bytes": 4481720,
+          "sha256": "41a57d37837157236b23e0095475ff05ca9d7839e6920c1bc02678964062d437"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/root-only-supplier/host-audit-stderr.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/root-only-supplier/host-audit-stdout.json": {
+          "bytes": 605531,
+          "sha256": "95e8c4d8616bec03ee0ab176643bde1bb315b573a1218d92a0a7f10d42c7b9ad"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/ambient-after-supplier-v1.json": {
+          "bytes": 7455,
+          "sha256": "21fef2b35f7c8692dfae048f8c6a7a6947254c32f11bde11b6bb49189c54359b"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/ambient-before-supplier-v1.json": {
+          "bytes": 7442,
+          "sha256": "46bc62fb570719b92f442750cb68e25fd71098347afc470818c899d51145ccfa"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/assurance-audit.json": {
+          "bytes": 37453,
+          "sha256": "d14514596be81ed948031f74424a6882c76e64fc1b48e741103adc8ee651edb8"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/c2-live-audit-v1.json": {
+          "bytes": 265621,
+          "sha256": "ff8f3c4d916642f66924d85a7f416e20ee69d36a62d9fba151d87db92e83e0bf"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/cleanse-access.json": {
+          "bytes": 15614,
+          "sha256": "1e18d2601b4c305e1f2a82c645e9f86adf2f7bcc6a3b809d3a5b48e832d004cb"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/cleanse-functional.json": {
+          "bytes": 18799,
+          "sha256": "78419f1594b526a0077d44e09fa981e1c90009c939f01fa65aed858ede3d0ade"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/cleanse-interface.json": {
+          "bytes": 17849,
+          "sha256": "7e1bd3d3ebb4311b9c2e0360666811cb6ceecd60fbc1d4d94be799a197867e11"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/cleanse-supplement.json": {
+          "bytes": 39214,
+          "sha256": "116e352918accab103bd4c516c9b3833ec42403fc2d7e304e30e1c577f4e53ad"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/e3-interface.json": {
+          "bytes": 364035,
+          "sha256": "eeac46ea3128f2c14c9812c1003be789c6d61c6415d2ea4df3fd536f276b678c"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/execution-qualification.json": {
+          "bytes": 19199,
+          "sha256": "06d1e98d0ab7cadc95eee3260a89d5c4f6e61ccfd7c8e3fdf219af4bd1c67d64"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/full-binding-audit.json": {
+          "bytes": 7515,
+          "sha256": "058ca82bbe13afce45cdec08dc26194e1f87d2136f0631e69f99a6cbfc41f692"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/gnu/disassembly.txt": {
+          "bytes": 5987,
+          "sha256": "5d1dd659c1be4b14ac69e61e9867fd92a1c810d44bd14243f230723e76af4411"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/gnu/gnu-plt.bin": {
+          "bytes": 48,
+          "sha256": "928433cef64ae27988046f464101f2ca903b67ebe6bb70d1300c439928a19ad9"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/gnu/gnu-text.bin": {
+          "bytes": 251,
+          "sha256": "bc69029b0a56f3c94ea0ee1aa7a57457a98ad1bf40568decc2ca84a5757268f8"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/gnu/readelf.txt": {
+          "bytes": 11823,
+          "sha256": "dfd988c169d09c7964a144b4c14a5e8c5fdceaab7c3747da96c4e35ec1205112"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/loaded-witness-theorems.json": {
+          "bytes": 4836,
+          "sha256": "c7e19d354bac8a4a94fdfb9a294473feba57ac31ef17a880ecb11344f49ad5ad"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/model-qualification.json": {
+          "bytes": 12991,
+          "sha256": "0823472bc8aac9cb8e04b48473e12bb77116b8251a94709929211c1b95095765"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/observation-audit.json": {
+          "bytes": 17116,
+          "sha256": "d895e2b937fb5a5bf2f3de5a35ac373779f383fa157b04171cee6ec977276510"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/public-interface-audit.json": {
+          "bytes": 1943,
+          "sha256": "ddd1ebf4a0e9e2bd1dfb7d930df565fd1449ab7c3c13de6ea81eed10d605eb65"
+        },
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/runtime/public-trace-audit.json": {
+          "bytes": 1040,
+          "sha256": "599bc33fac6ea1a99c8e9a01df57e3aaba9837318e19c44e6bdc46e413d1f0a2"
+        }
+      },
+      "roots": [
+        "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1"
+      ]
+    },
+    "C3_final_controls": {
+      "file_count": 61,
+      "files": {
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/argv.json": {
+          "bytes": 996,
+          "sha256": "a6301fb756be2f518c3650a2157a658cef6d90605c0a5f07b9ef58b369463b5f"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/bootstrap-input.ml": {
+          "bytes": 534,
+          "sha256": "b00f5542473833b407cf82989fcd80980297cb8e234b355709914e6c2a5a4948"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/c3-image-crosscheck.json": {
+          "bytes": 1807,
+          "sha256": "6f840527d7a9d7b00b43c5071871df602ce7eefe4ac73fc491d2293883cdaa66"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/c3-input.ml": {
+          "bytes": 1208,
+          "sha256": "43f3d9c563639b0b1ac25eb9b1a36ed7a2314c0034724f3a029b32a6c776b9a1"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/c3-proof.log": {
+          "bytes": 128676,
+          "sha256": "3343fb97c60246f7259fbf795104dcc53d99e31e2ab2e6583abe870632310f67"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/checker-argv.json": {
+          "bytes": 2119,
+          "sha256": "a3dcf8db4abcddb4a2147b15a390d04f7b5b30479e0430fa27635e92f3cdd083"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/container-inspect.json": {
+          "bytes": 11760,
+          "sha256": "b267ba6335f1653ef26f3c3272ed65b1f886e2b286e7d3afffb250b8d4f585e8"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/container.cid": {
+          "bytes": 64,
+          "sha256": "065faeb729af409691929dcfdc115b67e1706123d19535e4d406f011a9671ee5"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/gnu-argv.json": {
+          "bytes": 1184,
+          "sha256": "ee14a2ce4d85098cf33b7e465e8355fe80e48a63485d330645676e92f1860c99"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/gnu-container.cid": {
+          "bytes": 64,
+          "sha256": "374d04e0c9f4d3a33ad2dcd814f9c98c774f270c7b619a62e3d22692f839f757"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/gnu-image-inspect.json": {
+          "bytes": 273,
+          "sha256": "497a3ede22549cab6860c9bbafa024d5215d1fc5c43345295c66a006aa06a518"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/gnu-process.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/inputs.json": {
+          "bytes": 634561,
+          "sha256": "92356a2a9baf7b8c1c84d10f4414d9f1c28ef82b79b96717ddee1d136a1ac7cf"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/invocation.json": {
+          "bytes": 695,
+          "sha256": "e98f2f53691acf935ae502eb9aaea8c7e830495787d14eb067b980ecbc525bbe"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/receipt.json": {
+          "bytes": 2416,
+          "sha256": "51f5efd2da60459639fe923784cb9f07225aeff1cb9b1eefe8b36c9dec08ae5e"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/root-only-supplier/bootstrap.log": {
+          "bytes": 4481739,
+          "sha256": "acc4e5c1b277759bb1937ec31ca6d491ef3a052922af4d4c0f459e891b207f07"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/root-only-supplier/host-audit-stderr.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/root-only-supplier/host-audit-stdout.json": {
+          "bytes": 605531,
+          "sha256": "95e8c4d8616bec03ee0ab176643bde1bb315b573a1218d92a0a7f10d42c7b9ad"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/ambient-after-supplier-v1.json": {
+          "bytes": 7455,
+          "sha256": "3d09d2342e4f7dc47139672895f54bdd6e1e2d9827863d351fd2c912260864cc"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/ambient-before-supplier-v1.json": {
+          "bytes": 7442,
+          "sha256": "94ed7b23d762b3c093673f5e5b764ea4d7dcbff38754886f93fa97cfd1449326"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/assurance-audit.json": {
+          "bytes": 37453,
+          "sha256": "d14514596be81ed948031f74424a6882c76e64fc1b48e741103adc8ee651edb8"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/candidate-layer-live-audit-v1.json": {
+          "bytes": 18612,
+          "sha256": "69cb8e2a5829f0e14d0d44819afc48673dd63ddfb04c61d9ffa76e39b7192b65"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/cleanse-access.json": {
+          "bytes": 15614,
+          "sha256": "1e18d2601b4c305e1f2a82c645e9f86adf2f7bcc6a3b809d3a5b48e832d004cb"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/cleanse-functional.json": {
+          "bytes": 18799,
+          "sha256": "78419f1594b526a0077d44e09fa981e1c90009c939f01fa65aed858ede3d0ade"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/cleanse-interface.json": {
+          "bytes": 17849,
+          "sha256": "7e1bd3d3ebb4311b9c2e0360666811cb6ceecd60fbc1d4d94be799a197867e11"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/cleanse-supplement.json": {
+          "bytes": 39214,
+          "sha256": "116e352918accab103bd4c516c9b3833ec42403fc2d7e304e30e1c577f4e53ad"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/e3-interface.json": {
+          "bytes": 364035,
+          "sha256": "eeac46ea3128f2c14c9812c1003be789c6d61c6415d2ea4df3fd536f276b678c"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/execution-qualification.json": {
+          "bytes": 19199,
+          "sha256": "06d1e98d0ab7cadc95eee3260a89d5c4f6e61ccfd7c8e3fdf219af4bd1c67d64"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/full-binding-audit.json": {
+          "bytes": 7515,
+          "sha256": "058ca82bbe13afce45cdec08dc26194e1f87d2136f0631e69f99a6cbfc41f692"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/gnu/disassembly.txt": {
+          "bytes": 6395,
+          "sha256": "914bc32090e69dcdcda48c94fe06842ba69854887e90ec32f99f52a9bd4d53c1"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/gnu/gnu-plt.bin": {
+          "bytes": 48,
+          "sha256": "928433cef64ae27988046f464101f2ca903b67ebe6bb70d1300c439928a19ad9"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/gnu/gnu-text.bin": {
+          "bytes": 281,
+          "sha256": "9dde19cfb740d9711f104db1be0d9796818ceff5796fa523e05a93f4194436e8"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/gnu/readelf.txt": {
+          "bytes": 11457,
+          "sha256": "d719bb0f9b6de9d3c39f63305a7d99b6fc7080f897698fbd997e774dac92feca"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/loaded-witness-theorems.json": {
+          "bytes": 4836,
+          "sha256": "c7e19d354bac8a4a94fdfb9a294473feba57ac31ef17a880ecb11344f49ad5ad"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/model-qualification.json": {
+          "bytes": 12991,
+          "sha256": "0823472bc8aac9cb8e04b48473e12bb77116b8251a94709929211c1b95095765"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/observation-audit.json": {
+          "bytes": 17116,
+          "sha256": "d895e2b937fb5a5bf2f3de5a35ac373779f383fa157b04171cee6ec977276510"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/public-interface-audit.json": {
+          "bytes": 1943,
+          "sha256": "ddd1ebf4a0e9e2bd1dfb7d930df565fd1449ab7c3c13de6ea81eed10d605eb65"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/attempt/runtime/public-trace-audit.json": {
+          "bytes": 1040,
+          "sha256": "599bc33fac6ea1a99c8e9a01df57e3aaba9837318e19c44e6bdc46e413d1f0a2"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/process.log": {
+          "bytes": 128893,
+          "sha256": "3ebc8b664110a142dc5081246093927d29ceef7be672fbe29782569b500cfa04"
+        },
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1/receipt.json": {
+          "bytes": 959,
+          "sha256": "07230bd574e316befce595753fd2d0c0f962affef01982ede23ffe8660890d66"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/contract-model-pin/argv.json": {
+          "bytes": 1053,
+          "sha256": "d7c60cd00aa3adf8829cca554545faec337887ed0beb698728159e25a70c89fd"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/contract-model-pin/attempt/receipt.json": {
+          "bytes": 531,
+          "sha256": "a691658443740b82da678631c1c7fbaadd2ac1b68174ce53d8e73ec7e568311d"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/contract-model-pin/mutation.json": {
+          "bytes": 394,
+          "sha256": "6cda9ea8899d9fd9c07a1190610273355b5b974103b5afc71080367ec91ac9e9"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/contract-model-pin/process.log": {
+          "bytes": 136,
+          "sha256": "85a2b60157430ebdd198c9eb6cef665920d482f8a8168fc27027e256754f18ad"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/executed-ELF-byte/argv.json": {
+          "bytes": 1049,
+          "sha256": "75ca1b1a1317546926e939ae4a8ef5a1c0904e167ebfbef7fee98bc17692602e"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/executed-ELF-byte/attempt/receipt.json": {
+          "bytes": 531,
+          "sha256": "e93419803fb2c78821fcb6d2ad45edb132efbf348b37a8021e5db71e99aa3e38"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/executed-ELF-byte/mutation.json": {
+          "bytes": 393,
+          "sha256": "de6f8c89e49d4e31ea0b81672c9340faa6721aafe1847f40a2164ce064e2edbd"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/executed-ELF-byte/process.log": {
+          "bytes": 136,
+          "sha256": "e2b7d84bab084caec600dffd39b0a77a6f4309d6888812a5697c714ad36b084e"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/missing-caller-proof-with-stale-success/argv.json": {
+          "bytes": 1137,
+          "sha256": "beb7ce81ec71a67db8966ccc5c030149e1267d1dab84a86cf11481132cfe5a8a"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/missing-caller-proof-with-stale-success/attempt/receipt.json": {
+          "bytes": 521,
+          "sha256": "7ad1948a6ae8ba89feb3d82375db3225a5b1aac28c0137b33500896955aab9ab"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/missing-caller-proof-with-stale-success/mutation.json": {
+          "bytes": 343,
+          "sha256": "71386bfbaf0f403510cabe754d60413e311743efda1099267a397f0c34cd5567"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/missing-caller-proof-with-stale-success/process.log": {
+          "bytes": 126,
+          "sha256": "685f68e27548c4471bde5576c76b5d3b0598532127b1ce99d7682e362b8c9eb8"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/missing-supplier-public-interface-dependency/argv.json": {
+          "bytes": 1157,
+          "sha256": "b6d4282b31ae032c7b91dcfd750fc1126e763f0930ba5b9663056ec686a8b8dc"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/missing-supplier-public-interface-dependency/attempt/receipt.json": {
+          "bytes": 482,
+          "sha256": "65ee465ac91644fe820211e35529ca70359a06db7c92897a0062885ee1b6199b"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/missing-supplier-public-interface-dependency/mutation.json": {
+          "bytes": 310,
+          "sha256": "c6ad06a902a25470a85890b58af28d99c2890647c0e9930eeeab8f8a179f0b62"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/missing-supplier-public-interface-dependency/process.log": {
+          "bytes": 87,
+          "sha256": "60acf5f79f91641b3332f63ce5e00b6d85b3f45911f50b732d73edb11b48f92a"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/modeled-GOT-target/argv.json": {
+          "bytes": 1053,
+          "sha256": "1ab4409aa6bee79fb105cd5ece9c96d7f7fb62a939358dbdd577aea4b4a656d2"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/modeled-GOT-target/attempt/receipt.json": {
+          "bytes": 531,
+          "sha256": "615cfdf3621e29d77831484dd556bfc89b8717210ec88e39bfa2e0a597241fbd"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/modeled-GOT-target/mutation.json": {
+          "bytes": 394,
+          "sha256": "7a45a01158a3b467fd9190f8ed5a479d6d396aca8a95b99bac27067029934aa2"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/modeled-GOT-target/process.log": {
+          "bytes": 136,
+          "sha256": "668ae43aa9701ae7d18a37ac3462f01655e6c89f8abcffd47e47d475f2cce776"
+        },
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1/receipt.json": {
+          "bytes": 4328,
+          "sha256": "4a90752080a0d1642c56d897711536919da9beeda4eab2c97e9682b1323cf793"
+        }
+      },
+      "roots": [
+        "development/approved-plan/c3-successor-v1/runs/controls-final-v1",
+        "development/approved-plan/c3-successor-v1/runs/binding-probe-final-v1"
+      ]
+    },
+    "C3_final_positive": {
+      "file_count": 38,
+      "files": {
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/bootstrap-input.ml": {
+          "bytes": 534,
+          "sha256": "b00f5542473833b407cf82989fcd80980297cb8e234b355709914e6c2a5a4948"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/c3-image-crosscheck.json": {
+          "bytes": 1807,
+          "sha256": "6f840527d7a9d7b00b43c5071871df602ce7eefe4ac73fc491d2293883cdaa66"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/c3-input.ml": {
+          "bytes": 1095,
+          "sha256": "62f56674c3e1152a303a2f471cc82a081a4789c10d08f42411296e4029ba18d1"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/c3-proof.log": {
+          "bytes": 514228,
+          "sha256": "909832bf5a02099ce501b9c038b29006c4ffccc13a0eb1dd9773549798c8d737"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/checker-argv.json": {
+          "bytes": 2007,
+          "sha256": "38990d42e23a9e35444ff20d90521b7934d8d91d71d2068cd81aceec5a75581f"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/container-inspect.json": {
+          "bytes": 11553,
+          "sha256": "b378191f0d1d6b64d953fc4b47501c34660eaca6c90c01b9334307c1dcf19613"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/container.cid": {
+          "bytes": 64,
+          "sha256": "98879b36450b5e725af51bf3efdff56664d3e34ddc63fd29ffa0511700d1b719"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/gnu-argv.json": {
+          "bytes": 1136,
+          "sha256": "c2297c0ae54becb08c5c6f70be6756833a8e1fd41363adbe4735dd50a067e7d2"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/gnu-container.cid": {
+          "bytes": 64,
+          "sha256": "4e1729285c3c450927a60191a634cb5e64a07b1bfc70998cc12a2360a32a7e9d"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/gnu-image-inspect.json": {
+          "bytes": 273,
+          "sha256": "497a3ede22549cab6860c9bbafa024d5215d1fc5c43345295c66a006aa06a518"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/gnu-process.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/inputs.json": {
+          "bytes": 634561,
+          "sha256": "92356a2a9baf7b8c1c84d10f4414d9f1c28ef82b79b96717ddee1d136a1ac7cf"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/invocation.json": {
+          "bytes": 679,
+          "sha256": "10b99e36d4a11e89a20b9ec12009bc6697a1551e0bc7b5bbfff9ccc841ee566b"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/receipt.json": {
+          "bytes": 2559,
+          "sha256": "ca9a4a58417a54dd8f4c9a839471943430fc3c1f11c95a7c0c55fb08643d76ee"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/root-only-supplier/bootstrap.log": {
+          "bytes": 4481803,
+          "sha256": "aad84cada159fb46b78553f73232c6785593e68770a5612676d4333b38d08ba3"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/root-only-supplier/host-audit-stderr.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/root-only-supplier/host-audit-stdout.json": {
+          "bytes": 605531,
+          "sha256": "95e8c4d8616bec03ee0ab176643bde1bb315b573a1218d92a0a7f10d42c7b9ad"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/ambient-after-supplier-v1.json": {
+          "bytes": 7455,
+          "sha256": "3d09d2342e4f7dc47139672895f54bdd6e1e2d9827863d351fd2c912260864cc"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/ambient-before-supplier-v1.json": {
+          "bytes": 7442,
+          "sha256": "94ed7b23d762b3c093673f5e5b764ea4d7dcbff38754886f93fa97cfd1449326"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/assurance-audit.json": {
+          "bytes": 37453,
+          "sha256": "d14514596be81ed948031f74424a6882c76e64fc1b48e741103adc8ee651edb8"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/c3-live-audit-v1.json": {
+          "bytes": 231395,
+          "sha256": "7b67bb6f8a4660a16b8523a5adbfa9b731e46e85837cfa834d68d4166423e35f"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/candidate-layer-live-audit-v1.json": {
+          "bytes": 18612,
+          "sha256": "69cb8e2a5829f0e14d0d44819afc48673dd63ddfb04c61d9ffa76e39b7192b65"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/cleanse-access.json": {
+          "bytes": 15614,
+          "sha256": "1e18d2601b4c305e1f2a82c645e9f86adf2f7bcc6a3b809d3a5b48e832d004cb"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/cleanse-functional.json": {
+          "bytes": 18799,
+          "sha256": "78419f1594b526a0077d44e09fa981e1c90009c939f01fa65aed858ede3d0ade"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/cleanse-interface.json": {
+          "bytes": 17849,
+          "sha256": "7e1bd3d3ebb4311b9c2e0360666811cb6ceecd60fbc1d4d94be799a197867e11"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/cleanse-supplement.json": {
+          "bytes": 39214,
+          "sha256": "116e352918accab103bd4c516c9b3833ec42403fc2d7e304e30e1c577f4e53ad"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/e3-interface.json": {
+          "bytes": 364035,
+          "sha256": "eeac46ea3128f2c14c9812c1003be789c6d61c6415d2ea4df3fd536f276b678c"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/execution-qualification.json": {
+          "bytes": 19199,
+          "sha256": "06d1e98d0ab7cadc95eee3260a89d5c4f6e61ccfd7c8e3fdf219af4bd1c67d64"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/full-binding-audit.json": {
+          "bytes": 7515,
+          "sha256": "058ca82bbe13afce45cdec08dc26194e1f87d2136f0631e69f99a6cbfc41f692"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/gnu/disassembly.txt": {
+          "bytes": 6395,
+          "sha256": "914bc32090e69dcdcda48c94fe06842ba69854887e90ec32f99f52a9bd4d53c1"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/gnu/gnu-plt.bin": {
+          "bytes": 48,
+          "sha256": "928433cef64ae27988046f464101f2ca903b67ebe6bb70d1300c439928a19ad9"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/gnu/gnu-text.bin": {
+          "bytes": 281,
+          "sha256": "9dde19cfb740d9711f104db1be0d9796818ceff5796fa523e05a93f4194436e8"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/gnu/readelf.txt": {
+          "bytes": 11457,
+          "sha256": "d719bb0f9b6de9d3c39f63305a7d99b6fc7080f897698fbd997e774dac92feca"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/loaded-witness-theorems.json": {
+          "bytes": 4836,
+          "sha256": "c7e19d354bac8a4a94fdfb9a294473feba57ac31ef17a880ecb11344f49ad5ad"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/model-qualification.json": {
+          "bytes": 12991,
+          "sha256": "0823472bc8aac9cb8e04b48473e12bb77116b8251a94709929211c1b95095765"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/observation-audit.json": {
+          "bytes": 17116,
+          "sha256": "d895e2b937fb5a5bf2f3de5a35ac373779f383fa157b04171cee6ec977276510"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/public-interface-audit.json": {
+          "bytes": 1943,
+          "sha256": "ddd1ebf4a0e9e2bd1dfb7d930df565fd1449ab7c3c13de6ea81eed10d605eb65"
+        },
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1/runtime/public-trace-audit.json": {
+          "bytes": 1040,
+          "sha256": "599bc33fac6ea1a99c8e9a01df57e3aaba9837318e19c44e6bdc46e413d1f0a2"
+        }
+      },
+      "roots": [
+        "development/approved-plan/c3-successor-v1/runs/fresh-final-v1"
+      ]
+    },
+    "C3_postmortem": {
+      "file_count": 32,
+      "files": {
+        "development/approved-plan/c3-postmortem-v1/REPORT.md": {
+          "bytes": 10092,
+          "sha256": "ac7bb08d775fea07f162e114b3c4d80ee72c527932d39fc9061a57f9d59cbd43"
+        },
+        "development/approved-plan/c3-postmortem-v1/STAGE-v1.json": {
+          "bytes": 1915,
+          "sha256": "c3019b6b8525f7206e0c1a7f6e3f6b420e3764f30c1795a72176140662b6891d"
+        },
+        "development/approved-plan/c3-postmortem-v1/diagnostics/cleanup-build-obligation-map-v1.py": {
+          "bytes": 31930,
+          "sha256": "c63b628c4ced45944d32ae2b8b03c03e5b74d0abf65bb13aaa9e34bed8101b45"
+        },
+        "development/approved-plan/c3-postmortem-v1/diagnostics/cleanup-context-index-v1.json": {
+          "bytes": 131845,
+          "sha256": "2f89cb6723231a2e9ea8f290d04dce93f42b8c7794749cd37efcec3c273fa17f"
+        },
+        "development/approved-plan/c3-postmortem-v1/diagnostics/later-evidence-v1.py": {
+          "bytes": 4662,
+          "sha256": "6f9ead5e16cad7928d432d4b07a8c9c70d58b13625ba2ccd1fa24744ac291cb7"
+        },
+        "development/approved-plan/c3-postmortem-v1/diagnostics/later-literal-evidence-v1.json": {
+          "bytes": 187567,
+          "sha256": "9d10f1b20781efcf9e6ea7d74169026db26b33eb0768c97260da54faa5177307"
+        },
+        "development/approved-plan/c3-postmortem-v1/diagnostics/later-suffix-source-status-pin-v1.json": {
+          "bytes": 429,
+          "sha256": "74fb79859f54c9b548bb8b1a3e301f28686ff140017ed90c51c50a03fe55fe9b"
+        },
+        "development/approved-plan/c3-postmortem-v1/diagnostics/transport-literal-evidence-v1.txt": {
+          "bytes": 70525,
+          "sha256": "9d801b4ed3ac56a237808e1307dfa3cde59764a0c177bcdf69bc3adc9169668b"
+        },
+        "development/approved-plan/c3-postmortem-v1/diagnostics/transport-normalizer-use-scan-v1.json": {
+          "bytes": 39577,
+          "sha256": "ee7ec5e689443313fe16536914336c77509065d825b5823d224baf8184965b83"
+        },
+        "development/approved-plan/c3-postmortem-v1/diagnostics/transport-source-identities-v1.json": {
+          "bytes": 11385,
+          "sha256": "f19c2afef9e5c5bb7d1e19f9db55aa8b920cb421f32496ef67352bef78c75a5c"
+        },
+        "development/approved-plan/c3-postmortem-v1/evidence/predecessor-history-final-v1.json": {
+          "bytes": 267,
+          "sha256": "2f917f0ca3b430ee8905f359ff125186ecb07e59adc23c7cb1b17d5028659980"
+        },
+        "development/approved-plan/c3-postmortem-v1/evidence/predecessor-history-final-v1.log": {
+          "bytes": 251,
+          "sha256": "73ec0f7b6947b4a2b45afbe99569e59db146bd1d1cfb6fc0f2c949cd9000d85f"
+        },
+        "development/approved-plan/c3-postmortem-v1/evidence/predecessor-history-start-v1.json": {
+          "bytes": 267,
+          "sha256": "7b8219ed8f0ab6694b69c4859d8a5936f18cdb90ba192c10a4a6b2fef3faf561"
+        },
+        "development/approved-plan/c3-postmortem-v1/evidence/predecessor-history-start-v1.log": {
+          "bytes": 251,
+          "sha256": "7246c257fee36888bf9c2efee5e121532f96964ee98d48364195de1ffa6b21f0"
+        },
+        "development/approved-plan/c3-postmortem-v1/evidence/protected-final-v1.json": {
+          "bytes": 357,
+          "sha256": "8eb8d7d2a0c0b0d5e88707da6d25c4226233c36a3ac79f88c09e1fb0c648d437"
+        },
+        "development/approved-plan/c3-postmortem-v1/evidence/protected-final-v1.log": {
+          "bytes": 339,
+          "sha256": "aa25cc1e4d9d0ba2599ea7205241e526f220e040590e7b5f0a6ef288a3898da9"
+        },
+        "development/approved-plan/c3-postmortem-v1/evidence/protected-inputs-v1.json": {
+          "bytes": 14948532,
+          "sha256": "64f110eacc3f1737ce47aa6be896506037df7ce011c38aa861182ce7b1b63b52"
+        },
+        "development/approved-plan/c3-postmortem-v1/evidence/protected-seal-start-v1.log": {
+          "bytes": 258,
+          "sha256": "548c2966803620445b0907f8d16f7277e10d6c75fd1701419b34c578e5def2a5"
+        },
+        "development/approved-plan/c3-postmortem-v1/measurements/attempts-v1.jsonl": {
+          "bytes": 8429,
+          "sha256": "ef232f02667e5037a7c798253ea0a94fc0f81b4c806df442a075db2fdba07263"
+        },
+        "development/approved-plan/c3-postmortem-v1/measurements/observations-v1.json": {
+          "bytes": 8084,
+          "sha256": "83c788fbe12512cd4d28a8f0648b30119c83ed4f4f71c9518b90051277fb556f"
+        },
+        "development/approved-plan/c3-postmortem-v1/measurements/run-v1.py": {
+          "bytes": 2127,
+          "sha256": "2c61ee93bce0244380026a96b937c2b679e0ec7335bc0cfb52e3dbf72245930a"
+        },
+        "development/approved-plan/c3-postmortem-v1/results-v1.json": {
+          "bytes": 9125,
+          "sha256": "28d154bdfd46aa789840f0404ed3ec84bf402f7f29ae0e08f79d7dce718be560"
+        },
+        "development/approved-plan/c3-postmortem-v1/review/agent-review-v1.txt": {
+          "bytes": 607,
+          "sha256": "ba161c861ada05d3d19b599608800c3bd3bbb81aa22ae29414d65312d927cb9d"
+        },
+        "development/approved-plan/c3-postmortem-v1/review/cleanup-analysis-v1.md": {
+          "bytes": 4710,
+          "sha256": "347caa4421b7c3bd0ad6b77e984aec89089b39691caee2e833be64b12699bcbf"
+        },
+        "development/approved-plan/c3-postmortem-v1/review/cleanup-obligation-map-v1.json": {
+          "bytes": 128624,
+          "sha256": "3c69f54387bef896ac26bd29d5934d1b39a5fc9c745d6c6321747a553e11891f"
+        },
+        "development/approved-plan/c3-postmortem-v1/review/later-analysis-v1.md": {
+          "bytes": 14278,
+          "sha256": "fa831cb76f7d8ff464cb4c653a1f90f0b07fd4e3c647595a59b3818b601b336d"
+        },
+        "development/approved-plan/c3-postmortem-v1/review/later-obligation-map-v1.json": {
+          "bytes": 9312,
+          "sha256": "ea5c7b58535c6027b7232e04aaa141a06139f352a9096acd78e0767061ec78b8"
+        },
+        "development/approved-plan/c3-postmortem-v1/review/transport-audit-v1.json": {
+          "bytes": 26165,
+          "sha256": "a2bc81d7feef8a22afc6d4927d347335d18f0157e53fb27c77111d4af39f172e"
+        },
+        "development/approved-plan/c3-postmortem-v1/review/transport-evidence-map-v1.json": {
+          "bytes": 4983,
+          "sha256": "bc5fefb8fccef7ab7b5fea210d5560e5e330e2f0bfa8b28f4e42865671e44a95"
+        },
+        "development/approved-plan/c3-postmortem-v1/review/transport-recommendation-v1.txt": {
+          "bytes": 2341,
+          "sha256": "bb99ea1f217029ccc4b335d8529819082679ce49e56838d07c515963677572e8"
+        },
+        "development/approved-plan/c3-postmortem-v1/scripts/check-protected-v1.py": {
+          "bytes": 1942,
+          "sha256": "7b07bc26f71d95e940b204830353f7c5ae5d1cddd921806f143f24676df4efde"
+        },
+        "development/approved-plan/c3-postmortem-v1/scripts/seal-protected-v1.py": {
+          "bytes": 1974,
+          "sha256": "b5ba8e6c72e22633b7c205726e631f40b181b799e73b469c1fc1d6beac17acd1"
+        }
+      },
+      "roots": [
+        "development/approved-plan/c3-postmortem-v1"
+      ]
+    },
+    "candidate_regressions": {
+      "file_count": 82,
+      "files": {
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/bootstrap-input.ml": {
+          "bytes": 551,
+          "sha256": "d053282805921657062f85868f535db72f97f089323e42d257e1f93daaacc05a"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/c1-image-crosscheck.json": {
+          "bytes": 1353,
+          "sha256": "7d481dc29de72d7b49ec6f4083c6a3970fe1c071fdb9654836559bebea698157"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/c1-input.ml": {
+          "bytes": 1374,
+          "sha256": "0c5d9cd3296abc2bf02f9a1ec45e79ca1d11312b0b322e4e9bd500d15a9f0ee2"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/c1-proof.log": {
+          "bytes": 285151,
+          "sha256": "57a230169f64073825054ed4d28a5b617ccc5c3d6d147d35ad10682bd684b94f"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/checker-argv.json": {
+          "bytes": 2098,
+          "sha256": "bb3c63e0de198705064acd3c89a4d251ef26f90f44c079539829cfd2e67b25ef"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/container-inspect.json": {
+          "bytes": 11725,
+          "sha256": "1c6bd3a3a577ec02d9224ce5ef4822aa7ef5b84da715b7a2a9120ed90c1c84d8"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/container.cid": {
+          "bytes": 64,
+          "sha256": "083802f8cbe39036027959112fc08511acc82c148ef137f39eeff3791c0bc1ab"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/gate-result-v1.json": {
+          "bytes": 3282,
+          "sha256": "3c32a6bae28390022ade1ed1b4e08f56136fddb87b5332929d206a14e13ea7b6"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/gnu-argv.json": {
+          "bytes": 1176,
+          "sha256": "af79a497c046c693858dd0a401cb0af58187c10ddce0d2bd71a136d98186f152"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/gnu-container.cid": {
+          "bytes": 64,
+          "sha256": "f657a4043216567992e737db3ed9c9e96153616d55654a01dd370218010bdd51"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/gnu-image-inspect.json": {
+          "bytes": 273,
+          "sha256": "497a3ede22549cab6860c9bbafa024d5215d1fc5c43345295c66a006aa06a518"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/gnu-process.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/inputs.json": {
+          "bytes": 626145,
+          "sha256": "d055587dda300f1a0ad9db6733b8d706ddc114622880268c39af7a6cfbd788ae"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/invocation.json": {
+          "bytes": 555,
+          "sha256": "2e82ecc1f02373e14bb952937943ccf782a8665cc85447576b7951fd52b54c0c"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/receipt.json": {
+          "bytes": 2517,
+          "sha256": "f533b365658922211bbacab2d9a01594878f8e9c6274fc31205b47ea6d7a6c87"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/regression-source-closure.json": {
+          "bytes": 638754,
+          "sha256": "af83470a48ddb2b856d2fecb3f9cd5616d1cc8e670b35ac7c1ab8d1260cc1aa2"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/root-only-supplier/bootstrap.log": {
+          "bytes": 4481726,
+          "sha256": "db3c403a659768c1041c223b27150b19089de20da16c7f5315514220e1ca6b81"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/root-only-supplier/host-audit-stderr.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/root-only-supplier/host-audit-stdout.json": {
+          "bytes": 605531,
+          "sha256": "95e8c4d8616bec03ee0ab176643bde1bb315b573a1218d92a0a7f10d42c7b9ad"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/ambient-after-supplier-v1.json": {
+          "bytes": 7455,
+          "sha256": "a29d7568d04c94a812f25602d08d26a9cbc1ef243ff2f914581c17e2ab4907ed"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/ambient-before-supplier-v1.json": {
+          "bytes": 7442,
+          "sha256": "0fac130c671fbf1c44529c45195958f0d7b3d2f9928fc68bc1ee225e2ad87cfd"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/assurance-audit.json": {
+          "bytes": 37453,
+          "sha256": "d14514596be81ed948031f74424a6882c76e64fc1b48e741103adc8ee651edb8"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/c1-live-audit-v1.json": {
+          "bytes": 179076,
+          "sha256": "2340f20ed9510cada6cc68bb1372e9405adce45a477de79c48dbc89aeb52ea7c"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/candidate-consumption-live-audit-c1-v1.json": {
+          "bytes": 1211,
+          "sha256": "4f42be65dfab4409da224a5fc0f496ec465269caf0498f351461b1bfcbc8031c"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/candidate-layer-live-audit-v1.json": {
+          "bytes": 18612,
+          "sha256": "69cb8e2a5829f0e14d0d44819afc48673dd63ddfb04c61d9ffa76e39b7192b65"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/cleanse-access.json": {
+          "bytes": 15614,
+          "sha256": "1e18d2601b4c305e1f2a82c645e9f86adf2f7bcc6a3b809d3a5b48e832d004cb"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/cleanse-functional.json": {
+          "bytes": 18799,
+          "sha256": "78419f1594b526a0077d44e09fa981e1c90009c939f01fa65aed858ede3d0ade"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/cleanse-interface.json": {
+          "bytes": 17849,
+          "sha256": "7e1bd3d3ebb4311b9c2e0360666811cb6ceecd60fbc1d4d94be799a197867e11"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/cleanse-supplement.json": {
+          "bytes": 39214,
+          "sha256": "116e352918accab103bd4c516c9b3833ec42403fc2d7e304e30e1c577f4e53ad"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/e3-interface.json": {
+          "bytes": 364035,
+          "sha256": "eeac46ea3128f2c14c9812c1003be789c6d61c6415d2ea4df3fd536f276b678c"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/execution-qualification.json": {
+          "bytes": 19199,
+          "sha256": "06d1e98d0ab7cadc95eee3260a89d5c4f6e61ccfd7c8e3fdf219af4bd1c67d64"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/full-binding-audit.json": {
+          "bytes": 7515,
+          "sha256": "058ca82bbe13afce45cdec08dc26194e1f87d2136f0631e69f99a6cbfc41f692"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/gnu/disassembly.txt": {
+          "bytes": 4907,
+          "sha256": "eb086329f736e3ae053ce2cd142e86731a8c9c1c12cae9b6d3b87e4f74b8bf81"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/gnu/gnu-plt.bin": {
+          "bytes": 32,
+          "sha256": "fd6caa945ecbf7fb2442bc28b1789f3f7db2d665a40ebc307b3eba899951b10a"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/gnu/gnu-text.bin": {
+          "bytes": 214,
+          "sha256": "9abde9452672ddc910c99d6b1d20aa5ee7fd3227cc4c37a3e8ab703a7a709c96"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/gnu/readelf.txt": {
+          "bytes": 11502,
+          "sha256": "bfb60afcdb05f3e8a58d654ed7a8cba2c3e0f6f453ca57b612479c653ab1aee4"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/loaded-witness-theorems.json": {
+          "bytes": 4836,
+          "sha256": "c7e19d354bac8a4a94fdfb9a294473feba57ac31ef17a880ecb11344f49ad5ad"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/model-qualification.json": {
+          "bytes": 12991,
+          "sha256": "0823472bc8aac9cb8e04b48473e12bb77116b8251a94709929211c1b95095765"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/observation-audit.json": {
+          "bytes": 17116,
+          "sha256": "d895e2b937fb5a5bf2f3de5a35ac373779f383fa157b04171cee6ec977276510"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/public-interface-audit.json": {
+          "bytes": 1943,
+          "sha256": "ddd1ebf4a0e9e2bd1dfb7d930df565fd1449ab7c3c13de6ea81eed10d605eb65"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/public-trace-audit.json": {
+          "bytes": 1040,
+          "sha256": "599bc33fac6ea1a99c8e9a01df57e3aaba9837318e19c44e6bdc46e413d1f0a2"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/bootstrap-input.ml": {
+          "bytes": 543,
+          "sha256": "b143975b0af15161c2f80e22915cfc4ad671a0e02ee7ea5733b68c54d6172dfc"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/c2-image-crosscheck.json": {
+          "bytes": 1590,
+          "sha256": "e71e24df00eab86fdb68e65d438006318462a42cc33e0014f6404cdfa3168534"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/c2-input.ml": {
+          "bytes": 1333,
+          "sha256": "3ec73b81af6bf9e549526c0e9afba7f77f2d241b2dda90379df1b8ad76d282ae"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/c2-proof.log": {
+          "bytes": 317826,
+          "sha256": "1c6fbfea9e197d4e6c9cf9df9c10c7ba12616e8e93890b309e4597e0ebee535a"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/checker-argv.json": {
+          "bytes": 2098,
+          "sha256": "4a0d61104775bc8c57f604097e34c7769347368c81def76962571f83168663f7"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/container-inspect.json": {
+          "bytes": 11725,
+          "sha256": "9cf576744afdd50175aee12601982342f3b3528d0ed84bfaf8cf149eb87206d6"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/container.cid": {
+          "bytes": 64,
+          "sha256": "a12b300e85c8e020009b30e63075fe44cc396479d62a72489eccf698e0ee9846"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/gate-result-v1.json": {
+          "bytes": 3284,
+          "sha256": "3119817e7b26dc15e21abb51f534f1f4ef099b89b0bcc94a00073b556de447ef"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/gnu-argv.json": {
+          "bytes": 1176,
+          "sha256": "815c7986aacaf8f24d454d9e2aa5268718699d062d140dadf4ccc81fbf22cc8f"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/gnu-container.cid": {
+          "bytes": 64,
+          "sha256": "e75f324647f2dfb005d207f1bd0f3a01a80c0ef48e8639693de006e4c4b91e2a"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/gnu-image-inspect.json": {
+          "bytes": 273,
+          "sha256": "497a3ede22549cab6860c9bbafa024d5215d1fc5c43345295c66a006aa06a518"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/gnu-process.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/inputs.json": {
+          "bytes": 636207,
+          "sha256": "a5f936945297563484540e8bc5462cfbdb7cb0382fea427c721fc5d5509280fa"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/invocation.json": {
+          "bytes": 555,
+          "sha256": "f213be8e7acb7309e2861e709392bcdb93dd3ed00a93fe56b59b78fe4bbbcb10"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/receipt.json": {
+          "bytes": 2530,
+          "sha256": "a3191e28b8941b4a3afe7a7455c4ab2546ddac8604fe4f03f79576b7b2aca220"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/regression-source-closure.json": {
+          "bytes": 655251,
+          "sha256": "49c5ddf26b8fd1908d28f74d565475d8908d87633351a64bc114a0477b1e13eb"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/root-only-supplier/bootstrap.log": {
+          "bytes": 4481683,
+          "sha256": "1a07a44ea87fb7d9e2874ad70ac5e28cd04a1e8edb99246cc8d8338e0f43ace9"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/root-only-supplier/host-audit-stderr.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/root-only-supplier/host-audit-stdout.json": {
+          "bytes": 605531,
+          "sha256": "95e8c4d8616bec03ee0ab176643bde1bb315b573a1218d92a0a7f10d42c7b9ad"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/ambient-after-supplier-v1.json": {
+          "bytes": 7455,
+          "sha256": "21fef2b35f7c8692dfae048f8c6a7a6947254c32f11bde11b6bb49189c54359b"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/ambient-before-supplier-v1.json": {
+          "bytes": 7442,
+          "sha256": "46bc62fb570719b92f442750cb68e25fd71098347afc470818c899d51145ccfa"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/assurance-audit.json": {
+          "bytes": 37453,
+          "sha256": "d14514596be81ed948031f74424a6882c76e64fc1b48e741103adc8ee651edb8"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/c2-live-audit-v1.json": {
+          "bytes": 265621,
+          "sha256": "55ad7aef7a17828cd0da2156fdb0da2710c2a718d1eb63f9c0e66946ac44667e"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/candidate-consumption-live-audit-c2-v1.json": {
+          "bytes": 2493,
+          "sha256": "8c059c56d087cdfc9868d822b2ee106ba9cc19ba131bb53357d79f091c89115a"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/candidate-layer-live-audit-v1.json": {
+          "bytes": 18612,
+          "sha256": "69cb8e2a5829f0e14d0d44819afc48673dd63ddfb04c61d9ffa76e39b7192b65"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/cleanse-access.json": {
+          "bytes": 15614,
+          "sha256": "1e18d2601b4c305e1f2a82c645e9f86adf2f7bcc6a3b809d3a5b48e832d004cb"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/cleanse-functional.json": {
+          "bytes": 18799,
+          "sha256": "78419f1594b526a0077d44e09fa981e1c90009c939f01fa65aed858ede3d0ade"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/cleanse-interface.json": {
+          "bytes": 17849,
+          "sha256": "7e1bd3d3ebb4311b9c2e0360666811cb6ceecd60fbc1d4d94be799a197867e11"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/cleanse-supplement.json": {
+          "bytes": 39214,
+          "sha256": "116e352918accab103bd4c516c9b3833ec42403fc2d7e304e30e1c577f4e53ad"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/e3-interface.json": {
+          "bytes": 364035,
+          "sha256": "eeac46ea3128f2c14c9812c1003be789c6d61c6415d2ea4df3fd536f276b678c"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/execution-qualification.json": {
+          "bytes": 19199,
+          "sha256": "06d1e98d0ab7cadc95eee3260a89d5c4f6e61ccfd7c8e3fdf219af4bd1c67d64"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/full-binding-audit.json": {
+          "bytes": 7515,
+          "sha256": "058ca82bbe13afce45cdec08dc26194e1f87d2136f0631e69f99a6cbfc41f692"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/gnu/disassembly.txt": {
+          "bytes": 5987,
+          "sha256": "5d1dd659c1be4b14ac69e61e9867fd92a1c810d44bd14243f230723e76af4411"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/gnu/gnu-plt.bin": {
+          "bytes": 48,
+          "sha256": "928433cef64ae27988046f464101f2ca903b67ebe6bb70d1300c439928a19ad9"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/gnu/gnu-text.bin": {
+          "bytes": 251,
+          "sha256": "bc69029b0a56f3c94ea0ee1aa7a57457a98ad1bf40568decc2ca84a5757268f8"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/gnu/readelf.txt": {
+          "bytes": 11823,
+          "sha256": "dfd988c169d09c7964a144b4c14a5e8c5fdceaab7c3747da96c4e35ec1205112"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/loaded-witness-theorems.json": {
+          "bytes": 4836,
+          "sha256": "c7e19d354bac8a4a94fdfb9a294473feba57ac31ef17a880ecb11344f49ad5ad"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/model-qualification.json": {
+          "bytes": 12991,
+          "sha256": "0823472bc8aac9cb8e04b48473e12bb77116b8251a94709929211c1b95095765"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/observation-audit.json": {
+          "bytes": 17116,
+          "sha256": "d895e2b937fb5a5bf2f3de5a35ac373779f383fa157b04171cee6ec977276510"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/public-interface-audit.json": {
+          "bytes": 1943,
+          "sha256": "ddd1ebf4a0e9e2bd1dfb7d930df565fd1449ab7c3c13de6ea81eed10d605eb65"
+        },
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/public-trace-audit.json": {
+          "bytes": 1040,
+          "sha256": "599bc33fac6ea1a99c8e9a01df57e3aaba9837318e19c44e6bdc46e413d1f0a2"
+        }
+      },
+      "roots": [
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1",
+        "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1"
+      ]
+    }
+  },
+  "purpose": "Navigation and identity of raw historical checking/diagnostic outputs; copied fixture receipts never counted as positive attempts",
+  "schema": "review-historical-evidence-file-map-v1"
+}

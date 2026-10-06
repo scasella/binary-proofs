@@ -1,0 +1,10 @@
+use_file_raise_failure := true;;
+let e3_callee_initial_axioms=axioms();;
+let assurance_initial_axioms=e3_callee_initial_axioms;;
+let backend_initial_axioms=e3_callee_initial_axioms;;
+let model_initial_axioms=e3_callee_initial_axioms;;
+let r1_execution_initial_axioms=e3_callee_initial_axioms;;
+let cleanse_aggregate_initial_axioms=e3_callee_initial_axioms;;
+let clw_initial_axioms=e3_callee_initial_axioms;;
+let crypto_trace_initial_axioms=e3_callee_initial_axioms;;
+let component_guard f=try f() with e->prerr_endline(Printexc.to_string e);exit 1;;

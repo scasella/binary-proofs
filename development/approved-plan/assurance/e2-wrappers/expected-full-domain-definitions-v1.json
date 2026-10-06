@@ -1,0 +1,12 @@
+{
+  "definitions": [
+    {
+      "name": "bp_assurance_call_steps",
+      "equation": "bp_assurance_call_steps n = if n=0 then 6 else if n=16 then 15 else 7*n+10"
+    },
+    {
+      "name": "bp_assurance_call_post",
+      "equation": "bp_assurance_call_post pc stackpointer ra p q n e m s (s':x86state) <=>\n    read RIP s' = ra /\\ val(read RSP s') = val(stackpointer:int64)+8 /\\\n    read RAX s' = (if (!i. i<n ==> m(word_add p (word i)) =\n                                  m(word_add q (word i)))\n                  then word 0 else word 1) /\\\n    read memory s' = m /\\ bytes_loaded s' (word pc) crypto_memcmp_mc /\\\n    read events s' = APPEND (crypto_trace_call pc p q n stackpointer ra) e /\\\n    (MAYCHANGE [RIP;RSP;RAX;RDI;RSI;RDX;R10;R11] ,,\n       MAYCHANGE SOME_FLAGS ,, MAYCHANGE [events]) s s'"
+    }
+  ]
+}

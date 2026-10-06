@@ -1,0 +1,20 @@
+(* Original x86 model and already frozen component dependencies. *)
+needs "/work/development/approved-plan/cleanse/functional/components-v4.ml";;
+needs "/work/development/approved-plan/assurance/slices.ml";;
+needs "/work/development/approved-plan/assurance/path.ml";;
+needs "/work/development/approved-plan/abi-qualification/state-v4.ml";;
+needs "/work/development/approved-plan/abi-qualification/extension-v2.ml";;
+needs "/work/development/approved-plan/abi-qualification/sites-v2.ml";;
+needs "/work/development/approved-plan/cleanse/helpers/abi-v5/extension-v5.ml";;
+needs "/work/development/approved-plan/cleanse/helpers/abi-v5/sites-v5.ml";;
+needs "/work/development/approved-plan/cleanse/helpers/abi-v5/statements-v5.ml";;
+needs "/work/development/approved-plan/cleanse/helpers/abi-v5/coverage-statement.ml";;
+needs "/work/development/approved-plan/cleanse/helpers/abi-v5/bridge-proof.ml";;
+needs "/work/development/approved-plan/cleanse/helpers/abi-v5/path-lift-proof.ml";;
+needs "/work/development/approved-plan/cleanse/helpers/abi-v5/coverage-proof.ml";;
+needs "/work/development/approved-plan/contract/crypto-pre-v2.ml";;
+needs "/work/development/approved-plan/loaded-witness/definitions-v3.ml";;
+needs "/work/development/approved-plan/loaded-witness/reference-overlay.ml";;
+needs "/work/development/approved-plan/loaded-witness/full-binding/definitions-v2.ml";;
+needs "/work/development/approved-plan/cleanse/loaded-witness/definitions-v1.ml";;
+needs "/work/development/approved-plan/cleanse/access/definitions-v1.ml";;

@@ -1,0 +1,18 @@
+{
+  "frozen_at_utc": "2026-09-30T18:55:59.191234+00:00",
+  "files": {
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/code-v1.ml": "408423e219ebe7002e2617022ed2ad2c5f48be250b19b2c19a50d4a5df0b8bb7",
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/sites-v1.ml": "2368d534332b02839f29762925fee4260601fe9dee411a502a62857493f80d19",
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/exact-sites-v1.json": "8b8dee11f0983441bb2a6e67021587f80a05f3777adb2dbf2408d3405952d576",
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/coverage-statements-v1.ml": "1c7775ef1ac098e4ec2a60cbae157ac9d5c53c26fb659f959752471672564518",
+    "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/abi-v6/expected-coverage-statements-v1.json": "f5fb58899fe4635b55c7f3b6a843e9386d7a7d474495341c0db693f26d04fc98"
+  },
+  "instruction_site_count": 27,
+  "target_count": 29,
+  "proof_search_started": false,
+  "client_theorem": false,
+  "artifact": "clients/callers.so",
+  "artifact_sha256": "242247df7a8a368adc828934e936ef95fe97bb650b9c7a423d66236fa340f118",
+  "inventory_sha256": "b062a068f0ae0925ff9cd02ecd88b6d392511ac4ac66d965fce23099bf21c08d",
+  "human_review": "PENDING"
+}

@@ -1,0 +1,6 @@
+{
+  "status": "FROZEN_BEFORE_PROOF_SEARCH",
+  "file": "development/approved-plan/cleanse/functional/frame-statement-v1.ml",
+  "sha256": "c5d85311304ce84651abc30c1554073e946bf9c124c41b801a3ceee3477ae6b8",
+  "scope": "Generic original modeled frame preserves each byte outside nonwrapping physical destination; endpoint equality allowed"
+}

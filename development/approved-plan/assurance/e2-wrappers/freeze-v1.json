@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-09-30T13:28:20.095190+00:00",
+  "sources": {
+    "correspondence.ml": {
+      "path": "development/approved-plan/assurance/correspondence.ml",
+      "sha256": "826424f48c16dd32f6781f6746c46f2d1dd4b1f6423b162a972ebe64905b8211"
+    },
+    "policy.ml": {
+      "path": "development/approved-plan/assurance/policy.ml",
+      "sha256": "22cfc4886fb1e06006326ce0a3382ecf89fd9147e064d7b5b435bc79907d3d24"
+    },
+    "slices.ml": {
+      "path": "development/approved-plan/assurance/slices.ml",
+      "sha256": "0ab9af99340d72d2eae0c4d903d7cbd2a139f4f9f084f41f5b9790e0f2208918"
+    },
+    "path.ml": {
+      "path": "development/approved-plan/assurance/path.ml",
+      "sha256": "65cdc3dfde0d03dd182381a3f890fd8ec0f8f7eb7dafb1277013734bd1cc1675"
+    },
+    "zero-scalar-qualified.ml": {
+      "path": "development/approved-plan/assurance/zero-scalar-qualified.ml",
+      "sha256": "7ecae5bdd9b9d8a5a49ef05a32e02bf2b77e1fac25689d87de5499fb50e6c8a6"
+    },
+    "n16-policy.ml": {
+      "path": "development/approved-plan/assurance/n16-policy.ml",
+      "sha256": "1eaf8c1b5f2e306038cf80cc617cfd622850dd3016d0f80a6b186502047466e0"
+    },
+    "n16-scalar-qualified.ml": {
+      "path": "development/approved-plan/assurance/n16-scalar-qualified.ml",
+      "sha256": "5c248c3ae2b864131432667927ce5b51bbcff54a51f7a6c4d579a8ff9d5ebde2"
+    },
+    "scalar-product-lift.ml": {
+      "path": "development/approved-plan/assurance/scalar-product-lift.ml",
+      "sha256": "cdd5ae2997b3c9c5b166c50d8d1832b5fdc4e2737c6ef8a3ce6fdb050ca3b0f2"
+    },
+    "abi-state-v4.ml": {
+      "path": "development/approved-plan/abi-qualification/state-v4.ml",
+      "sha256": "ce503ea3e15dc845e3fbb2cfab2b4279006e3189855d3a91bad281b77dab7f61"
+    },
+    "abi-extension-v2.ml": {
+      "path": "development/approved-plan/abi-qualification/extension-v2.ml",
+      "sha256": "43f9ced6c16a4e50ffc5918ab8485baf04f3b59a389dd775bf246b61c57b8da2"
+    },
+    "abi-sites-v2.ml": {
+      "path": "development/approved-plan/abi-qualification/sites-v2.ml",
+      "sha256": "f84123d66734dba7e60469269c7ed8ef03b2980363bdc7ca537e825cef1f83d0"
+    },
+    "abi-bridge-proofs-v3.ml": {
+      "path": "development/approved-plan/abi-qualification/bridge-proofs-v3.ml",
+      "sha256": "65aca355d728da30505c5b5662f66ac45fc699926ba95ca5a21d6730d57f69d3"
+    },
+    "abi-path-lift-v2.ml": {
+      "path": "development/approved-plan/abi-qualification/path-lift-v2.ml",
+      "sha256": "62ec091e16b3759f040753996f7ea06a740be830f6c5a6dc4821f3fc1194b43d"
+    },
+    "crypto-pre-v2.ml": {
+      "path": "development/approved-plan/contract/crypto-pre-v2.ml",
+      "sha256": "6a90c3796d7b0a100c53fa365ab4309ebf25baf0861b79b8824093fe816b30d1"
+    },
+    "byte-statements.ml": {
+      "path": "development/approved-plan/byte-contract/statements.ml",
+      "sha256": "51c3ac2f89a42a48c65b9955d4aa6043088114ec318ebb5f465de9a3cedffa7f"
+    },
+    "byte-proof.ml": {
+      "path": "development/approved-plan/byte-contract/proof_attempt2.ml",
+      "sha256": "ff7e42949e067ae5a32fe7c35de72f93ac0de8e6f925be06a7764efd123ac7e1"
+    },
+    "helpers.ml": {
+      "path": "development/approved-plan/assurance/e2-wrappers/helpers.ml",
+      "sha256": "44275fc1fac742a7c06680b715092d4ab16a6a5076a3f853e951455a2badd038"
+    },
+    "postconditions.ml": {
+      "path": "development/approved-plan/assurance/e2-wrappers/postconditions.ml",
+      "sha256": "95b8cb6c87deeb58cc151d0d2080e81b91c04f0108a1057a4dfe9bc6209562ee"
+    },
+    "framed-restricted.ml": {
+      "path": "development/approved-plan/assurance/e2-wrappers/framed-restricted.ml",
+      "sha256": "9151234265240d552f7bba7e499346cf63d5a4289c3531f77847517d57a77383"
+    },
+    "wrappers.ml": {
+      "path": "development/approved-plan/assurance/e2-wrappers/wrappers.ml",
+      "sha256": "e413f5dd294efdb11a75ecaafb2403223f85598ef293d64cc49f42474f95d439"
+    },
+    "byte-postcondition.ml": {
+      "path": "development/approved-plan/assurance/e2-wrappers/byte-postcondition.ml",
+      "sha256": "771f99b9fd2c19635b6992c2ad88eabfa7c64188404ffb364bec6462ea6840d7"
+    },
+    "byte-wrappers.ml": {
+      "path": "development/approved-plan/assurance/e2-wrappers/byte-wrappers.ml",
+      "sha256": "d3a543256877a47c378da9c46dc7a8884c5f5843627da988da6f952fd37b849d"
+    }
+  },
+  "theorem_count": 72,
+  "definition_count": 29,
+  "registry_hashes": {
+    "expected-statements-v1.json": "c38cb426b8e8305141fc87d5743d0e0e46c900f3e7588dd7f52ab023d3d05637",
+    "expected-definitions-v1.json": "c3391ed2bd8fe3e2b3f5ba0ed09fb091f67766ef0c0b27540719ea55cadef7f6"
+  },
+  "sealed_files_edited": false,
+  "human_review": "PENDING",
+  "full_O1_pass": false
+}

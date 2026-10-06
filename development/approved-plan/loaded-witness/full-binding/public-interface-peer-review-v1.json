@@ -1,0 +1,30 @@
+{
+  "findings": [
+    "The public entry is exactly 0x10000000+0x241840=0x10241840; same95byte final symbol slice",
+    "The public domain preserves all scalarPre length/value/address/alignment/overlap quantifiers and adds explicit file/image/page/FS environment clauses",
+    "No target functional result, termination, code coverage, frame or ABI preservation is an initial premise",
+    "The fullimage predicate is on the actual initial memory m, and returnfullimage follows proved readmemoryfinal=m",
+    "ABIpost keeps the same supplied14field record a, requiredcontrols and scalar frame; no opaque validstate or assumed preservation",
+    "The witness bridge uses exact same memory, scalarstate, ABIrecord, pointers, length, PC, stack, RA and coherent TLS-expanded permission maps as fb_pre",
+    "File-code agreement for the witness bridge is derived from actual bytes_loaded and immutable image correspondence, without an extra witness premise",
+    "Every declared library page is readable ordinary memory and executable iff in lw_execute; strict buffer/access policy retains all original successors through the existing checkedrun endpoint"
+  ],
+  "formal_kernel_replay": "Root warm results reported; final closed package replay remains required",
+  "human_review": "PENDING",
+  "limitations": [
+    "Artifact map interpretation, ELF/parser/loader/relocation/startup/TLS allocation and physical page enforcement remain explicit trust/environment boundaries",
+    "Abstract canonical-top witness addresses are not claims of baseline CPL3 Linux mappings",
+    "Instruction-trace noninterference O2, caller binding/reuse R1, other routines and library-wide coverage are outside this review"
+  ],
+  "reviewed_source_hashes": {
+    "development/approved-plan/assurance/e2-wrappers/full-domain-statements.ml": "7513127bea0f5b5f1a183b778173c9482aeaa43ada7ed0b71782113c97c58bef",
+    "development/approved-plan/contract/crypto-pre-v2.ml": "6a90c3796d7b0a100c53fa365ab4309ebf25baf0861b79b8824093fe816b30d1",
+    "development/approved-plan/interface/crypto/definitions-v1.ml": "f0d427d419df29026aa1b2cba30908c19ddea10e3e2bd9bccbfb1d73d7481a15",
+    "development/approved-plan/interface/crypto/proofs-attempt3.ml": "6b9b0dda66769c100520434d2fb0b231e8ef17a854541fcf7aeb3976ff35c5ec",
+    "development/approved-plan/interface/crypto/statements-v1.ml": "a084f65ee9a754c7e79cec421d8f060a5aa07514b1a42c66e643b567b6d50e5c",
+    "development/approved-plan/loaded-witness/full-binding/bridge-statements-v1.ml": "a15e9ce69a209d12849a740c25a9202619534bd20d2d4a86c278150ffa5088a2",
+    "development/approved-plan/loaded-witness/full-binding/definitions-v2.ml": "80f07c0028e384ce7cb096baf83f647372285b5a0a99c0df4f6cbfe0e924f158"
+  },
+  "reviewer": "/root/full_image_formalist",
+  "status": "PASS_PEER_PUBLIC_INTERFACE_TERM_REVIEW"
+}

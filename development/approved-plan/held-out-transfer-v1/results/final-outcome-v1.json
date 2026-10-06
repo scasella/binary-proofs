@@ -1,0 +1,99 @@
+{
+  "C3_acceptance": "NOT_ACCEPTED",
+  "C3_controls": "NOT_ATTEMPTED_REQUIRES_GENUINE_POSITIVE",
+  "H1": "SUPPORTED_BY_ACCEPTED_DEVELOPMENT_CASES_WITH_INSPECTION_QUALIFIED_OPACITY; no complete C3 derivation",
+  "H2": "NOT_ESTABLISHED_HELD_OUT_CASE_NOT_ACCEPTED_WITHIN_CAP",
+  "H3": "NOT_ATTEMPTED",
+  "acceptance_input": false,
+  "candidate_preparation_adaptation": "Recorded before exact case selection; not historical unchanged C2 integration.",
+  "checks": {
+    "count": {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/replay/development-count-result-v1.json",
+      "sha256": "ff53cbb058532cbe18c4b2d83de51d71150eed05ee73896b1034905c39f34531"
+    },
+    "handoff": {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/replay/development-handoff-result-v1.json",
+      "sha256": "47ba754a95fef4f9afeb9252ceca9f254f2cd9c5e776e01b05a04b79e50a24f1"
+    },
+    "witnesses": {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/replay/development-witness-result-v1.json",
+      "sha256": "9a70569a782e62e95f1819e3158f6ac81dc64bcc5a3d335cb5c00a1a37a80678"
+    }
+  },
+  "construction_deadline_utc": "2026-10-05T04:38:37.273874Z",
+  "construction_start_utc": "2026-10-05T01:38:37.273874Z",
+  "development_checked_algebra_targets": [
+    "C3_COUNT"
+  ],
+  "development_checked_entry_targets": [
+    "C3W_GENERIC_WITNESS",
+    "C3W_PRE",
+    "C3_ADMISSIBLE_ENTRY_WITNESSES"
+  ],
+  "development_checked_execution_targets": [
+    "C3_HANDOFF"
+  ],
+  "earliest_open_execution_obligation": "Cleanup7 endpoint at u7: derive public cleanse precondition, complete saved-prefix and accumulated MID frame from checked core facts.",
+  "evidence": {
+    "cap_stop": {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-stop-v1.json",
+      "sha256": "ea5a6e10b85ed43c09efa0526b7360f3dfd23a8df020b9a9746992c0e6fb6557"
+    },
+    "cleanup_literal": {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-endpoint-v1.txt",
+      "sha256": "1ce4db12016ccc4c92124966208322623e7cc8c78452baa2688ef92c3849a303"
+    },
+    "frame_literal": {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-final-frame-failure-v1.txt",
+      "sha256": "0e60625d5187536ebbb837796c98509b1644efd342d3faff5476345a1adbd042"
+    },
+    "history": {
+      "path": "development/approved-plan/held-out-transfer-v1/status/post-cap-history-check-v1.json",
+      "sha256": "973a1610235c21b0abe1c9410f50eb39500cebf1db0538e45d30415296b96387"
+    },
+    "main_obligations": {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/obligations/map-v10-final-cap.json",
+      "sha256": "4981e07da459a8277661e32480db85e63509acbe94374f18745f11adbf0e3dc1"
+    },
+    "measurements": {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/replay/stage-resource-observations-v2.json",
+      "sha256": "7ce66d91914d63df5ae6cb2c6372048baabc2982259512eec022523f79a964c0"
+    },
+    "partial_source_graph": {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/obligations/partial-main-source-graph-v1.json",
+      "sha256": "bb9236f85550ab55c4895bfc539f8115f506058076c1a78ac5d93aaa1659ac03"
+    },
+    "protected_pins": {
+      "path": "development/approved-plan/held-out-transfer-v1/status/final-protected-pin-check-v1.json",
+      "sha256": "a559cd1d141a2ba654a30eee3f6cb68ca97eebf1c3ffd3cf8996922d4f01f482"
+    },
+    "suffix_account": {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/witness-diagnostics/final-return-cap-account-v2.json",
+      "sha256": "ee03380c5591b623fed4707a96255136251718e7a70c8c2179558a3262d0ba76"
+    }
+  },
+  "experiment": "BP-20261005-HELD-OUT-TRANSFER-V1",
+  "failure_classification": "Proof construction/application and resource limit; no established contract or ISA counterexample; no impossibility claim.",
+  "fresh_C3_acceptance": "NOT_ATTEMPTED_REQUIRED_TARGETS_INCOMPLETE",
+  "human_review": "PENDING",
+  "inclusive_construction_window_seconds": 10800,
+  "integration_adaptation": false,
+  "missing_frozen_targets": [
+    "C3_CHECKED",
+    "C3_INTERFACE",
+    "C3_NORMAL_CHECKED",
+    "C3_RF_NORMAL_CHECKED",
+    "C3_NORMAL_INTERFACE"
+  ],
+  "no_new_stage_launched": true,
+  "opacity": "Inspection-based; ambient supplier objects/global simplifier available; previous recipe/family exposure disclosed.",
+  "outcome": "C",
+  "remaining_later_obligations": [
+    "Saved slot/incoming RA/code/GOT transport through cleanse; complete second5 CALL/PLT handoff",
+    "Complete all four final Boolean paths and frame cancellation through actual RET",
+    "Compose full C3_CHECKED; derive four frozen interface/E5 targets; reconstruct all ten targets fresh and run required controls"
+  ],
+  "schema": "heldout-final-outcome-v1",
+  "state": "BLOCKED_FROZEN_CONSTRUCTION_LIMIT",
+  "utc": "2026-10-05T04:45:04.872030+00:00"
+}

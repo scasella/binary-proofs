@@ -1,0 +1,43 @@
+needs "/work/development/approved-plan/cleanse/functional/byte-loop-attempt5.ml";;
+needs "/work/development/approved-plan/cleanse/functional/alignment-algebra-attempt2.ml";;
+let OPENSSL_CLEANSE_ALIGNMENT = prove
+ (cleanse_functional_alignment_statement,
+  REPEAT GEN_TAC THEN STRIP_TAC THEN ASM_CASES_TAC `a=0` THENL
+   [FIRST_X_ASSUM SUBST_ALL_TAC THEN
+    SUBGOAL_THEN `val(word_and p (word 7):int64)=0` ASSUME_TAC THENL
+     [MP_TAC(ISPECL [`p:int64`;`0`] CLEANSE_FUNCTIONAL_LOW3) THEN
+      ASM_REWRITE_TAC[ADD_0;WORD_ADD_0];ALL_TAC] THEN
+    ASM_REWRITE_TAC[SOME_FLAGS;fst OPENSSL_CLEANSE_EXEC] THEN
+    X86_SIM_TAC OPENSSL_CLEANSE_EXEC (1--2) THEN
+    ASM_REWRITE_TAC[SUB_0;WORD_ADD_0;READ_COMPONENT_COMPOSE;READ_BYTES_TRIVIAL];
+    ALL_TAC] THEN
+  REWRITE_TAC[SOME_FLAGS;fst OPENSSL_CLEANSE_EXEC] THEN
+  ENSURES_WHILE_UP_TAC `a:num` `pc+48` `pc+67`
+   `\i s. read RDI s=word_add p (word i) /\ read RSI s=word(n-i) /\
+          read RAX s=word 0 /\ read(memory :> bytes(p,i))s=0` THEN
+  ASM_REWRITE_TAC[] THEN REPEAT CONJ_TAC THENL
+   [ENSURES_INIT_TAC "s0" THEN ENSURES_FINAL_STATE_TAC THEN
+    ASM_REWRITE_TAC[SUB_0;WORD_ADD_0;READ_COMPONENT_COMPOSE;READ_BYTES_TRIVIAL];
+    X_GEN_TAC `i:num` THEN STRIP_TAC THEN
+    SUBGOAL_THEN `i<n /\ val(p:int64)+i<2 EXP 64` STRIP_ASSUME_TAC THENL
+     [ASM_ARITH_TAC;ALL_TAC] THEN
+    SUBGOAL_THEN `~(val(word_and (word_add p (word i)) (word 7):int64)=0)` ASSUME_TAC THENL
+     [ASM_SIMP_TAC[CLEANSE_FUNCTIONAL_LOW3];ALL_TAC] THEN
+    SUBGOAL_THEN
+     `word_add (word(n-i)) (word 18446744073709551615):int64=word(n-(i+1))`
+     ASSUME_TAC THENL
+     [SUBGOAL_THEN `word 18446744073709551615:int64=word_neg(word 1)` SUBST1_TAC THENL
+       [CONV_TAC WORD_REDUCE_CONV;ALL_TAC] THEN
+      REWRITE_TAC[WORD_RULE `word_add (x:int64) (word_neg y)=word_sub x y`] THEN
+      SUBGOAL_THEN `(n:num)-(i+1)=n-i-1` SUBST1_TAC THENL
+       [ASM_ARITH_TAC;CONV_TAC SYM_CONV THEN ASM_SIMP_TAC[WORD_SUB;ARITH_RULE `i<n ==> 1<=n-i`]];
+      ALL_TAC] THEN
+    X86_SIM_TAC OPENSSL_CLEANSE_EXEC (1--5) THEN
+    SUBGOAL_THEN `read(memory :> bytes(p:int64,i+1))s5=0` ASSUME_TAC THENL
+     [MATCH_MP_TAC CLEANSE_FUNCTIONAL_PREFIX_READ THEN ASM_REWRITE_TAC[];ALL_TAC] THEN
+    ASM_REWRITE_TAC[GSYM WORD_ADD_ASSOC;GSYM WORD_ADD];
+    X_GEN_TAC `i:num` THEN STRIP_TAC THEN X86_SIM_TAC OPENSSL_CLEANSE_EXEC (1--1);
+    SUBGOAL_THEN `val(word_and (word_add p (word a)) (word 7):int64)=0` ASSUME_TAC THENL
+     [ASM_SIMP_TAC[CLEANSE_FUNCTIONAL_LOW3];ALL_TAC] THEN
+    X86_SIM_TAC OPENSSL_CLEANSE_EXEC (1--3)]);;
+print_endline "CLEANSE_FUNCTIONAL_ALIGNMENT_LOOP_ATTEMPT2_COMPLETE";;

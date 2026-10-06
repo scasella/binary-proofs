@@ -1,0 +1,8 @@
+(* Literal closed/std3 checks for every composition helper. *)
+c1_handoff_audit_goal "C1_TAIL_FRAME_INCLUDED" c1_tail_frame_included_statement C1_TAIL_FRAME_INCLUDED;;
+c1_handoff_audit_goal "C1_TAIL_FRAME_COMPOSE" c1_tail_frame_compose_statement C1_TAIL_FRAME_COMPOSE;;
+c1_handoff_audit_goal "C1_COMPLETED_TAIL_PRE" c1_completed_tail_pre_statement C1_COMPLETED_TAIL_PRE;;
+c1_handoff_audit_goal "C1_COMPLETED_TAIL_POST" c1_completed_tail_post_statement C1_COMPLETED_TAIL_POST;;
+c1_handoff_audit_goal "C1_SHIFTED_SEGMENT_POLICY" c1_shifted_segment_policy_statement C1_SHIFTED_SEGMENT_POLICY;;
+c1_handoff_audit_goal "C1_STEP_POLICY_QUALIFIED" c1_step_policy_qualified_statement C1_STEP_POLICY_QUALIFIED;;
+c1_handoff_audit_goal "C1_COMPLETED_TAIL_RUN" c1_completed_tail_run_statement C1_COMPLETED_TAIL_RUN;;

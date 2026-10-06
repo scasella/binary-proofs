@@ -1,0 +1,40 @@
+{
+  "statements": [
+    {
+      "statement_name": "abi_caller_projection_statement",
+      "statement": "!s a s' a'. abi_caller_scalar_extended_step (s,a) (s',a') ==> x86 s s'"
+    },
+    {
+      "statement_name": "abi_caller_backlift_all_statement",
+      "statement": "!s s' a. x86 s s' ==> abi_caller_scalar_extended_step (s,a) (s',a)"
+    },
+    {
+      "statement_name": "abi_caller_equivalence_statement",
+      "statement": "!s s' a. (?a'. abi_caller_scalar_extended_step (s,a) (s',a')) <=> x86 s s'"
+    },
+    {
+      "statement_name": "abi_caller_progress_statement",
+      "statement": "!s a. (?s'. x86 s s') <=>\n        ?s' a'. abi_caller_scalar_extended_step (s,a) (s',a')"
+    },
+    {
+      "statement_name": "abi_caller_refines_v5_statement",
+      "statement": "!s a s' a'. abi_caller_scalar_extended_step (s,a) (s',a')\n    ==> abi_cleanse_scalar_extended_step (s,a) (s',a')"
+    },
+    {
+      "statement_name": "abi_caller_preserves_omitted_statement",
+      "statement": "!s a s' a'. abi_caller_scalar_extended_step (s,a) (s',a') /\\\n             abi_all_decodes_caller_scalar s ==> a' = a"
+    },
+    {
+      "statement_name": "abi_caller_equal_controls_statement",
+      "statement": "!a a'. a' = a ==> abi_required_controls_preserved a a'"
+    },
+    {
+      "statement_name": "abi_caller_decoded_scalar_unique_statement",
+      "statement": "!len inst s. x86_decode s (read RIP s) (len,inst) /\\\n              abi_caller_scalar_instruction inst ==> abi_all_decodes_caller_scalar s"
+    },
+    {
+      "statement_name": "abi_caller_checked_run_lift_statement",
+      "statement": "!n P C s a.\n    assurance_checked_run n P\n      (\\k source target. C k source target /\\ abi_all_decodes_caller_scalar source) s\n    ==> eventually_n abi_caller_scalar_extended_step n\n          (\\t. P(FST t) /\\ SND t = a) (s,a)"
+    }
+  ]
+}

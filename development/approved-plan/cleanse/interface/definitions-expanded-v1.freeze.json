@@ -1,0 +1,15 @@
+{
+  "created_at_utc": "2026-09-30T18:11:59.358465+00:00",
+  "status": "EXPECTED_EXPANDED_DEFINITIONS_FROZEN_BEFORE_MAIN_PACKAGE_SEARCH",
+  "definitions": 39,
+  "source_files": [
+    {
+      "file": "development/approved-plan/cleanse/interface/expected-definitions-v1.json",
+      "sha256": "74231779cce3d74c2e7157504157acd87507b610c73388dc6aa8a6501774b5f4"
+    },
+    {
+      "file": "development/approved-plan/cleanse/interface/expected-definition-terms-v1.ml",
+      "sha256": "a2f50d9674fde9a1b07f6b35a735220ba5fe9ff320dc0a6001791f59c50ac2ae"
+    }
+  ]
+}

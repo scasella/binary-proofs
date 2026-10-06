@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-10-01T04:22:58.709437+00:00",
+  "files": {
+    "development/approved-plan/clients-e3/opaque-supplier-v1/audit-v2.py": "9c219d8d9f4a9efa878f7f744404ae15da869bd2e9c3e8a1915c8f93532836d2",
+    "development/approved-plan/clients-e3/opaque-supplier-v1/materialize-v1.py": "6e21316921cc6c5dd5bbd718dc6d8d32eee4a6a1bc24dac17a355e13357b21f1",
+    "development/approved-plan/clients-e3/opaque-supplier-v1/source-index-v1.json": "0381c183d1d86da7b4b030224281c1668379f3b7c52154843e1afd20ac206905"
+  },
+  "fresh_reconstruction_and_enclosing_source_guards_required": true,
+  "frozen_model_contract_or_callee_source_changed": false,
+  "host_audit_hardening": [
+    "Explicit e3-interface complete audit",
+    "Reject duplicate global and per-group definition rows",
+    "Refuse cached check module from another tree",
+    "Suppress source-tree bytecode output during host-policy import"
+  ],
+  "human_review": "PENDING",
+  "initial_host_policy_smoke_test": "Original accepted325/119/218 auditJSON accepted, not a new proof replay",
+  "prior_freeze_sha256": "b05f7f0eae204fa67e955e9a8f0ec6d681a43e71e2ad1877772ba7a91ac056e6",
+  "schema": "root_owned_opaque_supplier_helpers_v2",
+  "source_root": "Caller-supplied relocatable bundle root; no original user directory hardcoded",
+  "staged_host_policy_metadata_additions": 1,
+  "status": "FROZEN_METADATA_AND_SOURCE_RESTORATION_HELPERS_NOT_PROOF",
+  "supplier_registry": {
+    "definitions": 119,
+    "equations": 218,
+    "groups": 13,
+    "theorems": 325
+  },
+  "supplier_source_count": 4534
+}

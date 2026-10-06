@@ -1,0 +1,7 @@
+{
+  "path": "development/approved-plan/byte-contract/fastpath_statement.ml",
+  "sha256": "87a2394f64a71d0560e5f457f09e9be2663dd6ff7571c9ab6ec4474fdb150b1f",
+  "scope": "restricted16 byte-sequence actual-return helper; full O1 false",
+  "frozen_at": "2026-09-30T11:03:47.108298+00:00",
+  "human_review": "PENDING"
+}

@@ -1,0 +1,25 @@
+{
+  "boundary": "These excerpts justify the selected literal reset data. Physical state creation, TLS allocation, loader initialization and page enforcement remain declared environmental assumptions.",
+  "clauses": [
+    {
+      "manual_section": "8.1.5",
+      "text_line": 13870,
+      "value": "x87 CW 0x037f"
+    },
+    {
+      "manual_section": "13.6 initial configuration",
+      "text_line": 21627,
+      "value": "x87 initial CW 037f, SW zero, full tag ffff, FCS/FDS zero, FIP/FDP zero, ST0-ST7 zero"
+    },
+    {
+      "manual_section": "Table11-2",
+      "text_line": 18386,
+      "value": "MXCSR reset value 0x1f80"
+    }
+  ],
+  "formal_proof": false,
+  "human_review": "PENDING",
+  "source": "development/approved-plan/abi-qualification/docs/intel-vol1-2016.txt",
+  "source_sha256": "fc8ac1fa493f5dc1877e1f76a354105ed7d56cba8075c78df371e610dcb8f753",
+  "status": "PINNED_PRIMARY_MANUAL_INITIAL_STATE_EVIDENCE"
+}

@@ -1,0 +1,209 @@
+{
+  "definitions": [
+    {
+      "name": "clw_file_code",
+      "equation": "clw_file_code (file_bytes:num->byte) <=>\n    !i. i<97 ==> file_bytes(0x2417d0+i)=EL i openssl_cleanse_mc",
+      "source": "development/approved-plan/cleanse/loaded-witness/definitions-v1.ml"
+    },
+    {
+      "name": "clw_reference_code",
+      "equation": "clw_reference_code (image:int64->byte) <=>\n    !i. i<97 ==> image(word(0x102417d0+i))=EL i openssl_cleanse_mc",
+      "source": "development/approved-plan/cleanse/loaded-witness/definitions-v1.ml"
+    },
+    {
+      "name": "clw_layout",
+      "equation": "clw_layout p n <=> lw_layout p p n",
+      "source": "development/approved-plan/cleanse/loaded-witness/definitions-v1.ml"
+    },
+    {
+      "name": "clw_memory",
+      "equation": "clw_memory image p n high_first = lw_memory image p p n high_first",
+      "source": "development/approved-plan/cleanse/loaded-witness/definitions-v1.ml"
+    },
+    {
+      "name": "clw_state",
+      "equation": "clw_state (image:int64->byte) (p:int64) n high_first =\n    x86state_RECORD (word 0x102417d0)\n      (\\r:(4)word. if r=word 7 then p\n                  else if r=word 6 then word n\n                  else if r=word 4 then word 0x300008\n                  else word 0)\n      (\\z:(5)word. word 0) (\\k:(3)word. word 0) (word 2)\n      (clw_memory image p n high_first) []",
+      "source": "development/approved-plan/cleanse/loaded-witness/definitions-v1.ml"
+    },
+    {
+      "name": "clw_read",
+      "equation": "clw_read p n a <=> fb_read p p n a",
+      "source": "development/approved-plan/cleanse/loaded-witness/definitions-v1.ml"
+    },
+    {
+      "name": "clw_write",
+      "equation": "clw_write p n a <=> lw_image_write a \\/ lw_pagecover p n a",
+      "source": "development/approved-plan/cleanse/loaded-witness/definitions-v1.ml"
+    },
+    {
+      "name": "clw_ordinary",
+      "equation": "clw_ordinary p n a <=> fb_ordinary p p n a",
+      "source": "development/approved-plan/cleanse/loaded-witness/definitions-v1.ml"
+    },
+    {
+      "name": "clw_scalar_pre",
+      "equation": "clw_scalar_pre image p n high_first <=>\n    bp_e2_cleanse_pre 0x102417d0 (word 0x300008) (word 0x400000) p n\n      (clw_memory image p n high_first) (clw_read p n) (clw_write p n)\n      lw_execute (clw_ordinary p n) (clw_state image p n high_first)",
+      "source": "development/approved-plan/cleanse/loaded-witness/definitions-v1.ml"
+    },
+    {
+      "name": "clw_machine",
+      "equation": "clw_machine image p n high_first =\n    (clw_state image p n high_first,fb_initial_abi)",
+      "source": "development/approved-plan/cleanse/loaded-witness/definitions-v1.ml"
+    },
+    {
+      "name": "clw_full_pre",
+      "equation": "clw_full_pre file_bytes initial_rw padding image p n high_first <=>\n    fb_full_image file_bytes initial_rw padding\n      (read memory (FST(clw_machine image p n high_first))) /\\\n    bp_e2_cleanse_pre 0x102417d0 (word 0x300008) (word 0x400000) p n\n      (clw_memory image p n high_first) (clw_read p n) (clw_write p n)\n      lw_execute (clw_ordinary p n) (FST(clw_machine image p n high_first)) /\\\n    fb_abi_initial_fields (SND(clw_machine image p n high_first)) /\\\n    (!a. fb_tls_page a ==> clw_read p n a /\\ clw_ordinary p n a) /\\\n    assurance_canonical48 (val(read ABI_FS_BASE\n      (SND(clw_machine image p n high_first)))) /\\\n    (!a. lw_image_domain a ==> clw_read p n a /\\ clw_ordinary p n a /\\\n          (lw_execute a <=> lw_image_execute a) /\\\n          (clw_write p n a <=> lw_image_write a))",
+      "source": "development/approved-plan/cleanse/loaded-witness/definitions-v1.ml"
+    },
+    {
+      "name": "lw_image_domain",
+      "equation": "lw_image_domain a <=> 0x10000000 <= a /\\ a < 0x1048a000",
+      "source": "development/approved-plan/loaded-witness/definitions-v3.ml"
+    },
+    {
+      "name": "lw_image_read",
+      "equation": "lw_image_read a <=> lw_image_domain a",
+      "source": "development/approved-plan/loaded-witness/definitions-v3.ml"
+    },
+    {
+      "name": "lw_image_execute",
+      "equation": "lw_image_execute a <=> 0x100c5000 <= a /\\ a < 0x10344000",
+      "source": "development/approved-plan/loaded-witness/definitions-v3.ml"
+    },
+    {
+      "name": "lw_image_write",
+      "equation": "lw_image_write a <=> 0x10484000 <= a /\\ a < 0x1048a000",
+      "source": "development/approved-plan/loaded-witness/definitions-v3.ml"
+    },
+    {
+      "name": "lw_pagecover",
+      "equation": "lw_pagecover (p:int64) n a <=>\n    ~(n = 0) /\\ 4096 * (val p DIV 4096) <= a /\\\n    a < 4096 * ((val p + n - 1) DIV 4096 + 1)",
+      "source": "development/approved-plan/loaded-witness/definitions-v3.ml"
+    },
+    {
+      "name": "lw_overlay_domain",
+      "equation": "lw_overlay_domain p q n a <=>\n    (0x300000 <= a /\\ a < 0x301000) \\/\n    lw_pagecover p n a \\/ lw_pagecover q n a",
+      "source": "development/approved-plan/loaded-witness/definitions-v3.ml"
+    },
+    {
+      "name": "lw_layout",
+      "equation": "lw_layout p q n <=>\n    !a. ~(lw_image_domain a /\\ lw_overlay_domain p q n a)",
+      "source": "development/approved-plan/loaded-witness/definitions-v3.ml"
+    },
+    {
+      "name": "lw_reference_code",
+      "equation": "lw_reference_code (image:int64->byte) <=>\n    !i. i < 95 ==> image(word(0x10241840+i)) = EL i crypto_memcmp_mc",
+      "source": "development/approved-plan/loaded-witness/definitions-v3.ml"
+    },
+    {
+      "name": "lw_memory",
+      "equation": "lw_memory (image:int64->byte) p q n different (a:int64) =\n    if 0x300008 <= val a /\\ val a < 0x300010\n    then word (0x400000 DIV (256 EXP (val a-0x300008)))\n    else if lw_overlay_domain p q n (val a)\n         then if different /\\ a = q then word 255 else word 128\n         else image a",
+      "source": "development/approved-plan/loaded-witness/definitions-v3.ml"
+    },
+    {
+      "name": "lw_state",
+      "equation": "lw_state (image:int64->byte) (p:int64) (q:int64) n different =\n    x86state_RECORD (word 0x10241840)\n      (\\r:(4)word. if r=word 7 then p\n                  else if r=word 6 then q\n                  else if r=word 2 then word n\n                  else if r=word 4 then word 0x300008\n                  else word 0)\n      (\\z:(5)word. word 0) (\\k:(3)word. word 0) (word 2)\n      (lw_memory image p q n different) []",
+      "source": "development/approved-plan/loaded-witness/definitions-v3.ml"
+    },
+    {
+      "name": "lw_read",
+      "equation": "lw_read p q n a <=> lw_image_read a \\/ lw_overlay_domain p q n a",
+      "source": "development/approved-plan/loaded-witness/definitions-v3.ml"
+    },
+    {
+      "name": "lw_execute",
+      "equation": "lw_execute a <=> lw_image_execute a",
+      "source": "development/approved-plan/loaded-witness/definitions-v3.ml"
+    },
+    {
+      "name": "lw_ordinary",
+      "equation": "lw_ordinary p q n a <=> lw_image_domain a \\/ lw_overlay_domain p q n a",
+      "source": "development/approved-plan/loaded-witness/definitions-v3.ml"
+    },
+    {
+      "name": "lw_pre",
+      "equation": "lw_pre image p q n different <=>\n    bp_e2_crypto_pre 0x10241840 (word 0x300008) (word 0x400000)\n      p q n (lw_memory image p q n different) (lw_read p q n) lw_execute\n      (lw_ordinary p q n) (lw_state image p q n different)",
+      "source": "development/approved-plan/loaded-witness/definitions-v3.ml"
+    },
+    {
+      "name": "fb_immutable",
+      "equation": "fb_immutable a <=>\n    (0x10000000 <= a /\\ a < 0x100c4bd0) \\/\n    (0x100c5000 <= a /\\ a < 0x103434c9) \\/\n    (0x10344000 <= a /\\ a < 0x10421a40)",
+      "source": "development/approved-plan/loaded-witness/full-binding/definitions-v2.ml"
+    },
+    {
+      "name": "fb_initialized_rw",
+      "equation": "fb_initialized_rw a <=> 0x10422e50 <= a /\\ a < 0x104895b0",
+      "source": "development/approved-plan/loaded-witness/full-binding/definitions-v2.ml"
+    },
+    {
+      "name": "fb_reference_image",
+      "equation": "fb_reference_image (file_bytes:num->byte) (initial_rw:int64->byte)\n                     (padding:int64->byte) (a:int64) =\n    if fb_immutable (val a) then file_bytes (val a-0x10000000)\n    else if fb_initialized_rw (val a) then initial_rw a\n    else padding a",
+      "source": "development/approved-plan/loaded-witness/full-binding/definitions-v2.ml"
+    },
+    {
+      "name": "fb_full_image",
+      "equation": "fb_full_image file_bytes initial_rw padding (image:int64->byte) <=>\n    !a. lw_image_domain (val(a:int64))\n        ==> image a = fb_reference_image file_bytes initial_rw padding a",
+      "source": "development/approved-plan/loaded-witness/full-binding/definitions-v2.ml"
+    },
+    {
+      "name": "fb_file_code",
+      "equation": "fb_file_code (file_bytes:num->byte) <=>\n    !i. i<95 ==> file_bytes(0x241840+i) = EL i crypto_memcmp_mc",
+      "source": "development/approved-plan/loaded-witness/full-binding/definitions-v2.ml"
+    },
+    {
+      "name": "fb_tls_page",
+      "equation": "fb_tls_page a <=> 0x500000 <= a /\\ a < 0x501000",
+      "source": "development/approved-plan/loaded-witness/full-binding/definitions-v2.ml"
+    },
+    {
+      "name": "fb_read",
+      "equation": "fb_read p q n a <=> lw_read p q n a \\/ fb_tls_page a",
+      "source": "development/approved-plan/loaded-witness/full-binding/definitions-v2.ml"
+    },
+    {
+      "name": "fb_ordinary",
+      "equation": "fb_ordinary p q n a <=> lw_ordinary p q n a \\/ fb_tls_page a",
+      "source": "development/approved-plan/loaded-witness/full-binding/definitions-v2.ml"
+    },
+    {
+      "name": "fb_initial_abi",
+      "equation": "fb_initial_abi = abi_omitted_state_RECORD\n    (word 0x37f) (word 0) (word 0xffff) (word 0)\n    (word 0) (word 0) (word 0) (word 0)\n    (\\r:(3)word. word 0) (word 0x1f80)\n    (word 0) (word 0x500000) (word 0) (word 0)",
+      "source": "development/approved-plan/loaded-witness/full-binding/definitions-v2.ml"
+    },
+    {
+      "name": "fb_abi_initial_fields",
+      "equation": "fb_abi_initial_fields (a:abi_omitted_state) <=>\n    read ABI_X87_CW a = word 0x37f /\\\n    read ABI_X87_SW a = word 0 /\\\n    read ABI_X87_TAG a = word 0xffff /\\\n    read ABI_X87_FOP a = word 0 /\\\n    read ABI_X87_IP a = word 0 /\\\n    read ABI_X87_CS a = word 0 /\\\n    read ABI_X87_DP a = word 0 /\\\n    read ABI_X87_DS a = word 0 /\\\n    (!r:(3)word. read ABI_X87_REGS a r = word 0) /\\\n    read ABI_MXCSR a = word 0x1f80 /\\\n    read ABI_FS_SELECTOR a = word 0 /\\\n    read ABI_FS_BASE a = word 0x500000 /\\\n    read ABI_GS_SELECTOR a = word 0 /\\\n    read ABI_GS_BASE a = word 0",
+      "source": "development/approved-plan/loaded-witness/full-binding/definitions-v2.ml"
+    },
+    {
+      "name": "fb_machine",
+      "equation": "fb_machine image p q n different =\n    (lw_state image p q n different,fb_initial_abi)",
+      "source": "development/approved-plan/loaded-witness/full-binding/definitions-v2.ml"
+    },
+    {
+      "name": "fb_pre",
+      "equation": "fb_pre file_bytes initial_rw padding image p q n different <=>\n    fb_full_image file_bytes initial_rw padding\n      (read memory (FST(fb_machine image p q n different))) /\\\n    bp_e2_crypto_pre 0x10241840 (word 0x300008) (word 0x400000)\n      p q n (lw_memory image p q n different) (fb_read p q n) lw_execute\n      (fb_ordinary p q n) (FST(fb_machine image p q n different)) /\\\n    fb_abi_initial_fields (SND(fb_machine image p q n different)) /\\\n    (!a. fb_tls_page a ==> fb_read p q n a /\\ fb_ordinary p q n a) /\\\n    assurance_canonical48 (val(read ABI_FS_BASE\n      (SND(fb_machine image p q n different))))",
+      "source": "development/approved-plan/loaded-witness/full-binding/definitions-v2.ml"
+    },
+    {
+      "name": "assurance_canonical48",
+      "equation": "assurance_canonical48 a <=>\n    a < 2 EXP 64 /\\ (a < 2 EXP 47 \\/ 2 EXP 64 - 2 EXP 47 <= a)",
+      "source": "development/approved-plan/assurance/policy.ml"
+    },
+    {
+      "name": "assurance_region",
+      "equation": "assurance_region (p:int64) n a <=> val p <= a /\\ a < val p+n",
+      "source": "development/approved-plan/assurance/policy.ml"
+    },
+    {
+      "name": "assurance_span_ok",
+      "equation": "assurance_span_ok perm a width <=>\n    a+width <= 2 EXP 64 /\\\n    !j. j < width ==> assurance_canonical48 (a+j) /\\ perm(a+j)",
+      "source": "development/approved-plan/assurance/policy.ml"
+    },
+    {
+      "name": "bp_e2_cleanse_pre",
+      "equation": "bp_e2_cleanse_pre pc stackpointer ra p n m rp wp xp ordinary (s:x86state) <=>\n    n<2 EXP 64 /\\ pc+97<=2 EXP 64 /\\\n    bytes_loaded s (word pc) openssl_cleanse_mc /\\\n    read RIP s=word pc /\\ read RSP s=stackpointer /\\\n    read (memory :> bytes64 stackpointer) s=ra /\\\n    C_ARGUMENTS [p;word n] s /\\ read memory s=m /\\\n    val(stackpointer:int64) MOD 16=8 /\\ val stackpointer+8<2 EXP 64 /\\\n    assurance_canonical48(val(ra:int64)) /\\ ~(ra=word pc) /\\\n    read DF s=F /\\ ~bit 18(read rflags s) /\\\n    assurance_span_ok (\\a. xp a /\\ ordinary a) pc 97 /\\\n    assurance_span_ok (\\a. rp a /\\ ordinary a) (val stackpointer) 8 /\\\n    assurance_span_ok (\\a. wp a /\\ ordinary a) (val(p:int64)) n /\\\n    (!a. ~(assurance_region p n a /\\ assurance_region (word pc) 97 a)) /\\\n    (!a. ~(assurance_region p n a /\\ assurance_region stackpointer 8 a))",
+      "source": "development/approved-plan/cleanse/spec-v2.ml"
+    }
+  ]
+}

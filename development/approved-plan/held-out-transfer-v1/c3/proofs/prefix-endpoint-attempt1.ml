@@ -1,0 +1,51 @@
+(* Concrete actual C3 prefix frame: no variable instruction/site table or new matching behavior. *)
+let C3_PREFIX_CONCRETE_FRAME_INCLUDED = prove
+ (`!stackpointer:int64. (MAYCHANGE [RIP] ,, MAYCHANGE [events] ,, MAYCHANGE [RSP] ,, MAYCHANGE [memory :> bytes64(word_sub(stackpointer:int64)(word 8))] ,, MAYCHANGE [memory :> bytes64(word_sub(stackpointer:int64)(word 16))] ,, MAYCHANGE [memory :> bytes64(word_sub(stackpointer:int64)(word 24))] ,, MAYCHANGE [memory :> bytes64(word_sub(stackpointer:int64)(word 32))] ,, MAYCHANGE [ZF] ,, MAYCHANGE [SF] ,, MAYCHANGE [PF] ,, MAYCHANGE [CF] ,, MAYCHANGE [OF] ,, MAYCHANGE [AF] ,, MAYCHANGE [RBX] ,, MAYCHANGE [R12] ,, MAYCHANGE [RBP] ,, MAYCHANGE [memory :> bytes64(word_sub(stackpointer:int64)(word 48))]) subsumed c3_prefix_frame stackpointer`,
+ GEN_TAC THEN REWRITE_TAC[c3_prefix_frame;SOME_FLAGS] THEN SUBSUMED_MAYCHANGE_TAC);;
+let C3_LIBRARY_IMMUTABLE_READONLY = prove
+ (`!addr. fb_immutable addr ==> lw_image_domain addr /\ ~lw_image_write addr`,
+ REWRITE_TAC[fb_immutable;lw_image_domain;lw_image_write] THEN CONV_TAC NUM_REDUCE_CONV THEN ARITH_TAC);;
+let C3_PREFIX_ENDPOINT_TAC =
+ HT_STATE_NORMALIZE_TAC [] THEN
+ SUBGOAL_THEN `c3_prefix_frame stackpointer (s:x86state) s10` ASSUME_TAC THENL
+ [MP_TAC(SPEC `stackpointer:int64` C3_PREFIX_CONCRETE_FRAME_INCLUDED) THEN
+  REWRITE_TAC[subsumed] THEN DISCH_THEN MATCH_MP_TAC THEN ASM_REWRITE_TAC[];ALL_TAC] THEN
+ SUBGOAL_THEN `!addr:int64. ~c3_scratch stackpointer(val addr) ==> read memory(s10:x86state)addr=m addr` ASSUME_TAC THENL
+ [X_GEN_TAC `addr:int64` THEN DISCH_TAC THEN
+  SUBGOAL_THEN `read memory(s10:x86state)addr=read memory(s:x86state)addr`
+  (fun th -> ACCEPT_TAC(TRANS th(AP_THM(ASSUME `read memory(s:x86state)=m`)`addr:int64`))) THEN
+  MATCH_MP_TAC(ISPECL[`stackpointer:int64`;`addr:int64`;`s:x86state`;`s10:x86state`]C3_PREFIX_FRAME_BYTE) THEN ASM_REWRITE_TAC[];ALL_TAC] THEN
+ SUBGOAL_THEN `!addr. fb_immutable addr ==> ~c3_scratch stackpointer addr` ASSUME_TAC THENL
+ [REPEAT STRIP_TAC THEN SUBGOAL_THEN `(wp:num->bool)(addr:num)` ASSUME_TAC THENL
+  [MP_TAC(ISPECL[`\addr:num. wp addr /\ ordinary addr`;`word_sub(stackpointer:int64)(word 48)`;`48`;`addr:num`]HT_SPAN_POINT) THEN
+   ASM_SIMP_TAC[C3_STACK_SUB48_VALUE] THEN ASM_MESON_TAC[c3_scratch];
+   ASM_MESON_TAC[C3_LIBRARY_IMMUTABLE_READONLY]];ALL_TAC] THEN
+ SUBGOAL_THEN `fb_full_image lib_file (read memory(s10:x86state))(read memory s10)(read memory s10)` ASSUME_TAC THENL
+ [REWRITE_TAC[fb_full_image;fb_reference_image] THEN X_GEN_TAC `addr:int64` THEN DISCH_TAC THEN
+  ASM_CASES_TAC `fb_immutable(val(addr:int64))` THEN ASM_REWRITE_TAC[] THEN
+  MP_TAC(SPEC `addr:int64`(REWRITE_RULE[fb_full_image;fb_reference_image](ASSUME `fb_full_image lib_file lib_rw lib_padding m`))) THEN
+  ASM_REWRITE_TAC[] THEN ASM_MESON_TAC[];ALL_TAC] THEN
+ SUBGOAL_THEN `!i. i<n ==> read memory(s10:x86state)(word_add p(word i))=m(word_add p(word i))` ASSUME_TAC THENL
+ [REPEAT STRIP_TAC THEN SUBGOAL_THEN `assurance_region(p:int64)n(val(word_add p(word i)))` ASSUME_TAC THENL
+  [MATCH_MP_TAC(ISPECL[`\a:num. rp a /\ ordinary a`;`p:int64`;`n:num`;`i:num`]HT_SPAN_WORD_ADD_REGION) THEN ASM_REWRITE_TAC[];ALL_TAC] THEN
+  ASM_MESON_TAC[];ALL_TAC] THEN
+ SUBGOAL_THEN `!i. i<n ==> read memory(s10:x86state)(word_add q(word i))=m(word_add q(word i))` ASSUME_TAC THENL
+ [REPEAT STRIP_TAC THEN SUBGOAL_THEN `assurance_region(q:int64)n(val(word_add q(word i)))` ASSUME_TAC THENL
+  [MATCH_MP_TAC(ISPECL[`\a:num. rp a /\ ordinary a`;`q:int64`;`n:num`;`i:num`]HT_SPAN_WORD_ADD_REGION) THEN ASM_REWRITE_TAC[];ALL_TAC] THEN
+  ASM_MESON_TAC[];ALL_TAC] THEN
+ MP_TAC(SPEC `stackpointer:int64`C3_STACK_ALIGNMENT) THEN ASM_REWRITE_TAC[] THEN STRIP_TAC THEN
+ SUBGOAL_THEN `!addr. ~(assurance_region(word_sub(stackpointer:int64)(word 48))48 addr /\ assurance_region(word 0x10241840)95 addr)` ASSUME_TAC THENL
+ [MATCH_MP_TAC(ISPECL[`word_sub(stackpointer:int64)(word 48)`;`word 0x10241840:int64`;`48`;`95`]HT_REGION_DISJOINT) THEN
+  ASM_SIMP_TAC[C3_STACK_SUB48_VALUE;VAL_WORD;DIMINDEX_64] THEN CONV_TAC NUM_REDUCE_CONV THEN ASM_REWRITE_TAC[] THEN
+  MP_TAC(CONV_RULE NUM_REDUCE_CONV(SPEC `stackpointer:int64`VAL_BOUND_64)) THEN ASM_ARITH_TAC;ALL_TAC] THEN
+ REWRITE_TAC[assurance_checked_run;c3_crypto_ready;c3_saved_prefix;bp_e2_crypto_public_pre;bp_e2_crypto_pre;C_ARGUMENTS] THEN
+ CONV_TAC NUM_REDUCE_CONV THEN
+ ASM_REWRITE_TAC[HT_WORD_SUB_SUB;c3_loaded_code;c3_got] THEN
+ EXPAND_TAC "pc" THEN EXPAND_TAC "pltpc" THEN CONV_TAC NUM_REDUCE_CONV THEN
+ ASM_REWRITE_TAC[] THEN REWRITE_TAC[assurance_canonical48;VAL_WORD;DIMINDEX_64;WORD_EQ] THEN
+ CONV_TAC NUM_REDUCE_CONV THEN ASM_REWRITE_TAC[];;
+e C3_PREFIX_ENDPOINT_TAC;;
+print_endline "C3_PREFIX_ENDPOINT_RESIDUAL";;
+let c3_prefix_endpoint_residual = top_goal();;
+List.iter(fun t -> print_endline("C3_ENDPOINT_ASSUM "^string_of_term t))(fst c3_prefix_endpoint_residual);;
+print_endline("C3_ENDPOINT_GOAL "^string_of_term(snd c3_prefix_endpoint_residual));;

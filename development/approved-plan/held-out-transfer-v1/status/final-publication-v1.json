@@ -1,0 +1,26 @@
+{
+  "acceptance_input": false,
+  "current_pointer": {
+    "acceptance_input": false,
+    "schema": "current_status_pointer_v1",
+    "sha256": "193750904c4159baa64f4ed8954cd3a7665d828baf08b1ac51773c9b792a5496",
+    "snapshot": "results/status/snapshots/193750904c4159baa64f4ed8954cd3a7665d828baf08b1ac51773c9b792a5496.json"
+  },
+  "historical_baseline_entries_unchanged": [
+    "c1_successor_v1",
+    "c2_development_v1",
+    "reusable_assurance"
+  ],
+  "outcome": {
+    "path": "development/approved-plan/held-out-transfer-v1/results/final-outcome-v1.json",
+    "sha256": "d91fc62224eb96260f638214b91b665e477c24bd6f885c0aac51fe4c19c57bd1"
+  },
+  "previous_pointer": {
+    "acceptance_input": false,
+    "schema": "current_status_pointer_v1",
+    "sha256": "502835ec2b85c59722dc01799f94b0bbdd0c09d2f4c4a72ca01090a633d3c19c",
+    "snapshot": "results/status/snapshots/502835ec2b85c59722dc01799f94b0bbdd0c09d2f4c4a72ca01090a633d3c19c.json"
+  },
+  "schema": "heldout-final-publication-v1",
+  "utc": "2026-10-05T04:45:04.872030+00:00"
+}

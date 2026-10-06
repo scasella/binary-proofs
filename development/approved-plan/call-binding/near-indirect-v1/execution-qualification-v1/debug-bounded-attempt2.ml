@@ -1,0 +1,10 @@
+g r1_crypto_plt_bounded_statement;;
+e(REPEAT GEN_TAC);;
+e(REWRITE_TAC(!simulation_precanon_thms));;
+e(ENSURES_INIT_TAC "s0");;
+print_endline "R1_BOUND_INIT";;
+e(R1_STEPS_TAC R1_CRYPTO_PLT_PREFIX_EXEC [1]);;
+print_endline "R1_BOUND_STEPPED";;
+e(ENSURES_FINAL_STATE_TAC);;
+e(ASM_REWRITE_TAC[APPEND]);;
+print_endline "R1_BOUND_FINAL";;

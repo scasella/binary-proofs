@@ -1,0 +1,6 @@
+{
+  "status": "FROZEN_BEFORE_PROOF_SEARCH",
+  "file": "development/approved-plan/cleanse/functional/composition-statements.ml",
+  "sha256": "cce78f4c09cb964a22174eb19fefbef825f02accea01eda93a2fbfdf33b903b2",
+  "scope": "Pure original x86 functional composition; endpoint before RET; target/root E2 unchanged"
+}

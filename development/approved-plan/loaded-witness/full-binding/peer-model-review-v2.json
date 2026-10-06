@@ -1,0 +1,22 @@
+{
+  "findings": [
+    "No concrete model/nonvacuity defect found in the reviewed sources",
+    "The first three source-offset clauses correctly use address-minus-bias because p_offset=p_vaddr",
+    "The fourth original-RW memory interval correctly uses public post-init state despite p_offset/p_vaddr discrepancy, including RELRO/BSS",
+    "Every contiguous mapped PT_LOAD page byte is fixed; remaining padding is explicit",
+    "Literal 14-field empty-tag/reset-control record with ordinary canonical FS/TLS example is coherent initial data, with no assumed preservation"
+  ],
+  "formal_proof": false,
+  "human_review": "PENDING",
+  "reviewed_source_hashes": {
+    "development/approved-plan/loaded-witness/full-binding/REQUIREMENTS-v2.md": "6343a599b8bfab702c504b5c79a53c5d237bbf650a340a86ed7ea0f88aed5486",
+    "development/approved-plan/loaded-witness/full-binding/definitions-v2.ml": "80f07c0028e384ce7cb096baf83f647372285b5a0a99c0df4f6cbfe0e924f158",
+    "development/approved-plan/loading/declared-postimage-v1.json": "1fd46503fbbb9230158d7f2bd62e730d8874a560caf621b1ed1f448346050c6b"
+  },
+  "reviewer": "/root/semantics_expert",
+  "scope_limits": [
+    "Conditional on file-code/acquired whole-file map binding and explicit public post-initialization state",
+    "No proof of ELF relocation or TLS allocation or physical page permission enforcement"
+  ],
+  "status": "PASS_PEER_MODEL_AND_NONVACUITY_REVIEW"
+}

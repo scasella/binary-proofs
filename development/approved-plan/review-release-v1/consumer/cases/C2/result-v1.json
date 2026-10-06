@@ -1,0 +1,75 @@
+{
+  "case": "C2",
+  "complete_gate_sha256": "2fa77ea1d8b94cbccf80acffa1a6766809b4da5d9e8cc715b6e26b170b3d0502",
+  "completed_utc": "2026-10-05T15:49:25.783312+00:00",
+  "elapsed_seconds": 1025.770541667007,
+  "human_review": "PENDING",
+  "old_results_used_to_discharge_targets": false,
+  "operational_seal_sha256": "8f9e56c35e5a60f376356dc7abd242decbd788e1cb54d0e9f4ef23d8f1af9022",
+  "original_accepted_seal_sha256": "8f9e56c35e5a60f376356dc7abd242decbd788e1cb54d0e9f4ef23d8f1af9022",
+  "proof_construction": false,
+  "rows": [
+    {
+      "argv_file": "positive-argv.json",
+      "elapsed_scope": "Inclusive child execution and nested checks; do not add nested durations again",
+      "elapsed_seconds": 540.1306172089971,
+      "ended_utc": "2026-10-05T15:41:20.142877+00:00",
+      "error": null,
+      "exit_code": 0,
+      "phase": "positive",
+      "proof_construction": false,
+      "raw_log": "positive-process.log",
+      "started_utc": "2026-10-05T15:32:20.010678+00:00"
+    },
+    {
+      "argv_file": "positive-gate-argv.json",
+      "elapsed_scope": "Inclusive child execution and nested checks; do not add nested durations again",
+      "elapsed_seconds": 2.6490794169949368,
+      "ended_utc": "2026-10-05T15:41:22.792522+00:00",
+      "error": null,
+      "exit_code": 0,
+      "phase": "positive-gate",
+      "proof_construction": false,
+      "raw_log": "positive-gate-process.log",
+      "started_utc": "2026-10-05T15:41:20.143447+00:00"
+    },
+    {
+      "argv_file": "integrity-controls-argv.json",
+      "elapsed_scope": "Inclusive child execution and nested checks; do not add nested durations again",
+      "elapsed_seconds": 4.180330916002276,
+      "ended_utc": "2026-10-05T15:41:26.973218+00:00",
+      "error": null,
+      "exit_code": 0,
+      "phase": "integrity-controls",
+      "proof_construction": false,
+      "raw_log": "integrity-controls-process.log",
+      "started_utc": "2026-10-05T15:41:22.792884+00:00"
+    },
+    {
+      "argv_file": "missing-binding-probe-argv.json",
+      "elapsed_scope": "Inclusive child execution and nested checks; do not add nested durations again",
+      "elapsed_seconds": 472.9087147090031,
+      "ended_utc": "2026-10-05T15:49:19.882829+00:00",
+      "error": null,
+      "exit_code": 0,
+      "phase": "missing-binding-probe",
+      "proof_construction": false,
+      "raw_log": "missing-binding-probe-process.log",
+      "started_utc": "2026-10-05T15:41:26.973472+00:00"
+    },
+    {
+      "argv_file": "complete-gate-argv.json",
+      "elapsed_scope": "Inclusive child execution and nested checks; do not add nested durations again",
+      "elapsed_seconds": 5.899075166991679,
+      "ended_utc": "2026-10-05T15:49:25.782589+00:00",
+      "error": null,
+      "exit_code": 0,
+      "phase": "complete-gate",
+      "proof_construction": false,
+      "raw_log": "complete-gate-process.log",
+      "started_utc": "2026-10-05T15:49:19.883519+00:00"
+    }
+  ],
+  "started_utc": "2026-10-05T15:32:20.009157+00:00",
+  "status": "CHECKING_ONLY_CONSUMER_FRESH_ACCEPTED"
+}

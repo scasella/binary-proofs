@@ -1,0 +1,9 @@
+Held-out transfer scheduling amendment v1
+
+The human authorized one bounded held-out C3 evaluation after accepting C2. This additive amendment preserves the failed original C1 stage and accepted C1/C2 sources, statements, artifacts, receipts and failures. It changes current priority to defining and freezing a small candidate export surface, regression-checking existing cases against it, then independently selecting and freezing exactly one different C3 before construction.
+
+The mathematical supplier contracts, E5 RF=TF=0 normal-entry scope, architecture interpretation, kernel/ISA versions, permitted axioms and inherited acceptance requirements remain unchanged. Concrete old caller addresses, branches, stack widths and snapshots are caller-specific. All preparation parameterization is disclosed. Any new reusable lemma, automation, normalization or callback behavior required during C3 is integration adaptation regardless of its directory. Ordinary concrete site/image/specification facts and local proof reasoning use only the frozen rules.
+
+The unchanged attempt remains recorded if adaptation is necessary. An adaptation continuation may use only the remainder of the same fixed C3 construction budget, with unchanged final bytes/domain/literal targets. A later result B cannot relabel original attempt A. Budgets and acceptance policy are in STAGE-v1.json and must be included in the pre-case layer freeze. Preparation is bounded to3600s; C3 construction to10800s from its final-case freeze; each cold checking invocation to1800s/oneCPU/3GiB/offline, without automatic extension.
+
+Opacity stays inspection-based. Human review remains PENDING. No capability-isolation project, matched economics, new family, glibc expansion, broader loader/CPU scope or automatically started later caller is authorized by this stage. H2 judgments concern only the selected case within the frozen class; H3 is not measured.

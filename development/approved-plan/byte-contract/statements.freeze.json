@@ -1,0 +1,8 @@
+{
+  "experiment_id": "BP-20260930-E1",
+  "scope": "Conservative word/byte fast-path bridge; no full O1 package",
+  "human_review": "PENDING",
+  "path": "development/approved-plan/byte-contract/statements.ml",
+  "sha256": "51c3ac2f89a42a48c65b9955d4aa6043088114ec318ebb5f465de9a3cedffa7f",
+  "frozen_at": "2026-09-30T10:54:11.087837+00:00"
+}

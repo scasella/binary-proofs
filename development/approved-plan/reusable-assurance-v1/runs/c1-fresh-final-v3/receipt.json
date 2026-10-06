@@ -1,0 +1,27 @@
+{
+  "caller_acceptance": false,
+  "checker_wall_seconds": 412.31781566699647,
+  "deadline_seconds": 1800,
+  "docker_state": {
+    "Dead": false,
+    "Error": "",
+    "ExitCode": 1,
+    "FinishedAt": "2026-10-04T17:54:39.092638301Z",
+    "OOMKilled": false,
+    "Paused": false,
+    "Pid": 0,
+    "Restarting": false,
+    "Running": false,
+    "StartedAt": "2026-10-04T17:47:46.883293722Z",
+    "Status": "exited"
+  },
+  "elapsed_seconds": 414.7532986669976,
+  "exit_code": 1,
+  "full_C1_acceptance": false,
+  "proof_started": true,
+  "run_id": "20261004T174744Z-ad31a746",
+  "status": "FRESH_C1_PROOF_FAILED",
+  "supplier_marker": true,
+  "target_routine_executed": false,
+  "timeout": false
+}

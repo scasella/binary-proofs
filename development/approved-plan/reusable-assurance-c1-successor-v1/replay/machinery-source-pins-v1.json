@@ -1,0 +1,35 @@
+{
+  "checker_launched": false,
+  "cost": null,
+  "exclusive_active_seconds": null,
+  "files": {
+    "check-root-v1.py": {
+      "inherited_path": "development/approved-plan/reusable-assurance-v1/replay/check-root-v2.py",
+      "inherited_sha256": "11c5ac5f10629856eb5714185f0cc109193d89528a65520837b0ea3d5f9296a6",
+      "sha256": "b6d83f61674f195c62e3e8ca5cfaea8624bc2ac544690b23f45526d4130c383d"
+    },
+    "fresh-replay-v1.py": {
+      "inherited_path": "development/approved-plan/reusable-assurance-v1/replay/fresh-replay-v3.py",
+      "inherited_sha256": "231259d64edb609803e4c3be354149fda9c1a481aff9ee481fe0210621542394",
+      "sha256": "78d3ee64ef132907311d72914cf53d7a55402fab3b1993d598036f68bf21c683"
+    },
+    "source-check-v1.py": {
+      "inherited_path": "development/approved-plan/reusable-assurance-v1/replay/source-check-v1.py",
+      "inherited_sha256": "d376dd294757a6ef6636ff78bc3ef2765ccc99c63ad79e3b577844cb1a9e4051",
+      "sha256": "4ce2c3fd384ad3d3100dd8a8a9d9050461091b2abc119edf3cba16ca44b7faf2"
+    },
+    "targeted-preflight-controls-v1.py": {
+      "inherited_path": "development/approved-plan/reusable-assurance-v1/replay/targeted-preflight-controls-v1.py",
+      "inherited_sha256": "6618bb8f20d64c3bb242ee52cfea77df65b73b9cfd95729aae4b4e1b5231f6da",
+      "sha256": "5a50f7044c5036608d28293b87b320b0cfacd9ca723e1cd37ee69e1bf05f441f"
+    }
+  },
+  "inherited_acceptance_checks_retained": true,
+  "model": null,
+  "predecessor_seal_sha256": "2ee5de28e859c9355321ba660b4b93f015baf56ef61f7b648acfbce3f0db7080",
+  "proof_model_contract_artifact_changes": false,
+  "schema": "c1-successor-replay-adaptation-v1",
+  "source_only": true,
+  "tokens": null,
+  "utc": "2026-10-04T18:47:27.944601+00:00"
+}

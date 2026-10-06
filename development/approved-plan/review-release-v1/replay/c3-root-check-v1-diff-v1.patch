@@ -1,0 +1,30 @@
+--- development/approved-plan/c3-successor-v1/replay/check-root-v1.py
++++ development/approved-plan/review-release-v1/replay/c3-root-check-v1.py
+@@ -50,12 +50,15 @@
+         path = root/rel
+         require(not any(root.joinpath(*rel.parts[:i]).is_symlink() for i in range(len(rel.parts)+1)), 'Symlink sealed input')
+         require(path.is_file() and sha(path)==digest, 'Changed host input: '+name)
+-    stage_policy=read(root/(SUCCESSOR+'/STAGE-v1.json'))
++    historical_stage_policy=read(root/(SUCCESSOR+'/STAGE-v1.json'))
++    context_path='development/approved-plan/review-release-v1/replay/checking-context-v1.py'
++    context_policy=module(root/context_path,'later_checking_gate_policy')
++    stage_policy=context_policy.validate(root,seal)
+     stage_start=datetime.fromisoformat(stage_policy['start_utc'])
+     stage_deadline=datetime.fromisoformat(stage_policy['deadline_utc'])
+     require(seal['experiment']=='BP-20261005-C3-SUCCESSOR-V1' and seal['immutable_C3_case']==CASE and seal['successor_stage']==SUCCESSOR+'/STAGE-v1.json', 'Wrong successor or immutable C3 binding')
+     checker = SUCCESSOR+'/replay/source-check-v1.py'
+-    self_path = SUCCESSOR+'/replay/check-root-v1.py'
++    self_path = 'development/approved-plan/review-release-v1/replay/c3-root-check-v1.py'
+     require(seal['root_gate'] == self_path and self_path in extra and sha(Path(__file__)) == extra[self_path], 'Root gate is not the exact sealed source')
+     require(checker in host or checker in extra, 'Source checker is not sealed')
+     check = module(root/checker, 'c3_root_source_policy')
+@@ -277,6 +280,9 @@
+     guards()
+     for name,digest in initial_evidence.items(): require(sha(run/name)==digest,'Evidence changed during root gate')
+     return dict(schema='c3-development-independent-root-gate-v1',
++        checking_only=True, parent_accepted_seal_sha256=seal['parent_accepted_seal_sha256'],
++        historical_construction_deadline_utc=historical_stage_policy['deadline_utc'],
++        release_checking_context_sha256=seal['release_checking_context_sha256'],
+         status=('FRESH_ACCEPTED_WITH_FIVE_INTEGRITY_CONTROLS_AND_FRESH_BINDING_PROBE'
+             if controls_verified and binding_probe_verified else
+             'FRESH_ACCEPTED_POSITIVE_AND_INTEGRITY_CONTROLS_PENDING_BINDING_PROBE' if controls_verified else

@@ -1,0 +1,7 @@
+{
+  "created_at_utc": "2026-09-30T15:08:42.873940+00:00",
+  "before_search": true,
+  "file": "development/approved-plan/crypto-loop/trace/noninterference/first-return/existence-statements.ml",
+  "sha256": "928a205310e55e616cba66856846f78d7870b6c329f4227b29ef619b9cf8ca42",
+  "scope": "Actual execution existence; no length premise or target assumption"
+}

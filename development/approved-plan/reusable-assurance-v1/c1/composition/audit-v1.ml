@@ -1,0 +1,8 @@
+(* All seven unchanged original literal end statements: closed/std3. *)
+c1_handoff_audit_goal "C1_CRYPTO_CALLER_CHECKED" c1_checked_statement C1_CRYPTO_CALLER_CHECKED;;
+c1_handoff_audit_goal "C1_CRYPTO_CALLER_INTERFACE" c1_interface_statement C1_CRYPTO_CALLER_INTERFACE;;
+c1_handoff_audit_goal "C1_CRYPTO_CALLER_NORMAL_CHECKED" c1_normal_checked_statement C1_CRYPTO_CALLER_NORMAL_CHECKED;;
+c1_handoff_audit_goal "C1_CRYPTO_CALLER_RF_NORMAL_CHECKED" c1_rf_normal_checked_statement C1_CRYPTO_CALLER_RF_NORMAL_CHECKED;;
+c1_handoff_audit_goal "C1_CRYPTO_CALLER_NORMAL_INTERFACE" c1_normal_interface_statement C1_CRYPTO_CALLER_NORMAL_INTERFACE;;
+c1_handoff_audit_goal "C1_CRYPTO_HANDOFF" c1_handoff_statement C1_CRYPTO_HANDOFF;;
+c1_handoff_audit_goal "C1_CRYPTO_CALLER_COUNT" c1_count_statement C1_CRYPTO_CALLER_COUNT;;

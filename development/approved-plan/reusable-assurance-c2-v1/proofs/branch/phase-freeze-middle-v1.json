@@ -1,0 +1,25 @@
+{
+  "approved_assumptions_added": [],
+  "caller_entry_premises_changed": false,
+  "files": {
+    "proofs/branch/middle-definitions-v1.ml": "9e6ac9ded7894267470b46776005d403dde8116654c3f5c574a1c27b5aa74a97"
+  },
+  "human_review": "PENDING",
+  "literal_equations": {
+    "c2_middle_frame": {
+      "equation": "c2_middle_frame stackpointer =\n    MAYCHANGE [RIP;RSP;RDI;RSI] ,,\n    MAYCHANGE [memory :> bytes(word_sub stackpointer (word 32),32)] ,,\n    MAYCHANGE [events]",
+      "equation_utf8_sha256": "f02a6502e5f7a88da6200801d492f855354aa15405c64bdaa879056868f6f773",
+      "source": "proofs/branch/middle-definitions-v1.ml"
+    },
+    "c2_middle_ready": {
+      "equation": "c2_middle_ready stackpointer p q n m (initial:x86state) (returned:x86state) <=>\n    c2_equal m p q n /\\\n    c2_saved_prefix stackpointer p q n m initial returned /\\\n    read RIP returned=word 0x22001148 /\\\n    read RSP returned=word_sub stackpointer (word 24) /\\\n    read R12 returned=word 1 /\\\n    read DF returned=F /\\ ~bit 18(read rflags returned) /\\\n    read (memory :> bytes64 stackpointer) returned=\n      read (memory :> bytes64 stackpointer) initial /\\\n    c2_before_cleanup_frame stackpointer initial returned",
+      "equation_utf8_sha256": "1e4e0d83e398c7e54909bc62d5953d1d82b503c26d88d05da1595cf1fb8daccb",
+      "source": "proofs/branch/middle-definitions-v1.ml"
+    }
+  },
+  "public_contract_freeze_sha256": "26b2d7d8cc214d8a45a427eacc81dab1055998fd01fef2687afb89fda821cceb",
+  "purpose": "Proven endpoints and frame/effect predicates for named end-to-end obligations; never assumed caller preconditions",
+  "schema": "c2-additive-proof-phase-definition-freeze-v1",
+  "status": "FROZEN_DEFINITIONS_NOT_PROOFS",
+  "utc": "2026-10-04T22:22:32.091767+00:00"
+}

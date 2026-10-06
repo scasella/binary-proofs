@@ -1,0 +1,35 @@
+--- development/approved-plan/c3-successor-v1/replay/fresh-replay-v1.py
++++ development/approved-plan/review-release-v1/replay/c3-fresh-check-v1.py
+@@ -44,7 +44,7 @@
+     if not 0 < args.timeout_seconds <= 1800:
+         raise ValueError("External replay limit must be 1..1800 seconds")
+     root = args.source_root.resolve()
+-    check = module(HERE / "source-check-v1.py", "c3_fresh_source_check")
++    check = module(ROOT / SUCCESSOR / "replay/source-check-v1.py", "c3_fresh_source_check")
+     seal_path = args.seal.resolve()
+     seal_path.relative_to(root)
+     check.checked(root, str(seal_path.relative_to(root)), args.seal_sha256)
+@@ -60,14 +60,20 @@
+     OUT = (args.output or root / SUCCESSOR / "runs" / ("c3-fresh-" + rid)).resolve()
+     OUT.mkdir(parents=True, exist_ok=False)
+     stage_data=json.loads(check.checked(root,SUCCESSOR+'/STAGE-v1.json',seal['additional_stage_inputs'][SUCCESSOR+'/STAGE-v1.json']).read_text())
+-    stage_deadline=datetime.datetime.fromisoformat(stage_data['deadline_utc'])
++    context_path='development/approved-plan/review-release-v1/replay/checking-context-v1.py'
++    context_policy=module(check.checked(root,context_path,seal['additional_stage_inputs'][context_path]),'later_checking_policy')
++    checking_context=context_policy.validate(root,seal)
++    stage_deadline=datetime.datetime.fromisoformat(checking_context['deadline_utc'])
+     args.timeout_seconds=min(args.timeout_seconds,max(0,int((stage_deadline-invocation_started_utc).total_seconds())))
+-    if args.timeout_seconds<=0:raise TimeoutError('C3 successor stage deadline exhausted')
++    if args.timeout_seconds<=0:raise TimeoutError('C3 later checking session deadline exhausted')
+     def remaining():
+         value = args.timeout_seconds - (time.monotonic() - started)
+         if value <= 0: raise TimeoutError("External C3 replay deadline exhausted")
+         return value
+-    CONTEXT.update(run_id=rid, deadline_seconds=args.timeout_seconds,
++    CONTEXT.update(checking_only=True, parent_accepted_seal_sha256=seal['parent_accepted_seal_sha256'],
++        historical_construction_deadline_utc=stage_data['deadline_utc'],
++        release_checking_context_sha256=seal['release_checking_context_sha256'],
++        run_id=rid, deadline_seconds=args.timeout_seconds,
+         unavailable_interface_binding_probe=args.unavailable_interface_binding_probe,
+         invocation_started_utc=invocation_started_utc.isoformat(),stage_deadline_utc=stage_deadline.isoformat())
+     if args.unavailable_interface_binding_probe:

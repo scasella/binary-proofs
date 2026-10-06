@@ -1,0 +1,108 @@
+{
+  "schema": "c3-successor-concrete-dependency-map-v2",
+  "utc": "2026-10-05T13:52:44.572975+00:00",
+  "formal_dependency_certificate": false,
+  "basis": "Explicit source applications and inspection-qualified consumption; complete fresh checker independently reconstructs supplier and caller proof graph.",
+  "seal_sha256": "903c92086ade0594eda090832ee769e3415c741dfc20573a4c94fef1c6612f46",
+  "nodes": [
+    {
+      "stage": "original entry to first public supplier entry",
+      "theorems": [
+        "C3_HANDOFF"
+      ],
+      "source": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-handoff-proof-attempt2.ml",
+      "guarantee": "actual caller10 steps including CALL+PLT/GOT; original frozen callee precondition plus saved initial snapshot/frame"
+    },
+    {
+      "stage": "first comparison through public supplier interface",
+      "theorems": [
+        "C3_FIRST_CRYPTO_PUBLIC_POLICY_APPLICATION"
+      ],
+      "source": "development/approved-plan/held-out-transfer-v1/c3/proofs/application-v3.ml",
+      "supplier": "BP_E3_CRYPTO_PUBLIC_CALLER_POLICY",
+      "guarantee": "all-successor functional/strict access/termination/frame; comparison against initial memory"
+    },
+    {
+      "stage": "cleanup endpoint through actual7 steps",
+      "theorems": [
+        "C3_CLEANUP_HANDOFF",
+        "C3S_CLEANUP_CHAIN"
+      ],
+      "sources": [
+        "development/approved-plan/c3-successor-v1/proofs/cleanup-complete-v2.ml",
+        "development/approved-plan/c3-successor-v1/proofs/cleanup-chain-v1.ml"
+      ],
+      "guarantee": "cleanup public precondition derived from actual entry chain, u6 GOT fact/u7 registers/accumulated frame"
+    },
+    {
+      "stage": "cleanup through public supplier interface",
+      "theorems": [
+        "C3_CLEANSE_PUBLIC_POLICY_APPLICATION"
+      ],
+      "source": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-application-v2.ml",
+      "supplier": "BP_E3_CLEANSE_PUBLIC_CALLER_POLICY",
+      "guarantee": "zero p; permitted writes only destination; stack/register frame"
+    },
+    {
+      "stage": "cleanup transport and second actual handoff",
+      "theorems": [
+        "C3_CLEANSE_SAVED_BINDINGS",
+        "C3_SECOND_HANDOFF",
+        "C3_SECOND_PUBLIC_RETURN_TO_SUFFIX",
+        "C3S_SECOND_ENTRY_CHAIN"
+      ],
+      "sources": [
+        "development/approved-plan/c3-successor-v1/proofs/transport-saved-bindings-v2.ml",
+        "development/approved-plan/c3-successor-v1/proofs/second-complete-v1.ml",
+        "development/approved-plan/c3-successor-v1/proofs/second-return-v2.ml",
+        "development/approved-plan/c3-successor-v1/proofs/whole-prefix-chain-v3.ml"
+      ],
+      "guarantee": "four saved8-byte slots, incoming return at S, current code/GOT, actual alias-aware cleared snapshot, five actual CALL+PLT/GOT steps"
+    },
+    {
+      "stage": "second comparison through public supplier interface",
+      "theorems": [
+        "C3_SECOND_CRYPTO_PUBLIC_POLICY_APPLICATION"
+      ],
+      "source": "development/approved-plan/held-out-transfer-v1/c3/proofs/second-crypto-application-v3.ml",
+      "supplier": "BP_E3_CRYPTO_PUBLIC_CALLER_POLICY",
+      "guarantee": "comparison against current cleansed memory; derives actual suffix entry facts"
+    },
+    {
+      "stage": "actual final paths and whole chain",
+      "theorems": [
+        "C3_FINAL_RETURN_SITE",
+        "C3S_SECOND_CALL_SUFFIX",
+        "C3_CHECKED"
+      ],
+      "sources": [
+        "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+        "development/approved-plan/c3-successor-v1/proofs/whole-final-v2.ml"
+      ],
+      "guarantee": "all four paths12/12/9/9 through actual RET, exact c3_scalar_post; no assumed suffix entry in whole theorem"
+    },
+    {
+      "stage": "count, ABI and normal-entry E5 lifts",
+      "theorems": [
+        "C3_COUNT",
+        "C3_INTERFACE",
+        "C3_NORMAL_CHECKED",
+        "C3_RF_NORMAL_CHECKED",
+        "C3_NORMAL_INTERFACE"
+      ],
+      "source": "development/approved-plan/c3-successor-v1/proofs/final-caller-lifts-v1.ml",
+      "guarantee": "exact original literals via pinned generic rules; RF=TF0 normal-entry scope preserved"
+    }
+  ],
+  "generic_composition": "Pinned RA_CHECKED_RUN_THREE_SEGMENT, POST_MONO, site GEN_STEP/CLIENT, spans/frame/E5 rules and frozen callbacks; no new generic algorithm",
+  "distinct_return_slots": {
+    "incoming": "S",
+    "nested_cleanup": "S-48"
+  },
+  "access_and_writes": "Strict logical buffer reads; p writes and48-byte stack scratch; full fetch/GOT/return accesses separately declared; code/GOT/incoming return protected",
+  "aliases": "Original admitted p/q overlaps preserved; second equality uses c3_cleansed_memory, not original inputs",
+  "current_status": "DEVELOPMENT_CHECKED_FRESH_RECONSTRUCTION_RUNNING",
+  "predecessor": "development/approved-plan/c3-successor-v1/results/dependency-map-v1.json",
+  "predecessor_sha256": "8c7287a1c80e7e41f487738c9fd05374a770c90d20fa3347d872284c9f2bee1d",
+  "documentation_correction": "Supplier metadata spelling corrected to actual exported BP_E3_CLEANSE_PUBLIC_CALLER_POLICY. No proof/binary/contract or sealed input changed."
+}

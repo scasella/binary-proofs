@@ -1,0 +1,10 @@
+{
+  "E2_predefinitions_unchanged": true,
+  "created_at_utc": "2026-09-30T19:50:55.956230+00:00",
+  "files": {
+    "development/approved-plan/call-binding/near-indirect-v1/callee-requalification-v1/expected-statements-v1.json": "9e26fc2c6a39dce35731d04070d077a0aeb9a7e86eb375abbb90de271107d222",
+    "development/approved-plan/call-binding/near-indirect-v1/callee-requalification-v1/statements-v1.ml": "aee7687bf64b6fc24a26ad79411dc2a6bc73cb16fffbc78f53589d6533c0641b"
+  },
+  "goals_frozen_before_main_search": true,
+  "theorem_count": 7
+}

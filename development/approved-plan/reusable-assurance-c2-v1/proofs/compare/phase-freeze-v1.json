@@ -1,0 +1,36 @@
+{
+  "approved_assumptions_added": [],
+  "caller_entry_premises_changed": false,
+  "files": {
+    "proofs/compare/definitions-v1.ml": "722136c50bb0e3365350d92e7a41ea3000a608a707fe7a44abb308f069f79951",
+    "proofs/compare/frame-definitions-v1.ml": "87027fdb7415499971a83e2f0e2ced2ec213cb3461c0ea84a57e71b3bec824ff"
+  },
+  "human_review": "PENDING",
+  "literal_equations": {
+    "c2_accumulated_frame": {
+      "equation": "c2_accumulated_frame stackpointer p q n m =\n    MAYCHANGE [RIP;RSP;RAX;RDI;RSI;RDX;R10;R11;RBX;RBP;R12] ,,\n    MAYCHANGE SOME_FLAGS ,,\n    MAYCHANGE [memory :> bytes(p,if c2_equal m p q n then n else 0);\n               memory :> bytes(word_sub stackpointer (word 32),32)] ,,\n    MAYCHANGE [events]",
+      "equation_utf8_sha256": "4830beb27857ce542acd8cd913414e955f19457dbd0719ece7c1f92a2be1a725",
+      "source": "proofs/compare/frame-definitions-v1.ml"
+    },
+    "c2_before_cleanup_frame": {
+      "equation": "c2_before_cleanup_frame stackpointer =\n    MAYCHANGE [RIP;RSP;RAX;RDI;RSI;RDX;R10;R11;RBX;RBP;R12] ,,\n    MAYCHANGE SOME_FLAGS ,,\n    MAYCHANGE [memory :> bytes(word_sub stackpointer (word 32),32)] ,,\n    MAYCHANGE [events]",
+      "equation_utf8_sha256": "01325beabd8333d571ea68b3f479de4a33ffe6183f21cad8066f8d10fc25fc2b",
+      "source": "proofs/compare/frame-definitions-v1.ml"
+    },
+    "c2_crypto_completed": {
+      "equation": "c2_crypto_completed lib_file stackpointer p q n m rp wp xp ordinary\n    (initial:x86state) a (returned:x86state) <=>\n    ?entry:x86state.\n      c2_crypto_ready lib_file stackpointer p q n m rp wp xp ordinary initial a entry /\\\n      bp_assurance_call_post 0x10241840 (word_sub stackpointer (word 32))\n        (word 0x22001132) p q n (read events entry) (read memory entry) entry returned",
+      "equation_utf8_sha256": "fdcd6e3fb363cac1d312cdb554ce52be5886d254f52ac2dff217203391c1c35b",
+      "source": "proofs/compare/definitions-v1.ml"
+    },
+    "c2_crypto_public_frame": {
+      "equation": "c2_crypto_public_frame =\n    MAYCHANGE [RIP;RSP;RAX;RDI;RSI;RDX;R10;R11] ,,\n    MAYCHANGE SOME_FLAGS ,, MAYCHANGE [events]",
+      "equation_utf8_sha256": "e5e05868557f3c237e09cc5b2fef73218764a4159270178a1b3eff3af1befabe",
+      "source": "proofs/compare/frame-definitions-v1.ml"
+    }
+  },
+  "public_contract_freeze_sha256": "26b2d7d8cc214d8a45a427eacc81dab1055998fd01fef2687afb89fda821cceb",
+  "purpose": "Proven endpoints and frame/effect predicates for named end-to-end obligations; never assumed caller preconditions",
+  "schema": "c2-additive-proof-phase-definition-freeze-v1",
+  "status": "FROZEN_DEFINITIONS_NOT_PROOFS",
+  "utc": "2026-10-04T22:02:25.707007+00:00"
+}

@@ -1,0 +1,25 @@
+{
+  "approved_assumptions_added": [],
+  "caller_entry_premises_changed": false,
+  "files": {
+    "proofs/cleanup/definitions-v1.ml": "658382b6826e30a1593aaabc0caaa679da6355000b02ec6054d012cf5a813b02"
+  },
+  "human_review": "PENDING",
+  "literal_equations": {
+    "c2_cleanse_completed": {
+      "equation": "c2_cleanse_completed lib_file stackpointer p q n m rp wp xp ordinary\n    (initial:x86state) a (returned:x86state) <=>\n    ?entry:x86state.\n      c2_cleanse_ready lib_file stackpointer p q n m rp wp xp ordinary initial a entry /\\\n      bp_e2_cleanse_call_post 0x102417d0 (word_sub stackpointer (word 32))\n        (word 0x22001153) p n (read memory entry) entry returned",
+      "equation_utf8_sha256": "50ea995f95fcf62c938700ab9e6054512cf0131184fbc68a5cf3689fede4cc5d",
+      "source": "proofs/cleanup/definitions-v1.ml"
+    },
+    "c2_cleanse_ready": {
+      "equation": "c2_cleanse_ready lib_file stackpointer p q n m rp wp xp ordinary\n    (initial:x86state) a (entry:x86state) <=>\n    c2_equal m p q n /\\\n    bp_e2_cleanse_public_pre lib_file (read memory entry) (read memory entry)\n      (word_sub stackpointer (word 32)) (word 0x22001153) p n\n      (read memory entry) rp wp xp ordinary (entry,a) /\\\n    c2_saved_prefix stackpointer p q n m initial entry /\\\n    read R12 entry=word 1 /\\\n    read (memory :> bytes64 stackpointer) entry=\n      read (memory :> bytes64 stackpointer) initial /\\\n    c2_before_cleanup_frame stackpointer initial entry",
+      "equation_utf8_sha256": "4000ed39f9511f69dad56d2144a426d578436256e6f3435446f383f06e24f38f",
+      "source": "proofs/cleanup/definitions-v1.ml"
+    }
+  },
+  "public_contract_freeze_sha256": "26b2d7d8cc214d8a45a427eacc81dab1055998fd01fef2687afb89fda821cceb",
+  "purpose": "Proven endpoints and frame/effect predicates for named end-to-end obligations; never assumed caller preconditions",
+  "schema": "c2-additive-proof-phase-definition-freeze-v1",
+  "status": "FROZEN_DEFINITIONS_NOT_PROOFS",
+  "utc": "2026-10-04T22:09:27.581513+00:00"
+}

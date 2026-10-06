@@ -1,0 +1,149 @@
+{
+  "theorems": [
+    {
+      "name": "ABI_CALLER_DECODE_0_0",
+      "statement_name": "abi_caller_decode_0_0_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_secret_caller_mc ==> x86_decode s (word(pc+0)) (2,PUSH (Register(Gpr (word 12) Full_64)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_0_2",
+      "statement_name": "abi_caller_decode_0_2_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_secret_caller_mc ==> x86_decode s (word(pc+2)) (1,PUSH (Register(Gpr (word 5) Full_64)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_0_3",
+      "statement_name": "abi_caller_decode_0_3_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_secret_caller_mc ==> x86_decode s (word(pc+3)) (3,MOV (Register(Gpr (word 5) Full_64)) (Register(Gpr (word 2) Full_64)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_0_6",
+      "statement_name": "abi_caller_decode_0_6_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_secret_caller_mc ==> x86_decode s (word(pc+6)) (1,PUSH (Register(Gpr (word 3) Full_64)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_0_7",
+      "statement_name": "abi_caller_decode_0_7_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_secret_caller_mc ==> x86_decode s (word(pc+7)) (3,MOV (Register(Gpr (word 3) Full_64)) (Register(Gpr (word 7) Full_64)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_0_10",
+      "statement_name": "abi_caller_decode_0_10_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_secret_caller_mc ==> x86_decode s (word(pc+10)) (5,CALL (Imm32(word 0xfffffed1)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_0_15",
+      "statement_name": "abi_caller_decode_0_15_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_secret_caller_mc ==> x86_decode s (word(pc+15)) (3,MOV (Register(Gpr (word 6) Full_64)) (Register(Gpr (word 5) Full_64)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_0_18",
+      "statement_name": "abi_caller_decode_0_18_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_secret_caller_mc ==> x86_decode s (word(pc+18)) (3,MOV (Register(Gpr (word 7) Full_64)) (Register(Gpr (word 3) Full_64)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_0_21",
+      "statement_name": "abi_caller_decode_0_21_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_secret_caller_mc ==> x86_decode s (word(pc+21)) (3,MOV (Register(Gpr (word 12) Lower_32)) (Register(Gpr (word 0) Lower_32)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_0_24",
+      "statement_name": "abi_caller_decode_0_24_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_secret_caller_mc ==> x86_decode s (word(pc+24)) (5,CALL (Imm32(word 0xfffffed3)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_0_29",
+      "statement_name": "abi_caller_decode_0_29_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_secret_caller_mc ==> x86_decode s (word(pc+29)) (2,XOR (Register(Gpr (word 0) Lower_32)) (Register(Gpr (word 0) Lower_32)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_0_31",
+      "statement_name": "abi_caller_decode_0_31_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_secret_caller_mc ==> x86_decode s (word(pc+31)) (3,TEST (Register(Gpr (word 12) Lower_32)) (Register(Gpr (word 12) Lower_32)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_0_34",
+      "statement_name": "abi_caller_decode_0_34_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_secret_caller_mc ==> x86_decode s (word(pc+34)) (1,POP (Register(Gpr (word 3) Full_64)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_0_35",
+      "statement_name": "abi_caller_decode_0_35_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_secret_caller_mc ==> x86_decode s (word(pc+35)) (3,SET Condition_Z (Register(Gpr (word 0) Lower_8)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_0_38",
+      "statement_name": "abi_caller_decode_0_38_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_secret_caller_mc ==> x86_decode s (word(pc+38)) (1,POP (Register(Gpr (word 5) Full_64)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_0_39",
+      "statement_name": "abi_caller_decode_0_39_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_secret_caller_mc ==> x86_decode s (word(pc+39)) (2,POP (Register(Gpr (word 12) Full_64)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_0_41",
+      "statement_name": "abi_caller_decode_0_41_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_secret_caller_mc ==> x86_decode s (word(pc+41)) (1,RET)"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_1_0",
+      "statement_name": "abi_caller_decode_1_0_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_public_caller_mc ==> x86_decode s (word(pc+0)) (4,SUB (Register(Gpr (word 4) Full_64)) (Imm8(word 8)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_1_4",
+      "statement_name": "abi_caller_decode_1_4_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_public_caller_mc ==> x86_decode s (word(pc+4)) (5,CALL(Imm32(word 0xffffff17)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_1_9",
+      "statement_name": "abi_caller_decode_1_9_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_public_caller_mc ==> x86_decode s (word(pc+9)) (2,TEST (Register(Gpr (word 0) Lower_32)) (Register(Gpr (word 0) Lower_32)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_1_11",
+      "statement_name": "abi_caller_decode_1_11_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_public_caller_mc ==> x86_decode s (word(pc+11)) (3,SET Condition_Z (Register(Gpr (word 0) Lower_8)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_1_14",
+      "statement_name": "abi_caller_decode_1_14_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_public_caller_mc ==> x86_decode s (word(pc+14)) (4,ADD (Register(Gpr (word 4) Full_64)) (Imm8(word 8)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_1_18",
+      "statement_name": "abi_caller_decode_1_18_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_public_caller_mc ==> x86_decode s (word(pc+18)) (3,MOVZX (Register(Gpr (word 0) Lower_32)) (Register(Gpr (word 0) Lower_8)))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_1_21",
+      "statement_name": "abi_caller_decode_1_21_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_public_caller_mc ==> x86_decode s (word(pc+21)) (1,RET)"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_2_0",
+      "statement_name": "abi_caller_decode_2_0_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_crypto_plt_prefix ==> x86_decode s (word(pc+0)) (6,JUMP Unconditional (Memop Quadword (Riprel(word 0x2f92))))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_3_0",
+      "statement_name": "abi_caller_decode_3_0_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_cleanse_plt_prefix ==> x86_decode s (word(pc+0)) (6,JUMP Unconditional (Memop Quadword (Riprel(word 0x2f8a))))"
+    },
+    {
+      "name": "ABI_CALLER_DECODE_4_0",
+      "statement_name": "abi_caller_decode_4_0_statement",
+      "statement": "!pc s. bytes_loaded s (word pc) r1_memcmp_plt_prefix ==> x86_decode s (word(pc+0)) (6,JUMP Unconditional (Memop Quadword (Riprel(word 0x2f82))))"
+    },
+    {
+      "name": "ABI_CALLER_REGISTERED_SITE_IS_SCALAR",
+      "statement_name": "abi_caller_site_scalar_statement",
+      "statement": "!family off len inst. abi_caller_site family off len inst ==> abi_caller_scalar_instruction inst"
+    },
+    {
+      "name": "ABI_CALLER_REGISTERED_DECODE_QUALIFIED",
+      "statement_name": "abi_caller_coverage_statement",
+      "statement": "!pc s code family off len inst. abi_caller_code family code /\\ bytes_loaded s (word pc) code /\\ abi_caller_site family off len inst /\\ read RIP s=word(pc+off) ==> x86_decode s (read RIP s) (len,inst) /\\ abi_all_decodes_caller_scalar s"
+    }
+  ]
+}

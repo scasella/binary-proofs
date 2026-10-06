@@ -1,0 +1,41 @@
+{
+  "schema": "review-consolidation-observations-v1",
+  "observed_utc": "2026-10-05T15:21:06.680288+00:00",
+  "proof_construction": "NOT_PERFORMED_IN_THIS_STAGE",
+  "packaging_source_repairs": [
+    {
+      "operation": "source-union extraction",
+      "failure": "Graph node object used as digest; rejected before any seal output",
+      "evidence": "development/approved-plan/review-release-v1/results/packaging-failure1-v1.json",
+      "mathematical_inputs_changed": false
+    }
+  ],
+  "agents": [
+    "/root",
+    "/root/release_index",
+    "/root/release_runtime",
+    "/root/release_manuscript"
+  ],
+  "model_identifiers": null,
+  "model_identifier_reason": "No model identifier exposed for these default inherited agents",
+  "tokens": null,
+  "tokens_reason": "No observed token counts exposed",
+  "billing": null,
+  "billing_reason": "Not exposed",
+  "construction_exclusive_seconds": null,
+  "construction_reason": "No proof construction; release preparation includes agent reasoning/coordination not separately timed",
+  "coordination_exclusive_seconds": null,
+  "coordination_reason": "Not separately instrumented; do not infer by subtracting overlapping check times",
+  "human_review": "PENDING",
+  "research_expansion": false,
+  "reporting_corrections": [
+    {
+      "agent": "/root/release_index",
+      "initial_message": "539 historical files",
+      "corrected": "479 distinct historical evidence files",
+      "evidence": "development/approved-plan/review-release-v1/index/historical-evidence-files-v1.json",
+      "source_data_unchanged": true
+    }
+  ],
+  "additional_packaging_failure": "development/approved-plan/review-release-v1/index/review-evidence-selection-failure-v1.json"
+}

@@ -1,0 +1,86 @@
+val C3_FINAL_RETURN_PRESERVES_R13 : thm =
+  |- forall stackpointer p q n m u v.
+         (c3_frame stackpointer p q n m ,, MAYCHANGE [RBX; RBP; R12]) u v
+         ==> read R13 v = read R13 u
+val C3_FINAL_RETURN_PRESERVES_R12 : thm =
+  |- forall stackpointer p q n m u v.
+         (c3_frame stackpointer p q n m ,, MAYCHANGE [RBX; RBP]) u v
+         ==> read R12 v = read R12 u
+val C3_FINAL_RETURN_PRESERVES_RBP : thm =
+  |- forall stackpointer p q n m u v.
+         (c3_frame stackpointer p q n m ,, MAYCHANGE [RBX]) u v
+         ==> read RBP v = read RBP u
+val C3_FINAL_RETURN_PRESERVES_RBX : thm =
+  |- forall stackpointer p q n m u v.
+         c3_frame stackpointer p q n m u v ==> read RBX v = read RBX u
+val C3_FINAL_RETURN_SAVED4_SPLIT : thm =
+  |- MAYCHANGE [RBX; RBP; R12; R13] =
+     MAYCHANGE [RBX; RBP; R12] ,, MAYCHANGE [R13]
+val C3_FINAL_RETURN_SAVED3_SPLIT : thm =
+  |- MAYCHANGE [RBX; RBP; R12] = MAYCHANGE [RBX; RBP] ,, MAYCHANGE [R12]
+val C3_FINAL_RETURN_SAVED2_SPLIT : thm =
+  |- MAYCHANGE [RBX; RBP] = MAYCHANGE [RBX] ,, MAYCHANGE [RBP]
+Exception: Failure "seqapply: Length mismatch".
+C3_WARM7_FINAL_FRAME_STEPS_CHAIN_EXCEPTION Failure("Error in included file /work/development/approved-plan/held-out-transfer-v1/c3/proofs/final-return-site-frame-v3.ml")
+val it : unit = ()
+# C3_CONSTRUCTION_CAP_SNAPSHOT
+val it : unit = ()
+# Line 1, characters 10-22:
+1 | print_goal(top_goal());;
+              ^^^^^^^^^^^^
+Error: This expression has type term list * term
+       but an expression was expected of type
+         goal = (string * thm) list * term
+       Type term = Hol.term is not compatible with type string * thm 
+# C3_POST_CAP_METADATA_GOAL_ONLY_NO_PROOF
+val it : unit = ()
+# assurance_checked_run 0
+(\t.
+     bp_e2_cleanse_public_pre lib_file (read memory t) (read memory t)
+     (word_sub stackpointer (word 48))
+     (word 587206988)
+     p
+     n
+     (read memory t)
+     rp
+     wp
+     xp
+     ordinary
+     (t,a) /\
+     (read RBX t = p /\
+      read RBP t = word n /\
+      read R12 t = q /\
+      read (memory :> bytes64 (word_sub stackpointer (word 8))) t =
+      read R13 initial /\
+      read (memory :> bytes64 (word_sub stackpointer (word 16))) t =
+      read R12 initial /\
+      read (memory :> bytes64 (word_sub stackpointer (word 24))) t =
+      read RBP initial /\
+      read (memory :> bytes64 (word_sub stackpointer (word 32))) t =
+      read RBX initial /\
+      (forall addr.
+           ~c3_scratch stackpointer (val addr)
+           ==> read memory t addr = m addr) /\
+      (forall i.
+           i < n
+           ==> read memory t (word_add p (word i)) = m (word_add p (word i))) /\
+      (forall i.
+           i < n
+           ==> read memory t (word_add q (word i)) = m (word_add q (word i))) /\
+      (bytes_loaded t (word pc) c3_caller_mc /\
+       bytes_loaded t (word 587206704) c3_crypto_plt_prefix /\
+       bytes_loaded t (word cleansepltpc) c3_cleanse_plt_prefix /\
+       bytes_loaded t (word 270800960) crypto_memcmp_mc /\
+       bytes_loaded t (word 270800848) openssl_cleanse_mc) /\
+      read (memory :> bytes64 (word 587218896)) t = word 270800960 /\
+      read (memory :> bytes64 (word 587218904)) t = word 270800848) /\
+     read R13 t = (if c3_equal m p q n then word 1 else word 0) /\
+     read R14 t = read R14 initial /\
+     read R15 t = read R15 initial /\
+     (c3_frame stackpointer p q n m ,, MAYCHANGE [RBX; RBP; R12; R13])
+     initial
+     t)
+(c3_segment_policy stackpointer p q n m rp wp xp ordinary)
+u7val it : unit = ()
+# 
+val it : unit = ()

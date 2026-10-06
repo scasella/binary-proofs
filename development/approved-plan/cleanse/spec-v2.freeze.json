@@ -1,0 +1,16 @@
+{
+  "O1_pass": false,
+  "artifact_sha256": "76dd3d93e5ee48950a92a58d59b94de8143847f91a80d9682c938767b991577d",
+  "component_statement": "cleanse_byte_loop_statement",
+  "experiment_id": "BP-20260930-E2-CANDIDATE",
+  "frozen_at_utc": "2026-09-30T13:41:39.064840+00:00",
+  "human_review": "PENDING",
+  "region_sha256": "3851f7a1688c62eb51d845c6bab76313f3626c4a3beafaa82468115e0a765c16",
+  "requirements": "PROMPT.md",
+  "requirements_sha256": "4cb2075f379515e8973294df6a5282928f91adb0bdb3d472ad1a7493ba3888c4",
+  "revision_reason": "Type correction: numeric memory component and event-list component require separate MAYCHANGE groups. No main proof search had begun. Predecessor draft/freeze preserved.",
+  "spec_path": "development/approved-plan/cleanse/spec-v2.ml",
+  "spec_sha256": "770be48e0786e1ce1b50141a45e65e8bebd8ded14dfbea9d9ee9ec82a4a5326b",
+  "status": "FROZEN_BEFORE_MAIN_PROOF_SEARCH",
+  "whole_routine_statement": "bp_e2_cleanse_functional_statement"
+}

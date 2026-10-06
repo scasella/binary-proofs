@@ -1,0 +1,9 @@
+{
+  "c3_checked_statement": "C3_CHECKED",
+  "c3_count_statement": "C3_COUNT",
+  "c3_handoff_statement": "C3_HANDOFF",
+  "c3_interface_statement": "C3_INTERFACE",
+  "c3_normal_checked_statement": "C3_NORMAL_CHECKED",
+  "c3_normal_interface_statement": "C3_NORMAL_INTERFACE",
+  "c3_rf_normal_checked_statement": "C3_RF_NORMAL_CHECKED"
+}

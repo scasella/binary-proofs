@@ -1,0 +1,32 @@
+{
+  "admitted_changes": "New C2 contract/artifact before construction; C2-specific proofs; every generic modification versioned and classified as adaptation; required additive replay instantiations",
+  "checker_cap_scope": "Per invocation, including cold dependency reconstruction; no silent resource extensions",
+  "checker_cap_seconds": 1800,
+  "checker_cpus": 1,
+  "checker_memory_bytes": 3221225472,
+  "construction_cap_seconds": 10800,
+  "construction_deadline_utc": "2026-10-05T00:24:09.951522+00:00",
+  "current_status_snapshot": {
+    "acceptance_input": false,
+    "schema": "current_status_pointer_v1",
+    "sha256": "aa912b33555f5a0a97901dbbdba3d126bec83c04005267dbca7adef0e73f9774",
+    "snapshot": "results/status/snapshots/aa912b33555f5a0a97901dbbdba3d126bec83c04005267dbca7adef0e73f9774.json"
+  },
+  "deferred": [
+    "C3 construction",
+    "relinking",
+    "glibc",
+    "economics",
+    "formal capability isolation",
+    "new library families"
+  ],
+  "experiment": "BP-20261004-C2-V1",
+  "failed_predecessor": "development/approved-plan/reusable-assurance-v1",
+  "human_review": "PENDING",
+  "measurement_rule": "Separate construction windows, checking intervals, supplier reconstruction, and coordination; do not sum overlapping or nested intervals; unexposed agent tokens/model/cost are null",
+  "predecessor_accepted": "development/approved-plan/reusable-assurance-c1-successor-v1",
+  "protected": "C1 histories; supplier contracts/binaries; existing machine/E5 semantics and architectural interpretation; axioms; inherited acceptance requirements",
+  "schema": "c2-development-stage-v1",
+  "start_utc": "2026-10-04T21:24:09.951522+00:00",
+  "trace_claim": false
+}

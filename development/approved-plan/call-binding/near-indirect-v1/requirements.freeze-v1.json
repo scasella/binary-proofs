@@ -1,0 +1,30 @@
+{
+  "id": "NEAR_INDIRECT_GENERIC_LONGMODE_V1_SPEC",
+  "created_at_utc": "2026-09-30T16:24:08.178313+00:00",
+  "semantic_scope": "Generic Linux x86-64 long-mode nearindirect CALLFF/2 and JMPFF/4; productionartifactsunchanged; originalCryptoacceptedmodelsealpreserved",
+  "requirements": [
+    "Decoder always uses r/m64 for near CALLFF/2 and JMPFF/4 in64bitmode, including absentREX.W and66prefix; no exacttargetbyte/address whitelist",
+    "Immediate CALL and JUMP remain RIPrelative with identicaloriginalevents/effects",
+    "Indirect CALL/JMP target is the full64bit register or full8byte memoryvalue and is used asabsoluteaddress",
+    "RIP-relative operand effectiveaddress uses RIPafterinstructiondecode advance",
+    "Memoryoperand loads append EventLoad(address,8) before EventJump(postdecodeRIP,target); registerindirection appends no dataread",
+    "CALL uses actual x86_CALL stackpush of postdecodeRIP with full8byte EventStore; JMP preservesstack/memory",
+    "All originalnon-branch instructionsemantics unchanged; no unsupportedinstruction no-op or newtargetcorrectnessaxiom",
+    "Explicitversionedmodeltrustandarchitecturalreview; diagnostics do not prove physicalISA",
+    "Requalify everyactualclientinstruction and oldcalleeproofchain affected by modelbeforeanyR1acceptance",
+    "Generic added-state ABI CALL/JMP effects require separatephysicaleffectstrustreviewandqualifiedpathlift; V4aloneinsufficient"
+  ],
+  "source_documents": [
+    {
+      "path": "development/approved-plan/abi-qualification/docs/intel-vol2a.pdf",
+      "sha256": "81a1c07beb20217956b23885193b68a104beaf72fcc85768d8da901991b71ec8",
+      "sections": [
+        "CALLnearabsoluteindirect",
+        "JMPnearabsoluteindirect64bit"
+      ]
+    }
+  ],
+  "human_review": "PENDING",
+  "agent_semantic_review": "Initialplanreview: semantics_expert agrees; sourceauditstillpending",
+  "proofs_completed": false
+}

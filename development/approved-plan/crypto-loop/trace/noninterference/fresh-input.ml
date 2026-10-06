@@ -1,0 +1,10 @@
+use_file_raise_failure := true;;
+let crypto_observation_initial_axioms = axioms();;
+let crypto_observation_guard f = try f() with e -> prerr_endline(Printexc.to_string e); exit 1;;
+crypto_observation_guard(fun () -> loadt "/work/proofs/qualification/qualification.ml");;
+crypto_observation_guard(fun () -> loadt "/work/development/approved-plan/assurance/correspondence.ml");;
+crypto_observation_guard(fun () -> loadt "/work/development/approved-plan/assurance/policy.ml");;
+crypto_observation_guard(fun () -> loadt "/work/development/approved-plan/crypto-loop/trace/noninterference/components-v2.ml");;
+crypto_observation_guard(fun () -> loadt "/work/development/approved-plan/crypto-loop/trace/noninterference/audit.ml");;
+crypto_observation_guard(fun () -> crypto_observation_audit crypto_observation_initial_axioms "/output/observation-audit.json");;
+crypto_observation_guard(fun () -> print_endline "CRYPTO_FRESH_OBSERVATION_ACCEPTED"; exit 0);;

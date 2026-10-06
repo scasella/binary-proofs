@@ -1,0 +1,32 @@
+{
+  "cases": [
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "checking_only": true,
+  "consumer_inspection_after_prior_context_exposure": true,
+  "cpu_count": 1,
+  "expected_case_phases": [
+    "positive",
+    "positive-gate",
+    "integrity-controls",
+    "missing-binding-probe",
+    "complete-gate"
+  ],
+  "external_organization_validation": false,
+  "formal_capability_isolation": false,
+  "human_review": "PENDING",
+  "image_archive_sha256": "6c01c3490963fe4d7b530195aaadcc2161636047e1d4899837e4aa18258e0eb4",
+  "input_manifest_sha256": "bb91c404411554fc48a1c34fe1107278067ffbf76cdc759b20c833bffd85a1fd",
+  "memory_bytes": 3221225472,
+  "network": "none",
+  "original_sources_unchanged": true,
+  "per_case_session_seconds": 5400,
+  "per_invocation_seconds": 1800,
+  "proof_construction": false,
+  "recorded_utc": "2026-10-05T15:21:03.450075+00:00",
+  "schema": "review-release-consumer-plan-v1",
+  "source_archive_sha256": "7434fae0f89c9b3a0c58f455a3bd33826502213befea5be5f58bcb5355073e2a",
+  "source_root": "/private/tmp/bp-review-consumer-o803245s/source"
+}

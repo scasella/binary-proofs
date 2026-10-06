@@ -1,0 +1,16 @@
+{
+  "frozen_at_utc": "2026-09-30T18:36:27.731171+00:00",
+  "statements": [
+    {
+      "statement_name": "r1_absolute_operation_eta_statement",
+      "statement": "!target. x86_JMP_ABSOLUTE target =\n   (\\s. (events := CONS(EventJump(read RIP s,target))(read events s) ,,\n         RIP := target) s)"
+    },
+    {
+      "statement_name": "r1_word_val_address_statement",
+      "statement": "!a b. (word(val(word a:int64)+b):int64)=word(a+b)"
+    }
+  ],
+  "file_sha256": "310da029fa8e8fa79fde53c056f4428a865f6e061d5c298228ee381a78686742",
+  "human_review": "PENDING",
+  "proof_search_started": false
+}

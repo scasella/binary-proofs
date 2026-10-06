@@ -1,0 +1,91 @@
+{
+  "GNU_or_HOL_started": false,
+  "ambient_namespace_capability_isolated": false,
+  "controls_run": false,
+  "cost": null,
+  "exposure": [
+    {
+      "detail": "A broad rg definition search accidentally traversed restored runs/baseline-e5-v1/source and displayed matching definition-constructor lines including baseline model and supplier byte-binding names. No source was executed or changed. This exposure is retained; no capability isolation is claimed.",
+      "kind": "SOURCE_METADATA_EXPOSURE"
+    },
+    {
+      "detail": "Selected caller/generic/helper/witness source text, public contract/export literals, original pre-proof freezes, existing host replay/audit machinery and saved C1 acquisition fixtures read for static checks. Supplier source content is otherwise handled through pinned opaque APIs and hash metadata.",
+      "kind": "SOURCE_GATE_EXPOSURE"
+    }
+  ],
+  "full_C1_acceptance": false,
+  "model": null,
+  "schema": "c1-fresh-replay-source-provenance-v1",
+  "scope": "Minimal source adaptation of existing replay, materializer, auditor and ELF tooling; no new package architecture",
+  "sources": [
+    {
+      "path": "development/approved-plan/normal-entry-e5-v1/fresh-replay-v1.py",
+      "purpose": "E5 replay staging/readonly/runtime guard pattern",
+      "sha256": "052433f8cba8b2f07d013449e8ff5770353eed71f5ff6b28397019f80bae6e1d"
+    },
+    {
+      "path": "development/approved-plan/normal-entry-e5-v1/live-audit-v3.ml",
+      "purpose": "E5 actual theorem audit normalization/JSON pattern",
+      "sha256": "9ab7d40e3460ba5ac871ada7cd83fd578d4e28fb3d97a2853093a50acc229348"
+    },
+    {
+      "path": "development/approved-plan/clients-e3/opaque-supplier-v1/materialize-v1.py",
+      "purpose": "Existing opaque supplier materializer API",
+      "sha256": "6e21316921cc6c5dd5bbd718dc6d8d32eee4a6a1bc24dac17a355e13357b21f1"
+    },
+    {
+      "path": "development/approved-plan/clients-e3/opaque-supplier-v1/audit-v2.py",
+      "purpose": "Existing opaque supplier host auditor API",
+      "sha256": "9c219d8d9f4a9efa878f7f744404ae15da869bd2e9c3e8a1915c8f93532836d2"
+    },
+    {
+      "path": "development/approved-plan/clients-e3/opaque-supplier-v1/source-index-v1.json",
+      "purpose": "Existing supplier indexed source partition",
+      "sha256": "0381c183d1d86da7b4b030224281c1668379f3b7c52154843e1afd20ac206905"
+    },
+    {
+      "path": "development/approved-plan/clients-e3/opaque-supplier-v1/freeze-v2.json",
+      "purpose": "Existing supplier host freeze",
+      "sha256": "d24b79f84eb6468a9fe6fba05e8df0452ffda00d7423243c870b6e85b805fa9d"
+    },
+    {
+      "path": "scripts/inventory.py",
+      "purpose": "Existing independent ELF parser",
+      "sha256": "6f35da09dea20999a64f5698618b369822c3eac60ebe7d6b161021206f163cff"
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-v1/c1/contract/freeze-v1.json",
+      "purpose": "Original C1 contract freeze",
+      "sha256": "70b0c20b37e210d78d415c71953292afc889c78ea9757025d9d74d5a049f2a98"
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-v1/c1/artifact/inventory-v1.json",
+      "purpose": "Original C1 acquired artifact inventory",
+      "sha256": "70f6fcd526fa336f4c2b4278c25bd2578a30f5def43aa73e69953fddbef0430f"
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-v1/c1/completion/literal-freeze-v1.json",
+      "purpose": "Original completion literal freeze",
+      "sha256": "5eaa25720f9c4a2e21ba28ffbb1a794bf2bbe2db50d83fa935ceece095f81b4f"
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-v1/c1/continuation/tail-freeze-v1.json",
+      "purpose": "Original tail literal/file freeze",
+      "sha256": "7db9b6dd99f074f3ea9d8eb13fbc442e8cf57107301cccdf1b45dd9ce5529218"
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-v1/c1/witnesses/freeze-v2.json",
+      "purpose": "Original witness literal freeze",
+      "sha256": "b43f439fd8f3ee96df5c519291042ef1f35562fdd14651075790dbe11462f72e"
+    },
+    {
+      "path": "development/approved-plan/reusable-assurance-v1/c1/composition/end-exports-v1.json",
+      "purpose": "Actual seven theorem export binding metadata",
+      "sha256": "91bd74c9aaa35deb554017afb55c06ed1f7458583383a59860abfb9fcf5ce80d"
+    }
+  ],
+  "supplier_visibility": "Caller formal load graph contains only new caller/generic/linkage lanes, two explicit public exports and four old generic span/frame sources; no supplier body recipe or former caller proof loader imports",
+  "theorem_dependency_isolated": false,
+  "tokens": null,
+  "utc": "2026-10-04T17:12:10.677919+00:00"
+}

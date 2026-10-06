@@ -1,0 +1,38 @@
+{
+  "acceptance_input": false,
+  "added_count": 0,
+  "changed_count": 0,
+  "created_utc": "2026-10-05T16:11:56.480616+00:00",
+  "end_manifest": "development/approved-plan/review-release-v1/index/preservation-end-v1.json",
+  "end_sha256": "c206d69ecbd11a95dfa15639f70981fbdb99d11f231b1226a4856b98c19cdabd",
+  "exclusions": {
+    "directories": [
+      "__pycache__",
+      ".pytest_cache"
+    ],
+    "file_names": [
+      ".DS_Store"
+    ],
+    "file_suffixes": [
+      ".pyc",
+      ".pyo"
+    ],
+    "release_workstream": "development/approved-plan/review-release-v1"
+  },
+  "formal_validation": false,
+  "protected_file_count": 187211,
+  "protected_trees": [
+    "development/approved-plan/reusable-assurance-v1",
+    "development/approved-plan/reusable-assurance-c1-successor-v1",
+    "development/approved-plan/reusable-assurance-c2-v1",
+    "development/approved-plan/held-out-transfer-v1",
+    "development/approved-plan/c3-postmortem-v1",
+    "development/approved-plan/c3-successor-v1"
+  ],
+  "removed_count": 0,
+  "schema": "review-release-preservation-summary-v1",
+  "scope": "Exact bytes/types and symlink targets; no permissions/times or formal theorem-validity claim. Original accepted packages, capped failures, candidatefreeze/postmortem/successor history and supplier/model sources unchanged.",
+  "start_manifest": "development/approved-plan/review-release-v1/index/preservation-start-v1.json",
+  "start_sha256": "0e1ecbdaa3a6f75f0cb8d66a7cea30318276de670251533aed4990da9266a20c",
+  "status": "PASS"
+}

@@ -1,0 +1,13 @@
+print_endline "C1_SUCCESSOR_ANNOTATED_SPECIALIZATION_BEGIN";;
+let c1_diag_typed_literals = List.mapi (fun i text -> if i=7 || i=8 then "(" ^ text ^ ":num->x86state->x86state->bool)" else text) c1_diag_literals;;
+let c1_diag_typed_terms = List.map parse_term c1_diag_typed_literals;;
+List.iter (fun (i,t) -> Printf.printf "ANNOTATED_SUPPLIED_TERM %d : %s\n%!" i (string_of_type(type_of t)); print_term t; print_newline()) (List.mapi (fun i t -> i+1,t) c1_diag_typed_terms);;
+let c1_diag_specialized = ISPECL c1_diag_typed_terms RA_CHECKED_RUN_THREE_SEGMENT;;
+print_endline "ANNOTATED_FULL_SPECIALIZED_RA3"; print_thm c1_diag_specialized; print_newline();;
+Printf.printf "ANNOTATED_RA3_HYP_COUNT %d\n%!" (List.length(hyp c1_diag_specialized));;
+let c1_diag_consequent = snd(dest_imp(concl c1_diag_specialized));;
+Printf.printf "ANNOTATED_CONSEQUENT_ACONV_ORIGINAL_GOAL %b\n%!" (aconv c1_diag_consequent c1_diag_goal);;
+print_endline "ORIGINAL_GOAL_FULL_CONCLUSION"; print_term c1_diag_goal; print_newline(); print_endline "ORIGINAL_GOAL_FULL_ASSUMPTIONS"; List.iter (fun t -> print_term t; print_newline()) c1_diag_asl;;
+if not(aconv c1_diag_consequent c1_diag_goal) then failwith "C1_ANNOTATED_SPECIALIZATION_GOAL_MISMATCH";;
+if axioms() <> [INFINITY_AX;SELECT_AX;ETA_AX] || axioms() <> reuse_c1_foundation_axioms then failwith "C1_SUCCESSOR_DIAGNOSTIC_AXIOM_CHANGE";;
+print_endline "C1_SUCCESSOR_ANNOTATED_SPECIALIZATION_END";;

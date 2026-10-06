@@ -1,0 +1,20 @@
+{
+  "definitions": [
+    {
+      "name": "abi_cleanse_scalar_instruction",
+      "equation": "abi_cleanse_scalar_instruction inst <=>\n    abi_scalar_instruction inst \\/\n    (?r imm. inst = SUB (Register(Gpr r Full_64)) (Imm8 imm)) \\/\n    (?r imm. inst = TEST (Register(Gpr r Full_64)) (Imm32 imm))"
+    },
+    {
+      "name": "abi_cleanse_scalar_extended_step",
+      "equation": "abi_cleanse_scalar_extended_step (s:x86state,a:abi_omitted_state) (s',a') <=>\n    ?len inst.\n      x86_decode s (read RIP s) (len,inst) /\\\n      (RIP := word_add (read RIP s) (word len) ,, x86_execute inst) s s' /\\\n      (abi_cleanse_scalar_instruction inst ==> a' = a)"
+    },
+    {
+      "name": "abi_all_decodes_cleanse_scalar",
+      "equation": "abi_all_decodes_cleanse_scalar (s:x86state) <=>\n    !len inst. x86_decode s (read RIP s) (len,inst)\n               ==> abi_cleanse_scalar_instruction inst"
+    },
+    {
+      "name": "abi_cleanse_site",
+      "equation": "abi_cleanse_site off len inst <=>\n    (off = 0 /\\ len = 4 /\\ inst = ENDBR64) \\/\n    (off = 4 /\\ len = 3 /\\ inst = XOR (% rax) (% rax)) \\/\n    (off = 7 /\\ len = 4 /\\ inst = CMP (% rsi) (Imm8 (word 15))) \\/\n    (off = 11 /\\ len = 2 /\\ inst = JUMP Condition_NB (Imm8 (word 35))) \\/\n    (off = 13 /\\ len = 4 /\\ inst = CMP (% rsi) (Imm8 (word 0))) \\/\n    (off = 17 /\\ len = 2 /\\ inst = JUMP Condition_Z (Imm8 (word 12))) \\/\n    (off = 19 /\\ len = 2 /\\ inst = MOV (Memop Byte (%% (rdi,0))) (% al)) \\/\n    (off = 21 /\\ len = 4 /\\ inst = SUB (% rsi) (Imm8 (word 1))) \\/\n    (off = 25 /\\ len = 4 /\\ inst = LEA (% rdi) (%% (rdi,1))) \\/\n    (off = 29 /\\ len = 2 /\\ inst = JUMP Condition_NZ (Imm8 (word 244))) \\/\n    (off = 31 /\\ len = 2 /\\ inst = RET) \\/\n    (off = 48 /\\ len = 7 /\\ inst = TEST (% rdi) (Imm32 (word 7))) \\/\n    (off = 55 /\\ len = 2 /\\ inst = JUMP Condition_Z (Imm8 (word 12))) \\/\n    (off = 57 /\\ len = 2 /\\ inst = MOV (Memop Byte (%% (rdi,0))) (% al)) \\/\n    (off = 59 /\\ len = 4 /\\ inst = LEA (% rsi) (%% (rsi,18446744073709551615))) \\/\n    (off = 63 /\\ len = 4 /\\ inst = LEA (% rdi) (%% (rdi,1))) \\/\n    (off = 67 /\\ len = 2 /\\ inst = JUMP Unconditional (Imm8 (word 235))) \\/\n    (off = 69 /\\ len = 3 /\\ inst = MOV (Memop Quadword (%% (rdi,0))) (% rax)) \\/\n    (off = 72 /\\ len = 4 /\\ inst = LEA (% rsi) (%% (rsi,18446744073709551608))) \\/\n    (off = 76 /\\ len = 7 /\\ inst = TEST (% rsi) (Imm32 (word 4294967288))) \\/\n    (off = 83 /\\ len = 4 /\\ inst = LEA (% rdi) (%% (rdi,8))) \\/\n    (off = 87 /\\ len = 2 /\\ inst = JUMP Condition_NZ (Imm8 (word 236))) \\/\n    (off = 89 /\\ len = 4 /\\ inst = CMP (% rsi) (Imm8 (word 0))) \\/\n    (off = 93 /\\ len = 2 /\\ inst = JUMP Condition_NZ (Imm8 (word 180))) \\/\n    (off = 95 /\\ len = 2 /\\ inst = RET)"
+    }
+  ]
+}

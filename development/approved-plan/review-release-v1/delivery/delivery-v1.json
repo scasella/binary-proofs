@@ -1,0 +1,14 @@
+{
+  "checking_source_archive": "development/approved-plan/review-release-v1/delivery/checking-sources-v1.tar.gz",
+  "checking_source_archive_sha256": "7434fae0f89c9b3a0c58f455a3bd33826502213befea5be5f58bcb5355073e2a",
+  "checking_source_bytes": 38640827,
+  "delivered_file_count": 856,
+  "docker_image_archive": "development/approved-plan/review-release-v1/delivery/docker-images-v1.tar",
+  "docker_image_archive_bytes": 1994384384,
+  "docker_image_archive_sha256": "6c01c3490963fe4d7b530195aaadcc2161636047e1d4899837e4aa18258e0eb4",
+  "human_review": "PENDING",
+  "input_manifest": "development/approved-plan/review-release-v1/inputs/release-inputs-v1.json",
+  "input_manifest_sha256": "bb91c404411554fc48a1c34fe1107278067ffbf76cdc759b20c833bffd85a1fd",
+  "schema": "review-release-delivery-v1",
+  "scope": "Immutable checking inputs; final review documents/evidence delivered separately. This archive does not contain saved caller theorem objects. Historical JSON metadata is not proof acceptance."
+}

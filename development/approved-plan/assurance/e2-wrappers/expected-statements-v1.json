@@ -1,0 +1,293 @@
+{
+  "scope": "exact E2 restricted component, not full O1; human review pending",
+  "theorems": [
+    {
+      "name": "ASSURANCE_OBSERVED_PROJECTION",
+      "statement": "!s obs s'. assurance_observed_step s obs s' ==> x86 s s'"
+    },
+    {
+      "name": "ASSURANCE_OBSERVED_BACKLIFT_ALL",
+      "statement": "!s s'. x86 s s' ==> ?obs. assurance_observed_step s obs s'"
+    },
+    {
+      "name": "ASSURANCE_OBSERVED_EQUIVALENCE",
+      "statement": "!s s'. (?obs. assurance_observed_step s obs s') <=> x86 s s'"
+    },
+    {
+      "name": "ASSURANCE_OBSERVED_PROGRESS",
+      "statement": "!s. (?s'. x86 s s') <=> ?obs s'. assurance_observed_step s obs s'"
+    },
+    {
+      "name": "ASSURANCE_OBSERVED_FETCH_CORRESPONDENCE",
+      "statement": "!s ip len inst es s'.\n    assurance_observed_step s (ip,len,inst,es) s'\n    ==> ip = read RIP s /\\\n        x86_decode s ip (len,inst) /\\\n        (?l. bytes_loaded s ip l /\\ LENGTH l = len /\\\n             decode l = SOME(inst,[]))"
+    },
+    {
+      "name": "ASSURANCE_DELTA_EXACT",
+      "statement": "!s s' d. read events s' = APPEND d (read events s)\n             ==> assurance_delta s s' = d"
+    },
+    {
+      "name": "ASSURANCE_OBSERVATION_EVENT_ORDER",
+      "statement": "!s s' len inst d.\n    read events s' = APPEND d (read events s)\n    ==> assurance_observation s len inst s' =\n        (read RIP s,len,inst,REVERSE d)"
+    },
+    {
+      "name": "ASSURANCE_DELTA_CONCATENATION",
+      "statement": "!s0 s1 s2 d1 d2.\n    read events s1 = APPEND d1 (read events s0) /\\\n    read events s2 = APPEND d2 (read events s1)\n    ==> assurance_delta s0 s2 = APPEND d2 d1 /\\\n        REVERSE(assurance_delta s0 s2) =\n          APPEND (REVERSE d1) (REVERSE d2)"
+    },
+    {
+      "name": "ASSURANCE_EVENTUALLY_CORRESPONDENCE",
+      "statement": "!P s. eventually (\\a b. ?obs. assurance_observed_step a obs b) P s\n           <=> eventually x86 P s"
+    },
+    {
+      "name": "ASSURANCE_EXECUTE_RET",
+      "statement": "x86_execute RET = x86_RET"
+    },
+    {
+      "name": "ASSURANCE_ACTUAL_RET_PROJECTION",
+      "statement": "!len s s'. assurance_actual_ret len s s' ==> x86 s s'"
+    },
+    {
+      "name": "ASSURANCE_ACTUAL_RET_EFFECTS",
+      "statement": "!len s s'. assurance_actual_ret len s s'\n    ==> read RSP s' = word_add (read RSP s) (word 8) /\\\n        read RIP s' = read (memory :> bytes64 (read RSP s)) s /\\\n        read events s' = APPEND\n          [EventJump(word_add (read RIP s) (word len),\n                     read (memory :> bytes64 (read RSP s)) s);\n           EventLoad(read RSP s,8)] (read events s)"
+    },
+    {
+      "name": "ASSURANCE_ACTUAL_RET_OBSERVATION",
+      "statement": "!len s s'. assurance_actual_ret len s s'\n    ==> assurance_observation s len RET s' =\n        (read RIP s,len,RET,\n         [EventLoad(read RSP s,8);\n          EventJump(word_add (read RIP s) (word len),\n                    read (memory :> bytes64 (read RSP s)) s)])"
+    },
+    {
+      "name": "ASSURANCE_DECODED_RET_ALL_SUCCESSORS",
+      "statement": "!len s. x86_decode s (read RIP s) (len,RET)\n    ==> !s'. x86 s s' ==> assurance_actual_ret len s s'"
+    },
+    {
+      "name": "ASSURANCE_DECODED_RET_PROGRESS",
+      "statement": "!len s. x86_decode s (read RIP s) (len,RET)\n    ==> ?s'. assurance_actual_ret len s s'"
+    },
+    {
+      "name": "ASSURANCE_SPAN_SUBRANGE",
+      "statement": "!perm a width offset count.\n    assurance_span_ok perm a width /\\ offset+count <= width\n    ==> assurance_span_ok perm (a+offset) count"
+    },
+    {
+      "name": "ASSURANCE_ZERO_STACK_EVENT_POLICY",
+      "statement": "!rp wp ip ra sp.\n    assurance_span_ok rp (val(sp:int64)) 8\n    ==> ALL (assurance_event_policy rp wp)\n        [EventJump(ip,ra);EventLoad(sp,8)]"
+    },
+    {
+      "name": "ASSURANCE_RET_EVENT_POLICY",
+      "statement": "!rp wp len s s'.\n    assurance_actual_ret len s s' /\\\n    assurance_span_ok rp (val(read RSP s)) 8\n    ==> ALL (assurance_event_policy rp wp)\n              (assurance_delta s s')"
+    },
+    {
+      "name": "ASSURANCE_STACK_ADVANCE_NONWRAP",
+      "statement": "!stackpointer:int64. val stackpointer + 8 < 2 EXP 64\n    ==> val(word_add stackpointer (word 8)) = val stackpointer + 8"
+    },
+    {
+      "name": "ASSURANCE_FETCH_INTERVAL_FROM_REGION",
+      "statement": "!xp codebase codesize ip len inst es.\n    assurance_span_ok xp (val(codebase:int64)) codesize /\\\n    val codebase <= val(ip:int64) /\\\n    val ip+len <= val codebase+codesize\n    ==> assurance_fetch_policy xp (ip,len,inst,es)"
+    },
+    {
+      "name": "ASSURANCE_SPAN_SELF_REGION",
+      "statement": "!rp p n. assurance_span_ok rp (val(p:int64)) n\n    ==> assurance_span_ok\n          (\\a. rp a /\\ assurance_region p n a) (val p) n"
+    },
+    {
+      "name": "ASSURANCE_SPAN_MONO",
+      "statement": "!rp rp' a width.\n    assurance_span_ok rp a width /\\ (!x. rp x ==> rp' x)\n    ==> assurance_span_ok rp' a width"
+    },
+    {
+      "name": "ASSURANCE_SPAN_WORD_OFFSET_8",
+      "statement": "!rp p. assurance_span_ok rp (val(p:int64)) 16\n    ==> assurance_span_ok rp (val(word_add p (word 8))) 8"
+    },
+    {
+      "name": "ASSURANCE_SPAN_PREFIX",
+      "statement": "!rp a width count.\n    assurance_span_ok rp a width /\\ count <= width\n    ==> assurance_span_ok rp a count"
+    },
+    {
+      "name": "ASSURANCE_CRYPTO_16_DATA_POLICY",
+      "statement": "!rp wp p q stackpointer ip ra.\n    assurance_span_ok rp (val(p:int64)) 16 /\\\n    assurance_span_ok rp (val(q:int64)) 16 /\\\n    assurance_span_ok rp (val(stackpointer:int64)) 8\n    ==> ALL (assurance_event_policy\n          (\\a. rp a /\\ (assurance_region p 16 a \\/\n                        assurance_region q 16 a \\/\n                        assurance_region stackpointer 8 a)) wp)\n        [EventJump(ip,ra);EventLoad(stackpointer,8);\n         EventLoad(word_add q (word 8),8);EventLoad(q,8);\n         EventLoad(word_add p (word 8),8);EventLoad(p,8)]"
+    },
+    {
+      "name": "ASSURANCE_CRYPTO_ZERO_REACHES_RET_READY",
+      "statement": "!pc sp ra p q e.\n    ensures x86\n      (\\s. bytes_loaded s (word pc) crypto_memcmp_mc /\\\n           read RIP s = word pc /\\ read RSP s = sp /\\\n           read (memory :> bytes64 sp) s = ra /\\\n           C_ARGUMENTS [p;q;word 0] s /\\ read events s = e)\n      (\\s. read RIP s = word(pc+93) /\\ read RSP s = sp /\\\n           read RAX s = word 0 /\\\n           bytes_loaded s (word pc) crypto_memcmp_mc /\\\n           read (memory :> bytes64 sp) s = ra /\\\n           x86_decode s (read RIP s) (2,RET) /\\\n           read events s = APPEND\n             [EventJump(word(pc+16),word(pc+93))] e)\n      (MAYCHANGE [RIP;RAX;R10] ,, MAYCHANGE SOME_FLAGS ,,\n       MAYCHANGE [events])"
+    },
+    {
+      "name": "ASSURANCE_CRYPTO_16_REACHES_RET_READY",
+      "statement": "!pc sp ra p q a0 a1 b0 b1 e.\n    ensures x86\n      (\\s. bytes_loaded s (word pc) crypto_memcmp_mc /\\\n           read RIP s = word pc /\\ read RSP s = sp /\\\n           read (memory :> bytes64 sp) s = ra /\\\n           C_ARGUMENTS [p;q;word 16] s /\\\n           read (memory :> bytes64 p) s = a0 /\\\n           read (memory :> bytes64 (word_add p (word 8))) s = a1 /\\\n           read (memory :> bytes64 q) s = b0 /\\\n           read (memory :> bytes64 (word_add q (word 8))) s = b1 /\\\n           read events s = e)\n      (\\s. read RIP s = word(pc+50) /\\ read RSP s = sp /\\\n           read RAX s = (if a0 = b0 /\\ a1 = b1 then word 0 else word 1) /\\\n           bytes_loaded s (word pc) crypto_memcmp_mc /\\\n           read (memory :> bytes64 sp) s = ra /\\\n           x86_decode s (read RIP s) (2,RET) /\\\n           read events s = APPEND\n             [EventLoad(word_add q (word 8),8);EventLoad(q,8);\n              EventLoad(word_add p (word 8),8);EventLoad(p,8);\n              EventJump(word(pc+22),word(pc+22));\n              EventJump(word(pc+16),word(pc+16))] e)\n      (MAYCHANGE [RIP;RAX;RDX;R10;R11] ,, MAYCHANGE SOME_FLAGS ,,\n       MAYCHANGE [events])"
+    },
+    {
+      "name": "ASSURANCE_RUN_PROJECT",
+      "statement": "!n P C s. assurance_checked_run n P C s\n    ==> eventually_n x86 n P s"
+    },
+    {
+      "name": "ASSURANCE_RUN_EVENTUALLY",
+      "statement": "!n P C s. assurance_checked_run n P C s ==> eventually x86 P s"
+    },
+    {
+      "name": "ASSURANCE_RUN_ALL_SUCCESSORS",
+      "statement": "!n P C s. assurance_checked_run (SUC n) P C s\n    ==> (?s'. x86 s s') /\\\n        !s'. x86 s s' ==> C (SUC n) s s' /\\\n                           assurance_checked_run n P C s'"
+    },
+    {
+      "name": "ASSURANCE_DECODED_OBSERVATION_ALL_SUCCESSORS",
+      "statement": "!len inst s s'.\n    x86_decode s (read RIP s) (len,inst) /\\ x86 s s'\n    ==> assurance_observed_step s\n          (assurance_observation s len inst s') s'"
+    },
+    {
+      "name": "ASSURANCE_ALL_REVERSE",
+      "statement": "!P (l:A list). ALL P (REVERSE l) <=> ALL P l"
+    },
+    {
+      "name": "ASSURANCE_STEP_POLICY_OBSERVED",
+      "statement": "!rp wp xp s s'.\n    x86 s s' /\\ assurance_step_policy rp wp xp s s'\n    ==> ?obs. assurance_observed_step s obs s' /\\\n              assurance_fetch_policy xp obs /\\\n              ALL (assurance_event_policy rp wp) (SND(SND(SND obs))) /\\\n              read events s' = APPEND (REVERSE(SND(SND(SND obs))))\n                                      (read events s)"
+    },
+    {
+      "name": "ASSURANCE_CODE_OFFSET_VALUE",
+      "statement": "!pc offset. pc+95 <= 2 EXP 64 /\\ offset < 95\n    ==> val(word(pc+offset):int64) = pc+offset"
+    },
+    {
+      "name": "ASSURANCE_CODE_BASE_VALUE",
+      "statement": "!pc. pc+95 <= 2 EXP 64 ==> val(word pc:int64) = pc"
+    },
+    {
+      "name": "ASSURANCE_RUN_STEP",
+      "statement": "!n P C s. assurance_checked_run (1+n) P C s <=>\n     (?s'. x86 s s') /\\\n     !s'. x86 s s' ==> C (1+n) s s' /\\\n                        assurance_checked_run n P C s'"
+    },
+    {
+      "name": "ASSURANCE_RET_FROM_DECODE_AND_STEP",
+      "statement": "!len s s'. x86_decode s (read RIP s) (len,RET) /\\ x86 s s'\n    ==> assurance_actual_ret len s s'"
+    },
+    {
+      "name": "ASSURANCE_CRYPTO_ZERO_COMPLETE_POLICY",
+      "statement": "!pc stackpointer ra p q xp rp e s.\n    pc+95 <= 2 EXP 64 /\\ assurance_span_ok xp pc 95 /\\\n    assurance_span_ok\n      (\\a. rp a /\\ assurance_region stackpointer 8 a)\n      (val(stackpointer:int64)) 8 /\\\n    bytes_loaded s (word pc) crypto_memcmp_mc /\\\n    read RIP s = word pc /\\ read RSP s = stackpointer /\\\n    read (memory :> bytes64 stackpointer) s = ra /\\\n    C_ARGUMENTS [p;q;word 0] s /\\ read events s = e\n    ==> assurance_checked_run 6\n      (\\s'. read RIP s' = ra /\\\n            read RSP s' = word_add stackpointer (word 8) /\\\n            read RAX s' = word 0 /\\\n            bytes_loaded s' (word pc) crypto_memcmp_mc /\\\n            read events s' = APPEND\n              [EventJump(word(pc+95),ra);EventLoad(stackpointer,8);\n               EventJump(word(pc+16),word(pc+93))] e)\n      (assurance_zero_step\n        (\\a. rp a /\\ assurance_region stackpointer 8 a) (\\a. F) xp) s"
+    },
+    {
+      "name": "ABI_SCALAR_EXTENDED_PROJECTION",
+      "statement": "!s a s' a'. abi_scalar_extended_step (s,a) (s',a') ==> x86 s s'"
+    },
+    {
+      "name": "ABI_SCALAR_EXTENDED_BACKLIFT_ALL",
+      "statement": "!s s' a. x86 s s' ==> abi_scalar_extended_step (s,a) (s',a)"
+    },
+    {
+      "name": "ABI_SCALAR_EXTENDED_EQUIVALENCE",
+      "statement": "!s s' a. (?a'. abi_scalar_extended_step (s,a) (s',a')) <=> x86 s s'"
+    },
+    {
+      "name": "ABI_SCALAR_EXTENDED_PROGRESS",
+      "statement": "!s a. (?s'. x86 s s') <=> ?s' a'. abi_scalar_extended_step (s,a) (s',a')"
+    },
+    {
+      "name": "ABI_SCALAR_STEP_PRESERVES_OMITTED",
+      "statement": "!s a s' a'. abi_scalar_extended_step (s,a) (s',a') /\\\n                abi_all_decodes_scalar s ==> a' = a"
+    },
+    {
+      "name": "ABI_SCALAR_EQUAL_IMPLIES_REQUIRED_CONTROLS",
+      "statement": "!a a'. a' = a ==> abi_required_controls_preserved a a'"
+    },
+    {
+      "name": "ABI_CRYPTO_REGISTERED_SITE_IS_SCALAR",
+      "statement": "!off len inst. abi_crypto_site off len inst ==> abi_scalar_instruction inst"
+    },
+    {
+      "name": "ABI_CHECKED_RUN_LIFT",
+      "statement": "!n P C s a.\n    assurance_checked_run n P\n      (\\k source target. C k source target /\\ abi_all_decodes_scalar source) s\n    ==> eventually_n abi_scalar_extended_step n\n          (\\t. P(FST t) /\\ SND t = a) (s,a)"
+    },
+    {
+      "name": "ASSURANCE_DECODED_SCALAR_UNIQUE",
+      "statement": "!len inst s. x86_decode s (read RIP s) (len,inst) /\\\n                abi_scalar_instruction inst\n    ==> abi_all_decodes_scalar s"
+    },
+    {
+      "name": "ASSURANCE_CRYPTO_ZERO_SCALAR_QUALIFIED_POLICY",
+      "statement": "!pc stackpointer ra p q xp rp e s.\n    pc+95 <= 2 EXP 64 /\\ assurance_span_ok xp pc 95 /\\\n    assurance_span_ok\n      (\\a. rp a /\\ assurance_region stackpointer 8 a)\n      (val(stackpointer:int64)) 8 /\\\n    bytes_loaded s (word pc) crypto_memcmp_mc /\\\n    read RIP s = word pc /\\ read RSP s = stackpointer /\\\n    read (memory :> bytes64 stackpointer) s = ra /\\\n    C_ARGUMENTS [p;q;word 0] s /\\ read events s = e\n    ==> assurance_checked_run 6\n      (\\s'. read RIP s' = ra /\\\n            read RSP s' = word_add stackpointer (word 8) /\\\n            read RAX s' = word 0 /\\\n            bytes_loaded s' (word pc) crypto_memcmp_mc /\\\n            read events s' = APPEND\n              [EventJump(word(pc+95),ra);EventLoad(stackpointer,8);\n               EventJump(word(pc+16),word(pc+93))] e)\n      (assurance_zero_scalar_step\n        (\\a. rp a /\\ assurance_region stackpointer 8 a) (\\a. F) xp) s"
+    },
+    {
+      "name": "ASSURANCE_CRYPTO_16_STRICT_SPANS",
+      "statement": "!rp p q stackpointer.\n    assurance_span_ok rp (val(p:int64)) 16 /\\\n    assurance_span_ok rp (val(q:int64)) 16 /\\\n    assurance_span_ok rp (val(stackpointer:int64)) 8\n    ==> assurance_span_ok\n         (\\a. rp a /\\ (assurance_region p 16 a \\/ assurance_region q 16 a \\/\n                       assurance_region stackpointer 8 a)) (val p) 8 /\\\n        assurance_span_ok\n         (\\a. rp a /\\ (assurance_region p 16 a \\/ assurance_region q 16 a \\/\n                       assurance_region stackpointer 8 a))\n         (val(word_add p (word 8))) 8 /\\\n        assurance_span_ok\n         (\\a. rp a /\\ (assurance_region p 16 a \\/ assurance_region q 16 a \\/\n                       assurance_region stackpointer 8 a)) (val q) 8 /\\\n        assurance_span_ok\n         (\\a. rp a /\\ (assurance_region p 16 a \\/ assurance_region q 16 a \\/\n                       assurance_region stackpointer 8 a))\n         (val(word_add q (word 8))) 8 /\\\n        assurance_span_ok\n         (\\a. rp a /\\ (assurance_region p 16 a \\/ assurance_region q 16 a \\/\n                       assurance_region stackpointer 8 a)) (val stackpointer) 8"
+    },
+    {
+      "name": "ASSURANCE_CRYPTO_16_COMPLETE_POLICY",
+      "statement": "!pc stackpointer ra p q xp rp a0 a1 b0 b1 e s.\n    pc+95 <= 2 EXP 64 /\\ assurance_span_ok xp pc 95 /\\\n    assurance_span_ok rp (val(p:int64)) 16 /\\\n    assurance_span_ok rp (val(q:int64)) 16 /\\\n    assurance_span_ok rp (val(stackpointer:int64)) 8 /\\\n    bytes_loaded s (word pc) crypto_memcmp_mc /\\\n    read RIP s = word pc /\\ read RSP s = stackpointer /\\\n    read (memory :> bytes64 stackpointer) s = ra /\\\n    C_ARGUMENTS [p;q;word 16] s /\\\n    read (memory :> bytes64 p) s = a0 /\\\n    read (memory :> bytes64 (word_add p (word 8))) s = a1 /\\\n    read (memory :> bytes64 q) s = b0 /\\\n    read (memory :> bytes64 (word_add q (word 8))) s = b1 /\\\n    read events s = e\n    ==> assurance_checked_run 15\n      (\\s'. read RIP s' = ra /\\\n            read RSP s' = word_add stackpointer (word 8) /\\\n            read RAX s' = (if a0 = b0 /\\ a1 = b1 then word 0 else word 1) /\\\n            bytes_loaded s' (word pc) crypto_memcmp_mc /\\\n            read events s' = APPEND\n              [EventJump(word(pc+52),ra);EventLoad(stackpointer,8);\n               EventLoad(word_add q (word 8),8);EventLoad(q,8);\n               EventLoad(word_add p (word 8),8);EventLoad(p,8);\n               EventJump(word(pc+22),word(pc+22));\n               EventJump(word(pc+16),word(pc+16))] e)\n      (assurance_zero_step\n        (\\a. rp a /\\ (assurance_region p 16 a \\/ assurance_region q 16 a \\/\n                      assurance_region stackpointer 8 a)) (\\a. F) xp) s"
+    },
+    {
+      "name": "ASSURANCE_CRYPTO_16_SCALAR_QUALIFIED_POLICY",
+      "statement": "!pc stackpointer ra p q xp rp a0 a1 b0 b1 e s.\n    pc+95 <= 2 EXP 64 /\\ assurance_span_ok xp pc 95 /\\\n    assurance_span_ok rp (val(p:int64)) 16 /\\\n    assurance_span_ok rp (val(q:int64)) 16 /\\\n    assurance_span_ok rp (val(stackpointer:int64)) 8 /\\\n    bytes_loaded s (word pc) crypto_memcmp_mc /\\\n    read RIP s = word pc /\\ read RSP s = stackpointer /\\\n    read (memory :> bytes64 stackpointer) s = ra /\\\n    C_ARGUMENTS [p;q;word 16] s /\\\n    read (memory :> bytes64 p) s = a0 /\\\n    read (memory :> bytes64 (word_add p (word 8))) s = a1 /\\\n    read (memory :> bytes64 q) s = b0 /\\\n    read (memory :> bytes64 (word_add q (word 8))) s = b1 /\\\n    read events s = e\n    ==> assurance_checked_run 15\n      (\\s'. read RIP s' = ra /\\\n            read RSP s' = word_add stackpointer (word 8) /\\\n            read RAX s' = (if a0 = b0 /\\ a1 = b1 then word 0 else word 1) /\\\n            bytes_loaded s' (word pc) crypto_memcmp_mc /\\\n            read events s' = APPEND\n              [EventJump(word(pc+52),ra);EventLoad(stackpointer,8);\n               EventLoad(word_add q (word 8),8);EventLoad(q,8);\n               EventLoad(word_add p (word 8),8);EventLoad(p,8);\n               EventJump(word(pc+22),word(pc+22));\n               EventJump(word(pc+16),word(pc+16))] e)\n      (assurance_zero_scalar_step\n        (\\a. rp a /\\ (assurance_region p 16 a \\/ assurance_region q 16 a \\/\n                      assurance_region stackpointer 8 a)) (\\a. F) xp) s"
+    },
+    {
+      "name": "ASSURANCE_SCALAR_POLICY_RUN_LIFT",
+      "statement": "!n P rp wp xp s a.\n    assurance_checked_run n P (assurance_zero_scalar_step rp wp xp) s\n    ==> eventually_n abi_scalar_extended_step n\n          (\\t. P(FST t) /\\ SND t = a) (s,a)"
+    },
+    {
+      "name": "ASSURANCE_SCALAR_POLICY_RUN_CONTROLS",
+      "statement": "!n P rp wp xp s a.\n    assurance_checked_run n P (assurance_zero_scalar_step rp wp xp) s\n    ==> eventually_n abi_scalar_extended_step n\n          (\\t. P(FST t) /\\ abi_required_controls_preserved a (SND t)) (s,a)"
+    },
+    {
+      "name": "ASSURANCE_E2_PERMISSION_FUNCTIONS",
+      "statement": "(!xp ordinary pc. bp_e2_crypto_allowed_fetch xp ordinary pc =\n     (\\a. (xp a /\\ ordinary a) /\\ assurance_region (word pc) 95 a)) /\\\n   (!rp ordinary p q n stackpointer.\n      bp_e2_crypto_allowed_read rp ordinary p q n stackpointer =\n      (\\a. (rp a /\\ ordinary a) /\\\n        (assurance_region p n a \\/ assurance_region q n a \\/\n         assurance_region stackpointer 8 a))) /\\\n   bp_e2_crypto_allowed_write = (\\a:num. F)"
+    },
+    {
+      "name": "ASSURANCE_E2_FETCH_SPAN",
+      "statement": "!pc stackpointer ra p q n m rp xp ordinary s.\n    bp_e2_crypto_pre pc stackpointer ra p q n m rp xp ordinary s\n    ==> assurance_span_ok (bp_e2_crypto_allowed_fetch xp ordinary pc) pc 95"
+    },
+    {
+      "name": "ASSURANCE_E2_READ_SPANS",
+      "statement": "!rp ordinary p q n stackpointer.\n    assurance_span_ok (\\a. rp a /\\ ordinary a) (val(p:int64)) n /\\\n    assurance_span_ok (\\a. rp a /\\ ordinary a) (val(q:int64)) n /\\\n    assurance_span_ok (\\a. rp a /\\ ordinary a) (val(stackpointer:int64)) 8\n    ==> assurance_span_ok\n          (bp_e2_crypto_allowed_read rp ordinary p q n stackpointer) (val p) n /\\\n        assurance_span_ok\n          (bp_e2_crypto_allowed_read rp ordinary p q n stackpointer) (val q) n /\\\n        assurance_span_ok\n          (bp_e2_crypto_allowed_read rp ordinary p q n stackpointer)\n          (val stackpointer) 8"
+    },
+    {
+      "name": "ASSURANCE_E2_ZERO_ALLOWED_READ",
+      "statement": "!rp ordinary p q stackpointer.\n    bp_e2_crypto_allowed_read rp ordinary p q 0 stackpointer =\n      (\\a. (rp a /\\ ordinary a) /\\ assurance_region stackpointer 8 a)"
+    },
+    {
+      "name": "ASSURANCE_E2_POLICY_PRODUCT",
+      "statement": "!n P rp wp xp s a.\n    assurance_checked_run n P (assurance_zero_scalar_step rp wp xp) s\n    ==> eventually_n abi_scalar_extended_step n\n          (\\t. P(FST t) /\\ SND t = a /\\\n               abi_required_controls_preserved a (SND t)) (s,a)"
+    },
+    {
+      "name": "ASSURANCE_E2_CHECKED_RUN_MONO",
+      "statement": "!n P Q C s. (!t. P t ==> Q t) /\\ assurance_checked_run n P C s\n    ==> assurance_checked_run n Q C s"
+    },
+    {
+      "name": "ASSURANCE_CRYPTO_ZERO_FRAMED_POLICY",
+      "statement": "!pc stackpointer ra p q xp rp e m s.\n    pc+95 <= 2 EXP 64 /\\ assurance_span_ok xp pc 95 /\\\n    assurance_span_ok\n      (\\a. rp a /\\ assurance_region stackpointer 8 a)\n      (val(stackpointer:int64)) 8 /\\\n    bytes_loaded s (word pc) crypto_memcmp_mc /\\\n    read RIP s = word pc /\\ read RSP s = stackpointer /\\\n    read (memory :> bytes64 stackpointer) s = ra /\\\n    C_ARGUMENTS [p;q;word 0] s /\\ read events s = e /\\ read memory s = m\n    ==> assurance_checked_run 6\n      (\\s'. read RIP s' = ra /\\\n            read RSP s' = word_add stackpointer (word 8) /\\\n            read RAX s' = word 0 /\\\n            bytes_loaded s' (word pc) crypto_memcmp_mc /\\\n            read events s' = APPEND\n              [EventJump(word(pc+95),ra);EventLoad(stackpointer,8);\n               EventJump(word(pc+16),word(pc+93))] e /\\ read memory s' = m /\\\n            (MAYCHANGE [RIP;RSP;RAX;RDI;RSI;RDX;R10;R11] ,,\n             MAYCHANGE SOME_FLAGS ,, MAYCHANGE [events]) s s')\n      (assurance_zero_scalar_step\n        (\\a. rp a /\\ assurance_region stackpointer 8 a) (\\a. F) xp) s"
+    },
+    {
+      "name": "ASSURANCE_CRYPTO_16_FRAMED_POLICY",
+      "statement": "!pc stackpointer ra p q xp rp a0 a1 b0 b1 e m s.\n    pc+95 <= 2 EXP 64 /\\ assurance_span_ok xp pc 95 /\\\n    assurance_span_ok rp (val(p:int64)) 16 /\\\n    assurance_span_ok rp (val(q:int64)) 16 /\\\n    assurance_span_ok rp (val(stackpointer:int64)) 8 /\\\n    bytes_loaded s (word pc) crypto_memcmp_mc /\\\n    read RIP s = word pc /\\ read RSP s = stackpointer /\\\n    read (memory :> bytes64 stackpointer) s = ra /\\\n    C_ARGUMENTS [p;q;word 16] s /\\\n    read (memory :> bytes64 p) s = a0 /\\\n    read (memory :> bytes64 (word_add p (word 8))) s = a1 /\\\n    read (memory :> bytes64 q) s = b0 /\\\n    read (memory :> bytes64 (word_add q (word 8))) s = b1 /\\\n    read events s = e /\\ read memory s = m\n    ==> assurance_checked_run 15\n      (\\s'. read RIP s' = ra /\\\n            read RSP s' = word_add stackpointer (word 8) /\\\n            read RAX s' = (if a0 = b0 /\\ a1 = b1 then word 0 else word 1) /\\\n            bytes_loaded s' (word pc) crypto_memcmp_mc /\\\n            read events s' = APPEND\n              [EventJump(word(pc+52),ra);EventLoad(stackpointer,8);\n               EventLoad(word_add q (word 8),8);EventLoad(q,8);\n               EventLoad(word_add p (word 8),8);EventLoad(p,8);\n               EventJump(word(pc+22),word(pc+22));\n               EventJump(word(pc+16),word(pc+16))] e /\\ read memory s' = m /\\\n            (MAYCHANGE [RIP;RSP;RAX;RDI;RSI;RDX;R10;R11] ,,\n             MAYCHANGE SOME_FLAGS ,, MAYCHANGE [events]) s s')\n      (assurance_zero_scalar_step\n        (\\a. rp a /\\ (assurance_region p 16 a \\/ assurance_region q 16 a \\/\n                      assurance_region stackpointer 8 a)) (\\a. F) xp) s"
+    },
+    {
+      "name": "ASSURANCE_E2_ZERO_POLICY_FRAME",
+      "statement": "!pc stackpointer ra p q m rp xp ordinary s.\n    bp_e2_crypto_pre pc stackpointer ra p q 0 m rp xp ordinary s\n    ==> assurance_checked_run 6\n      (bp_assurance_zero_post pc stackpointer ra (read events s) m s)\n      (assurance_zero_scalar_step\n        (bp_e2_crypto_allowed_read rp ordinary p q 0 stackpointer)\n        bp_e2_crypto_allowed_write (bp_e2_crypto_allowed_fetch xp ordinary pc)) s"
+    },
+    {
+      "name": "ASSURANCE_E2_16_POLICY_FRAME",
+      "statement": "!pc stackpointer ra p q m rp xp ordinary s.\n    bp_e2_crypto_pre pc stackpointer ra p q 16 m rp xp ordinary s\n    ==> assurance_checked_run 15\n      (bp_assurance_16_post pc stackpointer ra p q (read events s) m s)\n      (assurance_zero_scalar_step\n        (bp_e2_crypto_allowed_read rp ordinary p q 16 stackpointer)\n        bp_e2_crypto_allowed_write (bp_e2_crypto_allowed_fetch xp ordinary pc)) s"
+    },
+    {
+      "name": "ASSURANCE_E2_ZERO_EXTENDED_ABI",
+      "statement": "!pc stackpointer ra p q m rp xp ordinary s a.\n    bp_e2_crypto_pre pc stackpointer ra p q 0 m rp xp ordinary s\n    ==> eventually_n abi_scalar_extended_step 6\n      (\\t. bp_assurance_zero_post pc stackpointer ra (read events s) m s (FST t) /\\\n           SND t = a /\\ abi_required_controls_preserved a (SND t)) (s,a)"
+    },
+    {
+      "name": "ASSURANCE_E2_16_EXTENDED_ABI",
+      "statement": "!pc stackpointer ra p q m rp xp ordinary s a.\n    bp_e2_crypto_pre pc stackpointer ra p q 16 m rp xp ordinary s\n    ==> eventually_n abi_scalar_extended_step 15\n      (\\t. bp_assurance_16_post pc stackpointer ra p q (read events s) m s (FST t) /\\\n           SND t = a /\\ abi_required_controls_preserved a (SND t)) (s,a)"
+    },
+    {
+      "name": "ASSURANCE_E2_16_BYTE_POST_EQ",
+      "statement": "!pc stackpointer ra p q e m s s'. read memory s = m\n    ==> (bp_assurance_16_post pc stackpointer ra p q e m s s' <=>\n         bp_assurance_16_byte_post pc stackpointer ra p q e m s s')"
+    },
+    {
+      "name": "ASSURANCE_E2_16_BYTE_POLICY_FRAME",
+      "statement": "!pc stackpointer ra p q m rp xp ordinary s.\n    bp_e2_crypto_pre pc stackpointer ra p q 16 m rp xp ordinary s\n    ==> assurance_checked_run 15\n      (bp_assurance_16_byte_post pc stackpointer ra p q (read events s) m s)\n      (assurance_zero_scalar_step\n        (bp_e2_crypto_allowed_read rp ordinary p q 16 stackpointer)\n        bp_e2_crypto_allowed_write (bp_e2_crypto_allowed_fetch xp ordinary pc)) s"
+    },
+    {
+      "name": "ASSURANCE_E2_16_BYTE_EXTENDED_ABI",
+      "statement": "!pc stackpointer ra p q m rp xp ordinary s a.\n    bp_e2_crypto_pre pc stackpointer ra p q 16 m rp xp ordinary s\n    ==> eventually_n abi_scalar_extended_step 15\n      (\\t. bp_assurance_16_byte_post pc stackpointer ra p q (read events s) m s\n             (FST t) /\\ SND t = a /\\\n           abi_required_controls_preserved a (SND t)) (s,a)"
+    },
+    {
+      "name": "BP_READ_BYTES_AT_ZERO",
+      "statement": "!m p n. read (bytes(p:int64,n)) m =\n          read (bytes(word 0,n)) (\\a. m(word_add p a))"
+    },
+    {
+      "name": "BP_READ_BYTES_DIFFERENT_EQ",
+      "statement": "!m p q n. read (bytes(p:int64,n)) m = read (bytes(q,n)) m <=>\n            !i. i<n ==> m(word_add p (word i)) = m(word_add q (word i))"
+    },
+    {
+      "name": "BP_PREFIX_16_SPLIT",
+      "statement": "!P:num->bool. (!i. i<16 ==> P i) <=>\n                (!i. i<8 ==> P i) /\\ (!i. i<8 ==> P(8+i))"
+    },
+    {
+      "name": "BP_WORDPAIR_BYTE16",
+      "statement": "!m p q.\n   (read (bytes64(p:int64)) m = read (bytes64 q) m /\\\n    read (bytes64(word_add p (word 8))) m =\n    read (bytes64(word_add q (word 8))) m) <=>\n   (!i. i<16 ==> m(word_add p (word i)) = m(word_add q (word i)))"
+    }
+  ]
+}

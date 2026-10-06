@@ -1,0 +1,118 @@
+{
+  "definitions": [
+    {
+      "equation": "fb_abi_initial_fields (a:abi_omitted_state) <=>\n    read ABI_X87_CW a = word 0x37f /\\\n    read ABI_X87_SW a = word 0 /\\\n    read ABI_X87_TAG a = word 0xffff /\\\n    read ABI_X87_FOP a = word 0 /\\\n    read ABI_X87_IP a = word 0 /\\\n    read ABI_X87_CS a = word 0 /\\\n    read ABI_X87_DP a = word 0 /\\\n    read ABI_X87_DS a = word 0 /\\\n    (!r:(3)word. read ABI_X87_REGS a r = word 0) /\\\n    read ABI_MXCSR a = word 0x1f80 /\\\n    read ABI_FS_SELECTOR a = word 0 /\\\n    read ABI_FS_BASE a = word 0x500000 /\\\n    read ABI_GS_SELECTOR a = word 0 /\\\n    read ABI_GS_BASE a = word 0",
+      "name": "fb_abi_initial_fields"
+    },
+    {
+      "equation": "fb_file_code (file_bytes:num->byte) <=>\n    !i. i<95 ==> file_bytes(0x241840+i) = EL i crypto_memcmp_mc",
+      "name": "fb_file_code"
+    },
+    {
+      "equation": "fb_full_image file_bytes initial_rw padding (image:int64->byte) <=>\n    !a. lw_image_domain (val(a:int64))\n        ==> image a = fb_reference_image file_bytes initial_rw padding a",
+      "name": "fb_full_image"
+    },
+    {
+      "equation": "fb_immutable a <=>\n    (0x10000000 <= a /\\ a < 0x100c4bd0) \\/\n    (0x100c5000 <= a /\\ a < 0x103434c9) \\/\n    (0x10344000 <= a /\\ a < 0x10421a40)",
+      "name": "fb_immutable"
+    },
+    {
+      "equation": "fb_initial_abi = abi_omitted_state_RECORD\n    (word 0x37f) (word 0) (word 0xffff) (word 0)\n    (word 0) (word 0) (word 0) (word 0)\n    (\\r:(3)word. word 0) (word 0x1f80)\n    (word 0) (word 0x500000) (word 0) (word 0)",
+      "name": "fb_initial_abi"
+    },
+    {
+      "equation": "fb_initialized_rw a <=> 0x10422e50 <= a /\\ a < 0x104895b0",
+      "name": "fb_initialized_rw"
+    },
+    {
+      "equation": "fb_machine image p q n different =\n    (lw_state image p q n different,fb_initial_abi)",
+      "name": "fb_machine"
+    },
+    {
+      "equation": "fb_ordinary p q n a <=> lw_ordinary p q n a \\/ fb_tls_page a",
+      "name": "fb_ordinary"
+    },
+    {
+      "equation": "fb_pre file_bytes initial_rw padding image p q n different <=>\n    fb_full_image file_bytes initial_rw padding\n      (read memory (FST(fb_machine image p q n different))) /\\\n    bp_e2_crypto_pre 0x10241840 (word 0x300008) (word 0x400000)\n      p q n (lw_memory image p q n different) (fb_read p q n) lw_execute\n      (fb_ordinary p q n) (FST(fb_machine image p q n different)) /\\\n    fb_abi_initial_fields (SND(fb_machine image p q n different)) /\\\n    (!a. fb_tls_page a ==> fb_read p q n a /\\ fb_ordinary p q n a) /\\\n    assurance_canonical48 (val(read ABI_FS_BASE\n      (SND(fb_machine image p q n different))))",
+      "name": "fb_pre"
+    },
+    {
+      "equation": "fb_read p q n a <=> lw_read p q n a \\/ fb_tls_page a",
+      "name": "fb_read"
+    },
+    {
+      "equation": "fb_reference_image (file_bytes:num->byte) (initial_rw:int64->byte)\n                     (padding:int64->byte) (a:int64) =\n    if fb_immutable (val a) then file_bytes (val a-0x10000000)\n    else if fb_initialized_rw (val a) then initial_rw a\n    else padding a",
+      "name": "fb_reference_image"
+    },
+    {
+      "equation": "fb_tls_page a <=> 0x500000 <= a /\\ a < 0x501000",
+      "name": "fb_tls_page"
+    }
+  ],
+  "theorems": [
+    {
+      "name": "FB_CODE_CORRESPONDENCE",
+      "statement": "!file_bytes initial_rw padding image.\n    fb_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image\n    ==> lw_reference_code image"
+    },
+    {
+      "name": "FB_EMPTY_FAMILY",
+      "statement": "!file_bytes initial_rw padding image p q.\n    fb_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image\n    ==> fb_pre file_bytes initial_rw padding image p q 0 F"
+    },
+    {
+      "name": "FB_EQUAL_MISALIGNED_FAMILY",
+      "statement": "!file_bytes initial_rw padding image.\n    fb_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image\n    ==> fb_pre file_bytes initial_rw padding image\n          (word 0x200001) (word 0x200041) 17 F /\\\n        (!i. i<17 ==>\n          lw_memory image (word 0x200001) (word 0x200041) 17 F\n             (word_add (word 0x200001) (word i)) = word 128 /\\\n          lw_memory image (word 0x200001) (word 0x200041) 17 F\n             (word_add (word 0x200041) (word i)) = word 128)"
+    },
+    {
+      "name": "FB_FASTPATH_FAMILY",
+      "statement": "!file_bytes initial_rw padding image.\n    fb_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image\n    ==> fb_pre file_bytes initial_rw padding image\n          (word 0x200007) (word 0x200087) 16 F"
+    },
+    {
+      "name": "FB_FULL_IMAGE_EXISTS",
+      "statement": "!file_bytes initial_rw padding.\n    fb_file_code file_bytes\n    ==> ?image. fb_full_image file_bytes initial_rw padding image /\\\n                lw_reference_code image"
+    },
+    {
+      "name": "FB_IDENTICAL_FAMILY",
+      "statement": "!file_bytes initial_rw padding image.\n    fb_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image\n    ==> fb_pre file_bytes initial_rw padding image\n          (word 0x200003) (word 0x200003) 33 F"
+    },
+    {
+      "name": "FB_IMAGE_PRESERVATION",
+      "statement": "!file_bytes initial_rw padding image p q n different.\n    fb_full_image file_bytes initial_rw padding image /\\ lw_layout p q n\n    ==> fb_full_image file_bytes initial_rw padding\n          (lw_memory image p q n different)"
+    },
+    {
+      "name": "FB_LOW_CANONICAL_EDGE_FAMILY",
+      "statement": "!file_bytes initial_rw padding image.\n    fb_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image\n    ==> fb_pre file_bytes initial_rw padding image\n          (word (2 EXP 47-1)) (word 0x200001) 1 F"
+    },
+    {
+      "name": "FB_MACHINE_WITNESS_EXISTS",
+      "statement": "!file_bytes initial_rw padding.\n    fb_file_code file_bytes\n    ==> ?image.\n      fb_full_image file_bytes initial_rw padding image /\\\n      (!p q. fb_pre file_bytes initial_rw padding image p q 0 F) /\\\n      fb_pre file_bytes initial_rw padding image\n        (word 0x200001) (word 0x200041) 17 F /\\\n      fb_pre file_bytes initial_rw padding image\n        (word 0x200001) (word 0x200041) 17 T /\\\n      fb_pre file_bytes initial_rw padding image\n        (word 0x200003) (word 0x200003) 33 F /\\\n      fb_pre file_bytes initial_rw padding image\n        (word 0x200001) (word 0x200002) 17 F /\\\n      fb_pre file_bytes initial_rw padding image\n        (word 0x200007) (word 0x200087) 16 F /\\\n      fb_pre file_bytes initial_rw padding image\n        (word (2 EXP 47-1)) (word 0x200001) 1 F /\\\n      fb_pre file_bytes initial_rw padding image\n        (word (2 EXP 64-1)) (word 0x200001) 1 F /\\\n      fb_pre file_bytes initial_rw padding image\n        (word 0x200fff) (word 0x210003) 17 F"
+    },
+    {
+      "name": "FB_OVERLAP_FAMILY",
+      "statement": "!file_bytes initial_rw padding image.\n    fb_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image\n    ==> fb_pre file_bytes initial_rw padding image\n          (word 0x200001) (word 0x200002) 17 F"
+    },
+    {
+      "name": "FB_USER_PAGE_BOUNDARY_FAMILY",
+      "statement": "!file_bytes initial_rw padding image.\n    fb_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image\n    ==> fb_pre file_bytes initial_rw padding image\n          (word 0x200fff) (word 0x210003) 17 F"
+    },
+    {
+      "name": "FB_PRE_LIFT",
+      "statement": "!file_bytes initial_rw padding image p q n different.\n    fb_full_image file_bytes initial_rw padding image /\\ lw_layout p q n /\\\n    lw_pre image p q n different\n    ==> fb_pre file_bytes initial_rw padding image p q n different"
+    },
+    {
+      "name": "FB_REFERENCE_SATISFIES",
+      "statement": "!file_bytes initial_rw padding.\n    fb_full_image file_bytes initial_rw padding\n      (fb_reference_image file_bytes initial_rw padding)"
+    },
+    {
+      "name": "FB_TOP_EDGE_FAMILY",
+      "statement": "!file_bytes initial_rw padding image.\n    fb_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image\n    ==> fb_pre file_bytes initial_rw padding image\n          (word (2 EXP 64-1)) (word 0x200001) 1 F"
+    },
+    {
+      "name": "FB_UNEQUAL_FAMILY",
+      "statement": "!file_bytes initial_rw padding image.\n    fb_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding image\n    ==> fb_pre file_bytes initial_rw padding image\n          (word 0x200001) (word 0x200041) 17 T /\\\n        lw_memory image (word 0x200001) (word 0x200041) 17 T\n          (word 0x200001) = word 128 /\\\n        lw_memory image (word 0x200001) (word 0x200041) 17 T\n          (word 0x200041) = word 255"
+    },
+    {
+      "name": "FB_VALID_ABI",
+      "statement": "fb_abi_initial_fields fb_initial_abi /\\\n    assurance_canonical48 (val(read ABI_FS_BASE fb_initial_abi)) /\\\n    fb_tls_page (val(read ABI_FS_BASE fb_initial_abi))"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "arbitrary_admissible_lengths": true,
+  "arbitrary_buffer_content": true,
+  "artifact_compiled_at_choice": false,
+  "behavior": "compare initial p/q, unconditionally cleanse p, compare current p/q; return2 for initial mismatch else current equality as1/0",
+  "buffer_aliasing": "p/q exact, either partial overlap or disjoint; no separation premise",
+  "candidate_layer_freeze_sha256": "266f58bbb1883389a74b8ba0986db11d0b0d6f4c03c1d3961d2db04f51d94193",
+  "chosen_utc": "2026-10-05T01:16:58.377113+00:00",
+  "cost": null,
+  "domain_reduction_after_choice_forbidden": true,
+  "experiment": "BP-20261005-HELD-OUT-TRANSFER-V1",
+  "exposure": [
+    "authorized new frozen stage/class/export/dependency/freeze",
+    "C2 artifact build-v1.sh/acquire-v1.py conventions",
+    "C2 spec definitions-v1.ml/statements-v1.ml conventions",
+    "filename locators only; no old proof contents"
+  ],
+  "files": {
+    "c3/artifact/build-v1.sh": "5976bb10ee07a5953ac47eb6605d0e73b580384edcc966162e24b20399a9f3f2",
+    "c3/artifact/c3.S": "0edd718ddc8585ab5d201bcc691e93df7a740a189667799eb34bb29059c03778",
+    "c3/contract/CONTRACT-v1.md": "234b1900689b808d14a90436f3c8dcb89cced5b349c66fc31031a20d01a092e3"
+  },
+  "human_review": "PENDING",
+  "load_bias": 587202560,
+  "model": null,
+  "old_proof_solution_exposure": false,
+  "proof_construction_started": false,
+  "release_sha256": "638cbf8ab66b54cf6cac48627559859792fd1527894108477f2e29d0660cec9f",
+  "schema": "heldout-exact-source-behavior-domain-choice-v1",
+  "scratch_bytes": 48,
+  "selected_case_count": 1,
+  "selector": "/root/heldout_selector",
+  "source_kind": "assembler-authored AMD64, GCC-assembled/linked; no C-refinement or compiler-generated-C transfer claim",
+  "supplier_recipe_exposure": false,
+  "tokens": null,
+  "unavailable_reason": "runtime does not expose exact model, token or billing counters",
+  "zero_length_buffer_premises": false
+}

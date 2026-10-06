@@ -1,0 +1,25 @@
+{
+  "artifact_inventory_sha256": "70f6fcd526fa336f4c2b4278c25bd2578a30f5def43aa73e69953fddbef0430f",
+  "assumed_callee_pre_at_entry": false,
+  "before_any_c1_proof_source": true,
+  "end_theorems": [
+    "c1_checked_statement",
+    "c1_interface_statement",
+    "c1_normal_checked_statement",
+    "c1_rf_normal_checked_statement",
+    "c1_normal_interface_statement"
+  ],
+  "experiment": "BP-20261004-REUSE-V1",
+  "files": {
+    "INTERPRETATION-v1.md": "5d091024722577b9a91407cd3d23dc685fd411dc57e144256bc80a1409916dab",
+    "definitions-v1.ml": "ce661d9fc1e2a865ef85c7afa8cc49dd1fc4d2e5813cd90e12b6fe645687ea5b",
+    "expected-terms-v1.json": "94a347b1f071bffa0e977240789b7f27e4d926637e1384ad75dea0acb2c7c5bc",
+    "exposure-v1.json": "f96e23ae5f3e2a356891c6802a5b8b7f2d41577ba58d8a11b90931f2a106a7f8",
+    "source-start-v1.json": "d4b96f7cf2d277cab01d06c18624e2b3fb06fb8025e47390647d358390cb1002",
+    "statements-v1.ml": "f78c781adb2d667119db49601c56dfc0b44dd622947181606218658479e624b9"
+  },
+  "handoff_theorem": "c1_handoff_statement",
+  "human_review": "PENDING",
+  "schema": "c1-contract-source-freeze-v1",
+  "utc": "2026-10-04T14:22:51.821285+00:00"
+}

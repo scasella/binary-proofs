@@ -1,0 +1,121 @@
+{
+  "archive_entries": 21,
+  "images": [
+    {
+      "config": "blobs/sha256/a19fdc18f1f283ed8e2514229b77f33619df1ba0ea1ae578c97779f4b4eb3c3f",
+      "configuration": {
+        "architecture": "arm64",
+        "config": {
+          "Cmd": [
+            "/bin/bash"
+          ],
+          "Env": [
+            "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+          ],
+          "Labels": {
+            "org.opencontainers.image.version": "24.04"
+          },
+          "WorkingDir": "/work"
+        },
+        "created": "2026-09-29T22:44:48.607115753Z",
+        "history": [
+          {
+            "created": "2026-09-11T11:53:33.530556871Z",
+            "created_by": "/bin/sh -c #(nop)  ARG RELEASE",
+            "empty_layer": true
+          },
+          {
+            "created": "2026-09-11T11:53:33.593072428Z",
+            "created_by": "/bin/sh -c #(nop)  ARG LAUNCHPAD_BUILD_ARCH",
+            "empty_layer": true
+          },
+          {
+            "created": "2026-09-11T11:53:33.652277582Z",
+            "created_by": "/bin/sh -c #(nop)  LABEL org.opencontainers.image.version=24.04",
+            "empty_layer": true
+          },
+          {
+            "created": "2026-09-11T11:53:37.008578994Z",
+            "created_by": "/bin/sh -c #(nop) ADD file:ff1ce8d2ee022926eb353ff9248358531fbe1661ef12d8784e68fbc52738ed34 in / "
+          },
+          {
+            "created": "2026-09-11T11:53:37.343727408Z",
+            "created_by": "/bin/sh -c #(nop)  CMD [\"/bin/bash\"]",
+            "empty_layer": true
+          },
+          {
+            "comment": "buildkit.dockerfile.v0",
+            "created": "2026-09-29T22:44:48.59327567Z",
+            "created_by": "RUN /bin/sh -c apt-get update && apt-get install -y --no-install-recommends     ocaml-nox camlp5 libnum-ocaml-dev libzarith-ocaml-dev ocaml-findlib libcamlp-streams-ocaml-dev     make gcc libc6-dev ca-certificates     && rm -rf /var/lib/apt/lists/* # buildkit"
+          },
+          {
+            "comment": "buildkit.dockerfile.v0",
+            "created": "2026-09-29T22:44:48.607115753Z",
+            "created_by": "WORKDIR /work"
+          }
+        ],
+        "os": "linux",
+        "rootfs": {
+          "diff_ids": [
+            "sha256:8edaba05454265cd17270d38ec146446c640d1d25637413c3da64a3eff296c36",
+            "sha256:7b28c6990754fe4c6fedddc9dc317c9cb1af1b59b40e85a266c4d80f26c64344",
+            "sha256:694e24958c85c966b7df12f905832cd3608a245c26d6fb2569343ff237f73d0c"
+          ],
+          "type": "layers"
+        }
+      },
+      "image_id": "sha256:a19fdc18f1f283ed8e2514229b77f33619df1ba0ea1ae578c97779f4b4eb3c3f",
+      "layer_count": 3,
+      "repo_tags": null
+    },
+    {
+      "config": "blobs/sha256/444f775e6378c2e5523f29ceb8bbb184442277ed1114e6d37d873a7f127dfc26",
+      "configuration": {
+        "architecture": "amd64",
+        "config": {
+          "Cmd": [
+            "bash"
+          ],
+          "Env": [
+            "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+          ],
+          "WorkingDir": "/work"
+        },
+        "created": "2026-09-29T22:35:23.403818755Z",
+        "history": [
+          {
+            "comment": "debuerreotype 0.17",
+            "created": "2026-09-18T00:00:00Z",
+            "created_by": "# debian.sh --arch 'amd64' out/ 'bookworm' '@1789689600'"
+          },
+          {
+            "comment": "buildkit.dockerfile.v0",
+            "created": "2026-09-29T22:35:23.389784089Z",
+            "created_by": "RUN /bin/sh -c apt-get update && apt-get install -y --no-install-recommends     ocaml-nox camlp5 libnum-ocaml-dev ocaml-findlib libcamlp-streams-ocaml-dev     make gcc libc6-dev ca-certificates     && rm -rf /var/lib/apt/lists/* # buildkit"
+          },
+          {
+            "comment": "buildkit.dockerfile.v0",
+            "created": "2026-09-29T22:35:23.403818755Z",
+            "created_by": "WORKDIR /work"
+          }
+        ],
+        "os": "linux",
+        "rootfs": {
+          "diff_ids": [
+            "sha256:34467cc93912af891dfee8a3902adf9b4f355a9bca4eaa46f658d1181a21de0d",
+            "sha256:c40f062779375424c78f7b329cd5cb3ff8c7a773008de98beae871b737847c02",
+            "sha256:4acd785932f01c0a69c14e11475acf5f111be248c8288b9d75056fdc54577ca5"
+          ],
+          "type": "layers"
+        }
+      },
+      "image_id": "sha256:444f775e6378c2e5523f29ceb8bbb184442277ed1114e6d37d873a7f127dfc26",
+      "layer_count": 3,
+      "repo_tags": null
+    }
+  ],
+  "meaning": "Archive configuration digests cross-check saved image IDs; not formal validation of image export/parser/loading.",
+  "proof_started": false,
+  "schema": "review_release_saved_image_archive_structure_v1",
+  "target_routine_executed": false
+}

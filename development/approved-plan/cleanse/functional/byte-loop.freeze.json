@@ -1,0 +1,11 @@
+{
+  "created_at_utc": "2026-09-30T15:20:36.595519+00:00",
+  "before_search": true,
+  "scope": "Exact frozen root cleanse_byte_loop_statement; all-count modeled functional/frame byte-loop component only",
+  "files": {
+    "development/approved-plan/cleanse/functional/byte-loop-statement.ml": "6b8fdd831ede64e1d08edbdce3c46becd40492c0f6f0708a853e47e9676f863f",
+    "development/approved-plan/cleanse/spec-v2.ml": "770be48e0786e1ce1b50141a45e65e8bebd8ded14dfbea9d9ee9ec82a4a5326b"
+  },
+  "full_O1_pass": false,
+  "human_review": "PENDING"
+}

@@ -1,0 +1,179 @@
+{
+  "accepted_c2_end_guarantees": [
+    "C2_CALLER_CHECKED",
+    "C2_CALLER_COUNT",
+    "C2_INITIAL_COMPARE_HANDOFF",
+    "C2_CALLER_INTERFACE",
+    "C2_CALLER_NORMAL_CHECKED",
+    "C2_CALLER_NORMAL_INTERFACE",
+    "C2_CALLER_RF_NORMAL_CHECKED"
+  ],
+  "agent": "/root/c2_reuse_and_proofs",
+  "caller_specific_adaptations": [
+    "C2 ELF/image/code/GOT correspondence",
+    "Actual instruction offsets and 32-byte stack scratch",
+    "Conditional initial-snapshot write policy",
+    "C2 phase endpoints and snapshot transport",
+    "C2 frame consequences for declared concrete frame shapes",
+    "C2 checked-run composition instantiations and branch routing"
+  ],
+  "classification_basis": "Mathematical role, not file directory.",
+  "cost_policy": "New general helpers, integration automation, repairs and failed attempts count as C2 construction effort; original generic files unchanged does not imply unchanged integration.",
+  "current_caller_sources": {
+    "compare": "proofs/compare/proof-attempt4.ml",
+    "composition": "proofs/composition/proof-attempt3.ml",
+    "header": "proofs/branch/header-proof-attempt4.ml",
+    "middle": "proofs/branch/middle-proof-attempt5.ml",
+    "normal_interface_lifts": "proofs/lifts/proof-attempt1.ml",
+    "phase_transport": "proofs/branch/completion-proof-attempt2.ml",
+    "post": "proofs/suffix/post-proof-attempt1.ml",
+    "prefix": "proofs/prefix/proof-attempt4.ml",
+    "suffix": "proofs/suffix/proof-attempt4.ml"
+  },
+  "hypotheses": "H1 supported for tested C1/C2 with inspection-based opacity; H2 no held-out run; H3 not attempted.",
+  "mechanism_judgment": "Same supplier assurance package supports the frozen conditional caller through actual linkage with full acceptance. New general helpers and integration automation are adaptation. Integration stability and construction savings remain unestablished.",
+  "no_new_generic_helper_claim": false,
+  "opacity": "Inspection-based; ambient supplier objects and recipe exposure disclosed.",
+  "original_pinned_generic_files_changed": false,
+  "predecessor": {
+    "path": "development/approved-plan/reusable-assurance-c2-v1/reuse/adaptation-account-v2.json",
+    "sha256": "48f1ee4cdc45a08f0a66a486da6ec2febebb2d0ae7dfb649598d9ffcaec960cc"
+  },
+  "records": [
+    {
+      "bindings": [
+        "C2_APP_EVENT_POLICY_MONO",
+        "C2_APP_ALL_POLICY_MONO",
+        "C2_APP_STEP_POLICY_MONO"
+      ],
+      "exposure": "Earlier C0/C1 recipes inspected; no old theorem-object import.",
+      "mathematical_role": "POLICY_INCLUSION",
+      "reuse_class": "NEWLY_RECONSTRUCTED_GENERAL_HELPER_ADAPTATION",
+      "sha256": "a306de0c081119594a02b2afe75701f72f8bd971b13401940e473c4bddf251d3",
+      "source": "proofs/application/proof-attempt1.ml",
+      "status_at_recording": "DEVELOPMENT_CHECKED"
+    },
+    {
+      "bindings": [
+        "C2_FRAME_CANCEL_COMPONENT"
+      ],
+      "exposure": "Earlier C0/C1 recipes inspected; no old theorem-object import.",
+      "mathematical_role": "GENERIC_FRAME_ALGEBRA",
+      "reuse_class": "NEWLY_RECONSTRUCTED_GENERAL_HELPER_ADAPTATION",
+      "sha256": "eea39708e5a889c410da43a4440e6c437d3d1b22d08d8a86cf773119a42c7527",
+      "source": "proofs/helpers/composition-frame-proof-attempt1.ml",
+      "status_at_recording": "DEVELOPMENT_CHECKED"
+    },
+    {
+      "bindings": [
+        "C2_POLICY_SPAN",
+        "C2_SPAN_POINT",
+        "C2_REGION_NONOVERLAPPING"
+      ],
+      "exposure": "Earlier C0/C1 recipes inspected; no old theorem-object import.",
+      "mathematical_role": "PERMISSION_REGION_LOGIC",
+      "reuse_class": "NEWLY_RECONSTRUCTED_GENERAL_HELPER_ADAPTATION",
+      "sha256": "738b18c0bb402dbad2b770e43e6b34fbada0bb502560b6903b2487181a5e311a",
+      "source": "proofs/helpers/proof-attempt4.ml",
+      "status_at_recording": "DEVELOPMENT_CHECKED"
+    },
+    {
+      "bindings": [
+        "C2_COMPARE_MEMORY_SLOT_TRANSPORT"
+      ],
+      "exposure": "Earlier C0/C1 recipes inspected; no old theorem-object import.",
+      "mathematical_role": "MEMORY_PROJECTION",
+      "reuse_class": "NEWLY_RECONSTRUCTED_GENERAL_HELPER_ADAPTATION",
+      "sha256": "64e7908720bbc73bb573925a0b9bce40c44876deb1f0248c5a5e76f8e42ff3eb",
+      "source": "proofs/compare/proof-attempt4.ml",
+      "status_at_recording": "DEVELOPMENT_CHECKED"
+    },
+    {
+      "bindings": [
+        "C2_ORIGINAL_RET"
+      ],
+      "exposure": "Earlier C0/C1 recipes inspected; no old theorem-object import.",
+      "mathematical_role": "ISA_RETURN_OBSERVATION",
+      "reuse_class": "NEWLY_RECONSTRUCTED_GENERAL_HELPER_ADAPTATION",
+      "sha256": "284350825c23958d7e6d3ce6579e2e03c53e97b492254ac18ff75342362c451a",
+      "source": "proofs/steps/ret-proof-attempt2.ml",
+      "status_at_recording": "DEVELOPMENT_CHECKED"
+    },
+    {
+      "bindings": [
+        "C2_FINAL_STACK_VALUE"
+      ],
+      "exposure": "Earlier C0/C1 recipes inspected; no old theorem-object import.",
+      "mathematical_role": "WORD_ADDRESS_ARITHMETIC",
+      "reuse_class": "NEWLY_RECONSTRUCTED_GENERAL_HELPER_ADAPTATION",
+      "sha256": "8239c2757a3251c826a76a13590fb4ec55ddb9557ca79191acb3f66e537440e3",
+      "source": "proofs/suffix/post-proof-attempt1.ml",
+      "status_at_recording": "DEVELOPMENT_CHECKED"
+    },
+    {
+      "bindings": [
+        "C2_CHECKED_STEP_TAC",
+        "C2_SYMBOLIC_DECODE",
+        "C2_QUALIFIED_DECODE"
+      ],
+      "exposure": "Exposed earlier caller recipes; explicit supplier-body execution inputs excluded.",
+      "mathematical_role": "INTEGRATION_AUTOMATION",
+      "reuse_class": "NEW_OR_RECONSTRUCTED_AUTOMATION_ADAPTATION",
+      "sha256": "fcb4f5c5d7567d0d87c57a6658f20402e49af0d337c898fae4b931591bb32044",
+      "source": "proofs/steps/adapter-attempt1.ml",
+      "status_at_recording": "DEVELOPMENT_CHECKED"
+    },
+    {
+      "bindings": [
+        "C2_FINITE_FRAME_WIDEN_TAC"
+      ],
+      "exposure": "Exposed earlier caller recipes; explicit supplier-body execution inputs excluded.",
+      "mathematical_role": "INTEGRATION_AUTOMATION",
+      "reuse_class": "NEW_OR_RECONSTRUCTED_AUTOMATION_ADAPTATION",
+      "sha256": "9abf0004f01025a17cb6a84895941110326c1994663ca699ff8e5af421c4c11b",
+      "source": "proofs/prefix/proof-attempt4.ml",
+      "status_at_recording": "DEVELOPMENT_CHECKED"
+    },
+    {
+      "bindings": [
+        "C2_SUFFIX_POLICY_TAC",
+        "C2_SUFFIX_CHECKED_STEP_TAC"
+      ],
+      "exposure": "Previous recipes disclosed; public frame/model facts only, no supplier instruction theorem imports",
+      "mathematical_role": "INTEGRATION_AUTOMATION",
+      "reuse_class": "ADAPTED_COUNT_NORMALIZATION_AND_DECODE_PC_TRANSPORT",
+      "sha256": "ce14962477c8421be411f8c575517f6eb7e09efbe53c3c1e33c6dbd70dcf9a6c",
+      "source": "proofs/suffix/adapter-attempt3.ml",
+      "status_at_recording": "DEVELOPMENT_CHECKED"
+    },
+    {
+      "bindings": [
+        "C2_HEADER_FRAME_PRESERVED"
+      ],
+      "exposure": "Previous recipes disclosed; public frame/model facts only, no supplier instruction theorem imports",
+      "mathematical_role": "CALLER_SPECIFIC_FRAME_PROJECTION",
+      "reuse_class": "NEW_C2_FRAME_ADAPTER",
+      "sha256": "a7cee5090d9d81bd4bb4545c9ae4e43223bdbd9465da6c9ac7c1745553dda4ee",
+      "source": "proofs/helpers/header-frame-proof-attempt1.ml",
+      "status_at_recording": "DEVELOPMENT_CHECKED"
+    },
+    {
+      "bindings": [
+        "C2_SUFFIX_FRAME_PRESERVED"
+      ],
+      "exposure": "Previous recipes disclosed; public frame/model facts only, no supplier instruction theorem imports",
+      "mathematical_role": "CALLER_SPECIFIC_FRAME_PROJECTION",
+      "reuse_class": "NEW_C2_FRAME_ADAPTER",
+      "sha256": "d8a4e464c6c15d9fb69fd0e1ba31d9d84041ff3d3a85396d067533aee42e8aa4",
+      "source": "proofs/helpers/suffix-frame-proof-attempt1.ml",
+      "status_at_recording": "DEVELOPMENT_CHECKED"
+    }
+  ],
+  "root_acceptance": {
+    "path": "development/approved-plan/reusable-assurance-c2-v1/runs/c2-root-full-acceptance-final-v1.json",
+    "sha256": "ec8689605966ab7ad4d467e4c14362b9c68cee078610de2c0da61b617f541638"
+  },
+  "schema": "c2-adaptation-account-v3",
+  "status": "FRESH_ACCEPTED",
+  "utc": "2026-10-05T00:31:37.393611+00:00"
+}

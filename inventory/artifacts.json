@@ -1,0 +1,3761 @@
+{
+  "artifacts": [
+    {
+      "abi": "System V AMD64; ELF Linux",
+      "architecture": "x86-64",
+      "artifact_sha256": "02bcda52c1a5dfc236f94d9e5255b4a0e26347d8a372a5223b650e31f291ce3c",
+      "byte_order": "little",
+      "debug_information_status": "ELF has no matching debug file frozen",
+      "dynamic": [
+        {
+          "string": "ld-linux-x86-64.so.2",
+          "tag": 14,
+          "value": 616
+        },
+        {
+          "tag": 4,
+          "value": 608
+        },
+        {
+          "tag": 1879047925,
+          "value": 928
+        },
+        {
+          "tag": 5,
+          "value": 2240
+        },
+        {
+          "tag": 6,
+          "value": 1280
+        },
+        {
+          "tag": 10,
+          "value": 705
+        },
+        {
+          "tag": 11,
+          "value": 24
+        },
+        {
+          "tag": 3,
+          "value": 208872
+        },
+        {
+          "tag": 2,
+          "value": 96
+        },
+        {
+          "tag": 20,
+          "value": 7
+        },
+        {
+          "tag": 23,
+          "value": 3296
+        },
+        {
+          "tag": 7,
+          "value": 3272
+        },
+        {
+          "tag": 8,
+          "value": 24
+        },
+        {
+          "tag": 9,
+          "value": 24
+        },
+        {
+          "tag": 1879048188,
+          "value": 3032
+        },
+        {
+          "tag": 1879048189,
+          "value": 7
+        },
+        {
+          "tag": 1879048176,
+          "value": 2946
+        },
+        {
+          "tag": 36,
+          "value": 3392
+        },
+        {
+          "tag": 35,
+          "value": 24
+        },
+        {
+          "tag": 37,
+          "value": 8
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        }
+      ],
+      "elf_build_id": "7ebc65e52f2bbea498b4040fa92f7238377aaba9",
+      "elf_type": 3,
+      "entry": 109424,
+      "loadable_segments": [
+        {
+          "align": 4096,
+          "file_offset": 0,
+          "file_size": 3416,
+          "flags": 4,
+          "memory_size": 3416,
+          "paddr": 0,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 4096,
+          "file_offset": 4096,
+          "file_size": 151825,
+          "flags": 5,
+          "memory_size": 151825,
+          "paddr": 4096,
+          "permissions": "RX",
+          "type": 1,
+          "vaddr": 4096
+        },
+        {
+          "align": 4096,
+          "file_offset": 159744,
+          "file_size": 40060,
+          "flags": 4,
+          "memory_size": 40060,
+          "paddr": 159744,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 159744
+        },
+        {
+          "align": 4096,
+          "file_offset": 203008,
+          "file_size": 10256,
+          "flags": 6,
+          "memory_size": 10712,
+          "paddr": 203008,
+          "permissions": "RW",
+          "type": 1,
+          "vaddr": 203008
+        }
+      ],
+      "needed": [],
+      "path": "artifacts/baseline/ld-linux-x86-64.so.2",
+      "program_headers": [
+        {
+          "align": 4096,
+          "file_offset": 0,
+          "file_size": 3416,
+          "flags": 4,
+          "memory_size": 3416,
+          "paddr": 0,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 4096,
+          "file_offset": 4096,
+          "file_size": 151825,
+          "flags": 5,
+          "memory_size": 151825,
+          "paddr": 4096,
+          "permissions": "RX",
+          "type": 1,
+          "vaddr": 4096
+        },
+        {
+          "align": 4096,
+          "file_offset": 159744,
+          "file_size": 40060,
+          "flags": 4,
+          "memory_size": 40060,
+          "paddr": 159744,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 159744
+        },
+        {
+          "align": 4096,
+          "file_offset": 203008,
+          "file_size": 10256,
+          "flags": 6,
+          "memory_size": 10712,
+          "paddr": 203008,
+          "permissions": "RW",
+          "type": 1,
+          "vaddr": 203008
+        },
+        {
+          "align": 8,
+          "file_offset": 208448,
+          "file_size": 416,
+          "flags": 6,
+          "memory_size": 416,
+          "paddr": 208448,
+          "permissions": "RW",
+          "type": 2,
+          "vaddr": 208448
+        },
+        {
+          "align": 4,
+          "file_offset": 568,
+          "file_size": 36,
+          "flags": 4,
+          "memory_size": 36,
+          "paddr": 568,
+          "permissions": "R",
+          "type": 4,
+          "vaddr": 568
+        },
+        {
+          "align": 4,
+          "file_offset": 184344,
+          "file_size": 2356,
+          "flags": 4,
+          "memory_size": 2356,
+          "paddr": 184344,
+          "permissions": "R",
+          "type": 1685382480,
+          "vaddr": 184344
+        },
+        {
+          "align": 16,
+          "file_offset": 0,
+          "file_size": 0,
+          "flags": 6,
+          "memory_size": 0,
+          "paddr": 0,
+          "permissions": "RW",
+          "type": 1685382481,
+          "vaddr": 0
+        },
+        {
+          "align": 1,
+          "file_offset": 203008,
+          "file_size": 5888,
+          "flags": 4,
+          "memory_size": 5888,
+          "paddr": 203008,
+          "permissions": "R",
+          "type": 1685382482,
+          "vaddr": 203008
+        }
+      ],
+      "relocation_inventory": "inventory/relocations/ld-linux-x86-64.so.2.json",
+      "sections": [
+        {
+          "align": 0,
+          "entry_size": 0,
+          "file_offset": 0,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": "",
+          "name_offset": 0,
+          "size": 0,
+          "type": 0,
+          "vaddr": 0
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 568,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".note.gnu.build-id",
+          "name_offset": 11,
+          "size": 36,
+          "type": 7,
+          "vaddr": 568
+        },
+        {
+          "align": 8,
+          "entry_size": 4,
+          "file_offset": 608,
+          "flags": 2,
+          "info": 0,
+          "link": 4,
+          "name": ".hash",
+          "name_offset": 34,
+          "size": 316,
+          "type": 5,
+          "vaddr": 608
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 928,
+          "flags": 2,
+          "info": 0,
+          "link": 4,
+          "name": ".gnu.hash",
+          "name_offset": 30,
+          "size": 352,
+          "type": 1879048182,
+          "vaddr": 928
+        },
+        {
+          "align": 8,
+          "entry_size": 24,
+          "file_offset": 1280,
+          "flags": 2,
+          "info": 1,
+          "link": 5,
+          "name": ".dynsym",
+          "name_offset": 40,
+          "size": 960,
+          "type": 11,
+          "vaddr": 1280
+        },
+        {
+          "align": 1,
+          "entry_size": 0,
+          "file_offset": 2240,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".dynstr",
+          "name_offset": 48,
+          "size": 705,
+          "type": 3,
+          "vaddr": 2240
+        },
+        {
+          "align": 2,
+          "entry_size": 2,
+          "file_offset": 2946,
+          "flags": 2,
+          "info": 0,
+          "link": 4,
+          "name": ".gnu.version",
+          "name_offset": 56,
+          "size": 80,
+          "type": 1879048191,
+          "vaddr": 2946
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 3032,
+          "flags": 2,
+          "info": 7,
+          "link": 5,
+          "name": ".gnu.version_d",
+          "name_offset": 69,
+          "size": 236,
+          "type": 1879048189,
+          "vaddr": 3032
+        },
+        {
+          "align": 8,
+          "entry_size": 24,
+          "file_offset": 3272,
+          "flags": 2,
+          "info": 0,
+          "link": 4,
+          "name": ".rela.dyn",
+          "name_offset": 84,
+          "size": 24,
+          "type": 4,
+          "vaddr": 3272
+        },
+        {
+          "align": 8,
+          "entry_size": 24,
+          "file_offset": 3296,
+          "flags": 66,
+          "info": 18,
+          "link": 4,
+          "name": ".rela.plt",
+          "name_offset": 94,
+          "size": 96,
+          "type": 4,
+          "vaddr": 3296
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 3392,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".relr.dyn",
+          "name_offset": 104,
+          "size": 24,
+          "type": 19,
+          "vaddr": 3392
+        },
+        {
+          "align": 16,
+          "entry_size": 16,
+          "file_offset": 4096,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".plt",
+          "name_offset": 99,
+          "size": 80,
+          "type": 1,
+          "vaddr": 4096
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 4192,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".text",
+          "name_offset": 114,
+          "size": 151729,
+          "type": 1,
+          "vaddr": 4192
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 159744,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".rodata",
+          "name_offset": 120,
+          "size": 24600,
+          "type": 1,
+          "vaddr": 159744
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 184344,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".eh_frame_hdr",
+          "name_offset": 128,
+          "size": 2356,
+          "type": 1,
+          "vaddr": 184344
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 186704,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".eh_frame",
+          "name_offset": 142,
+          "size": 13100,
+          "type": 1,
+          "vaddr": 186704
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 203008,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".data.rel.ro",
+          "name_offset": 152,
+          "size": 5440,
+          "type": 1,
+          "vaddr": 203008
+        },
+        {
+          "align": 8,
+          "entry_size": 16,
+          "file_offset": 208448,
+          "flags": 3,
+          "info": 0,
+          "link": 5,
+          "name": ".dynamic",
+          "name_offset": 165,
+          "size": 416,
+          "type": 6,
+          "vaddr": 208448
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 208872,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".got.plt",
+          "name_offset": 174,
+          "size": 56,
+          "type": 1,
+          "vaddr": 208872
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 208928,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".data",
+          "name_offset": 183,
+          "size": 4336,
+          "type": 1,
+          "vaddr": 208928
+        },
+        {
+          "align": 16,
+          "entry_size": 0,
+          "file_offset": 213264,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".bss",
+          "name_offset": 189,
+          "size": 456,
+          "type": 8,
+          "vaddr": 213264
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 213264,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu_debuglink",
+          "name_offset": 194,
+          "size": 52,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 1,
+          "entry_size": 0,
+          "file_offset": 213316,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".shstrtab",
+          "name_offset": 1,
+          "size": 209,
+          "type": 3,
+          "vaddr": 0
+        }
+      ],
+      "size": 215000,
+      "source_metadata_status": "UNAVAILABLE in frozen ELF; see package provenance lock",
+      "symbol_inventory": "inventory/symbols/ld-linux-x86-64.so.2.json",
+      "text_extraction_crosscheck": {
+        "gnu_text_sha256": "9fa04625fd56f10d9c6840ff8ea038c07a65269616e263e808a79d36e49afd3d",
+        "independent_tool": "GNU objcopy --dump-section .text",
+        "parser_formally_verified": false,
+        "python_text_sha256": "9fa04625fd56f10d9c6840ff8ea038c07a65269616e263e808a79d36e49afd3d",
+        "status": "PASS"
+      }
+    },
+    {
+      "abi": "System V AMD64; ELF Linux",
+      "architecture": "x86-64",
+      "artifact_sha256": "6b4a45352fd0c540a9c7c718f35ce8c8e46a4e482f9d3885a910c32d1a0e1421",
+      "byte_order": "little",
+      "debug_information_status": "ELF has no matching debug file frozen",
+      "dynamic": [
+        {
+          "string": "ld-linux-x86-64.so.2",
+          "tag": 1,
+          "value": 32318
+        },
+        {
+          "string": "libc.so.6",
+          "tag": 14,
+          "value": 32339
+        },
+        {
+          "tag": 25,
+          "value": 1898720
+        },
+        {
+          "tag": 27,
+          "value": 16
+        },
+        {
+          "tag": 4,
+          "value": 952
+        },
+        {
+          "tag": 1879047925,
+          "value": 17208
+        },
+        {
+          "tag": 5,
+          "value": 108464
+        },
+        {
+          "tag": 6,
+          "value": 35408
+        },
+        {
+          "tag": 10,
+          "value": 32775
+        },
+        {
+          "tag": 11,
+          "value": 24
+        },
+        {
+          "tag": 3,
+          "value": 1912808
+        },
+        {
+          "tag": 2,
+          "value": 1272
+        },
+        {
+          "tag": 20,
+          "value": 7
+        },
+        {
+          "tag": 23,
+          "value": 150904
+        },
+        {
+          "tag": 7,
+          "value": 148792
+        },
+        {
+          "tag": 8,
+          "value": 2112
+        },
+        {
+          "tag": 9,
+          "value": 24
+        },
+        {
+          "tag": 1879048188,
+          "value": 147328
+        },
+        {
+          "tag": 1879048189,
+          "value": 39
+        },
+        {
+          "tag": 30,
+          "value": 16
+        },
+        {
+          "tag": 1879048190,
+          "value": 148712
+        },
+        {
+          "tag": 1879048191,
+          "value": 1
+        },
+        {
+          "tag": 1879048176,
+          "value": 141240
+        },
+        {
+          "tag": 36,
+          "value": 152176
+        },
+        {
+          "tag": 35,
+          "value": 280
+        },
+        {
+          "tag": 37,
+          "value": 8
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        }
+      ],
+      "elf_build_id": "93ac61ec5a8eb1396f9fbd350e3169a558528a40",
+      "elf_type": 3,
+      "entry": 160784,
+      "loadable_segments": [
+        {
+          "align": 4096,
+          "file_offset": 0,
+          "file_size": 152456,
+          "flags": 4,
+          "memory_size": 152456,
+          "paddr": 0,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 4096,
+          "file_offset": 155648,
+          "file_size": 1396988,
+          "flags": 5,
+          "memory_size": 1396988,
+          "paddr": 155648,
+          "permissions": "RX",
+          "type": 1,
+          "vaddr": 155648
+        },
+        {
+          "align": 4096,
+          "file_offset": 1556480,
+          "file_size": 338993,
+          "flags": 4,
+          "memory_size": 338993,
+          "paddr": 1556480,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 1556480
+        },
+        {
+          "align": 4096,
+          "file_offset": 1898704,
+          "file_size": 20376,
+          "flags": 6,
+          "memory_size": 75392,
+          "paddr": 1898704,
+          "permissions": "RW",
+          "type": 1,
+          "vaddr": 1898704
+        }
+      ],
+      "needed": [
+        "ld-linux-x86-64.so.2"
+      ],
+      "path": "artifacts/baseline/libc.so.6",
+      "program_headers": [
+        {
+          "align": 8,
+          "file_offset": 64,
+          "file_size": 784,
+          "flags": 4,
+          "memory_size": 784,
+          "paddr": 64,
+          "permissions": "R",
+          "type": 6,
+          "vaddr": 64
+        },
+        {
+          "align": 16,
+          "file_offset": 1710864,
+          "file_size": 28,
+          "flags": 4,
+          "memory_size": 28,
+          "paddr": 1710864,
+          "permissions": "R",
+          "type": 3,
+          "vaddr": 1710864
+        },
+        {
+          "align": 4096,
+          "file_offset": 0,
+          "file_size": 152456,
+          "flags": 4,
+          "memory_size": 152456,
+          "paddr": 0,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 4096,
+          "file_offset": 155648,
+          "file_size": 1396988,
+          "flags": 5,
+          "memory_size": 1396988,
+          "paddr": 155648,
+          "permissions": "RX",
+          "type": 1,
+          "vaddr": 155648
+        },
+        {
+          "align": 4096,
+          "file_offset": 1556480,
+          "file_size": 338993,
+          "flags": 4,
+          "memory_size": 338993,
+          "paddr": 1556480,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 1556480
+        },
+        {
+          "align": 4096,
+          "file_offset": 1898704,
+          "file_size": 20376,
+          "flags": 6,
+          "memory_size": 75392,
+          "paddr": 1898704,
+          "permissions": "RW",
+          "type": 1,
+          "vaddr": 1898704
+        },
+        {
+          "align": 8,
+          "file_offset": 1911648,
+          "file_size": 512,
+          "flags": 6,
+          "memory_size": 512,
+          "paddr": 1911648,
+          "permissions": "RW",
+          "type": 2,
+          "vaddr": 1911648
+        },
+        {
+          "align": 8,
+          "file_offset": 848,
+          "file_size": 32,
+          "flags": 4,
+          "memory_size": 32,
+          "paddr": 848,
+          "permissions": "R",
+          "type": 4,
+          "vaddr": 848
+        },
+        {
+          "align": 4,
+          "file_offset": 880,
+          "file_size": 68,
+          "flags": 4,
+          "memory_size": 68,
+          "paddr": 880,
+          "permissions": "R",
+          "type": 4,
+          "vaddr": 880
+        },
+        {
+          "align": 8,
+          "file_offset": 1898704,
+          "file_size": 16,
+          "flags": 4,
+          "memory_size": 144,
+          "paddr": 1898704,
+          "permissions": "R",
+          "type": 7,
+          "vaddr": 1898704
+        },
+        {
+          "align": 8,
+          "file_offset": 848,
+          "file_size": 32,
+          "flags": 4,
+          "memory_size": 32,
+          "paddr": 848,
+          "permissions": "R",
+          "type": 1685382483,
+          "vaddr": 848
+        },
+        {
+          "align": 4,
+          "file_offset": 1710892,
+          "file_size": 29716,
+          "flags": 4,
+          "memory_size": 29716,
+          "paddr": 1710892,
+          "permissions": "R",
+          "type": 1685382480,
+          "vaddr": 1710892
+        },
+        {
+          "align": 16,
+          "file_offset": 0,
+          "file_size": 0,
+          "flags": 6,
+          "memory_size": 0,
+          "paddr": 0,
+          "permissions": "RW",
+          "type": 1685382481,
+          "vaddr": 0
+        },
+        {
+          "align": 1,
+          "file_offset": 1898704,
+          "file_size": 14128,
+          "flags": 4,
+          "memory_size": 14128,
+          "paddr": 1898704,
+          "permissions": "R",
+          "type": 1685382482,
+          "vaddr": 1898704
+        }
+      ],
+      "relocation_inventory": "inventory/relocations/libc.so.6.json",
+      "sections": [
+        {
+          "align": 0,
+          "entry_size": 0,
+          "file_offset": 0,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": "",
+          "name_offset": 0,
+          "size": 0,
+          "type": 0,
+          "vaddr": 0
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 848,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".note.gnu.property",
+          "name_offset": 11,
+          "size": 32,
+          "type": 7,
+          "vaddr": 848
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 880,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".note.gnu.build-id",
+          "name_offset": 30,
+          "size": 36,
+          "type": 7,
+          "vaddr": 880
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 916,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".note.ABI-tag",
+          "name_offset": 49,
+          "size": 32,
+          "type": 7,
+          "vaddr": 916
+        },
+        {
+          "align": 8,
+          "entry_size": 4,
+          "file_offset": 952,
+          "flags": 2,
+          "info": 0,
+          "link": 6,
+          "name": ".hash",
+          "name_offset": 67,
+          "size": 16252,
+          "type": 5,
+          "vaddr": 952
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 17208,
+          "flags": 2,
+          "info": 0,
+          "link": 6,
+          "name": ".gnu.hash",
+          "name_offset": 63,
+          "size": 18200,
+          "type": 1879048182,
+          "vaddr": 17208
+        },
+        {
+          "align": 8,
+          "entry_size": 24,
+          "file_offset": 35408,
+          "flags": 2,
+          "info": 1,
+          "link": 7,
+          "name": ".dynsym",
+          "name_offset": 73,
+          "size": 73056,
+          "type": 11,
+          "vaddr": 35408
+        },
+        {
+          "align": 1,
+          "entry_size": 0,
+          "file_offset": 108464,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".dynstr",
+          "name_offset": 81,
+          "size": 32775,
+          "type": 3,
+          "vaddr": 108464
+        },
+        {
+          "align": 2,
+          "entry_size": 2,
+          "file_offset": 141240,
+          "flags": 2,
+          "info": 0,
+          "link": 6,
+          "name": ".gnu.version",
+          "name_offset": 89,
+          "size": 6088,
+          "type": 1879048191,
+          "vaddr": 141240
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 147328,
+          "flags": 2,
+          "info": 39,
+          "link": 7,
+          "name": ".gnu.version_d",
+          "name_offset": 102,
+          "size": 1380,
+          "type": 1879048189,
+          "vaddr": 147328
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 148712,
+          "flags": 2,
+          "info": 1,
+          "link": 7,
+          "name": ".gnu.version_r",
+          "name_offset": 117,
+          "size": 80,
+          "type": 1879048190,
+          "vaddr": 148712
+        },
+        {
+          "align": 8,
+          "entry_size": 24,
+          "file_offset": 148792,
+          "flags": 2,
+          "info": 0,
+          "link": 6,
+          "name": ".rela.dyn",
+          "name_offset": 132,
+          "size": 2112,
+          "type": 4,
+          "vaddr": 148792
+        },
+        {
+          "align": 8,
+          "entry_size": 24,
+          "file_offset": 150904,
+          "flags": 66,
+          "info": 32,
+          "link": 6,
+          "name": ".rela.plt",
+          "name_offset": 142,
+          "size": 1272,
+          "type": 4,
+          "vaddr": 150904
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 152176,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".relr.dyn",
+          "name_offset": 152,
+          "size": 280,
+          "type": 19,
+          "vaddr": 152176
+        },
+        {
+          "align": 16,
+          "entry_size": 16,
+          "file_offset": 155648,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".plt",
+          "name_offset": 147,
+          "size": 864,
+          "type": 1,
+          "vaddr": 155648
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 156512,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".plt.got",
+          "name_offset": 162,
+          "size": 16,
+          "type": 1,
+          "vaddr": 156512
+        },
+        {
+          "align": 64,
+          "entry_size": 0,
+          "file_offset": 156544,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".text",
+          "name_offset": 171,
+          "size": 1392301,
+          "type": 1,
+          "vaddr": 156544
+        },
+        {
+          "align": 16,
+          "entry_size": 0,
+          "file_offset": 1548848,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": "__libc_freeres_fn",
+          "name_offset": 177,
+          "size": 3788,
+          "type": 1,
+          "vaddr": 1548848
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1556480,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".rodata",
+          "name_offset": 195,
+          "size": 154372,
+          "type": 1,
+          "vaddr": 1556480
+        },
+        {
+          "align": 16,
+          "entry_size": 0,
+          "file_offset": 1710864,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".interp",
+          "name_offset": 203,
+          "size": 28,
+          "type": 1,
+          "vaddr": 1710864
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 1710892,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".eh_frame_hdr",
+          "name_offset": 211,
+          "size": 29716,
+          "type": 1,
+          "vaddr": 1710892
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 1740608,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".eh_frame",
+          "name_offset": 225,
+          "size": 153296,
+          "type": 1,
+          "vaddr": 1740608
+        },
+        {
+          "align": 1,
+          "entry_size": 0,
+          "file_offset": 1893904,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".gcc_except_table",
+          "name_offset": 235,
+          "size": 1569,
+          "type": 1,
+          "vaddr": 1893904
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 1898704,
+          "flags": 1027,
+          "info": 0,
+          "link": 0,
+          "name": ".tdata",
+          "name_offset": 253,
+          "size": 16,
+          "type": 1,
+          "vaddr": 1898704
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 1898720,
+          "flags": 1027,
+          "info": 0,
+          "link": 0,
+          "name": ".tbss",
+          "name_offset": 260,
+          "size": 128,
+          "type": 8,
+          "vaddr": 1898720
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 1898720,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".init_array",
+          "name_offset": 266,
+          "size": 16,
+          "type": 14,
+          "vaddr": 1898720
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 1898736,
+          "flags": 2097155,
+          "info": 0,
+          "link": 0,
+          "name": "__libc_subfreeres",
+          "name_offset": 278,
+          "size": 232,
+          "type": 1,
+          "vaddr": 1898736
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 1898968,
+          "flags": 2097155,
+          "info": 0,
+          "link": 0,
+          "name": "__libc_atexit",
+          "name_offset": 296,
+          "size": 8,
+          "type": 1,
+          "vaddr": 1898968
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1898976,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": "__libc_IO_vtables",
+          "name_offset": 310,
+          "size": 3432,
+          "type": 1,
+          "vaddr": 1898976
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1902432,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".data.rel.ro",
+          "name_offset": 328,
+          "size": 9216,
+          "type": 1,
+          "vaddr": 1902432
+        },
+        {
+          "align": 8,
+          "entry_size": 16,
+          "file_offset": 1911648,
+          "flags": 3,
+          "info": 0,
+          "link": 7,
+          "name": ".dynamic",
+          "name_offset": 341,
+          "size": 512,
+          "type": 6,
+          "vaddr": 1911648
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 1912160,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".got",
+          "name_offset": 166,
+          "size": 632,
+          "type": 1,
+          "vaddr": 1912160
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 1912808,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".got.plt",
+          "name_offset": 350,
+          "size": 448,
+          "type": 1,
+          "vaddr": 1912808
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1913280,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".data",
+          "name_offset": 359,
+          "size": 5800,
+          "type": 1,
+          "vaddr": 1913280
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1919080,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".bss",
+          "name_offset": 365,
+          "size": 54992,
+          "type": 8,
+          "vaddr": 1919104
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1919104,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.sigstack",
+          "name_offset": 370,
+          "size": 77,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1919200,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.sigreturn",
+          "name_offset": 392,
+          "size": 50,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1919264,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.siggetmask",
+          "name_offset": 415,
+          "size": 57,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1919328,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.tempnam",
+          "name_offset": 439,
+          "size": 56,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1919392,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.tmpnam",
+          "name_offset": 460,
+          "size": 55,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1919456,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.tmpnam_r",
+          "name_offset": 480,
+          "size": 57,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1919520,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.gets",
+          "name_offset": 502,
+          "size": 57,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1919584,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.pthread_attr_getstackaddr",
+          "name_offset": 520,
+          "size": 82,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1919680,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.pthread_attr_setstackaddr",
+          "name_offset": 559,
+          "size": 82,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1919776,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.getpw",
+          "name_offset": 598,
+          "size": 58,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1919840,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.re_max_failures",
+          "name_offset": 617,
+          "size": 61,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1919904,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.getwd",
+          "name_offset": 646,
+          "size": 122,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1920032,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.revoke",
+          "name_offset": 665,
+          "size": 47,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1920096,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.mktemp",
+          "name_offset": 685,
+          "size": 68,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1920192,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.gtty",
+          "name_offset": 705,
+          "size": 45,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1920256,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.stty",
+          "name_offset": 723,
+          "size": 45,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1920320,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.chflags",
+          "name_offset": 741,
+          "size": 48,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1920384,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.fchflags",
+          "name_offset": 762,
+          "size": 49,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1920448,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.__compat_bdflush",
+          "name_offset": 784,
+          "size": 57,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1920512,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.__gets_chk",
+          "name_offset": 814,
+          "size": 57,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1920576,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.inet6_option_space",
+          "name_offset": 838,
+          "size": 60,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1920640,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.inet6_option_init",
+          "name_offset": 870,
+          "size": 59,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1920704,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.inet6_option_append",
+          "name_offset": 901,
+          "size": 61,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1920768,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.inet6_option_alloc",
+          "name_offset": 934,
+          "size": 60,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1920832,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.inet6_option_next",
+          "name_offset": 966,
+          "size": 59,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1920896,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.inet6_option_find",
+          "name_offset": 997,
+          "size": 59,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 1920960,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu.warning.setlogin",
+          "name_offset": 1028,
+          "size": 49,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 1921012,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu_debuglink",
+          "name_offset": 1050,
+          "size": 52,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 1,
+          "entry_size": 0,
+          "file_offset": 1921064,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".shstrtab",
+          "name_offset": 1,
+          "size": 1065,
+          "type": 3,
+          "vaddr": 0
+        }
+      ],
+      "size": 1926232,
+      "source_metadata_status": "UNAVAILABLE in frozen ELF; see package provenance lock",
+      "symbol_inventory": "inventory/symbols/libc.so.6.json",
+      "text_extraction_crosscheck": {
+        "gnu_text_sha256": "a58dc8b663d05e0c1a90c221dc39daed432887db559e40e11ea14e4d67d86af2",
+        "independent_tool": "GNU objcopy --dump-section .text",
+        "parser_formally_verified": false,
+        "python_text_sha256": "a58dc8b663d05e0c1a90c221dc39daed432887db559e40e11ea14e4d67d86af2",
+        "status": "PASS"
+      }
+    },
+    {
+      "abi": "System V AMD64; ELF Linux",
+      "architecture": "x86-64",
+      "artifact_sha256": "76dd3d93e5ee48950a92a58d59b94de8143847f91a80d9682c938767b991577d",
+      "byte_order": "little",
+      "debug_information_status": "ELF has no matching debug file frozen",
+      "dynamic": [
+        {
+          "string": "libc.so.6",
+          "tag": 1,
+          "value": 112522
+        },
+        {
+          "string": "libcrypto.so.3",
+          "tag": 14,
+          "value": 112532
+        },
+        {
+          "tag": 12,
+          "value": 806912
+        },
+        {
+          "tag": 13,
+          "value": 3421376
+        },
+        {
+          "tag": 25,
+          "value": 4337232
+        },
+        {
+          "tag": 27,
+          "value": 8
+        },
+        {
+          "tag": 26,
+          "value": 4337240
+        },
+        {
+          "tag": 28,
+          "value": 8
+        },
+        {
+          "tag": 1879047925,
+          "value": 608
+        },
+        {
+          "tag": 5,
+          "value": 174896
+        },
+        {
+          "tag": 6,
+          "value": 42584
+        },
+        {
+          "tag": 10,
+          "value": 112734
+        },
+        {
+          "tag": 11,
+          "value": 24
+        },
+        {
+          "tag": 3,
+          "value": 4709472
+        },
+        {
+          "tag": 2,
+          "value": 72144
+        },
+        {
+          "tag": 20,
+          "value": 7
+        },
+        {
+          "tag": 23,
+          "value": 733696
+        },
+        {
+          "tag": 7,
+          "value": 299032
+        },
+        {
+          "tag": 8,
+          "value": 434664
+        },
+        {
+          "tag": 9,
+          "value": 24
+        },
+        {
+          "tag": 1879048188,
+          "value": 298656
+        },
+        {
+          "tag": 1879048189,
+          "value": 5
+        },
+        {
+          "tag": 30,
+          "value": 8
+        },
+        {
+          "tag": 1879048187,
+          "value": 9
+        },
+        {
+          "tag": 1879048190,
+          "value": 298824
+        },
+        {
+          "tag": 1879048191,
+          "value": 1
+        },
+        {
+          "tag": 1879048176,
+          "value": 287630
+        },
+        {
+          "tag": 1879048185,
+          "value": 16924
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        }
+      ],
+      "elf_build_id": "74848a2aca370758e15c5a7a5e406b47ee56ac14",
+      "elf_type": 3,
+      "entry": 0,
+      "loadable_segments": [
+        {
+          "align": 4096,
+          "file_offset": 0,
+          "file_size": 805840,
+          "flags": 4,
+          "memory_size": 805840,
+          "paddr": 0,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 4096,
+          "file_offset": 806912,
+          "file_size": 2614473,
+          "flags": 5,
+          "memory_size": 2614473,
+          "paddr": 806912,
+          "permissions": "RX",
+          "type": 1,
+          "vaddr": 806912
+        },
+        {
+          "align": 4096,
+          "file_offset": 3424256,
+          "file_size": 907840,
+          "flags": 4,
+          "memory_size": 907840,
+          "paddr": 3424256,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 3424256
+        },
+        {
+          "align": 4096,
+          "file_offset": 4333136,
+          "file_size": 407256,
+          "flags": 6,
+          "memory_size": 419680,
+          "paddr": 4337232,
+          "permissions": "RW",
+          "type": 1,
+          "vaddr": 4337232
+        }
+      ],
+      "needed": [
+        "libc.so.6"
+      ],
+      "path": "artifacts/baseline/libcrypto.so.3",
+      "program_headers": [
+        {
+          "align": 4096,
+          "file_offset": 0,
+          "file_size": 805840,
+          "flags": 4,
+          "memory_size": 805840,
+          "paddr": 0,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 4096,
+          "file_offset": 806912,
+          "file_size": 2614473,
+          "flags": 5,
+          "memory_size": 2614473,
+          "paddr": 806912,
+          "permissions": "RX",
+          "type": 1,
+          "vaddr": 806912
+        },
+        {
+          "align": 4096,
+          "file_offset": 3424256,
+          "file_size": 907840,
+          "flags": 4,
+          "memory_size": 907840,
+          "paddr": 3424256,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 3424256
+        },
+        {
+          "align": 4096,
+          "file_offset": 4333136,
+          "file_size": 407256,
+          "flags": 6,
+          "memory_size": 419680,
+          "paddr": 4337232,
+          "permissions": "RW",
+          "type": 1,
+          "vaddr": 4337232
+        },
+        {
+          "align": 8,
+          "file_offset": 4704848,
+          "file_size": 528,
+          "flags": 6,
+          "memory_size": 528,
+          "paddr": 4708944,
+          "permissions": "RW",
+          "type": 2,
+          "vaddr": 4708944
+        },
+        {
+          "align": 4,
+          "file_offset": 568,
+          "file_size": 36,
+          "flags": 4,
+          "memory_size": 36,
+          "paddr": 568,
+          "permissions": "R",
+          "type": 4,
+          "vaddr": 568
+        },
+        {
+          "align": 4,
+          "file_offset": 3791608,
+          "file_size": 87308,
+          "flags": 4,
+          "memory_size": 87308,
+          "paddr": 3791608,
+          "permissions": "R",
+          "type": 1685382480,
+          "vaddr": 3791608
+        },
+        {
+          "align": 16,
+          "file_offset": 0,
+          "file_size": 0,
+          "flags": 6,
+          "memory_size": 0,
+          "paddr": 0,
+          "permissions": "RW",
+          "type": 1685382481,
+          "vaddr": 0
+        },
+        {
+          "align": 1,
+          "file_offset": 4333136,
+          "file_size": 397744,
+          "flags": 4,
+          "memory_size": 397744,
+          "paddr": 4337232,
+          "permissions": "R",
+          "type": 1685382482,
+          "vaddr": 4337232
+        }
+      ],
+      "relocation_inventory": "inventory/relocations/libcrypto.so.3.json",
+      "sections": [
+        {
+          "align": 0,
+          "entry_size": 0,
+          "file_offset": 0,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": "",
+          "name_offset": 0,
+          "size": 0,
+          "type": 0,
+          "vaddr": 0
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 568,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".note.gnu.build-id",
+          "name_offset": 11,
+          "size": 36,
+          "type": 7,
+          "vaddr": 568
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 608,
+          "flags": 2,
+          "info": 0,
+          "link": 3,
+          "name": ".gnu.hash",
+          "name_offset": 30,
+          "size": 41976,
+          "type": 1879048182,
+          "vaddr": 608
+        },
+        {
+          "align": 8,
+          "entry_size": 24,
+          "file_offset": 42584,
+          "flags": 2,
+          "info": 1,
+          "link": 4,
+          "name": ".dynsym",
+          "name_offset": 40,
+          "size": 132312,
+          "type": 11,
+          "vaddr": 42584
+        },
+        {
+          "align": 1,
+          "entry_size": 0,
+          "file_offset": 174896,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".dynstr",
+          "name_offset": 48,
+          "size": 112734,
+          "type": 3,
+          "vaddr": 174896
+        },
+        {
+          "align": 2,
+          "entry_size": 2,
+          "file_offset": 287630,
+          "flags": 2,
+          "info": 0,
+          "link": 3,
+          "name": ".gnu.version",
+          "name_offset": 56,
+          "size": 11026,
+          "type": 1879048191,
+          "vaddr": 287630
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 298656,
+          "flags": 2,
+          "info": 5,
+          "link": 4,
+          "name": ".gnu.version_d",
+          "name_offset": 69,
+          "size": 164,
+          "type": 1879048189,
+          "vaddr": 298656
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 298824,
+          "flags": 2,
+          "info": 1,
+          "link": 4,
+          "name": ".gnu.version_r",
+          "name_offset": 84,
+          "size": 208,
+          "type": 1879048190,
+          "vaddr": 298824
+        },
+        {
+          "align": 8,
+          "entry_size": 24,
+          "file_offset": 299032,
+          "flags": 2,
+          "info": 0,
+          "link": 3,
+          "name": ".rela.dyn",
+          "name_offset": 99,
+          "size": 434664,
+          "type": 4,
+          "vaddr": 299032
+        },
+        {
+          "align": 8,
+          "entry_size": 24,
+          "file_offset": 733696,
+          "flags": 66,
+          "info": 22,
+          "link": 3,
+          "name": ".rela.plt",
+          "name_offset": 109,
+          "size": 72144,
+          "type": 4,
+          "vaddr": 733696
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 806912,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".init",
+          "name_offset": 119,
+          "size": 28,
+          "type": 1,
+          "vaddr": 806912
+        },
+        {
+          "align": 16,
+          "entry_size": 16,
+          "file_offset": 806944,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".plt",
+          "name_offset": 114,
+          "size": 48112,
+          "type": 1,
+          "vaddr": 806944
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 855056,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".plt.got",
+          "name_offset": 125,
+          "size": 840,
+          "type": 1,
+          "vaddr": 855056
+        },
+        {
+          "align": 4096,
+          "entry_size": 0,
+          "file_offset": 856064,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".text",
+          "name_offset": 134,
+          "size": 2565310,
+          "type": 1,
+          "vaddr": 856064
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 3421376,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".fini",
+          "name_offset": 140,
+          "size": 9,
+          "type": 1,
+          "vaddr": 3421376
+        },
+        {
+          "align": 64,
+          "entry_size": 0,
+          "file_offset": 3424256,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".rodata",
+          "name_offset": 146,
+          "size": 367349,
+          "type": 1,
+          "vaddr": 3424256
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 3791608,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".eh_frame_hdr",
+          "name_offset": 154,
+          "size": 87308,
+          "type": 1,
+          "vaddr": 3791608
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 3878920,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".eh_frame",
+          "name_offset": 168,
+          "size": 453176,
+          "type": 1,
+          "vaddr": 3878920
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 4333136,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".init_array",
+          "name_offset": 178,
+          "size": 8,
+          "type": 14,
+          "vaddr": 4337232
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 4333144,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".fini_array",
+          "name_offset": 190,
+          "size": 8,
+          "type": 15,
+          "vaddr": 4337240
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 4333152,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".data.rel.ro",
+          "name_offset": 202,
+          "size": 371696,
+          "type": 1,
+          "vaddr": 4337248
+        },
+        {
+          "align": 8,
+          "entry_size": 16,
+          "file_offset": 4704848,
+          "flags": 3,
+          "info": 0,
+          "link": 4,
+          "name": ".dynamic",
+          "name_offset": 215,
+          "size": 528,
+          "type": 6,
+          "vaddr": 4708944
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 4705376,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".got",
+          "name_offset": 129,
+          "size": 25480,
+          "type": 1,
+          "vaddr": 4709472
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 4730880,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".data",
+          "name_offset": 224,
+          "size": 9512,
+          "type": 1,
+          "vaddr": 4734976
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 4740392,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".bss",
+          "name_offset": 230,
+          "size": 12400,
+          "type": 8,
+          "vaddr": 4744512
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 4740392,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu_debuglink",
+          "name_offset": 235,
+          "size": 52,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 1,
+          "entry_size": 0,
+          "file_offset": 4740444,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".shstrtab",
+          "name_offset": 1,
+          "size": 250,
+          "type": 3,
+          "vaddr": 0
+        }
+      ],
+      "size": 4742424,
+      "source_metadata_status": "UNAVAILABLE in frozen ELF; see package provenance lock",
+      "symbol_inventory": "inventory/symbols/libcrypto.so.3.json",
+      "text_extraction_crosscheck": {
+        "gnu_text_sha256": "1590d845cd027a8cba02c8a4c2e95b7250e59115a04bb744779d5e17521479db",
+        "independent_tool": "GNU objcopy --dump-section .text",
+        "parser_formally_verified": false,
+        "python_text_sha256": "1590d845cd027a8cba02c8a4c2e95b7250e59115a04bb744779d5e17521479db",
+        "status": "PASS"
+      }
+    },
+    {
+      "abi": "System V AMD64; ELF Linux",
+      "architecture": "x86-64",
+      "artifact_sha256": "df53c8f504722cacd8035111fdaed5151ce17b79fd380efcf28b3b4a1ca70cd5",
+      "byte_order": "little",
+      "debug_information_status": "ELF has no matching debug file frozen",
+      "dynamic": [
+        {
+          "string": "libcrypto.so.3",
+          "tag": 1,
+          "value": 21305
+        },
+        {
+          "string": "libc.so.6",
+          "tag": 1,
+          "value": 21320
+        },
+        {
+          "string": "libssl.so.3",
+          "tag": 14,
+          "value": 21330
+        },
+        {
+          "tag": 12,
+          "value": 126976
+        },
+        {
+          "tag": 13,
+          "value": 507560
+        },
+        {
+          "tag": 25,
+          "value": 636944
+        },
+        {
+          "tag": 27,
+          "value": 8
+        },
+        {
+          "tag": 26,
+          "value": 636952
+        },
+        {
+          "tag": 28,
+          "value": 8
+        },
+        {
+          "tag": 1879047925,
+          "value": 608
+        },
+        {
+          "tag": 5,
+          "value": 29152
+        },
+        {
+          "tag": 6,
+          "value": 4264
+        },
+        {
+          "tag": 10,
+          "value": 21426
+        },
+        {
+          "tag": 11,
+          "value": 24
+        },
+        {
+          "tag": 3,
+          "value": 670544
+        },
+        {
+          "tag": 2,
+          "value": 15456
+        },
+        {
+          "tag": 20,
+          "value": 7
+        },
+        {
+          "tag": 23,
+          "value": 109904
+        },
+        {
+          "tag": 7,
+          "value": 52856
+        },
+        {
+          "tag": 8,
+          "value": 57048
+        },
+        {
+          "tag": 9,
+          "value": 24
+        },
+        {
+          "tag": 1879048188,
+          "value": 52656
+        },
+        {
+          "tag": 1879048189,
+          "value": 2
+        },
+        {
+          "tag": 30,
+          "value": 8
+        },
+        {
+          "tag": 1879048187,
+          "value": 9
+        },
+        {
+          "tag": 1879048190,
+          "value": 52712
+        },
+        {
+          "tag": 1879048191,
+          "value": 2
+        },
+        {
+          "tag": 1879048176,
+          "value": 50578
+        },
+        {
+          "tag": 1879048185,
+          "value": 2335
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        }
+      ],
+      "elf_build_id": "9909932f76c3ab7d71f8c58657982d4ee7a77757",
+      "elf_type": 3,
+      "entry": 0,
+      "loadable_segments": [
+        {
+          "align": 4096,
+          "file_offset": 0,
+          "file_size": 125360,
+          "flags": 4,
+          "memory_size": 125360,
+          "paddr": 0,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 4096,
+          "file_offset": 126976,
+          "file_size": 380593,
+          "flags": 5,
+          "memory_size": 380593,
+          "paddr": 126976,
+          "permissions": "RX",
+          "type": 1,
+          "vaddr": 126976
+        },
+        {
+          "align": 4096,
+          "file_offset": 507904,
+          "file_size": 124840,
+          "flags": 4,
+          "memory_size": 124840,
+          "paddr": 507904,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 507904
+        },
+        {
+          "align": 4096,
+          "file_offset": 632848,
+          "file_size": 53280,
+          "flags": 6,
+          "memory_size": 53344,
+          "paddr": 636944,
+          "permissions": "RW",
+          "type": 1,
+          "vaddr": 636944
+        }
+      ],
+      "needed": [
+        "libcrypto.so.3",
+        "libc.so.6"
+      ],
+      "path": "artifacts/baseline/libssl.so.3",
+      "program_headers": [
+        {
+          "align": 4096,
+          "file_offset": 0,
+          "file_size": 125360,
+          "flags": 4,
+          "memory_size": 125360,
+          "paddr": 0,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 4096,
+          "file_offset": 126976,
+          "file_size": 380593,
+          "flags": 5,
+          "memory_size": 380593,
+          "paddr": 126976,
+          "permissions": "RX",
+          "type": 1,
+          "vaddr": 126976
+        },
+        {
+          "align": 4096,
+          "file_offset": 507904,
+          "file_size": 124840,
+          "flags": 4,
+          "memory_size": 124840,
+          "paddr": 507904,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 507904
+        },
+        {
+          "align": 4096,
+          "file_offset": 632848,
+          "file_size": 53280,
+          "flags": 6,
+          "memory_size": 53344,
+          "paddr": 636944,
+          "permissions": "RW",
+          "type": 1,
+          "vaddr": 636944
+        },
+        {
+          "align": 8,
+          "file_offset": 665904,
+          "file_size": 544,
+          "flags": 6,
+          "memory_size": 544,
+          "paddr": 670000,
+          "permissions": "RW",
+          "type": 2,
+          "vaddr": 670000
+        },
+        {
+          "align": 4,
+          "file_offset": 568,
+          "file_size": 36,
+          "flags": 4,
+          "memory_size": 36,
+          "paddr": 568,
+          "permissions": "R",
+          "type": 4,
+          "vaddr": 568
+        },
+        {
+          "align": 4,
+          "file_offset": 567080,
+          "file_size": 10332,
+          "flags": 4,
+          "memory_size": 10332,
+          "paddr": 567080,
+          "permissions": "R",
+          "type": 1685382480,
+          "vaddr": 567080
+        },
+        {
+          "align": 16,
+          "file_offset": 0,
+          "file_size": 0,
+          "flags": 6,
+          "memory_size": 0,
+          "paddr": 0,
+          "permissions": "RW",
+          "type": 1685382481,
+          "vaddr": 0
+        },
+        {
+          "align": 1,
+          "file_offset": 632848,
+          "file_size": 38896,
+          "flags": 4,
+          "memory_size": 38896,
+          "paddr": 636944,
+          "permissions": "R",
+          "type": 1685382482,
+          "vaddr": 636944
+        }
+      ],
+      "relocation_inventory": "inventory/relocations/libssl.so.3.json",
+      "sections": [
+        {
+          "align": 0,
+          "entry_size": 0,
+          "file_offset": 0,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": "",
+          "name_offset": 0,
+          "size": 0,
+          "type": 0,
+          "vaddr": 0
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 568,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".note.gnu.build-id",
+          "name_offset": 11,
+          "size": 36,
+          "type": 7,
+          "vaddr": 568
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 608,
+          "flags": 2,
+          "info": 0,
+          "link": 3,
+          "name": ".gnu.hash",
+          "name_offset": 30,
+          "size": 3656,
+          "type": 1879048182,
+          "vaddr": 608
+        },
+        {
+          "align": 8,
+          "entry_size": 24,
+          "file_offset": 4264,
+          "flags": 2,
+          "info": 1,
+          "link": 4,
+          "name": ".dynsym",
+          "name_offset": 40,
+          "size": 24888,
+          "type": 11,
+          "vaddr": 4264
+        },
+        {
+          "align": 1,
+          "entry_size": 0,
+          "file_offset": 29152,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".dynstr",
+          "name_offset": 48,
+          "size": 21426,
+          "type": 3,
+          "vaddr": 29152
+        },
+        {
+          "align": 2,
+          "entry_size": 2,
+          "file_offset": 50578,
+          "flags": 2,
+          "info": 0,
+          "link": 3,
+          "name": ".gnu.version",
+          "name_offset": 56,
+          "size": 2074,
+          "type": 1879048191,
+          "vaddr": 50578
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 52656,
+          "flags": 2,
+          "info": 2,
+          "link": 4,
+          "name": ".gnu.version_d",
+          "name_offset": 69,
+          "size": 56,
+          "type": 1879048189,
+          "vaddr": 52656
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 52712,
+          "flags": 2,
+          "info": 2,
+          "link": 4,
+          "name": ".gnu.version_r",
+          "name_offset": 84,
+          "size": 144,
+          "type": 1879048190,
+          "vaddr": 52712
+        },
+        {
+          "align": 8,
+          "entry_size": 24,
+          "file_offset": 52856,
+          "flags": 2,
+          "info": 0,
+          "link": 3,
+          "name": ".rela.dyn",
+          "name_offset": 99,
+          "size": 57048,
+          "type": 4,
+          "vaddr": 52856
+        },
+        {
+          "align": 8,
+          "entry_size": 24,
+          "file_offset": 109904,
+          "flags": 66,
+          "info": 22,
+          "link": 3,
+          "name": ".rela.plt",
+          "name_offset": 109,
+          "size": 15456,
+          "type": 4,
+          "vaddr": 109904
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 126976,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".init",
+          "name_offset": 119,
+          "size": 23,
+          "type": 1,
+          "vaddr": 126976
+        },
+        {
+          "align": 16,
+          "entry_size": 16,
+          "file_offset": 127008,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".plt",
+          "name_offset": 114,
+          "size": 10320,
+          "type": 1,
+          "vaddr": 127008
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 137328,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".plt.got",
+          "name_offset": 125,
+          "size": 56,
+          "type": 1,
+          "vaddr": 137328
+        },
+        {
+          "align": 16,
+          "entry_size": 0,
+          "file_offset": 137392,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".text",
+          "name_offset": 134,
+          "size": 370166,
+          "type": 1,
+          "vaddr": 137392
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 507560,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".fini",
+          "name_offset": 140,
+          "size": 9,
+          "type": 1,
+          "vaddr": 507560
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 507904,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".rodata",
+          "name_offset": 146,
+          "size": 59176,
+          "type": 1,
+          "vaddr": 507904
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 567080,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".eh_frame_hdr",
+          "name_offset": 154,
+          "size": 10332,
+          "type": 1,
+          "vaddr": 567080
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 577416,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".eh_frame",
+          "name_offset": 168,
+          "size": 55328,
+          "type": 1,
+          "vaddr": 577416
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 632848,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".init_array",
+          "name_offset": 178,
+          "size": 8,
+          "type": 14,
+          "vaddr": 636944
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 632856,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".fini_array",
+          "name_offset": 190,
+          "size": 8,
+          "type": 15,
+          "vaddr": 636952
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 632864,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".data.rel.ro",
+          "name_offset": 202,
+          "size": 33040,
+          "type": 1,
+          "vaddr": 636960
+        },
+        {
+          "align": 8,
+          "entry_size": 16,
+          "file_offset": 665904,
+          "flags": 3,
+          "info": 0,
+          "link": 4,
+          "name": ".dynamic",
+          "name_offset": 215,
+          "size": 544,
+          "type": 6,
+          "vaddr": 670000
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 666448,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".got",
+          "name_offset": 129,
+          "size": 5296,
+          "type": 1,
+          "vaddr": 670544
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 671744,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".data",
+          "name_offset": 224,
+          "size": 14384,
+          "type": 1,
+          "vaddr": 675840
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 686128,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".bss",
+          "name_offset": 230,
+          "size": 64,
+          "type": 8,
+          "vaddr": 690224
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 686128,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu_debuglink",
+          "name_offset": 235,
+          "size": 52,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 1,
+          "entry_size": 0,
+          "file_offset": 686180,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".shstrtab",
+          "name_offset": 1,
+          "size": 250,
+          "type": 3,
+          "vaddr": 0
+        }
+      ],
+      "size": 688160,
+      "source_metadata_status": "UNAVAILABLE in frozen ELF; see package provenance lock",
+      "symbol_inventory": "inventory/symbols/libssl.so.3.json",
+      "text_extraction_crosscheck": {
+        "gnu_text_sha256": "671707a7897a503fe1222ce518499f7802b77743a2728b6e46da749dc3f8f7d7",
+        "independent_tool": "GNU objcopy --dump-section .text",
+        "parser_formally_verified": false,
+        "python_text_sha256": "671707a7897a503fe1222ce518499f7802b77743a2728b6e46da749dc3f8f7d7",
+        "status": "PASS"
+      }
+    },
+    {
+      "abi": "System V AMD64; ELF Linux",
+      "architecture": "x86-64",
+      "artifact_sha256": "f5bae55ac9fd0d01a18b3ad845f7ca06276d5dcdb8284ad418c6997cd7096417",
+      "byte_order": "little",
+      "debug_information_status": "ELF has no matching debug file frozen",
+      "dynamic": [
+        {
+          "string": "libcrypto.so.3",
+          "tag": 1,
+          "value": 1800
+        },
+        {
+          "string": "libc.so.6",
+          "tag": 1,
+          "value": 1815
+        },
+        {
+          "tag": 12,
+          "value": 24576
+        },
+        {
+          "tag": 13,
+          "value": 85972
+        },
+        {
+          "tag": 25,
+          "value": 107504
+        },
+        {
+          "tag": 27,
+          "value": 8
+        },
+        {
+          "tag": 26,
+          "value": 107512
+        },
+        {
+          "tag": 28,
+          "value": 8
+        },
+        {
+          "tag": 1879047925,
+          "value": 608
+        },
+        {
+          "tag": 5,
+          "value": 3168
+        },
+        {
+          "tag": 6,
+          "value": 648
+        },
+        {
+          "tag": 10,
+          "value": 1872
+        },
+        {
+          "tag": 11,
+          "value": 24
+        },
+        {
+          "tag": 3,
+          "value": 122048
+        },
+        {
+          "tag": 2,
+          "value": 2304
+        },
+        {
+          "tag": 20,
+          "value": 7
+        },
+        {
+          "tag": 23,
+          "value": 21528
+        },
+        {
+          "tag": 7,
+          "value": 5352
+        },
+        {
+          "tag": 8,
+          "value": 16176
+        },
+        {
+          "tag": 9,
+          "value": 24
+        },
+        {
+          "tag": 30,
+          "value": 8
+        },
+        {
+          "tag": 1879048187,
+          "value": 9
+        },
+        {
+          "tag": 1879048190,
+          "value": 5256
+        },
+        {
+          "tag": 1879048191,
+          "value": 2
+        },
+        {
+          "tag": 1879048176,
+          "value": 5040
+        },
+        {
+          "tag": 1879048185,
+          "value": 667
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        },
+        {
+          "tag": 0,
+          "value": 0
+        }
+      ],
+      "elf_build_id": "4a6fd8a99dc5fa4196fa45532a8389907d0ef943",
+      "elf_type": 3,
+      "entry": 0,
+      "loadable_segments": [
+        {
+          "align": 4096,
+          "file_offset": 0,
+          "file_size": 23832,
+          "flags": 4,
+          "memory_size": 23832,
+          "paddr": 0,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 4096,
+          "file_offset": 24576,
+          "file_size": 61405,
+          "flags": 5,
+          "memory_size": 61405,
+          "paddr": 24576,
+          "permissions": "RX",
+          "type": 1,
+          "vaddr": 24576
+        },
+        {
+          "align": 4096,
+          "file_offset": 86016,
+          "file_size": 19776,
+          "flags": 4,
+          "memory_size": 19776,
+          "paddr": 86016,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 86016
+        },
+        {
+          "align": 4096,
+          "file_offset": 107504,
+          "file_size": 15384,
+          "flags": 6,
+          "memory_size": 15408,
+          "paddr": 107504,
+          "permissions": "RW",
+          "type": 1,
+          "vaddr": 107504
+        }
+      ],
+      "needed": [
+        "libcrypto.so.3",
+        "libc.so.6"
+      ],
+      "path": "artifacts/baseline/ossl-modules/legacy.so",
+      "program_headers": [
+        {
+          "align": 4096,
+          "file_offset": 0,
+          "file_size": 23832,
+          "flags": 4,
+          "memory_size": 23832,
+          "paddr": 0,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 4096,
+          "file_offset": 24576,
+          "file_size": 61405,
+          "flags": 5,
+          "memory_size": 61405,
+          "paddr": 24576,
+          "permissions": "RX",
+          "type": 1,
+          "vaddr": 24576
+        },
+        {
+          "align": 4096,
+          "file_offset": 86016,
+          "file_size": 19776,
+          "flags": 4,
+          "memory_size": 19776,
+          "paddr": 86016,
+          "permissions": "R",
+          "type": 1,
+          "vaddr": 86016
+        },
+        {
+          "align": 4096,
+          "file_offset": 107504,
+          "file_size": 15384,
+          "flags": 6,
+          "memory_size": 15408,
+          "paddr": 107504,
+          "permissions": "RW",
+          "type": 1,
+          "vaddr": 107504
+        },
+        {
+          "align": 8,
+          "file_offset": 121552,
+          "file_size": 496,
+          "flags": 6,
+          "memory_size": 496,
+          "paddr": 121552,
+          "permissions": "RW",
+          "type": 2,
+          "vaddr": 121552
+        },
+        {
+          "align": 4,
+          "file_offset": 568,
+          "file_size": 36,
+          "flags": 4,
+          "memory_size": 36,
+          "paddr": 568,
+          "permissions": "R",
+          "type": 4,
+          "vaddr": 568
+        },
+        {
+          "align": 4,
+          "file_offset": 91608,
+          "file_size": 2284,
+          "flags": 4,
+          "memory_size": 2284,
+          "paddr": 91608,
+          "permissions": "R",
+          "type": 1685382480,
+          "vaddr": 91608
+        },
+        {
+          "align": 16,
+          "file_offset": 0,
+          "file_size": 0,
+          "flags": 6,
+          "memory_size": 0,
+          "paddr": 0,
+          "permissions": "RW",
+          "type": 1685382481,
+          "vaddr": 0
+        },
+        {
+          "align": 1,
+          "file_offset": 107504,
+          "file_size": 15376,
+          "flags": 4,
+          "memory_size": 15376,
+          "paddr": 107504,
+          "permissions": "R",
+          "type": 1685382482,
+          "vaddr": 107504
+        }
+      ],
+      "relocation_inventory": "inventory/relocations/legacy.so.json",
+      "sections": [
+        {
+          "align": 0,
+          "entry_size": 0,
+          "file_offset": 0,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": "",
+          "name_offset": 0,
+          "size": 0,
+          "type": 0,
+          "vaddr": 0
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 568,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".note.gnu.build-id",
+          "name_offset": 11,
+          "size": 36,
+          "type": 7,
+          "vaddr": 568
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 608,
+          "flags": 2,
+          "info": 0,
+          "link": 3,
+          "name": ".gnu.hash",
+          "name_offset": 30,
+          "size": 36,
+          "type": 1879048182,
+          "vaddr": 608
+        },
+        {
+          "align": 8,
+          "entry_size": 24,
+          "file_offset": 648,
+          "flags": 2,
+          "info": 1,
+          "link": 4,
+          "name": ".dynsym",
+          "name_offset": 40,
+          "size": 2520,
+          "type": 11,
+          "vaddr": 648
+        },
+        {
+          "align": 1,
+          "entry_size": 0,
+          "file_offset": 3168,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".dynstr",
+          "name_offset": 48,
+          "size": 1872,
+          "type": 3,
+          "vaddr": 3168
+        },
+        {
+          "align": 2,
+          "entry_size": 2,
+          "file_offset": 5040,
+          "flags": 2,
+          "info": 0,
+          "link": 3,
+          "name": ".gnu.version",
+          "name_offset": 56,
+          "size": 210,
+          "type": 1879048191,
+          "vaddr": 5040
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 5256,
+          "flags": 2,
+          "info": 2,
+          "link": 4,
+          "name": ".gnu.version_r",
+          "name_offset": 69,
+          "size": 96,
+          "type": 1879048190,
+          "vaddr": 5256
+        },
+        {
+          "align": 8,
+          "entry_size": 24,
+          "file_offset": 5352,
+          "flags": 2,
+          "info": 0,
+          "link": 3,
+          "name": ".rela.dyn",
+          "name_offset": 84,
+          "size": 16176,
+          "type": 4,
+          "vaddr": 5352
+        },
+        {
+          "align": 8,
+          "entry_size": 24,
+          "file_offset": 21528,
+          "flags": 66,
+          "info": 21,
+          "link": 3,
+          "name": ".rela.plt",
+          "name_offset": 94,
+          "size": 2304,
+          "type": 4,
+          "vaddr": 21528
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 24576,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".init",
+          "name_offset": 104,
+          "size": 28,
+          "type": 1,
+          "vaddr": 24576
+        },
+        {
+          "align": 16,
+          "entry_size": 16,
+          "file_offset": 24608,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".plt",
+          "name_offset": 99,
+          "size": 1552,
+          "type": 1,
+          "vaddr": 24608
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 26160,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".plt.got",
+          "name_offset": 110,
+          "size": 8,
+          "type": 1,
+          "vaddr": 26160
+        },
+        {
+          "align": 64,
+          "entry_size": 0,
+          "file_offset": 26176,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".text",
+          "name_offset": 119,
+          "size": 59796,
+          "type": 1,
+          "vaddr": 26176
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 85972,
+          "flags": 6,
+          "info": 0,
+          "link": 0,
+          "name": ".fini",
+          "name_offset": 125,
+          "size": 9,
+          "type": 1,
+          "vaddr": 85972
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 86016,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".rodata",
+          "name_offset": 131,
+          "size": 5591,
+          "type": 1,
+          "vaddr": 86016
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 91608,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".eh_frame_hdr",
+          "name_offset": 139,
+          "size": 2284,
+          "type": 1,
+          "vaddr": 91608
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 93896,
+          "flags": 2,
+          "info": 0,
+          "link": 0,
+          "name": ".eh_frame",
+          "name_offset": 153,
+          "size": 11896,
+          "type": 1,
+          "vaddr": 93896
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 107504,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".init_array",
+          "name_offset": 163,
+          "size": 8,
+          "type": 14,
+          "vaddr": 107504
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 107512,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".fini_array",
+          "name_offset": 175,
+          "size": 8,
+          "type": 15,
+          "vaddr": 107512
+        },
+        {
+          "align": 32,
+          "entry_size": 0,
+          "file_offset": 107520,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".data.rel.ro",
+          "name_offset": 187,
+          "size": 14032,
+          "type": 1,
+          "vaddr": 107520
+        },
+        {
+          "align": 8,
+          "entry_size": 16,
+          "file_offset": 121552,
+          "flags": 3,
+          "info": 0,
+          "link": 4,
+          "name": ".dynamic",
+          "name_offset": 200,
+          "size": 496,
+          "type": 6,
+          "vaddr": 121552
+        },
+        {
+          "align": 8,
+          "entry_size": 8,
+          "file_offset": 122048,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".got",
+          "name_offset": 114,
+          "size": 824,
+          "type": 1,
+          "vaddr": 122048
+        },
+        {
+          "align": 8,
+          "entry_size": 0,
+          "file_offset": 122880,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".data",
+          "name_offset": 209,
+          "size": 8,
+          "type": 1,
+          "vaddr": 122880
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 122888,
+          "flags": 3,
+          "info": 0,
+          "link": 0,
+          "name": ".bss",
+          "name_offset": 215,
+          "size": 24,
+          "type": 8,
+          "vaddr": 122888
+        },
+        {
+          "align": 1,
+          "entry_size": 0,
+          "file_offset": 122888,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu_debugaltlink",
+          "name_offset": 220,
+          "size": 71,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 4,
+          "entry_size": 0,
+          "file_offset": 122960,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".gnu_debuglink",
+          "name_offset": 238,
+          "size": 52,
+          "type": 1,
+          "vaddr": 0
+        },
+        {
+          "align": 1,
+          "entry_size": 0,
+          "file_offset": 123012,
+          "flags": 0,
+          "info": 0,
+          "link": 0,
+          "name": ".shstrtab",
+          "name_offset": 1,
+          "size": 253,
+          "type": 3,
+          "vaddr": 0
+        }
+      ],
+      "size": 125000,
+      "source_metadata_status": "UNAVAILABLE in frozen ELF; see package provenance lock",
+      "symbol_inventory": "inventory/symbols/legacy.so.json",
+      "text_extraction_crosscheck": {
+        "gnu_text_sha256": "ca4e0a5c5d9eefc19220b3005cf92072823691c84b42c7255f80de452946541e",
+        "independent_tool": "GNU objcopy --dump-section .text",
+        "parser_formally_verified": false,
+        "python_text_sha256": "ca4e0a5c5d9eefc19220b3005cf92072823691c84b42c7255f80de452946541e",
+        "status": "PASS"
+      }
+    }
+  ],
+  "crosscheck_status": "PASS",
+  "parser_trust": "small unverified Python ELF parser; crosschecked against GNU tools",
+  "provenance_class": "unchanged production Debian packages in pinned local container image",
+  "schema_version": 1
+}

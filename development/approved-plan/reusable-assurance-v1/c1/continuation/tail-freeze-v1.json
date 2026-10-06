@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-04T15:34:48.085211+00:00",
+  "human_review": "PENDING",
+  "frozen_before_proof_source": true,
+  "files": {
+    "tail-definitions-v1.ml": "bfcadaa53e36319790fbdec12650eabbc9095f5b74a510ec9517a36c5e92ec15",
+    "tail-statement-v1.ml": "3ce815eef200e5d070ec807ff8ab16169fda2af65afdd6be4b5ff32e341c495b"
+  },
+  "scope": "Five actual caller instructions only; derived intermediate predicate, no changed caller entry domain."
+}

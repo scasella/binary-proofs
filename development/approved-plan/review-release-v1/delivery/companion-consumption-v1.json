@@ -1,0 +1,51 @@
+{
+  "completed_utc": "2026-10-05T16:23:24.058597+00:00",
+  "delivery_manifest_sha256": "d0e968b4ef458febca58377322ab099b2e085d3d08313b633cd88b94041187c5",
+  "elapsed_seconds": 1.6882172500045272,
+  "evidence_placement": "Supplement written after the sealed companion; not a member of that archive",
+  "human_review": "PENDING",
+  "independence": "Same host, fresh extraction root; no Docker use or human review",
+  "mathematical_files_checked": 855,
+  "new_theorem_checking": false,
+  "release_index_sha256": "4a1e7b59915b52ea77b10bc0e976d62ee216181ec484897806203620aa13a83d",
+  "review_archive_sha256": "28bfe4a12dcb53102073bf644dad25a9a8e3d23b6999e3da814a230491fe5c94",
+  "schema": "review-companion-consumption-v1",
+  "scope": "Trusted Python extraction/identity checks after the complete mathematical consumer replay; not formal parser verification",
+  "source_root": "/private/tmp/bp-review-companion-c_5toqtj/source",
+  "started_utc": "2026-10-05T16:23:22.370305+00:00",
+  "status": "SEALED_COMPANION_EXTRACTED_AND_MATHEMATICAL_INPUT_IDENTITIES_PRESERVED",
+  "steps": [
+    {
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+        "-B",
+        "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/review-release-v1/delivery/extract-v1.py",
+        "--archive",
+        "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/review-release-v1/delivery/checking-sources-v1.tar.gz",
+        "--sha256",
+        "7434fae0f89c9b3a0c58f455a3bd33826502213befea5be5f58bcb5355073e2a",
+        "--output",
+        "/private/tmp/bp-review-companion-c_5toqtj/source"
+      ],
+      "exit_code": 0,
+      "log": "/private/tmp/bp-review-companion-c_5toqtj/extraction-1.log",
+      "log_sha256": "b6621dc8b1ae60ef20b174a64b0d4fd61b749c706cabd7ed59641693775eabc2"
+    },
+    {
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+        "-B",
+        "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/review-release-v1/delivery/extract-review-v1.py",
+        "--archive",
+        "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/review-release-v1/delivery/review-evidence-v1.tar.gz",
+        "--sha256",
+        "28bfe4a12dcb53102073bf644dad25a9a8e3d23b6999e3da814a230491fe5c94",
+        "--output",
+        "/private/tmp/bp-review-companion-c_5toqtj/source"
+      ],
+      "exit_code": 0,
+      "log": "/private/tmp/bp-review-companion-c_5toqtj/extraction-2.log",
+      "log_sha256": "e291dad81d31f18d935dbf272e580b2007be4b131454af00e5948da2f6706719"
+    }
+  ]
+}

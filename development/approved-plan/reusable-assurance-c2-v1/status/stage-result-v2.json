@@ -1,0 +1,71 @@
+{
+  "H1": "SUPPORTED_C1_C2_INSPECTION_BASED_OPACITY",
+  "H2": "NOT_ESTABLISHED_NO_HELD_OUT_RUN",
+  "H3": "NOT_ATTEMPTED",
+  "acceptance_input": false,
+  "adaptation_account": {
+    "path": "development/approved-plan/reusable-assurance-c2-v1/reuse/adaptation-account-v3.json",
+    "sha256": "9d453855ea3c7257e91c43eb11adf7667fcd695cdefc7cc900d6a434c16fbbbd"
+  },
+  "caller_trace_noninterference": "NOT_CLAIMED",
+  "construction": "DEVELOPMENT_CHECKED_SEVEN_FROZEN_TARGETS",
+  "costs": {
+    "path": "development/approved-plan/reusable-assurance-c2-v1/measurements/available-costs-final-v2.json",
+    "sha256": "d30baac9c33f646861d7a9f33702a40a352177473a71eda6658fa68d178ea3b1"
+  },
+  "development_audit": {
+    "path": "development/approved-plan/reusable-assurance-c2-v1/diagnosis/live-20261004T234428Z-3081c465/c2-live-audit-v1.json",
+    "sha256": "ff8f3c4d916642f66924d85a7f416e20ee69d36a62d9fba151d87db92e83e0bf"
+  },
+  "exact_remaining_obligations": [],
+  "experiment": "BP-20261004-C2-V1",
+  "formal_dependency_isolation": false,
+  "fresh_positive_run": "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1",
+  "fresh_reconstruction": "FRESH_C2_FULL_FROZEN_TARGETS_WITNESSES_ALL_DEFINITIONS_AND_SUPPLIER_AUDITS_COMPLETE_PENDING_ROOT_GATES",
+  "frozen_contract_and_artifact": {
+    "path": "development/approved-plan/reusable-assurance-c2-v1/spec/freeze-v1.json",
+    "sha256": "26b2d7d8cc214d8a45a427eacc81dab1055998fd01fef2687afb89fda821cceb"
+  },
+  "history_check": {
+    "path": "development/approved-plan/reusable-assurance-c2-v1/status/history-preservation-check-v5.json",
+    "sha256": "cf5e8ff214f972074da95401688519888c27bd96bd1a4f8e972dc6f87c0f1232"
+  },
+  "human_review": "PENDING",
+  "obligation_map": {
+    "path": "development/approved-plan/reusable-assurance-c2-v1/obligation-map/actual-v7.json",
+    "sha256": "dd54bf5dcd7c8da81ab2e08088b4bc12faee4d3ec8928f2bb1848a6f882a1bde"
+  },
+  "observed_at_utc": "2026-10-05T00:32:22.516697+00:00",
+  "partial_checker_memory_observation": {
+    "path": "development/approved-plan/reusable-assurance-c2-v1/diagnosis/fresh-final-memory-hwm-v1.json",
+    "sha256": "2f11fda4877859ab79d7bbe0ceb1a62f2a8353c698256996f952780949937ee6"
+  },
+  "reuse_map": {
+    "path": "development/approved-plan/reusable-assurance-c2-v1/reuse/dependency-map-v4.md",
+    "sha256": "3a541a09afae0866597b3dc7788f0da2ecbb1e0623b4db3501d3a86a7b67bb52"
+  },
+  "root_acceptance": {
+    "path": "development/approved-plan/reusable-assurance-c2-v1/runs/c2-root-full-acceptance-final-v1.json",
+    "sha256": "ec8689605966ab7ad4d467e4c14362b9c68cee078610de2c0da61b617f541638"
+  },
+  "schema": "c2-stage-result-v1",
+  "seven_frozen_targets": {
+    "C2_CALLER_CHECKED": "FRESH_ACCEPTED",
+    "C2_CALLER_COUNT": "FRESH_ACCEPTED",
+    "C2_CALLER_INTERFACE": "FRESH_ACCEPTED",
+    "C2_CALLER_NORMAL_CHECKED": "FRESH_ACCEPTED",
+    "C2_CALLER_NORMAL_INTERFACE": "FRESH_ACCEPTED",
+    "C2_CALLER_RF_NORMAL_CHECKED": "FRESH_ACCEPTED",
+    "C2_INITIAL_COMPARE_HANDOFF": "FRESH_ACCEPTED"
+  },
+  "source_seal": {
+    "path": "development/approved-plan/reusable-assurance-c2-v1/replay/c2-final-v1-seal.json",
+    "sha256": "8f9e56c35e5a60f376356dc7abd242decbd788e1cb54d0e9f4ef23d8f1af9022"
+  },
+  "stage": {
+    "path": "development/approved-plan/reusable-assurance-c2-v1/STAGE-v1.json",
+    "sha256": "f09732c545a49062645bb1f4361318c44b0585a96e41cdbd1cfbc2c37c32f38e"
+  },
+  "status": "FRESH_ACCEPTED",
+  "supplier_recipe_exposure": true
+}

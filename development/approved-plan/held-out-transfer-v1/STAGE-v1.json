@@ -1,0 +1,59 @@
+{
+  "acceptance_requirements": [
+    "complete checked-run functionality/access/progress/finite actual return/ABI-frame",
+    "expanded literal exact targets and all defining equations",
+    "zero hypotheses/free variables; existing standard three axioms only",
+    "complete source reconstruction and supplier chain",
+    "independent final ELF/image/linkage extraction crosscheck",
+    "all inherited integrity controls and fresh public-interface binding probe",
+    "no saved theorem objects/caches/assumed interfaces"
+  ],
+  "adaptation_budget": "No fresh construction budget for repair: any B continuation uses remaining same 10800-second case budget. No automatic extensions.",
+  "authorized_objective": "One bounded independently selected C3 transfer evaluation; no automatically launched later caller",
+  "baseline_status": {
+    "acceptance_input": false,
+    "schema": "current_status_pointer_v1",
+    "sha256": "e49f4a15772441cdbea2033da889abaf081ece10e22c920159c82958882aa9bc",
+    "snapshot": "results/status/snapshots/e49f4a15772441cdbea2033da889abaf081ece10e22c920159c82958882aa9bc.json"
+  },
+  "caller_construction_cap_seconds": 10800,
+  "caller_construction_start_rule": "Starts at the immutable final C3 artifact/domain/literal-target freeze; exact deadline recorded there before main proof search.",
+  "case_count": 1,
+  "checker_cap_scope": "Including cold dependencies; 1 CPU, 3 GiB memory/swap, offline. Does not extend construction.",
+  "checker_cpus": 1,
+  "checker_memory_bytes": 3221225472,
+  "checking_cap_seconds_per_invocation": 1800,
+  "deferred": [
+    "additional C3/other callers after result",
+    "capability isolation",
+    "matched economics",
+    "relinking",
+    "glibc expansion",
+    "new libraries",
+    "new processor/load scope"
+  ],
+  "experiment": "BP-20261005-HELD-OUT-TRANSFER-V1",
+  "human_review": "PENDING",
+  "measurement": "Append all attempts; distinguish inclusive preparation/construction windows from checker CPU/wall and coordination; do not sum overlapping/nested intervals; unexposed counters null.",
+  "old_case_exposure": "Root and candidate/regression workers know C0/C1/C2 and the proposed multiple-call family. Exact C3 case has not been selected or exposed; selector/construction context exposure recorded separately.",
+  "opacity": "Inspection-based source/tactic/dependency audit; no capability or formal transitive isolation claim",
+  "outcomes": {
+    "A": "Freshly accepted with frozen integration layer and only preregistered permitted caller work.",
+    "B": "Freshly accepted with separately recorded integration adaptation, after preserving unchanged-layer attempt.",
+    "C": "Not accepted within fixed evaluation budget."
+  },
+  "preparation_cap_seconds": 3600,
+  "preparation_deadline_utc": "2026-10-05T01:40:42+00:00",
+  "preparation_scope": "Candidate selection/parameterization, export freeze, two fresh development-case regressions, independent exact-case choice, final caller build/specification freeze. No candidate-source edits after exact-case exposure for unchanged arm.",
+  "preparation_start_utc": "2026-10-05T00:40:42+00:00",
+  "protected": [
+    "accepted C1 successor",
+    "accepted C2",
+    "failed C1 predecessor",
+    "supplier artifacts/contracts",
+    "model/E5 architectural scope",
+    "permitted axioms and inherited acceptance requirements",
+    "frozen C3 bytes/domain/endtheorems after case freeze"
+  ],
+  "schema": "held-out-transfer-stage-v1"
+}

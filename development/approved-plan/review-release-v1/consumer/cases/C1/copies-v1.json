@@ -1,0 +1,57 @@
+{
+  "case": "C1",
+  "only_operational_reporting_copies": true,
+  "rows": [
+    {
+      "bytes": 3040,
+      "path": "result-v1.json",
+      "sha256": "d02dac2771277064802b7149e7cb9d17ef2c2184d47ebefc8636e8ba52c80a69",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/result-v1.json"
+    },
+    {
+      "bytes": 2920,
+      "path": "complete-gate.json",
+      "sha256": "cc7438e633c8defe117f8025f5ebaba53fce1efe276e31a0668631c45ce8ace4",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/complete-gate.json"
+    },
+    {
+      "bytes": 1028,
+      "path": "checking-session-v1.json",
+      "sha256": "5fc2ad6575ecc79e070ba4fa5966b4637e6d07de981cf51736a9abee96d7e603",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/checking-session-v1.json"
+    },
+    {
+      "bytes": 2037,
+      "path": "positive/receipt.json",
+      "sha256": "81111de08c5f36a748934f03ee2ad1bbe66541e7934836fa458eabec64718d6f",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/positive/receipt.json"
+    },
+    {
+      "bytes": 4370,
+      "path": "controls/receipt.json",
+      "sha256": "b1286f149cda2ce75f3b9235a948e5d11fbb764ff6d0f6b95824c1f0a5166c8d",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/controls/receipt.json"
+    },
+    {
+      "bytes": 947,
+      "path": "binding-probe/receipt.json",
+      "sha256": "759721c6654af464719a86c81db4453fa1e6c66d285e30eae1936f27ffc96976",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/binding-probe/receipt.json"
+    },
+    {
+      "bytes": 1892,
+      "path": "binding-probe/attempt/receipt.json",
+      "sha256": "514661aa578637170cd8aa43a7708890db1435b8a5dac10b4850662f3d15e742",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/binding-probe/attempt/receipt.json"
+    },
+    {
+      "bytes": 2045,
+      "path": "later-checking-ledger-v1.jsonl",
+      "sha256": "57a172f92b8f4e8490f9b26b46315d48e158b3b531f13167b3b2a11274c092c2",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/later-checking-ledger-v1.jsonl"
+    }
+  ],
+  "schema": "review-release-consumer-receipt-copies-v1",
+  "staged_source_copies": false,
+  "utc": "2026-10-05T15:32:55.542572+00:00"
+}

@@ -1,0 +1,9 @@
+{
+  "c2_checked_statement": "C2_CALLER_CHECKED",
+  "c2_count_statement": "C2_CALLER_COUNT",
+  "c2_handoff_statement": "C2_INITIAL_COMPARE_HANDOFF",
+  "c2_interface_statement": "C2_CALLER_INTERFACE",
+  "c2_normal_checked_statement": "C2_CALLER_NORMAL_CHECKED",
+  "c2_normal_interface_statement": "C2_CALLER_NORMAL_INTERFACE",
+  "c2_rf_normal_checked_statement": "C2_CALLER_RF_NORMAL_CHECKED"
+}

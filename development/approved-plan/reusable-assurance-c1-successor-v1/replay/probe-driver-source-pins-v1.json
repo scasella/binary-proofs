@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-04T18:54:54.521136+00:00",
+  "source_sha256": "bcc587dfb38bf27764f8b71b792de0dcc4ce4523e40b7384e3419be68c0c83e6",
+  "positive_source_unchanged_except_readonly_snapshots_and_strict_rejection_reporting": true,
+  "inherited_checks_retained": true,
+  "negative_probe_is_optional_and_never_acceptance": true,
+  "model": null,
+  "tokens": null,
+  "cost": null
+}

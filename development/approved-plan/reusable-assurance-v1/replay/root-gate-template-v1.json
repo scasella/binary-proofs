@@ -1,0 +1,35 @@
+{
+  "schema": "c1-root-source-runtime-output-gate-template-v1",
+  "status": "PENDING_NO_GATE_EXECUTED",
+  "seal_sha256": null,
+  "positive_run": null,
+  "reviewer": null,
+  "requirements": {
+    "original_seven_C1_raw_literals_unchanged": "PENDING",
+    "all_21_witness_literals_and_seven_fixed_cases": "PENDING",
+    "all_46_new_definitions_raw_and_expanded_actual_object_audit": "PENDING",
+    "hypothesis_count_zero_and_conclusion_frees_zero_for_all_74_objects": "PENDING",
+    "initial_and_final_standard_three_axioms_equal": "PENDING",
+    "existing_opaque_supplier_325_objects_119_definitions_218_equations_audit": "PENDING",
+    "source_index_seal_archive_model_decoder_executor_and_artifact_bindings": "PENDING",
+    "complete_69_file_caller_graph_no_supplier_body_or_former_caller_recipe_imports": "PENDING",
+    "source_staged_readonly_both_work_and_reuse_aliases_no_RW_source_alias": "PENDING",
+    "fresh_pinned_offline_image_external_1800s_1CPU_3GiB_no_swap_OOM": "PENDING",
+    "fresh_ELF_GNU_formal_bytes_linkage_image_RELRO_crosscheck": "PENDING",
+    "genuine_full_positive_new_namespace_no_stale_proof_acceptance": "PENDING",
+    "five_targeted_preflight_integrity_controls_only_after_positive": "PENDING",
+    "controls_scope_integrity_or_dependency_not_semantic_theorem_sensitivity": "PENDING",
+    "raw_process_errors_outputs_source_hash_postguards_and_CPU_scope": "PENDING"
+  },
+  "interpretation": {
+    "public_supplier_scalar_qualification_and_original_entry_domain": "UNCHANGED_FROZEN_CONTRACT",
+    "every_original_successor_and_shifted_index_policy": "UNCHANGED_FROZEN_CONTRACT",
+    "architectural_hardware_parser_loader_proof": false,
+    "ambient_namespace_capability_or_dependency_isolation": false,
+    "witnesses_are_admissible_entry_cases_not_executed_test_inputs": true
+  },
+  "human_review": "PENDING",
+  "caller_acceptance": false,
+  "full_C1_acceptance": false,
+  "formal_single_theorem_control_sensitivity": false
+}

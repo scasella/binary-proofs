@@ -1,0 +1,20 @@
+{
+  "case": "C2",
+  "checking_only": true,
+  "cost": null,
+  "cost_reason": "Not exposed",
+  "deadline_utc": "2026-10-05T17:02:20.009157+00:00",
+  "model_tokens": null,
+  "model_tokens_reason": "Not exposed",
+  "operational_seal": "development/approved-plan/reusable-assurance-c2-v1/replay/c2-final-v1-seal.json",
+  "operational_seal_sha256": "8f9e56c35e5a60f376356dc7abd242decbd788e1cb54d0e9f4ef23d8f1af9022",
+  "original_accepted_seal": "development/approved-plan/reusable-assurance-c2-v1/replay/c2-final-v1-seal.json",
+  "original_accepted_seal_sha256": "8f9e56c35e5a60f376356dc7abd242decbd788e1cb54d0e9f4ef23d8f1af9022",
+  "parent_accepted_seal_sha256": "8f9e56c35e5a60f376356dc7abd242decbd788e1cb54d0e9f4ef23d8f1af9022",
+  "per_invocation_seconds": 1800,
+  "proof_construction": false,
+  "schema": "c3-later-checking-context-v1",
+  "session_limit_seconds": 5400,
+  "source_root": "/private/tmp/bp-review-consumer-o803245s/source",
+  "start_utc": "2026-10-05T15:32:20.009157+00:00"
+}

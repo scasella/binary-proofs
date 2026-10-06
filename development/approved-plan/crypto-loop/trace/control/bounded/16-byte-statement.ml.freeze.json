@@ -1,0 +1,5 @@
+{
+  "statement_file": "development/approved-plan/crypto-loop/trace/control/bounded/16-byte-statement.ml",
+  "sha256": "04b78397438845aeb3015b63f59576182a6bb4dc6534b56d43ff4042683f25b7",
+  "stage": "frozen before proof search"
+}

@@ -1,0 +1,19 @@
+let E5_QUALIFIED_STEP_OUTSIDE_FLAGS = prove
+ (e5_qualified_step_outside_flags_statement,
+  REPEAT GEN_TAC THEN REWRITE_TAC[x86;abi_all_decodes_caller_scalar;seq;assign] THEN
+  REPEAT STRIP_TAC THEN
+  REPEAT(FIRST_X_ASSUM(E5_SUBST_VAR_THM)) THEN
+  SUBGOAL_THEN `abi_caller_scalar_instruction instr` ASSUME_TAC THENL
+   [ASM_MESON_TAC[];ALL_TAC] THEN
+  MP_TAC(ISPECL [`instr:instruction`;`write RIP (word_add (read RIP s) (word len)) s`;
+   `t:x86state`;`k:num`] E5_SCALAR_OPERATION_OUTSIDE_FLAGS) THEN
+  ASM_REWRITE_TAC[] THEN
+  CONV_TAC(TOP_DEPTH_CONV COMPONENT_READ_OVER_WRITE_CONV) THEN ASM_REWRITE_TAC[]);;
+let E5_QUALIFIED_STEP_NORMAL = prove
+ (e5_qualified_step_normal_statement,
+  REWRITE_TAC[e5_normal_flags] THEN
+  REPEAT STRIP_TAC THEN
+  MP_TAC(ISPECL [`s:x86state`;`t:x86state`;`16`] E5_QUALIFIED_STEP_OUTSIDE_FLAGS) THEN
+  MP_TAC(ISPECL [`s:x86state`;`t:x86state`;`8`] E5_QUALIFIED_STEP_OUTSIDE_FLAGS) THEN
+  ASM_REWRITE_TAC[MEM] THEN CONV_TAC NUM_REDUCE_CONV THEN MESON_TAC[]);;
+print_endline "E5_SCALAR_ALL_SUCCESSOR_RF_TF_INVARIANT_KERNEL_PASS";;

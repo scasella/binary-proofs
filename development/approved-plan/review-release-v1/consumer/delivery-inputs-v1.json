@@ -1,0 +1,15 @@
+{
+  "schema": "review-release-consumer-delivery-inputs-v1",
+  "utc": "2026-10-05T15:14:48.298425+00:00",
+  "consumer_base": "/private/tmp/bp-review-consumer-o803245s",
+  "archive": "/private/tmp/bp-review-consumer-o803245s/checking-sources-v1.tar.gz",
+  "archive_sha256": "7434fae0f89c9b3a0c58f455a3bd33826502213befea5be5f58bcb5355073e2a",
+  "manifest_sha256": "bb91c404411554fc48a1c34fe1107278067ffbf76cdc759b20c833bffd85a1fd",
+  "bootstrap_sha256": "2359a3fbbbe585c937100df11e1ddc2f8536ca2102bbd1090436807872ae773a",
+  "image_sidecar_read_only_source": "/Users/scasella/Downloads/binary-proofs/.forks/reusable-binary-assurance/development/approved-plan/review-release-v1/delivery/docker-images-v1.tar",
+  "image_sidecar_sha256": "6c01c3490963fe4d7b530195aaadcc2161636047e1d4899837e4aa18258e0eb4",
+  "image_sidecar_bytes": 1994384384,
+  "setup_seconds": 2.06633500001044,
+  "original_development_sources_read": false,
+  "only_delivered_inputs_consumed": true
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "observed-consumer-documentary-source-validation-v1",
+  "utc": "2026-10-05T16:17:43.335376+00:00",
+  "status": "DOCUMENTARY_RECEIPT_CORRESPONDENCE_CHECKED_NOT_NEW_MATHEMATICAL_REPLAY",
+  "human_review": "PENDING",
+  "results_sha256": "0df1856a1395d89905c50c3df9bd27e2fa5b185fa0ef31da5bf713639c9c909b",
+  "mounts_sha256": "324448022cf82c7495dde4ff8ab429483739f48cdf3234cde4d83198e95993a1",
+  "complete_gates": [
+    {
+      "case": "C1",
+      "path": "development/approved-plan/review-release-v1/consumer/cases/C1/complete-gate.json",
+      "sha256": "cc7438e633c8defe117f8025f5ebaba53fce1efe276e31a0668631c45ce8ace4",
+      "full_acceptance": true,
+      "controls": true,
+      "binding_probe": true,
+      "positive_elapsed_seconds": 476.7004916250007
+    },
+    {
+      "case": "C2",
+      "path": "development/approved-plan/review-release-v1/consumer/cases/C2/complete-gate.json",
+      "sha256": "2fa77ea1d8b94cbccf80acffa1a6766809b4da5d9e8cc715b6e26b170b3d0502",
+      "full_acceptance": true,
+      "controls": true,
+      "binding_probe": true,
+      "positive_elapsed_seconds": 540.0364214170113
+    },
+    {
+      "case": "C3",
+      "path": "development/approved-plan/review-release-v1/consumer/cases/C3/complete-gate.json",
+      "sha256": "111416ed28985c9abc5fb810f72bcfa49a658e72d2ae73b2e99d6f84434ac323",
+      "full_acceptance": true,
+      "controls": true,
+      "binding_probe": true,
+      "positive_elapsed_seconds": 562.564644500002
+    }
+  ],
+  "late_original_guard_rejection_observed": true,
+  "source_filesystem_relocated": true,
+  "same_host_and_docker_service": true,
+  "independent_human_or_external_org_validation": false,
+  "original_drafts_or_release_index_or_seals_edited": false
+}

@@ -1,0 +1,131 @@
+{
+  "scope": "qualification registry, not ISA semantics or reachability",
+  "sites": [
+    {
+      "offset": 0,
+      "length": 4,
+      "instruction": "ENDBR64"
+    },
+    {
+      "offset": 4,
+      "length": 3,
+      "instruction": "XOR (% rax) (% rax)"
+    },
+    {
+      "offset": 7,
+      "length": 4,
+      "instruction": "CMP (% rsi) (Imm8 (word 15))"
+    },
+    {
+      "offset": 11,
+      "length": 2,
+      "instruction": "JUMP Condition_NB (Imm8 (word 35))"
+    },
+    {
+      "offset": 13,
+      "length": 4,
+      "instruction": "CMP (% rsi) (Imm8 (word 0))"
+    },
+    {
+      "offset": 17,
+      "length": 2,
+      "instruction": "JUMP Condition_Z (Imm8 (word 12))"
+    },
+    {
+      "offset": 19,
+      "length": 2,
+      "instruction": "MOV (Memop Byte (%% (rdi,0))) (% al)"
+    },
+    {
+      "offset": 21,
+      "length": 4,
+      "instruction": "SUB (% rsi) (Imm8 (word 1))"
+    },
+    {
+      "offset": 25,
+      "length": 4,
+      "instruction": "LEA (% rdi) (%% (rdi,1))"
+    },
+    {
+      "offset": 29,
+      "length": 2,
+      "instruction": "JUMP Condition_NZ (Imm8 (word 244))"
+    },
+    {
+      "offset": 31,
+      "length": 2,
+      "instruction": "RET"
+    },
+    {
+      "offset": 48,
+      "length": 7,
+      "instruction": "TEST (% rdi) (Imm32 (word 7))"
+    },
+    {
+      "offset": 55,
+      "length": 2,
+      "instruction": "JUMP Condition_Z (Imm8 (word 12))"
+    },
+    {
+      "offset": 57,
+      "length": 2,
+      "instruction": "MOV (Memop Byte (%% (rdi,0))) (% al)"
+    },
+    {
+      "offset": 59,
+      "length": 4,
+      "instruction": "LEA (% rsi) (%% (rsi,18446744073709551615))"
+    },
+    {
+      "offset": 63,
+      "length": 4,
+      "instruction": "LEA (% rdi) (%% (rdi,1))"
+    },
+    {
+      "offset": 67,
+      "length": 2,
+      "instruction": "JUMP Unconditional (Imm8 (word 235))"
+    },
+    {
+      "offset": 69,
+      "length": 3,
+      "instruction": "MOV (Memop Quadword (%% (rdi,0))) (% rax)"
+    },
+    {
+      "offset": 72,
+      "length": 4,
+      "instruction": "LEA (% rsi) (%% (rsi,18446744073709551608))"
+    },
+    {
+      "offset": 76,
+      "length": 7,
+      "instruction": "TEST (% rsi) (Imm32 (word 4294967288))"
+    },
+    {
+      "offset": 83,
+      "length": 4,
+      "instruction": "LEA (% rdi) (%% (rdi,8))"
+    },
+    {
+      "offset": 87,
+      "length": 2,
+      "instruction": "JUMP Condition_NZ (Imm8 (word 236))"
+    },
+    {
+      "offset": 89,
+      "length": 4,
+      "instruction": "CMP (% rsi) (Imm8 (word 0))"
+    },
+    {
+      "offset": 93,
+      "length": 2,
+      "instruction": "JUMP Condition_NZ (Imm8 (word 180))"
+    },
+    {
+      "offset": 95,
+      "length": 2,
+      "instruction": "RET"
+    }
+  ],
+  "frozen_decoder_source_sha256": "13ff9d63ba457de790bc41b57d45270da8f937859aa5c5cfb021ef4037f6d584"
+}

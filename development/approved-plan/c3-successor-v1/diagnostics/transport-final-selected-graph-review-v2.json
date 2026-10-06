@@ -1,0 +1,1912 @@
+{
+  "schema": "c3-successor-transport-final-sealed-graph-review-v2",
+  "record_utc": "2026-10-05T13:55:16.973207+00:00",
+  "reviewer": "/root/c3_successor_transport",
+  "status": "READ_ONLY_STATIC_SEALED_GRAPH_AND_SOURCE_USAGE_REVIEW",
+  "classification": "INSPECTION_QUALIFIED_UNCHANGED_LAYER_WITH_PERMITTED_FIXED_C3_PROOFS",
+  "predecessor_review": {
+    "path": "development/approved-plan/c3-successor-v1/diagnostics/transport-final-selected-graph-review-v1.json",
+    "sha256": "318a509c8d275565c88fb29435642d9b4597e9f84c55ba292d81cb7e44107d72",
+    "unchanged_preserved": true
+  },
+  "references": [
+    {
+      "path": "development/approved-plan/c3-successor-v1/diagnostics/transport-final-selected-graph-review-v1.json",
+      "sha256": "318a509c8d275565c88fb29435642d9b4597e9f84c55ba292d81cb7e44107d72"
+    },
+    {
+      "path": "development/approved-plan/c3-successor-v1/diagnostics/transport-offset73-policy-boundary-v1.json",
+      "sha256": "08c076b51c854c80b3e35a9ff3e4058900a0a7acc7706861f773680c10c8d5db"
+    },
+    {
+      "path": "development/approved-plan/c3-successor-v1/diagnostics/transport-offset73-source-review-v1.json",
+      "sha256": "ef3302abd9ce3b3f5a8a83fc1342ab1a191712cb2873d821e8b3cf81fdc01c19"
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/c3/review/construction-inspection-v1.json",
+      "sha256": "c31f2a3d65eb101281c12ff87b6b393949e052f88fa88ce3f6a561fcc51140a7"
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/human-review/C3-REVIEW-v1.md",
+      "sha256": "6a4cd97c62ca0aded3f137c8989199dd5b62229c0d34f80961136401cfbd0858"
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/human-review/REVIEW-v1.md",
+      "sha256": "50aee7dc600af7703eeecc7518f3b19a3ae8bc7080d613b222491c69e793f052"
+    },
+    {
+      "path": "development/approved-plan/held-out-transfer-v1/layer/CLASS-AND-EXTENSION-POINTS-v1.md",
+      "sha256": "8135a4d01dd9786ca222b59a728e7122c2bd98939ba52bf81bf0b0795c2877ff"
+    }
+  ],
+  "sealed_graph": {
+    "seal": {
+      "path": "development/approved-plan/c3-successor-v1/replay/c3-successor-final-v1-seal.json",
+      "sha256": "903c92086ade0594eda090832ee769e3415c741dfc20573a4c94fef1c6612f46",
+      "matches_parent": true
+    },
+    "method": "Read/hash/AST-extracted unchanged tokens+definition_literals functions only; no source checker entrypoint, ML loader or proof checker executed.",
+    "lexer": {
+      "path": "development/approved-plan/reusable-assurance-c1-successor-v1/replay/source-check-v1.py",
+      "sha256": "4ce2c3fd384ad3d3100dd8a8a9d9050461091b2abc119edf3cba16ca44b7faf2",
+      "matches_original_pin": true
+    },
+    "node_count": 83,
+    "declared_node_count": 83,
+    "rows": [
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/cleanup-chain-v1.ml",
+        "sha256": "1826623bae451f60c4dbac1c3dbcaaaab497fdd0ec2b98ab3d0a5d094a558bfa",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/cleanup-complete-v2.ml",
+        "sha256": "24c220ba7cbc623ec08897572e026243efde471c830019c8111f86dcb7a830cd",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/cleanup-local-v1.ml",
+        "sha256": "e7ee20c5d9c11c817da73a37574e298aa080a586a3611d4686f33db20a3132b7",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/final-caller-lifts-v1.ml",
+        "sha256": "03220c4e0aef33d6cdec69ce505f9d93fd9a8f8059593fadd90d5f5f4274f003",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/final-count-qualified-v1.ml",
+        "sha256": "665f204cc57b7e53e570dba6df9714848b47c9beb3af53a67a87a32841b4519f",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/final-mov2-site-v2.ml",
+        "sha256": "0f71a53f0afcd049a1b894ec907a42315e97a57b06ceb054514becdc5838954d",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/final-return-frame-included-v2.ml",
+        "sha256": "0b026da37c1a1a4b31c1195c164e2f64d27ee1caaa5a788e126874eeb7ec3d33",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-frame-v5.ml",
+        "sha256": "8837f29fa661f410ce8ce2582c1e78f1f459d85b35cfec3ffd9f6bb32a43a428",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-offsets-v3.ml",
+        "sha256": "914ea0d5f1fcc988932aed89623e4d40fe776251167105602d41e99f44c2d13d",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+        "sha256": "74c891c05a358af4bdcbcbf14673b73d2e96816eebe69e16c8e46684927e5072",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-v5.ml",
+        "sha256": "3411677231771b1eabc9ee30b38adf7a505d796c80f4cbfaa3ef055da0af9741",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/second-complete-v1.ml",
+        "sha256": "c8715e45f09b5816b2c8ee6a461d33a88a893bca9be148c6f1cea8311dbe2c51",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/second-endpoint-v3.ml",
+        "sha256": "b06f656478070b5df089a7ae4681a232546ffadc5a97af2d992fa63c585ea082",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/second-frame-v1.ml",
+        "sha256": "a18a1a14a33f213a0e127e9ed46a7aa9b9be85a43f35ad2047c6637f299e5672",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/second-local-v1.ml",
+        "sha256": "e295d74276054db371789f6fa466e7598f27d4042ee5d1a11cf3d252e343e926",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/second-public-v2.ml",
+        "sha256": "0eda816a5f4e22c6f90c79519ac51afb65c679dc8c7a07abbb6088876ea5a025",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/second-return-v2.ml",
+        "sha256": "13e9bc0d6bf5bd92d8d6177c554e8936d33fd625164d21245407574d4872fb85",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/transport-byte-geometry-v2.ml",
+        "sha256": "0eb8961ac15c2a9ad8528ca138cd6393cf5b9e00aeb2cdfa2dfcf82af42be725",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/transport-incoming-ra-v1.ml",
+        "sha256": "ae54a468ab4f783702fdcc8f708fe6a80cfed58dbc308e5d74e11fde0decfada",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/transport-saved-bindings-v2.ml",
+        "sha256": "4451822d75ef90a2e4f8c1dae4538a2d4f76496f30845e39139b4f846cb220ad",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/whole-final-v2.ml",
+        "sha256": "47849ee3ce32d641190227b8e172252f9835eb18c71b9a68826a4a95a9b12f4e",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/whole-prefix-chain-v3.ml",
+        "sha256": "9f6e92d9add39c6893e299f23a8b4544fcfdd45e24cda13dedb0008db329f46a",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/whole-prefix-first-helper-v2.ml",
+        "sha256": "0df6be30de9db83e71444a708288d118a241adcc2739bb6f6ef0b373efc43abe",
+        "seal_row_matches": true,
+        "category": "successor_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/replay/c3-loader-successor-final-v1.ml",
+        "sha256": "cd9cc0c18cd6a260444bba365ca08e19cac6afdd542c80ef4c052b1353de0fdb",
+        "seal_row_matches": true,
+        "category": "successor_loader",
+        "permitted_import_domain": true,
+        "imports": [
+          "development/approved-plan/held-out-transfer-v1/layer/load-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/contract/definitions-v2.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/contract/statements-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/contract/witness-definitions-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/contract/witness-statements-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/entry-support-v3.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/normalizer-data-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/first-handoff-definitions-v2.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-frame-inclusion-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-library-scratch-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-image-memory-v2.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-region-v2.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-terminal-geometry-v2.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/first-handoff-proof-attempt2.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/snapshot-facts-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/first-return-facts-v2.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/first-return-sp-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/first-comparison-result-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/first-return-saved-prefix-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-frame-v2.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-total-frame-inclusion-v1.ml",
+          "development/approved-plan/c3-successor-v1/proofs/cleanup-local-v1.ml",
+          "development/approved-plan/c3-successor-v1/proofs/cleanup-complete-v2.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/application-v3.ml",
+          "development/approved-plan/c3-successor-v1/proofs/cleanup-chain-v1.ml",
+          "development/approved-plan/c3-successor-v1/proofs/transport-incoming-ra-v1.ml",
+          "development/approved-plan/c3-successor-v1/proofs/transport-byte-geometry-v2.ml",
+          "development/approved-plan/c3-successor-v1/proofs/transport-saved-bindings-v2.ml",
+          "development/approved-plan/c3-successor-v1/proofs/second-frame-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-current-inputs-v6.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-return-working-state-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-library-image-v1.ml",
+          "development/approved-plan/c3-successor-v1/proofs/second-local-v1.ml",
+          "development/approved-plan/c3-successor-v1/proofs/second-endpoint-v3.ml",
+          "development/approved-plan/c3-successor-v1/proofs/second-public-v2.ml",
+          "development/approved-plan/c3-successor-v1/proofs/second-complete-v1.ml",
+          "development/approved-plan/c3-successor-v1/proofs/second-return-v2.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-application-v2.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/second-crypto-application-v3.ml",
+          "development/approved-plan/c3-successor-v1/proofs/whole-prefix-first-helper-v2.ml",
+          "development/approved-plan/c3-successor-v1/proofs/whole-prefix-chain-v3.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/proofs/final-policy-bridge-v1.ml",
+          "development/approved-plan/c3-successor-v1/proofs/final-return-site-frame-v5.ml",
+          "development/approved-plan/c3-successor-v1/proofs/final-return-frame-included-v2.ml",
+          "development/approved-plan/c3-successor-v1/proofs/final-return-site-v5.ml",
+          "development/approved-plan/c3-successor-v1/proofs/final-return-site-offsets-v3.ml",
+          "development/approved-plan/c3-successor-v1/proofs/final-mov2-site-v2.ml",
+          "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "development/approved-plan/c3-successor-v1/proofs/final-count-qualified-v1.ml",
+          "development/approved-plan/c3-successor-v1/proofs/whole-final-v2.ml",
+          "development/approved-plan/c3-successor-v1/proofs/final-caller-lifts-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-state-v3.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-memory-v5.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-layout-prefix-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-buffer-values-v2.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-permissions-v2.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-code-points-v2.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-loaded-code-v2.ml",
+          "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-targets-v3.ml"
+        ],
+        "import_mount_paths": [
+          "/work/development/approved-plan/held-out-transfer-v1/layer/load-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/contract/definitions-v2.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/contract/statements-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/contract/witness-definitions-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/contract/witness-statements-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/entry-support-v3.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/normalizer-data-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/first-handoff-definitions-v2.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-frame-inclusion-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-library-scratch-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-image-memory-v2.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-region-v2.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-terminal-geometry-v2.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/first-handoff-proof-attempt2.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/snapshot-facts-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/first-return-facts-v2.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/first-return-sp-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/first-comparison-result-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/first-return-saved-prefix-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-frame-v2.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-total-frame-inclusion-v1.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/cleanup-local-v1.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/cleanup-complete-v2.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/application-v3.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/cleanup-chain-v1.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/transport-incoming-ra-v1.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/transport-byte-geometry-v2.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/transport-saved-bindings-v2.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/second-frame-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-current-inputs-v6.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-return-working-state-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-library-image-v1.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/second-local-v1.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/second-endpoint-v3.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/second-public-v2.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/second-complete-v1.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/second-return-v2.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-application-v2.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/second-crypto-application-v3.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/whole-prefix-first-helper-v2.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/whole-prefix-chain-v3.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/proofs/final-policy-bridge-v1.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/final-return-site-frame-v5.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/final-return-frame-included-v2.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/final-return-site-v5.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/final-return-site-offsets-v3.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/final-mov2-site-v2.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/final-count-qualified-v1.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/whole-final-v2.ml",
+          "/work/development/approved-plan/c3-successor-v1/proofs/final-caller-lifts-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-state-v3.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-memory-v5.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-layout-prefix-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-buffer-values-v2.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-permissions-v2.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-code-points-v2.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-loaded-code-v2.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-targets-v3.ml"
+        ],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/clients-e3/public-inputs-v1/code-length-exports-v1.ml",
+        "sha256": "10f3ee2d04845ea5e98f245cc4c84cee075363a9cf80112667ec970262da387b",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/clients-e3/public-inputs-v1/generic-checked-step-v1.ml",
+        "sha256": "a8acaf219b8fed490e31833fb5a960e36796bc75b37002cd467dcd7fb7357454",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/clients-e3/secret-v1/generic-four-frame-proof-attempt1.ml",
+        "sha256": "45aaac107dc9658bd7289b724f0f1e219c0228a77058ea75bbdfef106d103bec",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/clients-e3/secret-v1/generic-four-frame-statements-v1.ml",
+        "sha256": "db1427c8264dbc34f051ce1b14deb73a8b131859122f29dcc134f03d10926cf4",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/clients-e3/secret-v1/generic-span-proof-attempt3.ml",
+        "sha256": "c9c0f7757d2833da800199a7a5967c928106a803e49fe7b2f5e8ac3094b3ea44",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/clients-e3/secret-v1/generic-span-statements-v1.ml",
+        "sha256": "357610d80a55384da575f47b328bb49190db4630a2c001198ee471747967bb6f",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/contract/definitions-v2.ml",
+        "sha256": "779ca953ac63182a5ff38ec22928a12df8b8c3ef6098b96d421eb2cc6aefd2bf",
+        "seal_row_matches": true,
+        "category": "original_contract",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/contract/statements-v1.ml",
+        "sha256": "0117a8a5076e8ef80999cfd4c7712eaec768e3d7b0e89124efbc45ba73e3a7d7",
+        "seal_row_matches": true,
+        "category": "original_contract",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/contract/witness-definitions-v1.ml",
+        "sha256": "bb4c9745c62fe0ff6b5fcbdfe4ff5e01d5286594fe2e04fdaed11c3254e710bf",
+        "seal_row_matches": true,
+        "category": "original_contract",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/contract/witness-statements-v1.ml",
+        "sha256": "bd83937bcd17da06df21ee8de4d431c241203586737ca96e5e5d17775b3b039a",
+        "seal_row_matches": true,
+        "category": "original_contract",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/application-v3.ml",
+        "sha256": "844d5325f2b157963ab459da9c78dd8449b4f556e29ef153c5789f1d26935748",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-application-v2.ml",
+        "sha256": "4bde961c40423b2c6b6933402574096da25267486411a15c51bbf08792aebda4",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-current-inputs-v6.ml",
+        "sha256": "0bf72a806709e1cc024c8070a43596ab713fcbd247d7e6cf4ee81e2d87fb2ffc",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-library-image-v1.ml",
+        "sha256": "7c5cb5771a25c26570b9ede3d9e921873f4245284f57813a31078af3ade51aae",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-return-working-state-v1.ml",
+        "sha256": "d25dda2405950965a62a57ce0effd3d45f27ca4bb625c4a15e273792498dfd5c",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-frame-v2.ml",
+        "sha256": "817ffda272486ad3c06ff8a6383242ebb3f89fb9f199831056be25b3b18324e7",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanup-total-frame-inclusion-v1.ml",
+        "sha256": "404481c10cf93fabf4c4e6ed30ff99639997cefa1f02c4da8a4064a01ff14521",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/entry-support-v3.ml",
+        "sha256": "8cc36f26bd7e08c1c1ea22cbf72fc26ed4ce5483589572c130d5b2f566b445a4",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/final-policy-bridge-v1.ml",
+        "sha256": "fde8bdc024eaf42e42f38753fce8c9874a1d9356639d756d3e3657ad796c77b6",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-comparison-result-v1.ml",
+        "sha256": "7e8a124b0447f4db15bacc9fb3b04fb048b624ef5cd1d687cd9c71434a2f5f76",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-handoff-definitions-v2.ml",
+        "sha256": "75dc40e9da23fdbc6f22edf8788301fca50aad62b2510d8c83531a9fee8b58c1",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-handoff-proof-attempt2.ml",
+        "sha256": "0ba5c5f33fe11b7aff7542c2da7b06497752802fe3acb39bd893bcbc77b9f30a",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-return-facts-v2.ml",
+        "sha256": "d25f5d1d526a634941ba081269f9b649dfadf3950b004dbe9ce9a88ce3fada0d",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-return-saved-prefix-v1.ml",
+        "sha256": "f9782f8606739164845d79cfe8e9241821d9b4e6bb40ec4ee0c572120c08a11a",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-return-sp-v1.ml",
+        "sha256": "c32621b84d753a831269d7a2c364d108ed797d3f90cc37c8f6df5ae804206baf",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/normalizer-data-v1.ml",
+        "sha256": "2fbc951a1dde04d6e980303c61779445ea5fb086c28d1900a1664df12ada334b",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-frame-inclusion-v1.ml",
+        "sha256": "b3003d25c0e488e3ba34476933273aca7ae00d6110f967e0175fd9bb379475d8",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-image-memory-v2.ml",
+        "sha256": "cad14f72f505635f6e54bc2cccd357cec1a902d822a5f4e46f9fac62c6ad943b",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-library-scratch-v1.ml",
+        "sha256": "657039bd6874c1e252203050b99eb259cc7c8bf24d0d98ab65b8f2f8520bf6bf",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-region-v2.ml",
+        "sha256": "c9a9432e872246e75be6a0cbccc06aac2907577415e670a33d05940afa116d20",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/prefix-terminal-geometry-v2.ml",
+        "sha256": "00eba85b15ebe82a58d56e6f98c216f93256948569b92e496f26d9318ac87070",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/second-crypto-application-v3.ml",
+        "sha256": "c0861a5cfcdfaa0f8dee57cbfeaa6cee6939731d0471ce3778e2f83570d3aba4",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/snapshot-facts-v1.ml",
+        "sha256": "0c0499382729bbb6d73cb8011d9779d8286466c1370c3780a00379a4542c976c",
+        "seal_row_matches": true,
+        "category": "original_caller_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-buffer-values-v2.ml",
+        "sha256": "6a71a784a13561ca9e6566bff39123b9ca2c88b0dea0f71dd4a62d985ca74714",
+        "seal_row_matches": true,
+        "category": "original_witness_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-code-points-v2.ml",
+        "sha256": "836c5ddcb0236d1523d3a5b94be4ae872d1685777fe60ec5dde1df64976af043",
+        "seal_row_matches": true,
+        "category": "original_witness_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-layout-prefix-v1.ml",
+        "sha256": "d9288f383e7ad4745681af9450f19dec480f5b72de8b62c8dc0cb2567de35c81",
+        "seal_row_matches": true,
+        "category": "original_witness_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-loaded-code-v2.ml",
+        "sha256": "1a7ff1c4434f0035354060b4f590dc196d061148b44e58c8f4eee3c5f335db48",
+        "seal_row_matches": true,
+        "category": "original_witness_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-memory-v5.ml",
+        "sha256": "cac24dfd15d70d282b0755edc38de4cf1ae7d2334684691094fb3a301a2c0a03",
+        "seal_row_matches": true,
+        "category": "original_witness_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-permissions-v2.ml",
+        "sha256": "9dbd9c5da9d50c33da08f03487c9bf54147b2de5c402dbd7e2ac57770b1a0218",
+        "seal_row_matches": true,
+        "category": "original_witness_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-state-v3.ml",
+        "sha256": "b8e93249ae01eddc8138139484337f5c8d0ab1e0387f73cdacab2d7f6ab5527c",
+        "seal_row_matches": true,
+        "category": "original_witness_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-targets-v3.ml",
+        "sha256": "c0ca8f4416949817228b50de2b715a614694a72fc378b6661ff06c91b0679c1c",
+        "seal_row_matches": true,
+        "category": "original_witness_proof",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": null,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/layer/automation-v1.ml",
+        "sha256": "2c4fc635a837d7b418283c0d8db0bdb9a49e4774e31a7f2a034a897d3f08d529",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/layer/export-audit-v1.ml",
+        "sha256": "3b04eed1067a40d15f7fb858f094259bf8d135d8ccd76c0852f3bfb280bf33c4",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/layer/load-v1.ml",
+        "sha256": "1b0f61c16c93913e995eb23e941919dab8da0798386b55df615d6f1916945672",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [
+          "development/approved-plan/reusable-assurance-v1/generic/load-v3.ml",
+          "development/approved-plan/reusable-assurance-v1/generic/load-span-frame-v1.ml",
+          "development/approved-plan/clients-e3/public-inputs-v1/code-length-exports-v1.ml",
+          "development/approved-plan/clients-e3/public-inputs-v1/generic-checked-step-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/layer/statements-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/layer/proofs-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/layer/automation-v1.ml",
+          "development/approved-plan/held-out-transfer-v1/layer/export-audit-v1.ml"
+        ],
+        "import_mount_paths": [
+          "/reuse/generic/load-v3.ml",
+          "/reuse/generic/load-span-frame-v1.ml",
+          "/client-public/code-length-exports-v1.ml",
+          "/client-public/generic-checked-step-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/layer/statements-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/layer/proofs-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/layer/automation-v1.ml",
+          "/work/development/approved-plan/held-out-transfer-v1/layer/export-audit-v1.ml"
+        ],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/layer/proofs-v1.ml",
+        "sha256": "e51edc7731603d5a755dfc381ae169b68e1805f17b69a16a54d097da8b63834e",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/held-out-transfer-v1/layer/statements-v1.ml",
+        "sha256": "381095176f1140ce243a34665268a3cec1a78b3b43aba3587b01a4fa0848835b",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/reusable-assurance-v1/generic/audit-v1.ml",
+        "sha256": "bfb60ebbfeed9c06f5642a8e2395cadc4b15539a8fc849705166f4f58015ac83",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/reusable-assurance-v1/generic/checked-run-proof-v1.ml",
+        "sha256": "ec7ca2dc38e946474486f235c086fb409e7c29c7acdcb5ce1cf3e7f96ddf81ab",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/reusable-assurance-v1/generic/checked-run-statements-v1.ml",
+        "sha256": "5c7f95bc3271f463cfba297ce9f138c53547c1317675e523804ed9a88cb240b6",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/reusable-assurance-v1/generic/composition-proof-attempt2.ml",
+        "sha256": "341531d93058cd6eaf6047a5996eb16567c22c1e0acca241765a62e13c59cded",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/reusable-assurance-v1/generic/composition-statements-v2.ml",
+        "sha256": "dec1df06c234c205f57cbd8c9e3443b4feb8b67aba7c177609bf3ccb7f2bb9b8",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/reusable-assurance-v1/generic/e5-definitions-v1.ml",
+        "sha256": "055800d68b9d8db8a10cc19934a47d0d555156414ebb2125275ba2959fc8273c",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/reusable-assurance-v1/generic/e5-normal-run-v1.ml",
+        "sha256": "a2bf776a58c4ece6fd6f0e94faf865a2b0cb220e5b6ac627bd2ce83b696017f3",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/reusable-assurance-v1/generic/e5-qualified-step-v1.ml",
+        "sha256": "750c7efa12ca66ea6ac2ec20bdb62549e1075594f06b493c7cacb5fb38bb198b",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/reusable-assurance-v1/generic/e5-rf-elementary-v1.ml",
+        "sha256": "d49cce4327feedbfb771b48e353e4f9d34ab0b30e080dada0f8c33aaadc265d7",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/reusable-assurance-v1/generic/e5-scalar-flags-v1.ml",
+        "sha256": "e8af6e0a95456db45aa7064b545650546fb156d6a89c16de68b7f28c8a02eb34",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/reusable-assurance-v1/generic/e5-statements-v1.ml",
+        "sha256": "a0f6b924a4a97a2c8d6cc239ca56bfeed0113b5bade39acc48279c7f4be638b4",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [],
+        "import_mount_paths": [],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/reusable-assurance-v1/generic/load-span-frame-v1.ml",
+        "sha256": "c98aa6bac23be534a5df2abb52461d912e66f958311c06cf38bcda0c21dda018",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [
+          "development/approved-plan/clients-e3/secret-v1/generic-span-statements-v1.ml",
+          "development/approved-plan/clients-e3/secret-v1/generic-span-proof-attempt3.ml",
+          "development/approved-plan/clients-e3/secret-v1/generic-four-frame-statements-v1.ml",
+          "development/approved-plan/clients-e3/secret-v1/generic-four-frame-proof-attempt1.ml"
+        ],
+        "import_mount_paths": [
+          "/work/development/approved-plan/clients-e3/secret-v1/generic-span-statements-v1.ml",
+          "/work/development/approved-plan/clients-e3/secret-v1/generic-span-proof-attempt3.ml",
+          "/work/development/approved-plan/clients-e3/secret-v1/generic-four-frame-statements-v1.ml",
+          "/work/development/approved-plan/clients-e3/secret-v1/generic-four-frame-proof-attempt1.ml"
+        ],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      },
+      {
+        "path": "development/approved-plan/reusable-assurance-v1/generic/load-v3.ml",
+        "sha256": "7e17db61529908ca42fc9afd3c5eb7e07432133769e15be24ee56394f6ac3874",
+        "seal_row_matches": true,
+        "category": "pinned_generic",
+        "permitted_import_domain": true,
+        "imports": [
+          "development/approved-plan/reusable-assurance-v1/generic/checked-run-statements-v1.ml",
+          "development/approved-plan/reusable-assurance-v1/generic/checked-run-proof-v1.ml",
+          "development/approved-plan/reusable-assurance-v1/generic/e5-definitions-v1.ml",
+          "development/approved-plan/reusable-assurance-v1/generic/e5-statements-v1.ml",
+          "development/approved-plan/reusable-assurance-v1/generic/e5-rf-elementary-v1.ml",
+          "development/approved-plan/reusable-assurance-v1/generic/e5-scalar-flags-v1.ml",
+          "development/approved-plan/reusable-assurance-v1/generic/e5-qualified-step-v1.ml",
+          "development/approved-plan/reusable-assurance-v1/generic/e5-normal-run-v1.ml",
+          "development/approved-plan/reusable-assurance-v1/generic/composition-statements-v2.ml",
+          "development/approved-plan/reusable-assurance-v1/generic/composition-proof-attempt2.ml",
+          "development/approved-plan/reusable-assurance-v1/generic/audit-v1.ml"
+        ],
+        "import_mount_paths": [
+          "/reuse/generic/checked-run-statements-v1.ml",
+          "/reuse/generic/checked-run-proof-v1.ml",
+          "/reuse/generic/e5-definitions-v1.ml",
+          "/reuse/generic/e5-statements-v1.ml",
+          "/reuse/generic/e5-rf-elementary-v1.ml",
+          "/reuse/generic/e5-scalar-flags-v1.ml",
+          "/reuse/generic/e5-qualified-step-v1.ml",
+          "/reuse/generic/e5-normal-run-v1.ml",
+          "/reuse/generic/composition-statements-v2.ml",
+          "/reuse/generic/composition-proof-attempt2.ml",
+          "/reuse/generic/audit-v1.ml"
+        ],
+        "all_dependencies_in_seal": true,
+        "pinned_generic_matches": true,
+        "resolved_within_root": true,
+        "symlink_component": false,
+        "lexer_bypass_hits": []
+      }
+    ],
+    "counts": {
+      "successor_caller_proof": 23,
+      "successor_loader": 1,
+      "pinned_generic": 24,
+      "original_contract": 4,
+      "original_caller_proof": 23,
+      "original_witness_proof": 8
+    },
+    "reachable_count": 83,
+    "unreachable_nodes": [],
+    "cycles": [],
+    "graph_exact": true,
+    "definition_comparison": {
+      "actual_count": 47,
+      "expected_count": 47,
+      "exact_map_match": true,
+      "duplicate_names": []
+    },
+    "combined_caller_scan": {
+      "supplier_array_mentions": [
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/cleanup-local-v1.ml",
+          "line": 77,
+          "match": "crypto_memcmp_mc",
+          "source_line": " UNDISCH_TAC `bytes_loaded(initial:x86state)(word 0x10241840)crypto_memcmp_mc` THEN DISCH_THEN(K ALL_TAC) THEN"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/cleanup-local-v1.ml",
+          "line": 78,
+          "match": "openssl_cleanse_mc",
+          "source_line": " UNDISCH_TAC `bytes_loaded(initial:x86state)(word 0x102417d0)openssl_cleanse_mc` THEN DISCH_THEN(K ALL_TAC) THEN"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/cleanup-local-v1.ml",
+          "line": 201,
+          "match": "crypto_memcmp_mc",
+          "source_line": "  ASSUME `bytes_loaded(u7:x86state)(word 0x10241840)crypto_memcmp_mc`;"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/cleanup-local-v1.ml",
+          "line": 202,
+          "match": "openssl_cleanse_mc",
+          "source_line": "  ASSUME `bytes_loaded(u7:x86state)(word 0x102417d0)openssl_cleanse_mc`;"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/second-local-v1.ml",
+          "line": 50,
+          "match": "crypto_memcmp_mc",
+          "source_line": " UNDISCH_TAC `bytes_loaded(initial:x86state)(word 0x10241840)crypto_memcmp_mc` THEN DISCH_THEN(K ALL_TAC) THEN"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/second-local-v1.ml",
+          "line": 51,
+          "match": "openssl_cleanse_mc",
+          "source_line": " UNDISCH_TAC `bytes_loaded(initial:x86state)(word 0x102417d0)openssl_cleanse_mc` THEN DISCH_THEN(K ALL_TAC) THEN"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-handoff-proof-attempt2.ml",
+          "line": 51,
+          "match": "crypto_memcmp_mc",
+          "source_line": "   ASSUME `bytes_loaded(s10:x86state)(word 0x10241840)crypto_memcmp_mc`;"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-handoff-proof-attempt2.ml",
+          "line": 52,
+          "match": "openssl_cleanse_mc",
+          "source_line": "   ASSUME `bytes_loaded(s10:x86state)(word 0x102417d0)openssl_cleanse_mc`;"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-code-points-v2.ml",
+          "line": 12,
+          "match": "crypto_memcmp_mc",
+          "source_line": "          (word_add (word 0x10241840) (word i))=EL i crypto_memcmp_mc) /\\"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-code-points-v2.ml",
+          "line": 14,
+          "match": "openssl_cleanse_mc",
+          "source_line": "          (word_add (word 0x102417d0) (word i))=EL i openssl_cleanse_mc)`,"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-loaded-code-v2.ml",
+          "line": 896,
+          "match": "crypto_memcmp_mc",
+          "source_line": "              c3_cleanse_plt_prefix; crypto_memcmp_mc; openssl_cleanse_mc;"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-loaded-code-v2.ml",
+          "line": 896,
+          "match": "openssl_cleanse_mc",
+          "source_line": "              c3_cleanse_plt_prefix; crypto_memcmp_mc; openssl_cleanse_mc;"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-loaded-code-v2.ml",
+          "line": 900,
+          "match": "crypto_memcmp_mc",
+          "source_line": "               crypto_memcmp_mc; openssl_cleanse_mc; EL; HD; TL] THEN"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/witness-proofs/membership-loaded-code-v2.ml",
+          "line": 900,
+          "match": "openssl_cleanse_mc",
+          "source_line": "               crypto_memcmp_mc; openssl_cleanse_mc; EL; HD; TL] THEN"
+        }
+      ],
+      "normalizer_arguments": [
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 23,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 26,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 29,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 32,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 35,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 38,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 41,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 44,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 47,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 50,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 53,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 56,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 60,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 63,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 100,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 103,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 106,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 109,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 112,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 115,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+          "line": 118,
+          "match": "HT_STATE_NORMALIZE_TAC[C3_FINAL_RETURN_OFFSET40;C3_FINAL_RETURN_OFFSET32;\n  C3_FINAL_RETURN_OFFSET24;C3_FINAL_RETURN_OFFSET16;C3_FINAL_RETURN_OFFSET8]"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/first-handoff-proof-attempt2.ml",
+          "line": 66,
+          "match": "HT_STATE_NORMALIZE_TAC []"
+        }
+      ],
+      "public_supplier_consumption": [
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/application-v3.ml",
+          "line": 16,
+          "match": "BP_E3_CRYPTO_PUBLIC_CALLER_POLICY"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-application-v2.ml",
+          "line": 23,
+          "match": "BP_E3_CLEANSE_PUBLIC_CALLER_POLICY"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/second-crypto-application-v3.ml",
+          "line": 21,
+          "match": "BP_E3_CRYPTO_PUBLIC_CALLER_POLICY"
+        }
+      ],
+      "execution_rule_generation": [
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/entry-support-v3.ml",
+          "line": 3,
+          "match": "X86_MK_EXEC_RULE"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/entry-support-v3.ml",
+          "line": 4,
+          "match": "X86_MK_EXEC_RULE"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/entry-support-v3.ml",
+          "line": 5,
+          "match": "X86_MK_EXEC_RULE"
+        }
+      ],
+      "generic_rebinding": [],
+      "new_term_search": [],
+      "unchecked_construction_or_global_change": []
+    },
+    "all_static_graph_checks_pass": true
+  },
+  "edge_count": 82,
+  "successor_local_review_coverage": {
+    "count": 23,
+    "all23_match_previous_review": true,
+    "rows": [
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/cleanup-chain-v1.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/cleanup-complete-v2.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/cleanup-local-v1.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/final-caller-lifts-v1.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/final-count-qualified-v1.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/final-mov2-site-v2.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/final-return-frame-included-v2.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-frame-v5.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-offsets-v3.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/final-return-site-v5.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/second-complete-v1.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/second-endpoint-v3.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/second-frame-v1.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/second-local-v1.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/second-public-v2.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/second-return-v2.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/transport-byte-geometry-v2.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/transport-incoming-ra-v1.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/transport-saved-bindings-v2.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/whole-final-v2.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/whole-prefix-chain-v3.ml",
+        "matches_previous_local_review": true
+      },
+      {
+        "path": "development/approved-plan/c3-successor-v1/proofs/whole-prefix-first-helper-v2.ml",
+        "matches_previous_local_review": true
+      }
+    ]
+  },
+  "normalizer_usage": {
+    "calls": 22,
+    "empty_fact_calls": 1,
+    "five_fixed_fact_calls": 21,
+    "unexpected_argument_lists": [],
+    "definition_source": "development/approved-plan/held-out-transfer-v1/layer/automation-v1.ml",
+    "definition_sha256": "2c4fc635a837d7b418283c0d8db0bdb9a49e4774e31a7f2a034a897d3f08d529",
+    "classification": "Unchanged frozen algorithm; [] or the five actual one-pointer stack identities only. Ordinary local MOV numeric reduction is outside this facts argument."
+  },
+  "combined_usage_classification": [
+    {
+      "surface": "Direct public supplier policy applications",
+      "observations": [
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/application-v3.ml",
+          "line": 16,
+          "match": "BP_E3_CRYPTO_PUBLIC_CALLER_POLICY"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/cleanse-application-v2.ml",
+          "line": 23,
+          "match": "BP_E3_CLEANSE_PUBLIC_CALLER_POLICY"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/second-crypto-application-v3.ml",
+          "line": 21,
+          "match": "BP_E3_CRYPTO_PUBLIC_CALLER_POLICY"
+        }
+      ],
+      "classification": "Only BP_E3_CRYPTO_PUBLIC_CALLER_POLICY (first and second comparison) and BP_E3_CLEANSE_PUBLIC_CALLER_POLICY (cleanup), at actual C3 call-entry memory and original public preconditions."
+    },
+    {
+      "surface": "Execution rule generation",
+      "observations": [
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/entry-support-v3.ml",
+          "line": 3,
+          "match": "X86_MK_EXEC_RULE"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/entry-support-v3.ml",
+          "line": 4,
+          "match": "X86_MK_EXEC_RULE"
+        },
+        {
+          "path": "development/approved-plan/held-out-transfer-v1/c3/proofs/entry-support-v3.ml",
+          "line": 5,
+          "match": "X86_MK_EXEC_RULE"
+        }
+      ],
+      "classification": "Exactly three constructors in immutable entry-support-v3: c3_caller_mc and the two C3 PLT prefix arrays. No supplier instruction-rule array construction or supplier body execution found."
+    },
+    {
+      "surface": "Supplier byte arrays",
+      "observation_count": 14,
+      "classification": "Current bytes_loaded bindings and concrete admissible-entry witness byte values only. Immutable witness loading rewrites public code-array definitions to establish entry membership; it supplies no supplier execution theorem."
+    },
+    {
+      "surface": "Former caller sources",
+      "classification": "No C0/C1/C2 caller execution source node. Historical generic span/frame/checked-run/E5 nodes are exact pinned parameterized inputs. The opaque supplier reconstruction is a separate pinned 4534-source chain, outside this83-node client graph."
+    },
+    {
+      "surface": "Actual phase composition",
+      "classification": "Previously reviewed explicit C3 public policy/RA/frame instances connect original c3_pre through actual first handoff, cleanup, second handoff/public return and four checked suffix paths. No assumed suffix state is substituted into the original whole theorem."
+    }
+  ],
+  "fixed_MOV_site": {
+    "site_source": "development/approved-plan/c3-successor-v1/proofs/final-mov2-site-v2.ml",
+    "site_sha256": "0f71a53f0afcd049a1b894ec907a42315e97a57b06ceb054514becdc5838954d",
+    "step_source": "development/approved-plan/c3-successor-v1/proofs/final-return-site-steps-v7.ml",
+    "step_sha256": "74c891c05a358af4bdcbcbf14673b73d2e96816eebe69e16c8e46684927e5072",
+    "classification": "Permitted ordinary fixed-site proof under policy3/4; exact offset73 MOV EAX,Imm32(2), actual code/fetch/events and direct existing GEN_STEP/CLIENT/R1 instantiation at remaining7.",
+    "qualified_policy_reading": "Policy expressly permits fixed decoded-site facts and ordinary local frozen-rule sequences but does not explicitly name bypassing the convenience callback. This concrete direct primitive application is classified under that narrow allowance; this is an agent source reading, not a formal guarantee or blanket callback exception.",
+    "algorithm_changes": "No frozen HT qualifier rewrite list, callback/dispatch/matching/normalizer algorithm or global simp change. Parentheses, residual printing and local1+6 numeral conversion remain ordinary proof repairs.",
+    "preserved_failures": true
+  },
+  "dependency_map": {
+    "path": "development/approved-plan/c3-successor-v1/results/dependency-map-v2.json",
+    "sha256": "6544ed0828c22bf7b89f2f3971696c95c959a702b3e47fe7972cf1717d9cbc24",
+    "seal_binding_matches": true,
+    "formal_dependency_certificate": false,
+    "stage_source_binding_checks": [
+      {
+        "stage": "original entry to first public supplier entry",
+        "source_paths_in_graph": true,
+        "declared_theorem_bindings_present_in_graph_text": true,
+        "missing_bindings": [],
+        "supplier": null
+      },
+      {
+        "stage": "first comparison through public supplier interface",
+        "source_paths_in_graph": true,
+        "declared_theorem_bindings_present_in_graph_text": true,
+        "missing_bindings": [],
+        "supplier": "BP_E3_CRYPTO_PUBLIC_CALLER_POLICY"
+      },
+      {
+        "stage": "cleanup endpoint through actual7 steps",
+        "source_paths_in_graph": true,
+        "declared_theorem_bindings_present_in_graph_text": true,
+        "missing_bindings": [],
+        "supplier": null
+      },
+      {
+        "stage": "cleanup through public supplier interface",
+        "source_paths_in_graph": true,
+        "declared_theorem_bindings_present_in_graph_text": true,
+        "missing_bindings": [],
+        "supplier": "BP_E3_CLEANSE_PUBLIC_CALLER_POLICY"
+      },
+      {
+        "stage": "cleanup transport and second actual handoff",
+        "source_paths_in_graph": true,
+        "declared_theorem_bindings_present_in_graph_text": true,
+        "missing_bindings": [],
+        "supplier": null
+      },
+      {
+        "stage": "second comparison through public supplier interface",
+        "source_paths_in_graph": true,
+        "declared_theorem_bindings_present_in_graph_text": true,
+        "missing_bindings": [],
+        "supplier": "BP_E3_CRYPTO_PUBLIC_CALLER_POLICY"
+      },
+      {
+        "stage": "actual final paths and whole chain",
+        "source_paths_in_graph": true,
+        "declared_theorem_bindings_present_in_graph_text": true,
+        "missing_bindings": [],
+        "supplier": null
+      },
+      {
+        "stage": "count, ABI and normal-entry E5 lifts",
+        "source_paths_in_graph": true,
+        "declared_theorem_bindings_present_in_graph_text": true,
+        "missing_bindings": [],
+        "supplier": null
+      }
+    ],
+    "metadata_correction": {
+      "v1_path": "development/approved-plan/c3-successor-v1/results/dependency-map-v1.json",
+      "v1_sha256": "8c7287a1c80e7e41f487738c9fd05374a770c90d20fa3347d872284c9f2bee1d",
+      "v1_preserved": true,
+      "incorrect_v1_symbol": "BP_E3_OPENSSL_CLEANSE_PUBLIC_CALLER_POLICY",
+      "correct_actual_v2_symbol": "BP_E3_CLEANSE_PUBLIC_CALLER_POLICY",
+      "affects_sealed_input": false
+    }
+  },
+  "opacity_qualification": "Shared ambient supplier objects/global HOL automation remain possible. Closed source imports, source discipline, pins and scans do not prove transitive supplier-implementation exclusion, formal ML capability isolation or kernel derivation dependency.",
+  "status_boundaries": {
+    "static_graph_checks_pass": true,
+    "new_HOL_execution_by_reviewer": false,
+    "source_or_protected_edits_by_reviewer": false,
+    "complete_supplier4534_reconstruction_verified_here": false,
+    "fresh_acceptance": "ROOT_OWNED_RUNNING_AT_TASK_DISPATCH_NOT_INFERRED_BY_THIS_REVIEW",
+    "controls_or_binding_probe_verified_here": false,
+    "full_c3_acceptance_claimed": false,
+    "original_C3_outcome_preserved": true,
+    "human_review": "PENDING"
+  },
+  "markdown": {
+    "path": "development/approved-plan/c3-successor-v1/diagnostics/transport-final-selected-graph-review-v2.md",
+    "sha256": "0bcd7e25a9e275046860bf3252a82744336e6cfd8aa11e2c606de829b4a5c04a"
+  }
+}

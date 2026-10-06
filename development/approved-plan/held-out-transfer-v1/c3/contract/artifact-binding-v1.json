@@ -1,0 +1,33 @@
+{
+  "actual_return_obligation": "last remaining step assurance_actual_ret 1 via c3_step_policy",
+  "architectural_scope": "E5 RF=TF=0; inherited scope unchanged",
+  "arrays": {
+    "c3_caller_mc": {
+      "length": 89,
+      "sha256": "6ae0f7d55d26fe28db565f41851ed6be840edfa6d5a00c2652c7276fc72c353e"
+    },
+    "c3_cleanse_plt_prefix": {
+      "length": 6,
+      "sha256": "335211f848bb5bad98990831407c66e1fc19c22171525dc49a9ea4ccb6a91a78"
+    },
+    "c3_crypto_plt_prefix": {
+      "length": 6,
+      "sha256": "b39e24957fa22aba0db5bdb8897d34e2e54bf8924e698ff956aab132c44f928d"
+    }
+  },
+  "artifact_sha256": "f3736185c45667d23d80e235245da36d99bb79e6ee1b0c7f13725fa590c53b3f",
+  "caller_steps_equal": 31,
+  "caller_steps_unequal": 28,
+  "human_review": "PENDING",
+  "plt_transfer_steps": 3,
+  "status": "PASS_TRUSTED_BYTE_AND_DECLARED_LITERAL_BINDING_NOT_PROOF",
+  "supplier_artifacts_sha256": {
+    "artifacts/baseline/libc.so.6": "6b4a45352fd0c540a9c7c718f35ce8c8e46a4e482f9d3885a910c32d1a0e1421",
+    "artifacts/baseline/libcrypto.so.3": "76dd3d93e5ee48950a92a58d59b94de8143847f91a80d9682c938767b991577d"
+  },
+  "supplier_call_sequence": [
+    "CRYPTO_memcmp",
+    "OPENSSL_cleanse",
+    "CRYPTO_memcmp"
+  ]
+}

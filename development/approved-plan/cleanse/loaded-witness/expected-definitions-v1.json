@@ -1,0 +1,48 @@
+{
+  "definitions": [
+    {
+      "equation": "clw_file_code (file_bytes:num->byte) <=>\n    !i. i<97 ==> file_bytes(0x2417d0+i)=EL i openssl_cleanse_mc",
+      "name": "clw_file_code"
+    },
+    {
+      "equation": "clw_reference_code (image:int64->byte) <=>\n    !i. i<97 ==> image(word(0x102417d0+i))=EL i openssl_cleanse_mc",
+      "name": "clw_reference_code"
+    },
+    {
+      "equation": "clw_layout p n <=> lw_layout p p n",
+      "name": "clw_layout"
+    },
+    {
+      "equation": "clw_memory image p n high_first = lw_memory image p p n high_first",
+      "name": "clw_memory"
+    },
+    {
+      "equation": "clw_state (image:int64->byte) (p:int64) n high_first =\n    x86state_RECORD (word 0x102417d0)\n      (\\r:(4)word. if r=word 7 then p\n                  else if r=word 6 then word n\n                  else if r=word 4 then word 0x300008\n                  else word 0)\n      (\\z:(5)word. word 0) (\\k:(3)word. word 0) (word 2)\n      (clw_memory image p n high_first) []",
+      "name": "clw_state"
+    },
+    {
+      "equation": "clw_read p n a <=> fb_read p p n a",
+      "name": "clw_read"
+    },
+    {
+      "equation": "clw_write p n a <=> lw_image_write a \\/ lw_pagecover p n a",
+      "name": "clw_write"
+    },
+    {
+      "equation": "clw_ordinary p n a <=> fb_ordinary p p n a",
+      "name": "clw_ordinary"
+    },
+    {
+      "equation": "clw_scalar_pre image p n high_first <=>\n    bp_e2_cleanse_pre 0x102417d0 (word 0x300008) (word 0x400000) p n\n      (clw_memory image p n high_first) (clw_read p n) (clw_write p n)\n      lw_execute (clw_ordinary p n) (clw_state image p n high_first)",
+      "name": "clw_scalar_pre"
+    },
+    {
+      "equation": "clw_machine image p n high_first =\n    (clw_state image p n high_first,fb_initial_abi)",
+      "name": "clw_machine"
+    },
+    {
+      "equation": "clw_full_pre file_bytes initial_rw padding image p n high_first <=>\n    fb_full_image file_bytes initial_rw padding\n      (read memory (FST(clw_machine image p n high_first))) /\\\n    bp_e2_cleanse_pre 0x102417d0 (word 0x300008) (word 0x400000) p n\n      (clw_memory image p n high_first) (clw_read p n) (clw_write p n)\n      lw_execute (clw_ordinary p n) (FST(clw_machine image p n high_first)) /\\\n    fb_abi_initial_fields (SND(clw_machine image p n high_first)) /\\\n    (!a. fb_tls_page a ==> clw_read p n a /\\ clw_ordinary p n a) /\\\n    assurance_canonical48 (val(read ABI_FS_BASE\n      (SND(clw_machine image p n high_first)))) /\\\n    (!a. lw_image_domain a ==> clw_read p n a /\\ clw_ordinary p n a /\\\n          (lw_execute a <=> lw_image_execute a) /\\\n          (clw_write p n a <=> lw_image_write a))",
+      "name": "clw_full_pre"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "created_at_utc": "2026-09-30T14:41:04.771275+00:00",
+  "stage": "exact generic bridge target frozen before local reconstruction",
+  "sha256": "e40bb77ed634786b698329076e9e8f0bbcbf79bd77b879fa05788c7242c60397",
+  "origin": "Same published generic bridge in assurance/path.ml; loaded independently to close this component import set."
+}

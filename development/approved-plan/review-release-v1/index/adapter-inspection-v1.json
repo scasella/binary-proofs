@@ -1,0 +1,81 @@
+{
+  "changes": [
+    {
+      "actual_adapter_sha256": "a7952f6522d3240edb09122f36c9657c74c8cd9e628399189d31f512bdf6c6fe",
+      "actual_parent_sha256": "18a360eaf45256fb97ee060f3ba31caf0e04eead273d0845dbf0cf4cfc6355a2",
+      "adapter": "development/approved-plan/review-release-v1/replay/c3-fresh-check-v1.py",
+      "adapter_sha256": "a7952f6522d3240edb09122f36c9657c74c8cd9e628399189d31f512bdf6c6fe",
+      "diff": "development/approved-plan/review-release-v1/replay/c3-fresh-check-v1-diff-v1.patch",
+      "diff_sha256": "e5f7278e532cf6179642fdd3ef23199b0b25079c9f56c82ca8fd7dc02775047f",
+      "parent": "development/approved-plan/c3-successor-v1/replay/fresh-replay-v1.py",
+      "parent_sha256": "18a360eaf45256fb97ee060f3ba31caf0e04eead273d0845dbf0cf4cfc6355a2"
+    },
+    {
+      "actual_adapter_sha256": "0de8cd373004da31d7b3344339d72ddb8152ae3335cb397a2690665bc51027cd",
+      "actual_parent_sha256": "01e4e85cfc6fa30e00d770a76ea4eb7d0b129e4c85edbdc1c014237a2822c848",
+      "adapter": "development/approved-plan/review-release-v1/replay/c3-root-check-v1.py",
+      "adapter_sha256": "0de8cd373004da31d7b3344339d72ddb8152ae3335cb397a2690665bc51027cd",
+      "diff": "development/approved-plan/review-release-v1/replay/c3-root-check-v1-diff-v1.patch",
+      "diff_sha256": "09e24311325b19e9e952248977978c64120fa08cb66fab113d66e53e498750ce",
+      "parent": "development/approved-plan/c3-successor-v1/replay/check-root-v1.py",
+      "parent_sha256": "01e4e85cfc6fa30e00d770a76ea4eb7d0b129e4c85edbdc1c014237a2822c848"
+    }
+  ],
+  "classification": "PACKAGING_ONLY_CHECKING_CLOCK_AND_POLICY_LOCATIONS_WITH_PARENT_PROJECTION",
+  "created_utc": "2026-10-05T15:11:47.000714+00:00",
+  "formal_adapter_equivalence_proved": false,
+  "human_review": "PENDING",
+  "inspection_only": true,
+  "limits": {
+    "cpu_count": 1,
+    "later_checking_session_seconds": 5400,
+    "memory_bytes": 3221225472,
+    "network": "none",
+    "per_invocation_seconds": 1800,
+    "swap_limit_bytes": 3221225472
+  },
+  "operational_caveat": "Pass explicit output paths outside protected historical trees; default adapted positive output remains successor/runs.",
+  "original_harness_compatibility": "Inspected unchanged controls/probe: use sealed host_driver/root_gate dispatch and remain under old self hashes. Actual compatibility still requires execution.",
+  "protected_input_projection": {
+    "mathematical_fields_explicitly_unchanged": [
+      "graph",
+      "loader",
+      "selected_main_proof_source",
+      "supplier",
+      "expected_registry",
+      "audit",
+      "theorem_map",
+      "resources",
+      "checker_image_id",
+      "gnu_image_id",
+      "application_proof_source",
+      "application_theorem",
+      "successor_stage",
+      "immutable_C3_case"
+    ],
+    "parent_seal": "development/approved-plan/c3-successor-v1/replay/c3-successor-final-v1-seal.json",
+    "parent_sha256": "903c92086ade0594eda090832ee769e3415c741dfc20573a4c94fef1c6612f46",
+    "unchanged_fields": "Every original field except host_driver, root_gate, driver_sha256 and additional_stage_inputs is required exactly equal; every old additional/host input digest must be retained. Only declared checking context input additions permitted.",
+    "validation_execution": "NOT_YET_EXECUTED_BY_THIS_REVIEWER_CONTEXT_NOT_YET_SEALED"
+  },
+  "requirements_retained": [
+    "Fresh complete supplier and caller reconstruction",
+    "Exact raw and expanded object statements",
+    "Empty theorem hypotheses and free variables",
+    "Unchanged permitted three axioms",
+    "All original target/witness/definition counts",
+    "Byte/image/linkage crosschecks",
+    "Read-only exact staged closure",
+    "Actual pinned images/mounts/resources/network",
+    "Five original input integrity controls",
+    "Fresh missing-usable-interface construction rejection",
+    "No saved theorem objects or success caches"
+  ],
+  "reviewer_agent": "/root/release_index",
+  "schema": "review-operational-adapter-source-inspection-v1",
+  "supporting_source_sha256": {
+    "development/approved-plan/review-release-v1/replay/checking-context-v1.py": "5f0353149b0e20ca344714a8a4ecef52a177a6c0bc91a8c922b954cfe8206697",
+    "development/approved-plan/review-release-v1/scripts/build-adapters-v1.py": "a8b66eb12e1a4ae0aa24466b63c5e5ba321b5491d896d59709358813fa17d2ad"
+  },
+  "trust": "Python identity/projection/extraction and checking environment remain in trust inventory; source review is not a machine-checked proof of policy-program equivalence."
+}

@@ -1,0 +1,61 @@
+{
+  "status": "FROZEN_INDEPENDENT_GOALS_NO_PROOF_CLAIM",
+  "goals": [
+    {
+      "name": "cleanse_interface_count_equal_statement",
+      "independent_literal_goal": "!p n. cleanse_access_count (p:int64) n=cleanse_functional_steps p n",
+      "source": "development/approved-plan/cleanse/interface/helper-statements-v1.ml",
+      "proved": false
+    },
+    {
+      "name": "cleanse_interface_run_post_statement",
+      "independent_literal_goal": "!n P Q C (s:x86state).\n    assurance_checked_run n P C s /\\ eventually_n x86 n Q s\n    ==> assurance_checked_run n (\\t. P t /\\ Q t) C s",
+      "source": "development/approved-plan/cleanse/interface/helper-statements-v1.ml",
+      "proved": false
+    },
+    {
+      "name": "cleanse_interface_run_mono_statement",
+      "independent_literal_goal": "!n P Q C (s:x86state).\n    (!t. P t ==> Q t) /\\ assurance_checked_run n P C s\n    ==> assurance_checked_run n Q C s",
+      "source": "development/approved-plan/cleanse/interface/helper-statements-v1.ml",
+      "proved": false
+    },
+    {
+      "name": "cleanse_interface_slot_preserved_statement",
+      "independent_literal_goal": "!stackpointer p n m (t:x86state).\n    val(stackpointer:int64)+8<=2 EXP 64 /\\\n    (!a. ~(assurance_region p n a /\\ assurance_region stackpointer 8 a)) /\\\n    (!a. ~assurance_region p n (val a) ==> read memory t a=m a)\n    ==> read (memory :> bytes64 stackpointer) t=read (bytes64 stackpointer) m",
+      "source": "development/approved-plan/cleanse/interface/helper-statements-v1.ml",
+      "proved": false
+    },
+    {
+      "name": "bp_e2_cleanse_policy_frame_statement",
+      "independent_literal_goal": "!pc stackpointer ra p n m rp wp xp ordinary (s:x86state).\n    bp_e2_cleanse_pre pc stackpointer ra p n m rp wp xp ordinary s\n    ==> assurance_checked_run (cleanse_functional_steps p n)\n      (bp_e2_cleanse_call_post pc stackpointer ra p n m s)\n      (\\k source target.\n        cleanse_access_covered_step pc\n          (bp_e2_cleanse_allowed_read rp ordinary stackpointer)\n          (bp_e2_cleanse_allowed_write wp ordinary p n)\n          (bp_e2_cleanse_allowed_fetch xp ordinary pc) k source target /\\\n        abi_all_decodes_cleanse_scalar source) s",
+      "source": "development/approved-plan/cleanse/interface/statements-v1.ml",
+      "proved": false
+    },
+    {
+      "name": "bp_e2_cleanse_extended_statement",
+      "independent_literal_goal": "!pc stackpointer ra p n m rp wp xp ordinary (s:x86state) a.\n    bp_e2_cleanse_pre pc stackpointer ra p n m rp wp xp ordinary s\n    ==> eventually_n abi_cleanse_scalar_extended_step (cleanse_functional_steps p n)\n      (\\t. bp_e2_cleanse_call_post pc stackpointer ra p n m s (FST t) /\\\n           SND t=a /\\ abi_required_controls_preserved a (SND t)) (s,a)",
+      "source": "development/approved-plan/cleanse/interface/statements-v1.ml",
+      "proved": false
+    },
+    {
+      "name": "bp_e2_cleanse_public_policy_statement",
+      "independent_literal_goal": "!file_bytes initial_rw padding stackpointer ra p n m rp wp xp ordinary s a.\n    bp_e2_cleanse_public_pre file_bytes initial_rw padding stackpointer ra p n\n      m rp wp xp ordinary (s,a)\n    ==> assurance_checked_run (cleanse_functional_steps p n)\n      (bp_e2_cleanse_call_post 0x102417d0 stackpointer ra p n m s)\n      (\\k source target.\n        cleanse_access_covered_step 0x102417d0\n          (bp_e2_cleanse_allowed_read rp ordinary stackpointer)\n          (bp_e2_cleanse_allowed_write wp ordinary p n)\n          (bp_e2_cleanse_allowed_fetch xp ordinary 0x102417d0) k source target /\\\n        abi_all_decodes_cleanse_scalar source) s",
+      "source": "development/approved-plan/cleanse/interface/statements-v1.ml",
+      "proved": false
+    },
+    {
+      "name": "bp_e2_cleanse_public_interface_statement",
+      "independent_literal_goal": "!file_bytes initial_rw padding stackpointer ra p n m rp wp xp ordinary s a.\n    bp_e2_cleanse_public_pre file_bytes initial_rw padding stackpointer ra p n\n      m rp wp xp ordinary (s,a)\n    ==> eventually_n abi_cleanse_scalar_extended_step (cleanse_functional_steps p n)\n      (bp_e2_cleanse_public_post stackpointer ra p n m s a) (s,a)",
+      "source": "development/approved-plan/cleanse/interface/statements-v1.ml",
+      "proved": false
+    },
+    {
+      "name": "bp_e2_cleanse_public_witness_bridge_statement",
+      "independent_literal_goal": "!file_bytes initial_rw padding image p n high_first.\n    clw_file_code file_bytes /\\\n    clw_full_pre file_bytes initial_rw padding image p n high_first\n    ==> bp_e2_cleanse_public_pre file_bytes initial_rw padding\n      (word 0x300008) (word 0x400000) p n (clw_memory image p n high_first)\n      (clw_read p n) (clw_write p n) lw_execute (clw_ordinary p n)\n      (clw_machine image p n high_first)",
+      "source": "development/approved-plan/cleanse/interface/statements-v1.ml",
+      "proved": false
+    }
+  ],
+  "full_O1_pass": false,
+  "full_O2_pass": false
+}

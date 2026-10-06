@@ -1,0 +1,13 @@
+if axioms()<>fresh_initial_axioms then exit 1;;
+let reuse_c1_foundation_axioms=fresh_initial_axioms;;
+print_endline("C1_FRESH_SUPPLIER_CPU "^string_of_float(Sys.time()-.fresh_supplier_cpu_start));;
+let c1_fresh_cpu_start=Sys.time();;
+c1_successor_ambient_snapshot "after-supplier-before-caller" "/output/ambient-after-supplier-v1.json";;
+try needs "/work/development/approved-plan/held-out-transfer-v1/layer/load-v1.ml"; needs "/work/development/approved-plan/held-out-transfer-v1/layer/export-audit-v1.ml" with e -> prerr_endline(Printexc.to_string e); exit 1;;
+try needs "/work/development/approved-plan/reusable-assurance-c1-successor-v1/replay/c1-loader-c1-successor-final-v3.ml" with e -> prerr_endline(Printexc.to_string e); if axioms()<>fresh_initial_axioms then exit 2; print_endline "C1_FRESH_REJECTION_STANDARD3_UNCHANGED"; exit 1;;
+try needs "/work/development/approved-plan/reusable-assurance-c1-successor-v1/replay/c1-successor-final-v3-audit.ml" with e -> prerr_endline(Printexc.to_string e); exit 1;;
+try needs "/work/development/approved-plan/held-out-transfer-v1/regression/consumption-c1-v1.ml" with e -> prerr_endline(Printexc.to_string e); exit 1;;
+print_endline("C1_FRESH_CALLER_CPU "^string_of_float(Sys.time()-.c1_fresh_cpu_start));;
+if axioms()<>fresh_initial_axioms then exit 1;;
+print_endline "C1_FRESH_FINAL_STANDARD3_AXIOMS_UNCHANGED";;
+exit 0;;

@@ -1,0 +1,18 @@
+{
+  "added_supporting_generic_exports": 3,
+  "exact_C3_exposure": false,
+  "formal_export_count": 34,
+  "helper_count": 10,
+  "historical_sources_changed": false,
+  "human_review": "PENDING",
+  "initial_builder_measurement_limit": "Tool wall rounded observation; not full construction effort",
+  "initial_builder_tool_wall_seconds": 0.1,
+  "inspection_before_runner": "Read/initial builder commands occurred before instrumentation arrival; active reasoning time unavailable; no historical timing invented",
+  "measurement_scope": "Subsequent ledger commands separately observed; preparation inclusive window is not added to nested command/checking wall",
+  "model_tokens_cost": null,
+  "schema": "heldout_layer_preparation_account_v1",
+  "source_extraction_and_small_parameterization": "PRESELECTION_PREPARATION_ADAPTATION",
+  "supporting_word_theorem_count": 1,
+  "unavailable_reason": "Not exposed by runtime",
+  "utc": "2026-10-05T00:51:40.843108+00:00"
+}

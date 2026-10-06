@@ -1,0 +1,25 @@
+{
+  "extraction_command": [
+    "python3",
+    "-B",
+    "/private/tmp/bp-review-consumer-o803245s/extract-v1.py",
+    "--archive",
+    "/private/tmp/bp-review-consumer-o803245s/checking-sources-v1.tar.gz",
+    "--sha256",
+    "7434fae0f89c9b3a0c58f455a3bd33826502213befea5be5f58bcb5355073e2a",
+    "--output",
+    "/private/tmp/bp-review-consumer-o803245s/source"
+  ],
+  "extraction_process_exit_code": 0,
+  "manifest_current_sha256": "bb91c404411554fc48a1c34fe1107278067ffbf76cdc759b20c833bffd85a1fd",
+  "observation_scope": "Copied exact observed tool output; not a separately timed command wrapper",
+  "observed_extractor_stdout": {
+    "file_count": 856,
+    "input_manifest_sha256": "bb91c404411554fc48a1c34fe1107278067ffbf76cdc759b20c833bffd85a1fd",
+    "root": "/private/tmp/bp-review-consumer-o803245s/source",
+    "status": "EXTRACTED_INPUT_IDENTITIES_CHECKED_NOT_PROOF"
+  },
+  "proof_started": false,
+  "recorded_utc": "2026-10-05T15:26:11.507895+00:00",
+  "schema": "review-release-consumer-extraction-observation-v1"
+}

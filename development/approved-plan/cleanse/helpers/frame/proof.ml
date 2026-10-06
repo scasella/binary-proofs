@@ -1,0 +1,34 @@
+needs "/work/development/approved-plan/cleanse/helpers/frame/statements-v2.ml";;
+let CLEANSE_REGIONS_DISJOINT_NONOVERLAPPING = prove
+ (cleanse_regions_disjoint_nonoverlapping_statement,
+  REPEAT GEN_TAC THEN STRIP_TAC THEN
+  ASM_CASES_TAC `n:num=0` THENL
+   [ASM_MESON_TAC[NONOVERLAPPING_TRIVIAL];ALL_TAC] THEN
+  ASM_CASES_TAC `k:num=0` THENL
+   [ASM_MESON_TAC[NONOVERLAPPING_TRIVIAL];ALL_TAC] THEN
+  SUBGOAL_THEN `val(p:int64)+n<=val(q:int64) \/ val(q:int64)+k<=val(p:int64)` ASSUME_TAC THENL
+   [FIRST_X_ASSUM(MP_TAC o SPEC `MAX (val(p:int64)) (val(q:int64))`) THEN
+    REWRITE_TAC[assurance_region] THEN
+    ASM_CASES_TAC `val(p:int64)<=val(q:int64)` THEN
+    ASM_REWRITE_TAC[MAX] THEN ASM_ARITH_TAC;
+    REWRITE_TAC[nonoverlapping;DIMINDEX_64] THEN
+    MATCH_MP_TAC NONOVERLAPPING_MODULO_SIMPLE THEN ASM_ARITH_TAC]);;
+let CLEANSE_REGION_WORD_SUB = prove
+ (cleanse_region_word_sub_statement,
+  REPEAT GEN_TAC THEN STRIP_TAC THEN
+  REWRITE_TAC[assurance_region;VAL_WORD_SUB_CASES;DIMINDEX_64] THEN
+  ASM_CASES_TAC `val(p:int64)<=val(a:int64)` THEN
+  ASM_REWRITE_TAC[] THEN ASM_ARITH_TAC);;
+let CLEANSE_MEMORY_WRITE_BYTES_OUTSIDE = prove
+ (cleanse_memory_write_bytes_outside_statement,
+  REPEAT GEN_TAC THEN STRIP_TAC THEN
+  SUBGOAL_THEN `~(val(word_sub (a:int64) p)<n)` ASSUME_TAC THENL
+   [ASM_MESON_TAC[CLEANSE_REGION_WORD_SUB];ALL_TAC] THEN
+  MP_TAC(ISPECL [`p:int64`; `a:int64`; `n:num`; `x:num`; `m:int64->byte`]
+    READ_ELEMENT_WRITE_BYTES) THEN ASM_REWRITE_TAC[READ_ELEMENT]);;
+let CLEANSE_STATE_WRITE_BYTES_OUTSIDE = prove
+ (cleanse_state_write_bytes_outside_statement,
+  REPEAT GEN_TAC THEN STRIP_TAC THEN
+  REWRITE_TAC[READ_COMPONENT_COMPOSE;WRITE_COMPONENT_COMPOSE] THEN
+  CONV_TAC(TOP_DEPTH_CONV COMPONENT_READ_OVER_WRITE_CONV) THEN
+  ASM_MESON_TAC[CLEANSE_MEMORY_WRITE_BYTES_OUTSIDE]);;

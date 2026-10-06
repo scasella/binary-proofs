@@ -1,0 +1,483 @@
+{
+  "active_coordination_reason": "No activity sampler or exclusive accounting exposed",
+  "active_coordination_seconds": null,
+  "checking_case_session_monotonic_seconds_sum": 3050.35052654201,
+  "checking_container_count": 6,
+  "control_and_probe_scope": "Original integrity controls and binding availability rejection, not semantic theorem indispensability",
+  "external_organization_or_human_validation": false,
+  "formal_capability_isolation": false,
+  "full_consumer_episode_wall_seconds": 3216.792537,
+  "human_review": "PENDING",
+  "intercase_interval_meaning": "Observed gaps contain coordination, tool latency, receipt copying and other host work; not a measured exclusive active coordination cost.",
+  "intercase_nonchecking_elapsed_seconds": 166.429323,
+  "read_only_mounts_per_container": 5,
+  "rows": [
+    {
+      "actual_mounts": [
+        {
+          "Destination": "/client-public",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/positive/source/development/approved-plan/clients-e3/public-inputs-v1",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/output",
+          "Mode": "rw",
+          "Propagation": "rprivate",
+          "RW": true,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/positive/runtime",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/reuse",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/positive/source/development/approved-plan/reusable-assurance-v1",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/work",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/positive/source",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/work/third_party/s2n-bignum/x86/proofs/decode.ml",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/positive/source/development/approved-plan/call-binding/near-indirect-v1/decode-attempt5.ml",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/work/third_party/s2n-bignum/x86/proofs/x86.ml",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/positive/source/development/approved-plan/call-binding/near-indirect-v1/x86-attempt5.ml",
+          "Type": "bind"
+        }
+      ],
+      "all_mount_sources_inside_relocated_consumer_base": true,
+      "case": "C1",
+      "container_id": "f9659509c18f3bbe10f8d7472bf5e0d756965856c01f1a46fb0e24956f512e83",
+      "cpu_count": 1,
+      "image_id": "sha256:a19fdc18f1f283ed8e2514229b77f33619df1ba0ea1ae578c97779f4b4eb3c3f",
+      "inspection_path": "/private/tmp/bp-review-consumer-o803245s/runs/C1/positive/container-inspect.json",
+      "inspection_sha256": "2a3726379d1db8ae194626cac8a1b8dbe79a61fb39d6946d53c44cfb898e92d6",
+      "kind": "positive",
+      "memory_bytes": 3221225472,
+      "network": "none",
+      "only_output_writable": true,
+      "state": {
+        "Dead": false,
+        "Error": "",
+        "ExitCode": 0,
+        "FinishedAt": "2026-10-05T15:23:45.88726826Z",
+        "OOMKilled": false,
+        "Paused": false,
+        "Pid": 0,
+        "Restarting": false,
+        "Running": false,
+        "StartedAt": "2026-10-05T15:15:55.099684584Z",
+        "Status": "exited"
+      },
+      "swap_limit_bytes": 3221225472
+    },
+    {
+      "actual_mounts": [
+        {
+          "Destination": "/client-public",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/binding-probe/attempt/source/development/approved-plan/clients-e3/public-inputs-v1",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/output",
+          "Mode": "rw",
+          "Propagation": "rprivate",
+          "RW": true,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/binding-probe/attempt/runtime",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/reuse",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/binding-probe/attempt/source/development/approved-plan/reusable-assurance-v1",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/work",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/binding-probe/attempt/source",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/work/third_party/s2n-bignum/x86/proofs/decode.ml",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/binding-probe/attempt/source/development/approved-plan/call-binding/near-indirect-v1/decode-attempt5.ml",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/work/third_party/s2n-bignum/x86/proofs/x86.ml",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/binding-probe/attempt/source/development/approved-plan/call-binding/near-indirect-v1/x86-attempt5.ml",
+          "Type": "bind"
+        }
+      ],
+      "all_mount_sources_inside_relocated_consumer_base": true,
+      "case": "C1",
+      "container_id": "ffb27e62ee99e0fc62827fe0556e201bb6ba32cdac00708d236c3fb103ea02b5",
+      "cpu_count": 1,
+      "image_id": "sha256:a19fdc18f1f283ed8e2514229b77f33619df1ba0ea1ae578c97779f4b4eb3c3f",
+      "inspection_path": "/private/tmp/bp-review-consumer-o803245s/runs/C1/binding-probe/attempt/container-inspect.json",
+      "inspection_sha256": "341401229897bb282ae890db0f54d87a25a88ad7206a51a98710f29d11e99934",
+      "kind": "binding-probe",
+      "memory_bytes": 3221225472,
+      "network": "none",
+      "only_output_writable": true,
+      "state": {
+        "Dead": false,
+        "Error": "",
+        "ExitCode": 1,
+        "FinishedAt": "2026-10-05T15:31:25.0026Z",
+        "OOMKilled": false,
+        "Paused": false,
+        "Pid": 0,
+        "Restarting": false,
+        "Running": false,
+        "StartedAt": "2026-10-05T15:23:55.797339917Z",
+        "Status": "exited"
+      },
+      "swap_limit_bytes": 3221225472
+    },
+    {
+      "actual_mounts": [
+        {
+          "Destination": "/client-public",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/positive/source/development/approved-plan/clients-e3/public-inputs-v1",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/output",
+          "Mode": "rw",
+          "Propagation": "rprivate",
+          "RW": true,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/positive/runtime",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/reuse",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/positive/source/development/approved-plan/reusable-assurance-v1",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/work",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/positive/source",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/work/third_party/s2n-bignum/x86/proofs/decode.ml",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/positive/source/development/approved-plan/call-binding/near-indirect-v1/decode-attempt5.ml",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/work/third_party/s2n-bignum/x86/proofs/x86.ml",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/positive/source/development/approved-plan/call-binding/near-indirect-v1/x86-attempt5.ml",
+          "Type": "bind"
+        }
+      ],
+      "all_mount_sources_inside_relocated_consumer_base": true,
+      "case": "C2",
+      "container_id": "527003a90bdee4510ff567169774c227c96a5dca0897c89a25d36d9ccbb19dd7",
+      "cpu_count": 1,
+      "image_id": "sha256:a19fdc18f1f283ed8e2514229b77f33619df1ba0ea1ae578c97779f4b4eb3c3f",
+      "inspection_path": "/private/tmp/bp-review-consumer-o803245s/runs/C2/positive/container-inspect.json",
+      "inspection_sha256": "9cfa84572c5e9aff7dbf87c774f7d6704be21a0dc3f1bf5f0b2ff47ec83c7db2",
+      "kind": "positive",
+      "memory_bytes": 3221225472,
+      "network": "none",
+      "only_output_writable": true,
+      "state": {
+        "Dead": false,
+        "Error": "",
+        "ExitCode": 0,
+        "FinishedAt": "2026-10-05T15:41:18.471907761Z",
+        "OOMKilled": false,
+        "Paused": false,
+        "Pid": 0,
+        "Restarting": false,
+        "Running": false,
+        "StartedAt": "2026-10-05T15:32:23.367741597Z",
+        "Status": "exited"
+      },
+      "swap_limit_bytes": 3221225472
+    },
+    {
+      "actual_mounts": [
+        {
+          "Destination": "/client-public",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/binding-probe/attempt/source/development/approved-plan/clients-e3/public-inputs-v1",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/output",
+          "Mode": "rw",
+          "Propagation": "rprivate",
+          "RW": true,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/binding-probe/attempt/runtime",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/reuse",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/binding-probe/attempt/source/development/approved-plan/reusable-assurance-v1",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/work",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/binding-probe/attempt/source",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/work/third_party/s2n-bignum/x86/proofs/decode.ml",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/binding-probe/attempt/source/development/approved-plan/call-binding/near-indirect-v1/decode-attempt5.ml",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/work/third_party/s2n-bignum/x86/proofs/x86.ml",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/binding-probe/attempt/source/development/approved-plan/call-binding/near-indirect-v1/x86-attempt5.ml",
+          "Type": "bind"
+        }
+      ],
+      "all_mount_sources_inside_relocated_consumer_base": true,
+      "case": "C2",
+      "container_id": "0ae7d053fe37189e87b0c8ad46d1fd47f4d7fab0f3a4ec678073f6f1ba63891d",
+      "cpu_count": 1,
+      "image_id": "sha256:a19fdc18f1f283ed8e2514229b77f33619df1ba0ea1ae578c97779f4b4eb3c3f",
+      "inspection_path": "/private/tmp/bp-review-consumer-o803245s/runs/C2/binding-probe/attempt/container-inspect.json",
+      "inspection_sha256": "aedcc77fd0a003d99716aadb201264c8ba2191fca83d7bca7f9cfd51b4e23a97",
+      "kind": "binding-probe",
+      "memory_bytes": 3221225472,
+      "network": "none",
+      "only_output_writable": true,
+      "state": {
+        "Dead": false,
+        "Error": "",
+        "ExitCode": 1,
+        "FinishedAt": "2026-10-05T15:49:17.674682719Z",
+        "OOMKilled": false,
+        "Paused": false,
+        "Pid": 0,
+        "Restarting": false,
+        "Running": false,
+        "StartedAt": "2026-10-05T15:41:35.763483505Z",
+        "Status": "exited"
+      },
+      "swap_limit_bytes": 3221225472
+    },
+    {
+      "actual_mounts": [
+        {
+          "Destination": "/client-public",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/positive/source/development/approved-plan/clients-e3/public-inputs-v1",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/output",
+          "Mode": "rw",
+          "Propagation": "rprivate",
+          "RW": true,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/positive/runtime",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/reuse",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/positive/source/development/approved-plan/reusable-assurance-v1",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/work",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/positive/source",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/work/third_party/s2n-bignum/x86/proofs/decode.ml",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/positive/source/development/approved-plan/call-binding/near-indirect-v1/decode-attempt5.ml",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/work/third_party/s2n-bignum/x86/proofs/x86.ml",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/positive/source/development/approved-plan/call-binding/near-indirect-v1/x86-attempt5.ml",
+          "Type": "bind"
+        }
+      ],
+      "all_mount_sources_inside_relocated_consumer_base": true,
+      "case": "C3",
+      "container_id": "03d8c27669b4c346169b680dca5a1f8f301c2f24161b354e57e844b707316ec4",
+      "cpu_count": 1,
+      "image_id": "sha256:a19fdc18f1f283ed8e2514229b77f33619df1ba0ea1ae578c97779f4b4eb3c3f",
+      "inspection_path": "/private/tmp/bp-review-consumer-o803245s/runs/C3/positive/container-inspect.json",
+      "inspection_sha256": "037586f68b064e8ebe7bd7c1a6936caaf12fd97e05d4d8c22c317c50b6f4a7a2",
+      "kind": "positive",
+      "memory_bytes": 3221225472,
+      "network": "none",
+      "only_output_writable": true,
+      "state": {
+        "Dead": false,
+        "Error": "",
+        "ExitCode": 0,
+        "FinishedAt": "2026-10-05T16:00:41.257591049Z",
+        "OOMKilled": false,
+        "Paused": false,
+        "Pid": 0,
+        "Restarting": false,
+        "Running": false,
+        "StartedAt": "2026-10-05T15:51:25.555429Z",
+        "Status": "exited"
+      },
+      "swap_limit_bytes": 3221225472
+    },
+    {
+      "actual_mounts": [
+        {
+          "Destination": "/client-public",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/binding-probe/attempt/source/development/approved-plan/clients-e3/public-inputs-v1",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/output",
+          "Mode": "rw",
+          "Propagation": "rprivate",
+          "RW": true,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/binding-probe/attempt/runtime",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/reuse",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/binding-probe/attempt/source/development/approved-plan/reusable-assurance-v1",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/work",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/binding-probe/attempt/source",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/work/third_party/s2n-bignum/x86/proofs/decode.ml",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/binding-probe/attempt/source/development/approved-plan/call-binding/near-indirect-v1/decode-attempt5.ml",
+          "Type": "bind"
+        },
+        {
+          "Destination": "/work/third_party/s2n-bignum/x86/proofs/x86.ml",
+          "Mode": "ro",
+          "Propagation": "rprivate",
+          "RW": false,
+          "Source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/binding-probe/attempt/source/development/approved-plan/call-binding/near-indirect-v1/x86-attempt5.ml",
+          "Type": "bind"
+        }
+      ],
+      "all_mount_sources_inside_relocated_consumer_base": true,
+      "case": "C3",
+      "container_id": "50df18408149aa8a792bf3a69c8b423ee51fc22cb15e2891e9821d9e289d1b99",
+      "cpu_count": 1,
+      "image_id": "sha256:a19fdc18f1f283ed8e2514229b77f33619df1ba0ea1ae578c97779f4b4eb3c3f",
+      "inspection_path": "/private/tmp/bp-review-consumer-o803245s/runs/C3/binding-probe/attempt/container-inspect.json",
+      "inspection_sha256": "1b8f6ebe04f8c36cdeee8fba27cf00d679d17bd479d03ec88965a094ae46cd74",
+      "kind": "binding-probe",
+      "memory_bytes": 3221225472,
+      "network": "none",
+      "only_output_writable": true,
+      "state": {
+        "Dead": false,
+        "Error": "",
+        "ExitCode": 1,
+        "FinishedAt": "2026-10-05T16:09:19.658198303Z",
+        "OOMKilled": false,
+        "Paused": false,
+        "Pid": 0,
+        "Restarting": false,
+        "Running": false,
+        "StartedAt": "2026-10-05T16:01:04.559733671Z",
+        "Status": "exited"
+      },
+      "swap_limit_bytes": 3221225472
+    }
+  ],
+  "schema": "review-release-consumer-actual-mount-independence-v1",
+  "shared_host_and_docker_service": true,
+  "source_or_output_mounts_from_original_developer_checkout": false,
+  "utc": "2026-10-05T16:12:08.193601+00:00",
+  "writable_output_mounts_per_container": 1
+}

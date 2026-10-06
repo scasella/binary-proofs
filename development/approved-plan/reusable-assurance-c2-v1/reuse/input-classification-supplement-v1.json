@@ -1,0 +1,107 @@
+{
+  "distinction": "New C2 execution-rule arrays, callbacks, offsets and branch facts are caller-specific construction. They do not become hidden generic infrastructure.",
+  "generic_statement_or_implementation_changes": [],
+  "preconstruction": true,
+  "previous_record": "reuse/input-classification-v1.json",
+  "qualification": "Read/source/tactic inspection only; actual derivation dependency tracking and formal capability isolation unavailable. Supplier recipe exposure disclosed.",
+  "rows": [
+    {
+      "classification": "UNCHANGED_GENERIC_CHECKED_STEP",
+      "note": "CLIENT_CHECKED_BASIC_STEP_TAC takes actual execution-rule array and policy callback; proves progress and every original successor.",
+      "path": "development/approved-plan/clients-e3/public-inputs-v1/generic-checked-step-v1.ml",
+      "sha256": "a8acaf219b8fed490e31833fb5a960e36796bc75b37002cd467dcd7fb7357454"
+    },
+    {
+      "classification": "UNCHANGED_PUBLIC_ARTIFACT_FACTS",
+      "note": "Only supplier byte-list lengths for code preservation; no supplier execution rules consumed by C2.",
+      "path": "development/approved-plan/clients-e3/public-inputs-v1/code-length-exports-v1.ml",
+      "sha256": "10f3ee2d04845ea5e98f245cc4c84cee075363a9cf80112667ec970262da387b"
+    },
+    {
+      "classification": "UNCHANGED_ADDRESS_FREE_MODEL_AUTOMATION",
+      "note": "Actual R1_X86_CONV definition loaded by execution-components-v1; rewrites original X86_CONV and near-jump definitions. No caller offsets or table.",
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/automation-adapter-attempt2.ml",
+      "sha256": "5e4e43af192e26672ec9d74dc181392e9e892b1a147aa39fbc3e5d5bef407ed6"
+    },
+    {
+      "classification": "UNCHANGED_ADDRESS_FREE_MODEL_AUTOMATION",
+      "note": "Literal R1_ABSOLUTE_OPERATION_ETA and R1_WORD_VAL_ADDRESS propositions used by R1_X86_CONV.",
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/normalization-statements-v1.ml",
+      "sha256": "310da029fa8e8fa79fde53c056f4428a865f6e061d5c298228ee381a78686742"
+    },
+    {
+      "classification": "SUPPLIER_RECONSTRUCTION_LOAD_ORDER",
+      "note": "Pins actual source order. transfer-attempt5 does not redefine R1_X86_CONV. Supplier target-specific qualification objects remain ambient, not C2 tactic inputs.",
+      "path": "development/approved-plan/call-binding/near-indirect-v1/callee-requalification-v1/execution-components-v1.ml",
+      "sha256": "c87bd3327262477b199502b40af4215cb1967001580d1f182069a90fb3a4cd88"
+    },
+    {
+      "classification": "MIXED_MODEL_AUTOMATION_AND_OLD_ARTIFACT_FACTS",
+      "note": "R1_NORMALIZE_EXEC_RULE is address-free theorem rewriting; remainder constructs original C0 PLT rules. C2 may use function only on its new actual PLT rules, never original C0 transfer theorem.",
+      "path": "development/approved-plan/call-binding/near-indirect-v1/execution-qualification-v1/normalized-exec-attempt1.ml",
+      "sha256": "7513eb620a88e78a7998a9b9522df72f2e0109882302515ebd086a4a9071b5dc"
+    },
+    {
+      "classification": "UNCHANGED_BACKEND_OR_MODEL",
+      "note": "Pinned backend background loader; effective decode/x86 slots are overlaid with the accepted E3 files below.",
+      "path": "third_party/s2n-bignum/x86/proofs/base.ml",
+      "sha256": "6aec0a36255b39ac718e48393fa1b0580841d0670d5904585e41d00ed61af895"
+    },
+    {
+      "classification": "UNCHANGED_BACKEND_OR_MODEL",
+      "note": "Unchanged GEN_STEP_TAC/GEN_BASIC_STEP_TAC execution infrastructure.",
+      "path": "third_party/s2n-bignum/common/execution.ml",
+      "sha256": "0f30514aa347888b710a82db365fd695fd4121c9b1b477d190372bbb57dcf84c"
+    },
+    {
+      "classification": "UNCHANGED_BACKEND_OR_MODEL",
+      "note": "Unchanged memory/register component and frame conversions.",
+      "path": "third_party/s2n-bignum/common/components.ml",
+      "sha256": "b0a4f788c0d251d7d2ea0ddefb95e12e707cf67e1d743606404c74fa9189d76a"
+    },
+    {
+      "classification": "UNCHANGED_BACKEND_OR_MODEL",
+      "note": "Unchanged sequence, eventually and frame algebra.",
+      "path": "third_party/s2n-bignum/common/relational.ml",
+      "sha256": "91834ae036acb6a2b0cc83e4bdf33bf1d336cac271b1d886abf78af054947914"
+    },
+    {
+      "classification": "UNCHANGED_BACKEND_OR_MODEL",
+      "note": "Unchanged interval/nonoverlap and memory preservation facts.",
+      "path": "third_party/s2n-bignum/common/overlap.ml",
+      "sha256": "a9fe3dd2f82ed0aec8a5536600c487bca5eaa29f074e40d85a2801c7c3db445f"
+    },
+    {
+      "classification": "UNCHANGED_BACKEND_OR_MODEL",
+      "note": "Actual accepted model overlay containing decoder used by X86_MK_EXEC_RULE.",
+      "path": "development/approved-plan/call-binding/near-indirect-v1/decode-attempt5.ml",
+      "sha256": "f8824368fedd207a3d1b48545767d453e5aeea7f83b68e9e7b08e82ce36a00ab"
+    },
+    {
+      "classification": "UNCHANGED_BACKEND_OR_MODEL",
+      "note": "Actual accepted model overlay containing X86_MK_EXEC_RULE/X86_CONV and original machine transitions.",
+      "path": "development/approved-plan/call-binding/near-indirect-v1/x86-attempt5.ml",
+      "sha256": "0e2a9f1076083ce76e3510471eff1bbfd3788af67d3b4b9ece43755fea42d31f"
+    },
+    {
+      "classification": "EXCLUDED_MIXED_C1_LINKAGE_BUNDLE",
+      "note": "Inspected but not imported into C2. Statements source mixes generic propositions with exact C1 byte/address propositions. C2 actual CALL/PLT transfers will use original machine steps plus unchanged generic checked-step tactic.",
+      "path": "development/approved-plan/reusable-assurance-v1/linkage/statements-v1.ml",
+      "sha256": "0bb6f1753962240a8d2b8017346a737fe5cffef18d51989c6a7c7baf9015a3d7"
+    },
+    {
+      "classification": "EXCLUDED_MIXED_C1_LINKAGE_BUNDLE",
+      "note": "Inspected but not imported into C2. Statements source mixes generic propositions with exact C1 byte/address propositions. C2 actual CALL/PLT transfers will use original machine steps plus unchanged generic checked-step tactic.",
+      "path": "development/approved-plan/reusable-assurance-v1/linkage/proof-attempt4.ml",
+      "sha256": "0b191f8f92623c4db0ea19785d5400be521eb99bd1e9f3b06d3d724c6d5d3e35"
+    },
+    {
+      "classification": "EXCLUDED_MIXED_C1_LINKAGE_BUNDLE",
+      "note": "Inspected but not imported into C2. Statements source mixes generic propositions with exact C1 byte/address propositions. C2 actual CALL/PLT transfers will use original machine steps plus unchanged generic checked-step tactic.",
+      "path": "development/approved-plan/reusable-assurance-v1/linkage/c1-instance-attempt2.ml",
+      "sha256": "d00410479946a999f9e681123ae76a1b78aca72a2858e7b4310673e87e7f4571"
+    }
+  ],
+  "schema": "c2-reuse-supplement-v1",
+  "utc": "2026-10-04T21:37:56.188664+00:00"
+}

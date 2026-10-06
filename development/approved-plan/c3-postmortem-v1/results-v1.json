@@ -1,0 +1,231 @@
+{
+  "schema": "c3-postmortem-delivery-v1",
+  "utc": "2026-10-05T12:33:24.365547+00:00",
+  "experiment": "BP-20261005-C3-POSTMORTEM-V1",
+  "diagnostic_status": "COMPLETE_INSPECTION_ONLY",
+  "preserved_c3_outcome": "C_NOT_ACCEPTED_WITHIN_FIXED_EVALUATION_BUDGET",
+  "recommendation": "LOCAL_PROOF_COMPLETION_IN_A_SEPARATELY_AUTHORIZED_STAGE",
+  "protected_boundary_changes": false,
+  "historical_acceptance_registry_changed": false,
+  "new_guarantees_accepted": false,
+  "checker_invocations": 0,
+  "generic_layer_classification": "Inspected sources support unchanged layer under frozen local-lemma clause; no formal capability isolation/dependency certificate; human interpretation pending",
+  "unresolved": [
+    "cleanup public-pre assembly and total-frame application",
+    "saved-slot/incomingRA/code/GOT transport implication",
+    "actual second handoff and suffix-entry transport",
+    "all four final endposts and complete C3/E5 composition",
+    "exact inner v2/v3 search goals and frame-v3 runtime goal counts not recorded"
+  ],
+  "source_files": [
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/REPORT.md",
+      "bytes": 10092,
+      "sha256": "ac7bb08d775fea07f162e114b3c4d80ee72c527932d39fc9061a57f9d59cbd43"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/STAGE-v1.json",
+      "bytes": 1915,
+      "sha256": "c3019b6b8525f7206e0c1a7f6e3f6b420e3764f30c1795a72176140662b6891d"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/diagnostics/cleanup-build-obligation-map-v1.py",
+      "bytes": 31930,
+      "sha256": "c63b628c4ced45944d32ae2b8b03c03e5b74d0abf65bb13aaa9e34bed8101b45"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/diagnostics/cleanup-context-index-v1.json",
+      "bytes": 131845,
+      "sha256": "2f89cb6723231a2e9ea8f290d04dce93f42b8c7794749cd37efcec3c273fa17f"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/diagnostics/later-evidence-v1.py",
+      "bytes": 4662,
+      "sha256": "6f9ead5e16cad7928d432d4b07a8c9c70d58b13625ba2ccd1fa24744ac291cb7"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/diagnostics/later-literal-evidence-v1.json",
+      "bytes": 187567,
+      "sha256": "9d10f1b20781efcf9e6ea7d74169026db26b33eb0768c97260da54faa5177307"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/diagnostics/later-suffix-source-status-pin-v1.json",
+      "bytes": 429,
+      "sha256": "74fb79859f54c9b548bb8b1a3e301f28686ff140017ed90c51c50a03fe55fe9b"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/diagnostics/transport-literal-evidence-v1.txt",
+      "bytes": 70525,
+      "sha256": "9d801b4ed3ac56a237808e1307dfa3cde59764a0c177bcdf69bc3adc9169668b"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/diagnostics/transport-normalizer-use-scan-v1.json",
+      "bytes": 39577,
+      "sha256": "ee7ec5e689443313fe16536914336c77509065d825b5823d224baf8184965b83"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/diagnostics/transport-source-identities-v1.json",
+      "bytes": 11385,
+      "sha256": "f19c2afef9e5c5bb7d1e19f9db55aa8b920cb421f32496ef67352bef78c75a5c"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/evidence/predecessor-history-final-v1.json",
+      "bytes": 267,
+      "sha256": "2f917f0ca3b430ee8905f359ff125186ecb07e59adc23c7cb1b17d5028659980"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/evidence/predecessor-history-final-v1.log",
+      "bytes": 251,
+      "sha256": "73ec0f7b6947b4a2b45afbe99569e59db146bd1d1cfb6fc0f2c949cd9000d85f"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/evidence/predecessor-history-start-v1.json",
+      "bytes": 267,
+      "sha256": "7b8219ed8f0ab6694b69c4859d8a5936f18cdb90ba192c10a4a6b2fef3faf561"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/evidence/predecessor-history-start-v1.log",
+      "bytes": 251,
+      "sha256": "7246c257fee36888bf9c2efee5e121532f96964ee98d48364195de1ffa6b21f0"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/evidence/protected-final-v1.json",
+      "bytes": 357,
+      "sha256": "8eb8d7d2a0c0b0d5e88707da6d25c4226233c36a3ac79f88c09e1fb0c648d437"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/evidence/protected-final-v1.log",
+      "bytes": 339,
+      "sha256": "aa25cc1e4d9d0ba2599ea7205241e526f220e040590e7b5f0a6ef288a3898da9"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/evidence/protected-inputs-v1.json",
+      "bytes": 14948532,
+      "sha256": "64f110eacc3f1737ce47aa6be896506037df7ce011c38aa861182ce7b1b63b52"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/evidence/protected-seal-start-v1.log",
+      "bytes": 258,
+      "sha256": "548c2966803620445b0907f8d16f7277e10d6c75fd1701419b34c578e5def2a5"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/measurements/attempts-v1.jsonl",
+      "bytes": 8429,
+      "sha256": "ef232f02667e5037a7c798253ea0a94fc0f81b4c806df442a075db2fdba07263"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/measurements/observations-v1.json",
+      "bytes": 8084,
+      "sha256": "83c788fbe12512cd4d28a8f0648b30119c83ed4f4f71c9518b90051277fb556f"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/measurements/run-v1.py",
+      "bytes": 2127,
+      "sha256": "2c61ee93bce0244380026a96b937c2b679e0ec7335bc0cfb52e3dbf72245930a"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/review/agent-review-v1.txt",
+      "bytes": 607,
+      "sha256": "ba161c861ada05d3d19b599608800c3bd3bbb81aa22ae29414d65312d927cb9d"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/review/cleanup-analysis-v1.md",
+      "bytes": 4710,
+      "sha256": "347caa4421b7c3bd0ad6b77e984aec89089b39691caee2e833be64b12699bcbf"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/review/cleanup-obligation-map-v1.json",
+      "bytes": 128624,
+      "sha256": "3c69f54387bef896ac26bd29d5934d1b39a5fc9c745d6c6321747a553e11891f"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/review/later-analysis-v1.md",
+      "bytes": 14278,
+      "sha256": "fa831cb76f7d8ff464cb4c653a1f90f0b07fd4e3c647595a59b3818b601b336d"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/review/later-obligation-map-v1.json",
+      "bytes": 9312,
+      "sha256": "ea5c7b58535c6027b7232e04aaa141a06139f352a9096acd78e0767061ec78b8"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/review/transport-audit-v1.json",
+      "bytes": 26165,
+      "sha256": "a2bc81d7feef8a22afc6d4927d347335d18f0157e53fb27c77111d4af39f172e"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/review/transport-evidence-map-v1.json",
+      "bytes": 4983,
+      "sha256": "bc5fefb8fccef7ab7b5fea210d5560e5e330e2f0bfa8b28f4e42865671e44a95"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/review/transport-recommendation-v1.txt",
+      "bytes": 2341,
+      "sha256": "bb99ea1f217029ccc4b335d8529819082679ce49e56838d07c515963677572e8"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/scripts/check-protected-v1.py",
+      "bytes": 1942,
+      "sha256": "7b07bc26f71d95e940b204830353f7c5ae5d1cddd921806f143f24676df4efde"
+    },
+    {
+      "path": "development/approved-plan/c3-postmortem-v1/scripts/seal-protected-v1.py",
+      "bytes": 1974,
+      "sha256": "b5ba8e6c72e22633b7c205726e631f40b181b799e73b469c1fc1d6beac17acd1"
+    }
+  ],
+  "report_link_checks": [
+    {
+      "reference": "STAGE-v1.json",
+      "exists": true
+    },
+    {
+      "reference": "measurements/observations-v1.json",
+      "exists": true
+    },
+    {
+      "reference": "../held-out-transfer-v1/c3/replay/construction-cap-cleanup-endpoint-v1.txt",
+      "exists": true
+    },
+    {
+      "reference": "../held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+      "exists": true
+    },
+    {
+      "reference": "review/cleanup-obligation-map-v1.json",
+      "exists": true
+    },
+    {
+      "reference": "review/cleanup-analysis-v1.md",
+      "exists": true
+    },
+    {
+      "reference": "review/transport-audit-v1.json",
+      "exists": true
+    },
+    {
+      "reference": "review/later-analysis-v1.md",
+      "exists": true
+    },
+    {
+      "reference": "review/later-obligation-map-v1.json",
+      "exists": true
+    },
+    {
+      "reference": "evidence/protected-final-v1.json",
+      "exists": true
+    },
+    {
+      "reference": "evidence/predecessor-history-final-v1.json",
+      "exists": true
+    },
+    {
+      "reference": "results-v1.json",
+      "exists": true
+    }
+  ],
+  "delivery_validation_scope": "JSON parse and identity/link completeness only; no theorem checking or acceptance",
+  "resource_observations": "development/approved-plan/c3-postmortem-v1/measurements/observations-v1.json",
+  "human_review": "PENDING",
+  "automatic_repair_or_next_caller_started": false
+}

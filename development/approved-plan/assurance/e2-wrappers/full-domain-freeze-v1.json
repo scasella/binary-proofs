@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-09-30T13:45:53.753379+00:00",
+  "input_hashes": {
+    "full-domain-definitions.ml": "2f31609d43d64cdc1ca993c534a86e374d5edf9c18df1220e10d75cfe29cdd86",
+    "full-domain-statements.ml": "7513127bea0f5b5f1a183b778173c9482aeaa43ada7ed0b71782113c97c58bef",
+    "full-domain-proof.ml": "9a7cf0a75db7226f2ce79e1030bd3bc2e266108f592b9c7ac891769d95eefbfa",
+    "expected-full-domain-statements-v1.json": "5913b98b9c8cd43d20491cb996c7bbbbf02d7753bee8f0d3865e3f49fd667466",
+    "expected-full-domain-definitions-v1.json": "67cba8f7040160f05fece1d36ae1b1beb6b8991ce2c1f0387979f69b108074bb"
+  },
+  "requires": "restricted freeze-v1.json + proofexpert stable generic-combined-proof-v2.ml exact closure + trace/schema.ml",
+  "human_review": "PENDING",
+  "full_O1_pass": false
+}

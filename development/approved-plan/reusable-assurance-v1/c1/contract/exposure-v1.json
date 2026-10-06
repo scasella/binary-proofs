@@ -1,0 +1,39 @@
+{
+  "agent": "/root/c1_contract_and_handoff",
+  "filename_only_initial_search": "broad rg listed filenames including supplier proof paths; contents were not read",
+  "missing_reads": [
+    "spec-v1.ml",
+    "caller-prefix-proof-attempt29.ml"
+  ],
+  "other_reads": [
+    "generic/e5-definitions-v1.ml",
+    "generic/e5-statements-v1.ml",
+    "generic/checked-run-statements-v1.ml",
+    "generic/composition-statements-v1.ml"
+  ],
+  "prior_caller_source_prefix": "development/approved-plan/clients-e3/secret-v1/",
+  "prior_caller_sources": [
+    "definitions-v1.ml",
+    "statements-v1.ml",
+    "strong-prefix-spec-v1.ml",
+    "handoff-helper-statements-v1.ml",
+    "first-handoff-audit-v1.ml",
+    "strong-prefix-proof-attempt1.ml",
+    "checked-step-adapter-attempt1.ml",
+    "exact-step-adapter-attempt1.ml",
+    "handoff-helper-proof-attempt1.ml",
+    "permission-helper-statements-v1.ml",
+    "generic-helper-statements-v1.ml",
+    "generic-span-statements-v1.ml",
+    "word-helper-statements-v1.ml"
+  ],
+  "public_supplier_sources": [
+    "development/approved-plan/interface/crypto/definitions-v1.ml",
+    "development/approved-plan/contract/crypto-pre-v2.ml",
+    "development/approved-plan/assurance/e2-wrappers/full-domain-definitions.ml",
+    "development/approved-plan/call-binding/near-indirect-v1/callee-requalification-v1/statements-v1.ml"
+  ],
+  "schema": "caller-construction-exposure-v1",
+  "source_inspection_not_formal_dependency_isolation": true,
+  "supplier_bodies_read_or_imported": false
+}

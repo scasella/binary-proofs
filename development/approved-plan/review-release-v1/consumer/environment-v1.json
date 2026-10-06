@@ -1,0 +1,38 @@
+{
+  "construction_or_economics_experiment": false,
+  "docker_context": "desktop-linux",
+  "docker_info_command": [
+    "docker",
+    "info",
+    "--format",
+    "{\"id\":{{json .ID}},\"name\":{{json .Name}},\"server_version\":{{json .ServerVersion}},\"os_type\":{{json .OSType}},\"architecture\":{{json .Architecture}},\"operating_system\":{{json .OperatingSystem}}}"
+  ],
+  "docker_service": {
+    "architecture": "aarch64",
+    "id": "04912ab1-01f3-47a3-995c-adda669909c5",
+    "name": "docker-desktop",
+    "operating_system": "Docker Desktop",
+    "os_type": "linux",
+    "server_version": "29.8.1"
+  },
+  "docker_service_independence": false,
+  "external_organization_validation": false,
+  "filesystem_root_independence": true,
+  "formal_capability_isolation": false,
+  "host": {
+    "machine": "arm64",
+    "node": "MacBook-Pro.local",
+    "processor": "arm",
+    "release": "27.0.0",
+    "system": "Darwin",
+    "version": "Darwin Kernel Version 27.0.0: Tue Aug 11 21:05:48 PDT 2026; root:xnu-13432.1.9~1/RELEASE_ARM64_T6041"
+  },
+  "host_independence": false,
+  "human_review": false,
+  "operator_agent": "/root/release_runtime",
+  "operator_agent_distinct_from_release_builder": true,
+  "operator_prior_context_exposure": true,
+  "python_version": "3.13.11 (v3.13.11:627894459a8, Dec  5 2025, 11:26:37) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "schema": "review-release-consumer-environment-v1",
+  "utc": "2026-10-05T15:17:15.641988+00:00"
+}

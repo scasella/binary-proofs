@@ -1,0 +1,11 @@
+{
+  "frozen_at_utc": "2026-09-30T13:45:41.827085+00:00",
+  "stage": "before observation proof search",
+  "files": {
+    "development/approved-plan/crypto-loop/trace/noninterference/model.ml": "76977f9bde7ac489fc8d89325e906f5dd87268b2eb059df92e24e9df024b02cd",
+    "development/approved-plan/crypto-loop/trace/noninterference/schema.ml": "512db7d474c1d0361f40321911a60af185aaebc8c6fd15d0683bcbfb9b174178",
+    "development/approved-plan/crypto-loop/trace/noninterference/statements.ml": "49a1df87efda34c037658fd09db318d58617555d0526239d723e0f66b6b8e43c",
+    "development/approved-plan/crypto-loop/trace/noninterference/PLAN.md": "ee53a237222a5235d4ddd82b453be29776aec03383691e63b3049804592c156d"
+  },
+  "full_O2_pass": false
+}

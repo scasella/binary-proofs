@@ -1,0 +1,37 @@
+{
+  "schema": "later-checking-documentation-source-review-v1",
+  "created_utc": "2026-10-05T15:19:56.005350+00:00",
+  "status": "DOCUMENTARY_SOURCE_REVIEW_COMPLETE_NOT_CONSUMER_ACCEPTANCE",
+  "human_review": "PENDING",
+  "exact_adapter_inputs": [
+    {
+      "role": "parent",
+      "path": "development/approved-plan/c3-successor-v1/replay/fresh-replay-v1.py",
+      "sha256": "18a360eaf45256fb97ee060f3ba31caf0e04eead273d0845dbf0cf4cfc6355a2"
+    },
+    {
+      "role": "adapter",
+      "path": "development/approved-plan/review-release-v1/replay/c3-fresh-check-v1.py",
+      "sha256": "a7952f6522d3240edb09122f36c9657c74c8cd9e628399189d31f512bdf6c6fe"
+    },
+    {
+      "role": "parent",
+      "path": "development/approved-plan/c3-successor-v1/replay/check-root-v1.py",
+      "sha256": "01e4e85cfc6fa30e00d770a76ea4eb7d0b129e4c85edbdc1c014237a2822c848"
+    },
+    {
+      "role": "adapter",
+      "path": "development/approved-plan/review-release-v1/replay/c3-root-check-v1.py",
+      "sha256": "0de8cd373004da31d7b3344339d72ddb8152ae3335cb397a2690665bc51027cd"
+    }
+  ],
+  "historical_deadline_utc": "2026-10-05T15:45:12.242465+00:00",
+  "projection_review": "Read actual adapter diffs and checking-context-v1.py; source policy retains all original protected seal fields and old input digests, with explicit operational additions. Not formal program equivalence.",
+  "consumer_outcome": "PENDING_AT_REVIEW",
+  "protected_sources_edited": false,
+  "hypothesis_judgments": {
+    "H1": "SUPPORTED_CONDITIONAL_INSPECTION_QUALIFIED",
+    "H2": "ORIGINAL_HELD_OUT_C_FAILED_SUCCESSOR_ACCEPTED_LOCAL_COMPLETION",
+    "H3": "NOT_ATTEMPTED"
+  }
+}

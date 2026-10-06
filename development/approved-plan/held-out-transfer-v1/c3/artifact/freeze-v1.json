@@ -1,0 +1,47 @@
+{
+  "array_crosscheck": "PASS",
+  "artifact_sha256": "f3736185c45667d23d80e235245da36d99bb79e6ee1b0c7f13725fa590c53b3f",
+  "build_image": "sha256:444f775e6378c2e5523f29ceb8bbb184442277ed1114e6d37d873a7f127dfc26",
+  "build_platform": "linux/amd64",
+  "construction_clock_starts_here": false,
+  "experiment": "BP-20261005-HELD-OUT-TRANSFER-V1",
+  "files": {
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/acquire-v1.py": "9898ce31381ad0c5645935c1c74f9439d7ea31a84e295c0e867aff6e4093b813",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/build-v1.sh": "5976bb10ee07a5953ac47eb6605d0e73b580384edcc966162e24b20399a9f3f2",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/c3.S": "0edd718ddc8585ab5d201bcc691e93df7a740a189667799eb34bb29059c03778",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/caller.bin": "6ae0f7d55d26fe28db565f41851ed6be840edfa6d5a00c2652c7276fc72c353e",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/caller.hex": "1c0c23b03bb5c8957f9518602b6421aafdfc2badfd38a5de484411c49b157565",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/cleanse-plt-prefix.bin": "335211f848bb5bad98990831407c66e1fc19c22171525dc49a9ea4ccb6a91a78",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/cleanse-plt-prefix.hex": "573546ca16a2bc104dc3d447c6dc3c9064696ab01a9c848deb027c2a4f04d467",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/compiled-v1/assembler.txt": "0b97ff27fdaf6539ca0ab577bede2fe465ea4151bfc06771d7c355bf8db9adac",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/compiled-v1/build-sha256.txt": "f3ae0a0c8771bc7c7f5a81fd355609aa50e8dff9da0116cae991be547d426e1c",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/compiled-v1/c3.so": "f3736185c45667d23d80e235245da36d99bb79e6ee1b0c7f13725fa590c53b3f",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/compiled-v1/compiler.txt": "7e575ab6fefd049c43d6a74b298b043016556f4e410e77194274a0414054e807",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/compiled-v1/disassembly.txt": "74f5d278c69faefdc73f33f91e3db1c8303bd7e4ff0e54bc5d0d3aeb677802c3",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/compiled-v1/gnu-v1/gnu-plt.bin": "928433cef64ae27988046f464101f2ca903b67ebe6bb70d1300c439928a19ad9",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/compiled-v1/gnu-v1/gnu-text.bin": "9dde19cfb740d9711f104db1be0d9796818ceff5796fa523e05a93f4194436e8",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/compiled-v1/gnu-v1/nm-dynamic.txt": "4caf3a8b4ed4de36dab14ede19bf7adfb43f81c93dceecbc61b7adddf0a53e05",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/compiled-v1/readelf.txt": "d719bb0f9b6de9d3c39f63305a7d99b6fc7080f897698fbd997e774dac92feca",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/compiled-v1/supplier-binding.txt": "4358754a0c8d6821397088fd500eec7d60b110ae9c145d77557f1ff638c9252b",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/crypto-plt-prefix.bin": "b39e24957fa22aba0db5bdb8897d34e2e54bf8924e698ff956aab132c44f928d",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/crypto-plt-prefix.hex": "adc707fbb8205274e8fde2eb39f29c6f738f00f9a6f40b13108c24c581dc983b",
+    "development/approved-plan/held-out-transfer-v1/c3/artifact/inventory-v1.json": "9fac3d26e58aa86bd6e8aee59357b176fa691f6c9b81bda7cd5b1dd12b09bb1a"
+  },
+  "final_contract_freeze_required": true,
+  "human_review": "PENDING",
+  "independent_extraction": "development/approved-plan/held-out-transfer-v1/c3/replay/acquisition-discovery-v1.json",
+  "resource_limits": {
+    "cpus": 1,
+    "memory_bytes": 536870912,
+    "network": "none",
+    "pull": "never",
+    "swap_bytes": 0
+  },
+  "schema": "c3-exact-artifact-only-freeze-v1",
+  "source_kind": "assembler-authored; GCC assembled and linked",
+  "supplier_artifacts_sha256": {
+    "artifacts/baseline/libc.so.6": "6b4a45352fd0c540a9c7c718f35ce8c8e46a4e482f9d3885a910c32d1a0e1421",
+    "artifacts/baseline/libcrypto.so.3": "76dd3d93e5ee48950a92a58d59b94de8143847f91a80d9682c938767b991577d"
+  },
+  "utc": "2026-10-05T01:28:24.633992+00:00"
+}

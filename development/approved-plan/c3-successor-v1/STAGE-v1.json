@@ -1,0 +1,42 @@
+{
+  "schema": "c3-local-completion-successor-stage-v1",
+  "experiment": "BP-20261005-C3-SUCCESSOR-V1",
+  "predecessor": "BP-20261005-HELD-OUT-TRANSFER-V1",
+  "postmortem": "BP-20261005-C3-POSTMORTEM-V1",
+  "original_outcome_preserved": "C_NOT_ACCEPTED_WITHIN_FIXED_EVALUATION_BUDGET",
+  "start_utc": "2026-10-05T12:45:12.242465+00:00",
+  "deadline_utc": "2026-10-05T15:45:12.242465+00:00",
+  "construction_cap_seconds": 10800,
+  "checking_cap_seconds_per_invocation": 1800,
+  "checker_cpus": 1,
+  "checker_memory_bytes": 3221225472,
+  "checker_network": "none",
+  "checker_scope": "Includes cold source reconstruction; does not extend stage wall cap",
+  "authorized": "One C3 local proof-completion successor. Caller-local repairs/data only within unchanged frozen extension policy. No automatic later stage.",
+  "protected": [
+    "complete original C3 and postmortem sources/results",
+    "accepted C1/C2 and failed C1 predecessor",
+    "supplier contracts",
+    "caller endtheorems/domain",
+    "final linked bytes/image",
+    "ISA/model/E5 architectural scope",
+    "candidate integration algorithms",
+    "axioms and complete acceptance requirements"
+  ],
+  "adaptation_rule": "If a new universal integration rule or algorithm change is required, stop unchanged-layer path and identify it before using it. No adaptation continuation authorized.",
+  "milestones": [
+    "complete actual cleanup endpoint connected to original execution chain",
+    "full remaining C3/E5 chain",
+    "sealed complete fresh acceptance and applicable integrity controls"
+  ],
+  "measurement": "Separate stage-local and cumulative categories; overlapping checker/construction intervals not summed. Exact model/tokens/billing null unless exposed. Failed attempts retained.",
+  "human_review": "PENDING",
+  "opacity": "Existing inspection-qualified public-interface construction; no formal capability isolation",
+  "prior_exposure": "Root and workers know exact C3, failed sources and diagnostic recommendations. This is not held-out construction or economics baseline.",
+  "current_status_before": {
+    "acceptance_input": false,
+    "schema": "current_status_pointer_v1",
+    "sha256": "193750904c4159baa64f4ed8954cd3a7665d828baf08b1ac51773c9b792a5496",
+    "snapshot": "results/status/snapshots/193750904c4159baa64f4ed8954cd3a7665d828baf08b1ac51773c9b792a5496.json"
+  }
+}

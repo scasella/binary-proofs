@@ -1,0 +1,462 @@
+{
+  "anticipated_bridges": "C2-specific arithmetic, permissions, snapshot and frame adapters only. No generic statement insufficiency established before checking.",
+  "construction_started": false,
+  "excluded_work": [
+    "C3",
+    "relinking",
+    "glibc",
+    "matched economics",
+    "new capability framework"
+  ],
+  "generic_adaptations": [],
+  "model_changes_allowed": false,
+  "opacity_limits": [
+    "Source and explicit tactic-input inspection, not a formal derivation dependency certificate.",
+    "Supplier theorem objects remain ambient after reconstruction; no formal capability isolation.",
+    "Prior and current supplier construction-source recipe exposure is disclosed; no never-read claim.",
+    "Visible rewrite/congruence/conversion observations do not enumerate all ML bindings or kernel dependency edges."
+  ],
+  "planned_named_obligations": [
+    {
+      "id": "O1",
+      "name": "C2_INITIAL_COMPARE_HANDOFF",
+      "requires": [
+        "actual caller prefix/CALL/PLT/GOT",
+        "CRYPTO precondition from C2 entry",
+        "initial snapshot preservation"
+      ]
+    },
+    {
+      "id": "O2",
+      "name": "C2_CRYPTO_INTERFACE_APPLICATION",
+      "requires": [
+        "BP_E3_CRYPTO_PUBLIC_CALLER_POLICY",
+        "policy inclusion",
+        "RA_CHECKED_RUN_POLICY_MONO"
+      ]
+    },
+    {
+      "id": "O3",
+      "name": "C2_BRANCH_HANDOFF",
+      "requires": [
+        "actual TEST/Jcc semantics",
+        "result-to-initial-equality",
+        "unequal branch preservation",
+        "equal branch cleanse-ready derivation"
+      ]
+    },
+    {
+      "id": "O4",
+      "name": "C2_CLEANSE_INTERFACE_APPLICATION",
+      "requires": [
+        "BP_E3_CLEANSE_PUBLIC_CALLER_POLICY",
+        "actual second CALL/PLT/GOT",
+        "current-memory snapshot",
+        "policy inclusion"
+      ]
+    },
+    {
+      "id": "O5",
+      "name": "C2_SUFFIX_AND_FRAME",
+      "requires": [
+        "actual branch-specific suffix and RET",
+        "initial equality retained",
+        "zeros only on equal branch",
+        "full frame composition"
+      ]
+    },
+    {
+      "id": "O6",
+      "name": "C2_CHECKED_AND_NORMAL_INTERFACE",
+      "requires": [
+        "RA_CHECKED_RUN_APPEND/POST_MONO/THREE_SEGMENT",
+        "O1-O5",
+        "E5 normal/RF lift"
+      ]
+    }
+  ],
+  "public_supplier_applications": [
+    "BP_E3_CRYPTO_PUBLIC_CALLER_POLICY",
+    "BP_E3_CLEANSE_PUBLIC_CALLER_POLICY"
+  ],
+  "records": [
+    {
+      "category": "GENERIC_PARAMETERIZED",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-v1/generic/audit-v1.ml",
+      "planned_use": "Unchanged pinned reuse; no caller-name, address or instruction-offset table.",
+      "sha256": "bfb60ebbfeed9c06f5642a8e2395cadc4b15539a8fc849705166f4f58015ac83",
+      "theorem_bindings": []
+    },
+    {
+      "category": "GENERIC_PARAMETERIZED",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-v1/generic/checked-run-proof-v1.ml",
+      "planned_use": "Unchanged pinned reuse; no caller-name, address or instruction-offset table.",
+      "sha256": "ec7ca2dc38e946474486f235c086fb409e7c29c7acdcb5ce1cf3e7f96ddf81ab",
+      "theorem_bindings": [
+        "RA_CHECKED_RUN_APPEND",
+        "RA_CHECKED_RUN_POST_MONO",
+        "RA_CHECKED_RUN_POLICY_MONO"
+      ]
+    },
+    {
+      "category": "GENERIC_PARAMETERIZED",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-v1/generic/checked-run-statements-v1.ml",
+      "planned_use": "Unchanged pinned reuse; no caller-name, address or instruction-offset table.",
+      "sha256": "5c7f95bc3271f463cfba297ce9f138c53547c1317675e523804ed9a88cb240b6",
+      "theorem_bindings": []
+    },
+    {
+      "category": "GENERIC_PARAMETERIZED",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-v1/generic/composition-proof-attempt2.ml",
+      "planned_use": "Unchanged pinned reuse; no caller-name, address or instruction-offset table.",
+      "sha256": "341531d93058cd6eaf6047a5996eb16567c22c1e0acca241765a62e13c59cded",
+      "theorem_bindings": [
+        "RA_CHECKED_RUN_THREE_SEGMENT"
+      ]
+    },
+    {
+      "category": "GENERIC_PARAMETERIZED",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-v1/generic/composition-statements-v2.ml",
+      "planned_use": "Unchanged pinned reuse; no caller-name, address or instruction-offset table.",
+      "sha256": "dec1df06c234c205f57cbd8c9e3443b4feb8b67aba7c177609bf3ccb7f2bb9b8",
+      "theorem_bindings": []
+    },
+    {
+      "category": "GENERIC_PARAMETERIZED",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-v1/generic/e5-definitions-v1.ml",
+      "planned_use": "Unchanged pinned reuse; no caller-name, address or instruction-offset table.",
+      "sha256": "055800d68b9d8db8a10cc19934a47d0d555156414ebb2125275ba2959fc8273c",
+      "theorem_bindings": []
+    },
+    {
+      "category": "GENERIC_PARAMETERIZED",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-v1/generic/e5-normal-run-v1.ml",
+      "planned_use": "Unchanged pinned reuse; no caller-name, address or instruction-offset table.",
+      "sha256": "a2bf776a58c4ece6fd6f0e94faf865a2b0cb220e5b6ac627bd2ce83b696017f3",
+      "theorem_bindings": [
+        "E5_RF_RETIRED_STEP_NORMAL_EQ",
+        "E5_RF_RETIRED_EXTENDED_NORMAL_EQ",
+        "E5_CHECKED_RUN_NORMAL",
+        "E5_RF_CHECKED_RUN_NORMAL",
+        "E5_NORMAL_CHECKED_RUN_EXTENDED_LIFT"
+      ]
+    },
+    {
+      "category": "GENERIC_PARAMETERIZED",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-v1/generic/e5-qualified-step-v1.ml",
+      "planned_use": "Unchanged pinned reuse; no caller-name, address or instruction-offset table.",
+      "sha256": "750c7efa12ca66ea6ac2ec20bdb62549e1075594f06b493c7cacb5fb38bb198b",
+      "theorem_bindings": [
+        "E5_QUALIFIED_STEP_OUTSIDE_FLAGS",
+        "E5_QUALIFIED_STEP_NORMAL"
+      ]
+    },
+    {
+      "category": "GENERIC_PARAMETERIZED",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-v1/generic/e5-rf-elementary-v1.ml",
+      "planned_use": "Unchanged pinned reuse; no caller-name, address or instruction-offset table.",
+      "sha256": "d49cce4327feedbfb771b48e353e4f9d34ab0b30e080dada0f8c33aaadc265d7",
+      "theorem_bindings": [
+        "E5_RF_COMPONENT_EXTENSIONALLY_VALID",
+        "E5_RF_WRITE_READ",
+        "E5_RF_CLEAR_IDENTITY",
+        "E5_RF_CLEAR_READ_FALSE"
+      ]
+    },
+    {
+      "category": "GENERIC_PARAMETERIZED",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-v1/generic/e5-scalar-flags-v1.ml",
+      "planned_use": "Unchanged pinned reuse; no caller-name, address or instruction-offset table.",
+      "sha256": "e8af6e0a95456db45aa7064b545650546fb156d6a89c16de68b7f28c8a02eb34",
+      "theorem_bindings": [
+        "E5_FLAG_BITS_ORTHOGONAL",
+        "E5_READ_FLAG_FRAME_TAC",
+        "E5_SCALAR_OPERATION_OUTSIDE_FLAGS"
+      ]
+    },
+    {
+      "category": "GENERIC_PARAMETERIZED",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-v1/generic/e5-statements-v1.ml",
+      "planned_use": "Unchanged pinned reuse; no caller-name, address or instruction-offset table.",
+      "sha256": "a0f6b924a4a97a2c8d6cc239ca56bfeed0113b5bade39acc48279c7f4be638b4",
+      "theorem_bindings": []
+    },
+    {
+      "category": "GENERIC_PARAMETERIZED",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-v1/generic/load-span-frame-v1.ml",
+      "planned_use": "Unchanged pinned reuse; no caller-name, address or instruction-offset table.",
+      "sha256": "c98aa6bac23be534a5df2abb52461d912e66f958311c06cf38bcda0c21dda018",
+      "theorem_bindings": []
+    },
+    {
+      "category": "GENERIC_PARAMETERIZED",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-v1/generic/load-v3.ml",
+      "planned_use": "Unchanged pinned reuse; no caller-name, address or instruction-offset table.",
+      "sha256": "7e17db61529908ca42fc9afd3c5eb7e07432133769e15be24ee56394f6ac3874",
+      "theorem_bindings": []
+    },
+    {
+      "category": "GENERIC_PARAMETERIZED",
+      "construction_exposure": true,
+      "path": "development/approved-plan/clients-e3/secret-v1/generic-span-statements-v1.ml",
+      "planned_use": "Unchanged pinned span/four-component frame exports only.",
+      "sha256": "357610d80a55384da575f47b328bb49190db4630a2c001198ee471747967bb6f",
+      "theorem_bindings": []
+    },
+    {
+      "category": "GENERIC_PARAMETERIZED",
+      "construction_exposure": true,
+      "path": "development/approved-plan/clients-e3/secret-v1/generic-span-proof-attempt3.ml",
+      "planned_use": "Unchanged pinned span/four-component frame exports only.",
+      "sha256": "c9c0f7757d2833da800199a7a5967c928106a803e49fe7b2f5e8ac3094b3ea44",
+      "theorem_bindings": [
+        "R1_SECRET_SPAN_MONO",
+        "R1_SECRET_SPAN_SUBSPAN",
+        "R1_SECRET_SPAN_REGION"
+      ]
+    },
+    {
+      "category": "GENERIC_PARAMETERIZED",
+      "construction_exposure": true,
+      "path": "development/approved-plan/clients-e3/secret-v1/generic-four-frame-statements-v1.ml",
+      "planned_use": "Unchanged pinned span/four-component frame exports only.",
+      "sha256": "db1427c8264dbc34f051ce1b14deb73a8b131859122f29dcc134f03d10926cf4",
+      "theorem_bindings": []
+    },
+    {
+      "category": "GENERIC_PARAMETERIZED",
+      "construction_exposure": true,
+      "path": "development/approved-plan/clients-e3/secret-v1/generic-four-frame-proof-attempt1.ml",
+      "planned_use": "Unchanged pinned span/four-component frame exports only.",
+      "sha256": "45aaac107dc9658bd7289b724f0f1e219c0228a77058ea75bbdfef106d103bec",
+      "theorem_bindings": [
+        "R1_SECRET_FOUR_FRAME_PRESERVATION"
+      ]
+    },
+    {
+      "category": "SUPPLIER_PUBLIC_PACKAGE",
+      "construction_exposure": true,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/callee-requalification-v1/statements-v1.ml",
+      "planned_use": "Reconstructed supplier chain; caller consumes public policy/interface statements, not instruction lemmas.",
+      "sha256": "aee7687bf64b6fc24a26ad79411dc2a6bc73cb16fffbc78f53589d6533c0641b",
+      "theorem_bindings": []
+    },
+    {
+      "category": "SUPPLIER_CONSTRUCTION_SOURCE",
+      "construction_exposure": true,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/callee-requalification-v1/proof-attempt2.ml",
+      "planned_use": "Reconstructed supplier chain; caller consumes public policy/interface statements, not instruction lemmas.",
+      "sha256": "492c129c75e09fee9319be1e6efc9c0ed990462cccd6d8c7e86a05bb9f4a4882",
+      "theorem_bindings": [
+        "BP_E3_CRYPTO_PUBLIC_CALLER_POLICY",
+        "BP_E3_CRYPTO_PUBLIC_CALLER_INTERFACE",
+        "BP_E3_CLEANSE_PUBLIC_CALLER_POLICY",
+        "BP_E3_CLEANSE_PUBLIC_CALLER_INTERFACE"
+      ]
+    },
+    {
+      "category": "SUPPLIER_PUBLIC_PACKAGE",
+      "construction_exposure": true,
+      "path": "development/approved-plan/call-binding/near-indirect-v1/callee-requalification-v1/opaque-callee-loader-v3.ml",
+      "planned_use": "Reconstructed supplier chain; caller consumes public policy/interface statements, not instruction lemmas.",
+      "sha256": "807a75e9074cfeb88b6bb03bebb5c92c55f0b1095f0b21b3aceeb2ed18c4d93c",
+      "theorem_bindings": []
+    },
+    {
+      "category": "SUPPLIER_PUBLIC_CONTRACT",
+      "construction_exposure": true,
+      "path": "spec/e2/02-definitions-v1.ml",
+      "planned_use": "Definitions and literal statements unchanged.",
+      "sha256": "f0d427d419df29026aa1b2cba30908c19ddea10e3e2bd9bccbfb1d73d7481a15",
+      "theorem_bindings": []
+    },
+    {
+      "category": "C1_SPECIFIC_RECIPE_ONLY",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-v1/c1/application/proof-attempt1.ml",
+      "planned_use": "Do not import: fixed C1 addresses/stack-16/control-flow/return facts must be separately reproved for C2.",
+      "sha256": "17018651c03105ab71ec954cfbc37b6dcae086d269808e3f0099a952b65d7b30",
+      "theorem_bindings": [
+        "C1_APP_EVENT_POLICY_MONO",
+        "C1_APP_ALL_POLICY_MONO",
+        "C1_APP_STEP_POLICY_MONO",
+        "C1_CRYPTO_READ_INCLUSION",
+        "C1_CRYPTO_WRITE_INCLUSION",
+        "C1_CRYPTO_FETCH_INCLUSION",
+        "C1_CRYPTO_INTERFACE_APPLICATION",
+        "C1_CRYPTO_POLICY_WIDEN",
+        "C1_CRYPTO_SEGMENT_APPLICATION"
+      ]
+    },
+    {
+      "category": "C1_SPECIFIC_RECIPE_ONLY",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-v1/c1/handoff/helpers-proof-attempt4.ml",
+      "planned_use": "Do not import: fixed C1 addresses/stack-16/control-flow/return facts must be separately reproved for C2.",
+      "sha256": "8f5cb969d67c222f46f0e6f6b4a6257cbff2fd8fda1d1a0a1ad9b3daf92be6be",
+      "theorem_bindings": [
+        "C1_CALLER_FETCH_SPAN",
+        "C1_PLT_FETCH_SPAN",
+        "C1_GOT_READ_SPAN",
+        "C1_LIBRARY_SLOT_DISJOINT",
+        "C1_SLOT_BYTE_NONOVERLAPPING",
+        "C1_PREFIX_FRAME_BYTE",
+        "C1_PREFIX_FRAME_INCOMING_SLOT",
+        "C1_UNCHANGED_BUFFER"
+      ]
+    },
+    {
+      "category": "C1_SPECIFIC_RECIPE_ONLY",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-v1/c1/composition/helpers-proof-attempt9.ml",
+      "planned_use": "Do not import: fixed C1 addresses/stack-16/control-flow/return facts must be separately reproved for C2.",
+      "sha256": "420195930003299afced43058f38254d78426f4ae54056c799424ba4d77037fc",
+      "theorem_bindings": [
+        "C1_TAIL_FRAME_INCLUDED",
+        "C1_TAIL_FRAME_COMPOSE",
+        "C1_COMPOSITION_ACCESS_TAC",
+        "C1_COMPLETED_TAIL_PRE",
+        "C1_COMPLETED_TAIL_POST",
+        "C1_SHIFTED_SEGMENT_POLICY",
+        "C1_STEP_POLICY_QUALIFIED",
+        "C1_COMPLETED_TAIL_RUN"
+      ]
+    },
+    {
+      "category": "C1_SPECIFIC_RECIPE_ONLY",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-v1/c1/completion/definitions-v1.ml",
+      "planned_use": "Do not import: fixed C1 addresses/stack-16/control-flow/return facts must be separately reproved for C2.",
+      "sha256": "90c3918b63ac6bd6b80818acc09d6e58e7c7ea6cf96266920e3bed148c6b117f",
+      "theorem_bindings": []
+    },
+    {
+      "category": "C1_SPECIFIC_RECIPE_ONLY",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-c1-successor-v1/proofs/proof-attempt2.ml",
+      "planned_use": "Inspect accepted composition proof shape only; no C1 execution theorem import.",
+      "sha256": "367f2ab6ddb49e2753c1335246c467e3cf9564a44d586d9777795310900adad5",
+      "theorem_bindings": [
+        "C1_CRYPTO_CALLER_CHECKED",
+        "C1_COMPOSITION_CHECKED_TAC",
+        "C1_COMPOSITION_QUALIFIED_TAC",
+        "C1_CRYPTO_CALLER_INTERFACE",
+        "C1_CRYPTO_CALLER_NORMAL_CHECKED",
+        "C1_CRYPTO_CALLER_RF_NORMAL_CHECKED",
+        "C1_CRYPTO_CALLER_NORMAL_INTERFACE",
+        "C1_CRYPTO_CALLER_COUNT"
+      ]
+    },
+    {
+      "category": "C0_SPECIFIC_RECIPE_ONLY",
+      "construction_exposure": true,
+      "path": "development/approved-plan/clients-e3/secret-v1/cleanse-application-proof-attempt1.ml",
+      "planned_use": "Inspected recipe; C0 stack/address/control-flow facts are not generic C2 infrastructure.",
+      "sha256": "3e8f14e1f779088e93475c54a95f37a23fd31d1a9dd9fb1ee8d983466c7d2e56",
+      "theorem_bindings": [
+        "R1_SECRET_CLEANSE_INTERFACE_APPLICATION",
+        "R1_SECRET_CLEANSE_INTERFACE_CALLER_POLICY",
+        "R1_SECRET_CLIENT_CLEANSE_COMPLETION"
+      ]
+    },
+    {
+      "category": "C0_SPECIFIC_RECIPE_ONLY",
+      "construction_exposure": true,
+      "path": "development/approved-plan/clients-e3/secret-v1/cleanse-frame-helper-proof-attempt2.ml",
+      "planned_use": "Inspected recipe; C0 stack/address/control-flow facts are not generic C2 infrastructure.",
+      "sha256": "d45125831f2d87f297c43dfe6c62b68ccf4267bb72a9029073fc3f53eda4dc3f",
+      "theorem_bindings": [
+        "R1_SECRET_CLEANSE_FRAME_SLOT",
+        "R1_SECRET_CLEANSE_FRAME_CODE",
+        "R1_SECRET_PREFIX_UNTOUCHED",
+        "R1_SECRET_MIDDLE_UNTOUCHED"
+      ]
+    },
+    {
+      "category": "C0_SPECIFIC_RECIPE_ONLY",
+      "construction_exposure": true,
+      "path": "development/approved-plan/clients-e3/secret-v1/middle-handoff-proof-attempt9.ml",
+      "planned_use": "Inspected recipe; C0 stack/address/control-flow facts are not generic C2 infrastructure.",
+      "sha256": "300cac43ad5ea1404d2e163e1c580586927809fca2e69e8cd1bced2dc81bf10b",
+      "theorem_bindings": [
+        "R1_SECRET_MIDDLE_PERMISSION_TAC",
+        "R1_SECRET_CLIENT_MIDDLE_HANDOFF"
+      ]
+    },
+    {
+      "category": "C0_SPECIFIC_RECIPE_ONLY",
+      "construction_exposure": true,
+      "path": "development/approved-plan/clients-e3/secret-v1/cleanse-returned-facts-proof-attempt7.ml",
+      "planned_use": "Inspected recipe; C0 stack/address/control-flow facts are not generic C2 infrastructure.",
+      "sha256": "978dc659857df67db33cd5645c4fb3f252f39db53177b5dbd4aed174e08bc24a",
+      "theorem_bindings": [
+        "R1_SECRET_OUTER_SEQ_TAC",
+        "R1_SECRET_CLEANSE_RETURNED_FACTS"
+      ]
+    },
+    {
+      "category": "ARTIFACT_AND_ACCEPTANCE_MACHINERY",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-c1-successor-v1/replay/freeze-v7.py",
+      "planned_use": "Reuse acceptance policy and extraction checks; any C2 path/count adaptation must remain explicit.",
+      "sha256": "bac459689bc1b4166652f90a8ccaa841c158ac49d18e7905ac75a0bcbf08a615",
+      "theorem_bindings": []
+    },
+    {
+      "category": "ARTIFACT_AND_ACCEPTANCE_MACHINERY",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-c1-successor-v1/replay/fresh-replay-v5.py",
+      "planned_use": "Reuse acceptance policy and extraction checks; any C2 path/count adaptation must remain explicit.",
+      "sha256": "af615cdcde944ee6cc8782e2b91aba6863f0c9920a0f0b85ec77385c3dacf143",
+      "theorem_bindings": []
+    },
+    {
+      "category": "ARTIFACT_AND_ACCEPTANCE_MACHINERY",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-c1-successor-v1/replay/check-root-v3.py",
+      "planned_use": "Reuse acceptance policy and extraction checks; any C2 path/count adaptation must remain explicit.",
+      "sha256": "231ce9d44c12530ca99e091a82aa961ab813effc3a776e701717a3be2d05a1b6",
+      "theorem_bindings": []
+    },
+    {
+      "category": "ARTIFACT_AND_ACCEPTANCE_MACHINERY",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-c1-successor-v1/replay/targeted-preflight-controls-v3.py",
+      "planned_use": "Reuse acceptance policy and extraction checks; any C2 path/count adaptation must remain explicit.",
+      "sha256": "477e7b512853eec2aecfc945ae366504281d00d750e1837b20c965348363704f",
+      "theorem_bindings": []
+    },
+    {
+      "category": "ARTIFACT_AND_ACCEPTANCE_MACHINERY",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-c1-successor-v1/replay/missing-interface-probe-v3.py",
+      "planned_use": "Reuse acceptance policy and extraction checks; any C2 path/count adaptation must remain explicit.",
+      "sha256": "9b579add3ad7751bf892c5ae4e4094f17684ba0bb09eb1f1fe81d8e18260ef07",
+      "theorem_bindings": []
+    },
+    {
+      "category": "ARTIFACT_AND_ACCEPTANCE_MACHINERY",
+      "construction_exposure": true,
+      "path": "development/approved-plan/reusable-assurance-c1-successor-v1/replay/c1-successor-final-v3-seal.json",
+      "planned_use": "Reuse acceptance policy and extraction checks; any C2 path/count adaptation must remain explicit.",
+      "sha256": "556fe357859921992293b7eedd7fc1338bf737502069502b50cdfffe5e114a0c",
+      "theorem_bindings": []
+    }
+  ],
+  "schema": "c2_reusable_input_classification_v1",
+  "status": "PRECONSTRUCTION_INSPECTION_ONLY",
+  "utc": "2026-10-04T21:28:47.933213+00:00"
+}

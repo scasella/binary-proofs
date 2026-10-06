@@ -1,0 +1,8 @@
+{
+  "status": "FROZEN_BEFORE_WRAPPER_SEARCH",
+  "file": "development/approved-plan/cleanse/functional/bounded/e2-statements-v1.ml",
+  "sha256": "58a1117d6f38e765499c15439733fbb78af4d93b43136a657b623712491c4abd",
+  "root_spec": "development/approved-plan/cleanse/spec-v2.ml",
+  "root_spec_sha256": "770be48e0786e1ce1b50141a45e65e8bebd8ded14dfbea9d9ee9ec82a4a5326b",
+  "scope": "Same unchanged full E2 Pre; modeled functional/frame exact finite count; access/ABI separate"
+}

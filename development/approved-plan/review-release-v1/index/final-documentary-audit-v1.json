@@ -1,0 +1,70 @@
+{
+  "assurance_boundary": "Source and documentary inspection plus trusted Python SHA-256 identity comparisons; not a proof of parser correctness, ISA correspondence, mathematical theorem validity, or semantic mutation rejection.",
+  "auditor": "/root/release_index",
+  "complete_gates": {
+    "C1": {
+      "full_C1_acceptance": true,
+      "path": "development/approved-plan/review-release-v1/consumer/cases/C1/complete-gate.json",
+      "sha256": "cc7438e633c8defe117f8025f5ebaba53fce1efe276e31a0668631c45ce8ace4",
+      "status": "FRESH_ACCEPTED_WITH_FIVE_INTEGRITY_CONTROLS_AND_FRESH_BINDING_PROBE"
+    },
+    "C2": {
+      "full_C2_acceptance": true,
+      "path": "development/approved-plan/review-release-v1/consumer/cases/C2/complete-gate.json",
+      "sha256": "2fa77ea1d8b94cbccf80acffa1a6766809b4da5d9e8cc715b6e26b170b3d0502",
+      "status": "FRESH_ACCEPTED_WITH_FIVE_INTEGRITY_CONTROLS_AND_FRESH_BINDING_PROBE"
+    },
+    "C3": {
+      "full_C3_acceptance": true,
+      "path": "development/approved-plan/review-release-v1/consumer/cases/C3/complete-gate.json",
+      "sha256": "111416ed28985c9abc5fb810f72bcfa49a658e72d2ae73b2e99d6f84434ac323",
+      "status": "FRESH_ACCEPTED_WITH_FIVE_INTEGRITY_CONTROLS_AND_FRESH_BINDING_PROBE"
+    }
+  },
+  "documents_inspected": [
+    "README.md",
+    "delivery/CHECKING-v1.md",
+    "delivery/REVIEW-v1.md",
+    "consumer/README.md",
+    "REPORT.md",
+    "release-index-v1.json",
+    "scripts/check-case-v1.py",
+    "scripts/extract-v1.py",
+    "scripts/extract-review-v1.py",
+    "scripts/seal-review-v1.py"
+  ],
+  "findings": {
+    "concrete_blockers": [],
+    "documentary_agreement": [
+      "Recorded complete gates and consumer summary agree with current release status.",
+      "Checking commands, resource limits, unchanged-input projection and preserved historical deadline behavior agree with recorded results.",
+      "Companion extraction command is present in delivery/REVIEW-v1.md.",
+      "Actual checker/probe mounts use relocated consumer sources, with shared-host and service limitations disclosed."
+    ],
+    "missing_necessary_consumer_steps": []
+  },
+  "human_review": "PENDING",
+  "independence_limits": {
+    "consumer_agent_prior_context_exposure": true,
+    "external_organizational_validation": false,
+    "filesystem_relocation_is_not_arbitrary_binary_ASLR_proof": true,
+    "formal_capability_isolation": false,
+    "independent_human_validation": false,
+    "shared_docker_service": true,
+    "shared_host": true
+  },
+  "mathematical_input_identity_check": {
+    "count_excludes_manifest_itself": true,
+    "files_checked": 855,
+    "manifest": "development/approved-plan/review-release-v1/inputs/release-inputs-v1.json",
+    "manifest_sha256": "bb91c404411554fc48a1c34fe1107278067ffbf76cdc759b20c833bffd85a1fd",
+    "missing_or_changed_files": 0,
+    "status": "ALL_RECORDED_FILE_DIGESTS_MATCH"
+  },
+  "outcome": "NO_CONCRETE_DOCUMENTARY_BLOCKER_IDENTIFIED",
+  "proofs_replayed_by_this_audit": false,
+  "protected_files_changed": false,
+  "recorded_utc": "2026-10-05T16:22:50.316628+00:00",
+  "schema": "review-release-final-documentary-audit-v1",
+  "scope": "Completed bounded documentary and file-identity inspection only; no repeat audit, proof replay, mathematical validation, or human review."
+}

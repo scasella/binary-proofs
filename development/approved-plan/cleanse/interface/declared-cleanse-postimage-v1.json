@@ -1,0 +1,208 @@
+{
+  "artifact": "artifacts/baseline/libcrypto.so.3",
+  "artifact_sha256": "76dd3d93e5ee48950a92a58d59b94de8143847f91a80d9682c938767b991577d",
+  "binding_policy": {
+    "code_predicate": "lw_reference_code image",
+    "formal_witness_extension": "lw_memory overlays only stack/input pages disjoint from declared library pages and must preserve image there",
+    "full_image_formalization": "NOT_YET_CHECKED",
+    "independent_extraction": "Required fresh GNU objcopy cross-check via scripts/check.py:binding; separate trust boundary, not a formal parser proof",
+    "loader_verified": false,
+    "parser_formally_verified": false,
+    "physical_permissions_verified": false
+  },
+  "elf_build_id": "74848a2aca370758e15c5a7a5e406b47ee56ac14",
+  "entry_pc": 270800960,
+  "experiment_id": "BP-20260930-E2-CANDIDATE",
+  "human_review": "PENDING",
+  "id": "BP-E2-CRYPTO-DECLARED-POSTIMAGE-V1",
+  "image_variable": "image : int64 -> byte",
+  "input_hashes": {
+    "declare.py": "ca9ba4d8adf968be96a2e078afd5fa07cb85682f3742065e3190ae27d1ecf26b",
+    "inventory/artifacts.json": "b3f8c603c801b0493bcbd39d6fc118d45bdf1799f13bd6b206af83b53c7814d1",
+    "inventory/loading.json": "956b56afacf2c727bf1819d68a0ef55cbe903fe360f8693b6fcfd4b604879b90",
+    "scripts/check.py": "b8ef712ecc17c18b1858ee67a107733cfc634f4926a22ae6edff9cde915aa705",
+    "scripts/inventory.py": "6f35da09dea20999a64f5698618b369822c3eac60ebe7d6b161021206f163cff"
+  },
+  "load_bias": 268435456,
+  "permission_granule": 4096,
+  "postinit_image_assumptions": [
+    "One consistent mathematical image map supplies every declared PT_LOAD page. The map agrees with frozen final-file bytes in file-backed immutable locations; no text relocations or interposition modify the target code.",
+    "Ordinary loader relocation and initialization effects in writable data are explicit environmental poststate. Their resulting byte values remain arbitrary public image state for this routine, which has no global-data read or call.",
+    "Initial BSS is zero-filled by the loading recipe; subsequent writable global state may change during initialization. No correctness behavior of a target routine is assumed.",
+    "PT_GNU_RELRO pages become read-only after initialization. Mapped page permissions remain stable and are enforced by the unverified environment.",
+    "The selected processor profile has CET disabled, 48-bit canonical addresses and AC clear; sequential execution has no concurrent changes to code, inputs, return slot, permissions or relevant processor state."
+  ],
+  "postinit_writable_page_intervals": [
+    [
+      273170432,
+      273195008
+    ]
+  ],
+  "provenance_of_page_constants": "Unchanged development/approved-plan/loading/declared-postimage-v1.json; new target metadata is inventory/targets.json OPENSSL_cleanse row",
+  "relocations": {
+    "count": 21117,
+    "inventory": "inventory/relocations/libcrypto.so.3.json",
+    "loader_execution": "ASSUMED; no checked relocation algorithm",
+    "reached_by_CRYPTO_memcmp": [],
+    "sha256": "ef46d2af62faa1715bc0577fbb4b66a33f7b68ce540439cefc67985c34f4ca56",
+    "types": [
+      1,
+      6,
+      7,
+      8
+    ]
+  },
+  "relro_readonly_page_interval": [
+    272769024,
+    273170432
+  ],
+  "scope": "Whole post-initialization image at OPENSSL_cleanse public entry; initialized map bound only at entry",
+  "segments": [
+    {
+      "elf": {
+        "align": 4096,
+        "file_offset": 0,
+        "file_size": 805840,
+        "flags": 4,
+        "memory_size": 805840,
+        "paddr": 0,
+        "permissions": "R",
+        "type": 1,
+        "vaddr": 0
+      },
+      "initial_zero_fill_interval": [
+        269241296,
+        269241296
+      ],
+      "loaded_file_interval": [
+        268435456,
+        269241296
+      ],
+      "mapped_page_interval": [
+        268435456,
+        269242368
+      ],
+      "padding": "Bytes outside the mathematical PT_LOAD interval but inside its pages are ordinary stable public image bytes, explicitly unspecified. They are not target dependencies.",
+      "source_file_interval": [
+        0,
+        805840
+      ]
+    },
+    {
+      "elf": {
+        "align": 4096,
+        "file_offset": 806912,
+        "file_size": 2614473,
+        "flags": 5,
+        "memory_size": 2614473,
+        "paddr": 806912,
+        "permissions": "RX",
+        "type": 1,
+        "vaddr": 806912
+      },
+      "initial_zero_fill_interval": [
+        271856841,
+        271856841
+      ],
+      "loaded_file_interval": [
+        269242368,
+        271856841
+      ],
+      "mapped_page_interval": [
+        269242368,
+        271859712
+      ],
+      "padding": "Bytes outside the mathematical PT_LOAD interval but inside its pages are ordinary stable public image bytes, explicitly unspecified. They are not target dependencies.",
+      "source_file_interval": [
+        806912,
+        3421385
+      ]
+    },
+    {
+      "elf": {
+        "align": 4096,
+        "file_offset": 3424256,
+        "file_size": 907840,
+        "flags": 4,
+        "memory_size": 907840,
+        "paddr": 3424256,
+        "permissions": "R",
+        "type": 1,
+        "vaddr": 3424256
+      },
+      "initial_zero_fill_interval": [
+        272767552,
+        272767552
+      ],
+      "loaded_file_interval": [
+        271859712,
+        272767552
+      ],
+      "mapped_page_interval": [
+        271859712,
+        272769024
+      ],
+      "padding": "Bytes outside the mathematical PT_LOAD interval but inside its pages are ordinary stable public image bytes, explicitly unspecified. They are not target dependencies.",
+      "source_file_interval": [
+        3424256,
+        4332096
+      ]
+    },
+    {
+      "elf": {
+        "align": 4096,
+        "file_offset": 4333136,
+        "file_size": 407256,
+        "flags": 6,
+        "memory_size": 419680,
+        "paddr": 4337232,
+        "permissions": "RW",
+        "type": 1,
+        "vaddr": 4337232
+      },
+      "initial_zero_fill_interval": [
+        273179944,
+        273192368
+      ],
+      "loaded_file_interval": [
+        272772688,
+        273179944
+      ],
+      "mapped_page_interval": [
+        272769024,
+        273195008
+      ],
+      "padding": "Bytes outside the mathematical PT_LOAD interval but inside its pages are ordinary stable public image bytes, explicitly unspecified. They are not target dependencies.",
+      "source_file_interval": [
+        4333136,
+        4740392
+      ]
+    }
+  ],
+  "status": "DECLARATION_ONLY_NOT_A_PROOF",
+  "target_region": {
+    "artifact_sha256": "76dd3d93e5ee48950a92a58d59b94de8143847f91a80d9682c938767b991577d",
+    "bytes_hex": "f30f1efa4831c04883fe0f73234883fe00740c88074883ee01488d7f0175f4f3c366662e0f1f8400000000000f1f400048f7c707000000740c8807488d76ff488d7f01ebeb488907488d76f848f7c6f8ffffff488d7f0875ec4883fe0075b4f3c3",
+    "bytes_sha256": "3851f7a1688c62eb51d845c6bab76313f3626c4a3beafaa82468115e0a765c16",
+    "configuration_predicate": "unmodified Debian OpenSSL x86-64 assembly",
+    "contract_digest": "2596ead2468157cc1a08046c08a8bf4f334f85dc4958b1f0e781eb44b287a8f1",
+    "contract_digest_kind": "frozen human-readable requirements; formalization pending",
+    "contract_status": "spec/freeze.json",
+    "declared_region_bytes": 97,
+    "elf_vaddr": 2365392,
+    "entry_point": "OPENSSL_cleanse",
+    "extent_evidence": "exported final ELF symbol extent",
+    "external_calls_observed": [],
+    "extraction_relationship": "file_offset=PT_LOAD.p_offset+(elf_vaddr-PT_LOAD.p_vaddr)",
+    "file_offset": 2365392,
+    "gnu_byte_crosscheck": "PASS",
+    "implementation_variant": "OPENSSL_cleanse",
+    "reachability_proof_status": "NOT_PROVED",
+    "reachable_helpers_observed": [],
+    "relocations_within_region": [],
+    "runtime_prefix_check": "PASS",
+    "size": 97,
+    "unique_covered_instruction_bytes": 0
+  },
+  "target_relocation_overlaps": []
+}

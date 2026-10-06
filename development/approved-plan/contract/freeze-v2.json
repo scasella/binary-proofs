@@ -1,0 +1,20 @@
+{
+  "experiment_id": "BP-20260930-E2",
+  "status": "FROZEN_CANDIDATE_NOT_ACTIVATED",
+  "human_review": "PENDING",
+  "full_O1_pass": false,
+  "path": "development/approved-plan/contract/crypto-pre-v2.ml",
+  "sha256": "6a90c3796d7b0a100c53fa365ab4309ebf25baf0861b79b8824093fe816b30d1",
+  "frozen_at_utc": "2026-09-30T11:57:06.957994+00:00",
+  "main_proof_search_started": false,
+  "dependencies": {
+    "canonical_span_region_definitions": "development/approved-plan/assurance/policy.ml",
+    "production_bytes": "proofs/qualification/openssl_bytes.ml"
+  },
+  "previous_draft": {
+    "path": "development/approved-plan/contract/crypto-pre.ml",
+    "sha256": "06156eecd1b3d6a5093221a8cf233744f5b860fcf0271ae2fbda916bc593715f",
+    "status": "HOL_PARAMETER_NAME_COLLISION",
+    "meaning_change": false
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "approved_assumptions_added": [],
+  "caller_entry_premises_changed": false,
+  "files": {
+    "proofs/suffix/definitions-v1.ml": "1b4549785f975f624b22159507568da6d6aefcb8cface54ee33974d63761e859"
+  },
+  "human_review": "PENDING",
+  "literal_equations": {
+    "c2_suffix_post": {
+      "equation": "c2_suffix_post stackpointer ra p q n m (initial:x86state) (returned:x86state) (t:x86state) <=>\n    read RIP t=ra /\\ read RSP t=word_add stackpointer (word 8) /\\\n    read RAX t=(if c2_equal m p q n then word 1 else word 0) /\\\n    read RBX t=read RBX initial /\\ read RBP t=read RBP initial /\\ read R12 t=read R12 initial /\\\n    read R13 t=read R13 returned /\\ read R14 t=read R14 returned /\\ read R15 t=read R15 returned /\\\n    read DF t=read DF returned /\\ read memory t=read memory returned /\\\n    (MAYCHANGE [RIP;RSP;RAX;RBX;RBP;R12] ,, MAYCHANGE [events]) returned t",
+      "equation_utf8_sha256": "148256ac2505ca0e8a8b2e9bdf085be726f032ff5ba9cd6ac040689ddc358cda",
+      "source": "proofs/suffix/definitions-v1.ml"
+    },
+    "c2_suffix_pre": {
+      "equation": "c2_suffix_pre stackpointer ra p q n m rp wp xp ordinary (initial:x86state) (returned:x86state) <=>\n    32<=val(stackpointer:int64) /\\ val stackpointer+8<2 EXP 64 /\\\n    bytes_loaded returned (word 0x22001120) c2_caller_mc /\\\n    read RIP returned=(if c2_equal m p q n then word 0x22001153 else word 0x2200113a) /\\\n    read RSP returned=word_sub stackpointer (word 24) /\\\n    read R12 returned=(if c2_equal m p q n then word 1 else word 0) /\\\n    read (memory :> bytes64 (word_sub stackpointer (word 24))) returned=read RBX initial /\\\n    read (memory :> bytes64 (word_sub stackpointer (word 16))) returned=read RBP initial /\\\n    read (memory :> bytes64 (word_sub stackpointer (word 8))) returned=read R12 initial /\\\n    read (memory :> bytes64 stackpointer) returned=ra /\\\n    assurance_span_ok (c2_allowed_read rp ordinary stackpointer p q n)\n      (val stackpointer-32) 32 /\\\n    assurance_span_ok (c2_allowed_read rp ordinary stackpointer p q n)\n      (val stackpointer) 8 /\\\n    assurance_span_ok (c2_allowed_fetch xp ordinary) 0x22001120 59",
+      "equation_utf8_sha256": "b787929214c67ad194208d2b196932875777a2c8cd3d8c1e4d439be69fa4164a",
+      "source": "proofs/suffix/definitions-v1.ml"
+    }
+  },
+  "public_contract_freeze_sha256": "26b2d7d8cc214d8a45a427eacc81dab1055998fd01fef2687afb89fda821cceb",
+  "purpose": "Proven endpoints and frame/effect predicates for named end-to-end obligations; never assumed caller preconditions",
+  "schema": "c2-additive-proof-phase-definition-freeze-v1",
+  "status": "FROZEN_DEFINITIONS_NOT_PROOFS",
+  "utc": "2026-10-04T22:14:42.133173+00:00"
+}

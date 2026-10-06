@@ -1,0 +1,53 @@
+{
+  "acceptance_input": false,
+  "billing_or_tokens": null,
+  "billing_or_tokens_reason": "Runtime does not expose complete exact counters.",
+  "construction": {
+    "active_seconds": null,
+    "cap_seconds": 10800,
+    "interpretation": "Elapsed source-construction window includes artifact/specification preparation, development checks and coordination. It is not active construction CPU. Final seal precedes separate fresh reconstruction.",
+    "proof_source_sealed_at": "2026-10-05T00:05:53.024678+00:00",
+    "reason": "Exclusive agent thinking/source search and coordination were not exposed.",
+    "stage_start": "2026-10-04T21:24:09.951522+00:00"
+  },
+  "coordination": {
+    "exclusive_seconds": null,
+    "reason": "Shared overlapping development and checking windows; no exclusive timer."
+  },
+  "counting_rule": "Do not add phase wall to complete wall; supplier wall includes HOL initialization while supplier CPU begins later. Probe and positive checking are separate attempts.",
+  "fresh_binding_probe": {
+    "measurements": {
+      "caller_cpu_seconds": null,
+      "caller_wall_seconds": null,
+      "checker_wall_seconds": 436.0130792090058,
+      "cpu_scope": null,
+      "elapsed_seconds": 442.97663970899885,
+      "supplier_cpu_seconds": null,
+      "supplier_wall_seconds": null,
+      "wall_scope": null
+    },
+    "not_positive_caller_construction": true,
+    "receipt": "development/approved-plan/reusable-assurance-c2-v1/runs/c2-binding-probe-final-v1/attempt/receipt.json",
+    "separate_rejection_attempt": true,
+    "sha256": "37afc6d48989606cc701b1debf5988546f792d0296770ed41aa160d36a6107b5",
+    "status": "OBSERVED_FRESH_PUBLIC_INTERFACE_BINDING_TYPE_AVAILABILITY_REJECTION"
+  },
+  "fresh_positive": {
+    "caller_cpu_seconds": 109.295839,
+    "caller_wall_seconds": 109.83207879099064,
+    "checker_wall_seconds": 508.8854356660013,
+    "cpu_scope": "Supplier CPU begins after fresh HOL initialization and includes supplier load/live audit; caller CPU includes all selected caller/generic/helper/witness loads and final exact/expanded audit; no exclusive main/helper CPU is claimed",
+    "elapsed_seconds": 514.6664826250053,
+    "supplier_cpu_seconds": 351.450133,
+    "supplier_wall_seconds": 399.05335687501065,
+    "wall_scope": "Elapsed wall includes preparation, fresh GNU, HOL initialization/reconstruction, and host postguards; supplier wall includes HOL initialization, unlike supplier CPU"
+  },
+  "positive_receipt": {
+    "path": "development/approved-plan/reusable-assurance-c2-v1/runs/c2-fresh-final-v1/receipt.json",
+    "sha256": "b92a07f9aff1f575411d218b1eb0cf8cf4ee83c48e930cf9640fb921e575883f"
+  },
+  "schema": "c2-checking-phases-v1",
+  "supplier_construction": null,
+  "supplier_construction_reason": "Historical complete construction was not measured. No retrospective estimates.",
+  "utc": "2026-10-05T00:29:05.900810+00:00"
+}

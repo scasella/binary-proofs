@@ -1,0 +1,671 @@
+{
+  "additional_stage_inputs": {
+    "development/approved-plan/clients-e3/opaque-supplier-v1/source-index-v1.json": "0381c183d1d86da7b4b030224281c1668379f3b7c52154843e1afd20ac206905",
+    "development/approved-plan/clients-e3/public-inputs-v1/code-length-exports-v1.ml": "10f3ee2d04845ea5e98f245cc4c84cee075363a9cf80112667ec970262da387b",
+    "development/approved-plan/clients-e3/public-inputs-v1/generic-checked-step-v1.ml": "a8acaf219b8fed490e31833fb5a960e36796bc75b37002cd467dcd7fb7357454",
+    "development/approved-plan/clients-e3/secret-v1/generic-four-frame-proof-attempt1.ml": "45aaac107dc9658bd7289b724f0f1e219c0228a77058ea75bbdfef106d103bec",
+    "development/approved-plan/clients-e3/secret-v1/generic-four-frame-statements-v1.ml": "db1427c8264dbc34f051ce1b14deb73a8b131859122f29dcc134f03d10926cf4",
+    "development/approved-plan/clients-e3/secret-v1/generic-span-proof-attempt3.ml": "c9c0f7757d2833da800199a7a5967c928106a803e49fe7b2f5e8ac3094b3ea44",
+    "development/approved-plan/clients-e3/secret-v1/generic-span-statements-v1.ml": "357610d80a55384da575f47b328bb49190db4630a2c001198ee471747967bb6f",
+    "development/approved-plan/reusable-assurance-v1/c1/application/audit-v1.ml": "aef904ca3cfe886eebf815c017e137d7b878d3f7a3ae3fa9225f4d9cdc5cc136",
+    "development/approved-plan/reusable-assurance-v1/c1/application/load-v1.ml": "7f1b1bd714721ca10c14bff1a4a736e05d165af3a4a79da97b09b8bc593023de",
+    "development/approved-plan/reusable-assurance-v1/c1/application/proof-attempt1.ml": "17018651c03105ab71ec954cfbc37b6dcae086d269808e3f0099a952b65d7b30",
+    "development/approved-plan/reusable-assurance-v1/c1/application/statements-v1.ml": "87d9ecad7f7e399fe9ceab02be6fc56c6178d75322da0cd8a7644e43cf2143d3",
+    "development/approved-plan/reusable-assurance-v1/c1/artifact/build-v1.sh": "f105d2d0b92c2b5df00bf00c7e9c39f9c8dabd8d65a245584c4becb2b8fef99c",
+    "development/approved-plan/reusable-assurance-v1/c1/artifact/c1.c": "bc775373daf3bda37825c55c8a5e73c4de23cdbc73bcedce2aa95e0212edb349",
+    "development/approved-plan/reusable-assurance-v1/c1/artifact/caller.bin": "523a5ad18d6236eaae39114b3b3ed7b71a4d71592ca4ef410d994f90aa18cb33",
+    "development/approved-plan/reusable-assurance-v1/c1/artifact/compiled-v1/c1.so": "0ede476eef3a8f059aef0b93b36d4669647ae8ee3455fb076559b3e7bdf3d787",
+    "development/approved-plan/reusable-assurance-v1/c1/artifact/inventory-v1.json": "70f6fcd526fa336f4c2b4278c25bd2578a30f5def43aa73e69953fddbef0430f",
+    "development/approved-plan/reusable-assurance-v1/c1/artifact/plt-prefix.bin": "1e593d19790a007d6f3773070559a53fa4fa65da6d44d76306dd9679ed79b458",
+    "development/approved-plan/reusable-assurance-v1/c1/completion/audit-v1.ml": "4a11ce0858c570f5d5e362e5e32ee39d8b437ae61489b90815f70c612842ad46",
+    "development/approved-plan/reusable-assurance-v1/c1/completion/definitions-v1.ml": "90c3918b63ac6bd6b80818acc09d6e58e7c7ea6cf96266920e3bed148c6b117f",
+    "development/approved-plan/reusable-assurance-v1/c1/completion/expected-v1.json": "c67c0fa3987fcee5cefb6687ef8ef956ea8f41203d263010ed71100ed62690be",
+    "development/approved-plan/reusable-assurance-v1/c1/completion/literal-freeze-v1.json": "5eaa25720f9c4a2e21ba28ffbb1a794bf2bbe2db50d83fa935ceece095f81b4f",
+    "development/approved-plan/reusable-assurance-v1/c1/completion/load-v2.ml": "5fc39630e0861bfcde50c55ed1c2a7d63c4956187e40d3bc7f38b8d15440ac6b",
+    "development/approved-plan/reusable-assurance-v1/c1/completion/proof-attempt3.ml": "84de0613a9cf16cea7495a29f97ffd2142753267cefb56288026de730fdb22a3",
+    "development/approved-plan/reusable-assurance-v1/c1/completion/statements-v1.ml": "f07a8326637e5c48801492036db27858b97452997c799399d43d428d25dc5730",
+    "development/approved-plan/reusable-assurance-v1/c1/composition/audit-v1.ml": "2b7e170e4b6e5005eba62165d2e9d6530bf1b14021868284ac9e512848fde329",
+    "development/approved-plan/reusable-assurance-v1/c1/composition/helper-audit-v1.ml": "10b9afe9feaef0e8b1d2ab02a397b84b2cb321416523c08869b0b2a006bf3f92",
+    "development/approved-plan/reusable-assurance-v1/c1/composition/helper-statements-v1.ml": "b88a18c3407832978818afd417285d846ef314a683d7b274caa3a8294a56124a",
+    "development/approved-plan/reusable-assurance-v1/c1/composition/helpers-proof-attempt9.ml": "420195930003299afced43058f38254d78426f4ae54056c799424ba4d77037fc",
+    "development/approved-plan/reusable-assurance-v1/c1/composition/proof-attempt3.ml": "5ec070db83c482f01ac3d087d6584167339e1fb1c00365de45e85b22097d34ce",
+    "development/approved-plan/reusable-assurance-v1/c1/continuation/audit-tail-v1.ml": "b022bf3f3c4db927010cc40d7ba0cad2ffbb2805597ee64033aa897a4c3f0b35",
+    "development/approved-plan/reusable-assurance-v1/c1/continuation/frame-widen-v1.ml": "54286aad1db7fee932d708e59949c7b8546db2a61a4309913bcf0fe707bf00d0",
+    "development/approved-plan/reusable-assurance-v1/c1/continuation/rsp-value-proof-attempt1.ml": "bc959cc14a7294573527388edee66d315b713fda5420d40574b84fb5e1d9c031",
+    "development/approved-plan/reusable-assurance-v1/c1/continuation/rsp-value-statement-v1.ml": "23fe72a864474bfc336a3b1dabbfe6f4d8b33f5ae48b5d5d97940b4cc6948165",
+    "development/approved-plan/reusable-assurance-v1/c1/continuation/step-adapter-v1.ml": "28bbfbd14e0c53dfffc380f784033acf7e15d13b85d205d8931a3342985ac2b7",
+    "development/approved-plan/reusable-assurance-v1/c1/continuation/tail-definitions-v1.ml": "bfcadaa53e36319790fbdec12650eabbc9095f5b74a510ec9517a36c5e92ec15",
+    "development/approved-plan/reusable-assurance-v1/c1/continuation/tail-freeze-v1.json": "7db9b6dd99f074f3ea9d8eb13fbc442e8cf57107301cccdf1b45dd9ce5529218",
+    "development/approved-plan/reusable-assurance-v1/c1/continuation/tail-proof-attempt10.ml": "648937a21c089bdee7009e863846efd7d94e629f85281911887d448f7ce0a0d4",
+    "development/approved-plan/reusable-assurance-v1/c1/continuation/tail-statement-v1.ml": "3ce815eef200e5d070ec807ff8ab16169fda2af65afdd6be4b5ff32e341c495b",
+    "development/approved-plan/reusable-assurance-v1/c1/contract/INTERPRETATION-v1.md": "5d091024722577b9a91407cd3d23dc685fd411dc57e144256bc80a1409916dab",
+    "development/approved-plan/reusable-assurance-v1/c1/contract/definitions-v1.ml": "ce661d9fc1e2a865ef85c7afa8cc49dd1fc4d2e5813cd90e12b6fe645687ea5b",
+    "development/approved-plan/reusable-assurance-v1/c1/contract/expected-terms-v1.json": "94a347b1f071bffa0e977240789b7f27e4d926637e1384ad75dea0acb2c7c5bc",
+    "development/approved-plan/reusable-assurance-v1/c1/contract/exposure-v1.json": "f96e23ae5f3e2a356891c6802a5b8b7f2d41577ba58d8a11b90931f2a106a7f8",
+    "development/approved-plan/reusable-assurance-v1/c1/contract/freeze-v1.json": "70b0c20b37e210d78d415c71953292afc889c78ea9757025d9d74d5a049f2a98",
+    "development/approved-plan/reusable-assurance-v1/c1/contract/source-start-v1.json": "d4b96f7cf2d277cab01d06c18624e2b3fb06fb8025e47390647d358390cb1002",
+    "development/approved-plan/reusable-assurance-v1/c1/contract/statements-v1.ml": "f78c781adb2d667119db49601c56dfc0b44dd622947181606218658479e624b9",
+    "development/approved-plan/reusable-assurance-v1/c1/handoff/audit-v2.ml": "3b4140a4b8c6c90e3ec40c50f1e8fa7d66845fd198414cd8d570dfbeb989377a",
+    "development/approved-plan/reusable-assurance-v1/c1/handoff/helper-audit-v2.ml": "44a50cbce9aa1b70e99b355868763a2b719c8e53f0473c8c482f154ee4696f62",
+    "development/approved-plan/reusable-assurance-v1/c1/handoff/helper-statements-v1.ml": "06bbdf61803e2d3b92ca350b9150903043737b970a0b60d5e93347cbff3f655b",
+    "development/approved-plan/reusable-assurance-v1/c1/handoff/helpers-proof-v2.ml": "7954706b3aa5201c5fc5ca93af21c37278745b681a2a6ab7454d572ee08ae04a",
+    "development/approved-plan/reusable-assurance-v1/c1/handoff/proof-attempt11.ml": "0e01e1b7362257f97b9251cc49d616b69a468d11042230e83fa835c4120890f4",
+    "development/approved-plan/reusable-assurance-v1/c1/handoff/slot-disjoint-audit-v1.ml": "18eac9e982732adb88516abb2bd5a2b14ff61d72f391bf471e4863618ef1ce97",
+    "development/approved-plan/reusable-assurance-v1/c1/handoff/slot-disjoint-proof-attempt1.ml": "4b13c7838106ebf1d425017e412ad461956377b85336002d0c3aeb0d0a7452bc",
+    "development/approved-plan/reusable-assurance-v1/c1/handoff/slot-disjoint-statements-v1.ml": "53b2b838a64d28cd7d30cdd038056f9dde3f23ede63333ca4bf8adb8ebc159f7",
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/algebra-proof-attempt1.ml": "f7e0f15401b4b53bab45600eed6caeb214e96b15720653172fa08950e16986d3",
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/audit-v1.ml": "0996d31f538c92789996039003eb2a8568534692769f9e4826e3f42b12cab20d",
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/buffer-proof-v1.ml": "9d4f2ebfb8f57d58ed29b8d77e7cb37bf238c787dd3d21424c13ad22797791c0",
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/definitions-v2.ml": "e3aefdc659c14fbd7b5fd4e0c728069da962ce4b79f4408c81fd46f7ab4e46a1",
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/freeze-v2.json": "b43f439fd8f3ee96df5c519291042ef1f35562fdd14651075790dbe11462f72e",
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/image-proof-attempt1.ml": "d6b1e1811abeee96c934cb2eade27c0c30fd4eab15dd8b080cd0ee7dda87f3b2",
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/load-v2.ml": "ed373118b1447b5b15adf00582df49a2230e5fd7b0a196e57c1a60818617107a",
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/permission-proof-attempt1.ml": "776b3a364b386b7995e8ca823e2317af8e15f671ff5f45ede0e86eaecd593d53",
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/statements-v1.ml": "69ff2333ea7c6e2ccffa50244e02e721878b4205927a2a30aa33539abf4621c9",
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/supplement-proof-attempt1.ml": "1431b7a5c8475176d8f951a3b3dbdcae8c45255b006031a758e33d6f57150dc6",
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/witness-proof-attempt2.ml": "505cb0726a7c08f8e9ec6cc5a44c4bdd8f3d98b8e8f18598fe8e61e085aeef29",
+    "development/approved-plan/reusable-assurance-v1/development-loader-v2.ml": "6aae3f0c822b18d812dd8a4c9503b2cd9392d5db7f8575aa9f8112d17cb275d9",
+    "development/approved-plan/reusable-assurance-v1/development-loader-v4.ml": "97ddf2f962d01380345dd262979ccc2691bd212d68a2d014aa785ac2fd0d1890",
+    "development/approved-plan/reusable-assurance-v1/generic/audit-v1.ml": "bfb60ebbfeed9c06f5642a8e2395cadc4b15539a8fc849705166f4f58015ac83",
+    "development/approved-plan/reusable-assurance-v1/generic/checked-run-proof-v1.ml": "ec7ca2dc38e946474486f235c086fb409e7c29c7acdcb5ce1cf3e7f96ddf81ab",
+    "development/approved-plan/reusable-assurance-v1/generic/checked-run-statements-v1.ml": "5c7f95bc3271f463cfba297ce9f138c53547c1317675e523804ed9a88cb240b6",
+    "development/approved-plan/reusable-assurance-v1/generic/composition-proof-attempt2.ml": "341531d93058cd6eaf6047a5996eb16567c22c1e0acca241765a62e13c59cded",
+    "development/approved-plan/reusable-assurance-v1/generic/composition-statements-v2.ml": "dec1df06c234c205f57cbd8c9e3443b4feb8b67aba7c177609bf3ccb7f2bb9b8",
+    "development/approved-plan/reusable-assurance-v1/generic/e5-definitions-v1.ml": "055800d68b9d8db8a10cc19934a47d0d555156414ebb2125275ba2959fc8273c",
+    "development/approved-plan/reusable-assurance-v1/generic/e5-expanded-definition-expectations-v1.json": "4db786306f9496bee4fbb30bfb953f7f224a6c74975b749b64178c00bcb599ed",
+    "development/approved-plan/reusable-assurance-v1/generic/e5-normal-run-v1.ml": "a2bf776a58c4ece6fd6f0e94faf865a2b0cb220e5b6ac627bd2ce83b696017f3",
+    "development/approved-plan/reusable-assurance-v1/generic/e5-qualified-step-v1.ml": "750c7efa12ca66ea6ac2ec20bdb62549e1075594f06b493c7cacb5fb38bb198b",
+    "development/approved-plan/reusable-assurance-v1/generic/e5-rf-elementary-v1.ml": "d49cce4327feedbfb771b48e353e4f9d34ab0b30e080dada0f8c33aaadc265d7",
+    "development/approved-plan/reusable-assurance-v1/generic/e5-scalar-flags-v1.ml": "e8af6e0a95456db45aa7064b545650546fb156d6a89c16de68b7f28c8a02eb34",
+    "development/approved-plan/reusable-assurance-v1/generic/e5-statements-v1.ml": "a0f6b924a4a97a2c8d6cc239ca56bfeed0113b5bade39acc48279c7f4be638b4",
+    "development/approved-plan/reusable-assurance-v1/generic/load-span-frame-v1.ml": "c98aa6bac23be534a5df2abb52461d912e66f958311c06cf38bcda0c21dda018",
+    "development/approved-plan/reusable-assurance-v1/generic/load-v3.ml": "7e17db61529908ca42fc9afd3c5eb7e07432133769e15be24ee56394f6ac3874",
+    "development/approved-plan/reusable-assurance-v1/linkage/audit-v1.ml": "b928bf44e3d6b7b2ce2fb8ee9429256bd04d4eeee7279a07106b04cd210ab896",
+    "development/approved-plan/reusable-assurance-v1/linkage/c1-instance-attempt2.ml": "d00410479946a999f9e681123ae76a1b78aca72a2858e7b4310673e87e7f4571",
+    "development/approved-plan/reusable-assurance-v1/linkage/decoded-step-v1.ml": "ab43e923563e10eed247a7b2db48d12138c8927894f4f3058864c6a6b84055e1",
+    "development/approved-plan/reusable-assurance-v1/linkage/proof-attempt4.ml": "0b191f8f92623c4db0ea19785d5400be521eb99bd1e9f3b06d3d724c6d5d3e35",
+    "development/approved-plan/reusable-assurance-v1/linkage/statements-v1.ml": "0bb6f1753962240a8d2b8017346a737fe5cffef18d51989c6a7c7baf9015a3d7",
+    "development/approved-plan/reusable-assurance-v1/replay/README-v1.md": "3b80a61277526b223292c4d16f01900c87e998596a0bd63f22f31cd184afbde6",
+    "development/approved-plan/reusable-assurance-v1/replay/c1-final-loader-v3.ml": "da44598a2474b2e2e356f17f3b113a4c5c18186fdb5d7e06eaa9455d185e0146",
+    "development/approved-plan/reusable-assurance-v1/replay/c1-final-v3-audit.ml": "f1bd1ccd7be5f17605ec5c08c53505707e83166a965c8bfd48470e1d53d7fa20",
+    "development/approved-plan/reusable-assurance-v1/replay/c1-final-v3-expected.json": "fcf1b837162b91b71deef54be932e6e6772dd96f2761784082e174a1383da68b",
+    "development/approved-plan/reusable-assurance-v1/replay/check-root-v2.py": "11c5ac5f10629856eb5714185f0cc109193d89528a65520837b0ea3d5f9296a6",
+    "development/approved-plan/reusable-assurance-v1/replay/crosscheck-c1-image-v1.py": "cd85d1582f007540dbd5bc3689da625a6c97a46e4c0a6ed8209c6dc5d217a271",
+    "development/approved-plan/reusable-assurance-v1/replay/freeze-final-v4.py": "f06bf8e76bf67cf509698b57b759612062df42292f0b14f88f9070663164bfa7",
+    "development/approved-plan/reusable-assurance-v1/replay/fresh-replay-v3.py": "231259d64edb609803e4c3be354149fda9c1a481aff9ee481fe0210621542394",
+    "development/approved-plan/reusable-assurance-v1/replay/generate-audit-v1.py": "2c51fb67face1efb6a2cabb7fcb8dbf1a6ba123710602c80fda1c01c9fea1cc3",
+    "development/approved-plan/reusable-assurance-v1/replay/local-validation-v2.json": "66d0eda3b5bb6389db89ce3de5dbbf6979adec5a65aac792ffc588bfa39c5467",
+    "development/approved-plan/reusable-assurance-v1/replay/root-gate-template-v1.json": "b72da241a37da9b02d4c6120c1445f5c8636f8c706a53cfdcd06da5dfb4b1d57",
+    "development/approved-plan/reusable-assurance-v1/replay/source-check-v1.py": "d376dd294757a6ef6636ff78bc3ef2765ccc99c63ad79e3b577844cb1a9e4051",
+    "development/approved-plan/reusable-assurance-v1/replay/source-freeze-v1.json": "6b0c302d5eebd386d8c27150667b785f1fed6c38f91150c23f65b1cf696bd4c3",
+    "development/approved-plan/reusable-assurance-v1/replay/source-provenance-v1.json": "0754ab8de6afbe954d307e1259e5d6a3d9e1d7f68ca4b595ea4ad6cb50ccad00",
+    "development/approved-plan/reusable-assurance-v1/replay/targeted-preflight-controls-v1.py": "6618bb8f20d64c3bb242ee52cfea77df65b73b9cfd95729aae4b4e1b5231f6da",
+    "development/approved-plan/reusable-assurance-v1/replay/theorem-map-v1.json": "eacc2f45cc1c0b98ad337c1d0fc217fe37f99645a5517edbdf8c4433f15eded2",
+    "scripts/inventory.py": "6f35da09dea20999a64f5698618b369822c3eac60ebe7d6b161021206f163cff"
+  },
+  "all_new_definition_count": 46,
+  "artifact_crosscheck": "development/approved-plan/reusable-assurance-v1/replay/crosscheck-c1-image-v1.py",
+  "audit": "development/approved-plan/reusable-assurance-v1/replay/c1-final-v3-audit.ml",
+  "baseline_driver": "development/approved-plan/normal-entry-e5-v1/fresh-replay-v1.py",
+  "baseline_driver_sha256": "052433f8cba8b2f07d013449e8ff5770353eed71f5ff6b28397019f80bae6e1d",
+  "caller_acceptance": false,
+  "checker_image_id": "sha256:a19fdc18f1f283ed8e2514229b77f33619df1ba0ea1ae578c97779f4b4eb3c3f",
+  "created_utc": "2026-10-04T17:47:20.029859+00:00",
+  "driver_sha256": "231259d64edb609803e4c3be354149fda9c1a481aff9ee481fe0210621542394",
+  "expected_registry": "development/approved-plan/reusable-assurance-v1/replay/c1-final-v3-expected.json",
+  "experiment": "BP-20261004-REUSE-V1",
+  "gnu_image_id": "sha256:444f775e6378c2e5523f29ceb8bbb184442277ed1114e6d37d873a7f127dfc26",
+  "graph": {
+    "development/approved-plan/clients-e3/public-inputs-v1/code-length-exports-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "10f3ee2d04845ea5e98f245cc4c84cee075363a9cf80112667ec970262da387b"
+    },
+    "development/approved-plan/clients-e3/public-inputs-v1/generic-checked-step-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "a8acaf219b8fed490e31833fb5a960e36796bc75b37002cd467dcd7fb7357454"
+    },
+    "development/approved-plan/clients-e3/secret-v1/generic-four-frame-proof-attempt1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "45aaac107dc9658bd7289b724f0f1e219c0228a77058ea75bbdfef106d103bec"
+    },
+    "development/approved-plan/clients-e3/secret-v1/generic-four-frame-statements-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "db1427c8264dbc34f051ce1b14deb73a8b131859122f29dcc134f03d10926cf4"
+    },
+    "development/approved-plan/clients-e3/secret-v1/generic-span-proof-attempt3.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "c9c0f7757d2833da800199a7a5967c928106a803e49fe7b2f5e8ac3094b3ea44"
+    },
+    "development/approved-plan/clients-e3/secret-v1/generic-span-statements-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "357610d80a55384da575f47b328bb49190db4630a2c001198ee471747967bb6f"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/application/audit-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "aef904ca3cfe886eebf815c017e137d7b878d3f7a3ae3fa9225f4d9cdc5cc136"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/application/load-v1.ml": {
+      "import_mount_paths": [
+        "/reuse/c1/application/statements-v1.ml",
+        "/reuse/c1/application/proof-attempt1.ml",
+        "/reuse/c1/application/audit-v1.ml"
+      ],
+      "imports": [
+        "development/approved-plan/reusable-assurance-v1/c1/application/statements-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/application/proof-attempt1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/application/audit-v1.ml"
+      ],
+      "sha256": "7f1b1bd714721ca10c14bff1a4a736e05d165af3a4a79da97b09b8bc593023de"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/application/proof-attempt1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "17018651c03105ab71ec954cfbc37b6dcae086d269808e3f0099a952b65d7b30"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/application/statements-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "87d9ecad7f7e399fe9ceab02be6fc56c6178d75322da0cd8a7644e43cf2143d3"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/completion/audit-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "4a11ce0858c570f5d5e362e5e32ee39d8b437ae61489b90815f70c612842ad46"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/completion/definitions-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "90c3918b63ac6bd6b80818acc09d6e58e7c7ea6cf96266920e3bed148c6b117f"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/completion/load-v2.ml": {
+      "import_mount_paths": [
+        "/reuse/c1/completion/definitions-v1.ml",
+        "/reuse/c1/completion/statements-v1.ml",
+        "/reuse/c1/completion/proof-attempt3.ml",
+        "/reuse/c1/completion/audit-v1.ml"
+      ],
+      "imports": [
+        "development/approved-plan/reusable-assurance-v1/c1/completion/definitions-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/completion/statements-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/completion/proof-attempt3.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/completion/audit-v1.ml"
+      ],
+      "sha256": "5fc39630e0861bfcde50c55ed1c2a7d63c4956187e40d3bc7f38b8d15440ac6b"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/completion/proof-attempt3.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "84de0613a9cf16cea7495a29f97ffd2142753267cefb56288026de730fdb22a3"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/completion/statements-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "f07a8326637e5c48801492036db27858b97452997c799399d43d428d25dc5730"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/composition/audit-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "2b7e170e4b6e5005eba62165d2e9d6530bf1b14021868284ac9e512848fde329"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/composition/helper-audit-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "10b9afe9feaef0e8b1d2ab02a397b84b2cb321416523c08869b0b2a006bf3f92"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/composition/helper-statements-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "b88a18c3407832978818afd417285d846ef314a683d7b274caa3a8294a56124a"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/composition/helpers-proof-attempt9.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "420195930003299afced43058f38254d78426f4ae54056c799424ba4d77037fc"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/composition/proof-attempt3.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "5ec070db83c482f01ac3d087d6584167339e1fb1c00365de45e85b22097d34ce"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/continuation/audit-tail-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "b022bf3f3c4db927010cc40d7ba0cad2ffbb2805597ee64033aa897a4c3f0b35"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/continuation/frame-widen-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "54286aad1db7fee932d708e59949c7b8546db2a61a4309913bcf0fe707bf00d0"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/continuation/rsp-value-proof-attempt1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "bc959cc14a7294573527388edee66d315b713fda5420d40574b84fb5e1d9c031"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/continuation/rsp-value-statement-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "23fe72a864474bfc336a3b1dabbfe6f4d8b33f5ae48b5d5d97940b4cc6948165"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/continuation/step-adapter-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "28bbfbd14e0c53dfffc380f784033acf7e15d13b85d205d8931a3342985ac2b7"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/continuation/tail-definitions-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "bfcadaa53e36319790fbdec12650eabbc9095f5b74a510ec9517a36c5e92ec15"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/continuation/tail-proof-attempt10.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "648937a21c089bdee7009e863846efd7d94e629f85281911887d448f7ce0a0d4"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/continuation/tail-statement-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "3ce815eef200e5d070ec807ff8ab16169fda2af65afdd6be4b5ff32e341c495b"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/contract/definitions-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "ce661d9fc1e2a865ef85c7afa8cc49dd1fc4d2e5813cd90e12b6fe645687ea5b"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/contract/statements-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "f78c781adb2d667119db49601c56dfc0b44dd622947181606218658479e624b9"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/handoff/audit-v2.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "3b4140a4b8c6c90e3ec40c50f1e8fa7d66845fd198414cd8d570dfbeb989377a"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/handoff/helper-audit-v2.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "44a50cbce9aa1b70e99b355868763a2b719c8e53f0473c8c482f154ee4696f62"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/handoff/helper-statements-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "06bbdf61803e2d3b92ca350b9150903043737b970a0b60d5e93347cbff3f655b"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/handoff/helpers-proof-v2.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "7954706b3aa5201c5fc5ca93af21c37278745b681a2a6ab7454d572ee08ae04a"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/handoff/proof-attempt11.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "0e01e1b7362257f97b9251cc49d616b69a468d11042230e83fa835c4120890f4"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/handoff/slot-disjoint-audit-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "18eac9e982732adb88516abb2bd5a2b14ff61d72f391bf471e4863618ef1ce97"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/handoff/slot-disjoint-proof-attempt1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "4b13c7838106ebf1d425017e412ad461956377b85336002d0c3aeb0d0a7452bc"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/handoff/slot-disjoint-statements-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "53b2b838a64d28cd7d30cdd038056f9dde3f23ede63333ca4bf8adb8ebc159f7"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/algebra-proof-attempt1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "f7e0f15401b4b53bab45600eed6caeb214e96b15720653172fa08950e16986d3"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/audit-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "0996d31f538c92789996039003eb2a8568534692769f9e4826e3f42b12cab20d"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/buffer-proof-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "9d4f2ebfb8f57d58ed29b8d77e7cb37bf238c787dd3d21424c13ad22797791c0"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/definitions-v2.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "e3aefdc659c14fbd7b5fd4e0c728069da962ce4b79f4408c81fd46f7ab4e46a1"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/image-proof-attempt1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "d6b1e1811abeee96c934cb2eade27c0c30fd4eab15dd8b080cd0ee7dda87f3b2"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/load-v2.ml": {
+      "import_mount_paths": [
+        "/work/development/approved-plan/reusable-assurance-v1/c1/witnesses/definitions-v2.ml",
+        "/work/development/approved-plan/reusable-assurance-v1/c1/witnesses/statements-v1.ml",
+        "/work/development/approved-plan/reusable-assurance-v1/c1/witnesses/algebra-proof-attempt1.ml",
+        "/work/development/approved-plan/reusable-assurance-v1/c1/witnesses/supplement-proof-attempt1.ml",
+        "/work/development/approved-plan/reusable-assurance-v1/c1/witnesses/image-proof-attempt1.ml",
+        "/work/development/approved-plan/reusable-assurance-v1/c1/witnesses/permission-proof-attempt1.ml",
+        "/work/development/approved-plan/reusable-assurance-v1/c1/witnesses/buffer-proof-v1.ml",
+        "/work/development/approved-plan/reusable-assurance-v1/c1/witnesses/witness-proof-attempt2.ml",
+        "/work/development/approved-plan/reusable-assurance-v1/c1/witnesses/audit-v1.ml"
+      ],
+      "imports": [
+        "development/approved-plan/reusable-assurance-v1/c1/witnesses/definitions-v2.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/witnesses/statements-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/witnesses/algebra-proof-attempt1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/witnesses/supplement-proof-attempt1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/witnesses/image-proof-attempt1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/witnesses/permission-proof-attempt1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/witnesses/buffer-proof-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/witnesses/witness-proof-attempt2.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/witnesses/audit-v1.ml"
+      ],
+      "sha256": "ed373118b1447b5b15adf00582df49a2230e5fd7b0a196e57c1a60818617107a"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/permission-proof-attempt1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "776b3a364b386b7995e8ca823e2317af8e15f671ff5f45ede0e86eaecd593d53"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/statements-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "69ff2333ea7c6e2ccffa50244e02e721878b4205927a2a30aa33539abf4621c9"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/supplement-proof-attempt1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "1431b7a5c8475176d8f951a3b3dbdcae8c45255b006031a758e33d6f57150dc6"
+    },
+    "development/approved-plan/reusable-assurance-v1/c1/witnesses/witness-proof-attempt2.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "505cb0726a7c08f8e9ec6cc5a44c4bdd8f3d98b8e8f18598fe8e61e085aeef29"
+    },
+    "development/approved-plan/reusable-assurance-v1/development-loader-v2.ml": {
+      "import_mount_paths": [
+        "/client-public/code-length-exports-v1.ml",
+        "/client-public/generic-checked-step-v1.ml",
+        "/reuse/generic/load-v3.ml",
+        "/reuse/generic/load-span-frame-v1.ml",
+        "/reuse/c1/contract/definitions-v1.ml",
+        "/reuse/c1/contract/statements-v1.ml",
+        "/reuse/c1/handoff/helper-statements-v1.ml",
+        "/reuse/c1/handoff/helpers-proof-v2.ml",
+        "/reuse/c1/handoff/helper-audit-v2.ml",
+        "/reuse/linkage/statements-v1.ml",
+        "/reuse/linkage/decoded-step-v1.ml",
+        "/reuse/linkage/proof-attempt4.ml",
+        "/reuse/linkage/c1-instance-attempt2.ml",
+        "/reuse/linkage/audit-v1.ml",
+        "/reuse/c1/application/load-v1.ml",
+        "/reuse/c1/completion/load-v2.ml"
+      ],
+      "imports": [
+        "development/approved-plan/clients-e3/public-inputs-v1/code-length-exports-v1.ml",
+        "development/approved-plan/clients-e3/public-inputs-v1/generic-checked-step-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/generic/load-v3.ml",
+        "development/approved-plan/reusable-assurance-v1/generic/load-span-frame-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/contract/definitions-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/contract/statements-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/handoff/helper-statements-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/handoff/helpers-proof-v2.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/handoff/helper-audit-v2.ml",
+        "development/approved-plan/reusable-assurance-v1/linkage/statements-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/linkage/decoded-step-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/linkage/proof-attempt4.ml",
+        "development/approved-plan/reusable-assurance-v1/linkage/c1-instance-attempt2.ml",
+        "development/approved-plan/reusable-assurance-v1/linkage/audit-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/application/load-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/completion/load-v2.ml"
+      ],
+      "sha256": "6aae3f0c822b18d812dd8a4c9503b2cd9392d5db7f8575aa9f8112d17cb275d9"
+    },
+    "development/approved-plan/reusable-assurance-v1/development-loader-v4.ml": {
+      "import_mount_paths": [
+        "/reuse/development-loader-v2.ml",
+        "/reuse/c1/continuation/frame-widen-v1.ml",
+        "/reuse/c1/continuation/step-adapter-v1.ml",
+        "/reuse/c1/continuation/tail-definitions-v1.ml",
+        "/reuse/c1/continuation/tail-statement-v1.ml",
+        "/reuse/c1/continuation/rsp-value-statement-v1.ml",
+        "/reuse/c1/continuation/rsp-value-proof-attempt1.ml",
+        "/reuse/c1/continuation/tail-proof-attempt10.ml",
+        "/reuse/c1/continuation/audit-tail-v1.ml",
+        "/reuse/c1/handoff/slot-disjoint-statements-v1.ml",
+        "/reuse/c1/handoff/slot-disjoint-proof-attempt1.ml",
+        "/reuse/c1/handoff/slot-disjoint-audit-v1.ml",
+        "/reuse/c1/handoff/proof-attempt11.ml",
+        "/reuse/c1/handoff/audit-v2.ml"
+      ],
+      "imports": [
+        "development/approved-plan/reusable-assurance-v1/development-loader-v2.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/continuation/frame-widen-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/continuation/step-adapter-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/continuation/tail-definitions-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/continuation/tail-statement-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/continuation/rsp-value-statement-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/continuation/rsp-value-proof-attempt1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/continuation/tail-proof-attempt10.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/continuation/audit-tail-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/handoff/slot-disjoint-statements-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/handoff/slot-disjoint-proof-attempt1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/handoff/slot-disjoint-audit-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/handoff/proof-attempt11.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/handoff/audit-v2.ml"
+      ],
+      "sha256": "97ddf2f962d01380345dd262979ccc2691bd212d68a2d014aa785ac2fd0d1890"
+    },
+    "development/approved-plan/reusable-assurance-v1/generic/audit-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "bfb60ebbfeed9c06f5642a8e2395cadc4b15539a8fc849705166f4f58015ac83"
+    },
+    "development/approved-plan/reusable-assurance-v1/generic/checked-run-proof-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "ec7ca2dc38e946474486f235c086fb409e7c29c7acdcb5ce1cf3e7f96ddf81ab"
+    },
+    "development/approved-plan/reusable-assurance-v1/generic/checked-run-statements-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "5c7f95bc3271f463cfba297ce9f138c53547c1317675e523804ed9a88cb240b6"
+    },
+    "development/approved-plan/reusable-assurance-v1/generic/composition-proof-attempt2.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "341531d93058cd6eaf6047a5996eb16567c22c1e0acca241765a62e13c59cded"
+    },
+    "development/approved-plan/reusable-assurance-v1/generic/composition-statements-v2.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "dec1df06c234c205f57cbd8c9e3443b4feb8b67aba7c177609bf3ccb7f2bb9b8"
+    },
+    "development/approved-plan/reusable-assurance-v1/generic/e5-definitions-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "055800d68b9d8db8a10cc19934a47d0d555156414ebb2125275ba2959fc8273c"
+    },
+    "development/approved-plan/reusable-assurance-v1/generic/e5-normal-run-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "a2bf776a58c4ece6fd6f0e94faf865a2b0cb220e5b6ac627bd2ce83b696017f3"
+    },
+    "development/approved-plan/reusable-assurance-v1/generic/e5-qualified-step-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "750c7efa12ca66ea6ac2ec20bdb62549e1075594f06b493c7cacb5fb38bb198b"
+    },
+    "development/approved-plan/reusable-assurance-v1/generic/e5-rf-elementary-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "d49cce4327feedbfb771b48e353e4f9d34ab0b30e080dada0f8c33aaadc265d7"
+    },
+    "development/approved-plan/reusable-assurance-v1/generic/e5-scalar-flags-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "e8af6e0a95456db45aa7064b545650546fb156d6a89c16de68b7f28c8a02eb34"
+    },
+    "development/approved-plan/reusable-assurance-v1/generic/e5-statements-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "a0f6b924a4a97a2c8d6cc239ca56bfeed0113b5bade39acc48279c7f4be638b4"
+    },
+    "development/approved-plan/reusable-assurance-v1/generic/load-span-frame-v1.ml": {
+      "import_mount_paths": [
+        "/work/development/approved-plan/clients-e3/secret-v1/generic-span-statements-v1.ml",
+        "/work/development/approved-plan/clients-e3/secret-v1/generic-span-proof-attempt3.ml",
+        "/work/development/approved-plan/clients-e3/secret-v1/generic-four-frame-statements-v1.ml",
+        "/work/development/approved-plan/clients-e3/secret-v1/generic-four-frame-proof-attempt1.ml"
+      ],
+      "imports": [
+        "development/approved-plan/clients-e3/secret-v1/generic-span-statements-v1.ml",
+        "development/approved-plan/clients-e3/secret-v1/generic-span-proof-attempt3.ml",
+        "development/approved-plan/clients-e3/secret-v1/generic-four-frame-statements-v1.ml",
+        "development/approved-plan/clients-e3/secret-v1/generic-four-frame-proof-attempt1.ml"
+      ],
+      "sha256": "c98aa6bac23be534a5df2abb52461d912e66f958311c06cf38bcda0c21dda018"
+    },
+    "development/approved-plan/reusable-assurance-v1/generic/load-v3.ml": {
+      "import_mount_paths": [
+        "/reuse/generic/checked-run-statements-v1.ml",
+        "/reuse/generic/checked-run-proof-v1.ml",
+        "/reuse/generic/e5-definitions-v1.ml",
+        "/reuse/generic/e5-statements-v1.ml",
+        "/reuse/generic/e5-rf-elementary-v1.ml",
+        "/reuse/generic/e5-scalar-flags-v1.ml",
+        "/reuse/generic/e5-qualified-step-v1.ml",
+        "/reuse/generic/e5-normal-run-v1.ml",
+        "/reuse/generic/composition-statements-v2.ml",
+        "/reuse/generic/composition-proof-attempt2.ml",
+        "/reuse/generic/audit-v1.ml"
+      ],
+      "imports": [
+        "development/approved-plan/reusable-assurance-v1/generic/checked-run-statements-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/generic/checked-run-proof-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/generic/e5-definitions-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/generic/e5-statements-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/generic/e5-rf-elementary-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/generic/e5-scalar-flags-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/generic/e5-qualified-step-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/generic/e5-normal-run-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/generic/composition-statements-v2.ml",
+        "development/approved-plan/reusable-assurance-v1/generic/composition-proof-attempt2.ml",
+        "development/approved-plan/reusable-assurance-v1/generic/audit-v1.ml"
+      ],
+      "sha256": "7e17db61529908ca42fc9afd3c5eb7e07432133769e15be24ee56394f6ac3874"
+    },
+    "development/approved-plan/reusable-assurance-v1/linkage/audit-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "b928bf44e3d6b7b2ce2fb8ee9429256bd04d4eeee7279a07106b04cd210ab896"
+    },
+    "development/approved-plan/reusable-assurance-v1/linkage/c1-instance-attempt2.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "d00410479946a999f9e681123ae76a1b78aca72a2858e7b4310673e87e7f4571"
+    },
+    "development/approved-plan/reusable-assurance-v1/linkage/decoded-step-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "ab43e923563e10eed247a7b2db48d12138c8927894f4f3058864c6a6b84055e1"
+    },
+    "development/approved-plan/reusable-assurance-v1/linkage/proof-attempt4.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "0b191f8f92623c4db0ea19785d5400be521eb99bd1e9f3b06d3d724c6d5d3e35"
+    },
+    "development/approved-plan/reusable-assurance-v1/linkage/statements-v1.ml": {
+      "import_mount_paths": [],
+      "imports": [],
+      "sha256": "0bb6f1753962240a8d2b8017346a737fe5cffef18d51989c6a7c7baf9015a3d7"
+    },
+    "development/approved-plan/reusable-assurance-v1/replay/c1-final-loader-v3.ml": {
+      "import_mount_paths": [
+        "/reuse/development-loader-v4.ml",
+        "/work/development/approved-plan/reusable-assurance-v1/c1/witnesses/load-v2.ml",
+        "/reuse/c1/composition/helper-statements-v1.ml",
+        "/reuse/c1/composition/helpers-proof-attempt9.ml",
+        "/reuse/c1/composition/helper-audit-v1.ml",
+        "/reuse/c1/composition/proof-attempt3.ml",
+        "/reuse/c1/composition/audit-v1.ml"
+      ],
+      "imports": [
+        "development/approved-plan/reusable-assurance-v1/development-loader-v4.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/witnesses/load-v2.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/composition/helper-statements-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/composition/helpers-proof-attempt9.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/composition/helper-audit-v1.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/composition/proof-attempt3.ml",
+        "development/approved-plan/reusable-assurance-v1/c1/composition/audit-v1.ml"
+      ],
+      "sha256": "da44598a2474b2e2e356f17f3b113a4c5c18186fdb5d7e06eaa9455d185e0146"
+    }
+  },
+  "host_driver": "development/approved-plan/reusable-assurance-v1/replay/fresh-replay-v3.py",
+  "host_inputs": {
+    "development/approved-plan/clients-e3/opaque-supplier-v1/audit-v2.py": "9c219d8d9f4a9efa878f7f744404ae15da869bd2e9c3e8a1915c8f93532836d2",
+    "development/approved-plan/clients-e3/opaque-supplier-v1/freeze-v2.json": "d24b79f84eb6468a9fe6fba05e8df0452ffda00d7423243c870b6e85b805fa9d",
+    "development/approved-plan/clients-e3/opaque-supplier-v1/materialize-v1.py": "6e21316921cc6c5dd5bbd718dc6d8d32eee4a6a1bc24dac17a355e13357b21f1",
+    "development/approved-plan/clients-e3/opaque-supplier-v1/source-index-v1.json": "0381c183d1d86da7b4b030224281c1668379f3b7c52154843e1afd20ac206905",
+    "development/approved-plan/normal-entry-e5-v1/fresh-replay-v1.py": "052433f8cba8b2f07d013449e8ff5770353eed71f5ff6b28397019f80bae6e1d"
+  },
+  "human_review": "PENDING",
+  "loader": "development/approved-plan/reusable-assurance-v1/replay/c1-final-loader-v3.ml",
+  "no_former_caller_proof_loader": true,
+  "nonvacuity_case_count": 7,
+  "original_c1_targets": [
+    "c1_checked_statement",
+    "c1_count_statement",
+    "c1_handoff_statement",
+    "c1_interface_statement",
+    "c1_normal_checked_statement",
+    "c1_normal_interface_statement",
+    "c1_rf_normal_checked_statement"
+  ],
+  "pending": [
+    "Root source/runtime/output gate",
+    "Full positive replay",
+    "Applicable targeted controls"
+  ],
+  "resources": {
+    "cpu_count": 1,
+    "deadline_seconds": 1800,
+    "memory_bytes": 3221225472,
+    "swap_limit_bytes": 3221225472
+  },
+  "schema": "c1-fresh-closed-replay-seal-v1",
+  "source_check": "development/approved-plan/reusable-assurance-v1/replay/source-check-v1.py",
+  "status": "FROZEN_REPLAY_INPUTS_NOT_PROOF",
+  "supplier": {
+    "auditor": "development/approved-plan/clients-e3/opaque-supplier-v1/audit-v2.py",
+    "auditor_sha256": "9c219d8d9f4a9efa878f7f744404ae15da869bd2e9c3e8a1915c8f93532836d2",
+    "decoder": "development/approved-plan/call-binding/near-indirect-v1/decode-attempt5.ml",
+    "definition_count": 119,
+    "equation_count": 218,
+    "executor": "development/approved-plan/call-binding/near-indirect-v1/x86-attempt5.ml",
+    "freeze": "development/approved-plan/clients-e3/opaque-supplier-v1/freeze-v2.json",
+    "freeze_sha256": "d24b79f84eb6468a9fe6fba05e8df0452ffda00d7423243c870b6e85b805fa9d",
+    "index": "development/approved-plan/clients-e3/opaque-supplier-v1/source-index-v1.json",
+    "index_sha256": "0381c183d1d86da7b4b030224281c1668379f3b7c52154843e1afd20ac206905",
+    "loader": "development/approved-plan/call-binding/near-indirect-v1/callee-requalification-v1/opaque-callee-loader-v3.ml",
+    "materializer": "development/approved-plan/clients-e3/opaque-supplier-v1/materialize-v1.py",
+    "materializer_sha256": "6e21316921cc6c5dd5bbd718dc6d8d32eee4a6a1bc24dac17a355e13357b21f1",
+    "source_count": 4534,
+    "theorem_count": 325
+  },
+  "theorem_map": "development/approved-plan/reusable-assurance-v1/replay/theorem-map-v1.json",
+  "witness_target_count": 21
+}

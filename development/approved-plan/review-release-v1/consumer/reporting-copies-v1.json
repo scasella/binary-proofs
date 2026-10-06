@@ -1,0 +1,216 @@
+{
+  "accepted_sources_edited": false,
+  "rows": [
+    {
+      "bytes": 3040,
+      "path": "result-v1.json",
+      "sha256": "d02dac2771277064802b7149e7cb9d17ef2c2184d47ebefc8636e8ba52c80a69",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/result-v1.json"
+    },
+    {
+      "bytes": 2920,
+      "path": "complete-gate.json",
+      "sha256": "cc7438e633c8defe117f8025f5ebaba53fce1efe276e31a0668631c45ce8ace4",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/complete-gate.json"
+    },
+    {
+      "bytes": 1028,
+      "path": "checking-session-v1.json",
+      "sha256": "5fc2ad6575ecc79e070ba4fa5966b4637e6d07de981cf51736a9abee96d7e603",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/checking-session-v1.json"
+    },
+    {
+      "bytes": 2037,
+      "path": "positive/receipt.json",
+      "sha256": "81111de08c5f36a748934f03ee2ad1bbe66541e7934836fa458eabec64718d6f",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/positive/receipt.json"
+    },
+    {
+      "bytes": 4370,
+      "path": "controls/receipt.json",
+      "sha256": "b1286f149cda2ce75f3b9235a948e5d11fbb764ff6d0f6b95824c1f0a5166c8d",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/controls/receipt.json"
+    },
+    {
+      "bytes": 947,
+      "path": "binding-probe/receipt.json",
+      "sha256": "759721c6654af464719a86c81db4453fa1e6c66d285e30eae1936f27ffc96976",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/binding-probe/receipt.json"
+    },
+    {
+      "bytes": 1892,
+      "path": "binding-probe/attempt/receipt.json",
+      "sha256": "514661aa578637170cd8aa43a7708890db1435b8a5dac10b4850662f3d15e742",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/binding-probe/attempt/receipt.json"
+    },
+    {
+      "bytes": 2045,
+      "path": "later-checking-ledger-v1.jsonl",
+      "sha256": "57a172f92b8f4e8490f9b26b46315d48e158b3b531f13167b3b2a11274c092c2",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C1/later-checking-ledger-v1.jsonl"
+    },
+    {
+      "bytes": 3040,
+      "path": "result-v1.json",
+      "sha256": "93ddabcb37f1ce223329c8fa07a6b7aebd9f3caba19452692c2830d294966ba0",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/result-v1.json"
+    },
+    {
+      "bytes": 2922,
+      "path": "complete-gate.json",
+      "sha256": "2fa77ea1d8b94cbccf80acffa1a6766809b4da5d9e8cc715b6e26b170b3d0502",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/complete-gate.json"
+    },
+    {
+      "bytes": 988,
+      "path": "checking-session-v1.json",
+      "sha256": "f50c35b24dca5d4c54f19ef34e19762995a901ac60c82c252a97c5c3fbc52064",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/checking-session-v1.json"
+    },
+    {
+      "bytes": 2051,
+      "path": "positive/receipt.json",
+      "sha256": "f95920e405710079cd99704c9deff87296f48b43fda56f409258e482a71b766d",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/positive/receipt.json"
+    },
+    {
+      "bytes": 4366,
+      "path": "controls/receipt.json",
+      "sha256": "82f05181f68486cf01ec6f61b4e47d2c7afb7c5a1ec009494c6a55de5ac31a8d",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/controls/receipt.json"
+    },
+    {
+      "bytes": 949,
+      "path": "binding-probe/receipt.json",
+      "sha256": "d7cd0fd6b81e38f3da356261a988cfa6308775247c2fea6bc06b977c7e822548",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/binding-probe/receipt.json"
+    },
+    {
+      "bytes": 1897,
+      "path": "binding-probe/attempt/receipt.json",
+      "sha256": "fa2db201cdb9e3ce08db1c788d231a781457eba9842d88904d18ab129483b968",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/binding-probe/attempt/receipt.json"
+    },
+    {
+      "bytes": 2045,
+      "path": "later-checking-ledger-v1.jsonl",
+      "sha256": "d24c3294c112e9dc2f4a15dccc14da09bc59fd93d8ddbc484659b9d59dbacd3d",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C2/later-checking-ledger-v1.jsonl"
+    },
+    {
+      "bytes": 3042,
+      "path": "consumer/cases/C3/result-v1.json",
+      "sha256": "640327782616e19464bc85e82e1a4e01485ba6741d11134bac661b84fe22cd92",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/result-v1.json"
+    },
+    {
+      "bytes": 3230,
+      "path": "consumer/cases/C3/complete-gate.json",
+      "sha256": "111416ed28985c9abc5fb810f72bcfa49a658e72d2ae73b2e99d6f84434ac323",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/complete-gate.json"
+    },
+    {
+      "bytes": 1015,
+      "path": "consumer/cases/C3/checking-session-v1.json",
+      "sha256": "378530621e3c67673c692693b9ee7878cd15d4d0e9f943aeb67326aafdb5fc1d",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/checking-session-v1.json"
+    },
+    {
+      "bytes": 2868,
+      "path": "consumer/cases/C3/positive/receipt.json",
+      "sha256": "c433832925cc1c98c9108c38bcfa97915295e18142835388383cb64d933b3ccd",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/positive/receipt.json"
+    },
+    {
+      "bytes": 4328,
+      "path": "consumer/cases/C3/controls/receipt.json",
+      "sha256": "82eb541fad384771323f6686ede2b4db01905b6c65a817ea9301d53d2aa8c2a7",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/controls/receipt.json"
+    },
+    {
+      "bytes": 959,
+      "path": "consumer/cases/C3/binding-probe/receipt.json",
+      "sha256": "7bbef0caba852b2621a471963a7486c7f2c51d19d9fa73edc80aa1d50e122ef9",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/binding-probe/receipt.json"
+    },
+    {
+      "bytes": 2726,
+      "path": "consumer/cases/C3/binding-probe/attempt/receipt.json",
+      "sha256": "4e8777175996305d279605009641acf495d279a98314c26495e43f3c9b71a88d",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/binding-probe/attempt/receipt.json"
+    },
+    {
+      "bytes": 2046,
+      "path": "consumer/cases/C3/later-checking-ledger-v1.jsonl",
+      "sha256": "58eda2dfb378f643361b1f2c8e35df257d65d58d03b1ab298f3b4cee147141f4",
+      "source": "/private/tmp/bp-review-consumer-o803245s/runs/C3/later-checking-ledger-v1.jsonl"
+    },
+    {
+      "bytes": 62805,
+      "path": "consumer/operational-context/20261005T155121-93220e3c-seal.json",
+      "sha256": "9e2a4a07a4c3b8590806ea7d4662e8e1a11afd605c2f320b2463c9a465cf3260",
+      "source": "/private/tmp/bp-review-consumer-o803245s/source/development/approved-plan/review-release-v1/consumer/checking-contexts/20261005T155121-93220e3c-seal.json"
+    },
+    {
+      "bytes": 361,
+      "path": "consumer/operational-context/20261005T155121-93220e3c.json",
+      "sha256": "cc858640ecd70f34f789139d68d0309869b39213cfb5889e8d8bbe4bab0c90f0",
+      "source": "/private/tmp/bp-review-consumer-o803245s/source/development/approved-plan/review-release-v1/consumer/checking-contexts/20261005T155121-93220e3c.json"
+    },
+    {
+      "bytes": 1529,
+      "path": "consumer/historical-deadline-guard/result-v1.json",
+      "sha256": "3dceda6f1693c6559e6018000de02e3cbb0ebbcfb4983f7b4ce0db248ef154f5",
+      "source": "/private/tmp/bp-review-consumer-o803245s/historical-deadline-guard/result-v1.json"
+    },
+    {
+      "bytes": 64,
+      "path": "consumer/historical-deadline-guard/process.log",
+      "sha256": "e073a9e8b6eb14a7ca76ef4bd158c204fd3d659d1a3f6bc6ec3d78a10978bc1f",
+      "source": "/private/tmp/bp-review-consumer-o803245s/historical-deadline-guard/process.log"
+    },
+    {
+      "bytes": 218,
+      "path": "consumer/historical-deadline-guard/attempt/receipt.json",
+      "sha256": "fe8802a5d7f891c0388a360b62fb32543506e5e02b0311778c644b49dc3ca6b0",
+      "source": "/private/tmp/bp-review-consumer-o803245s/historical-deadline-guard/attempt/receipt.json"
+    },
+    {
+      "bytes": 1449,
+      "path": "consumer/environment-v1.json",
+      "sha256": "6b0713c374479c2067959d677df385bb9ae56cd50f54bb45c7e3758288b414f3",
+      "source": "/private/tmp/bp-review-consumer-o803245s/environment-v1.json"
+    },
+    {
+      "bytes": 962,
+      "path": "consumer/delivery-inputs-v1.json",
+      "sha256": "bffd5831792918752b5c413379e672a1b6421382fc4e3e32921345481589f592",
+      "source": "/private/tmp/bp-review-consumer-o803245s/delivery-inputs-v1.json"
+    },
+    {
+      "bytes": 1055,
+      "path": "consumer/consumer-plan-v1.json",
+      "sha256": "44c1d0d714a49fcb6bab62dc94987519a88fd792f529b533129a421334657e16",
+      "source": "/private/tmp/bp-review-consumer-o803245s/consumer-plan-v1.json"
+    },
+    {
+      "bytes": 1032,
+      "path": "consumer/extraction-observation-v1.json",
+      "sha256": "d27e5b3a1ea317495db042be4d6fb8d09737e4518e4f1582704366ae97abaf71",
+      "source": "/private/tmp/bp-review-consumer-o803245s/extraction-observation-v1.json"
+    },
+    {
+      "bytes": 1603,
+      "path": "consumer/adapter-inspection-v1.json",
+      "sha256": "409a428d1cdfef2feec4d06da083e6cadec0c63dfe6f6379fad28a0781504eb4",
+      "source": "/private/tmp/bp-review-consumer-o803245s/adapter-inspection-v1.json"
+    },
+    {
+      "bytes": 378,
+      "path": "consumer/consumer-observations-v1.jsonl",
+      "sha256": "57af54abbe2daba475c07d2982038d99cee94c085e01f3fc8d57a56929f6c7b3",
+      "source": "/private/tmp/bp-review-consumer-o803245s/consumer-observations-v1.jsonl"
+    }
+  ],
+  "schema": "review-release-consumer-reporting-copies-v1"
+}

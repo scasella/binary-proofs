@@ -1,0 +1,24 @@
+{
+  "theorems": [
+    {
+      "name": "ASSURANCE_E2_CALL_ZERO_POST",
+      "statement": "!pc stackpointer ra p q e m s.\n    bp_assurance_call_post pc stackpointer ra p q 0 e m s =\n    bp_assurance_zero_post pc stackpointer ra e m s"
+    },
+    {
+      "name": "ASSURANCE_E2_CALL_16_POST",
+      "statement": "!pc stackpointer ra p q e m s.\n    bp_assurance_call_post pc stackpointer ra p q 16 e m s =\n    bp_assurance_16_byte_post pc stackpointer ra p q e m s"
+    },
+    {
+      "name": "ASSURANCE_E2_GENERIC_POLICY_FRAME",
+      "statement": "!pc stackpointer ra p q n m rp xp ordinary s.\n    bp_e2_crypto_pre pc stackpointer ra p q n m rp xp ordinary s /\\\n    ~(n=0) /\\ ~(n=16)\n    ==> assurance_checked_run (7*n+10)\n      (bp_assurance_call_post pc stackpointer ra p q n (read events s) m s)\n      (assurance_zero_scalar_step\n        (bp_e2_crypto_allowed_read rp ordinary p q n stackpointer)\n        bp_e2_crypto_allowed_write (bp_e2_crypto_allowed_fetch xp ordinary pc)) s"
+    },
+    {
+      "name": "ASSURANCE_E2_ALL_LENGTH_POLICY_FRAME",
+      "statement": "!pc stackpointer ra p q n m rp xp ordinary s.\n    bp_e2_crypto_pre pc stackpointer ra p q n m rp xp ordinary s\n    ==> assurance_checked_run (bp_assurance_call_steps n)\n      (bp_assurance_call_post pc stackpointer ra p q n (read events s) m s)\n      (assurance_zero_scalar_step\n        (bp_e2_crypto_allowed_read rp ordinary p q n stackpointer)\n        bp_e2_crypto_allowed_write (bp_e2_crypto_allowed_fetch xp ordinary pc)) s"
+    },
+    {
+      "name": "ASSURANCE_E2_ALL_LENGTH_EXTENDED_ABI",
+      "statement": "!pc stackpointer ra p q n m rp xp ordinary s a.\n    bp_e2_crypto_pre pc stackpointer ra p q n m rp xp ordinary s\n    ==> eventually_n abi_scalar_extended_step (bp_assurance_call_steps n)\n      (\\t. bp_assurance_call_post pc stackpointer ra p q n (read events s) m s\n             (FST t) /\\ SND t = a /\\\n           abi_required_controls_preserved a (SND t)) (s,a)"
+    }
+  ]
+}

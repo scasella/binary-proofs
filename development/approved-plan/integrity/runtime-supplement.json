@@ -1,0 +1,36 @@
+{
+  "base_hol_revision": "b19af6934759eed622d7aca25092367f81656eee",
+  "base_s2n_revision": "4d1356a7470663c752660a59375dc3a9ef548428",
+  "closed_source_replay_succeeded_with_supplement": false,
+  "complete_dynamic_dependency_closure_proved": false,
+  "experiment_id": "BP-20260930-E2",
+  "files": {
+    "third_party/hol-light/pa_j.ml": "c4eede2c8159ddf42a13536bc9304edbab3272c6ad3b0c29227f880ab51c7397",
+    "third_party/hol-light/update_database.ml": "477bd3b23e845c9854d99c32cf29a46130c1ff764fad0804a93a939aa5cb89d4"
+  },
+  "frozen_at_utc": "2026-09-30T11:31:22.050037+00:00",
+  "human_review": "PENDING",
+  "parent_bundle_id": "BP-E1-CHECKING-V2",
+  "required_by": {
+    "third_party/hol-light/pa_j.ml": "Generated parser source; compiled pa_j.cmo is already a V2 runtime input loaded by hol.ml:52",
+    "third_party/hol-light/update_database.ml": "third_party/s2n-bignum/x86/proofs/base.ml:10 loads update_database.ml; generated/ignored and omitted from V2"
+  },
+  "scan_categories": [
+    ".ml",
+    ".mli",
+    ".cmo",
+    ".cmi",
+    ".cma",
+    ".cmx",
+    ".cmxs",
+    ".so"
+  ],
+  "scan_missing_count": 2,
+  "scan_roots": [
+    "third_party/hol-light",
+    "third_party/s2n-bignum"
+  ],
+  "schema_version": 1,
+  "scope": "Actual bytes of generated runtime/source inputs omitted from V2; a successor seal and fresh closed replay are required. No target theorem or routine is accepted.",
+  "status": "FROZEN_DEVELOPMENT_RUNTIME_SUPPLEMENT"
+}

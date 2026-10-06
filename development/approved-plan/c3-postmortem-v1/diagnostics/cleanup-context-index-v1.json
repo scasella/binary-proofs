@@ -1,0 +1,3079 @@
+{
+  "schema": "c3-retained-cleanup-context-index-v1",
+  "source": {
+    "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+    "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc"
+  },
+  "context": [
+    {
+      "context_id": 0,
+      "proposition": "c3_crypto_ready lib_file stackpointer p q n m rp wp xp ordinary initial\n      a\n      entry",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 3,
+        "end_line": 5
+      }
+    },
+    {
+      "context_id": 1,
+      "proposition": "read RBX returned = p",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 6,
+        "end_line": 6
+      }
+    },
+    {
+      "context_id": 2,
+      "proposition": "read RBP returned = word n",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 7,
+        "end_line": 7
+      }
+    },
+    {
+      "context_id": 3,
+      "proposition": "read R12 returned = q",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 8,
+        "end_line": 8
+      }
+    },
+    {
+      "context_id": 4,
+      "proposition": "read R13 returned = read R13 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 9,
+        "end_line": 9
+      }
+    },
+    {
+      "context_id": 5,
+      "proposition": "read R14 returned = read R14 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 10,
+        "end_line": 10
+      }
+    },
+    {
+      "context_id": 6,
+      "proposition": "read R15 returned = read R15 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 11,
+        "end_line": 11
+      }
+    },
+    {
+      "context_id": 7,
+      "proposition": "~read DF returned",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 12,
+        "end_line": 12
+      }
+    },
+    {
+      "context_id": 8,
+      "proposition": "~bit 18 (read rflags returned)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 13,
+        "end_line": 13
+      }
+    },
+    {
+      "context_id": 9,
+      "proposition": "read RAX returned = (if c3_equal m p q n then word 0 else word 1)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 14,
+        "end_line": 14
+      }
+    },
+    {
+      "context_id": 10,
+      "proposition": "bp_assurance_call_post 270800960 (word_sub stackpointer (word 48))\n      (word 587206968)\n      p\n      q\n      n\n      (read events entry)\n      (read memory entry)\n      entry\n      returned",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 15,
+        "end_line": 23
+      }
+    },
+    {
+      "context_id": 11,
+      "proposition": "read RIP returned = word 587206968",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 24,
+        "end_line": 24
+      }
+    },
+    {
+      "context_id": 12,
+      "proposition": "val (read RSP returned) = val (word_sub stackpointer (word 48)) + 8",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 25,
+        "end_line": 25
+      }
+    },
+    {
+      "context_id": 13,
+      "proposition": "read RAX returned =\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 26,
+        "end_line": 32
+      }
+    },
+    {
+      "context_id": 14,
+      "proposition": "read memory returned = read memory entry",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 33,
+        "end_line": 33
+      }
+    },
+    {
+      "context_id": 15,
+      "proposition": "read events returned =\n      APPEND\n      (crypto_trace_call 270800960 p q n (word_sub stackpointer (word 48))\n      (word 587206968))\n      (read events entry)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 34,
+        "end_line": 38
+      }
+    },
+    {
+      "context_id": 16,
+      "proposition": "(MAYCHANGE [RIP; RSP; RAX; RDI; RSI; RDX; R10; R11] ,,\n       MAYCHANGE SOME_FLAGS ,,\n       MAYCHANGE [events])\n      entry\n      returned",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 39,
+        "end_line": 43
+      }
+    },
+    {
+      "context_id": 17,
+      "proposition": "read RSP returned = word_sub stackpointer (word 40)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 44,
+        "end_line": 44
+      }
+    },
+    {
+      "context_id": 18,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 8))) returned =\n      read R13 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 45,
+        "end_line": 46
+      }
+    },
+    {
+      "context_id": 19,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 16))) returned =\n      read R12 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 47,
+        "end_line": 48
+      }
+    },
+    {
+      "context_id": 20,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 24))) returned =\n      read RBP initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 49,
+        "end_line": 50
+      }
+    },
+    {
+      "context_id": 21,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 32))) returned =\n      read RBX initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 51,
+        "end_line": 52
+      }
+    },
+    {
+      "context_id": 22,
+      "proposition": "forall addr.\n          ~c3_scratch stackpointer (val addr)\n          ==> read memory returned addr = m addr",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 53,
+        "end_line": 55
+      }
+    },
+    {
+      "context_id": 23,
+      "proposition": "forall i.\n          i < n\n          ==> read memory returned (word_add p (word i)) =\n              m (word_add p (word i))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 56,
+        "end_line": 59
+      }
+    },
+    {
+      "context_id": 24,
+      "proposition": "forall i.\n          i < n\n          ==> read memory returned (word_add q (word i)) =\n              m (word_add q (word i))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 60,
+        "end_line": 63
+      }
+    },
+    {
+      "context_id": 25,
+      "proposition": "read (memory :> bytes64 (word 587218896)) returned = word 270800960",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 64,
+        "end_line": 64
+      }
+    },
+    {
+      "context_id": 26,
+      "proposition": "read (memory :> bytes64 (word 587218904)) returned = word 270800848",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 65,
+        "end_line": 65
+      }
+    },
+    {
+      "context_id": 27,
+      "proposition": "n < 2 EXP 64",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 66,
+        "end_line": 66
+      }
+    },
+    {
+      "context_id": 28,
+      "proposition": "48 <= val stackpointer",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 67,
+        "end_line": 67
+      }
+    },
+    {
+      "context_id": 29,
+      "proposition": "val stackpointer MOD 16 = 8",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 68,
+        "end_line": 68
+      }
+    },
+    {
+      "context_id": 30,
+      "proposition": "val stackpointer + 8 < 2 EXP 64",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 69,
+        "end_line": 69
+      }
+    },
+    {
+      "context_id": 31,
+      "proposition": "assurance_canonical48 (val ra)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 70,
+        "end_line": 70
+      }
+    },
+    {
+      "context_id": 32,
+      "proposition": "~(ra = word pc)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 71,
+        "end_line": 71
+      }
+    },
+    {
+      "context_id": 33,
+      "proposition": "read RIP initial = word pc",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 72,
+        "end_line": 72
+      }
+    },
+    {
+      "context_id": 34,
+      "proposition": "read RSP initial = stackpointer",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 73,
+        "end_line": 73
+      }
+    },
+    {
+      "context_id": 35,
+      "proposition": "read (memory :> bytes64 stackpointer) initial = ra",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 74,
+        "end_line": 74
+      }
+    },
+    {
+      "context_id": 36,
+      "proposition": "read RDI initial = p",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 75,
+        "end_line": 75
+      }
+    },
+    {
+      "context_id": 37,
+      "proposition": "read RSI initial = q",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 76,
+        "end_line": 76
+      }
+    },
+    {
+      "context_id": 38,
+      "proposition": "read RDX initial = word n",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 77,
+        "end_line": 77
+      }
+    },
+    {
+      "context_id": 39,
+      "proposition": "read memory initial = m",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 78,
+        "end_line": 78
+      }
+    },
+    {
+      "context_id": 40,
+      "proposition": "~read DF initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 79,
+        "end_line": 79
+      }
+    },
+    {
+      "context_id": 41,
+      "proposition": "~bit 18 (read rflags initial)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 80,
+        "end_line": 80
+      }
+    },
+    {
+      "context_id": 42,
+      "proposition": "e5_normal_flags initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 81,
+        "end_line": 81
+      }
+    },
+    {
+      "context_id": 43,
+      "proposition": "assurance_canonical48 (val (read ABI_FS_BASE a))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 82,
+        "end_line": 82
+      }
+    },
+    {
+      "context_id": 44,
+      "proposition": "fb_file_code lib_file",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 83,
+        "end_line": 83
+      }
+    },
+    {
+      "context_id": 45,
+      "proposition": "clw_file_code lib_file",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 84,
+        "end_line": 84
+      }
+    },
+    {
+      "context_id": 46,
+      "proposition": "fb_full_image lib_file lib_rw lib_padding m",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 85,
+        "end_line": 85
+      }
+    },
+    {
+      "context_id": 47,
+      "proposition": "c3_file_code client_file",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 86,
+        "end_line": 86
+      }
+    },
+    {
+      "context_id": 48,
+      "proposition": "c3_full_image client_file client_rw client_padding m",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 87,
+        "end_line": 87
+      }
+    },
+    {
+      "context_id": 49,
+      "proposition": "read (memory :> bytes64 (word 587218896)) initial = word 270800960",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 88,
+        "end_line": 88
+      }
+    },
+    {
+      "context_id": 50,
+      "proposition": "read (memory :> bytes64 (word 587218904)) initial = word 270800848",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 89,
+        "end_line": 89
+      }
+    },
+    {
+      "context_id": 51,
+      "proposition": "forall addr.\n          lw_image_domain addr\n          ==> rp addr /\\\n              ordinary addr /\\\n              (xp addr <=> lw_execute addr) /\\\n              (wp addr <=> lw_image_write addr)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 90,
+        "end_line": 95
+      }
+    },
+    {
+      "context_id": 52,
+      "proposition": "forall addr.\n          c3_image_domain addr\n          ==> rp addr /\\\n              ordinary addr /\\\n              (xp addr <=> c3_image_execute addr) /\\\n              (wp addr <=> c3_image_write addr)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 96,
+        "end_line": 101
+      }
+    },
+    {
+      "context_id": 53,
+      "proposition": "assurance_span_ok (\\a. rp a /\\ ordinary a) (val p) n",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 102,
+        "end_line": 102
+      }
+    },
+    {
+      "context_id": 54,
+      "proposition": "assurance_span_ok (\\a. rp a /\\ ordinary a) (val q) n",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 103,
+        "end_line": 103
+      }
+    },
+    {
+      "context_id": 55,
+      "proposition": "assurance_span_ok (\\a. wp a /\\ ordinary a) (val p) n",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 104,
+        "end_line": 104
+      }
+    },
+    {
+      "context_id": 56,
+      "proposition": "assurance_span_ok (\\a. rp a /\\ ordinary a) (val stackpointer - 48) 48",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 105,
+        "end_line": 105
+      }
+    },
+    {
+      "context_id": 57,
+      "proposition": "assurance_span_ok (\\a. wp a /\\ ordinary a) (val stackpointer - 48) 48",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 106,
+        "end_line": 106
+      }
+    },
+    {
+      "context_id": 58,
+      "proposition": "assurance_span_ok (\\a. rp a /\\ ordinary a) (val stackpointer) 8",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 107,
+        "end_line": 107
+      }
+    },
+    {
+      "context_id": 59,
+      "proposition": "assurance_span_ok (\\a. rp a /\\ ordinary a) 587218896 8",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 108,
+        "end_line": 108
+      }
+    },
+    {
+      "context_id": 60,
+      "proposition": "assurance_span_ok (\\a. rp a /\\ ordinary a) 587218904 8",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 109,
+        "end_line": 109
+      }
+    },
+    {
+      "context_id": 61,
+      "proposition": "assurance_span_ok (\\a. xp a /\\ ordinary a) pc 89",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 110,
+        "end_line": 110
+      }
+    },
+    {
+      "context_id": 62,
+      "proposition": "assurance_span_ok (\\a. xp a /\\ ordinary a) 587206704 6",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 111,
+        "end_line": 111
+      }
+    },
+    {
+      "context_id": 63,
+      "proposition": "assurance_span_ok (\\a. xp a /\\ ordinary a) cleansepltpc 6",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 112,
+        "end_line": 112
+      }
+    },
+    {
+      "context_id": 64,
+      "proposition": "assurance_span_ok (\\a. xp a /\\ ordinary a) 270800960 95",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 113,
+        "end_line": 113
+      }
+    },
+    {
+      "context_id": 65,
+      "proposition": "assurance_span_ok (\\a. xp a /\\ ordinary a) 270800848 97",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 114,
+        "end_line": 114
+      }
+    },
+    {
+      "context_id": 66,
+      "proposition": "forall addr.\n          ~(assurance_region p n addr /\\ c3_scratch stackpointer addr)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 115,
+        "end_line": 116
+      }
+    },
+    {
+      "context_id": 67,
+      "proposition": "forall addr.\n          ~(assurance_region q n addr /\\ c3_scratch stackpointer addr)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 117,
+        "end_line": 118
+      }
+    },
+    {
+      "context_id": 68,
+      "proposition": "forall addr.\n          ~(assurance_region p n addr /\\\n            assurance_region stackpointer 8 addr)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 119,
+        "end_line": 121
+      }
+    },
+    {
+      "context_id": 69,
+      "proposition": "forall addr.\n          assurance_region p n addr\n          ==> ~(assurance_region (word pc) 89 addr \\/\n                assurance_region (word 587206704) 6 addr \\/\n                assurance_region (word cleansepltpc) 6 addr \\/\n                assurance_region (word 587218896) 8 addr \\/\n                assurance_region (word 587218904) 8 addr \\/\n                assurance_region (word 270800960) 95 addr \\/\n                assurance_region (word 270800848) 97 addr)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 122,
+        "end_line": 130
+      }
+    },
+    {
+      "context_id": 70,
+      "proposition": "assurance_span_ok (c3_allowed_read rp ordinary stackpointer p q n)\n      (val stackpointer - 48)\n      48",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 131,
+        "end_line": 133
+      }
+    },
+    {
+      "context_id": 71,
+      "proposition": "assurance_span_ok (c3_allowed_write wp ordinary stackpointer p q n m)\n      (val stackpointer - 48)\n      48",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 134,
+        "end_line": 136
+      }
+    },
+    {
+      "context_id": 72,
+      "proposition": "assurance_span_ok (c3_allowed_fetch xp ordinary) pc 89",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 137,
+        "end_line": 137
+      }
+    },
+    {
+      "context_id": 73,
+      "proposition": "assurance_span_ok (c3_allowed_fetch xp ordinary) 587206704 6",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 138,
+        "end_line": 138
+      }
+    },
+    {
+      "context_id": 74,
+      "proposition": "assurance_span_ok (c3_allowed_read rp ordinary stackpointer p q n)\n      587218896\n      8",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 139,
+        "end_line": 141
+      }
+    },
+    {
+      "context_id": 75,
+      "proposition": "nonoverlapping (word_sub stackpointer (word 48),48) (word pc,89)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 142,
+        "end_line": 142
+      }
+    },
+    {
+      "context_id": 76,
+      "proposition": "nonoverlapping (word_sub stackpointer (word 48),48) (word 587206704,6)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 143,
+        "end_line": 143
+      }
+    },
+    {
+      "context_id": 77,
+      "proposition": "nonoverlapping (word_sub stackpointer (word 48),48)\n      (word cleansepltpc,6)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 144,
+        "end_line": 145
+      }
+    },
+    {
+      "context_id": 78,
+      "proposition": "nonoverlapping (word_sub stackpointer (word 48),48) (word 587218896,8)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 146,
+        "end_line": 146
+      }
+    },
+    {
+      "context_id": 79,
+      "proposition": "nonoverlapping (word_sub stackpointer (word 48),48) (word 587218904,8)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 147,
+        "end_line": 147
+      }
+    },
+    {
+      "context_id": 80,
+      "proposition": "nonoverlapping (word_sub stackpointer (word 48),48) (word 270800960,95)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 148,
+        "end_line": 148
+      }
+    },
+    {
+      "context_id": 81,
+      "proposition": "nonoverlapping (word_sub stackpointer (word 48),48) (word 270800848,97)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 149,
+        "end_line": 149
+      }
+    },
+    {
+      "context_id": 82,
+      "proposition": "assurance_span_ok (c3_allowed_fetch xp ordinary) cleansepltpc 6",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 150,
+        "end_line": 150
+      }
+    },
+    {
+      "context_id": 83,
+      "proposition": "assurance_span_ok (c3_allowed_read rp ordinary stackpointer p q n)\n      587218904\n      8",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 151,
+        "end_line": 153
+      }
+    },
+    {
+      "context_id": 84,
+      "proposition": "587206944 = pc",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 154,
+        "end_line": 154
+      }
+    },
+    {
+      "context_id": 85,
+      "proposition": "read RIP returned = word (pc + 24)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 155,
+        "end_line": 155
+      }
+    },
+    {
+      "context_id": 86,
+      "proposition": "read (memory :> bytes64 (word 587218904)) u1 = word 270800848",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 156,
+        "end_line": 156
+      }
+    },
+    {
+      "context_id": 87,
+      "proposition": "read (memory :> bytes64 (word 587218896)) u1 = word 270800960",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 157,
+        "end_line": 157
+      }
+    },
+    {
+      "context_id": 88,
+      "proposition": "forall i.\n          i < n\n          ==> read memory u1 (word_add q (word i)) = m (word_add q (word i))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 158,
+        "end_line": 160
+      }
+    },
+    {
+      "context_id": 89,
+      "proposition": "forall i.\n          i < n\n          ==> read memory u1 (word_add p (word i)) = m (word_add p (word i))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 161,
+        "end_line": 163
+      }
+    },
+    {
+      "context_id": 90,
+      "proposition": "forall addr.\n          ~c3_scratch stackpointer (val addr)\n          ==> read memory u1 addr = m addr",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 164,
+        "end_line": 166
+      }
+    },
+    {
+      "context_id": 91,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 32))) u1 =\n      read RBX initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 167,
+        "end_line": 168
+      }
+    },
+    {
+      "context_id": 92,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 24))) u1 =\n      read RBP initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 169,
+        "end_line": 170
+      }
+    },
+    {
+      "context_id": 93,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 16))) u1 =\n      read R12 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 171,
+        "end_line": 172
+      }
+    },
+    {
+      "context_id": 94,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 8))) u1 =\n      read R13 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 173,
+        "end_line": 174
+      }
+    },
+    {
+      "context_id": 95,
+      "proposition": "read RSP u1 = word_sub stackpointer (word 40)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 175,
+        "end_line": 175
+      }
+    },
+    {
+      "context_id": 96,
+      "proposition": "read events u1 =\n      APPEND\n      (crypto_trace_call 270800960 p q n (word_sub stackpointer (word 48))\n      (word 587206968))\n      (read events entry)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 176,
+        "end_line": 180
+      }
+    },
+    {
+      "context_id": 97,
+      "proposition": "read memory u1 = read memory entry",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 181,
+        "end_line": 181
+      }
+    },
+    {
+      "context_id": 98,
+      "proposition": "read RAX u1 =\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 182,
+        "end_line": 188
+      }
+    },
+    {
+      "context_id": 99,
+      "proposition": "val (read RSP u1) = val (word_sub stackpointer (word 48)) + 8",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 189,
+        "end_line": 189
+      }
+    },
+    {
+      "context_id": 100,
+      "proposition": "read RAX u1 = (if c3_equal m p q n then word 0 else word 1)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 190,
+        "end_line": 190
+      }
+    },
+    {
+      "context_id": 101,
+      "proposition": "~read DF u1",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 191,
+        "end_line": 191
+      }
+    },
+    {
+      "context_id": 102,
+      "proposition": "read R15 u1 = read R15 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 192,
+        "end_line": 192
+      }
+    },
+    {
+      "context_id": 103,
+      "proposition": "read R14 u1 = read R14 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 193,
+        "end_line": 193
+      }
+    },
+    {
+      "context_id": 104,
+      "proposition": "read R12 u1 = q",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 194,
+        "end_line": 194
+      }
+    },
+    {
+      "context_id": 105,
+      "proposition": "read RBP u1 = word n",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 195,
+        "end_line": 195
+      }
+    },
+    {
+      "context_id": 106,
+      "proposition": "read RBX u1 = p",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 196,
+        "end_line": 196
+      }
+    },
+    {
+      "context_id": 107,
+      "proposition": "read AF u1 <=> undefined_94",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 197,
+        "end_line": 197
+      }
+    },
+    {
+      "context_id": 108,
+      "proposition": "~read OF u1",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 198,
+        "end_line": 198
+      }
+    },
+    {
+      "context_id": 109,
+      "proposition": "~read CF u1",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 199,
+        "end_line": 199
+      }
+    },
+    {
+      "context_id": 110,
+      "proposition": "read PF u1",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 200,
+        "end_line": 200
+      }
+    },
+    {
+      "context_id": 111,
+      "proposition": "~read SF u1",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 201,
+        "end_line": 201
+      }
+    },
+    {
+      "context_id": 112,
+      "proposition": "read ZF u1",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 202,
+        "end_line": 202
+      }
+    },
+    {
+      "context_id": 113,
+      "proposition": "read R13 u1 = word 0",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 203,
+        "end_line": 203
+      }
+    },
+    {
+      "context_id": 114,
+      "proposition": "read RIP u1 = word (pc + 27)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 204,
+        "end_line": 204
+      }
+    },
+    {
+      "context_id": 115,
+      "proposition": "read R13 u2 = word 0",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 205,
+        "end_line": 205
+      }
+    },
+    {
+      "context_id": 116,
+      "proposition": "read RBX u2 = p",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 206,
+        "end_line": 206
+      }
+    },
+    {
+      "context_id": 117,
+      "proposition": "read RBP u2 = word n",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 207,
+        "end_line": 207
+      }
+    },
+    {
+      "context_id": 118,
+      "proposition": "read R12 u2 = q",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 208,
+        "end_line": 208
+      }
+    },
+    {
+      "context_id": 119,
+      "proposition": "read R14 u2 = read R14 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 209,
+        "end_line": 209
+      }
+    },
+    {
+      "context_id": 120,
+      "proposition": "read R15 u2 = read R15 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 210,
+        "end_line": 210
+      }
+    },
+    {
+      "context_id": 121,
+      "proposition": "~read DF u2",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 211,
+        "end_line": 211
+      }
+    },
+    {
+      "context_id": 122,
+      "proposition": "read RAX u2 = (if c3_equal m p q n then word 0 else word 1)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 212,
+        "end_line": 212
+      }
+    },
+    {
+      "context_id": 123,
+      "proposition": "val (read RSP u2) = val (word_sub stackpointer (word 48)) + 8",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 213,
+        "end_line": 213
+      }
+    },
+    {
+      "context_id": 124,
+      "proposition": "read RAX u2 =\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 214,
+        "end_line": 220
+      }
+    },
+    {
+      "context_id": 125,
+      "proposition": "read memory u2 = read memory entry",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 221,
+        "end_line": 221
+      }
+    },
+    {
+      "context_id": 126,
+      "proposition": "read events u2 =\n      APPEND\n      (crypto_trace_call 270800960 p q n (word_sub stackpointer (word 48))\n      (word 587206968))\n      (read events entry)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 222,
+        "end_line": 226
+      }
+    },
+    {
+      "context_id": 127,
+      "proposition": "read RSP u2 = word_sub stackpointer (word 40)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 227,
+        "end_line": 227
+      }
+    },
+    {
+      "context_id": 128,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 8))) u2 =\n      read R13 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 228,
+        "end_line": 229
+      }
+    },
+    {
+      "context_id": 129,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 16))) u2 =\n      read R12 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 230,
+        "end_line": 231
+      }
+    },
+    {
+      "context_id": 130,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 24))) u2 =\n      read RBP initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 232,
+        "end_line": 233
+      }
+    },
+    {
+      "context_id": 131,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 32))) u2 =\n      read RBX initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 234,
+        "end_line": 235
+      }
+    },
+    {
+      "context_id": 132,
+      "proposition": "forall addr.\n          ~c3_scratch stackpointer (val addr)\n          ==> read memory u2 addr = m addr",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 236,
+        "end_line": 238
+      }
+    },
+    {
+      "context_id": 133,
+      "proposition": "forall i.\n          i < n\n          ==> read memory u2 (word_add p (word i)) = m (word_add p (word i))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 239,
+        "end_line": 241
+      }
+    },
+    {
+      "context_id": 134,
+      "proposition": "forall i.\n          i < n\n          ==> read memory u2 (word_add q (word i)) = m (word_add q (word i))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 242,
+        "end_line": 244
+      }
+    },
+    {
+      "context_id": 135,
+      "proposition": "read (memory :> bytes64 (word 587218896)) u2 = word 270800960",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 245,
+        "end_line": 245
+      }
+    },
+    {
+      "context_id": 136,
+      "proposition": "read (memory :> bytes64 (word 587218904)) u2 = word 270800848",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 246,
+        "end_line": 246
+      }
+    },
+    {
+      "context_id": 137,
+      "proposition": "read AF u2 <=> undefined_95",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 247,
+        "end_line": 247
+      }
+    },
+    {
+      "context_id": 138,
+      "proposition": "~read OF u2",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 248,
+        "end_line": 248
+      }
+    },
+    {
+      "context_id": 139,
+      "proposition": "~read CF u2",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 249,
+        "end_line": 249
+      }
+    },
+    {
+      "context_id": 140,
+      "proposition": "read PF u2 <=>\n      word_evenparity\n      (word_zx\n      (word_zx\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 250,
+        "end_line": 259
+      }
+    },
+    {
+      "context_id": 141,
+      "proposition": "read SF u2 <=>\n      ival\n      (word_zx\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)) <\n      &0",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 260,
+        "end_line": 269
+      }
+    },
+    {
+      "context_id": 142,
+      "proposition": "read ZF u2 <=>\n      val\n      (word_zx\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)) =\n      0",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 270,
+        "end_line": 279
+      }
+    },
+    {
+      "context_id": 143,
+      "proposition": "read RIP u2 = word (pc + 29)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 280,
+        "end_line": 280
+      }
+    },
+    {
+      "context_id": 144,
+      "proposition": "read ZF u3 <=>\n      val\n      (word_zx\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)) =\n      0",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 281,
+        "end_line": 290
+      }
+    },
+    {
+      "context_id": 145,
+      "proposition": "read SF u3 <=>\n      ival\n      (word_zx\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)) <\n      &0",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 291,
+        "end_line": 300
+      }
+    },
+    {
+      "context_id": 146,
+      "proposition": "read PF u3 <=>\n      word_evenparity\n      (word_zx\n      (word_zx\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 301,
+        "end_line": 310
+      }
+    },
+    {
+      "context_id": 147,
+      "proposition": "~read CF u3",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 311,
+        "end_line": 311
+      }
+    },
+    {
+      "context_id": 148,
+      "proposition": "~read OF u3",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 312,
+        "end_line": 312
+      }
+    },
+    {
+      "context_id": 149,
+      "proposition": "read AF u3 <=> undefined_95",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 313,
+        "end_line": 313
+      }
+    },
+    {
+      "context_id": 150,
+      "proposition": "read (memory :> bytes64 (word 587218904)) u3 = word 270800848",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 314,
+        "end_line": 314
+      }
+    },
+    {
+      "context_id": 151,
+      "proposition": "read (memory :> bytes64 (word 587218896)) u3 = word 270800960",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 315,
+        "end_line": 315
+      }
+    },
+    {
+      "context_id": 152,
+      "proposition": "forall i.\n          i < n\n          ==> read memory u3 (word_add q (word i)) = m (word_add q (word i))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 316,
+        "end_line": 318
+      }
+    },
+    {
+      "context_id": 153,
+      "proposition": "forall i.\n          i < n\n          ==> read memory u3 (word_add p (word i)) = m (word_add p (word i))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 319,
+        "end_line": 321
+      }
+    },
+    {
+      "context_id": 154,
+      "proposition": "forall addr.\n          ~c3_scratch stackpointer (val addr)\n          ==> read memory u3 addr = m addr",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 322,
+        "end_line": 324
+      }
+    },
+    {
+      "context_id": 155,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 32))) u3 =\n      read RBX initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 325,
+        "end_line": 326
+      }
+    },
+    {
+      "context_id": 156,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 24))) u3 =\n      read RBP initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 327,
+        "end_line": 328
+      }
+    },
+    {
+      "context_id": 157,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 16))) u3 =\n      read R12 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 329,
+        "end_line": 330
+      }
+    },
+    {
+      "context_id": 158,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 8))) u3 =\n      read R13 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 331,
+        "end_line": 332
+      }
+    },
+    {
+      "context_id": 159,
+      "proposition": "read RSP u3 = word_sub stackpointer (word 40)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 333,
+        "end_line": 333
+      }
+    },
+    {
+      "context_id": 160,
+      "proposition": "read events u3 =\n      APPEND\n      (crypto_trace_call 270800960 p q n (word_sub stackpointer (word 48))\n      (word 587206968))\n      (read events entry)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 334,
+        "end_line": 338
+      }
+    },
+    {
+      "context_id": 161,
+      "proposition": "read memory u3 = read memory entry",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 339,
+        "end_line": 339
+      }
+    },
+    {
+      "context_id": 162,
+      "proposition": "read RAX u3 =\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 340,
+        "end_line": 346
+      }
+    },
+    {
+      "context_id": 163,
+      "proposition": "val (read RSP u3) = val (word_sub stackpointer (word 48)) + 8",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 347,
+        "end_line": 347
+      }
+    },
+    {
+      "context_id": 164,
+      "proposition": "read RAX u3 = (if c3_equal m p q n then word 0 else word 1)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 348,
+        "end_line": 348
+      }
+    },
+    {
+      "context_id": 165,
+      "proposition": "~read DF u3",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 349,
+        "end_line": 349
+      }
+    },
+    {
+      "context_id": 166,
+      "proposition": "read R15 u3 = read R15 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 350,
+        "end_line": 350
+      }
+    },
+    {
+      "context_id": 167,
+      "proposition": "read R14 u3 = read R14 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 351,
+        "end_line": 351
+      }
+    },
+    {
+      "context_id": 168,
+      "proposition": "read R12 u3 = q",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 352,
+        "end_line": 352
+      }
+    },
+    {
+      "context_id": 169,
+      "proposition": "read RBP u3 = word n",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 353,
+        "end_line": 353
+      }
+    },
+    {
+      "context_id": 170,
+      "proposition": "read RBX u3 = p",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 354,
+        "end_line": 354
+      }
+    },
+    {
+      "context_id": 171,
+      "proposition": "read R13 u3 =\n      word_join (word 0)\n      (if val\n          (word_zx\n          (if forall i.\n                  i < n\n                  ==> read memory entry (word_add p (word i)) =\n                      read memory entry (word_add q (word i))\n           then word 0\n           else word 1)) =\n          0\n       then word 1\n       else word 0)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 355,
+        "end_line": 367
+      }
+    },
+    {
+      "context_id": 172,
+      "proposition": "read RIP u3 = word (pc + 33)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 368,
+        "end_line": 368
+      }
+    },
+    {
+      "context_id": 173,
+      "proposition": "read R13 u4 =\n      word_join (word 0)\n      (if val\n          (word_zx\n          (if forall i.\n                  i < n\n                  ==> read memory entry (word_add p (word i)) =\n                      read memory entry (word_add q (word i))\n           then word 0\n           else word 1)) =\n          0\n       then word 1\n       else word 0)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 369,
+        "end_line": 381
+      }
+    },
+    {
+      "context_id": 174,
+      "proposition": "read RBX u4 = p",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 382,
+        "end_line": 382
+      }
+    },
+    {
+      "context_id": 175,
+      "proposition": "read RBP u4 = word n",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 383,
+        "end_line": 383
+      }
+    },
+    {
+      "context_id": 176,
+      "proposition": "read R12 u4 = q",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 384,
+        "end_line": 384
+      }
+    },
+    {
+      "context_id": 177,
+      "proposition": "read R14 u4 = read R14 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 385,
+        "end_line": 385
+      }
+    },
+    {
+      "context_id": 178,
+      "proposition": "read R15 u4 = read R15 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 386,
+        "end_line": 386
+      }
+    },
+    {
+      "context_id": 179,
+      "proposition": "~read DF u4",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 387,
+        "end_line": 387
+      }
+    },
+    {
+      "context_id": 180,
+      "proposition": "read RAX u4 = (if c3_equal m p q n then word 0 else word 1)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 388,
+        "end_line": 388
+      }
+    },
+    {
+      "context_id": 181,
+      "proposition": "val (read RSP u4) = val (word_sub stackpointer (word 48)) + 8",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 389,
+        "end_line": 389
+      }
+    },
+    {
+      "context_id": 182,
+      "proposition": "read RAX u4 =\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 390,
+        "end_line": 396
+      }
+    },
+    {
+      "context_id": 183,
+      "proposition": "read memory u4 = read memory entry",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 397,
+        "end_line": 397
+      }
+    },
+    {
+      "context_id": 184,
+      "proposition": "read events u4 =\n      APPEND\n      (crypto_trace_call 270800960 p q n (word_sub stackpointer (word 48))\n      (word 587206968))\n      (read events entry)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 398,
+        "end_line": 402
+      }
+    },
+    {
+      "context_id": 185,
+      "proposition": "read RSP u4 = word_sub stackpointer (word 40)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 403,
+        "end_line": 403
+      }
+    },
+    {
+      "context_id": 186,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 8))) u4 =\n      read R13 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 404,
+        "end_line": 405
+      }
+    },
+    {
+      "context_id": 187,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 16))) u4 =\n      read R12 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 406,
+        "end_line": 407
+      }
+    },
+    {
+      "context_id": 188,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 24))) u4 =\n      read RBP initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 408,
+        "end_line": 409
+      }
+    },
+    {
+      "context_id": 189,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 32))) u4 =\n      read RBX initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 410,
+        "end_line": 411
+      }
+    },
+    {
+      "context_id": 190,
+      "proposition": "forall addr.\n          ~c3_scratch stackpointer (val addr)\n          ==> read memory u4 addr = m addr",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 412,
+        "end_line": 414
+      }
+    },
+    {
+      "context_id": 191,
+      "proposition": "forall i.\n          i < n\n          ==> read memory u4 (word_add p (word i)) = m (word_add p (word i))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 415,
+        "end_line": 417
+      }
+    },
+    {
+      "context_id": 192,
+      "proposition": "forall i.\n          i < n\n          ==> read memory u4 (word_add q (word i)) = m (word_add q (word i))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 418,
+        "end_line": 420
+      }
+    },
+    {
+      "context_id": 193,
+      "proposition": "read (memory :> bytes64 (word 587218896)) u4 = word 270800960",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 421,
+        "end_line": 421
+      }
+    },
+    {
+      "context_id": 194,
+      "proposition": "read (memory :> bytes64 (word 587218904)) u4 = word 270800848",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 422,
+        "end_line": 422
+      }
+    },
+    {
+      "context_id": 195,
+      "proposition": "read AF u4 <=> undefined_95",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 423,
+        "end_line": 423
+      }
+    },
+    {
+      "context_id": 196,
+      "proposition": "~read OF u4",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 424,
+        "end_line": 424
+      }
+    },
+    {
+      "context_id": 197,
+      "proposition": "~read CF u4",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 425,
+        "end_line": 425
+      }
+    },
+    {
+      "context_id": 198,
+      "proposition": "read PF u4 <=>\n      word_evenparity\n      (word_zx\n      (word_zx\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 426,
+        "end_line": 435
+      }
+    },
+    {
+      "context_id": 199,
+      "proposition": "read SF u4 <=>\n      ival\n      (word_zx\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)) <\n      &0",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 436,
+        "end_line": 445
+      }
+    },
+    {
+      "context_id": 200,
+      "proposition": "read ZF u4 <=>\n      val\n      (word_zx\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)) =\n      0",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 446,
+        "end_line": 455
+      }
+    },
+    {
+      "context_id": 201,
+      "proposition": "read RSI u4 = word n",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 456,
+        "end_line": 456
+      }
+    },
+    {
+      "context_id": 202,
+      "proposition": "read RIP u4 = word (pc + 36)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 457,
+        "end_line": 457
+      }
+    },
+    {
+      "context_id": 203,
+      "proposition": "read RSI u5 = word n",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 458,
+        "end_line": 458
+      }
+    },
+    {
+      "context_id": 204,
+      "proposition": "read ZF u5 <=>\n      val\n      (word_zx\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)) =\n      0",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 459,
+        "end_line": 468
+      }
+    },
+    {
+      "context_id": 205,
+      "proposition": "read SF u5 <=>\n      ival\n      (word_zx\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)) <\n      &0",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 469,
+        "end_line": 478
+      }
+    },
+    {
+      "context_id": 206,
+      "proposition": "read PF u5 <=>\n      word_evenparity\n      (word_zx\n      (word_zx\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 479,
+        "end_line": 488
+      }
+    },
+    {
+      "context_id": 207,
+      "proposition": "~read CF u5",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 489,
+        "end_line": 489
+      }
+    },
+    {
+      "context_id": 208,
+      "proposition": "~read OF u5",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 490,
+        "end_line": 490
+      }
+    },
+    {
+      "context_id": 209,
+      "proposition": "read AF u5 <=> undefined_95",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 491,
+        "end_line": 491
+      }
+    },
+    {
+      "context_id": 210,
+      "proposition": "read (memory :> bytes64 (word 587218904)) u5 = word 270800848",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 492,
+        "end_line": 492
+      }
+    },
+    {
+      "context_id": 211,
+      "proposition": "read (memory :> bytes64 (word 587218896)) u5 = word 270800960",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 493,
+        "end_line": 493
+      }
+    },
+    {
+      "context_id": 212,
+      "proposition": "forall i.\n          i < n\n          ==> read memory u5 (word_add q (word i)) = m (word_add q (word i))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 494,
+        "end_line": 496
+      }
+    },
+    {
+      "context_id": 213,
+      "proposition": "forall i.\n          i < n\n          ==> read memory u5 (word_add p (word i)) = m (word_add p (word i))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 497,
+        "end_line": 499
+      }
+    },
+    {
+      "context_id": 214,
+      "proposition": "forall addr.\n          ~c3_scratch stackpointer (val addr)\n          ==> read memory u5 addr = m addr",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 500,
+        "end_line": 502
+      }
+    },
+    {
+      "context_id": 215,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 32))) u5 =\n      read RBX initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 503,
+        "end_line": 504
+      }
+    },
+    {
+      "context_id": 216,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 24))) u5 =\n      read RBP initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 505,
+        "end_line": 506
+      }
+    },
+    {
+      "context_id": 217,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 16))) u5 =\n      read R12 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 507,
+        "end_line": 508
+      }
+    },
+    {
+      "context_id": 218,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 8))) u5 =\n      read R13 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 509,
+        "end_line": 510
+      }
+    },
+    {
+      "context_id": 219,
+      "proposition": "read RSP u5 = word_sub stackpointer (word 40)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 511,
+        "end_line": 511
+      }
+    },
+    {
+      "context_id": 220,
+      "proposition": "read events u5 =\n      APPEND\n      (crypto_trace_call 270800960 p q n (word_sub stackpointer (word 48))\n      (word 587206968))\n      (read events entry)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 512,
+        "end_line": 516
+      }
+    },
+    {
+      "context_id": 221,
+      "proposition": "read memory u5 = read memory entry",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 517,
+        "end_line": 517
+      }
+    },
+    {
+      "context_id": 222,
+      "proposition": "read RAX u5 =\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 518,
+        "end_line": 524
+      }
+    },
+    {
+      "context_id": 223,
+      "proposition": "val (read RSP u5) = val (word_sub stackpointer (word 48)) + 8",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 525,
+        "end_line": 525
+      }
+    },
+    {
+      "context_id": 224,
+      "proposition": "read RAX u5 = (if c3_equal m p q n then word 0 else word 1)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 526,
+        "end_line": 526
+      }
+    },
+    {
+      "context_id": 225,
+      "proposition": "~read DF u5",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 527,
+        "end_line": 527
+      }
+    },
+    {
+      "context_id": 226,
+      "proposition": "read R15 u5 = read R15 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 528,
+        "end_line": 528
+      }
+    },
+    {
+      "context_id": 227,
+      "proposition": "read R14 u5 = read R14 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 529,
+        "end_line": 529
+      }
+    },
+    {
+      "context_id": 228,
+      "proposition": "read R12 u5 = q",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 530,
+        "end_line": 530
+      }
+    },
+    {
+      "context_id": 229,
+      "proposition": "read RBP u5 = word n",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 531,
+        "end_line": 531
+      }
+    },
+    {
+      "context_id": 230,
+      "proposition": "read RBX u5 = p",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 532,
+        "end_line": 532
+      }
+    },
+    {
+      "context_id": 231,
+      "proposition": "read R13 u5 =\n      word_join (word 0)\n      (if val\n          (word_zx\n          (if forall i.\n                  i < n\n                  ==> read memory entry (word_add p (word i)) =\n                      read memory entry (word_add q (word i))\n           then word 0\n           else word 1)) =\n          0\n       then word 1\n       else word 0)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 533,
+        "end_line": 545
+      }
+    },
+    {
+      "context_id": 232,
+      "proposition": "read RDI u5 = p",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 546,
+        "end_line": 546
+      }
+    },
+    {
+      "context_id": 233,
+      "proposition": "read RIP u5 = word (pc + 39)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 547,
+        "end_line": 547
+      }
+    },
+    {
+      "context_id": 234,
+      "proposition": "read RDI u6 = p",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 548,
+        "end_line": 548
+      }
+    },
+    {
+      "context_id": 235,
+      "proposition": "read R13 u6 =\n      word_join (word 0)\n      (if val\n          (word_zx\n          (if forall i.\n                  i < n\n                  ==> read memory entry (word_add p (word i)) =\n                      read memory entry (word_add q (word i))\n           then word 0\n           else word 1)) =\n          0\n       then word 1\n       else word 0)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 549,
+        "end_line": 561
+      }
+    },
+    {
+      "context_id": 236,
+      "proposition": "read RBX u6 = p",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 562,
+        "end_line": 562
+      }
+    },
+    {
+      "context_id": 237,
+      "proposition": "read RBP u6 = word n",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 563,
+        "end_line": 563
+      }
+    },
+    {
+      "context_id": 238,
+      "proposition": "read R12 u6 = q",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 564,
+        "end_line": 564
+      }
+    },
+    {
+      "context_id": 239,
+      "proposition": "read R14 u6 = read R14 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 565,
+        "end_line": 565
+      }
+    },
+    {
+      "context_id": 240,
+      "proposition": "read R15 u6 = read R15 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 566,
+        "end_line": 566
+      }
+    },
+    {
+      "context_id": 241,
+      "proposition": "~read DF u6",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 567,
+        "end_line": 567
+      }
+    },
+    {
+      "context_id": 242,
+      "proposition": "read RAX u6 = (if c3_equal m p q n then word 0 else word 1)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 568,
+        "end_line": 568
+      }
+    },
+    {
+      "context_id": 243,
+      "proposition": "read RAX u6 =\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 569,
+        "end_line": 575
+      }
+    },
+    {
+      "context_id": 244,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 8))) u6 =\n      read R13 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 576,
+        "end_line": 577
+      }
+    },
+    {
+      "context_id": 245,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 16))) u6 =\n      read R12 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 578,
+        "end_line": 579
+      }
+    },
+    {
+      "context_id": 246,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 24))) u6 =\n      read RBP initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 580,
+        "end_line": 581
+      }
+    },
+    {
+      "context_id": 247,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 32))) u6 =\n      read RBX initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 582,
+        "end_line": 583
+      }
+    },
+    {
+      "context_id": 248,
+      "proposition": "read (memory :> bytes64 (word 587218896)) u6 = word 270800960",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 584,
+        "end_line": 584
+      }
+    },
+    {
+      "context_id": 249,
+      "proposition": "read (memory :> bytes64 (word 587218904)) u6 = word 270800848",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 585,
+        "end_line": 585
+      }
+    },
+    {
+      "context_id": 250,
+      "proposition": "read AF u6 <=> undefined_95",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 586,
+        "end_line": 586
+      }
+    },
+    {
+      "context_id": 251,
+      "proposition": "~read OF u6",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 587,
+        "end_line": 587
+      }
+    },
+    {
+      "context_id": 252,
+      "proposition": "~read CF u6",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 588,
+        "end_line": 588
+      }
+    },
+    {
+      "context_id": 253,
+      "proposition": "read PF u6 <=>\n      word_evenparity\n      (word_zx\n      (word_zx\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 589,
+        "end_line": 598
+      }
+    },
+    {
+      "context_id": 254,
+      "proposition": "read SF u6 <=>\n      ival\n      (word_zx\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)) <\n      &0",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 599,
+        "end_line": 608
+      }
+    },
+    {
+      "context_id": 255,
+      "proposition": "read ZF u6 <=>\n      val\n      (word_zx\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)) =\n      0",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 609,
+        "end_line": 618
+      }
+    },
+    {
+      "context_id": 256,
+      "proposition": "read RSI u6 = word n",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 619,
+        "end_line": 619
+      }
+    },
+    {
+      "context_id": 257,
+      "proposition": "read RIP u6 = word (pc + 18446744073709551392)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 620,
+        "end_line": 620
+      }
+    },
+    {
+      "context_id": 258,
+      "proposition": "read\n      (memory :>\n       bytes64 (word_sub (word_sub stackpointer (word 40)) (word 8)))\n      u6 =\n      word (pc + 44)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 621,
+        "end_line": 625
+      }
+    },
+    {
+      "context_id": 259,
+      "proposition": "read RSP u6 = word_sub (word_sub stackpointer (word 40)) (word 8)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 626,
+        "end_line": 626
+      }
+    },
+    {
+      "context_id": 260,
+      "proposition": "read events u6 =\n      CONS\n      (EventStore (word_sub (word_sub stackpointer (word 40)) (word 8),8))\n      (CONS (EventJump (word (pc + 44),word (pc + 18446744073709551392)))\n      (APPEND\n       (crypto_trace_call 270800960 p q n (word_sub stackpointer (word 48))\n       (word 587206968))\n      (read events entry)))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 627,
+        "end_line": 634
+      }
+    },
+    {
+      "context_id": 261,
+      "proposition": "read RIP u6 = word cleansepltpc",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 635,
+        "end_line": 635
+      }
+    },
+    {
+      "context_id": 262,
+      "proposition": "587206720 = cleansepltpc",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 636,
+        "end_line": 636
+      }
+    },
+    {
+      "context_id": 263,
+      "proposition": "bytes_loaded u7 (word cleansepltpc) c3_cleanse_plt_prefix",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 637,
+        "end_line": 637
+      }
+    },
+    {
+      "context_id": 264,
+      "proposition": "bytes_loaded u7 (word pc) c3_caller_mc",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 638,
+        "end_line": 638
+      }
+    },
+    {
+      "context_id": 265,
+      "proposition": "bytes_loaded u7 (word 587206704) c3_crypto_plt_prefix",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 639,
+        "end_line": 639
+      }
+    },
+    {
+      "context_id": 266,
+      "proposition": "bytes_loaded u7 (word 270800960) crypto_memcmp_mc",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 640,
+        "end_line": 640
+      }
+    },
+    {
+      "context_id": 267,
+      "proposition": "bytes_loaded u7 (word 270800848) openssl_cleanse_mc",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 641,
+        "end_line": 641
+      }
+    },
+    {
+      "context_id": 268,
+      "proposition": "read RSP u7 = word_sub (word_sub stackpointer (word 40)) (word 8)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 642,
+        "end_line": 642
+      }
+    },
+    {
+      "context_id": 269,
+      "proposition": "read\n      (memory :>\n       bytes64 (word_sub (word_sub stackpointer (word 40)) (word 8)))\n      u7 =\n      word (pc + 44)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 643,
+        "end_line": 647
+      }
+    },
+    {
+      "context_id": 270,
+      "proposition": "read RSI u7 = word n",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 648,
+        "end_line": 648
+      }
+    },
+    {
+      "context_id": 271,
+      "proposition": "read ZF u7 <=>\n      val\n      (word_zx\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)) =\n      0",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 649,
+        "end_line": 658
+      }
+    },
+    {
+      "context_id": 272,
+      "proposition": "read SF u7 <=>\n      ival\n      (word_zx\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)) <\n      &0",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 659,
+        "end_line": 668
+      }
+    },
+    {
+      "context_id": 273,
+      "proposition": "read PF u7 <=>\n      word_evenparity\n      (word_zx\n      (word_zx\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 669,
+        "end_line": 678
+      }
+    },
+    {
+      "context_id": 274,
+      "proposition": "~read CF u7",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 679,
+        "end_line": 679
+      }
+    },
+    {
+      "context_id": 275,
+      "proposition": "~read OF u7",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 680,
+        "end_line": 680
+      }
+    },
+    {
+      "context_id": 276,
+      "proposition": "read AF u7 <=> undefined_95",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 681,
+        "end_line": 681
+      }
+    },
+    {
+      "context_id": 277,
+      "proposition": "read (memory :> bytes64 (word 587218904)) u7 = word 270800848",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 682,
+        "end_line": 682
+      }
+    },
+    {
+      "context_id": 278,
+      "proposition": "read (memory :> bytes64 (word 587218896)) u7 = word 270800960",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 683,
+        "end_line": 683
+      }
+    },
+    {
+      "context_id": 279,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 32))) u7 =\n      read RBX initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 684,
+        "end_line": 685
+      }
+    },
+    {
+      "context_id": 280,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 24))) u7 =\n      read RBP initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 686,
+        "end_line": 687
+      }
+    },
+    {
+      "context_id": 281,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 16))) u7 =\n      read R12 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 688,
+        "end_line": 689
+      }
+    },
+    {
+      "context_id": 282,
+      "proposition": "read (memory :> bytes64 (word_sub stackpointer (word 8))) u7 =\n      read R13 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 690,
+        "end_line": 691
+      }
+    },
+    {
+      "context_id": 283,
+      "proposition": "read RAX u7 =\n      (if forall i.\n              i < n\n              ==> read memory entry (word_add p (word i)) =\n                  read memory entry (word_add q (word i))\n       then word 0\n       else word 1)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 692,
+        "end_line": 698
+      }
+    },
+    {
+      "context_id": 284,
+      "proposition": "read RAX u7 = (if c3_equal m p q n then word 0 else word 1)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 699,
+        "end_line": 699
+      }
+    },
+    {
+      "context_id": 285,
+      "proposition": "~read DF u7",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 700,
+        "end_line": 700
+      }
+    },
+    {
+      "context_id": 286,
+      "proposition": "read R15 u7 = read R15 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 701,
+        "end_line": 701
+      }
+    },
+    {
+      "context_id": 287,
+      "proposition": "read R14 u7 = read R14 initial",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 702,
+        "end_line": 702
+      }
+    },
+    {
+      "context_id": 288,
+      "proposition": "read R12 u7 = q",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 703,
+        "end_line": 703
+      }
+    },
+    {
+      "context_id": 289,
+      "proposition": "read RBP u7 = word n",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 704,
+        "end_line": 704
+      }
+    },
+    {
+      "context_id": 290,
+      "proposition": "read RBX u7 = p",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 705,
+        "end_line": 705
+      }
+    },
+    {
+      "context_id": 291,
+      "proposition": "read R13 u7 =\n      word_join (word 0)\n      (if val\n          (word_zx\n          (if forall i.\n                  i < n\n                  ==> read memory entry (word_add p (word i)) =\n                      read memory entry (word_add q (word i))\n           then word 0\n           else word 1)) =\n          0\n       then word 1\n       else word 0)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 706,
+        "end_line": 718
+      }
+    },
+    {
+      "context_id": 292,
+      "proposition": "read RDI u7 = p",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 719,
+        "end_line": 719
+      }
+    },
+    {
+      "context_id": 293,
+      "proposition": "(MAYCHANGE [RIP] ,,\n       MAYCHANGE [R13] ,,\n       MAYCHANGE [ZF] ,,\n       MAYCHANGE [SF] ,,\n       MAYCHANGE [PF] ,,\n       MAYCHANGE [CF] ,,\n       MAYCHANGE [OF] ,,\n       MAYCHANGE [AF] ,,\n       MAYCHANGE [RSI] ,,\n       MAYCHANGE [RDI] ,,\n       MAYCHANGE [events] ,,\n       MAYCHANGE [RSP] ,,\n       MAYCHANGE\n       [memory :>\n        bytes64 (word_sub (word_sub stackpointer (word 40)) (word 8))])\n      returned\n      u7",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 720,
+        "end_line": 736
+      }
+    },
+    {
+      "context_id": 294,
+      "proposition": "read RIP u7 = read (memory :> bytes64 (word (cleansepltpc + 12184))) u6",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 737,
+        "end_line": 737
+      }
+    },
+    {
+      "context_id": 295,
+      "proposition": "read events u7 =\n      CONS\n      (EventJump\n      (word (cleansepltpc + 6),\n       read (memory :> bytes64 (word (cleansepltpc + 12184))) u6))\n      (CONS (EventLoad (word (cleansepltpc + 12184),8))\n      (CONS\n       (EventStore (word_sub (word_sub stackpointer (word 40)) (word 8),8))\n      (CONS (EventJump (word (pc + 44),word (pc + 18446744073709551392)))\n      (APPEND\n       (crypto_trace_call 270800960 p q n (word_sub stackpointer (word 48))\n       (word 587206968))\n      (read events entry)))))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 738,
+        "end_line": 750
+      }
+    },
+    {
+      "context_id": 296,
+      "proposition": "(MAYCHANGE [RIP; RSP; R13; RSI; RDI] ,,\n       MAYCHANGE SOME_FLAGS ,,\n       MAYCHANGE [memory :> bytes (word_sub stackpointer (word 48),48)] ,,\n       MAYCHANGE [events])\n      returned\n      u7",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 751,
+        "end_line": 756
+      }
+    },
+    {
+      "context_id": 297,
+      "proposition": "c3_saved_prefix stackpointer p q n m initial returned",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 757,
+        "end_line": 757
+      }
+    },
+    {
+      "context_id": 298,
+      "proposition": "forall addr.\n          ~c3_scratch stackpointer (val addr)\n          ==> read memory u7 addr = m addr",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 758,
+        "end_line": 760
+      }
+    },
+    {
+      "context_id": 299,
+      "proposition": "forall addr. fb_immutable addr ==> ~c3_scratch stackpointer addr",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 761,
+        "end_line": 761
+      }
+    },
+    {
+      "context_id": 300,
+      "proposition": "fb_full_image lib_file (read memory u7) (read memory u7)\n      (read memory u7)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 762,
+        "end_line": 763
+      }
+    },
+    {
+      "context_id": 301,
+      "proposition": "forall i.\n          i < n\n          ==> read memory u7 (word_add p (word i)) = m (word_add p (word i))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 764,
+        "end_line": 766
+      }
+    },
+    {
+      "context_id": 302,
+      "proposition": "forall i.\n          i < n\n          ==> read memory u7 (word_add q (word i)) = m (word_add q (word i))",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 767,
+        "end_line": 769
+      }
+    },
+    {
+      "context_id": 303,
+      "proposition": "read R13 u7 = (if c3_equal m p q n then word 1 else word 0)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 770,
+        "end_line": 770
+      }
+    },
+    {
+      "context_id": 304,
+      "proposition": "~bit 18 (read rflags u7)",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 771,
+        "end_line": 771
+      }
+    },
+    {
+      "context_id": 305,
+      "proposition": "val (word_sub stackpointer (word 48)) = val stackpointer - 48",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 772,
+        "end_line": 772
+      }
+    },
+    {
+      "context_id": 306,
+      "proposition": "val (word_sub stackpointer (word 48)) MOD 16 = 8",
+      "source": {
+        "path": "development/approved-plan/held-out-transfer-v1/c3/replay/construction-cap-cleanup-full-context-v1.txt",
+        "sha256": "8edd5c99ea8b9d4f7ca939ff1d855673858c2fb989edcf85d25da2ca15da8ccc",
+        "start_line": 773,
+        "end_line": 773
+      }
+    }
+  ]
+}

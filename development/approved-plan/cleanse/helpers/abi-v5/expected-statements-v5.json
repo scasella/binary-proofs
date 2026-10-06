@@ -1,0 +1,44 @@
+{
+  "theorems": [
+    {
+      "name": "ABI_CLEANSE_EXTENDED_PROJECTION",
+      "statement": "!s a s' a'. abi_cleanse_scalar_extended_step (s,a) (s',a') ==> x86 s s'"
+    },
+    {
+      "name": "ABI_CLEANSE_EXTENDED_BACKLIFT_ALL",
+      "statement": "!s s' a. x86 s s' ==> abi_cleanse_scalar_extended_step (s,a) (s',a)"
+    },
+    {
+      "name": "ABI_CLEANSE_EXTENDED_EQUIVALENCE",
+      "statement": "!s s' a. (?a'. abi_cleanse_scalar_extended_step (s,a) (s',a')) <=> x86 s s'"
+    },
+    {
+      "name": "ABI_CLEANSE_EXTENDED_PROGRESS",
+      "statement": "!s a. (?s'. x86 s s') <=>\n        ?s' a'. abi_cleanse_scalar_extended_step (s,a) (s',a')"
+    },
+    {
+      "name": "ABI_CLEANSE_EXTENDED_REFINES_V4",
+      "statement": "!s a s' a'. abi_cleanse_scalar_extended_step (s,a) (s',a')\n    ==> abi_scalar_extended_step (s,a) (s',a')"
+    },
+    {
+      "name": "ABI_CLEANSE_STEP_PRESERVES_OMITTED",
+      "statement": "!s a s' a'. abi_cleanse_scalar_extended_step (s,a) (s',a') /\\\n             abi_all_decodes_cleanse_scalar s ==> a' = a"
+    },
+    {
+      "name": "ABI_CLEANSE_EQUAL_IMPLIES_REQUIRED_CONTROLS",
+      "statement": "!a a'. a' = a ==> abi_required_controls_preserved a a'"
+    },
+    {
+      "name": "ABI_CLEANSE_REGISTERED_SITE_IS_SCALAR",
+      "statement": "!off len inst. abi_cleanse_site off len inst ==> abi_cleanse_scalar_instruction inst"
+    },
+    {
+      "name": "ABI_CLEANSE_DECODED_SCALAR_UNIQUE",
+      "statement": "!len inst s. x86_decode s (read RIP s) (len,inst) /\\\n              abi_cleanse_scalar_instruction inst ==> abi_all_decodes_cleanse_scalar s"
+    },
+    {
+      "name": "ABI_CLEANSE_CHECKED_RUN_LIFT",
+      "statement": "!n P C s a.\n    assurance_checked_run n P\n      (\\k source target. C k source target /\\ abi_all_decodes_cleanse_scalar source) s\n    ==> eventually_n abi_cleanse_scalar_extended_step n\n          (\\t. P(FST t) /\\ SND t = a) (s,a)"
+    }
+  ]
+}

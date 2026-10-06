@@ -1,0 +1,12 @@
+{
+  "schema": "c3-successor-postmortem-identity-check-v1",
+  "utc": "2026-10-05T14:05:23.031489+00:00",
+  "baseline": "development/approved-plan/c3-successor-v1/status/runtime-postmortem-identity-start-v1.json",
+  "baseline_sha256": "2cf4f85fdfaa99ebf00e3f26c6ac5d513e1b91836f1ffb21bf985e02438dc891",
+  "tree_root": "development/approved-plan/c3-postmortem-v1",
+  "records": 32,
+  "status": "PASS",
+  "failures": [],
+  "formal_verification": false,
+  "scope": "Identity preservation only; no theorem reconstruction or stage outcome claim."
+}

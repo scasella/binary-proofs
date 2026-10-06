@@ -1,0 +1,31 @@
+{
+  "artifacts": {
+    "artifacts/baseline/ld-linux-x86-64.so.2": "02bcda52c1a5dfc236f94d9e5255b4a0e26347d8a372a5223b650e31f291ce3c",
+    "artifacts/baseline/libc.so.6": "6b4a45352fd0c540a9c7c718f35ce8c8e46a4e482f9d3885a910c32d1a0e1421",
+    "artifacts/baseline/libcrypto.so.3": "76dd3d93e5ee48950a92a58d59b94de8143847f91a80d9682c938767b991577d",
+    "artifacts/baseline/libssl.so.3": "df53c8f504722cacd8035111fdaed5151ce17b79fd380efcf28b3b4a1ca70cd5",
+    "artifacts/baseline/ossl-modules/legacy.so": "f5bae55ac9fd0d01a18b3ad845f7ca06276d5dcdb8284ad418c6997cd7096417"
+  },
+  "checker_image_id": "sha256:a19fdc18f1f283ed8e2514229b77f33619df1ba0ea1ae578c97779f4b4eb3c3f",
+  "created_at": "2026-09-30T08:27:13.466011+00:00",
+  "declared_profile": "CPUID and XCR0 from actual amd64 emulator, results/profile/baseline.json; proc/cpuinfo is auxiliary and differs",
+  "experiment_id": "BP-20260930-E1",
+  "human_review": "PENDING",
+  "loaded_image_scope": "code at load_bias+PT_LOAD VA equals frozen ELF segment bytes; relocated data/bindings and CPU initialization are explicit environmental assumptions; loading not proved",
+  "metadata_unavailable": [
+    "package derivations: Nix not selected",
+    "distribution source package recipe, buildinfo and matching debuginfo not yet acquired"
+  ],
+  "nix_available": false,
+  "offline_image_archive": "artifacts/environment/docker-images.tar",
+  "offline_image_archive_sha256": "94d2a9f376ee70bc7b5cabf6565b571bbc87844232c5a03663211e12e36c1f9b",
+  "packages": {
+    "glibc": "2.36-9+deb12u14",
+    "openssl": "3.0.22-1~deb12u1"
+  },
+  "profile_sha256": "8a06f8318a6be177999d2b7b994bdf31155e94ea89b0211632a374966639c915",
+  "prompt_sha256": "4cb2075f379515e8973294df6a5282928f91adb0bdb3d472ad1a7493ba3888c4",
+  "provenance_class": "unchanged production Debian packages in pinned local container image",
+  "source_recipe_rebuilt": false,
+  "target_image_id": "sha256:444f775e6378c2e5523f29ceb8bbb184442277ed1114e6d37d873a7f127dfc26"
+}

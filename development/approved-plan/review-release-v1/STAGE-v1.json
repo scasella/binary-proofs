@@ -1,0 +1,20 @@
+{
+  "schema": "accepted-c1c2c3-release-stage-v1",
+  "experiment": "BP-20261005-C1C2C3-REVIEW-RELEASE-V1",
+  "started_utc": "2026-10-05T15:03:28.826336+00:00",
+  "purpose": "Consolidate accepted sources/evidence; checking-only consumption, human review packet and case study. No proof construction or research expansion.",
+  "protected": "All original accepted packages/supplier/model/contracts/candidate-layer and failed C1/C3/postmortem/successor histories remain unchanged.",
+  "checking_limits": {
+    "per_invocation_seconds": 1800,
+    "cpu_count": 1,
+    "memory_bytes": 3221225472,
+    "swap_limit_bytes": 3221225472,
+    "network": "none"
+  },
+  "checking_case_session_limit_seconds": 5400,
+  "schedule_scope": "Separate later checking contexts; historical construction deadlines stay immutable and are not extended. Case sessions cover positive replay, required controls/probe and gates; every proof invocation retains original limit.",
+  "human_review": "PENDING",
+  "priority_comparative_claims": "UNVERIFIED_UNLESS_SUPPORTED_BY_ACTUAL_PRIMARY_RELATED_WORK_COMPARISON",
+  "consumer_independence": "To be measured, no external organization/human independence inferred",
+  "resource_observations": "Setup/export/checking/reporting separate; model/tokens/cost null if not exposed; failures retained."
+}

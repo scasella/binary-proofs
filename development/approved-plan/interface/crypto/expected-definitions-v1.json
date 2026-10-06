@@ -1,0 +1,4 @@
+{
+  "bp_e2_crypto_public_post": "bp_e2_crypto_public_post file_bytes initial_rw padding stackpointer ra p q n\n                          e m s a (t:x86state#abi_omitted_state) <=>\n    bp_assurance_call_post 0x10241840 stackpointer ra p q n e m s (FST t) /\\\n    fb_full_image file_bytes initial_rw padding (read memory (FST t)) /\\\n    SND t = a /\\ abi_required_controls_preserved a (SND t)",
+  "bp_e2_crypto_public_pre": "bp_e2_crypto_public_pre file_bytes initial_rw padding stackpointer ra p q n\n                         m rp xp ordinary (s:x86state,a:abi_omitted_state) <=>\n    fb_file_code file_bytes /\\ fb_full_image file_bytes initial_rw padding m /\\\n    bp_e2_crypto_pre 0x10241840 stackpointer ra p q n m rp xp ordinary s /\\\n    (!addr. lw_image_domain addr\n       ==> rp addr /\\ ordinary addr /\\ (xp addr <=> lw_execute addr)) /\\\n    assurance_canonical48 (val(read ABI_FS_BASE a))"
+}

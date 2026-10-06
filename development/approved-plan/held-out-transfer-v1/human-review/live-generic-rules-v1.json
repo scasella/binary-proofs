@@ -1,0 +1,2079 @@
+{
+  "agent_review_is_not_human_review": true,
+  "candidate_layer_freeze": "development/approved-plan/held-out-transfer-v1/layer/freeze-v1.json",
+  "candidate_layer_freeze_sha256": "266f58bbb1883389a74b8ba0986db11d0b0d6f4c03c1d3961d2db04f51d94193",
+  "created_utc": "2026-10-05T01:10:35.389015+00:00",
+  "human_review": "PENDING",
+  "rows": [
+    {
+      "actual_live_formal_exports": [
+        {
+          "conclusion": "forall file_bytes initial_rw padding stackpointer ra p q n m rp xp ordinary s a.\n    bp_e2_crypto_public_pre file_bytes initial_rw padding stackpointer ra p q\n    n\n    m\n    rp\n    xp\n    ordinary\n    (s,a)\n    ==> assurance_checked_run (bp_assurance_call_steps n)\n        (bp_assurance_call_post 270800960 stackpointer ra p q n\n         (read events s)\n         m\n        s)\n        (\\k source target.\n             assurance_zero_step\n             (bp_e2_crypto_allowed_read rp ordinary p q n stackpointer)\n             bp_e2_crypto_allowed_write\n             (bp_e2_crypto_allowed_fetch xp ordinary 270800960)\n             k\n             source\n             target /\\\n             abi_all_decodes_caller_scalar source)\n        s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "file_bytes",
+              "type": "num->(8)word"
+            },
+            {
+              "name": "initial_rw",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "padding",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "stackpointer",
+              "type": "(64)word"
+            },
+            {
+              "name": "ra",
+              "type": "(64)word"
+            },
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "q",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "m",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "rp",
+              "type": "num->bool"
+            },
+            {
+              "name": "xp",
+              "type": "num->bool"
+            },
+            {
+              "name": "ordinary",
+              "type": "num->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "a",
+              "type": "abi_omitted_state"
+            }
+          ],
+          "name": "BP_E3_CRYPTO_PUBLIC_CALLER_POLICY",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall file_bytes initial_rw padding stackpointer ra p q n m rp xp ordinary s a.\n    bp_e2_crypto_public_pre file_bytes initial_rw padding stackpointer ra p q\n    n\n    m\n    rp\n    xp\n    ordinary\n    (s,a)\n    ==> eventually_n abi_caller_scalar_extended_step\n        (bp_assurance_call_steps n)\n        (bp_e2_crypto_public_post file_bytes initial_rw padding stackpointer\n         ra\n         p\n         q\n         n\n         (read events s)\n         m\n         s\n        a)\n        (s,a)",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "file_bytes",
+              "type": "num->(8)word"
+            },
+            {
+              "name": "initial_rw",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "padding",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "stackpointer",
+              "type": "(64)word"
+            },
+            {
+              "name": "ra",
+              "type": "(64)word"
+            },
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "q",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "m",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "rp",
+              "type": "num->bool"
+            },
+            {
+              "name": "xp",
+              "type": "num->bool"
+            },
+            {
+              "name": "ordinary",
+              "type": "num->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "a",
+              "type": "abi_omitted_state"
+            }
+          ],
+          "name": "BP_E3_CRYPTO_PUBLIC_CALLER_INTERFACE",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall file_bytes initial_rw padding stackpointer ra p n m rp wp xp ordinary s a.\n    bp_e2_cleanse_public_pre file_bytes initial_rw padding stackpointer ra p\n    n\n    m\n    rp\n    wp\n    xp\n    ordinary\n    (s,a)\n    ==> assurance_checked_run (cleanse_functional_steps p n)\n        (bp_e2_cleanse_call_post 270800848 stackpointer ra p n m s)\n        (\\k source target.\n             cleanse_access_covered_step 270800848\n             (bp_e2_cleanse_allowed_read rp ordinary stackpointer)\n             (bp_e2_cleanse_allowed_write wp ordinary p n)\n             (bp_e2_cleanse_allowed_fetch xp ordinary 270800848)\n             k\n             source\n             target /\\\n             abi_all_decodes_caller_scalar source)\n        s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "file_bytes",
+              "type": "num->(8)word"
+            },
+            {
+              "name": "initial_rw",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "padding",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "stackpointer",
+              "type": "(64)word"
+            },
+            {
+              "name": "ra",
+              "type": "(64)word"
+            },
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "m",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "rp",
+              "type": "num->bool"
+            },
+            {
+              "name": "wp",
+              "type": "num->bool"
+            },
+            {
+              "name": "xp",
+              "type": "num->bool"
+            },
+            {
+              "name": "ordinary",
+              "type": "num->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "a",
+              "type": "abi_omitted_state"
+            }
+          ],
+          "name": "BP_E3_CLEANSE_PUBLIC_CALLER_POLICY",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall file_bytes initial_rw padding stackpointer ra p n m rp wp xp ordinary s a.\n    bp_e2_cleanse_public_pre file_bytes initial_rw padding stackpointer ra p\n    n\n    m\n    rp\n    wp\n    xp\n    ordinary\n    (s,a)\n    ==> eventually_n abi_caller_scalar_extended_step\n        (cleanse_functional_steps p n)\n        (bp_e2_cleanse_public_post stackpointer ra p n m s a)\n        (s,a)",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "file_bytes",
+              "type": "num->(8)word"
+            },
+            {
+              "name": "initial_rw",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "padding",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "stackpointer",
+              "type": "(64)word"
+            },
+            {
+              "name": "ra",
+              "type": "(64)word"
+            },
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "m",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "rp",
+              "type": "num->bool"
+            },
+            {
+              "name": "wp",
+              "type": "num->bool"
+            },
+            {
+              "name": "xp",
+              "type": "num->bool"
+            },
+            {
+              "name": "ordinary",
+              "type": "num->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "a",
+              "type": "abi_omitted_state"
+            }
+          ],
+          "name": "BP_E3_CLEANSE_PUBLIC_CALLER_INTERFACE",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall m n P C s.\n    assurance_checked_run m (\\t. assurance_checked_run n P C t)\n    (\\k source target. C (n + k) source target)\n    s\n    ==> assurance_checked_run (m + n) P C s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "m",
+              "type": "num"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "P",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "C",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            }
+          ],
+          "name": "RA_CHECKED_RUN_APPEND",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall n P Q C s.\n    (forall t. P t ==> Q t) /\\ assurance_checked_run n P C s\n    ==> assurance_checked_run n Q C s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "P",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "Q",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "C",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            }
+          ],
+          "name": "RA_CHECKED_RUN_POST_MONO",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall n P C D s.\n    (forall k source target. C k source target ==> D k source target) /\\\n    assurance_checked_run n P C s\n    ==> assurance_checked_run n P D s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "P",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "C",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "D",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            }
+          ],
+          "name": "RA_CHECKED_RUN_POLICY_MONO",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall a b c H A B P C1 C2 C3 C s.\n    assurance_checked_run a H C1 s /\\\n    (forall t. H t ==> A t) /\\\n    (forall t. A t ==> assurance_checked_run b B C2 t) /\\\n    (forall t. B t ==> assurance_checked_run c P C3 t) /\\\n    (forall k source target.\n         C1 k source target ==> C ((b + c) + k) source target) /\\\n    (forall k source target. C2 k source target ==> C (c + k) source target) /\\\n    (forall k source target. C3 k source target ==> C k source target)\n    ==> assurance_checked_run (a + b + c) P C s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "a",
+              "type": "num"
+            },
+            {
+              "name": "b",
+              "type": "num"
+            },
+            {
+              "name": "c",
+              "type": "num"
+            },
+            {
+              "name": "H",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "A",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "B",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "P",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "C1",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "C2",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "C3",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "C",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            }
+          ],
+          "name": "RA_CHECKED_RUN_THREE_SEGMENT",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall P Q a n.\n    (forall addr. P addr ==> Q addr) /\\ assurance_span_ok P a n\n    ==> assurance_span_ok Q a n",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "P",
+              "type": "num->bool"
+            },
+            {
+              "name": "Q",
+              "type": "num->bool"
+            },
+            {
+              "name": "a",
+              "type": "num"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            }
+          ],
+          "name": "R1_SECRET_SPAN_MONO",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall P a n off len.\n    assurance_span_ok P a n /\\ off + len <= n\n    ==> assurance_span_ok P (a + off) len",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "P",
+              "type": "num->bool"
+            },
+            {
+              "name": "a",
+              "type": "num"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "off",
+              "type": "num"
+            },
+            {
+              "name": "len",
+              "type": "num"
+            }
+          ],
+          "name": "R1_SECRET_SPAN_SUBSPAN",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall P p n.\n    assurance_span_ok P (val p) n\n    ==> assurance_span_ok (\\addr. P addr /\\ assurance_region p n addr)\n        (val p)\n        n",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "P",
+              "type": "num->bool"
+            },
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            }
+          ],
+          "name": "R1_SECRET_SPAN_REGION",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall c cs1 cs2 cs3 cs4 s t.\n    ALL (orthogonal_components c) cs1 /\\\n    ALL (orthogonal_components c) cs2 /\\\n    ALL (orthogonal_components c) cs3 /\\\n    ALL (orthogonal_components c) cs4 /\\\n    (MAYCHANGE cs1 ,, MAYCHANGE cs2 ,, MAYCHANGE cs3 ,, MAYCHANGE cs4) s t\n    ==> read c t = read c s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "c",
+              "type": "(S,V)component"
+            },
+            {
+              "name": "cs1",
+              "type": "((S,A)component)list"
+            },
+            {
+              "name": "cs2",
+              "type": "((S,B)component)list"
+            },
+            {
+              "name": "cs3",
+              "type": "((S,C)component)list"
+            },
+            {
+              "name": "cs4",
+              "type": "((S,D)component)list"
+            },
+            {
+              "name": "s",
+              "type": "S"
+            },
+            {
+              "name": "t",
+              "type": "S"
+            }
+          ],
+          "name": "R1_SECRET_FOUR_FRAME_PRESERVATION",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall n P C s.\n    (forall k source target.\n         C k source target ==> abi_all_decodes_caller_scalar source) /\\\n    assurance_checked_run n P C s /\\\n    e5_normal_flags s\n    ==> assurance_checked_run n (\\t. P t /\\ e5_normal_flags t)\n        (e5_normal_step_policy C)\n        s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "P",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "C",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            }
+          ],
+          "name": "E5_CHECKED_RUN_NORMAL",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall n P C s.\n    (forall k source target.\n         C k source target ==> abi_all_decodes_caller_scalar source) /\\\n    assurance_checked_run n P C s /\\\n    e5_normal_flags s\n    ==> e5_rf_checked_run n (\\t. P t /\\ e5_normal_flags t)\n        (e5_normal_step_policy C)\n        s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "P",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "C",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            }
+          ],
+          "name": "E5_RF_CHECKED_RUN_NORMAL",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall n P C s a.\n    (forall k source target.\n         C k source target ==> abi_all_decodes_caller_scalar source) /\\\n    assurance_checked_run n P C s /\\\n    e5_normal_flags s\n    ==> eventually_n e5_rf_retired_extended_step n\n        (\\t.\n             P (FST t) /\\\n             e5_normal_flags (FST t) /\\\n             SND t = a /\\\n             abi_required_controls_preserved a (SND t))\n        (s,a)",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "P",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "C",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "a",
+              "type": "abi_omitted_state"
+            }
+          ],
+          "name": "E5_NORMAL_CHECKED_RUN_EXTENDED_LIFT",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall s t.\n    e5_normal_flags s /\\ abi_all_decodes_caller_scalar s\n    ==> (e5_rf_retired_step s t <=> x86 s t)",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "t",
+              "type": "x86state"
+            }
+          ],
+          "name": "E5_RF_RETIRED_STEP_NORMAL_EQ",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall s t a b.\n    e5_normal_flags s /\\ abi_all_decodes_caller_scalar s\n    ==> (e5_rf_retired_extended_step (s,a) (t,b) <=>\n         abi_caller_scalar_extended_step (s,a) (t,b))",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "t",
+              "type": "x86state"
+            },
+            {
+              "name": "a",
+              "type": "abi_omitted_state"
+            },
+            {
+              "name": "b",
+              "type": "abi_omitted_state"
+            }
+          ],
+          "name": "E5_RF_RETIRED_EXTENDED_NORMAL_EQ",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall s t.\n    e5_normal_flags s /\\ abi_all_decodes_caller_scalar s /\\ x86 s t\n    ==> e5_normal_flags t",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "t",
+              "type": "x86state"
+            }
+          ],
+          "name": "E5_QUALIFIED_STEP_NORMAL",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall rp0 wp0 rp wp e.\n    (forall addr. rp0 addr ==> rp addr) /\\\n    (forall addr. wp0 addr ==> wp addr) /\\\n    assurance_event_policy rp0 wp0 e\n    ==> assurance_event_policy rp wp e",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "rp0",
+              "type": "num->bool"
+            },
+            {
+              "name": "wp0",
+              "type": "num->bool"
+            },
+            {
+              "name": "rp",
+              "type": "num->bool"
+            },
+            {
+              "name": "wp",
+              "type": "num->bool"
+            },
+            {
+              "name": "e",
+              "type": "(64)address_uarch_event"
+            }
+          ],
+          "name": "HT_POLICY_EVENT_MONO",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall P Q d. (forall e. P e ==> Q e) /\\ ALL P d ==> ALL Q d",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "P",
+              "type": "(64)address_uarch_event->bool"
+            },
+            {
+              "name": "Q",
+              "type": "(64)address_uarch_event->bool"
+            },
+            {
+              "name": "d",
+              "type": "((64)address_uarch_event)list"
+            }
+          ],
+          "name": "HT_POLICY_ALL_MONO",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall rp0 wp0 xp0 rp wp xp source target.\n    (forall addr. rp0 addr ==> rp addr) /\\\n    (forall addr. wp0 addr ==> wp addr) /\\\n    (forall addr. xp0 addr ==> xp addr) /\\\n    assurance_step_policy rp0 wp0 xp0 source target\n    ==> assurance_step_policy rp wp xp source target",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "rp0",
+              "type": "num->bool"
+            },
+            {
+              "name": "wp0",
+              "type": "num->bool"
+            },
+            {
+              "name": "xp0",
+              "type": "num->bool"
+            },
+            {
+              "name": "rp",
+              "type": "num->bool"
+            },
+            {
+              "name": "wp",
+              "type": "num->bool"
+            },
+            {
+              "name": "xp",
+              "type": "num->bool"
+            },
+            {
+              "name": "source",
+              "type": "x86state"
+            },
+            {
+              "name": "target",
+              "type": "x86state"
+            }
+          ],
+          "name": "HT_POLICY_STEP_MONO",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall P Q p n.\n    (forall addr. P addr /\\ assurance_region p n addr ==> Q addr) /\\\n    assurance_span_ok P (val p) n\n    ==> assurance_span_ok Q (val p) n",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "P",
+              "type": "num->bool"
+            },
+            {
+              "name": "Q",
+              "type": "num->bool"
+            },
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            }
+          ],
+          "name": "HT_POLICY_SPAN",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall P p n addr.\n    assurance_span_ok P (val p) n /\\ assurance_region p n addr ==> P addr",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "P",
+              "type": "num->bool"
+            },
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "addr",
+              "type": "num"
+            }
+          ],
+          "name": "HT_SPAN_POINT",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall p q n k.\n    val p + n <= 2 EXP 64 /\\\n    val q + k <= 2 EXP 64 /\\\n    (forall addr. ~(assurance_region p n addr /\\ assurance_region q k addr))\n    ==> nonoverlapping (p,n) (q,k)",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "q",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "k",
+              "type": "num"
+            }
+          ],
+          "name": "HT_REGION_NONOVERLAPPING",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall P p n i.\n    assurance_span_ok P (val p) n /\\ i < n\n    ==> assurance_region p n (val (word_add p (word i)))",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "P",
+              "type": "num->bool"
+            },
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "i",
+              "type": "num"
+            }
+          ],
+          "name": "HT_SPAN_WORD_ADD_REGION",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall p q n k.\n    val p + n <= 2 EXP 64 /\\\n    val q + k <= 2 EXP 64 /\\\n    nonoverlapping (p,n) (q,k)\n    ==> (forall addr.\n             ~(assurance_region p n addr /\\ assurance_region q k addr))",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "q",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "k",
+              "type": "num"
+            }
+          ],
+          "name": "HT_REGION_DISJOINT",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall c R s t.\n    extensionally_valid_component c /\\\n    (forall u v. R u v ==> read c v = read c u) /\\\n    (R ,, MAYCHANGE [c]) s t /\\\n    read c t = read c s\n    ==> R s t",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "c",
+              "type": "(A,B)component"
+            },
+            {
+              "name": "R",
+              "type": "A->A->bool"
+            },
+            {
+              "name": "s",
+              "type": "A"
+            },
+            {
+              "name": "t",
+              "type": "A"
+            }
+          ],
+          "name": "HT_FRAME_CANCEL_COMPONENT",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall pc s t.\n    read RIP s = word pc /\\ x86_decode s (word pc) (1,RET) /\\ x86 s t\n    ==> assurance_actual_ret 1 s t",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "pc",
+              "type": "num"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "t",
+              "type": "x86state"
+            }
+          ],
+          "name": "HT_ORIGINAL_RET",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "LENGTH crypto_memcmp_mc = 95",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [],
+          "name": "BP_PUBLIC_CRYPTO_MEMCMP_CODE_LENGTH",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "LENGTH openssl_cleanse_mc = 97",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [],
+          "name": "BP_PUBLIC_OPENSSL_CLEANSE_CODE_LENGTH",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall pointer a b.\n    word_sub (word_sub pointer (word a)) (word b) =\n    word_sub pointer (word (a + b))",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "pointer",
+              "type": "(64)word"
+            },
+            {
+              "name": "a",
+              "type": "num"
+            },
+            {
+              "name": "b",
+              "type": "num"
+            }
+          ],
+          "name": "HT_WORD_SUB_SUB",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall n P C s a.\n    assurance_checked_run n P\n    (\\k source target.\n         C k source target /\\ abi_all_decodes_caller_scalar source)\n    s\n    ==> eventually_n abi_caller_scalar_extended_step n\n        (\\t. P (FST t) /\\ SND t = a)\n        (s,a)",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "P",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "C",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "a",
+              "type": "abi_omitted_state"
+            }
+          ],
+          "name": "ABI_CALLER_CHECKED_RUN_LIFT",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall a a'. a' = a ==> abi_required_controls_preserved a a'",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "a",
+              "type": "abi_omitted_state"
+            },
+            {
+              "name": "a'",
+              "type": "abi_omitted_state"
+            }
+          ],
+          "name": "ABI_CALLER_EQUAL_IMPLIES_REQUIRED_CONTROLS",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall len inst s.\n    x86_decode s (read RIP s) (len,inst) /\\\n    abi_caller_scalar_instruction inst\n    ==> abi_all_decodes_caller_scalar s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "len",
+              "type": "num"
+            },
+            {
+              "name": "inst",
+              "type": "instruction"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            }
+          ],
+          "name": "ABI_CALLER_DECODED_SCALAR_UNIQUE",
+          "status": "PASS"
+        }
+      ],
+      "audit": "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/runtime/candidate-layer-live-audit-v1.json",
+      "audit_sha256": "69cb8e2a5829f0e14d0d44819afc48673dd63ddfb04c61d9ffa76e39b7192b65",
+      "case": "c1",
+      "frees_zero": true,
+      "gate": "development/approved-plan/held-out-transfer-v1/regression/runs/c1-fresh-v1/gate-result-v1.json",
+      "gate_sha256": "3c32a6bae28390022ade1ed1b4e08f56136fddb87b5332929d206a14e13ea7b6",
+      "hypotheses_zero": true,
+      "result": "development/approved-plan/held-out-transfer-v1/regression/c1-result-v1.json",
+      "result_sha256": "c0b5c296c2b4c8e048454186442cb938a669181cda4125a81c8fdfa056b0ce83",
+      "standard3_unchanged": true
+    },
+    {
+      "actual_live_formal_exports": [
+        {
+          "conclusion": "forall file_bytes initial_rw padding stackpointer ra p q n m rp xp ordinary s a.\n    bp_e2_crypto_public_pre file_bytes initial_rw padding stackpointer ra p q\n    n\n    m\n    rp\n    xp\n    ordinary\n    (s,a)\n    ==> assurance_checked_run (bp_assurance_call_steps n)\n        (bp_assurance_call_post 270800960 stackpointer ra p q n\n         (read events s)\n         m\n        s)\n        (\\k source target.\n             assurance_zero_step\n             (bp_e2_crypto_allowed_read rp ordinary p q n stackpointer)\n             bp_e2_crypto_allowed_write\n             (bp_e2_crypto_allowed_fetch xp ordinary 270800960)\n             k\n             source\n             target /\\\n             abi_all_decodes_caller_scalar source)\n        s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "file_bytes",
+              "type": "num->(8)word"
+            },
+            {
+              "name": "initial_rw",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "padding",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "stackpointer",
+              "type": "(64)word"
+            },
+            {
+              "name": "ra",
+              "type": "(64)word"
+            },
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "q",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "m",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "rp",
+              "type": "num->bool"
+            },
+            {
+              "name": "xp",
+              "type": "num->bool"
+            },
+            {
+              "name": "ordinary",
+              "type": "num->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "a",
+              "type": "abi_omitted_state"
+            }
+          ],
+          "name": "BP_E3_CRYPTO_PUBLIC_CALLER_POLICY",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall file_bytes initial_rw padding stackpointer ra p q n m rp xp ordinary s a.\n    bp_e2_crypto_public_pre file_bytes initial_rw padding stackpointer ra p q\n    n\n    m\n    rp\n    xp\n    ordinary\n    (s,a)\n    ==> eventually_n abi_caller_scalar_extended_step\n        (bp_assurance_call_steps n)\n        (bp_e2_crypto_public_post file_bytes initial_rw padding stackpointer\n         ra\n         p\n         q\n         n\n         (read events s)\n         m\n         s\n        a)\n        (s,a)",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "file_bytes",
+              "type": "num->(8)word"
+            },
+            {
+              "name": "initial_rw",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "padding",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "stackpointer",
+              "type": "(64)word"
+            },
+            {
+              "name": "ra",
+              "type": "(64)word"
+            },
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "q",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "m",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "rp",
+              "type": "num->bool"
+            },
+            {
+              "name": "xp",
+              "type": "num->bool"
+            },
+            {
+              "name": "ordinary",
+              "type": "num->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "a",
+              "type": "abi_omitted_state"
+            }
+          ],
+          "name": "BP_E3_CRYPTO_PUBLIC_CALLER_INTERFACE",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall file_bytes initial_rw padding stackpointer ra p n m rp wp xp ordinary s a.\n    bp_e2_cleanse_public_pre file_bytes initial_rw padding stackpointer ra p\n    n\n    m\n    rp\n    wp\n    xp\n    ordinary\n    (s,a)\n    ==> assurance_checked_run (cleanse_functional_steps p n)\n        (bp_e2_cleanse_call_post 270800848 stackpointer ra p n m s)\n        (\\k source target.\n             cleanse_access_covered_step 270800848\n             (bp_e2_cleanse_allowed_read rp ordinary stackpointer)\n             (bp_e2_cleanse_allowed_write wp ordinary p n)\n             (bp_e2_cleanse_allowed_fetch xp ordinary 270800848)\n             k\n             source\n             target /\\\n             abi_all_decodes_caller_scalar source)\n        s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "file_bytes",
+              "type": "num->(8)word"
+            },
+            {
+              "name": "initial_rw",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "padding",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "stackpointer",
+              "type": "(64)word"
+            },
+            {
+              "name": "ra",
+              "type": "(64)word"
+            },
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "m",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "rp",
+              "type": "num->bool"
+            },
+            {
+              "name": "wp",
+              "type": "num->bool"
+            },
+            {
+              "name": "xp",
+              "type": "num->bool"
+            },
+            {
+              "name": "ordinary",
+              "type": "num->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "a",
+              "type": "abi_omitted_state"
+            }
+          ],
+          "name": "BP_E3_CLEANSE_PUBLIC_CALLER_POLICY",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall file_bytes initial_rw padding stackpointer ra p n m rp wp xp ordinary s a.\n    bp_e2_cleanse_public_pre file_bytes initial_rw padding stackpointer ra p\n    n\n    m\n    rp\n    wp\n    xp\n    ordinary\n    (s,a)\n    ==> eventually_n abi_caller_scalar_extended_step\n        (cleanse_functional_steps p n)\n        (bp_e2_cleanse_public_post stackpointer ra p n m s a)\n        (s,a)",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "file_bytes",
+              "type": "num->(8)word"
+            },
+            {
+              "name": "initial_rw",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "padding",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "stackpointer",
+              "type": "(64)word"
+            },
+            {
+              "name": "ra",
+              "type": "(64)word"
+            },
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "m",
+              "type": "(64)word->(8)word"
+            },
+            {
+              "name": "rp",
+              "type": "num->bool"
+            },
+            {
+              "name": "wp",
+              "type": "num->bool"
+            },
+            {
+              "name": "xp",
+              "type": "num->bool"
+            },
+            {
+              "name": "ordinary",
+              "type": "num->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "a",
+              "type": "abi_omitted_state"
+            }
+          ],
+          "name": "BP_E3_CLEANSE_PUBLIC_CALLER_INTERFACE",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall m n P C s.\n    assurance_checked_run m (\\t. assurance_checked_run n P C t)\n    (\\k source target. C (n + k) source target)\n    s\n    ==> assurance_checked_run (m + n) P C s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "m",
+              "type": "num"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "P",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "C",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            }
+          ],
+          "name": "RA_CHECKED_RUN_APPEND",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall n P Q C s.\n    (forall t. P t ==> Q t) /\\ assurance_checked_run n P C s\n    ==> assurance_checked_run n Q C s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "P",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "Q",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "C",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            }
+          ],
+          "name": "RA_CHECKED_RUN_POST_MONO",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall n P C D s.\n    (forall k source target. C k source target ==> D k source target) /\\\n    assurance_checked_run n P C s\n    ==> assurance_checked_run n P D s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "P",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "C",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "D",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            }
+          ],
+          "name": "RA_CHECKED_RUN_POLICY_MONO",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall a b c H A B P C1 C2 C3 C s.\n    assurance_checked_run a H C1 s /\\\n    (forall t. H t ==> A t) /\\\n    (forall t. A t ==> assurance_checked_run b B C2 t) /\\\n    (forall t. B t ==> assurance_checked_run c P C3 t) /\\\n    (forall k source target.\n         C1 k source target ==> C ((b + c) + k) source target) /\\\n    (forall k source target. C2 k source target ==> C (c + k) source target) /\\\n    (forall k source target. C3 k source target ==> C k source target)\n    ==> assurance_checked_run (a + b + c) P C s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "a",
+              "type": "num"
+            },
+            {
+              "name": "b",
+              "type": "num"
+            },
+            {
+              "name": "c",
+              "type": "num"
+            },
+            {
+              "name": "H",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "A",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "B",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "P",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "C1",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "C2",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "C3",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "C",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            }
+          ],
+          "name": "RA_CHECKED_RUN_THREE_SEGMENT",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall P Q a n.\n    (forall addr. P addr ==> Q addr) /\\ assurance_span_ok P a n\n    ==> assurance_span_ok Q a n",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "P",
+              "type": "num->bool"
+            },
+            {
+              "name": "Q",
+              "type": "num->bool"
+            },
+            {
+              "name": "a",
+              "type": "num"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            }
+          ],
+          "name": "R1_SECRET_SPAN_MONO",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall P a n off len.\n    assurance_span_ok P a n /\\ off + len <= n\n    ==> assurance_span_ok P (a + off) len",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "P",
+              "type": "num->bool"
+            },
+            {
+              "name": "a",
+              "type": "num"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "off",
+              "type": "num"
+            },
+            {
+              "name": "len",
+              "type": "num"
+            }
+          ],
+          "name": "R1_SECRET_SPAN_SUBSPAN",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall P p n.\n    assurance_span_ok P (val p) n\n    ==> assurance_span_ok (\\addr. P addr /\\ assurance_region p n addr)\n        (val p)\n        n",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "P",
+              "type": "num->bool"
+            },
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            }
+          ],
+          "name": "R1_SECRET_SPAN_REGION",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall c cs1 cs2 cs3 cs4 s t.\n    ALL (orthogonal_components c) cs1 /\\\n    ALL (orthogonal_components c) cs2 /\\\n    ALL (orthogonal_components c) cs3 /\\\n    ALL (orthogonal_components c) cs4 /\\\n    (MAYCHANGE cs1 ,, MAYCHANGE cs2 ,, MAYCHANGE cs3 ,, MAYCHANGE cs4) s t\n    ==> read c t = read c s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "c",
+              "type": "(S,V)component"
+            },
+            {
+              "name": "cs1",
+              "type": "((S,A)component)list"
+            },
+            {
+              "name": "cs2",
+              "type": "((S,B)component)list"
+            },
+            {
+              "name": "cs3",
+              "type": "((S,C)component)list"
+            },
+            {
+              "name": "cs4",
+              "type": "((S,D)component)list"
+            },
+            {
+              "name": "s",
+              "type": "S"
+            },
+            {
+              "name": "t",
+              "type": "S"
+            }
+          ],
+          "name": "R1_SECRET_FOUR_FRAME_PRESERVATION",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall n P C s.\n    (forall k source target.\n         C k source target ==> abi_all_decodes_caller_scalar source) /\\\n    assurance_checked_run n P C s /\\\n    e5_normal_flags s\n    ==> assurance_checked_run n (\\t. P t /\\ e5_normal_flags t)\n        (e5_normal_step_policy C)\n        s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "P",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "C",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            }
+          ],
+          "name": "E5_CHECKED_RUN_NORMAL",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall n P C s.\n    (forall k source target.\n         C k source target ==> abi_all_decodes_caller_scalar source) /\\\n    assurance_checked_run n P C s /\\\n    e5_normal_flags s\n    ==> e5_rf_checked_run n (\\t. P t /\\ e5_normal_flags t)\n        (e5_normal_step_policy C)\n        s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "P",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "C",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            }
+          ],
+          "name": "E5_RF_CHECKED_RUN_NORMAL",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall n P C s a.\n    (forall k source target.\n         C k source target ==> abi_all_decodes_caller_scalar source) /\\\n    assurance_checked_run n P C s /\\\n    e5_normal_flags s\n    ==> eventually_n e5_rf_retired_extended_step n\n        (\\t.\n             P (FST t) /\\\n             e5_normal_flags (FST t) /\\\n             SND t = a /\\\n             abi_required_controls_preserved a (SND t))\n        (s,a)",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "P",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "C",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "a",
+              "type": "abi_omitted_state"
+            }
+          ],
+          "name": "E5_NORMAL_CHECKED_RUN_EXTENDED_LIFT",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall s t.\n    e5_normal_flags s /\\ abi_all_decodes_caller_scalar s\n    ==> (e5_rf_retired_step s t <=> x86 s t)",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "t",
+              "type": "x86state"
+            }
+          ],
+          "name": "E5_RF_RETIRED_STEP_NORMAL_EQ",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall s t a b.\n    e5_normal_flags s /\\ abi_all_decodes_caller_scalar s\n    ==> (e5_rf_retired_extended_step (s,a) (t,b) <=>\n         abi_caller_scalar_extended_step (s,a) (t,b))",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "t",
+              "type": "x86state"
+            },
+            {
+              "name": "a",
+              "type": "abi_omitted_state"
+            },
+            {
+              "name": "b",
+              "type": "abi_omitted_state"
+            }
+          ],
+          "name": "E5_RF_RETIRED_EXTENDED_NORMAL_EQ",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall s t.\n    e5_normal_flags s /\\ abi_all_decodes_caller_scalar s /\\ x86 s t\n    ==> e5_normal_flags t",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "t",
+              "type": "x86state"
+            }
+          ],
+          "name": "E5_QUALIFIED_STEP_NORMAL",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall rp0 wp0 rp wp e.\n    (forall addr. rp0 addr ==> rp addr) /\\\n    (forall addr. wp0 addr ==> wp addr) /\\\n    assurance_event_policy rp0 wp0 e\n    ==> assurance_event_policy rp wp e",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "rp0",
+              "type": "num->bool"
+            },
+            {
+              "name": "wp0",
+              "type": "num->bool"
+            },
+            {
+              "name": "rp",
+              "type": "num->bool"
+            },
+            {
+              "name": "wp",
+              "type": "num->bool"
+            },
+            {
+              "name": "e",
+              "type": "(64)address_uarch_event"
+            }
+          ],
+          "name": "HT_POLICY_EVENT_MONO",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall P Q d. (forall e. P e ==> Q e) /\\ ALL P d ==> ALL Q d",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "P",
+              "type": "(64)address_uarch_event->bool"
+            },
+            {
+              "name": "Q",
+              "type": "(64)address_uarch_event->bool"
+            },
+            {
+              "name": "d",
+              "type": "((64)address_uarch_event)list"
+            }
+          ],
+          "name": "HT_POLICY_ALL_MONO",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall rp0 wp0 xp0 rp wp xp source target.\n    (forall addr. rp0 addr ==> rp addr) /\\\n    (forall addr. wp0 addr ==> wp addr) /\\\n    (forall addr. xp0 addr ==> xp addr) /\\\n    assurance_step_policy rp0 wp0 xp0 source target\n    ==> assurance_step_policy rp wp xp source target",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "rp0",
+              "type": "num->bool"
+            },
+            {
+              "name": "wp0",
+              "type": "num->bool"
+            },
+            {
+              "name": "xp0",
+              "type": "num->bool"
+            },
+            {
+              "name": "rp",
+              "type": "num->bool"
+            },
+            {
+              "name": "wp",
+              "type": "num->bool"
+            },
+            {
+              "name": "xp",
+              "type": "num->bool"
+            },
+            {
+              "name": "source",
+              "type": "x86state"
+            },
+            {
+              "name": "target",
+              "type": "x86state"
+            }
+          ],
+          "name": "HT_POLICY_STEP_MONO",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall P Q p n.\n    (forall addr. P addr /\\ assurance_region p n addr ==> Q addr) /\\\n    assurance_span_ok P (val p) n\n    ==> assurance_span_ok Q (val p) n",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "P",
+              "type": "num->bool"
+            },
+            {
+              "name": "Q",
+              "type": "num->bool"
+            },
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            }
+          ],
+          "name": "HT_POLICY_SPAN",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall P p n addr.\n    assurance_span_ok P (val p) n /\\ assurance_region p n addr ==> P addr",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "P",
+              "type": "num->bool"
+            },
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "addr",
+              "type": "num"
+            }
+          ],
+          "name": "HT_SPAN_POINT",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall p q n k.\n    val p + n <= 2 EXP 64 /\\\n    val q + k <= 2 EXP 64 /\\\n    (forall addr. ~(assurance_region p n addr /\\ assurance_region q k addr))\n    ==> nonoverlapping (p,n) (q,k)",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "q",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "k",
+              "type": "num"
+            }
+          ],
+          "name": "HT_REGION_NONOVERLAPPING",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall P p n i.\n    assurance_span_ok P (val p) n /\\ i < n\n    ==> assurance_region p n (val (word_add p (word i)))",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "P",
+              "type": "num->bool"
+            },
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "i",
+              "type": "num"
+            }
+          ],
+          "name": "HT_SPAN_WORD_ADD_REGION",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall p q n k.\n    val p + n <= 2 EXP 64 /\\\n    val q + k <= 2 EXP 64 /\\\n    nonoverlapping (p,n) (q,k)\n    ==> (forall addr.\n             ~(assurance_region p n addr /\\ assurance_region q k addr))",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "p",
+              "type": "(64)word"
+            },
+            {
+              "name": "q",
+              "type": "(64)word"
+            },
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "k",
+              "type": "num"
+            }
+          ],
+          "name": "HT_REGION_DISJOINT",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall c R s t.\n    extensionally_valid_component c /\\\n    (forall u v. R u v ==> read c v = read c u) /\\\n    (R ,, MAYCHANGE [c]) s t /\\\n    read c t = read c s\n    ==> R s t",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "c",
+              "type": "(A,B)component"
+            },
+            {
+              "name": "R",
+              "type": "A->A->bool"
+            },
+            {
+              "name": "s",
+              "type": "A"
+            },
+            {
+              "name": "t",
+              "type": "A"
+            }
+          ],
+          "name": "HT_FRAME_CANCEL_COMPONENT",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall pc s t.\n    read RIP s = word pc /\\ x86_decode s (word pc) (1,RET) /\\ x86 s t\n    ==> assurance_actual_ret 1 s t",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "pc",
+              "type": "num"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "t",
+              "type": "x86state"
+            }
+          ],
+          "name": "HT_ORIGINAL_RET",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "LENGTH crypto_memcmp_mc = 95",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [],
+          "name": "BP_PUBLIC_CRYPTO_MEMCMP_CODE_LENGTH",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "LENGTH openssl_cleanse_mc = 97",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [],
+          "name": "BP_PUBLIC_OPENSSL_CLEANSE_CODE_LENGTH",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall pointer a b.\n    word_sub (word_sub pointer (word a)) (word b) =\n    word_sub pointer (word (a + b))",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "pointer",
+              "type": "(64)word"
+            },
+            {
+              "name": "a",
+              "type": "num"
+            },
+            {
+              "name": "b",
+              "type": "num"
+            }
+          ],
+          "name": "HT_WORD_SUB_SUB",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall n P C s a.\n    assurance_checked_run n P\n    (\\k source target.\n         C k source target /\\ abi_all_decodes_caller_scalar source)\n    s\n    ==> eventually_n abi_caller_scalar_extended_step n\n        (\\t. P (FST t) /\\ SND t = a)\n        (s,a)",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "n",
+              "type": "num"
+            },
+            {
+              "name": "P",
+              "type": "x86state->bool"
+            },
+            {
+              "name": "C",
+              "type": "num->x86state->x86state->bool"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            },
+            {
+              "name": "a",
+              "type": "abi_omitted_state"
+            }
+          ],
+          "name": "ABI_CALLER_CHECKED_RUN_LIFT",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall a a'. a' = a ==> abi_required_controls_preserved a a'",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "a",
+              "type": "abi_omitted_state"
+            },
+            {
+              "name": "a'",
+              "type": "abi_omitted_state"
+            }
+          ],
+          "name": "ABI_CALLER_EQUAL_IMPLIES_REQUIRED_CONTROLS",
+          "status": "PASS"
+        },
+        {
+          "conclusion": "forall len inst s.\n    x86_decode s (read RIP s) (len,inst) /\\\n    abi_caller_scalar_instruction inst\n    ==> abi_all_decodes_caller_scalar s",
+          "free_variables": [],
+          "hypotheses": [],
+          "leading_quantifiers": [
+            {
+              "name": "len",
+              "type": "num"
+            },
+            {
+              "name": "inst",
+              "type": "instruction"
+            },
+            {
+              "name": "s",
+              "type": "x86state"
+            }
+          ],
+          "name": "ABI_CALLER_DECODED_SCALAR_UNIQUE",
+          "status": "PASS"
+        }
+      ],
+      "audit": "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/runtime/candidate-layer-live-audit-v1.json",
+      "audit_sha256": "69cb8e2a5829f0e14d0d44819afc48673dd63ddfb04c61d9ffa76e39b7192b65",
+      "case": "c2",
+      "frees_zero": true,
+      "gate": "development/approved-plan/held-out-transfer-v1/regression/runs/c2-fresh-v1/gate-result-v1.json",
+      "gate_sha256": "3119817e7b26dc15e21abb51f534f1f4ef099b89b0bcc94a00073b556de447ef",
+      "hypotheses_zero": true,
+      "result": "development/approved-plan/held-out-transfer-v1/regression/c2-result-v1.json",
+      "result_sha256": "1e2c3a4065956265a60fdf1fb4bc3f588320134ae9accc55e3f9adffb112ef7a",
+      "standard3_unchanged": true
+    }
+  ],
+  "schema": "human-review-candidate-live-exports-v1",
+  "scope": "34 actual reconstructed exported theorem conclusions and leading quantified HOL variable types from each preselection development-case regression. No held-out result is asserted."
+}

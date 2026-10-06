@@ -1,0 +1,15 @@
+{
+  "schema": "cleanse-access-composition-freeze-v1",
+  "frozen_at_utc": "2026-09-30T18:11:01.604581+00:00",
+  "human_review": "PENDING",
+  "main_proof_search_started": false,
+  "files": {
+    "development/approved-plan/cleanse/access/composition-statements-v1.ml": "02cb085f9d4046eb2b3d313e262b75d8630fe1336bf2942b83c3b18d866547f7"
+  },
+  "targets": [
+    "CLEANSE_ACCESS_COUNT_AGREEMENT",
+    "CLEANSE_ACCESS_ORIGINAL_RETURN",
+    "CLEANSE_ACCESS_QUALIFIED_RETURN",
+    "CLEANSE_ACCESS_EXTENDED_RETURN"
+  ]
+}
